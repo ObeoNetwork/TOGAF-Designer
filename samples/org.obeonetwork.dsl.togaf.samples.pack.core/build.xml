@@ -28,6 +28,8 @@
 		</delete>
 	</target>
 
+	<mkdir dir="${dest.dir}"/>	
+
 	<!-- Build zip files -->
 	<target name="buildZips" depends="clean">
 		<zip
