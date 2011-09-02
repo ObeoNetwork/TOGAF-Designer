@@ -16,38 +16,25 @@
   <version>0.7.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-  <module>org.obeonetwork.dsl.togaf.parent</module>
-  <module>../org.obeonetwork.dsl.togaf.contentfwk</module>
-  <module>../org.obeonetwork.dsl.togaf.contentfwk.edit</module>
-  <module>../org.obeonetwork.dsl.togaf.contentfwk.editor</module>
-  <module>../../viewpointAddons/org.obeonetwork.dsl.viewpoint.addons</module>
-  <module>../org.obeonetwork.dsl.togaf.io.excel</module>
-  <module>../org.obeonetwork.dsl.togaf.ui</module>
-  <module>../org.obeonetwork.dsl.togaf.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.bpmn2.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.sca.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.soa.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.entity.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.stakeholder</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.stakeholder.edit</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.stakeholder.editor</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.stakeholder.design</module>
-  <module>../../extensions/org.obeonetwork.dsl.ia</module>
-  <module>../../extensions/org.obeonetwork.dsl.ia.design</module>
-  <module>../../extensions/org.obeonetwork.dsl.ia.edit</module>
-  <module>../../extensions/org.obeonetwork.dsl.ia.editor</module>
-  <module>../../extensions/org.obeonetwork.dsl.ia.ui</module>
-  <module>../../extensions/org.obeonetwork.dsl.togaf.gaps</module>
-  <module>../../extensions/org.obeonetwork.dsl.togaf.gaps.edit</module>
-  <module>../../extensions/org.obeonetwork.dsl.togaf.gaps.editor</module>
-  <module>../../extensions/org.obeonetwork.dsl.layer</module>
-  <module>../../extensions/org.obeonetwork.dsl.layer.edit</module>
-  <module>../../extensions/org.obeonetwork.dsl.layer.editor</module>
-  <module>../../extensions/org.obeonetwork.dsl.layer.design</module>
-  <module>../org.obeonetwork.dsl.togaf.extensions.layer.design</module>
-  <module>../org.obeonetwork.dsl.togaf.samples</module>
-  <module>../org.obeonetwork.dsl.togaf.samples.pack.core</module>
-  <module>org.obeonetwork.dsl.togaf.feature</module>
-  <module>org.obeonetwork.dsl.togaf.repository</module>
+    <module>org.obeonetwork.dsl.togaf.parent</module>
+    <module>org.obeonetwork.dsl.togaf.feature</module>
+    <module>org.obeonetwork.dsl.togaf.repository</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.contentfwk</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.contentfwk.edit</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.contentfwk.editor</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.design</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.ui</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.stakeholder</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.stakeholder.edit</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.stakeholder.editor</module>
+    <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.stakeholder.design</module>
+    <module>../../plugins/org.obeonetwork.dsl.layer</module>
+    <module>../../plugins/org.obeonetwork.dsl.layer.edit</module>
+    <module>../../plugins/org.obeonetwork.dsl.layer.editor</module>
+    <module>../../plugins/org.obeonetwork.dsl.layer.design</module>  
+    <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.layer.design</module>  
+    <module>../../samples/org.obeonetwork.dsl.togaf.samples</module>
+    <module>../../samples/org.obeonetwork.dsl.togaf.samples.pack.core</module> 
+    <module>../../../viewpointAddons/org.obeonetwork.dsl.viewpoint.addons</module>  
   </modules>
 </project>
