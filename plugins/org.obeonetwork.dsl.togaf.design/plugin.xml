@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Copyright (c) 2011 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
+<plugin>
+		<extension
+				point="fr.obeo.dsl.viewpoint.componentization">
+		<component
+				class="org.obeonetwork.dsl.togaf.design.Activator" id="fr.obeo.dsl.togaf.ea.design" name="ea">
+		</component>
+		</extension>
+  <extension
+        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
+     <editpartProvider
+           class="org.obeonetwork.dsl.togaf.design.extensions.ContentFwkEditPartProvider">
+        <Priority
+              name="Highest">
+        </Priority>
+     </editpartProvider>
+  </extension>
+  <extension
+        id="OpenDataCatalogs"
+        name="OpenDataCatalogs"
+        point="fr.obeo.dsl.viewpoint.externalJavaAction">
+     <javaActions
+           actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenDataArchitectureCatalogsAction"
+           id="org.obeonetwork.dsl.togaf.ui.actions.OpenDataCatalogsActionID">
+     </javaActions>
+     <javaActions
+           actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenBusinessArchitectureCatalogsAction"
+           id="org.obeonetwork.dsl.togaf.ui.actions.OpenBusinessArchitectureCatalogsActionID">
+     </javaActions>
+      <javaActions
+           actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenWizardToNavigateAction"
+           id="org.obeonetwork.dsl.togaf.ui.actions.OpenWizardToNavigateActionID">
+     </javaActions>
+      <javaActions
+            actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenApplicationArchitectureCatalogsAction"
+            id="org.obeonetwork.dsl.togaf.ui.actions.OpenApplicationCatalogsActionID">
+      </javaActions>
+      <javaActions
+            actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenTechnologyArchitectureCatalogsAction"
+            id="org.obeonetwork.dsl.togaf.ui.actions.OpenTechnologyCatalogsActionID">
+      </javaActions>
+  </extension>
+</plugin>

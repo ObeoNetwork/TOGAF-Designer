@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.layer/src"
+    modelPluginID="org.obeonetwork.dsl.layer" modelName="Layer" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>layer.ecore</foreignModel>
+  <genPackages prefix="Layer" basePackage="org.obeonetwork.dsl" disposableProviderFactory="true"
+      ecorePackage="layer.ecore#/">
+    <genClasses ecoreClass="layer.ecore#//Layer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute layer.ecore#//Layer/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference layer.ecore#//Layer/subLayers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference layer.ecore#//Layer/references"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference layer.ecore#//Layer/elements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Copyright (c) 2011 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <parent>
+  <groupId>TOGAF</groupId>
+  <artifactId>org.obeonetwork.dsl.togaf.parent</artifactId>
+  <version>0.7.0-SNAPSHOT</version>
+  <relativePath>../org.obeonetwork.dsl.togaf.parent/pom.xml</relativePath>
+ </parent>
+ <groupId>TOGAF</groupId>
+ <artifactId>org.obeonetwork.dsl.togaf.repository</artifactId>
+ <version>0.7.0-SNAPSHOT</version>
+ <packaging>eclipse-repository</packaging>
+</project>

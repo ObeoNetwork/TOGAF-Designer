@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentfwk:EnterpriseArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:contentfwk="http://www.obeonetwork.org/dsl/togaf/contentfwk/9.0.0" xmlns:layer="http://www.obeonetwork.org/layer/0.7.0">
+  <architectures xsi:type="contentfwk:StrategicArchitecture"/>
+  <architectures xsi:type="contentfwk:BusinessArchitecture">
+    <drivers name="Driver1"/>
+    <goals delegates="//@architectures.1/@services.3" name="Satisfaire le client" isRealizedThroughObjectives="//@architectures.1/@objectives.0 //@architectures.1/@objectives.2"/>
+    <goals name="Offrir une offre diversifiée" isRealizedThroughObjectives="//@architectures.1/@objectives.2" decomposesGoal="//@architectures.1/@goals.0"/>
+    <goals name="Prévenir les impayés" isRealizedThroughObjectives="//@architectures.1/@objectives.3"/>
+    <goals name="Construire une base de clients" isRealizedThroughObjectives="//@architectures.1/@objectives.4"/>
+    <goals name="Eviter les annulations des partenaires" isRealizedThroughObjectives="//@architectures.1/@objectives.1"/>
+    <objectives name="Satisfaire 80% des clients" realizesGoals="//@architectures.1/@goals.0"/>
+    <objectives name="Annulations &lt; 3%" realizesGoals="//@architectures.1/@goals.4"/>
+    <objectives name="Offre au min de 10 partenaires" realizesGoals="//@architectures.1/@goals.1 //@architectures.1/@goals.0"/>
+    <objectives name="Défaut de paiement &lt; 0,5%" realizesGoals="//@architectures.1/@goals.2"/>
+    <objectives name="Enregistrer profil clients" realizesGoals="//@architectures.1/@goals.3"/>
+    <units name="Departement Partenaire" description="Département en charge de la gestion des partenaires" ownsAndGovernsServices="//@architectures.1/@services.9 //@architectures.1/@services.8" containsActors="//@architectures.1/@actors.2" ownsFunctions="//@architectures.1/@functions.0 //@architectures.1/@functions.1" headcount=""/>
+    <units name="Departement Commercial" ownsAndGovernsServices="//@architectures.1/@services.5 //@architectures.1/@services.2 //@architectures.1/@services.0 //@architectures.1/@services.9 //@architectures.1/@services.4 //@architectures.1/@services.3 //@architectures.1/@services.7 //@architectures.1/@services.11" ownsFunctions="//@architectures.1/@functions.2"/>
+    <units name="Departement Achat" ownsAndGovernsServices="//@architectures.1/@services.9" containsActors="//@architectures.1/@actors.3" ownsFunctions="//@architectures.1/@functions.4"/>
+    <units name="Departement Comptable" ownsAndGovernsServices="//@architectures.1/@services.10 //@architectures.1/@services.0 //@architectures.1/@services.5 //@architectures.1/@services.1 //@architectures.1/@services.6 //@architectures.3/@informationSystemServices.0" containsActors="//@architectures.1/@actors.4" ownsFunctions="//@architectures.1/@functions.3"/>
+    <actors name="Client" performsTaskInRoles="//@architectures.1/@roles.3" participatesInProcesses="//@architectures.1/@processes.0 //@architectures.1/@processes.1" consumesServices="//@architectures.1/@services.0 //@architectures.1/@services.2"/>
+    <actors name="Conseiller Commercial" category="" sourceDescr="" ownerDescr="" ID="" participatesInProcesses="//@architectures.1/@processes.2 //@architectures.1/@processes.0 //@architectures.1/@processes.8 //@architectures.1/@processes.9 //@architectures.1/@processes.3 //@architectures.1/@processes.10" consumesServices="//@architectures.1/@services.5 //@architectures.1/@services.11"/>
+    <actors name="Responsable Partenaire" belongsTo="//@architectures.1/@units.0" participatesInProcesses="//@architectures.1/@processes.4 //@architectures.1/@processes.5" consumesServices="//@architectures.1/@services.8" operatesInLocation="//@architectures.1/@locations.2"/>
+    <actors name="Responsable Achat" belongsTo="//@architectures.1/@units.2" performsTaskInRoles="//@architectures.1/@roles.1 //@architectures.1/@roles.3" participatesInProcesses="//@architectures.1/@processes.7" consumesServices="//@architectures.1/@services.9" operatesInLocation="//@architectures.1/@locations.0" performsFunctions="//@architectures.1/@functions.0"/>
+    <actors name="Comptable" belongsTo="//@architectures.1/@units.3"/>
+    <roles name="Vendre" category="" ownerDescr="" ID=""/>
+    <roles name="Facturer" isAssumedByActors="//@architectures.1/@actors.3" accessesFunctions="//@architectures.1/@functions.3"/>
+    <roles name="Payer_tiers" accessesFunctions="//@architectures.1/@functions.4" estimatedFTEs=""/>
+    <roles name="Acheter" isAssumedByActors="//@architectures.1/@actors.3 //@architectures.1/@actors.0" accessesFunctions="//@architectures.1/@functions.4"/>
+    <functions name="Gestion des partenaires" isPerformedByActors="//@architectures.1/@actors.3" isOwnedByUnit="//@architectures.1/@units.0" isBoundedByServices="//@architectures.1/@services.8" isRealizedByProcesses="//@architectures.1/@processes.4"/>
+    <functions name="Gestion des catalogues d'offres" category="" ownerDescr="" isOwnedByUnit="//@architectures.1/@units.0" isBoundedByServices="//@architectures.1/@services.7 //@architectures.1/@services.6" isRealizedByProcesses="//@architectures.1/@processes.5" decomposesFunction="//@architectures.1/@functions.2" communicatedWithFunctions="//@architectures.1/@functions.3"/>
+    <functions name="Gestion du commerce" isOwnedByUnit="//@architectures.1/@units.1" isBoundedByServices="//@architectures.1/@services.6 //@architectures.1/@services.2 //@architectures.1/@services.1 //@architectures.1/@services.3 //@architectures.1/@services.4 //@architectures.1/@services.5 //@architectures.1/@services.11" isRealizedByProcesses="//@architectures.1/@processes.3 //@architectures.1/@processes.2 //@architectures.1/@processes.10" communicatedWithFunctions="//@architectures.1/@functions.4"/>
+    <functions name="Gestion de la facturation" isOwnedByUnit="//@architectures.1/@units.3" isBoundedByServices="//@architectures.1/@services.0 //@architectures.1/@services.10 //@architectures.3/@informationSystemServices.0" isRealizedByProcesses="//@architectures.1/@processes.1 //@architectures.1/@processes.8 //@architectures.1/@processes.9" canBeAccessedByRoles="//@architectures.1/@roles.1" decomposesFunction="//@architectures.1/@functions.2" communicatedWithFunctions="//@architectures.1/@functions.0"/>
+    <functions name="Gestion des achats" isOwnedByUnit="//@architectures.1/@units.2" isBoundedByServices="//@architectures.1/@services.9" isRealizedByProcesses="//@architectures.1/@processes.7" canBeAccessedByRoles="//@architectures.1/@roles.2 //@architectures.1/@roles.3"/>
+    <services name="Payer voyage" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.3" providesEntities="//@architectures.2/@entities.2" consumesEntities="//@architectures.2/@entities.1" isImplementedOnLogicalTechnologyComponents="//@architectures.4/@logicalComponents.3" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.5 //@architectures.3/@logicalApplicationComponents.2" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1 //@architectures.1/@units.3" supportsProcesses="//@architectures.1/@processes.9" consumesServices="//@architectures.1/@services.1 //@architectures.1/@services.3 //@architectures.1/@services.4" supportsObjective="//@architectures.1/@objectives.3"/>
+    <services name="Vérifier solvabilité du compte bancaire" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.2" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.3" supportsObjective="//@architectures.1/@objectives.3"/>
+    <services name="Réserver un voyage" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" providesEntities="//@architectures.2/@entities.1" consumesEntities="//@architectures.2/@entities.0" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.5" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1" consumesServices="//@architectures.1/@services.5" supportsObjective="//@architectures.1/@objectives.1"/>
+    <services isDelegatedBy="//@architectures.1/@goals.0" name="Annuler une réservation" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" consumesEntities="//@architectures.2/@entities.1" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.5" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1"/>
+    <services name="Confirmer une réservation" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" consumesEntities="//@architectures.2/@entities.1" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.5" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1" supportsObjective="//@architectures.1/@objectives.1"/>
+    <services name="Vérifier la disponibilité d'un voyage" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.3" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1 //@architectures.1/@units.3" supportsObjective="//@architectures.1/@objectives.1"/>
+    <services name="Publier une offre" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.1 //@architectures.1/@functions.2" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.4" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.3" consumesServices="//@architectures.1/@services.7"/>
+    <services name="Lister les offres" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.1" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.4" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1" supportsObjective="//@architectures.1/@objectives.0"/>
+    <services name="Référencer Partenaire" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.0" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.4" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.0" supportsObjective="//@architectures.1/@objectives.2"/>
+    <services name="Acheter Voyage à un partenaire" isProvidedToActors="//@architectures.1/@actors.0 //@architectures.1/@actors.3" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.4" consumesEntities="//@architectures.2/@entities.0" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.1" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.0 //@architectures.1/@units.1 //@architectures.1/@units.2" supportsObjective="//@architectures.1/@objectives.2 //@architectures.1/@objectives.0"/>
+    <services name="Facturer Voyage" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.3" providesEntities="//@architectures.2/@entities.2" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.2" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.3" supportsObjective="//@architectures.1/@objectives.0"/>
+    <services name="Enregistrer un nouveau Client" providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.2" providesEntities="//@architectures.2/@entities.4" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.0" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.1" supportsObjective="//@architectures.1/@objectives.4"/>
+    <processes name="Réserver un voyage" involvesActors="//@architectures.1/@actors.0 " resolvesEvents="//@architectures.1/@events.6" generatesEvents="//@architectures.1/@events.7"/>
+    <processes name="Payer voyage" orchestratesFunctions="//@architectures.1/@functions.3" orchestratesServices="//@architectures.3/@informationSystemServices.0" involvesActors="//@architectures.1/@actors.0" resolvesEvents="//@architectures.1/@events.7" generatesEvents="//@architectures.1/@events.1"/>
+    <processes name="Vendre un voyage" orchestratesFunctions="//@architectures.1/@functions.2" orchestratesServices="//@architectures.3/@informationSystemServices.0" involvesActors="" resolvesEvents="//@architectures.1/@events.8" generatesEvents="//@architectures.1/@events.6"/>
+    <processes name="Conseiller un client" orchestratesFunctions="//@architectures.1/@functions.2" involvesActors="" resolvesEvents="//@architectures.1/@events.10" generatesEvents="//@architectures.1/@events.8"/>
+    <processes name="Souscrire un partenariat" orchestratesFunctions="//@architectures.1/@functions.0" involvesActors="//@architectures.1/@actors.2" generatesEvents="//@architectures.1/@events.5 //@architectures.1/@events.2"/>
+    <processes name="Définir le catalogue des offres" orchestratesFunctions="//@architectures.1/@functions.1" involvesActors="//@architectures.1/@actors.2" resolvesEvents="//@architectures.1/@events.2 //@architectures.1/@events.4"/>
+    <processes name="Définir le prix de ventes des offres" resolvesEvents="//@architectures.1/@events.2 //@architectures.1/@events.3" generatesEvents="//@architectures.1/@events.4"/>
+    <processes name="Définir le prix d'achat d'une offre" orchestratesFunctions="//@architectures.1/@functions.4" involvesActors="//@architectures.1/@actors.3" resolvesEvents="//@architectures.1/@events.5" generatesEvents="//@architectures.1/@events.3"/>
+    <processes name="Payer un fournisseur/partenaire" orchestratesFunctions="//@architectures.1/@functions.3" involvesActors="" resolvesEvents="//@architectures.1/@events.9"/>
+    <processes name="Facturer une commande client" orchestratesFunctions="//@architectures.1/@functions.3" decomposesServices="//@architectures.1/@services.0" involvesActors="" resolvesEvents="//@architectures.1/@events.1" generatesEvents="//@architectures.1/@events.9"/>
+    <processes name="Accueillir client" sourceDescr="" orchestratesFunctions="//@architectures.1/@functions.2" involvesActors="" resolvesEvents="//@architectures.1/@events.0" generatesEvents="//@architectures.1/@events.10" processCritiality="" processVolumetrics=""/>
+    <controls name="Control1"/>
+    <events name="Arrivée Client" description="arrivée d'un nouveau client en agence" category="" isResolvedByProcesses="//@architectures.1/@processes.10"/>
+    <events name="Vente Realisée" isResolvedByProcesses="//@architectures.1/@processes.9" isGeneratedByProcesses="//@architectures.1/@processes.1"/>
+    <events name="Modification Offre" isResolvedByProcesses="//@architectures.1/@processes.5 //@architectures.1/@processes.6" isGeneratedByProcesses="//@architectures.1/@processes.4"/>
+    <events name="ModificationTarif Achat" isResolvedByProcesses="//@architectures.1/@processes.6" isGeneratedByProcesses="//@architectures.1/@processes.7"/>
+    <events name="ModificationTarif Vente" description="" isResolvedByProcesses="//@architectures.1/@processes.5" isGeneratedByProcesses="//@architectures.1/@processes.6"/>
+    <events name="Partenariat Souscrit" isResolvedByProcesses="//@architectures.1/@processes.7" isGeneratedByProcesses="//@architectures.1/@processes.4"/>
+    <events name="Client confirme achat" isResolvedByProcesses="//@architectures.1/@processes.0" isGeneratedByProcesses="//@architectures.1/@processes.2"/>
+    <events name="Client choisit mode de paiement" isResolvedByProcesses="//@architectures.1/@processes.1" isGeneratedByProcesses="//@architectures.1/@processes.0"/>
+    <events name="Client choisit un voyage" isResolvedByProcesses="//@architectures.1/@processes.2" isGeneratedByProcesses="//@architectures.1/@processes.3"/>
+    <events name="Facture émise" isResolvedByProcesses="//@architectures.1/@processes.8" isGeneratedByProcesses="//@architectures.1/@processes.9"/>
+    <events name="Client expose ses envies" isResolvedByProcesses="//@architectures.1/@processes.3" isGeneratedByProcesses="//@architectures.1/@processes.10"/>
+    <locations name="Lyon" containsActors="//@architectures.1/@actors.3" containsPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.4" containsPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.0"/>
+    <locations name="Bordeaux" category="" containsPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.1 //@architectures.3/@physicalApplicationComponents.3 //@architectures.3/@physicalApplicationComponents.5"/>
+    <locations name="Toulouse" containsActors="//@architectures.1/@actors.2" containsPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.0 //@architectures.3/@physicalApplicationComponents.2" containsPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.3 //@architectures.4/@physicalComponents.0"/>
+    <products name="Product1"/>
+    <contracts name="Contract1"/>
+    <measures name="Measure1"/>
+  </architectures>
+  <architectures xsi:type="contentfwk:DataArchitecture">
+    <entities name="Numero de Voyage" isAccessedByServices="//@architectures.1/@services.2 //@architectures.1/@services.9" residesWithinLogicalDataComponent="//@architectures.2/@logicalComponents.0" isProcessesByLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.5 //@architectures.3/@logicalApplicationComponents.4"/>
+    <entities name="Numero de Reservation" isAccessedByServices="//@architectures.1/@services.0 //@architectures.1/@services.3 //@architectures.1/@services.4 //@architectures.3/@informationSystemServices.0" isUpdatedThroughServices="//@architectures.1/@services.2" residesWithinLogicalDataComponent="//@architectures.2/@logicalComponents.1" isProcessesByLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.5" relatesTo="//@architectures.2/@entities.0"/>
+    <entities name="Numero Facture" isUpdatedThroughServices="//@architectures.1/@services.10 //@architectures.3/@informationSystemServices.0 //@architectures.1/@services.0" isProcessesByLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.2" relatesTo="//@architectures.2/@entities.4"/>
+    <entities name="Montant Facture"/>
+    <entities name="Numero Client" isAccessedByServices="//@architectures.3/@informationSystemServices.0" isUpdatedThroughServices="//@architectures.1/@services.11" residesWithinLogicalDataComponent="//@architectures.2/@logicalComponents.5" isProcessesByLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.2 //@architectures.3/@logicalApplicationComponents.0"/>
+    <logicalComponents name="Voyage" encapsulatesDataEntities="//@architectures.2/@entities.0" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.0"/>
+    <logicalComponents name="Reservation" encapsulatesDataEntities="//@architectures.2/@entities.1" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.1"/>
+    <logicalComponents name="Catalogue" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.2"/>
+    <logicalComponents name="Partenaire" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.3"/>
+    <logicalComponents name="Facture" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.4"/>
+    <logicalComponents name="Client" encapsulatesDataEntities="//@architectures.2/@entities.4" isExtendedByPhysicalDataComponents="//@architectures.2/@physicalComponents.5"/>
+    <physicalComponents name="VOYAGE" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.0"/>
+    <physicalComponents name="RESERVATION" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.1"/>
+    <physicalComponents name="CATALOGUE" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.2"/>
+    <physicalComponents name="PARTENAIRE" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.3"/>
+    <physicalComponents name="FACTURE" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.4"/>
+    <physicalComponents name="CLIENT" extendsLogicalDataComponents="//@architectures.2/@logicalComponents.5"/>
+  </architectures>
+  <architectures xsi:type="contentfwk:ApplicationArchitecture">
+    <logicalApplicationComponents name="CRM" category="" implementsServices="//@architectures.1/@services.11" operatesOnDataEntities="//@architectures.2/@entities.4" communicatesWith="//@architectures.3/@logicalApplicationComponents.2 //@architectures.3/@logicalApplicationComponents.5"/>
+    <logicalApplicationComponents name="Comptabilité Fournisseur" implementsServices="//@architectures.1/@services.9" isExtendedByPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.2 //@architectures.3/@physicalApplicationComponents.0"/>
+    <logicalApplicationComponents name="Comptabilité Générale" implementsServices="//@architectures.1/@services.10 //@architectures.1/@services.0 //@architectures.1/@services.1 //@architectures.3/@informationSystemServices.0" operatesOnDataEntities="//@architectures.2/@entities.2 //@architectures.2/@entities.4" isExtendedByPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.0 //@architectures.3/@physicalApplicationComponents.5"/>
+    <logicalApplicationComponents name="Approvisionnement/Achat" implementsServices="//@architectures.1/@services.5" isExtendedByPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.1"/>
+    <logicalApplicationComponents name="Référentiel des offres" ownerDescr="" implementsServices="//@architectures.1/@services.6 //@architectures.1/@services.7 //@architectures.1/@services.8" operatesOnDataEntities="//@architectures.2/@entities.0" isExtendedByPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.3"/>
+    <logicalApplicationComponents name="Système de Rèservation" implementsServices="//@architectures.1/@services.0 //@architectures.1/@services.4 //@architectures.1/@services.3 //@architectures.1/@services.2" operatesOnDataEntities="//@architectures.2/@entities.0 //@architectures.2/@entities.1" isExtendedByPhysicalApplicationComponents="//@architectures.3/@physicalApplicationComponents.4" communicatesWith="//@architectures.3/@logicalApplicationComponents.0 //@architectures.3/@logicalApplicationComponents.4"/>
+    <physicalApplicationComponents name="Oracle Applications GL" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.2 //@architectures.3/@logicalApplicationComponents.1" isHostedInLocation="//@architectures.1/@locations.2" performanceCharacteristics=""/>
+    <physicalApplicationComponents name="Oracle Applications SSP5" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.3" isHostedInLocation="//@architectures.1/@locations.1"/>
+    <physicalApplicationComponents name="Gestion Commerciale V1" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.1" isHostedInLocation="//@architectures.1/@locations.2"/>
+    <physicalApplicationComponents name="Référentiel des offres V2.1" description="" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.4" isHostedInLocation="//@architectures.1/@locations.1"/>
+    <physicalApplicationComponents name="Systeme de Reservation" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.5" isHostedInLocation="//@architectures.1/@locations.0" isRealizedByPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.2"/>
+    <physicalApplicationComponents name="GestionCommercial V2" extendsLogicalApplicationComponents="//@architectures.3/@logicalApplicationComponents.2" isHostedInLocation="//@architectures.1/@locations.1" communicatesWith="//@architectures.3/@physicalApplicationComponents.4" isRealizedByPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.0 //@architectures.4/@physicalComponents.1"/>
+    <informationSystemServices providesGovernedInterfaceToAccessFunctions="//@architectures.1/@functions.3" providesEntities="//@architectures.2/@entities.2" consumesEntities="//@architectures.2/@entities.4 //@architectures.2/@entities.1" isRealizedThroughLogicalApplicationComponent="//@architectures.3/@logicalApplicationComponents.2" isOwnedAndGovernedByOrganizationUnits="//@architectures.1/@units.3" isRealizedByProcesses="//@architectures.1/@processes.2 //@architectures.1/@processes.1" name="FacturerVoyage"/>
+    <informationSystemServices name="VerifierDroitAcces"/>
+    <informationSystemServices name="ReserverVoyage"/>
+    <informationSystemServices name="AnnulerReservationVoyage"/>
+    <informationSystemServices name="ConfirmerReservationVoyage"/>
+    <informationSystemServices name="VerifierDisponibiliteVoyage"/>
+    <informationSystemServices name="PublierOffre"/>
+    <informationSystemServices name="ListerLesOffres"/>
+    <informationSystemServices name="ReferencerPartenaire"/>
+    <informationSystemServices name="AcheterVoyageAUnPartenaire"/>
+    <informationSystemServices name="CreerCompteClient"/>
+  </architectures>
+  <architectures xsi:type="contentfwk:TechnologyArchitecture">
+    <physicalComponents name="Oracle 10 G DEV1" extendsLogicalTechnologyComponents="//@architectures.4/@logicalComponents.0" isHostedInLocation="//@architectures.1/@locations.0 //@architectures.1/@locations.2"/>
+    <physicalComponents name="Oracle 10 G PROD" extendsLogicalTechnologyComponents="//@architectures.4/@logicalComponents.0"/>
+    <physicalComponents name="Tomcat 5.5 DEV1" extendsLogicalTechnologyComponents="//@architectures.4/@logicalComponents.1"/>
+    <physicalComponents name="WebSphere AS 4" extendsLogicalTechnologyComponents="//@architectures.4/@logicalComponents.3" isHostedInLocation="//@architectures.1/@locations.2"/>
+    <logicalComponents name="OracleDB" isRealizedByPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.0 //@architectures.4/@physicalComponents.1"/>
+    <logicalComponents name="Tomcat Application Server" isRealizedByPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.2"/>
+    <logicalComponents name="ILog JRules"/>
+    <logicalComponents name="WebSphere AS" standardClass="Provisional" providesPlatformForServices="//@architectures.1/@services.0" isRealizedByPhysicalTechnologyComponents="//@architectures.4/@physicalComponents.3"/>
+  </architectures>
+  <containers name="Database Engine" ownsElements="//@architectures.4/@physicalComponents.1 //@architectures.4/@physicalComponents.0 //@architectures.4/@logicalComponents.0"/>
+  <containers name="Business Rules" ownsElements="//@architectures.4/@logicalComponents.2"/>
+  <any xsi:type="layer:Layer" name="Plan d'Occupation des Sols Applicatif">
+    <subLayers name="Back-Office">
+      <subLayers name="Comptabilité" elements="//@architectures.3/@logicalApplicationComponents.1 //@architectures.3/@logicalApplicationComponents.2"/>
+      <subLayers name="Gestion Client" elements="//@architectures.3/@logicalApplicationComponents.0"/>
+      <subLayers name="Offre" elements="//@architectures.3/@logicalApplicationComponents.3 //@architectures.3/@logicalApplicationComponents.4"/>
+    </subLayers>
+    <subLayers name="Front-Office">
+      <subLayers name="Distribution" elements="//@architectures.3/@logicalApplicationComponents.5"/>
+    </subLayers>
+  </any>
+</contentfwk:EnterpriseArchitecture>

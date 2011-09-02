@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="stakeholder">
+  <ownedViewpoints name="TOGAF - Stakeholders">
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Stakeholder Map Matrix" initialisation="true" domainClass="StrategicArchitecture">
+      <lineMappings name="Stakeholder" domainClass="Stakeholder" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Stakeholder&quot;)%>">
+        <create name="Create Stakeholder2" label="Create Stakeholder" mapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Stakeholder%20Map%20Matrix']/@lineMappings[name='Stakeholder']">
+          <variables name="root" documentation="The semantic element of the table."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Stakeholder" referenceName="strategicElements"/>
+          </firstModelOperation>
+        </create>
+      </lineMappings>
+      <createLine name="Create Stakeholder" mapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Stakeholder%20Map%20Matrix']/@lineMappings[name='Stakeholder']">
+        <variables name="root" documentation="The semantic element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:CreateInstance" typeName="Stakeholder" referenceName="strategicElements"/>
+      </createLine>
+      <columnMappings name="StakeholderName" headerLabelExpression="Stakeholder" featureName="name" labelExpression="&lt;%self.name%>"/>
+      <columnMappings name="Involvement" headerLabelExpression="Involvement" featureName="involvement" labelExpression="&lt;%self.involvement%>"/>
+      <columnMappings name="Class" headerLabelExpression="Class" featureName="class" labelExpression="&lt;%self.class%>"/>
+      <columnMappings name="Relevant Artifacts" headerLabelExpression="Relevant Artifacts" featureName="relevantArtifacts" labelExpression="&lt;%self.relevantArtifacts%>"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Value Chain Diagram" titleExpression="Value Chain Diagram" initialisation="true" domainClass="StrategicArchitecture">
+      <defaultLayer name="Default">
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetFinderExpression="&lt;%next%>" sourceFinderExpression="&lt;%self%>" domainClass="Value" useDomainElement="true">
+          <style showIcon="false" sizeComputationExpression="2" routingStyle="manhattan">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Value Chain" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Value&quot;)%>" domainClass="Value">
+          <style xsi:type="style:FlatContainerStyleDescription" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Value" containerMappings="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Value" referenceName="strategicElements"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Next value" edgeMappings="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@edgeMappings[name='']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="next" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

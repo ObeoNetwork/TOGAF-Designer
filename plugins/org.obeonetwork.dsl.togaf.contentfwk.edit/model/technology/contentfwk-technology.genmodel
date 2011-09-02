@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.togaf.contentfwk/src"
+    editorDirectory="/org.obeonetwork.dsl.togaf.contentfwk.editor/src-gen" modelPluginID="org.obeonetwork.dsl.togaf.contentfwk"
+    modelName="Contentfwk" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" interfaceNamePattern="" classNamePattern="">
+  <foreignModel>../../../org.obeonetwork.dsl.togaf.contentfwk/contentfwk.ecore</foreignModel>
+  <genPackages prefix="Contentfwk" basePackage="org.obeonetwork.dsl.togaf.technology"
+      disposableProviderFactory="true" presentationPackageSuffix="technology" ecorePackage="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory">
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/GuidingPrinciple"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/BusinessPrinciple"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/DataPrinciple"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/ApplicationPrinciple"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/IntegrationPrinciple"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PrincipleCategory/TechnologyPrinciple"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass">
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass/NonStandard"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass/Proposed"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass/Provisional"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass/PhasingOut"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StandardsClass/Retired"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus">
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus/Proposed"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus/InDevelopment"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus/Live"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus/PhasingOut"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LifeCycleStatus/Retired"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntityCategory">
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntityCategory/Message"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntityCategory/InternallyStoredEntity"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory">
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory/WorkPackage"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory/WorkStream"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory/Project"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory/Program"/>
+      <genEnumLiterals ecoreEnumLiteral="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackageCategory/Portofolio"/>
+    </genEnums>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//EnterpriseArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//EnterpriseArchitecture/architectures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//EnterpriseArchitecture/containers"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Architecture"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/drivers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/goals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/objectives"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/units"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/actors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/services"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/processes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/controls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/events"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/locations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/products"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/contracts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessArchitecture/measures"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataArchitecture/entities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataArchitecture/logicalComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataArchitecture/physicalComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//TechnologyArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//TechnologyArchitecture/platformServices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//TechnologyArchitecture/physicalComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//TechnologyArchitecture/logicalComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Driver">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Driver/createsGoals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Driver/motivatesOrganizationUnits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Driver/decomposesDriver"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Goal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Goal/addressesDrivers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Goal/isRealizedThroughObjectives"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Goal/decomposesGoal"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Objective">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Objective/realizesGoals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Objective/isTrackedAgainstMeasures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Objective/decomposesObjective"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/ownsAndGovernsServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/containsActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/ownsFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/participatesInProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/isMotivatedByDrivers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/producesProducts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/operatesInLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//OrganizationUnit/headcount"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/suppliesEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/consumesEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/belongsTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/interactsWithFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/performsTaskInRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/participatesInProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/consumesServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/resolvesEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/generatesEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/operatesInLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/FTEs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/actorGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/actorTasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/performsFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Actor/decomposesActors"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Role/isAssumedByActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Role/accessesFunctions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Role/estimatedFTEs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Role/decomposesRole"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/isSuppliedByActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/isConsumedByActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/isAccessedByServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/isUpdatedThroughServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/residesWithinLogicalDataComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/isProcessesByLogicalApplicationComponents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/dataEntityCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/privacyClassification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/retentionClassification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/decomposeEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataEntity/relatesTo"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent/implementsServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent/operatesOnDataEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent/isExtendedByPhysicalApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent/communicatesWith"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalApplicationComponent/decomposesLogicalApplicationComponent"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/isPerformedByActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/isOwnedByUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/isBoundedByServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/supportsProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/isRealizedByProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/canBeAccessedByRoles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/supportsActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/decomposesFunction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Function/communicatedWithFunctions"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//BusinessService/supportsObjective"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/orchestratesFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/decomposesFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/involvesOrganizationUnits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/orchestratesServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/decomposesServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/involvesActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/isGuidedByControls"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/resolvesEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/generatesEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/producesProducts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/processCritiality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/isAutomated"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/processVolumetrics"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/decomposesProcess"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/precedesProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Process/followsProcesses"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PlatformService">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PlatformService/isSuppliedByLogicalTechnologyComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/realizesApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/extendsLogicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/isHostedInLocation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/productName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/moduleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/vendor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/version"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/decomposesPhysicalTechnologyComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalTechnologyComponent/isDependentOnPhysicalTechnologyComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Product">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Product/isProducedByOrganizationUnits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Product/isProducedByProcesses"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Measure">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Measure/setsPerformanceCriteriaForObjectives"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Measure/setsPerformanceCriteriaForServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Measure/decomposesMeasure"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ServiceQuality">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ServiceQuality/appliesToServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ServiceQuality/appliesToContracts"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/governsAndMeasuresBusinessServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/meetsServiceQuality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/behaviorCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/ServiceNameCaller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/ServiceNameCalled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/serviceQualityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/availabilityQualityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/servicesTimes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/manageabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/serviceabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/performanceCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/responseCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/reliabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/qualityOfInformationRequired"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/contractControlRequirements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/resultControlRequirements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/recoverabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/locatabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/securityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/privacyCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/integrityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/credibilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/localizationCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/internationalizationCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/interoperabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/scalabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/portabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/extensibilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/capacityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/throughput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/throughputPeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/growth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/growthPeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/peakProfileShortTerm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Contract/peakProfileLongTerm"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event/isResolvedByBusinessServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event/isResolvedByProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event/isGeneratedByProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event/isResolvedByActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Event/isGeneratedByActors"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Control">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Control/ensuresCorrectOperationOfProcesses"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/delegates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/isDelegatedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/sourceDescr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/ownerDescr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Element/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Container/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Container/ownsElements"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/containsActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/containsOrganizationUnits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/containsPhysicalDataComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/containsPhysicalApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/containsPhysicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Location/decomposesLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Capability">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Capability/isDeliveredBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Capability/businessValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Capability/increments"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicElement"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/principleCategory"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/statementOfPrinciple"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/rationale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/implication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Principle/metric"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Constraint"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Assumption"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Requirement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Requirement/statementOfRequirement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Requirement/rationale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Requirement/acceptanceCriteria"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Gap"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackage/workPackageCategory"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//WorkPackage/deliversCapabilities"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalDataComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalDataComponent/encapsulatesDataEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalDataComponent/isExtendedByPhysicalDataComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalDataComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalDataComponent/extendsLogicalDataComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalDataComponent/isHotedInLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalDataComponent/decomposesPhysicalDataComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalDataComponent/encapsulatesPhysicalApplicationComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ApplicationArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ApplicationArchitecture/logicalApplicationComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ApplicationArchitecture/physicalApplicationComponents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ApplicationArchitecture/informationSystemServices"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/extendsLogicalApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/isHostedInLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/communicatesWith"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/lifeCycleStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/initialLiveDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/dateOfLastRelease"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/dateOfNextRelease"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/retirementDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/availabilityQualityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/servicesTimes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/manageabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/serviceabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/performanceCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/reliabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/recoverabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/locatabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/securityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/privacyCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/integrityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/credibilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/localizationCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/internationalizationCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/interoperabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/scalabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/portabilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/extensibilityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/capacityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/throughput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/throughputPeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/growth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/growthPeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/peakProfileShortTerm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/peakProfileLongTerm"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/encapsulatesPhysicalDataComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/isRealizedByPhysicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//PhysicalApplicationComponent/decomposesPhysicalApplicationComponent"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent/providesPlatformForServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent/suppliesPlatformServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent/isRealizedByPhysicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent/decomposesLogicalTechnologyComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//LogicalTechnologyComponent/isDependentOnLogicalTechnologyComponents"/>
+    </genClasses>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicArchitecture">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicArchitecture/capabilities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicArchitecture/strategicElements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard/standardClass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard/standardCreationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard/lastStandardCreationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard/nextStandardCreationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Standard/retireDate"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isProvidedToActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/providesGovernedInterfaceToAccessFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/providesEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/consumesEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isGovernedAndMeasuredByContracts"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/resolvesEvents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isImplementedOnLogicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isRealizedThroughLogicalApplicationComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isOwnedAndGovernedByOrganizationUnits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isTrackedAgainstMeasures"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/supportsProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/isRealizedByProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/meetsQualities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/consumesServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//Service/decomposesServices"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//ApplicationComponent"/>
+    <genClasses ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//InformationSystemService"/>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//DataComponent"/>
+    <genClasses image="false" ecoreClass="../../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//TechnologyComponent"/>
+  </genPackages>
+</genmodel:GenModel>

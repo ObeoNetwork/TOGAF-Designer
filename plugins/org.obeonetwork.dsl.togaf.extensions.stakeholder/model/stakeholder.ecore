@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stakeholder"
+    nsURI="http://www.obeonetwork.org/dsl/togaf/stakeholder/0.7.0" nsPrefix="stakeholder">
+  <eClassifiers xsi:type="ecore:EClass" name="Stakeholder" eSuperTypes="../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="involvement" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="class" lowerBound="1" eType="#//StakeholderClass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relevantArtifacts" lowerBound="1"
+        upperBound="-1" eType="#//RelevantArtifact" defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StakeholderClass">
+    <eLiterals name="Other"/>
+    <eLiterals name="KeepSatisfied" value="1" literal="Keep Satisfied"/>
+    <eLiterals name="KeepInformed" value="2" literal="Keep Informed"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RelevantArtifact">
+    <eLiterals name="Other"/>
+    <eLiterals name="GoalObjectiveServiceModel" value="1" literal="Goal/Objective/Service Model"/>
+    <eLiterals name="OrganizationChart" value="2" literal="Organization Chart"/>
+    <eLiterals name="Roadmaps" value="3"/>
+    <eLiterals name="ApplicationCommunication" value="4" literal="Application Communication"/>
+    <eLiterals name="FunctionalDecomposition" value="5" literal="Functional Decomposition"/>
+    <eLiterals name="OrganizationActorLocation" value="6" literal="Organization/Actor/Location"/>
+    <eLiterals name="BusinessFootprint" value="7" literal="Business Footprint"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="../../org.obeonetwork.dsl.togaf.contentfwk/model/contentfwk.ecore#//StrategicElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" upperBound="-1" eType="#//Value"/>
+  </eClassifiers>
+</ecore:EPackage>

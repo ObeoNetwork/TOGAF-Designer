@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="stakeholder.presentation.StakeholderModelWizardID"
+            name="%_UI_StakeholderModelWizard_label"
+            class="stakeholder.presentation.StakeholderModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/StakeholderModelFile.gif">
+         <description>%_UI_StakeholderModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="stakeholder.presentation.StakeholderEditorID"
+            name="%_UI_StakeholderEditor_label"
+            icon="icons/full/obj16/StakeholderModelFile.gif"
+            extensions="stakeholder"
+            class="stakeholder.presentation.StakeholderEditor"
+            contributorClass="stakeholder.presentation.StakeholderActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

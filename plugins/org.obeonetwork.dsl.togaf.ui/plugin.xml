@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.core.runtime.products"
+         id="org.obeonetwork.dsl.togaf.ui.product">
+      <product
+      		name="TOGAF Modeler"
+      		application="org.eclipse.ui.ide.workbench">
+      	<property
+      		name="appName"
+      		value="TOGAF Modeler"/>
+      	<property
+      		name="windowImages"
+      		value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif"/>
+      	<property
+      		name="aboutText"
+      		value=""/>
+      	<property
+      		name="preferenceCustomization" value="plugin_customization.ini"/>
+       <property
+             name="aboutImage"
+             value="icons/aboutpage_OD4EA.png">
+       </property>
+       <property
+             name="startupProgressRect"
+             value="5,275,445,15">
+       </property>
+      </product>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"
+            fixed="false"
+            icon="icons/logo_16.gif"
+            id="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"
+            name="TOGAF">
+      </perspective>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.obeonetwork.dsl.togaf.ui.startup.Startup">
+      </startup>
+   </extension>
+   
+   <extension
+         id="org.obeonetwork.dsl.togaf.ui.startup.intro"
+         name="TOGAF Intro"
+         point="org.eclipse.ui.intro">
+         <introProductBinding
+         	introId="org.obeonetwork.dsl.togaf.ui.startup.intro"
+         	productId="org.obeonetwork.dsl.togaf.ui.product"/>
+         <intro
+         	class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+         	icon="icons/logo_16.gif"
+         	id="org.obeonetwork.dsl.togaf.ui.startup.intro"/>
+   </extension>
+   <extension point="org.eclipse.ui.intro.config">
+   		<config
+         	content="introContent.xml"
+        	id="org.obeonetwork.dsl.togaf.ui.startup.introConfig"
+         	introId="org.obeonetwork.dsl.togaf.ui.startup.intro">
+			<presentation home-page-id="root">
+	        	<implementation kind="html"/>
+	      	</presentation>	      	
+   		</config>
+	</extension>
+         
+	
+	<extension point="org.eclipse.ui.activities">
+		<activity id="org.obeonetwork.dsl.togaf.ui.activity" name="TOGAF"/>   	
+		<activityPatternBinding
+			activityId="org.obeonetwork.dsl.togaf.ui.activity"
+	     	isEqualityPattern="true"
+	     	pattern="org.obeonetwork.dsl.togaf.ui/org.obeonetwork.dsl.togaf.ui.views.ModelExplorerView">
+		</activityPatternBinding>
+		<activity id="org.obeonetwork.dsl.togaf.ui.activity.toDisable" name="UI to disable"/>
+		<activityPatternBinding 
+			activityId="org.obeonetwork.dsl.togaf.ui.activity.toDisable"
+	     	isEqualityPattern="false"
+	     	pattern="org.eclipse.team.svn.ui/org.eclipse.team.svn.ui.*">
+		</activityPatternBinding>
+		<defaultEnablement id="org.obeonetwork.dsl.togaf.ui.activity"/>
+	</extension>
+ <extension
+       id="product"
+       point="org.eclipse.core.runtime.products">
+    <product
+          application="org.eclipse.emf.codegen.JMerger"
+          name="TOGAF Modeler">
+       <property
+             name="windowImages"
+             value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
+       </property>
+       <property
+             name="aboutImage"
+             value="icons/aboutpage_OD4EA.png">
+       </property>
+       <property
+             name="startupForegroundColor"
+             value="000000">
+       </property>
+       <property
+             name="startupProgressRect"
+             value="5,275,445,15">
+       </property>
+       <property
+             name="startupMessageRect"
+             value="7,252,445,20">
+       </property>
+    </product>
+ </extension>
+ 
+	      
+</plugin>
