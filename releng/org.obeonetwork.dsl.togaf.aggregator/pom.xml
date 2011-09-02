@@ -35,6 +35,5 @@
     <module>../../plugins/org.obeonetwork.dsl.togaf.extensions.layer.design</module>  
     <module>../../samples/org.obeonetwork.dsl.togaf.samples</module>
     <module>../../samples/org.obeonetwork.dsl.togaf.samples.pack.core</module> 
-    <module>../../../viewpointAddons/org.obeonetwork.dsl.viewpoint.addons</module>  
   </modules>
 </project>

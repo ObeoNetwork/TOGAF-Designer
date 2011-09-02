@@ -46,13 +46,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.obeonetwork.dsl.viewpoint.addons"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.obeonetwork.dsl.togaf.design"
          download-size="0"
          install-size="0"
