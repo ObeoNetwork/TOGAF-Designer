@@ -1,0 +1,14 @@
+h1. Welcome to TOGAF Designer by Obeo Network
+
+TOGAF (The Open Group Architecture Framework) is an industry standard architecture framework used to govern an enterprise information architecture. It provides a set of tools to modeled the four levels:Business, Application, Data and Technology. It's standardized by the Open Group.
+
+These plugins are released under the EPL Open-Souce License.
+
+More details about features, screenshots, release notes, dependencies here:
+
+ * http://marketplace.obeonetwork.com/module/togaf
+ * http://docs.obeonetwork.com/togaf
+ * http://www.obeodesigner.com
+
+
+To build the module you'll need Maven3 and type @mvn clean verify@
