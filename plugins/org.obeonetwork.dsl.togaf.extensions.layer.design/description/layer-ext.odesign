@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="layer-ext">
+  <eAnnotations source="Migration">
+    <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
+    <details key="LabelAlignmentForDNodeListElementMappingMigrationForBehaviourPresevation" value=""/>
+    <details key="SVG.BundledImageDescription.BorderColor" value=""/>
+  </eAnnotations>
   <ownedViewpoints name="TOGAF Extension - Layer">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Layers Definition" initialisation="true" domainClass="EnterpriseArchitecture">
       <defaultLayer name="Default">
@@ -60,7 +65,7 @@
       <defaultLayer name="Default">
         <nodeMappings name="BusinessService" semanticCandidatesExpression="&lt;%elements + descendant.elements%>" semanticElements="" domainClass="BusinessService">
           <style xsi:type="style:BundledImageDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
@@ -73,21 +78,27 @@
           </style>
         </nodeMappings>
         <edgeMappings name="DataEntity consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='BusinessService']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='DataEntity']" targetFinderExpression="&lt;%consumesEntities%>">
-          <style showIcon="false" labelExpression="consumes" labelAlignment="RIGHT" lineStyle="dash" sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="consumes">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="DataEntity provides by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='BusinessService']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='DataEntity']" targetFinderExpression="&lt;%providesEntities%>">
-          <style showIcon="false" labelExpression="provides" labelAlignment="RIGHT" lineStyle="dash" sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="provides">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="BusinessService consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='BusinessService']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='BusinessService']" targetFinderExpression="&lt;%consumesServices%>">
-          <style showIcon="false" labelExpression="consumes" labelAlignment="RIGHT" sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="consumes">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <toolSections name="Tools">
@@ -178,33 +189,37 @@
         </nodeMappings>
         <nodeMappings name="Function" semanticCandidatesExpression="&lt;%elements.~isBoundedByServices + descendant.elements.~isBoundedByServices%>" domainClass="Function">
           <style xsi:type="style:BundledImageDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <edgeMappings name="Function To BusinessService" deletionDescription="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20function%20to%20business%20bound']" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="&lt;%&quot;&quot;%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@containerMappings[name='BusinessService']" targetFinderExpression="&lt;%isBoundedByServices%>">
-          <style showIcon="false" sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="OrganizationToBusinessService" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='OrganizationUnit']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='Function']" targetFinderExpression="&lt;%ownsFunctions%>">
+        <edgeMappings name="OrganizationToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='OrganizationUnit']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20from%20Layer']/@defaultLayer/@nodeMappings[name='Function']" targetFinderExpression="&lt;%ownsFunctions%>">
           <style sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" domainClass="BusinessService" listContainer="true">
           <subNodeMappings name="Goal" semanticCandidatesExpression="&lt;%supportsObjective.realizesGoals%>" domainClass="Goal">
-            <style xsi:type="style:SquareDescription" labelPosition="node">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
           <subNodeMappings name="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%isRealizedThroughLogicalApplicationComponent.isExtendedByPhysicalApplicationComponents.isRealizedByPhysicalTechnologyComponents%>" synchronizationLock="true" domainClass="PhysicalTechnologyComponent">
-            <style xsi:type="style:SquareDescription" labelPosition="node">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
@@ -219,14 +234,14 @@
         </containerMappings>
         <toolSections name="Tools">
           <ownedTools xsi:type="tool:SelectionWizardDescription" name="Bound function to business service" precondition="&lt;%self.filter(&quot;Function&quot;) != null%>" forceRefresh="true" candidatesExpression="&lt;%eContainer().services%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%current()%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="isBoundedByServices" valueExpression="&lt;%$element%>"/>
               </firstModelOperations>
             </initialOperation>
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
           </ownedTools>
           <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete function to business bound">
             <element name="element"/>
@@ -278,13 +293,15 @@
       <defaultLayer name="Default">
         <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Application%20Communication%20Diagram%20from%20Layer']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Application%20Communication%20Diagram%20from%20Layer']/@defaultLayer/@containerMappings[name='ExternalLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Application%20Communication%20Diagram%20from%20Layer']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='TOGAF%20Extension%20-%20Layer']/@ownedRepresentations[name='Application%20Communication%20Diagram%20from%20Layer']/@defaultLayer/@containerMappings[name='ExternalLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>">
           <style sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%elements + descendant.elements%>" domainClass="LogicalApplicationComponent" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="Service">
-            <style xsi:type="style:SquareDescription" labelPosition="node">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -299,7 +316,7 @@
         </containerMappings>
         <containerMappings name="ExternalLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(elements.communicatesWith + elements.descendant.communicatesWith) - (elements+descendant.elements)%>" synchronizationLock="true" domainClass="LogicalApplicationComponent" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="Service">
-            <style xsi:type="style:SquareDescription" labelPosition="node">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>

@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="stakeholder">
+  <eAnnotations source="Migration">
+    <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
+    <details key="LabelAlignmentForDNodeListElementMappingMigrationForBehaviourPresevation" value=""/>
+    <details key="SVG.BundledImageDescription.BorderColor" value=""/>
+  </eAnnotations>
   <ownedViewpoints name="TOGAF - Stakeholders">
     <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Stakeholder Map Matrix" initialisation="true" domainClass="StrategicArchitecture">
       <lineMappings name="Stakeholder" domainClass="Stakeholder" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Stakeholder&quot;)%>">
@@ -25,10 +30,12 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Value Chain Diagram" titleExpression="Value Chain Diagram" initialisation="true" domainClass="StrategicArchitecture">
       <defaultLayer name="Default">
-        <edgeMappings sourceMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetFinderExpression="&lt;%next%>" sourceFinderExpression="&lt;%self%>" domainClass="Value" useDomainElement="true">
-          <style showIcon="false" sizeComputationExpression="2" routingStyle="manhattan">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        <edgeMappings semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetMapping="//@ownedViewpoints[name='TOGAF%20-%20Stakeholders']/@ownedRepresentations[name='Value%20Chain%20Diagram']/@defaultLayer/@containerMappings[name='Value%20Chain']" targetFinderExpression="&lt;%next%>" sourceFinderExpression="&lt;%self%>" domainClass="Value" useDomainElement="true">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Value Chain" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Value&quot;)%>" domainClass="Value">

@@ -10,42 +10,27 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.startup;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Map;
+import fr.obeo.dsl.viewpoint.business.api.session.Session;
+import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
 
-import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.IWorkbenchPreferenceConstants;
 import org.eclipse.ui.internal.util.PrefUtil;
-import org.obeonetwork.dsl.togaf.ui.Activator;
-
-import fr.obeo.dsl.common.ui.tools.api.editing.EditingDomainService;
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.business.api.session.SessionHelper;
-import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
-import fr.obeo.dsl.viewpoint.ui.business.api.session.analysis.DAnalysisSessionUIHelper;
 
 @SuppressWarnings("restriction")
 public class Startup implements IStartup {
 
 	public static Session demoSession;
-	
+
 	/**
 	 * @see org.eclipse.ui.IStartup#earlyStartup()
 	 */
 	public void earlyStartup() {
 		if (isTOGAFDemoProduct()) {
-		//	activateFullScreenIntro();
-		//	closeAllSessions();
-		//	openSampleSession();
+			// activateFullScreenIntro();
+			// closeAllSessions();
+			// openSampleSession();
 		}
 	}
 
@@ -68,32 +53,39 @@ public class Startup implements IStartup {
 	}
 
 	private static final String DEMO_PROJECT = "org.obeonetwork.dsl.togaf.demo";
+
 	private static final String DEMO_MODEL_PATH = "models/voyagediscount.togaf";
+
 	private static final String DEMO_MODELGRAPH_PATH = "models/voyagediscount.aird";
 
 	private void openSampleSession() {
-		TransactionalEditingDomain editingDomain = EditingDomainService.getInstance().getEditingDomainProvider().getEditingDomain();
-		ResourceSet resourceSet = editingDomain.getResourceSet();
-		Resource semanticResource = resourceSet.getResource(URI.createPlatformResourceURI(DEMO_PROJECT + "/" + DEMO_MODEL_PATH, true), true);
-		Resource airdResource = resourceSet.getResource(URI.createPlatformResourceURI(DEMO_PROJECT + "/" + DEMO_MODELGRAPH_PATH, true), true);
-		Collection<Resource> semanticResources = new ArrayList<Resource>();
-		semanticResources.add(semanticResource);
-		ArrayList<Resource> loadedResources = new ArrayList<Resource>();
-		loadedResources.add(airdResource);
-		Session newSession = null;
-		if (DAnalysisSessionUIHelper.hasSessionData(loadedResources)) {
-			Map<Resource, Session> openOrCreateSessions = DAnalysisSessionUIHelper.openOrCreateSessions(loadedResources);
-			newSession = openOrCreateSessions.get(airdResource);
-			// we should initialize the cross referencer before a deletion
-			newSession.getSemanticCrossReferencer();
-		} else {
-			try {
-				newSession = SessionHelper.createLocalSessionFromModelsSilently(semanticResources, airdResource);
-			} catch (IOException e) {
-				Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot open model.", e));
-			}
-		}
-		demoSession=newSession;
+		// TransactionalEditingDomain editingDomain =
+		// EditingDomainService.getInstance().getEditingDomainProvider().getEditingDomain();
+		// ResourceSet resourceSet = editingDomain.getResourceSet();
+		// Resource semanticResource = resourceSet.getResource(URI.createPlatformResourceURI(DEMO_PROJECT +
+		// "/" + DEMO_MODEL_PATH, true), true);
+		// Resource airdResource = resourceSet.getResource(URI.createPlatformResourceURI(DEMO_PROJECT + "/" +
+		// DEMO_MODELGRAPH_PATH, true), true);
+		// Collection<Resource> semanticResources = new ArrayList<Resource>();
+		// semanticResources.add(semanticResource);
+		// ArrayList<Resource> loadedResources = new ArrayList<Resource>();
+		// loadedResources.add(airdResource);
+		// Session newSession = null;
+		// if (DAnalysisSessionUIHelper.hasSessionData(loadedResources)) {
+		// Map<Resource, Session> openOrCreateSessions =
+		// DAnalysisSessionUIHelper.openOrCreateSessions(loadedResources);
+		// newSession = openOrCreateSessions.get(airdResource);
+		// // we should initialize the cross referencer before a deletion
+		// newSession.getSemanticCrossReferencer();
+		// } else {
+		// try {
+		// newSession = SessionHelper.createLocalSessionFromModelsSilently(semanticResources, airdResource);
+		// } catch (IOException e) {
+		// Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID,
+		// "Cannot open model.", e));
+		// }
+		// }
+		// demoSession=newSession;
 	}
 
 }

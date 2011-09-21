@@ -10,15 +10,20 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.contentfwk;
 
+import fr.obeo.dsl.viewpoint.business.api.session.Session;
+import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
+
+import java.util.Collection;
+import java.util.Iterator;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.eef.runtime.ui.editor.InteractiveEEFEditor;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.swt.custom.CTabFolder;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
@@ -27,8 +32,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.internal.Workbench;
 import org.eclipse.ui.part.FileEditorInput;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditorPlugin;
-
-import fr.obeo.dsl.common.ui.tools.api.editing.EditingDomainService;
 
 @SuppressWarnings("restriction")
 public class TogafEditorHelper {
@@ -43,13 +46,21 @@ public class TogafEditorHelper {
 		return null;
 	}
 
+	private static TransactionalEditingDomain getEditingDomain() {
+		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
+		Iterator<Session> iterator = sessions.iterator();
+		if (iterator.hasNext()) {
+			return iterator.next().getTransactionalEditingDomain();
+		} else {
+			throw new IllegalArgumentException(
+					"SearchEngineService: no editing domain could be found because there's no session open.");
+		}
+	}
+
 	public static boolean open(String editorID, int index) {
-		IWorkbenchPage page = Workbench.getInstance()
-				.getActiveWorkbenchWindow().getActivePage();
-		EditingDomain editingDomain = (AdapterFactoryEditingDomain) EditingDomainService
-				.getInstance().getEditingDomainProvider().getEditingDomain();
-		Resource resource = getFirstTogafResource(editingDomain
-				.getResourceSet());
+		IWorkbenchPage page = Workbench.getInstance().getActiveWorkbenchWindow().getActivePage();
+		EditingDomain editingDomain = getEditingDomain();
+		Resource resource = getFirstTogafResource(editingDomain.getResourceSet());
 		IFile modelFile;
 		URI eUri = resource.getURI();
 		if (!eUri.isPlatformResource()) {
@@ -57,15 +68,14 @@ public class TogafEditorHelper {
 			return false;
 		}
 		String platformString = eUri.toPlatformString(true);
-		IPath ipath = ResourcesPlugin.getWorkspace().getRoot()
-				.findMember(platformString).getFullPath();
+		IPath ipath = ResourcesPlugin.getWorkspace().getRoot().findMember(platformString).getFullPath();
 		modelFile = ResourcesPlugin.getWorkspace().getRoot().getFile(ipath);
 
 		try {
-			IEditorPart editorPart = page.openEditor(new FileEditorInput(
-					modelFile), editorID, true, IWorkbenchPage.MATCH_ID);
+			IEditorPart editorPart = page.openEditor(new FileEditorInput(modelFile), editorID, true,
+					IWorkbenchPage.MATCH_ID);
 			if (editorPart instanceof IContentfwkEditor) {
-				IContentfwkEditor catalog = (IContentfwkEditor) editorPart;
+				IContentfwkEditor catalog = (IContentfwkEditor)editorPart;
 				catalog.setSelection(index);
 			}
 		} catch (PartInitException e) {
@@ -74,17 +84,16 @@ public class TogafEditorHelper {
 		}
 		return true;
 	}
-	
+
 	public static CTabFolder getTabFolder(Object o) {
 		CTabFolder result = null;
 		// Attention il y a un premier TabFolder correspondant � la page de
 		// l'�diteur. Ce TabFolder ne contient qu'une page.
-		if ((o instanceof CTabFolder)
-				&& ((CTabFolder) o).getChildren().length > 1) {
-			result = (CTabFolder) o;
+		if ((o instanceof CTabFolder) && ((CTabFolder)o).getChildren().length > 1) {
+			result = (CTabFolder)o;
 		} else if (o instanceof Composite) {
 			boolean found = false;
-			Object[] it = ((Composite) o).getChildren();
+			Object[] it = ((Composite)o).getChildren();
 			int cpt = 0;
 			while (!found && cpt < it.length) {
 				result = getTabFolder(it[cpt]);
