@@ -128,9 +128,9 @@ public class ActorPropertiesEditionComponent extends SinglePartPropertiesEditing
 	private	ReferencesTableSettings performsFunctionsSettings;
 	
 	/**
-	 * Settings for decomposesActors EObjectFlatComboViewer
+	 * Settings for decomposesActors ReferencesTable
 	 */
-	private	EObjectFlatComboSettings decomposesActorsSettings;
+	private	ReferencesTableSettings decomposesActorsSettings;
 	
 	/**
 	 * Default constructor
@@ -243,11 +243,8 @@ public class ActorPropertiesEditionComponent extends SinglePartPropertiesEditing
 				basePart.initPerformsFunctions(performsFunctionsSettings);
 			}
 			if (isAccessible(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors)) {
-				// init part
-				decomposesActorsSettings = new EObjectFlatComboSettings(actor, ContentfwkPackage.eINSTANCE.getActor_DecomposesActors());
+				decomposesActorsSettings = new ReferencesTableSettings(actor, ContentfwkPackage.eINSTANCE.getActor_DecomposesActors());
 				basePart.initDecomposesActors(decomposesActorsSettings);
-				// set the button mode
-				basePart.setDecomposesActorsButtonMode(ButtonsModeEnum.BROWSE);
 			}
 			// init filters
 			basePart.addFilterToDelegates(new ViewerFilter() {
@@ -502,16 +499,19 @@ public class ActorPropertiesEditionComponent extends SinglePartPropertiesEditing
 			
 			basePart.addFilterToDecomposesActors(new ViewerFilter() {
 			
-			/**
-			 * {@inheritDoc}
-			 * 
-			 * @see org.eclipse.jface.viewers.ViewerFilter#select(org.eclipse.jface.viewers.Viewer, java.lang.Object, java.lang.Object)
-			 */
-			public boolean select(Viewer viewer, Object parentElement, Object element) {
-				return (element instanceof String && element.equals("")) || (element instanceof Actor); //$NON-NLS-1$ 
+				/**
+				 * {@inheritDoc}
+				 * 
+				 * @see org.eclipse.jface.viewers.ViewerFilter#select(org.eclipse.jface.viewers.Viewer, java.lang.Object, java.lang.Object)
+				 */
+				public boolean select(Viewer viewer, Object parentElement, Object element) {
+					if (element instanceof EObject)
+						return (!basePart.isContainedInDecomposesActorsTable((EObject)element));
+					return element instanceof Resource;
 				}
 			
 			});
+			basePart.addFilterToDecomposesActors(new EObjectFilter(ContentfwkPackage.eINSTANCE.getActor()));
 			// Start of user code for additional businessfilters for decomposesActors
 			
 			// End of user code
@@ -715,19 +715,12 @@ public class ActorPropertiesEditionComponent extends SinglePartPropertiesEditing
 			}
 		}
 		if (ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
-				decomposesActorsSettings.setToReference((Actor)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
-				Actor eObject = ContentfwkFactory.eINSTANCE.createActor();
-				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
-				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);
-				if (provider != null) {
-					PropertiesEditingPolicy policy = provider.getPolicy(context);
-					if (policy != null) {
-						policy.execute();
-					}
+			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+				if (event.getNewValue() instanceof Actor) {
+					decomposesActorsSettings.addToReference((EObject) event.getNewValue());
 				}
-				decomposesActorsSettings.setToReference(eObject);
+			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
+					decomposesActorsSettings.removeFromReference((EObject) event.getNewValue());
 			}
 		}
 	}
@@ -828,8 +821,8 @@ public class ActorPropertiesEditionComponent extends SinglePartPropertiesEditing
 			}
 			if (ContentfwkPackage.eINSTANCE.getActor_PerformsFunctions().equals(msg.getFeature())  && isAccessible(ContentfwkViewsRepository.Actor.RelatedElements.performsFunctions))
 				basePart.updatePerformsFunctions();
-			if (ContentfwkPackage.eINSTANCE.getActor_DecomposesActors().equals(msg.getFeature()) && basePart != null && isAccessible(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors))
-				basePart.setDecomposesActors((EObject)msg.getNewValue());
+			if (ContentfwkPackage.eINSTANCE.getActor_DecomposesActors().equals(msg.getFeature())  && isAccessible(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors))
+				basePart.updateDecomposesActors();
 			
 		}
 	}

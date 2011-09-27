@@ -236,14 +236,14 @@ public class ActorImpl extends ElementImpl implements Actor {
 	protected EList<Function> performsFunctions;
 
 	/**
-	 * The cached value of the '{@link #getDecomposesActors() <em>Decomposes Actors</em>}' reference.
+	 * The cached value of the '{@link #getDecomposesActors() <em>Decomposes Actors</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDecomposesActors()
 	 * @generated
 	 * @ordered
 	 */
-	protected Actor decomposesActors;
+	protected EList<Actor> decomposesActors;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -560,37 +560,11 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Actor getDecomposesActors() {
-		if (decomposesActors != null && decomposesActors.eIsProxy()) {
-			InternalEObject oldDecomposesActors = (InternalEObject)decomposesActors;
-			decomposesActors = (Actor)eResolveProxy(oldDecomposesActors);
-			if (decomposesActors != oldDecomposesActors) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS, oldDecomposesActors, decomposesActors));
-			}
+	public EList<Actor> getDecomposesActors() {
+		if (decomposesActors == null) {
+			decomposesActors = new EObjectResolvingEList<Actor>(Actor.class, this, ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS);
 		}
 		return decomposesActors;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Actor basicGetDecomposesActors() {
-		return decomposesActors;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDecomposesActors(Actor newDecomposesActors) {
-		Actor oldDecomposesActors = decomposesActors;
-		decomposesActors = newDecomposesActors;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS, oldDecomposesActors, decomposesActors));
 	}
 
 	/**
@@ -701,8 +675,7 @@ public class ActorImpl extends ElementImpl implements Actor {
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return getPerformsFunctions();
 			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				if (resolve) return getDecomposesActors();
-				return basicGetDecomposesActors();
+				return getDecomposesActors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -768,7 +741,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 				getPerformsFunctions().addAll((Collection<? extends Function>)newValue);
 				return;
 			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				setDecomposesActors((Actor)newValue);
+				getDecomposesActors().clear();
+				getDecomposesActors().addAll((Collection<? extends Actor>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -825,7 +799,7 @@ public class ActorImpl extends ElementImpl implements Actor {
 				getPerformsFunctions().clear();
 				return;
 			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				setDecomposesActors((Actor)null);
+				getDecomposesActors().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -868,7 +842,7 @@ public class ActorImpl extends ElementImpl implements Actor {
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return performsFunctions != null && !performsFunctions.isEmpty();
 			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				return decomposesActors != null;
+				return decomposesActors != null && !decomposesActors.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

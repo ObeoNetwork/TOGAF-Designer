@@ -58,6 +58,14 @@ public enum StandardsClass implements Enumerator {
 	PROVISIONAL(2, "Provisional", "Provisional"),
 
 	/**
+	 * The '<em><b>Standard</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #STANDARD_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	STANDARD(3, "Standard", "Standard"), /**
 	 * The '<em><b>Phasing Out</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,7 +73,7 @@ public enum StandardsClass implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PHASING_OUT(3, "PhasingOut", "PhasingOut"),
+	PHASING_OUT(4, "PhasingOut", "PhasingOut"),
 
 	/**
 	 * The '<em><b>Retired</b></em>' literal object.
@@ -75,7 +83,7 @@ public enum StandardsClass implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RETIRED(4, "Retired", "Retired");
+	RETIRED(5, "Retired", "Retired");
 
 	/**
 	 * The '<em><b>Non Standard</b></em>' literal value.
@@ -123,6 +131,21 @@ public enum StandardsClass implements Enumerator {
 	public static final int PROVISIONAL_VALUE = 2;
 
 	/**
+	 * The '<em><b>Standard</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Standard</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #STANDARD
+	 * @model name="Standard"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STANDARD_VALUE = 3;
+
+	/**
 	 * The '<em><b>Phasing Out</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -135,7 +158,7 @@ public enum StandardsClass implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PHASING_OUT_VALUE = 3;
+	public static final int PHASING_OUT_VALUE = 4;
 
 	/**
 	 * The '<em><b>Retired</b></em>' literal value.
@@ -150,7 +173,7 @@ public enum StandardsClass implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RETIRED_VALUE = 4;
+	public static final int RETIRED_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Standards Class</b></em>' enumerators.
@@ -163,6 +186,7 @@ public enum StandardsClass implements Enumerator {
 			NON_STANDARD,
 			PROPOSED,
 			PROVISIONAL,
+			STANDARD,
 			PHASING_OUT,
 			RETIRED,
 		};
@@ -218,6 +242,7 @@ public enum StandardsClass implements Enumerator {
 			case NON_STANDARD_VALUE: return NON_STANDARD;
 			case PROPOSED_VALUE: return PROPOSED;
 			case PROVISIONAL_VALUE: return PROVISIONAL;
+			case STANDARD_VALUE: return STANDARD;
 			case PHASING_OUT_VALUE: return PHASING_OUT;
 			case RETIRED_VALUE: return RETIRED;
 		}

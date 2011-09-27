@@ -837,13 +837,13 @@ public class ContentfwkMessages extends NLS {
 	public static String ActorPropertiesEditionPart_ActorTasksLabel;
 
 	
-	public static String ActorPropertiesEditionPart_DecomposesActorsLabel;
-
-	
 	public static String ActorPropertiesEditionPart_OperatesInLocationLabel;
 
 	
 	public static String ActorPropertiesEditionPart_BelongsToLabel;
+
+	
+	public static String ActorPropertiesEditionPart_DecomposesActorsLabel;
 
 	
 	public static String ActorPropertiesEditionPart_PerformsTaskInRolesLabel;

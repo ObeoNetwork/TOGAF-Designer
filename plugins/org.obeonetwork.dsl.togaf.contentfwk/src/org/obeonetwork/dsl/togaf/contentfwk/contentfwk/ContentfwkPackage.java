@@ -1202,7 +1202,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ACTOR__PERFORMS_FUNCTIONS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Decomposes Actors</b></em>' reference.
+	 * The feature id for the '<em><b>Decomposes Actors</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7594,10 +7594,10 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getActor_PerformsFunctions();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors <em>Decomposes Actors</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors <em>Decomposes Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Decomposes Actors</em>'.
+	 * @return the meta object for the reference list '<em>Decomposes Actors</em>'.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors()
 	 * @see #getActor()
 	 * @generated
@@ -10916,7 +10916,7 @@ public interface ContentfwkPackage extends EPackage {
 		EReference ACTOR__PERFORMS_FUNCTIONS = eINSTANCE.getActor_PerformsFunctions();
 
 		/**
-		 * The meta object literal for the '<em><b>Decomposes Actors</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Decomposes Actors</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

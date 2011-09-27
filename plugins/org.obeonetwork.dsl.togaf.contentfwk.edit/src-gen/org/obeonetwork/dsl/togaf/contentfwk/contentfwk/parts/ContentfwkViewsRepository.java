@@ -330,13 +330,13 @@ public class ContentfwkViewsRepository {
 		public static class RelatedElements {
 	
 			
-			public static String decomposesActors = "contentfwk::Actor::Related Elements::decomposes Actors";
-			
-			
 			public static String operatesInLocation = "contentfwk::Actor::Related Elements::operates In Location";
 			
 			
 			public static String belongsTo = "contentfwk::Actor::Related Elements::belongs To";
+			
+			
+			public static String decomposesActors = "contentfwk::Actor::Related Elements::decomposes Actors";
 			
 			
 			public static String performsTaskInRoles = "contentfwk::Actor::Related Elements::performs Task In Roles";

@@ -78,9 +78,11 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 	protected Text fTEs;
 	protected Text actorGoal;
 	protected Text actorTasks;
-	protected EObjectFlatComboViewer decomposesActors;
 	protected EObjectFlatComboViewer operatesInLocation;
 	protected EObjectFlatComboViewer belongsTo;
+	protected ReferencesTable decomposesActors;
+	protected List<ViewerFilter> decomposesActorsBusinessFilters = new ArrayList<ViewerFilter>();
+	protected List<ViewerFilter> decomposesActorsFilters = new ArrayList<ViewerFilter>();
 	protected ReferencesTable performsTaskInRoles;
 	protected List<ViewerFilter> performsTaskInRolesBusinessFilters = new ArrayList<ViewerFilter>();
 	protected List<ViewerFilter> performsTaskInRolesFilters = new ArrayList<ViewerFilter>();
@@ -163,9 +165,9 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 		attributesStep.addStep(ContentfwkViewsRepository.Actor.Attributes.actorTasks);
 		
 		CompositionStep relatedElementsStep = actorStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.class);
-		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors);
 		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.operatesInLocation);
 		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.belongsTo);
+		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors);
 		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.performsTaskInRoles);
 		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.interactsWithFunctions);
 		relatedElementsStep.addStep(ContentfwkViewsRepository.Actor.RelatedElements.performsFunctions);
@@ -216,14 +218,14 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 				if (key == ContentfwkViewsRepository.Actor.RelatedElements.class) {
 					return createRelatedElementsGroup(parent);
 				}
-				if (key == ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors) {
-					return createDecomposesActorsFlatComboViewer(parent);
-				}
 				if (key == ContentfwkViewsRepository.Actor.RelatedElements.operatesInLocation) {
 					return createOperatesInLocationFlatComboViewer(parent);
 				}
 				if (key == ContentfwkViewsRepository.Actor.RelatedElements.belongsTo) {
 					return createBelongsToFlatComboViewer(parent);
+				}
+				if (key == ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors) {
+					return createDecomposesActorsAdvancedReferencesTable(parent);
 				}
 				if (key == ContentfwkViewsRepository.Actor.RelatedElements.performsTaskInRoles) {
 					return createPerformsTaskInRolesAdvancedReferencesTable(parent);
@@ -712,29 +714,6 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 	 * @param parent the parent composite
 	 * 
 	 */
-	protected Composite createDecomposesActorsFlatComboViewer(Composite parent) {
-		SWTUtils.createPartLabel(parent, ContentfwkMessages.ActorPropertiesEditionPart_DecomposesActorsLabel, propertiesEditionComponent.isRequired(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, ContentfwkViewsRepository.SWT_KIND));
-		decomposesActors = new EObjectFlatComboViewer(parent, !propertiesEditionComponent.isRequired(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, ContentfwkViewsRepository.SWT_KIND));
-		decomposesActors.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
-
-		decomposesActors.addSelectionChangedListener(new ISelectionChangedListener() {
-
-			public void selectionChanged(SelectionChangedEvent event) {
-				propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(ActorPropertiesEditionPartImpl.this, ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, PropertiesEditionEvent.CHANGE, PropertiesEditionEvent.SET, null, getDecomposesActors()));
-			}
-
-		});
-		GridData decomposesActorsData = new GridData(GridData.FILL_HORIZONTAL);
-		decomposesActors.setLayoutData(decomposesActorsData);
-		decomposesActors.setID(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors);
-		SWTUtils.createHelpButton(parent, propertiesEditionComponent.getHelpContent(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, ContentfwkViewsRepository.SWT_KIND), null); //$NON-NLS-1$
-		return parent;
-	}
-
-	/**
-	 * @param parent the parent composite
-	 * 
-	 */
 	protected Composite createOperatesInLocationFlatComboViewer(Composite parent) {
 		SWTUtils.createPartLabel(parent, ContentfwkMessages.ActorPropertiesEditionPart_OperatesInLocationLabel, propertiesEditionComponent.isRequired(ContentfwkViewsRepository.Actor.RelatedElements.operatesInLocation, ContentfwkViewsRepository.SWT_KIND));
 		operatesInLocation = new EObjectFlatComboViewer(parent, !propertiesEditionComponent.isRequired(ContentfwkViewsRepository.Actor.RelatedElements.operatesInLocation, ContentfwkViewsRepository.SWT_KIND));
@@ -775,6 +754,87 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 		belongsTo.setID(ContentfwkViewsRepository.Actor.RelatedElements.belongsTo);
 		SWTUtils.createHelpButton(parent, propertiesEditionComponent.getHelpContent(ContentfwkViewsRepository.Actor.RelatedElements.belongsTo, ContentfwkViewsRepository.SWT_KIND), null); //$NON-NLS-1$
 		return parent;
+	}
+
+	/**
+	 * 
+	 */
+	protected Composite createDecomposesActorsAdvancedReferencesTable(Composite parent) {
+		this.decomposesActors = new ReferencesTable(ContentfwkMessages.ActorPropertiesEditionPart_DecomposesActorsLabel, new ReferencesTableListener() {
+			public void handleAdd() { addDecomposesActors(); }
+			public void handleEdit(EObject element) { editDecomposesActors(element); }
+			public void handleMove(EObject element, int oldIndex, int newIndex) { moveDecomposesActors(element, oldIndex, newIndex); }
+			public void handleRemove(EObject element) { removeFromDecomposesActors(element); }
+			public void navigateTo(EObject element) { }
+		});
+		this.decomposesActors.setHelpText(propertiesEditionComponent.getHelpContent(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, ContentfwkViewsRepository.SWT_KIND));
+		this.decomposesActors.createControls(parent);
+		this.decomposesActors.addSelectionListener(new SelectionAdapter() {
+			
+			public void widgetSelected(SelectionEvent e) {
+				if (e.item != null && e.item.getData() instanceof EObject) {
+					propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(ActorPropertiesEditionPartImpl.this, ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, PropertiesEditionEvent.CHANGE, PropertiesEditionEvent.SELECTION_CHANGED, null, e.item.getData()));
+				}
+			}
+			
+		});
+		GridData decomposesActorsData = new GridData(GridData.FILL_HORIZONTAL);
+		decomposesActorsData.horizontalSpan = 3;
+		this.decomposesActors.setLayoutData(decomposesActorsData);
+		this.decomposesActors.disableMove();
+		decomposesActors.setID(ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors);
+		decomposesActors.setEEFType("eef::AdvancedReferencesTable"); //$NON-NLS-1$
+		return parent;
+	}
+
+	/**
+	 * 
+	 */
+	protected void addDecomposesActors() {
+		TabElementTreeSelectionDialog dialog = new TabElementTreeSelectionDialog(decomposesActors.getInput(), decomposesActorsFilters, decomposesActorsBusinessFilters,
+		"decomposes Actors", propertiesEditionComponent.getEditingContext().getAdapterFactory(), current.eResource()) {
+			@Override
+			public void process(IStructuredSelection selection) {
+				for (Iterator<?> iter = selection.iterator(); iter.hasNext();) {
+					EObject elem = (EObject) iter.next();
+					propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(ActorPropertiesEditionPartImpl.this, ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors,
+						PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.ADD, null, elem));
+				}
+				decomposesActors.refresh();
+			}
+		};
+		dialog.open();
+	}
+
+	/**
+	 * 
+	 */
+	protected void moveDecomposesActors(EObject element, int oldIndex, int newIndex) {
+		propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(ActorPropertiesEditionPartImpl.this, ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.MOVE, element, newIndex));
+		decomposesActors.refresh();
+	}
+
+	/**
+	 * 
+	 */
+	protected void removeFromDecomposesActors(EObject element) {
+		propertiesEditionComponent.firePropertiesChanged(new PropertiesEditionEvent(ActorPropertiesEditionPartImpl.this, ContentfwkViewsRepository.Actor.RelatedElements.decomposesActors, PropertiesEditionEvent.COMMIT, PropertiesEditionEvent.REMOVE, null, element));
+		decomposesActors.refresh();
+	}
+
+	/**
+	 * 
+	 */
+	protected void editDecomposesActors(EObject element) {
+		EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(propertiesEditionComponent.getEditingContext(), propertiesEditionComponent, element, adapterFactory);
+		PropertiesEditingProvider provider = (PropertiesEditingProvider)adapterFactory.adapt(element, PropertiesEditingProvider.class);
+		if (provider != null) {
+			PropertiesEditingPolicy policy = provider.getPolicy(context);
+			if (policy != null) {
+				policy.execute();
+				decomposesActors.refresh();
+			}
+		}
 	}
 
 	/**
@@ -1910,77 +1970,6 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 	/**
 	 * {@inheritDoc}
 	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#getDecomposesActors()
-	 * 
-	 */
-	public EObject getDecomposesActors() {
-		if (decomposesActors.getSelection() instanceof StructuredSelection) {
-			Object firstElement = ((StructuredSelection) decomposesActors.getSelection()).getFirstElement();
-			if (firstElement instanceof EObject)
-				return (EObject) firstElement;
-		}
-		return null;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#initDecomposesActors(EObjectFlatComboSettings)
-	 */
-	public void initDecomposesActors(EObjectFlatComboSettings settings) {
-		decomposesActors.setInput(settings);
-		if (current != null) {
-			decomposesActors.setSelection(new StructuredSelection(settings.getValue()));
-		}
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#setDecomposesActors(EObject newValue)
-	 * 
-	 */
-	public void setDecomposesActors(EObject newValue) {
-		if (newValue != null) {
-			decomposesActors.setSelection(new StructuredSelection(newValue));
-		} else {
-			decomposesActors.setSelection(new StructuredSelection()); //$NON-NLS-1$
-		}
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#setDecomposesActorsButtonMode(ButtonsModeEnum newValue)
-	 */
-	public void setDecomposesActorsButtonMode(ButtonsModeEnum newValue) {
-		decomposesActors.setButtonMode(newValue);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#addFilterDecomposesActors(ViewerFilter filter)
-	 * 
-	 */
-	public void addFilterToDecomposesActors(ViewerFilter filter) {
-		decomposesActors.addFilter(filter);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * 
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#addBusinessFilterDecomposesActors(ViewerFilter filter)
-	 * 
-	 */
-	public void addBusinessFilterToDecomposesActors(ViewerFilter filter) {
-		decomposesActors.addBusinessRuleFilter(filter);
-	}
-
-
-	/**
-	 * {@inheritDoc}
-	 * 
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#getOperatesInLocation()
 	 * 
 	 */
@@ -2117,6 +2106,62 @@ public class ActorPropertiesEditionPartImpl extends CompositePropertiesEditionPa
 	 */
 	public void addBusinessFilterToBelongsTo(ViewerFilter filter) {
 		belongsTo.addBusinessRuleFilter(filter);
+	}
+
+
+
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#initDecomposesActors(org.eclipse.emf.eef.runtime.ui.widgets.referencestable.ReferencesTableSettings)
+	 */
+	public void initDecomposesActors(ReferencesTableSettings settings) {
+		if (current.eResource() != null && current.eResource().getResourceSet() != null)
+			this.resourceSet = current.eResource().getResourceSet();
+		ReferencesTableContentProvider contentProvider = new ReferencesTableContentProvider();
+		decomposesActors.setContentProvider(contentProvider);
+		decomposesActors.setInput(settings);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#updateDecomposesActors()
+	 * 
+	 */
+	public void updateDecomposesActors() {
+	decomposesActors.refresh();
+}
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#addFilterDecomposesActors(ViewerFilter filter)
+	 * 
+	 */
+	public void addFilterToDecomposesActors(ViewerFilter filter) {
+		decomposesActorsFilters.add(filter);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#addBusinessFilterDecomposesActors(ViewerFilter filter)
+	 * 
+	 */
+	public void addBusinessFilterToDecomposesActors(ViewerFilter filter) {
+		decomposesActorsBusinessFilters.add(filter);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * 
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.ActorPropertiesEditionPart#isContainedInDecomposesActorsTable(EObject element)
+	 * 
+	 */
+	public boolean isContainedInDecomposesActorsTable(EObject element) {
+		return ((ReferencesTableSettings)decomposesActors.getInput()).contains(element);
 	}
 
 

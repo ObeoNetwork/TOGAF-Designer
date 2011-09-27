@@ -21,6 +21,7 @@
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/NonStandard"/>
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/Proposed"/>
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/Provisional"/>
+      <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/Standard"/>
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/PhasingOut"/>
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//StandardsClass/Retired"/>
     </genEnums>

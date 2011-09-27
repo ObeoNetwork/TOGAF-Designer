@@ -142,6 +142,14 @@ public class ContentfwkModelWizard extends Wizard implements INewWizard {
 	
 
 	/**
+	 * This is the initial object creation page.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContentfwkModelWizardInitialObjectCreationPage initialObjectCreationPage;
+
+	/**
 	 * Remember the selection during initialization for populating the default container.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

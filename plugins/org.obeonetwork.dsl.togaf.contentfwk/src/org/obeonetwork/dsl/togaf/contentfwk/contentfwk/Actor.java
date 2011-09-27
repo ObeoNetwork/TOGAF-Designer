@@ -340,29 +340,19 @@ public interface Actor extends Element {
 	EList<Function> getPerformsFunctions();
 
 	/**
-	 * Returns the value of the '<em><b>Decomposes Actors</b></em>' reference.
+	 * Returns the value of the '<em><b>Decomposes Actors</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Actors</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Decomposes Actors</em>' reference.
-	 * @see #setDecomposesActors(Actor)
+	 * @return the value of the '<em>Decomposes Actors</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_DecomposesActors()
 	 * @model
 	 * @generated
 	 */
-	Actor getDecomposesActors();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors <em>Decomposes Actors</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Decomposes Actors</em>' reference.
-	 * @see #getDecomposesActors()
-	 * @generated
-	 */
-	void setDecomposesActors(Actor value);
+	EList<Actor> getDecomposesActors();
 
 } // Actor

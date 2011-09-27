@@ -3940,7 +3940,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getActor_ActorGoal(), ecorePackage.getEString(), "actorGoal", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getActor_ActorTasks(), ecorePackage.getEString(), "actorTasks", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActor_PerformsFunctions(), this.getFunction(), this.getFunction_IsPerformedByActors(), "performsFunctions", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getActor_DecomposesActors(), this.getActor(), null, "decomposesActors", null, 0, 1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActor_DecomposesActors(), this.getActor(), null, "decomposesActors", null, 0, -1, Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRole_IsAssumedByActors(), this.getActor(), this.getActor_PerformsTaskInRoles(), "isAssumedByActors", null, 0, -1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4240,6 +4240,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		addEEnumLiteral(standardsClassEEnum, StandardsClass.NON_STANDARD);
 		addEEnumLiteral(standardsClassEEnum, StandardsClass.PROPOSED);
 		addEEnumLiteral(standardsClassEEnum, StandardsClass.PROVISIONAL);
+		addEEnumLiteral(standardsClassEEnum, StandardsClass.STANDARD);
 		addEEnumLiteral(standardsClassEEnum, StandardsClass.PHASING_OUT);
 		addEEnumLiteral(standardsClassEEnum, StandardsClass.RETIRED);
 

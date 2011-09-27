@@ -2137,14 +2137,14 @@
         </elements>
         <elements xsi:type="eef-views:Container" xmi:id="_0kUrMNOzEeCX46E_JkpMkw" name="Related Elements">
           <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/SWT.toolkits#//@widgets.4"/>
-          <elements xsi:type="eef-views:ElementEditor" xmi:id="_wde8TFpBEeCjz5DkqNQVvg" name="decomposes Actors">
-            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
-          </elements>
           <elements xsi:type="eef-views:ElementEditor" xmi:id="_wde8R1pBEeCjz5DkqNQVvg" name="operates In Location">
             <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
           </elements>
           <elements xsi:type="eef-views:ElementEditor" xmi:id="_wde8QFpBEeCjz5DkqNQVvg" name="belongs To">
             <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.0"/>
+          </elements>
+          <elements xsi:type="eef-views:ElementEditor" xmi:id="_wde8TFpBEeCjz5DkqNQVvg" name="decomposes Actors">
+            <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>
           </elements>
           <elements xsi:type="eef-views:ElementEditor" xmi:id="_wde8QlpBEeCjz5DkqNQVvg" name="performs Task In Roles">
             <representation href="platform:/plugin/org.eclipse.emf.eef.views/std/EMFProperties.toolkits#//@widgets.8"/>

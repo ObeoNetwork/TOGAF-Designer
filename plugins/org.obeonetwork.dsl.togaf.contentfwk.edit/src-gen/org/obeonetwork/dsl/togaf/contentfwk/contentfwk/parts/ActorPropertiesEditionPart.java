@@ -154,53 +154,6 @@ public interface ActorPropertiesEditionPart {
 
 
 	/**
-	 * @return the decomposes Actors
-	 * 
-	 */
-	public EObject getDecomposesActors();
-
-	/**
-	 * Init the decomposes Actors
-	 * @param settings the combo setting
-	 */
-	public void initDecomposesActors(EObjectFlatComboSettings settings);
-
-	/**
-	 * Defines a new decomposes Actors
-	 * @param newValue the new decomposes Actors to set
-	 * 
-	 */
-	public void setDecomposesActors(EObject newValue);
-
-	/**
-	 * Defines the button mode
-	 * @param newValue the new mode to set
-	 * 
-	 */
-	public void setDecomposesActorsButtonMode(ButtonsModeEnum newValue);
-
-	/**
-	 * Adds the given filter to the decomposes Actors edition editor.
-	 * 
-	 * @param filter
-	 *            a viewer filter
-	 * @see org.eclipse.jface.viewers.StructuredViewer#addFilter(ViewerFilter)
-	 * 
-	 */
-	public void addFilterToDecomposesActors(ViewerFilter filter);
-
-	/**
-	 * Adds the given filter to the decomposes Actors edition editor.
-	 * 
-	 * @param filter
-	 *            a viewer filter
-	 * @see org.eclipse.jface.viewers.StructuredViewer#addFilter(ViewerFilter)
-	 * 
-	 */
-	public void addBusinessFilterToDecomposesActors(ViewerFilter filter);
-
-
-	/**
 	 * @return the operates In Location
 	 * 
 	 */
@@ -292,6 +245,48 @@ public interface ActorPropertiesEditionPart {
 	 * 
 	 */
 	public void addBusinessFilterToBelongsTo(ViewerFilter filter);
+
+
+
+
+	/**
+	 * Init the decomposes Actors
+	 * @param settings settings for the decomposes Actors ReferencesTable 
+	 */
+	public void initDecomposesActors(ReferencesTableSettings settings);
+
+	/**
+	 * Update the decomposes Actors
+	 * @param newValue the decomposes Actors to update
+	 * 
+	 */
+	public void updateDecomposesActors();
+
+	/**
+	 * Adds the given filter to the decomposes Actors edition editor.
+	 * 
+	 * @param filter
+	 *            a viewer filter
+	 * @see org.eclipse.jface.viewers.StructuredViewer#addFilter(ViewerFilter)
+	 * 
+	 */
+	public void addFilterToDecomposesActors(ViewerFilter filter);
+
+	/**
+	 * Adds the given filter to the decomposes Actors edition editor.
+	 * 
+	 * @param filter
+	 *            a viewer filter
+	 * @see org.eclipse.jface.viewers.StructuredViewer#addFilter(ViewerFilter)
+	 * 
+	 */
+	public void addBusinessFilterToDecomposesActors(ViewerFilter filter);
+
+	/**
+	 * @return true if the given element is contained inside the decomposes Actors table
+	 * 
+	 */
+	public boolean isContainedInDecomposesActorsTable(EObject element);
 
 
 
