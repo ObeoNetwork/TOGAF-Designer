@@ -48,36 +48,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective;
  */
 public class ObjectiveImpl extends ElementImpl implements Objective {
 	/**
-	 * The cached value of the '{@link #getRealizesGoals() <em>Realizes Goals</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRealizesGoals()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Goal> realizesGoals;
-
-	/**
-	 * The cached value of the '{@link #getIsTrackedAgainstMeasures() <em>Is Tracked Against Measures</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsTrackedAgainstMeasures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Measure> isTrackedAgainstMeasures;
-
-	/**
-	 * The cached value of the '{@link #getDecomposesObjective() <em>Decomposes Objective</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecomposesObjective()
-	 * @generated
-	 * @ordered
-	 */
-	protected Objective decomposesObjective;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,11 +71,9 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Goal> getRealizesGoals() {
-		if (realizesGoals == null) {
-			realizesGoals = new EObjectWithInverseResolvingEList.ManyInverse<Goal>(Goal.class, this, ContentfwkPackage.OBJECTIVE__REALIZES_GOALS, ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES);
-		}
-		return realizesGoals;
+		return (EList<Goal>)eGet(ContentfwkPackage.Literals.OBJECTIVE__REALIZES_GOALS, true);
 	}
 
 	/**
@@ -113,11 +81,9 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Measure> getIsTrackedAgainstMeasures() {
-		if (isTrackedAgainstMeasures == null) {
-			isTrackedAgainstMeasures = new EObjectWithInverseResolvingEList.ManyInverse<Measure>(Measure.class, this, ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES, ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES);
-		}
-		return isTrackedAgainstMeasures;
+		return (EList<Measure>)eGet(ContentfwkPackage.Literals.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES, true);
 	}
 
 	/**
@@ -126,24 +92,7 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * @generated
 	 */
 	public Objective getDecomposesObjective() {
-		if (decomposesObjective != null && decomposesObjective.eIsProxy()) {
-			InternalEObject oldDecomposesObjective = (InternalEObject)decomposesObjective;
-			decomposesObjective = (Objective)eResolveProxy(oldDecomposesObjective);
-			if (decomposesObjective != oldDecomposesObjective) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE, oldDecomposesObjective, decomposesObjective));
-			}
-		}
-		return decomposesObjective;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Objective basicGetDecomposesObjective() {
-		return decomposesObjective;
+		return (Objective)eGet(ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, true);
 	}
 
 	/**
@@ -152,125 +101,7 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * @generated
 	 */
 	public void setDecomposesObjective(Objective newDecomposesObjective) {
-		Objective oldDecomposesObjective = decomposesObjective;
-		decomposesObjective = newDecomposesObjective;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE, oldDecomposesObjective, decomposesObjective));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRealizesGoals()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsTrackedAgainstMeasures()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				return ((InternalEList<?>)getRealizesGoals()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				return ((InternalEList<?>)getIsTrackedAgainstMeasures()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				return getRealizesGoals();
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				return getIsTrackedAgainstMeasures();
-			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
-				if (resolve) return getDecomposesObjective();
-				return basicGetDecomposesObjective();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				getRealizesGoals().clear();
-				getRealizesGoals().addAll((Collection<? extends Goal>)newValue);
-				return;
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				getIsTrackedAgainstMeasures().clear();
-				getIsTrackedAgainstMeasures().addAll((Collection<? extends Measure>)newValue);
-				return;
-			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
-				setDecomposesObjective((Objective)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				getRealizesGoals().clear();
-				return;
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				getIsTrackedAgainstMeasures().clear();
-				return;
-			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
-				setDecomposesObjective((Objective)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
-				return realizesGoals != null && !realizesGoals.isEmpty();
-			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
-				return isTrackedAgainstMeasures != null && !isTrackedAgainstMeasures.isEmpty();
-			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
-				return decomposesObjective != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, newDecomposesObjective);
 	}
 
 } //ObjectiveImpl

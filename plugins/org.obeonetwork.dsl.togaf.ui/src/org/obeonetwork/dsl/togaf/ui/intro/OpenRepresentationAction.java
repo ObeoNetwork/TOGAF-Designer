@@ -10,7 +10,6 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.intro;
 
-import java.util.Arrays;
 import java.util.Properties;
 
 import org.eclipse.ui.intro.IIntroSite;
@@ -18,15 +17,17 @@ import org.eclipse.ui.intro.IIntroSite;
 public class OpenRepresentationAction extends AbstractIntroAction {
 
 	public void run(IIntroSite introSite, Properties properties) {		
+	/*
 		String representation = properties.getProperty("representation");
 		String vp = properties.getProperty("vp");
 		String[] viewpointsToSelect = new String[]{"Impact Analysis",vp};
-		getSession().selectViewpoints(Arrays.asList(viewpointsToSelect));
+		getSession().selectViewPoint(viewpointsToSelect);
 		//TODO close all active editor (before viewpoint switch)
 		closeAllEditors();
 		getSession().openRepresentation(representation);
 		initializeUI();
 		closeIntro();		
+	*/
 	}
 
 }

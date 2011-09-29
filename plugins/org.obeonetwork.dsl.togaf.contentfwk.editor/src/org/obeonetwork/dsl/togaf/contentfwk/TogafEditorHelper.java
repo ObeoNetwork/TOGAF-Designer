@@ -16,9 +16,6 @@ import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.eef.runtime.ui.editor.InteractiveEEFEditor;
 import org.eclipse.swt.custom.CTabFolder;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
@@ -27,8 +24,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.internal.Workbench;
 import org.eclipse.ui.part.FileEditorInput;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditorPlugin;
-
-import fr.obeo.dsl.common.ui.tools.api.editing.EditingDomainService;
 
 @SuppressWarnings("restriction")
 public class TogafEditorHelper {
@@ -43,13 +38,9 @@ public class TogafEditorHelper {
 		return null;
 	}
 
-	public static boolean open(String editorID, int index) {
-		IWorkbenchPage page = Workbench.getInstance()
-				.getActiveWorkbenchWindow().getActivePage();
-		EditingDomain editingDomain = (AdapterFactoryEditingDomain) EditingDomainService
-				.getInstance().getEditingDomainProvider().getEditingDomain();
-		Resource resource = getFirstTogafResource(editingDomain
-				.getResourceSet());
+	public static boolean open(String editorID, int index, ResourceSet resourceSet) {
+		IWorkbenchPage page = Workbench.getInstance().getActiveWorkbenchWindow().getActivePage();
+		Resource resource = getFirstTogafResource(resourceSet);
 		IFile modelFile;
 		URI eUri = resource.getURI();
 		if (!eUri.isPlatformResource()) {
@@ -57,13 +48,11 @@ public class TogafEditorHelper {
 			return false;
 		}
 		String platformString = eUri.toPlatformString(true);
-		IPath ipath = ResourcesPlugin.getWorkspace().getRoot()
-				.findMember(platformString).getFullPath();
+		IPath ipath = ResourcesPlugin.getWorkspace().getRoot().findMember(platformString).getFullPath();
 		modelFile = ResourcesPlugin.getWorkspace().getRoot().getFile(ipath);
 
 		try {
-			IEditorPart editorPart = page.openEditor(new FileEditorInput(
-					modelFile), editorID, true, IWorkbenchPage.MATCH_ID);
+			IEditorPart editorPart = page.openEditor(new FileEditorInput(modelFile), editorID, true, IWorkbenchPage.MATCH_ID);
 			if (editorPart instanceof IContentfwkEditor) {
 				IContentfwkEditor catalog = (IContentfwkEditor) editorPart;
 				catalog.setSelection(index);
@@ -74,13 +63,12 @@ public class TogafEditorHelper {
 		}
 		return true;
 	}
-	
+
 	public static CTabFolder getTabFolder(Object o) {
 		CTabFolder result = null;
 		// Attention il y a un premier TabFolder correspondant � la page de
 		// l'�diteur. Ce TabFolder ne contient qu'une page.
-		if ((o instanceof CTabFolder)
-				&& ((CTabFolder) o).getChildren().length > 1) {
+		if ((o instanceof CTabFolder) && ((CTabFolder) o).getChildren().length > 1) {
 			result = (CTabFolder) o;
 		} else if (o instanceof Composite) {
 			boolean found = false;

@@ -38,7 +38,6 @@ public class DynamicWorkspaceImageEditPart extends CustomWorkspaceImageEditPart 
 		EditPart ep = getParent();
 		if (ep instanceof GraphicalEditPart) {
 			Object model = ((GraphicalEditPart) ep).getModel();
-			System.out.println(model);
 			if (model instanceof Node) {
 				EObject element = ((Node) model).getElement();
 				if (element instanceof DRepresentationElement) {

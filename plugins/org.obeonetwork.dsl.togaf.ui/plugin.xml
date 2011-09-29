@@ -5,11 +5,11 @@
          point="org.eclipse.core.runtime.products"
          id="org.obeonetwork.dsl.togaf.ui.product">
       <product
-      		name="TOGAF Modeler"
-      		application="org.eclipse.ui.ide.workbench">
+      		name="TOGAF Designer"
+      		application="org.obeonetwork.dsl.togaf.ui.application">
       	<property
       		name="appName"
-      		value="TOGAF Modeler"/>
+      		value="TOGAF Designer"/>
       	<property
       		name="windowImages"
       		value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif"/>
@@ -29,6 +29,19 @@
       </product>
    </extension>
    
+      <extension
+         id="org.obeonetwork.dsl.togaf.ui.application"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="org.obeonetwork.dsl.togaf.ui.application.Application">
+         </run>
+      </application>
+   </extension>
+   
    <extension
          point="org.eclipse.ui.perspectives">
       <perspective
@@ -36,41 +49,46 @@
             fixed="false"
             icon="icons/logo_16.gif"
             id="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"
-            name="TOGAF">
+            name="Obeo Designer for EA">
       </perspective>
    </extension>
    
-   <extension
-         point="org.eclipse.ui.startup">
-      <startup
-            class="org.obeonetwork.dsl.togaf.ui.startup.Startup">
-      </startup>
+   <extension point="org.eclipse.ui.perspectiveExtensions"> 
+        <perspectiveExtension targetID="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"> 
+            <view
+                  closeable="false"
+                  id="org.obeonetwork.dsl.viewpoint.addons.ui.views.ModelExplorerView"
+                  minimized="false"
+                  moveable="false"
+                  ratio="0.25"
+                  relationship="left"
+                  showTitle="true"
+                  visible="true"/> 
+            <view
+                  closeable="false"
+                  id="org.eclipse.ui.views.PropertySheet"
+                  minimized="false"
+                  moveable="false"
+                  ratio="0.7"
+                  relationship="bottom"
+                  showTitle="true"
+                  visible="true"/> 
+        </perspectiveExtension> 
+    </extension> 
+   
+   
+   <extension point="org.eclipse.ui.intro">
+      <intro
+      		id="org.obeonetwork.dsl.togaf.ui.intro"
+            class="org.obeonetwork.dsl.togaf.ui.intro.WebIntroPart">
+      </intro>
+      <introProductBinding
+            introId="org.obeonetwork.dsl.togaf.ui.intro"
+            productId="org.obeonetwork.dsl.togaf.ui.product">
+      </introProductBinding>
    </extension>
    
-   <extension
-         id="org.obeonetwork.dsl.togaf.ui.startup.intro"
-         name="TOGAF Intro"
-         point="org.eclipse.ui.intro">
-         <introProductBinding
-         	introId="org.obeonetwork.dsl.togaf.ui.startup.intro"
-         	productId="org.obeonetwork.dsl.togaf.ui.product"/>
-         <intro
-         	class="org.eclipse.ui.intro.config.CustomizableIntroPart"
-         	icon="icons/logo_16.gif"
-         	id="org.obeonetwork.dsl.togaf.ui.startup.intro"/>
-   </extension>
-   <extension point="org.eclipse.ui.intro.config">
-   		<config
-         	content="introContent.xml"
-        	id="org.obeonetwork.dsl.togaf.ui.startup.introConfig"
-         	introId="org.obeonetwork.dsl.togaf.ui.startup.intro">
-			<presentation home-page-id="root">
-	        	<implementation kind="html"/>
-	      	</presentation>	      	
-   		</config>
-	</extension>
-         
-	
+	<!--
 	<extension point="org.eclipse.ui.activities">
 		<activity id="org.obeonetwork.dsl.togaf.ui.activity" name="TOGAF"/>   	
 		<activityPatternBinding
@@ -86,34 +104,7 @@
 		</activityPatternBinding>
 		<defaultEnablement id="org.obeonetwork.dsl.togaf.ui.activity"/>
 	</extension>
- <extension
-       id="product"
-       point="org.eclipse.core.runtime.products">
-    <product
-          application="org.eclipse.emf.codegen.JMerger"
-          name="TOGAF Modeler">
-       <property
-             name="windowImages"
-             value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
-       </property>
-       <property
-             name="aboutImage"
-             value="icons/aboutpage_OD4EA.png">
-       </property>
-       <property
-             name="startupForegroundColor"
-             value="000000">
-       </property>
-       <property
-             name="startupProgressRect"
-             value="5,275,445,15">
-       </property>
-       <property
-             name="startupMessageRect"
-             value="7,252,445,20">
-       </property>
-    </product>
- </extension>
+	-->
  
 	      
 </plugin>

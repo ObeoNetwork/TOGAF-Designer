@@ -135,7 +135,7 @@
       <subLayers name="Gestion Client" elements="//@architectures.3/@logicalApplicationComponents.0"/>
       <subLayers name="Offre" elements="//@architectures.3/@logicalApplicationComponents.3 //@architectures.3/@logicalApplicationComponents.4"/>
     </subLayers>
-    <subLayers name="Front-Office">
+    <subLayers name="Front-Office" elements="//@architectures.3/@logicalApplicationComponents.3">
       <subLayers name="Distribution" elements="//@architectures.3/@logicalApplicationComponents.5"/>
     </subLayers>
   </any>

@@ -11,5 +11,6 @@ Export-Package: org.obeonetwork.dsl.togaf.contentfwk.contentfwk,
  org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl,
  org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.cdo;bundle-version="4.0.0";visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -48,36 +48,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective;
  */
 public class GoalImpl extends ElementImpl implements Goal {
 	/**
-	 * The cached value of the '{@link #getAddressesDrivers() <em>Addresses Drivers</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAddressesDrivers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Driver> addressesDrivers;
-
-	/**
-	 * The cached value of the '{@link #getIsRealizedThroughObjectives() <em>Is Realized Through Objectives</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsRealizedThroughObjectives()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Objective> isRealizedThroughObjectives;
-
-	/**
-	 * The cached value of the '{@link #getDecomposesGoal() <em>Decomposes Goal</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecomposesGoal()
-	 * @generated
-	 * @ordered
-	 */
-	protected Goal decomposesGoal;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,11 +71,9 @@ public class GoalImpl extends ElementImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Driver> getAddressesDrivers() {
-		if (addressesDrivers == null) {
-			addressesDrivers = new EObjectWithInverseResolvingEList.ManyInverse<Driver>(Driver.class, this, ContentfwkPackage.GOAL__ADDRESSES_DRIVERS, ContentfwkPackage.DRIVER__CREATES_GOALS);
-		}
-		return addressesDrivers;
+		return (EList<Driver>)eGet(ContentfwkPackage.Literals.GOAL__ADDRESSES_DRIVERS, true);
 	}
 
 	/**
@@ -113,11 +81,9 @@ public class GoalImpl extends ElementImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Objective> getIsRealizedThroughObjectives() {
-		if (isRealizedThroughObjectives == null) {
-			isRealizedThroughObjectives = new EObjectWithInverseResolvingEList.ManyInverse<Objective>(Objective.class, this, ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES, ContentfwkPackage.OBJECTIVE__REALIZES_GOALS);
-		}
-		return isRealizedThroughObjectives;
+		return (EList<Objective>)eGet(ContentfwkPackage.Literals.GOAL__IS_REALIZED_THROUGH_OBJECTIVES, true);
 	}
 
 	/**
@@ -126,24 +92,7 @@ public class GoalImpl extends ElementImpl implements Goal {
 	 * @generated
 	 */
 	public Goal getDecomposesGoal() {
-		if (decomposesGoal != null && decomposesGoal.eIsProxy()) {
-			InternalEObject oldDecomposesGoal = (InternalEObject)decomposesGoal;
-			decomposesGoal = (Goal)eResolveProxy(oldDecomposesGoal);
-			if (decomposesGoal != oldDecomposesGoal) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.GOAL__DECOMPOSES_GOAL, oldDecomposesGoal, decomposesGoal));
-			}
-		}
-		return decomposesGoal;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Goal basicGetDecomposesGoal() {
-		return decomposesGoal;
+		return (Goal)eGet(ContentfwkPackage.Literals.GOAL__DECOMPOSES_GOAL, true);
 	}
 
 	/**
@@ -152,125 +101,7 @@ public class GoalImpl extends ElementImpl implements Goal {
 	 * @generated
 	 */
 	public void setDecomposesGoal(Goal newDecomposesGoal) {
-		Goal oldDecomposesGoal = decomposesGoal;
-		decomposesGoal = newDecomposesGoal;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.GOAL__DECOMPOSES_GOAL, oldDecomposesGoal, decomposesGoal));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAddressesDrivers()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedThroughObjectives()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				return ((InternalEList<?>)getAddressesDrivers()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				return ((InternalEList<?>)getIsRealizedThroughObjectives()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				return getAddressesDrivers();
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				return getIsRealizedThroughObjectives();
-			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
-				if (resolve) return getDecomposesGoal();
-				return basicGetDecomposesGoal();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				getAddressesDrivers().clear();
-				getAddressesDrivers().addAll((Collection<? extends Driver>)newValue);
-				return;
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				getIsRealizedThroughObjectives().clear();
-				getIsRealizedThroughObjectives().addAll((Collection<? extends Objective>)newValue);
-				return;
-			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
-				setDecomposesGoal((Goal)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				getAddressesDrivers().clear();
-				return;
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				getIsRealizedThroughObjectives().clear();
-				return;
-			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
-				setDecomposesGoal((Goal)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.GOAL__ADDRESSES_DRIVERS:
-				return addressesDrivers != null && !addressesDrivers.isEmpty();
-			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
-				return isRealizedThroughObjectives != null && !isRealizedThroughObjectives.isEmpty();
-			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
-				return decomposesGoal != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(ContentfwkPackage.Literals.GOAL__DECOMPOSES_GOAL, newDecomposesGoal);
 	}
 
 } //GoalImpl

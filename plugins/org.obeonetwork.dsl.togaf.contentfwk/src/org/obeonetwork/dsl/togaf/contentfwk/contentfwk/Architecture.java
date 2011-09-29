@@ -11,6 +11,7 @@
  */
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -21,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getArchitecture()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Architecture extends EObject {
+public interface Architecture extends CDOObject {
 } // Architecture

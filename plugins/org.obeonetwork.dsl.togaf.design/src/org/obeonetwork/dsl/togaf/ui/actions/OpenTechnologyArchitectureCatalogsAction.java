@@ -25,24 +25,23 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
-import org.obeonetwork.dsl.togaf.business.contentfwk.presentation.BusinessEditor;
 import org.obeonetwork.dsl.togaf.contentfwk.TogafEditorHelper;
 import org.obeonetwork.dsl.togaf.technology.contentfwk.presentation.TechnologyEditor;
 
+import fr.obeo.dsl.viewpoint.business.api.session.Session;
+import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
 import fr.obeo.dsl.viewpoint.tools.api.ui.IExternalJavaAction;
 
-public class OpenTechnologyArchitectureCatalogsAction implements
-		IExternalJavaAction {
+public class OpenTechnologyArchitectureCatalogsAction implements IExternalJavaAction {
 
 	public boolean canExecute(Collection<? extends EObject> selections) {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	public void execute(Collection<? extends EObject> selections,
-			Map<String, Object> parameters) {
-		TogafEditorHelper.open(TechnologyEditor.ID,
-				((Integer) parameters.get("index")).intValue());
+	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
+		Session session = SessionManager.INSTANCE.getSession(selections.iterator().next());
+		TogafEditorHelper.open(TechnologyEditor.ID, ((Integer) parameters.get("index")).intValue(), session.getTransactionalEditingDomain().getResourceSet());
 	}
 
 }

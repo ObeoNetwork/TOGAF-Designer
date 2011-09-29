@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
@@ -46,37 +47,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
  *
  * @generated
  */
-public class EnterpriseArchitectureImpl extends EObjectImpl implements EnterpriseArchitecture {
-	/**
-	 * The cached value of the '{@link #getArchitectures() <em>Architectures</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getArchitectures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Architecture> architectures;
-
-	/**
-	 * The cached value of the '{@link #getContainers() <em>Containers</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainers()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Container> containers;
-
-	/**
-	 * The cached value of the '{@link #getAny() <em>Any</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAny()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> any;
-
+public class EnterpriseArchitectureImpl extends CDOObjectImpl implements EnterpriseArchitecture {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,71 +72,9 @@ public class EnterpriseArchitectureImpl extends EObjectImpl implements Enterpris
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Architecture> getArchitectures() {
-		if (architectures == null) {
-			architectures = new EObjectContainmentEList<Architecture>(Architecture.class, this, ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES);
-		}
-		return architectures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Container> getContainers() {
-		if (containers == null) {
-			containers = new EObjectContainmentEList<Container>(Container.class, this, ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS);
-		}
-		return containers;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<EObject> getAny() {
-		if (any == null) {
-			any = new EObjectContainmentEList<EObject>(EObject.class, this, ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY);
-		}
-		return any;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-				return ((InternalEList<?>)getArchitectures()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
-				return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-				return getArchitectures();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return getContainers();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
-				return getAny();
-		}
-		return super.eGet(featureID, resolve, coreType);
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -174,23 +83,8 @@ public class EnterpriseArchitectureImpl extends EObjectImpl implements Enterpris
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-				getArchitectures().clear();
-				getArchitectures().addAll((Collection<? extends Architecture>)newValue);
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				getContainers().clear();
-				getContainers().addAll((Collection<? extends Container>)newValue);
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
-				getAny().clear();
-				getAny().addAll((Collection<? extends EObject>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+	public EList<Architecture> getArchitectures() {
+		return (EList<Architecture>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, true);
 	}
 
 	/**
@@ -198,20 +92,9 @@ public class EnterpriseArchitectureImpl extends EObjectImpl implements Enterpris
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-				getArchitectures().clear();
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				getContainers().clear();
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
-				getAny().clear();
-				return;
-		}
-		super.eUnset(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<Container> getContainers() {
+		return (EList<Container>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS, true);
 	}
 
 	/**
@@ -219,17 +102,9 @@ public class EnterpriseArchitectureImpl extends EObjectImpl implements Enterpris
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-				return architectures != null && !architectures.isEmpty();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return containers != null && !containers.isEmpty();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
-				return any != null && !any.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<EObject> getAny() {
+		return (EList<EObject>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY, true);
 	}
 
 } //EnterpriseArchitectureImpl

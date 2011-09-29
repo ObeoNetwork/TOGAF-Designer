@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2011 Obeo.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;&#xA;Contributors:&#xA;    Obeo - initial API and implementation&#xA;"
-    modelDirectory="/org.obeonetwork.dsl.togaf.contentfwk/src" editorDirectory="/org.obeonetwork.dsl.togaf.contentfwk.editor/src-gen"
-    modelPluginID="org.obeonetwork.dsl.togaf.contentfwk" modelName="Contentfwk" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="5.0" copyrightFields="false" language="" interfaceNamePattern=""
-    classNamePattern="">
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.togaf.contentfwk/src"
+    modelPluginID="org.obeonetwork.dsl.togaf.contentfwk" modelName="Contentfwk" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
+    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="6.0"
+    copyrightFields="false">
   <foreignModel>contentfwk.ecore</foreignModel>
+  <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Contentfwk" basePackage="org.obeonetwork.dsl.togaf.contentfwk"
       disposableProviderFactory="true" ecorePackage="contentfwk.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="contentfwk.ecore#//PrincipleCategory">
@@ -392,7 +393,7 @@
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//ApplicationComponent"/>
     <genClasses ecoreClass="contentfwk.ecore#//InformationSystemService">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//InformationSystemService/any"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//InformationSystemService/any"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//DataComponent"/>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//TechnologyComponent"/>

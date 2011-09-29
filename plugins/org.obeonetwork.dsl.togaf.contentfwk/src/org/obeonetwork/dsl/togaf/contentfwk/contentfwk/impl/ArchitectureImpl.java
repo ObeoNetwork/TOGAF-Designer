@@ -13,6 +13,7 @@ package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
@@ -27,7 +28,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
  *
  * @generated
  */
-public abstract class ArchitectureImpl extends EObjectImpl implements Architecture {
+public abstract class ArchitectureImpl extends CDOObjectImpl implements Architecture {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -45,6 +46,16 @@ public abstract class ArchitectureImpl extends EObjectImpl implements Architectu
 	@Override
 	protected EClass eStaticClass() {
 		return ContentfwkPackage.Literals.ARCHITECTURE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 } //ArchitectureImpl
