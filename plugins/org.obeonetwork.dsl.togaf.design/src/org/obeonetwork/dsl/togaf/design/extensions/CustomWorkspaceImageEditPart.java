@@ -10,15 +10,20 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.design.extensions;
 
+import fr.obeo.dsl.viewpoint.ViewpointFactory;
+import fr.obeo.dsl.viewpoint.WorkspaceImage;
+import fr.obeo.dsl.viewpoint.diagram.edit.api.part.AbstractNotSelectableShapeNodeEditPart;
+import fr.obeo.dsl.viewpoint.diagram.edit.api.part.IDiagramBorderNodeEditPart;
+import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramBorderNodeEditPartOperation;
+import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.AirStyleDefaultSizeNodeFigure;
+import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.WorkspaceImageFigure;
+
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.StackLayout;
-import org.eclipse.draw2d.geometry.Rectangle;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
-import org.eclipse.gef.GraphicalEditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
@@ -39,7 +44,6 @@ import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.AirStyleDefaultSizeNode
 import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.WorkspaceImageFigure;
 
 /**
- * 
  * @author cnotot
  * 
  */
@@ -73,17 +77,21 @@ public abstract class CustomWorkspaceImageEditPart extends AbstractNotSelectable
 	@Override
 	protected void refreshVisuals() {
 		super.refreshVisuals();
-		WorkspaceImageFigure figure = this.getPrimaryShape();
-		EObject element = this.resolveSemanticElement();
-		if (element instanceof WorkspaceImage) {
-			WorkspaceImage bundledImage = (WorkspaceImage) element;
-
-			setPath(bundledImage);
-
-			figure.refreshFigure(bundledImage);
-			DiagramNodeEditPartOperation.refreshNodeLabelAlignment(figure, bundledImage);
-			((GraphicalEditPart) this.getParent()).setLayoutConstraint(this, this.getFigure(), new Rectangle(0, 0, figure.getPreferredSize().width, figure.getPreferredSize().height));
-		}
+		// TODO : implement this method for OD6.
+		throw new UnsupportedOperationException("Unimplemented : not ported to OD6 yet -- RG");
+		// super.refreshVisuals();
+		// WorkspaceImageFigure figure = this.getPrimaryShape();
+		// EObject element = this.resolveSemanticElement();
+		// if (element instanceof WorkspaceImage) {
+		// WorkspaceImage bundledImage = (WorkspaceImage) element;
+		//
+		// setPath(bundledImage);
+		//
+		// figure.refreshFigure(bundledImage);
+		// DiagramNodeEditPartOperation.refreshNodeLabelAlignment(figure, bundledImage);
+		// ((GraphicalEditPart) this.getParent()).setLayoutConstraint(this, this.getFigure(), new Rectangle(0,
+		// 0, figure.getPreferredSize().width, figure.getPreferredSize().height));
+		// }
 	}
 
 	protected IFigure createNodeShape() {
@@ -91,10 +99,11 @@ public abstract class CustomWorkspaceImageEditPart extends AbstractNotSelectable
 
 		setPath(wkImage);
 
-		WorkspaceImageFigure wif = (WorkspaceImageFigure) WorkspaceImageFigure.createImageFigure(wkImage);
+		WorkspaceImageFigure wif = (WorkspaceImageFigure)WorkspaceImageFigure.createImageFigure(wkImage);
 		EditPart parent = this.getParent();
 		if (parent instanceof IDiagramBorderNodeEditPart) {
-			DiagramBorderNodeEditPartOperation.updateTransparencyMode((IDiagramBorderNodeEditPart) parent, wif);
+			DiagramBorderNodeEditPartOperation
+					.updateTransparencyMode((IDiagramBorderNodeEditPart)parent, wif);
 		}
 		return primaryShape = wif;
 	}
@@ -127,15 +136,17 @@ public abstract class CustomWorkspaceImageEditPart extends AbstractNotSelectable
 		return (WorkspaceImageFigure) primaryShape;
 	}
 
+
 	protected NodeFigure createNodePlate() {
-		DefaultSizeNodeFigure result = new AirStyleDefaultSizeNodeFigure(getMapMode().DPtoLP(40), getMapMode().DPtoLP(40));
+		DefaultSizeNodeFigure result = new AirStyleDefaultSizeNodeFigure(getMapMode().DPtoLP(40),
+				getMapMode().DPtoLP(40));
 		return result;
 	}
 
 	public EditPolicy getPrimaryDragEditPolicy() {
 		EditPolicy result = super.getPrimaryDragEditPolicy();
 		if (result instanceof ResizableEditPolicy) {
-			ResizableEditPolicy ep = (ResizableEditPolicy) result;
+			ResizableEditPolicy ep = (ResizableEditPolicy)result;
 			ep.setResizeDirections(PositionConstants.NONE);
 		}
 		return result;

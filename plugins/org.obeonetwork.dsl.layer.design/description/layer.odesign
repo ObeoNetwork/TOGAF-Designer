@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ASCII"?>
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="layer">
   <ownedViewpoints name="Layer Definition">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Layer Definition" initialisation="true" domainClass="Layer">
       <defaultLayer name="Default">
         <edgeMappings name="Reference" sourceMapping="//@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1']/@subContainerMappings[name='SubLayer'] //@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1']" targetMapping="//@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1'] //@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1']/@subContainerMappings[name='SubLayer']" targetFinderExpression="&lt;%references%>" sourceFinderExpression="&lt;%self%>" domainClass="layer.Layer" useDomainElement="true">
           <style sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="ReferenceBetweenLayers" sourceMapping="//@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1'] //@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1']/@subContainerMappings[name='SubLayer']" targetMapping="//@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1'] //@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@containerMappings[name='Layer1']/@subContainerMappings[name='SubLayer']" sourceFinderExpression="&lt;%self%>" domainClass="layer.Layer" useDomainElement="true">
           <style sizeComputationExpression="2">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Layer1" semanticCandidatesExpression="&lt;%self%>" domainClass="Layer" dropDescriptions="//@ownedViewpoints[name='Layer%20Definition']/@ownedRepresentations[name='Layer%20Definition']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20Element']">

@@ -10,12 +10,20 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.contentfwk;
 
+import fr.obeo.dsl.viewpoint.business.api.session.Session;
+import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
+
+import java.util.Collection;
+import java.util.Iterator;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.swt.custom.CTabFolder;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
@@ -38,9 +46,26 @@ public class TogafEditorHelper {
 		return null;
 	}
 
+<<<<<<< HEAD
 	public static boolean open(String editorID, int index, ResourceSet resourceSet) {
 		IWorkbenchPage page = Workbench.getInstance().getActiveWorkbenchWindow().getActivePage();
 		Resource resource = getFirstTogafResource(resourceSet);
+=======
+	private static TransactionalEditingDomain getEditingDomain() {
+		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
+		Iterator<Session> iterator = sessions.iterator();
+		if (iterator.hasNext()) {
+			return iterator.next().getTransactionalEditingDomain();
+		} else {
+			throw new IllegalArgumentException(
+					"SearchEngineService: no editing domain could be found because there's no session open.");
+		}
+	}
+
+	public static boolean open(String editorID, int index) {
+		IWorkbenchPage page = Workbench.getInstance().getActiveWorkbenchWindow().getActivePage();
+		EditingDomain editingDomain = getEditingDomain();
+		Resource resource = getFirstTogafResource(editingDomain.getResourceSet());
 		IFile modelFile;
 		URI eUri = resource.getURI();
 		if (!eUri.isPlatformResource()) {
@@ -54,7 +79,7 @@ public class TogafEditorHelper {
 		try {
 			IEditorPart editorPart = page.openEditor(new FileEditorInput(modelFile), editorID, true, IWorkbenchPage.MATCH_ID);
 			if (editorPart instanceof IContentfwkEditor) {
-				IContentfwkEditor catalog = (IContentfwkEditor) editorPart;
+				IContentfwkEditor catalog = (IContentfwkEditor)editorPart;
 				catalog.setSelection(index);
 			}
 		} catch (PartInitException e) {
@@ -72,7 +97,7 @@ public class TogafEditorHelper {
 			result = (CTabFolder) o;
 		} else if (o instanceof Composite) {
 			boolean found = false;
-			Object[] it = ((Composite) o).getChildren();
+			Object[] it = ((Composite)o).getChildren();
 			int cpt = 0;
 			while (!found && cpt < it.length) {
 				result = getTabFolder(it[cpt]);

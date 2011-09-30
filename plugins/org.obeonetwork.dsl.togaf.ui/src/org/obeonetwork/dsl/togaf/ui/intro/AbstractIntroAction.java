@@ -10,6 +10,8 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.intro;
 
+import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,11 +25,10 @@ import org.eclipse.ui.intro.IIntroPart;
 import org.eclipse.ui.intro.config.IIntroAction;
 import org.obeonetwork.dsl.togaf.ui.Activator;
 
-import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
-
 public abstract class AbstractIntroAction extends Action implements IIntroAction {
 
 	public static final String TOGAF_ACTIVITY_ID = "org.obeonetwork.dsl.togaf.ui.activity";
+
 	public static final String OBEO_DESIGNER_ACTIVITY_ID = "visible.activity";
 
 	protected void closeIntro() {
@@ -46,23 +47,22 @@ public abstract class AbstractIntroAction extends Action implements IIntroAction
 			enabledActivities.add(OBEO_DESIGNER_ACTIVITY_ID);
 		}
 		activitySupport.setEnabledActivityIds(enabledActivities);
-		IWorkbenchPage wbPage = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage();
+		IWorkbenchPage wbPage = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow()
+				.getActivePage();
 		wbPage.hideView(wbPage.findView("org.eclipse.ui.views.PropertySheet"));
 
-		WorkbenchWindow activeWorkbenchWindow = (WorkbenchWindow) PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+		WorkbenchWindow activeWorkbenchWindow = (WorkbenchWindow)PlatformUI.getWorkbench()
+				.getActiveWorkbenchWindow();
 		activeWorkbenchWindow.setCoolBarVisible(false);
 	}
 
 	protected void closeAllEditors() {
 		// FIXME carre gris
 		/*
-		 * IWorkbenchPage wbPage =
-		 * PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-		 * IEditorReference[] refs = wbPage.getEditorReferences(); if
-		 * (refs.length > 0) { for (IEditorReference ref : refs) { //
-		 * if(!ref.getTitle().equals("XXXX")){ //
-		 * wbPage.closeEditor(ref.getEditor(true), false); }
-		 * wbPage.closeAllEditors(false); }
+		 * IWorkbenchPage wbPage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+		 * IEditorReference[] refs = wbPage.getEditorReferences(); if (refs.length > 0) { for
+		 * (IEditorReference ref : refs) { // if(!ref.getTitle().equals("XXXX")){ //
+		 * wbPage.closeEditor(ref.getEditor(true), false); } wbPage.closeAllEditors(false); }
 		 */
 	}
 
