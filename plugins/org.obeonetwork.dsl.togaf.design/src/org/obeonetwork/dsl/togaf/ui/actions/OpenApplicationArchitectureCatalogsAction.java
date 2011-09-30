@@ -28,8 +28,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.obeonetwork.dsl.togaf.application.contentfwk.presentation.ApplicationEditor;
 import org.obeonetwork.dsl.togaf.contentfwk.TogafEditorHelper;
 
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
 import fr.obeo.dsl.viewpoint.tools.api.ui.IExternalJavaAction;
 
 public class OpenApplicationArchitectureCatalogsAction implements
@@ -42,8 +40,7 @@ public class OpenApplicationArchitectureCatalogsAction implements
 
 	public void execute(Collection<? extends EObject> selections,
 			Map<String, Object> parameters) {
-		Session session = SessionManager.INSTANCE.getSession(selections.iterator().next());
-		TogafEditorHelper.open(ApplicationEditor.ID, ((Integer) parameters.get("index")).intValue(), session.getTransactionalEditingDomain().getResourceSet());
+		TogafEditorHelper.open(ApplicationEditor.ID, ((Integer) parameters.get("index")).intValue());
 	}
 
 }

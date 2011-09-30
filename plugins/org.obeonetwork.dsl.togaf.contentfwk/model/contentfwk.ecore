@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="contentfwk"
+    nsURI="http://www.obeonetwork.org/dsl/togaf/contentfwk/9.0.0" nsPrefix="contentfwk">
+  <eClassifiers xsi:type="ecore:EClass" name="EnterpriseArchitecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architectures" upperBound="-1"
+        eType="#//Architecture" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
+        eType="#//Container" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="any" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Architecture" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessArchitecture" eSuperTypes="#//Architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drivers" upperBound="-1"
+        eType="#//Driver" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goals" upperBound="-1"
+        eType="#//Goal" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectives" upperBound="-1"
+        eType="#//Objective" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="units" upperBound="-1"
+        eType="#//OrganizationUnit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actors" upperBound="-1"
+        eType="#//Actor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" upperBound="-1"
+        eType="#//Role" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
+        eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="services" upperBound="-1"
+        eType="#//BusinessService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processes" upperBound="-1"
+        eType="#//Process" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="controls" upperBound="-1"
+        eType="#//Control" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
+        eType="#//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="products" upperBound="-1"
+        eType="#//Product" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contracts" upperBound="-1"
+        eType="#//Contract" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="measures" upperBound="-1"
+        eType="#//Measure" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="servicesQuality" upperBound="-1"
+        eType="#//ServiceQuality" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataArchitecture" eSuperTypes="#//Architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//DataEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalComponents" upperBound="-1"
+        eType="#//LogicalDataComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalComponents" upperBound="-1"
+        eType="#//PhysicalDataComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TechnologyArchitecture" eSuperTypes="#//Architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformServices" upperBound="-1"
+        eType="#//PlatformService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalComponents" upperBound="-1"
+        eType="#//PhysicalTechnologyComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalComponents" upperBound="-1"
+        eType="#//LogicalTechnologyComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Driver" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="createsGoals" upperBound="-1"
+        eType="#//Goal" eOpposite="#//Goal/addressesDrivers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="motivatesOrganizationUnits"
+        upperBound="-1" eType="#//OrganizationUnit" eOpposite="#//OrganizationUnit/isMotivatedByDrivers"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesDriver" eType="#//Driver"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Goal" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="addressesDrivers" upperBound="-1"
+        eType="#//Driver" eOpposite="#//Driver/createsGoals"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedThroughObjectives"
+        upperBound="-1" eType="#//Objective" eOpposite="#//Objective/realizesGoals"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesGoal" eType="#//Goal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Objective" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realizesGoals" upperBound="-1"
+        eType="#//Goal" eOpposite="#//Goal/isRealizedThroughObjectives"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isTrackedAgainstMeasures"
+        upperBound="-1" eType="#//Measure" eOpposite="#//Measure/setsPerformanceCriteriaForObjectives"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesObjective" eType="#//Objective"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrganizationUnit" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsAndGovernsServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/isOwnedAndGovernedByOrganizationUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/belongsTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsFunctions" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/isOwnedByUnit"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participatesInProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/involvesOrganizationUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isMotivatedByDrivers" upperBound="-1"
+        eType="#//Driver" eOpposite="#//Driver/motivatesOrganizationUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="producesProducts" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/isProducedByOrganizationUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operatesInLocation" eType="#//Location"
+        eOpposite="#//Location/containsOrganizationUnits"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="headcount" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A person, organization, or system that is outside the consideration of the architecture model, but interacts with it."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suppliesEntities" upperBound="-1"
+        eType="#//DataEntity" eOpposite="#//DataEntity/isSuppliedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumesEntities" upperBound="-1"
+        eType="#//DataEntity" eOpposite="#//DataEntity/isConsumedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongsTo" eType="#//OrganizationUnit"
+        eOpposite="#//OrganizationUnit/containsActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interactsWithFunctions"
+        upperBound="-1" eType="#//Function" eOpposite="#//Function/supportsActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performsTaskInRoles" upperBound="-1"
+        eType="#//Role" eOpposite="#//Role/isAssumedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="participatesInProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/involvesActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumesServices" upperBound="-1"
+        eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resolvesEvents" upperBound="-1"
+        eType="#//Event" eOpposite="#//Event/isResolvedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatesEvents" upperBound="-1"
+        eType="#//Event" eOpposite="#//Event/isGeneratedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operatesInLocation" eType="#//Location"
+        eOpposite="#//Location/containsActors"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FTEs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Estimated number of FTEs that operate as this Actor. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actorGoal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Objectives that this actor has, in general terms. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="actorTasks" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Tasks that this actor performs, in general terms. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performsFunctions" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/isPerformedByActors"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesActors" upperBound="-1"
+        eType="#//Actor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An actor assumes a role to perform a task."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isAssumedByActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/performsTaskInRoles"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accessesFunctions" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/canBeAccessedByRoles"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estimatedFTEs" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Estimated number of FTEs that operate as this Actor. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesRole" eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataEntity" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="An encapsulation of data that is recognized by a business domain expert as a discrete concept. Data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isSuppliedByActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/suppliesEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isConsumedByActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/consumesEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isAccessedByServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/consumesEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isUpdatedThroughServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/providesEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="residesWithinLogicalDataComponent"
+        eType="#//LogicalDataComponent" eOpposite="#//LogicalDataComponent/encapsulatesDataEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isProcessesByLogicalApplicationComponents"
+        upperBound="-1" eType="#//LogicalApplicationComponent" eOpposite="#//LogicalApplicationComponent/operatesOnDataEntities"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataEntityCategory" eType="#//DataEntityCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacyClassification"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retentionClassification"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposeEntity" eType="#//DataEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatesTo" upperBound="-1"
+        eType="#//DataEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="any" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalApplicationComponent" eSuperTypes="#//Element #//ApplicationComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implementsServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/isRealizedThroughLogicalApplicationComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operatesOnDataEntities"
+        upperBound="-1" eType="#//DataEntity" eOpposite="#//DataEntity/isProcessesByLogicalApplicationComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isExtendedByPhysicalApplicationComponents"
+        upperBound="-1" eType="#//PhysicalApplicationComponent" eOpposite="#//PhysicalApplicationComponent/extendsLogicalApplicationComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicatesWith" upperBound="-1"
+        eType="#//LogicalApplicationComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesLogicalApplicationComponent"
+        eType="#//LogicalApplicationComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="any" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Element #//Standard">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Delivers business capabilities closely aligned to an organization, but not explicitly governed by the organization. The term &quot;function&quot; is used to describe a unit of business capability at all levels of granularity, encapsulating terms such as value chain, process area, capability, business function, etc. Any bounded unit of business function should be described as a function."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isPerformedByActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/performsFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isOwnedByUnit" eType="#//OrganizationUnit"
+        eOpposite="#//OrganizationUnit/ownsFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isBoundedByServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/providesGovernedInterfaceToAccessFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportsProcesses" upperBound="-1"
+        eType="#//Process" eOpposite="#//Process/decomposesFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedByProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/orchestratesFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="canBeAccessedByRoles" upperBound="-1"
+        eType="#//Role" eOpposite="#//Role/accessesFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportsActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/interactsWithFunctions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesFunction" eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicatedWithFunctions"
+        upperBound="-1" eType="#//Function"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessService" eSuperTypes="#//Element #//Service">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportsObjective" upperBound="-1"
+        eType="#//Objective">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Business services support organizational objectives and are defined at a level of granularity consistent with the level of governance needed"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Process" eSuperTypes="#//Element #//Standard">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A process is a flow of interactions between functions and services and cannot be physically deployed. All processes should describe the flow of execution for a function and therefore the deployment of a process is through the function it supports; i.e., an application implements a function that has a process, not an application implements a process."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orchestratesFunctions"
+        upperBound="-1" eType="#//Function" eOpposite="#//Function/isRealizedByProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesFunctions" upperBound="-1"
+        eType="#//Function" eOpposite="#//Function/supportsProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="involvesOrganizationUnits"
+        upperBound="-1" eType="#//OrganizationUnit" eOpposite="#//OrganizationUnit/participatesInProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orchestratesServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/isRealizedByProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/supportsProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="involvesActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/participatesInProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isGuidedByControls" upperBound="-1"
+        eType="#//Control" eOpposite="#//Control/ensuresCorrectOperationOfProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resolvesEvents" upperBound="-1"
+        eType="#//Event" eOpposite="#//Event/isResolvedByProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generatesEvents" ordered="false"
+        upperBound="-1" eType="#//Event" eOpposite="#//Event/isGeneratedByProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="producesProducts" upperBound="-1"
+        eType="#//Product" eOpposite="#//Product/isProducedByProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="processCritiality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAutomated" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="processVolumetrics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesProcess" eType="#//Process"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="precedesProcesses" upperBound="-1"
+        eType="#//Process" eOpposite="#//Process/followsProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="followsProcesses" upperBound="-1"
+        eType="#//Process" eOpposite="#//Process/precedesProcesses"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="any" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlatformService" eSuperTypes="#//Element #//Service">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="A technical capability required to provide enabling infrastructure that supports the delivery of applications."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isSuppliedByLogicalTechnologyComponents"
+        upperBound="-1" eType="#//LogicalTechnologyComponent" eOpposite="#//LogicalTechnologyComponent/suppliesPlatformServices"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalTechnologyComponent" eSuperTypes="#//Element #//TechnologyComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realizesApplicationComponents"
+        upperBound="-1" eType="#//PhysicalApplicationComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendsLogicalTechnologyComponents"
+        upperBound="-1" eType="#//LogicalTechnologyComponent" eOpposite="#//LogicalTechnologyComponent/isRealizedByPhysicalTechnologyComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isHostedInLocation" upperBound="-1"
+        eType="#//Location" eOpposite="#//Location/containsPhysicalTechnologyComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="productName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="moduleName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="vendor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesPhysicalTechnologyComponent"
+        eType="#//PhysicalTechnologyComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isDependentOnPhysicalTechnologyComponents"
+        upperBound="-1" eType="#//PhysicalTechnologyComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Product" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isProducedByOrganizationUnits"
+        upperBound="-1" eType="#//OrganizationUnit" eOpposite="#//OrganizationUnit/producesProducts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isProducedByProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/producesProducts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Measure" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setsPerformanceCriteriaForObjectives"
+        upperBound="-1" eType="#//Objective" eOpposite="#//Objective/isTrackedAgainstMeasures"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setsPerformanceCriteriaForServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/isTrackedAgainstMeasures"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesMeasure" eType="#//Measure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceQuality" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToServices" upperBound="-1"
+        eType="#//Service" eOpposite="#//Service/meetsQualities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="appliesToContracts" upperBound="-1"
+        eType="#//Contract" eOpposite="#//Contract/meetsServiceQuality"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contract" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="governsAndMeasuresBusinessServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/isGovernedAndMeasuredByContracts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meetsServiceQuality" upperBound="-1"
+        eType="#//ServiceQuality" eOpposite="#//ServiceQuality/appliesToContracts"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="behaviorCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ServiceNameCaller" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ServiceNameCalled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceQualityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availabilityQualityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servicesTimes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="manageabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="performanceCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responseCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reliabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualityOfInformationRequired"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contractControlRequirements"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resultControlRequirements"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recoverabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locatabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="securityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacyCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credibilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localizationCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="internationalizationCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interoperabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scalabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensibilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="throughput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="throughputPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="growth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="growthPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakProfileShortTerm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakProfileLongTerm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isResolvedByBusinessServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/resolvesEvents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isResolvedByProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/resolvesEvents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isGeneratedByProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/generatesEvents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isResolvedByActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/resolvesEvents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isGeneratedByActors" eType="#//Actor"
+        eOpposite="#//Actor/generatesEvents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Control" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ensuresCorrectOperationOfProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/isGuidedByControls"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delegates" upperBound="-1"
+        eType="#//Element" eOpposite="#//Element/isDelegatedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isDelegatedBy" upperBound="-1"
+        eType="#//Element" eOpposite="#//Element/delegates"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Brief name of the architecture object. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Textual description of the architecture object. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="User-definable categorization taxonomy for each metamodel object. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sourceDescr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Location from where the information was collected. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ownerDescr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Owner of the architecture object. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Unique identifier for the architecture object. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ownsElements" upperBound="-1"
+        eType="#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsActors" upperBound="-1"
+        eType="#//Actor" eOpposite="#//Actor/operatesInLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsOrganizationUnits"
+        upperBound="-1" eType="#//OrganizationUnit" eOpposite="#//OrganizationUnit/operatesInLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsPhysicalDataComponents"
+        upperBound="-1" eType="#//PhysicalDataComponent" eOpposite="#//PhysicalDataComponent/isHotedInLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsPhysicalApplicationComponents"
+        upperBound="-1" eType="#//PhysicalApplicationComponent" eOpposite="#//PhysicalApplicationComponent/isHostedInLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containsPhysicalTechnologyComponents"
+        upperBound="-1" eType="#//PhysicalTechnologyComponent" eOpposite="#//PhysicalTechnologyComponent/isHostedInLocation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesLocation" eType="#//Location"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//Element">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Describes how this capability provides value to the enterprise. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isDeliveredBy" eType="#//WorkPackage"
+        eOpposite="#//WorkPackage/deliversCapabilities"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="businessValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Describes how this capability provides value to the enterprise. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="increments" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Lists possible maturity/quality levels for the capability. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategicElement" abstract="true" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Principle" eSuperTypes="#//StrategicElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The following categories of principle apply: Guiding Principle, Business Principle, Data Principle, Application Principle, Integration Principle, Technology Principle. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="principleCategory" lowerBound="1"
+        eType="#//PrincipleCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="priority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Priority of this principle relative to other principles. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statementOfPrinciple" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of what the principle is. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of why the principle is required and the outcome to be reached."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of what the principle means in practical terms."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Identifies mechanisms that will be used to measure whether the principle has been met or not. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Constraint" eSuperTypes="#//StrategicElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assumption" eSuperTypes="#//StrategicElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Requirement" eSuperTypes="#//StrategicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="statementOfRequirement"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of what the requirement is, including a definition of whether the requirement shall be met, should be met, or may be met. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of why the requirement exists. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="acceptanceCriteria" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Statement of what tests will be carried out to ensure that the requirement will be met. "/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Gap" eSuperTypes="#//StrategicElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WorkPackage" eSuperTypes="#//StrategicElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="workPackageCategory" lowerBound="1"
+        eType="#//WorkPackageCategory"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deliversCapabilities" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/isDeliveredBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalDataComponent" eSuperTypes="#//Element #//DataComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encapsulatesDataEntities"
+        upperBound="-1" eType="#//DataEntity" eOpposite="#//DataEntity/residesWithinLogicalDataComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isExtendedByPhysicalDataComponents"
+        upperBound="-1" eType="#//PhysicalDataComponent" eOpposite="#//PhysicalDataComponent/extendsLogicalDataComponents"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalDataComponent" eSuperTypes="#//Element #//DataComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendsLogicalDataComponents"
+        upperBound="-1" eType="#//LogicalDataComponent" eOpposite="#//LogicalDataComponent/isExtendedByPhysicalDataComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isHotedInLocation" eType="#//Location"
+        eOpposite="#//Location/containsPhysicalDataComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesPhysicalDataComponent"
+        eType="#//PhysicalDataComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encapsulatesPhysicalApplicationComponents"
+        upperBound="-1" eType="#//PhysicalApplicationComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationArchitecture" eSuperTypes="#//Architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalApplicationComponents"
+        upperBound="-1" eType="#//LogicalApplicationComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalApplicationComponents"
+        upperBound="-1" eType="#//PhysicalApplicationComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="informationSystemServices"
+        upperBound="-1" eType="#//InformationSystemService" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anyRef" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalApplicationComponent" eSuperTypes="#//Element #//ApplicationComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendsLogicalApplicationComponents"
+        upperBound="-1" eType="#//LogicalApplicationComponent" eOpposite="#//LogicalApplicationComponent/isExtendedByPhysicalApplicationComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isHostedInLocation" upperBound="-1"
+        eType="#//Location" eOpposite="#//Location/containsPhysicalApplicationComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communicatesWith" upperBound="-1"
+        eType="#//PhysicalApplicationComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lifeCycleStatus" lowerBound="1"
+        eType="#//LifeCycleStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialLiveDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfLastRelease" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfNextRelease" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retirementDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availabilityQualityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="servicesTimes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="manageabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="performanceCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reliabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="recoverabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locatabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="securityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacyCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integrityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credibilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localizationCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="internationalizationCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interoperabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scalabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="portabilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="extensibilityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacityCharacteristics"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="throughput" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="throughputPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="growth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="growthPeriod" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakProfileShortTerm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="peakProfileLongTerm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="encapsulatesPhysicalDataComponents"
+        upperBound="-1" eType="#//PhysicalDataComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedByPhysicalTechnologyComponents"
+        upperBound="-1" eType="#//PhysicalTechnologyComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesPhysicalApplicationComponent"
+        eType="#//PhysicalApplicationComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalTechnologyComponent" eSuperTypes="#//Element #//TechnologyComponent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providesPlatformForServices"
+        upperBound="-1" eType="#//Service" eOpposite="#//Service/isImplementedOnLogicalTechnologyComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="suppliesPlatformServices"
+        upperBound="-1" eType="#//PlatformService" eOpposite="#//PlatformService/isSuppliedByLogicalTechnologyComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedByPhysicalTechnologyComponents"
+        upperBound="-1" eType="#//PhysicalTechnologyComponent" eOpposite="#//PhysicalTechnologyComponent/extendsLogicalTechnologyComponents"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesLogicalTechnologyComponent"
+        eType="#//LogicalTechnologyComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isDependentOnLogicalTechnologyComponents"
+        upperBound="-1" eType="#//LogicalTechnologyComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrategicArchitecture" eSuperTypes="#//Architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//Capability" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="strategicElements" upperBound="-1"
+        eType="#//StrategicElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PrincipleCategory">
+    <eLiterals name="GuidingPrinciple"/>
+    <eLiterals name="BusinessPrinciple" value="1"/>
+    <eLiterals name="DataPrinciple" value="2"/>
+    <eLiterals name="ApplicationPrinciple" value="3"/>
+    <eLiterals name="IntegrationPrinciple" value="4"/>
+    <eLiterals name="TechnologyPrinciple" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="StandardsClass">
+    <eLiterals name="NonStandard"/>
+    <eLiterals name="Proposed" value="1"/>
+    <eLiterals name="Provisional" value="2"/>
+    <eLiterals name="Standard" value="3"/>
+    <eLiterals name="PhasingOut" value="4"/>
+    <eLiterals name="Retired" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Standard" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardClass" eType="#//StandardsClass"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardCreationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastStandardCreationDate"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nextStandardCreationDate"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="retireDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service" abstract="true" eSuperTypes="#//Standard">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isProvidedToActors" upperBound="-1"
+        eType="#//Actor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providesGovernedInterfaceToAccessFunctions"
+        upperBound="-1" eType="#//Function" eOpposite="#//Function/isBoundedByServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providesEntities" upperBound="-1"
+        eType="#//DataEntity" eOpposite="#//DataEntity/isUpdatedThroughServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumesEntities" upperBound="-1"
+        eType="#//DataEntity" eOpposite="#//DataEntity/isAccessedByServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isGovernedAndMeasuredByContracts"
+        upperBound="-1" eType="#//Contract" eOpposite="#//Contract/governsAndMeasuresBusinessServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resolvesEvents" upperBound="-1"
+        eType="#//Event" eOpposite="#//Event/isResolvedByBusinessServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isImplementedOnLogicalTechnologyComponents"
+        upperBound="-1" eType="#//LogicalTechnologyComponent" eOpposite="#//LogicalTechnologyComponent/providesPlatformForServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedThroughLogicalApplicationComponent"
+        upperBound="-1" eType="#//LogicalApplicationComponent" eOpposite="#//LogicalApplicationComponent/implementsServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isOwnedAndGovernedByOrganizationUnits"
+        upperBound="-1" eType="#//OrganizationUnit" eOpposite="#//OrganizationUnit/ownsAndGovernsServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isTrackedAgainstMeasures"
+        upperBound="-1" eType="#//Measure" eOpposite="#//Measure/setsPerformanceCriteriaForServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportsProcesses" upperBound="-1"
+        eType="#//Process" eOpposite="#//Process/decomposesServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isRealizedByProcesses"
+        upperBound="-1" eType="#//Process" eOpposite="#//Process/orchestratesServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meetsQualities" upperBound="-1"
+        eType="#//ServiceQuality" eOpposite="#//ServiceQuality/appliesToServices"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="consumesServices" upperBound="-1"
+        eType="#//Service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesServices" upperBound="-1"
+        eType="#//Service"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ApplicationComponent" abstract="true"
+      eSuperTypes="#//Standard"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationSystemService" eSuperTypes="#//Service #//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="any" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LifeCycleStatus">
+    <eLiterals name="Proposed"/>
+    <eLiterals name="InDevelopment" value="1"/>
+    <eLiterals name="Live" value="2"/>
+    <eLiterals name="PhasingOut" value="3"/>
+    <eLiterals name="Retired" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataEntityCategory">
+    <eLiterals name="Message"/>
+    <eLiterals name="InternallyStoredEntity" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataComponent" abstract="true" eSuperTypes="#//Standard"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TechnologyComponent" abstract="true"
+      eSuperTypes="#//Standard"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="WorkPackageCategory">
+    <eLiterals name="WorkPackage"/>
+    <eLiterals name="WorkStream" value="1"/>
+    <eLiterals name="Project" value="2"/>
+    <eLiterals name="Program" value="3"/>
+    <eLiterals name="Portofolio" value="4"/>
+  </eClassifiers>
+</ecore:EPackage>

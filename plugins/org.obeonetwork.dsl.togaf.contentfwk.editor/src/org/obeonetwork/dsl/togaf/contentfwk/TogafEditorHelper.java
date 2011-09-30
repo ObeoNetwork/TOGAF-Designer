@@ -46,11 +46,6 @@ public class TogafEditorHelper {
 		return null;
 	}
 
-<<<<<<< HEAD
-	public static boolean open(String editorID, int index, ResourceSet resourceSet) {
-		IWorkbenchPage page = Workbench.getInstance().getActiveWorkbenchWindow().getActivePage();
-		Resource resource = getFirstTogafResource(resourceSet);
-=======
 	private static TransactionalEditingDomain getEditingDomain() {
 		Collection<Session> sessions = SessionManager.INSTANCE.getSessions();
 		Iterator<Session> iterator = sessions.iterator();
@@ -77,7 +72,8 @@ public class TogafEditorHelper {
 		modelFile = ResourcesPlugin.getWorkspace().getRoot().getFile(ipath);
 
 		try {
-			IEditorPart editorPart = page.openEditor(new FileEditorInput(modelFile), editorID, true, IWorkbenchPage.MATCH_ID);
+			IEditorPart editorPart = page.openEditor(new FileEditorInput(modelFile), editorID, true,
+					IWorkbenchPage.MATCH_ID);
 			if (editorPart instanceof IContentfwkEditor) {
 				IContentfwkEditor catalog = (IContentfwkEditor)editorPart;
 				catalog.setSelection(index);
@@ -93,8 +89,8 @@ public class TogafEditorHelper {
 		CTabFolder result = null;
 		// Attention il y a un premier TabFolder correspondant � la page de
 		// l'�diteur. Ce TabFolder ne contient qu'une page.
-		if ((o instanceof CTabFolder) && ((CTabFolder) o).getChildren().length > 1) {
-			result = (CTabFolder) o;
+		if ((o instanceof CTabFolder) && ((CTabFolder)o).getChildren().length > 1) {
+			result = (CTabFolder)o;
 		} else if (o instanceof Composite) {
 			boolean found = false;
 			Object[] it = ((Composite)o).getChildren();

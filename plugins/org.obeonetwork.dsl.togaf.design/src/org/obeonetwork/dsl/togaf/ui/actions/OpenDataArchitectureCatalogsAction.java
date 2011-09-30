@@ -28,8 +28,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.obeonetwork.dsl.togaf.contentfwk.TogafEditorHelper;
 import org.obeonetwork.dsl.togaf.data.contentfwk.presentation.DataEditor;
 
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
 import fr.obeo.dsl.viewpoint.tools.api.ui.IExternalJavaAction;
 
 public class OpenDataArchitectureCatalogsAction implements IExternalJavaAction {
@@ -40,8 +38,7 @@ public class OpenDataArchitectureCatalogsAction implements IExternalJavaAction {
 	}
 
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
-		Session session = SessionManager.INSTANCE.getSession(selections.iterator().next());
-		TogafEditorHelper.open(DataEditor.ID, ((Integer) parameters.get("index")).intValue(), session.getTransactionalEditingDomain().getResourceSet());
+		TogafEditorHelper.open(DataEditor.ID, ((Integer) parameters.get("index")).intValue());
 	}
 
 }

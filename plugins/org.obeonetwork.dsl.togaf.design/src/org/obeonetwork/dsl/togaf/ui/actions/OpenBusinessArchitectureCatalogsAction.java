@@ -25,12 +25,9 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
-import org.obeonetwork.dsl.togaf.application.contentfwk.presentation.ApplicationEditor;
 import org.obeonetwork.dsl.togaf.business.contentfwk.presentation.BusinessEditor;
 import org.obeonetwork.dsl.togaf.contentfwk.TogafEditorHelper;
 
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
 import fr.obeo.dsl.viewpoint.tools.api.ui.IExternalJavaAction;
 
 public class OpenBusinessArchitectureCatalogsAction implements IExternalJavaAction {
@@ -40,8 +37,7 @@ public class OpenBusinessArchitectureCatalogsAction implements IExternalJavaActi
 	}
 
 	public void execute(Collection<? extends EObject> selections, Map<String, Object> parameters) {
-		Session session = SessionManager.INSTANCE.getSession(selections.iterator().next());
-		TogafEditorHelper.open(BusinessEditor.ID, ((Integer) parameters.get("index")).intValue(), session.getTransactionalEditingDomain().getResourceSet());
+		TogafEditorHelper.open(BusinessEditor.ID, ((Integer) parameters.get("index")).intValue());
 	}
 
 }
