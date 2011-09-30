@@ -20,13 +20,13 @@ Require-Bundle: org.eclipse.ui,
  fr.obeo.dsl.common.ui,
  fr.obeo.dsl.viewpoint,
  fr.obeo.dsl.viewpoint.ui,
- org.obeonetwork.dsl.togaf.contentfwk,
- org.eclipse.core.resources
+ org.eclipse.core.resources,
+ fr.obeo.dsl.viewpoint.collab,
+ org.eclipse.emf.cdo;bundle-version="4.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.obeonetwork.dsl.togaf.ui,
  org.obeonetwork.dsl.togaf.ui.intro,
- org.obeonetwork.dsl.togaf.ui.perspectives,
- org.obeonetwork.dsl.togaf.ui.startup
+ org.obeonetwork.dsl.togaf.ui.perspectives
 Bundle-ClassPath: .
 Bundle-Vendor: Obeo.fr

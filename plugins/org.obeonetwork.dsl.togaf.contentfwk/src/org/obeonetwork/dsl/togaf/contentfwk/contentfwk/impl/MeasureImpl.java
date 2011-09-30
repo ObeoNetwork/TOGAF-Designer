@@ -48,36 +48,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  */
 public class MeasureImpl extends ElementImpl implements Measure {
 	/**
-	 * The cached value of the '{@link #getSetsPerformanceCriteriaForObjectives() <em>Sets Performance Criteria For Objectives</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSetsPerformanceCriteriaForObjectives()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Objective> setsPerformanceCriteriaForObjectives;
-
-	/**
-	 * The cached value of the '{@link #getSetsPerformanceCriteriaForServices() <em>Sets Performance Criteria For Services</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSetsPerformanceCriteriaForServices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Service> setsPerformanceCriteriaForServices;
-
-	/**
-	 * The cached value of the '{@link #getDecomposesMeasure() <em>Decomposes Measure</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecomposesMeasure()
-	 * @generated
-	 * @ordered
-	 */
-	protected Measure decomposesMeasure;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -101,11 +71,9 @@ public class MeasureImpl extends ElementImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Objective> getSetsPerformanceCriteriaForObjectives() {
-		if (setsPerformanceCriteriaForObjectives == null) {
-			setsPerformanceCriteriaForObjectives = new EObjectWithInverseResolvingEList.ManyInverse<Objective>(Objective.class, this, ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES, ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES);
-		}
-		return setsPerformanceCriteriaForObjectives;
+		return (EList<Objective>)eGet(ContentfwkPackage.Literals.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES, true);
 	}
 
 	/**
@@ -113,11 +81,9 @@ public class MeasureImpl extends ElementImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Service> getSetsPerformanceCriteriaForServices() {
-		if (setsPerformanceCriteriaForServices == null) {
-			setsPerformanceCriteriaForServices = new EObjectWithInverseResolvingEList.ManyInverse<Service>(Service.class, this, ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES, ContentfwkPackage.SERVICE__IS_TRACKED_AGAINST_MEASURES);
-		}
-		return setsPerformanceCriteriaForServices;
+		return (EList<Service>)eGet(ContentfwkPackage.Literals.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES, true);
 	}
 
 	/**
@@ -126,24 +92,7 @@ public class MeasureImpl extends ElementImpl implements Measure {
 	 * @generated
 	 */
 	public Measure getDecomposesMeasure() {
-		if (decomposesMeasure != null && decomposesMeasure.eIsProxy()) {
-			InternalEObject oldDecomposesMeasure = (InternalEObject)decomposesMeasure;
-			decomposesMeasure = (Measure)eResolveProxy(oldDecomposesMeasure);
-			if (decomposesMeasure != oldDecomposesMeasure) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE, oldDecomposesMeasure, decomposesMeasure));
-			}
-		}
-		return decomposesMeasure;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Measure basicGetDecomposesMeasure() {
-		return decomposesMeasure;
+		return (Measure)eGet(ContentfwkPackage.Literals.MEASURE__DECOMPOSES_MEASURE, true);
 	}
 
 	/**
@@ -152,125 +101,7 @@ public class MeasureImpl extends ElementImpl implements Measure {
 	 * @generated
 	 */
 	public void setDecomposesMeasure(Measure newDecomposesMeasure) {
-		Measure oldDecomposesMeasure = decomposesMeasure;
-		decomposesMeasure = newDecomposesMeasure;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE, oldDecomposesMeasure, decomposesMeasure));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSetsPerformanceCriteriaForObjectives()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSetsPerformanceCriteriaForServices()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				return ((InternalEList<?>)getSetsPerformanceCriteriaForObjectives()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				return ((InternalEList<?>)getSetsPerformanceCriteriaForServices()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				return getSetsPerformanceCriteriaForObjectives();
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				return getSetsPerformanceCriteriaForServices();
-			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
-				if (resolve) return getDecomposesMeasure();
-				return basicGetDecomposesMeasure();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				getSetsPerformanceCriteriaForObjectives().clear();
-				getSetsPerformanceCriteriaForObjectives().addAll((Collection<? extends Objective>)newValue);
-				return;
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				getSetsPerformanceCriteriaForServices().clear();
-				getSetsPerformanceCriteriaForServices().addAll((Collection<? extends Service>)newValue);
-				return;
-			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
-				setDecomposesMeasure((Measure)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				getSetsPerformanceCriteriaForObjectives().clear();
-				return;
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				getSetsPerformanceCriteriaForServices().clear();
-				return;
-			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
-				setDecomposesMeasure((Measure)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_OBJECTIVES:
-				return setsPerformanceCriteriaForObjectives != null && !setsPerformanceCriteriaForObjectives.isEmpty();
-			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
-				return setsPerformanceCriteriaForServices != null && !setsPerformanceCriteriaForServices.isEmpty();
-			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
-				return decomposesMeasure != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(ContentfwkPackage.Literals.MEASURE__DECOMPOSES_MEASURE, newDecomposesMeasure);
 	}
 
 } //MeasureImpl

@@ -48,46 +48,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationCompon
  */
 public class ApplicationArchitectureImpl extends ArchitectureImpl implements ApplicationArchitecture {
 	/**
-	 * The cached value of the '{@link #getLogicalApplicationComponents() <em>Logical Application Components</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLogicalApplicationComponents()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LogicalApplicationComponent> logicalApplicationComponents;
-
-	/**
-	 * The cached value of the '{@link #getPhysicalApplicationComponents() <em>Physical Application Components</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPhysicalApplicationComponents()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PhysicalApplicationComponent> physicalApplicationComponents;
-
-	/**
-	 * The cached value of the '{@link #getInformationSystemServices() <em>Information System Services</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInformationSystemServices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<InformationSystemService> informationSystemServices;
-
-	/**
-	 * The cached value of the '{@link #getAnyRef() <em>Any Ref</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnyRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<EObject> anyRef;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -111,87 +71,9 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<LogicalApplicationComponent> getLogicalApplicationComponents() {
-		if (logicalApplicationComponents == null) {
-			logicalApplicationComponents = new EObjectContainmentEList<LogicalApplicationComponent>(LogicalApplicationComponent.class, this, ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS);
-		}
-		return logicalApplicationComponents;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<PhysicalApplicationComponent> getPhysicalApplicationComponents() {
-		if (physicalApplicationComponents == null) {
-			physicalApplicationComponents = new EObjectContainmentEList<PhysicalApplicationComponent>(PhysicalApplicationComponent.class, this, ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS);
-		}
-		return physicalApplicationComponents;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<InformationSystemService> getInformationSystemServices() {
-		if (informationSystemServices == null) {
-			informationSystemServices = new EObjectContainmentEList<InformationSystemService>(InformationSystemService.class, this, ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES);
-		}
-		return informationSystemServices;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<EObject> getAnyRef() {
-		if (anyRef == null) {
-			anyRef = new EObjectContainmentEList<EObject>(EObject.class, this, ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF);
-		}
-		return anyRef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
-				return ((InternalEList<?>)getLogicalApplicationComponents()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
-				return ((InternalEList<?>)getPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-				return ((InternalEList<?>)getInformationSystemServices()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return ((InternalEList<?>)getAnyRef()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
-				return getLogicalApplicationComponents();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
-				return getPhysicalApplicationComponents();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-				return getInformationSystemServices();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return getAnyRef();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		return (EList<LogicalApplicationComponent>)eGet(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS, true);
 	}
 
 	/**
@@ -200,27 +82,8 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
-				getLogicalApplicationComponents().clear();
-				getLogicalApplicationComponents().addAll((Collection<? extends LogicalApplicationComponent>)newValue);
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
-				getPhysicalApplicationComponents().clear();
-				getPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-				getInformationSystemServices().clear();
-				getInformationSystemServices().addAll((Collection<? extends InformationSystemService>)newValue);
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				getAnyRef().clear();
-				getAnyRef().addAll((Collection<? extends EObject>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+	public EList<PhysicalApplicationComponent> getPhysicalApplicationComponents() {
+		return (EList<PhysicalApplicationComponent>)eGet(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS, true);
 	}
 
 	/**
@@ -228,23 +91,9 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
-				getLogicalApplicationComponents().clear();
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
-				getPhysicalApplicationComponents().clear();
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-				getInformationSystemServices().clear();
-				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				getAnyRef().clear();
-				return;
-		}
-		super.eUnset(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<InformationSystemService> getInformationSystemServices() {
+		return (EList<InformationSystemService>)eGet(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES, true);
 	}
 
 	/**
@@ -252,19 +101,9 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
-				return logicalApplicationComponents != null && !logicalApplicationComponents.isEmpty();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
-				return physicalApplicationComponents != null && !physicalApplicationComponents.isEmpty();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-				return informationSystemServices != null && !informationSystemServices.isEmpty();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return anyRef != null && !anyRef.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<EObject> getAnyRef() {
+		return (EList<EObject>)eGet(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__ANY_REF, true);
 	}
 
 } //ApplicationArchitectureImpl

@@ -17,6 +17,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -41,107 +42,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *
  * @generated
  */
-public abstract class StandardImpl extends EObjectImpl implements Standard {
-	/**
-	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
-
-	/**
-	 * The cached value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected StandardsClass standardClass = STANDARD_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date standardCreationDate = STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date lastStandardCreationDate = LAST_STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date nextStandardCreationDate = NEXT_STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date RETIRE_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date retireDate = RETIRE_DATE_EDEFAULT;
-
+public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,8 +67,18 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StandardsClass getStandardClass() {
-		return standardClass;
+		return (StandardsClass)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true);
 	}
 
 	/**
@@ -176,10 +87,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		StandardsClass oldStandardClass = standardClass;
-		standardClass = newStandardClass == null ? STANDARD_CLASS_EDEFAULT : newStandardClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.STANDARD__STANDARD_CLASS, oldStandardClass, standardClass));
+		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -188,7 +96,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public Date getStandardCreationDate() {
-		return standardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -197,10 +105,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public void setStandardCreationDate(Date newStandardCreationDate) {
-		Date oldStandardCreationDate = standardCreationDate;
-		standardCreationDate = newStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE, oldStandardCreationDate, standardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
 	}
 
 	/**
@@ -209,7 +114,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public Date getLastStandardCreationDate() {
-		return lastStandardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -218,10 +123,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		Date oldLastStandardCreationDate = lastStandardCreationDate;
-		lastStandardCreationDate = newLastStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE, oldLastStandardCreationDate, lastStandardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
 	}
 
 	/**
@@ -230,7 +132,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public Date getNextStandardCreationDate() {
-		return nextStandardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -239,10 +141,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		Date oldNextStandardCreationDate = nextStandardCreationDate;
-		nextStandardCreationDate = newNextStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE, oldNextStandardCreationDate, nextStandardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
 	}
 
 	/**
@@ -251,7 +150,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public Date getRetireDate() {
-		return retireDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true);
 	}
 
 	/**
@@ -260,132 +159,7 @@ public abstract class StandardImpl extends EObjectImpl implements Standard {
 	 * @generated
 	 */
 	public void setRetireDate(Date newRetireDate) {
-		Date oldRetireDate = retireDate;
-		retireDate = newRetireDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.STANDARD__RETIRE_DATE, oldRetireDate, retireDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.STANDARD__STANDARD_CLASS:
-				return getStandardClass();
-			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
-				return getStandardCreationDate();
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
-			case ContentfwkPackage.STANDARD__RETIRE_DATE:
-				return getRetireDate();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.STANDARD__STANDARD_CLASS:
-				setStandardClass((StandardsClass)newValue);
-				return;
-			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
-				setStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.STANDARD__RETIRE_DATE:
-				setRetireDate((Date)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.STANDARD__STANDARD_CLASS:
-				setStandardClass(STANDARD_CLASS_EDEFAULT);
-				return;
-			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
-				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.STANDARD__RETIRE_DATE:
-				setRetireDate(RETIRE_DATE_EDEFAULT);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.STANDARD__STANDARD_CLASS:
-				return standardClass != STANDARD_CLASS_EDEFAULT;
-			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
-				return STANDARD_CREATION_DATE_EDEFAULT == null ? standardCreationDate != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(standardCreationDate);
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? lastStandardCreationDate != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(lastStandardCreationDate);
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? nextStandardCreationDate != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(nextStandardCreationDate);
-			case ContentfwkPackage.STANDARD__RETIRE_DATE:
-				return RETIRE_DATE_EDEFAULT == null ? retireDate != null : !RETIRE_DATE_EDEFAULT.equals(retireDate);
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (standardClass: ");
-		result.append(standardClass);
-		result.append(", standardCreationDate: ");
-		result.append(standardCreationDate);
-		result.append(", lastStandardCreationDate: ");
-		result.append(lastStandardCreationDate);
-		result.append(", nextStandardCreationDate: ");
-		result.append(nextStandardCreationDate);
-		result.append(", retireDate: ");
-		result.append(retireDate);
-		result.append(')');
-		return result.toString();
+		eSet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 } //StandardImpl

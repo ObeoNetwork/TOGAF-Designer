@@ -63,166 +63,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  */
 public class LogicalApplicationComponentImpl extends ElementImpl implements LogicalApplicationComponent {
 	/**
-	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
-
-	/**
-	 * The cached value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected StandardsClass standardClass = STANDARD_CLASS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date standardCreationDate = STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date lastStandardCreationDate = LAST_STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date nextStandardCreationDate = NEXT_STANDARD_CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date RETIRE_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date retireDate = RETIRE_DATE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getImplementsServices() <em>Implements Services</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getImplementsServices()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Service> implementsServices;
-
-	/**
-	 * The cached value of the '{@link #getOperatesOnDataEntities() <em>Operates On Data Entities</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOperatesOnDataEntities()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataEntity> operatesOnDataEntities;
-
-	/**
-	 * The cached value of the '{@link #getIsExtendedByPhysicalApplicationComponents() <em>Is Extended By Physical Application Components</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsExtendedByPhysicalApplicationComponents()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PhysicalApplicationComponent> isExtendedByPhysicalApplicationComponents;
-
-	/**
-	 * The cached value of the '{@link #getCommunicatesWith() <em>Communicates With</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCommunicatesWith()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<LogicalApplicationComponent> communicatesWith;
-
-	/**
-	 * The cached value of the '{@link #getDecomposesLogicalApplicationComponent() <em>Decomposes Logical Application Component</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDecomposesLogicalApplicationComponent()
-	 * @generated
-	 * @ordered
-	 */
-	protected LogicalApplicationComponent decomposesLogicalApplicationComponent;
-
-	/**
-	 * The cached value of the '{@link #getAny() <em>Any</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAny()
-	 * @generated
-	 * @ordered
-	 */
-	protected EObject any;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -247,7 +87,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return standardClass;
+		return (StandardsClass)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true);
 	}
 
 	/**
@@ -256,10 +96,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		StandardsClass oldStandardClass = standardClass;
-		standardClass = newStandardClass == null ? STANDARD_CLASS_EDEFAULT : newStandardClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS, oldStandardClass, standardClass));
+		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -268,7 +105,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public Date getStandardCreationDate() {
-		return standardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -277,10 +114,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setStandardCreationDate(Date newStandardCreationDate) {
-		Date oldStandardCreationDate = standardCreationDate;
-		standardCreationDate = newStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE, oldStandardCreationDate, standardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
 	}
 
 	/**
@@ -289,7 +123,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public Date getLastStandardCreationDate() {
-		return lastStandardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -298,10 +132,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		Date oldLastStandardCreationDate = lastStandardCreationDate;
-		lastStandardCreationDate = newLastStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE, oldLastStandardCreationDate, lastStandardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
 	}
 
 	/**
@@ -310,7 +141,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public Date getNextStandardCreationDate() {
-		return nextStandardCreationDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true);
 	}
 
 	/**
@@ -319,10 +150,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		Date oldNextStandardCreationDate = nextStandardCreationDate;
-		nextStandardCreationDate = newNextStandardCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE, oldNextStandardCreationDate, nextStandardCreationDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
 	}
 
 	/**
@@ -331,7 +159,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public Date getRetireDate() {
-		return retireDate;
+		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true);
 	}
 
 	/**
@@ -340,10 +168,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setRetireDate(Date newRetireDate) {
-		Date oldRetireDate = retireDate;
-		retireDate = newRetireDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE, oldRetireDate, retireDate));
+		eSet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 	/**
@@ -351,11 +176,9 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Service> getImplementsServices() {
-		if (implementsServices == null) {
-			implementsServices = new EObjectWithInverseResolvingEList.ManyInverse<Service>(Service.class, this, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES, ContentfwkPackage.SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT);
-		}
-		return implementsServices;
+		return (EList<Service>)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES, true);
 	}
 
 	/**
@@ -363,11 +186,9 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<DataEntity> getOperatesOnDataEntities() {
-		if (operatesOnDataEntities == null) {
-			operatesOnDataEntities = new EObjectWithInverseResolvingEList.ManyInverse<DataEntity>(DataEntity.class, this, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES, ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS);
-		}
-		return operatesOnDataEntities;
+		return (EList<DataEntity>)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES, true);
 	}
 
 	/**
@@ -375,11 +196,9 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<PhysicalApplicationComponent> getIsExtendedByPhysicalApplicationComponents() {
-		if (isExtendedByPhysicalApplicationComponents == null) {
-			isExtendedByPhysicalApplicationComponents = new EObjectWithInverseResolvingEList.ManyInverse<PhysicalApplicationComponent>(PhysicalApplicationComponent.class, this, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS, ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__EXTENDS_LOGICAL_APPLICATION_COMPONENTS);
-		}
-		return isExtendedByPhysicalApplicationComponents;
+		return (EList<PhysicalApplicationComponent>)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS, true);
 	}
 
 	/**
@@ -387,11 +206,9 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<LogicalApplicationComponent> getCommunicatesWith() {
-		if (communicatesWith == null) {
-			communicatesWith = new EObjectResolvingEList<LogicalApplicationComponent>(LogicalApplicationComponent.class, this, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH);
-		}
-		return communicatesWith;
+		return (EList<LogicalApplicationComponent>)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH, true);
 	}
 
 	/**
@@ -400,24 +217,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public LogicalApplicationComponent getDecomposesLogicalApplicationComponent() {
-		if (decomposesLogicalApplicationComponent != null && decomposesLogicalApplicationComponent.eIsProxy()) {
-			InternalEObject oldDecomposesLogicalApplicationComponent = (InternalEObject)decomposesLogicalApplicationComponent;
-			decomposesLogicalApplicationComponent = (LogicalApplicationComponent)eResolveProxy(oldDecomposesLogicalApplicationComponent);
-			if (decomposesLogicalApplicationComponent != oldDecomposesLogicalApplicationComponent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, oldDecomposesLogicalApplicationComponent, decomposesLogicalApplicationComponent));
-			}
-		}
-		return decomposesLogicalApplicationComponent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public LogicalApplicationComponent basicGetDecomposesLogicalApplicationComponent() {
-		return decomposesLogicalApplicationComponent;
+		return (LogicalApplicationComponent)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, true);
 	}
 
 	/**
@@ -426,10 +226,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setDecomposesLogicalApplicationComponent(LogicalApplicationComponent newDecomposesLogicalApplicationComponent) {
-		LogicalApplicationComponent oldDecomposesLogicalApplicationComponent = decomposesLogicalApplicationComponent;
-		decomposesLogicalApplicationComponent = newDecomposesLogicalApplicationComponent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, oldDecomposesLogicalApplicationComponent, decomposesLogicalApplicationComponent));
+		eSet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, newDecomposesLogicalApplicationComponent);
 	}
 
 	/**
@@ -438,24 +235,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public EObject getAny() {
-		if (any != null && any.eIsProxy()) {
-			InternalEObject oldAny = (InternalEObject)any;
-			any = eResolveProxy(oldAny);
-			if (any != oldAny) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY, oldAny, any));
-			}
-		}
-		return any;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetAny() {
-		return any;
+		return (EObject)eGet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__ANY, true);
 	}
 
 	/**
@@ -464,212 +244,7 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * @generated
 	 */
 	public void setAny(EObject newAny) {
-		EObject oldAny = any;
-		any = newAny;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY, oldAny, any));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getImplementsServices()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatesOnDataEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsExtendedByPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				return ((InternalEList<?>)getImplementsServices()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				return ((InternalEList<?>)getOperatesOnDataEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				return ((InternalEList<?>)getIsExtendedByPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS:
-				return getStandardClass();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
-				return getStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
-				return getRetireDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				return getImplementsServices();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				return getOperatesOnDataEntities();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				return getIsExtendedByPhysicalApplicationComponents();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH:
-				return getCommunicatesWith();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
-				if (resolve) return getDecomposesLogicalApplicationComponent();
-				return basicGetDecomposesLogicalApplicationComponent();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				if (resolve) return getAny();
-				return basicGetAny();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS:
-				setStandardClass((StandardsClass)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
-				setRetireDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				getImplementsServices().clear();
-				getImplementsServices().addAll((Collection<? extends Service>)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				getOperatesOnDataEntities().clear();
-				getOperatesOnDataEntities().addAll((Collection<? extends DataEntity>)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				getIsExtendedByPhysicalApplicationComponents().clear();
-				getIsExtendedByPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH:
-				getCommunicatesWith().clear();
-				getCommunicatesWith().addAll((Collection<? extends LogicalApplicationComponent>)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
-				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				setAny((EObject)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS:
-				setStandardClass(STANDARD_CLASS_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
-				setRetireDate(RETIRE_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				getImplementsServices().clear();
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				getOperatesOnDataEntities().clear();
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				getIsExtendedByPhysicalApplicationComponents().clear();
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH:
-				getCommunicatesWith().clear();
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
-				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)null);
-				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				setAny((EObject)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS:
-				return standardClass != STANDARD_CLASS_EDEFAULT;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
-				return STANDARD_CREATION_DATE_EDEFAULT == null ? standardCreationDate != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(standardCreationDate);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? lastStandardCreationDate != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(lastStandardCreationDate);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? nextStandardCreationDate != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(nextStandardCreationDate);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
-				return RETIRE_DATE_EDEFAULT == null ? retireDate != null : !RETIRE_DATE_EDEFAULT.equals(retireDate);
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
-				return implementsServices != null && !implementsServices.isEmpty();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__OPERATES_ON_DATA_ENTITIES:
-				return operatesOnDataEntities != null && !operatesOnDataEntities.isEmpty();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
-				return isExtendedByPhysicalApplicationComponents != null && !isExtendedByPhysicalApplicationComponents.isEmpty();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH:
-				return communicatesWith != null && !communicatesWith.isEmpty();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
-				return decomposesLogicalApplicationComponent != null;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				return any != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__ANY, newAny);
 	}
 
 	/**
@@ -720,30 +295,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (standardClass: ");
-		result.append(standardClass);
-		result.append(", standardCreationDate: ");
-		result.append(standardCreationDate);
-		result.append(", lastStandardCreationDate: ");
-		result.append(lastStandardCreationDate);
-		result.append(", nextStandardCreationDate: ");
-		result.append(nextStandardCreationDate);
-		result.append(", retireDate: ");
-		result.append(retireDate);
-		result.append(')');
-		return result.toString();
 	}
 
 } //LogicalApplicationComponentImpl

@@ -13,6 +13,7 @@ package org.obeonetwork.dsl.togaf.contentfwk.contentfwk;
 
 import java.util.Date;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -33,9 +34,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getStandard()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Standard extends EObject {
+public interface Standard extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Standard Class</b></em>' attribute.
 	 * The literals are from the enumeration {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass}.

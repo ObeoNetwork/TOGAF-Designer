@@ -22,10 +22,8 @@ import org.eclipse.ui.internal.WorkbenchWindow;
 import org.eclipse.ui.intro.IIntroPart;
 import org.eclipse.ui.intro.config.IIntroAction;
 import org.obeonetwork.dsl.togaf.ui.Activator;
-import org.obeonetwork.dsl.togaf.ui.startup.Startup;
 
 import fr.obeo.dsl.viewpoint.business.api.session.SessionManager;
-import fr.obeo.dsl.viewpoint.ui.business.api.session.UserSession;
 
 public abstract class AbstractIntroAction extends Action implements IIntroAction {
 
@@ -68,12 +66,4 @@ public abstract class AbstractIntroAction extends Action implements IIntroAction
 		 */
 	}
 
-	protected  UserSession getSession() {
-		if (Startup.demoSession != null) {
-			return  UserSession.from(Startup.demoSession);
-		} else if (SessionManager.INSTANCE.getSessions().size() > 0) {
-			return  UserSession.from(SessionManager.INSTANCE.getSessions().iterator().next());
-		}
-		return null;
-	}
 }

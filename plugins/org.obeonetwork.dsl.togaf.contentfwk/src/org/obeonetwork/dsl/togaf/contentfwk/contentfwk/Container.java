@@ -11,6 +11,7 @@
  */
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -30,9 +31,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getContainer()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Container extends EObject {
+public interface Container extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

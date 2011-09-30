@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
@@ -42,37 +43,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
  *
  * @generated
  */
-public class ContainerImpl extends EObjectImpl implements Container {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getOwnsElements() <em>Owns Elements</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOwnsElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Element> ownsElements;
-
+public class ContainerImpl extends CDOObjectImpl implements Container {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,8 +68,18 @@ public class ContainerImpl extends EObjectImpl implements Container {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
-		return name;
+		return (String)eGet(ContentfwkPackage.Literals.CONTAINER__NAME, true);
 	}
 
 	/**
@@ -107,38 +88,7 @@ public class ContainerImpl extends EObjectImpl implements Container {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ContentfwkPackage.CONTAINER__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Element> getOwnsElements() {
-		if (ownsElements == null) {
-			ownsElements = new EObjectResolvingEList<Element>(Element.class, this, ContentfwkPackage.CONTAINER__OWNS_ELEMENTS);
-		}
-		return ownsElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case ContentfwkPackage.CONTAINER__NAME:
-				return getName();
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				return getOwnsElements();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		eSet(ContentfwkPackage.Literals.CONTAINER__NAME, newName);
 	}
 
 	/**
@@ -147,68 +97,8 @@ public class ContainerImpl extends EObjectImpl implements Container {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case ContentfwkPackage.CONTAINER__NAME:
-				setName((String)newValue);
-				return;
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				getOwnsElements().clear();
-				getOwnsElements().addAll((Collection<? extends Element>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.CONTAINER__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				getOwnsElements().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case ContentfwkPackage.CONTAINER__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				return ownsElements != null && !ownsElements.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
+	public EList<Element> getOwnsElements() {
+		return (EList<Element>)eGet(ContentfwkPackage.Literals.CONTAINER__OWNS_ELEMENTS, true);
 	}
 
 } //ContainerImpl

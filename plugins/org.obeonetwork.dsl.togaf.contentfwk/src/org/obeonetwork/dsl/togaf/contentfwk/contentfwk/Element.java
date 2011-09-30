@@ -11,6 +11,7 @@
  */
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -36,9 +37,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getElement()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Element extends EObject {
+public interface Element extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Delegates</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element}.
