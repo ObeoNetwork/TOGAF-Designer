@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -52,6 +53,7 @@ public class ApplicationArchitectureLogicalApplicationComponentsPropertiesEditio
 	 * Settings for logical application component ReferencesTable
 	 */
 	protected ReferencesTableSettings logicalApplicationComponentSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -112,13 +114,24 @@ public class ApplicationArchitectureLogicalApplicationComponentsPropertiesEditio
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.LogicalApplicationComponents.Properties.logicalApplicationComponents_) {
+			return ContentfwkPackage.eINSTANCE.getApplicationArchitecture_LogicalApplicationComponents();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		ApplicationArchitecture applicationArchitecture = (ApplicationArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.LogicalApplicationComponents.Properties.logicalApplicationComponents_ == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, logicalApplicationComponentSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -137,7 +150,9 @@ public class ApplicationArchitectureLogicalApplicationComponentsPropertiesEditio
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					logicalApplicationComponentSettings.removeFromReference((EObject) event.getNewValue());
+				logicalApplicationComponentSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				logicalApplicationComponentSettings.move(event.getNewIndex(), (LogicalApplicationComponent) event.getNewValue());
 			}
 		}
 	}

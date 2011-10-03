@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -52,6 +53,7 @@ public class DataArchitectureLogicalDataPropertiesEditionComponent extends Singl
 	 * Settings for data-logical-component ReferencesTable
 	 */
 	protected ReferencesTableSettings datalogicalcomponentSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -112,13 +114,24 @@ public class DataArchitectureLogicalDataPropertiesEditionComponent extends Singl
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.LogicalData.Properties.logicalData_) {
+			return ContentfwkPackage.eINSTANCE.getDataArchitecture_LogicalComponents();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		DataArchitecture dataArchitecture = (DataArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.LogicalData.Properties.logicalData_ == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, datalogicalcomponentSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -137,7 +150,9 @@ public class DataArchitectureLogicalDataPropertiesEditionComponent extends Singl
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					datalogicalcomponentSettings.removeFromReference((EObject) event.getNewValue());
+				datalogicalcomponentSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				datalogicalcomponentSettings.move(event.getNewIndex(), (LogicalDataComponent) event.getNewValue());
 			}
 		}
 	}

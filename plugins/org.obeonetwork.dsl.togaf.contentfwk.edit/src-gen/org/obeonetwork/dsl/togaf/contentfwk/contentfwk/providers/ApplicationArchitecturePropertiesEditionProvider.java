@@ -68,7 +68,7 @@ public class ApplicationArchitecturePropertiesEditionProvider extends Properties
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#provides(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.Class)
 	 * 
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, java.lang.Class refinement) {
 		return (editingContext.getEObject() instanceof ApplicationArchitecture) && (refinement == ApplicationArchitectureInformationSystemServicesPropertiesEditionComponent.class || refinement == ApplicationArchitectureLogicalApplicationComponentsPropertiesEditionComponent.class || refinement == ApplicationArchitecturePhysicalApplicationComponentsPropertiesEditionComponent.class);
 	}
@@ -78,7 +78,7 @@ public class ApplicationArchitecturePropertiesEditionProvider extends Properties
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#provides(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.String, java.lang.Class)
 	 * 
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, String part, java.lang.Class refinement) {
 		return (editingContext.getEObject() instanceof ApplicationArchitecture) && ((ApplicationArchitectureInformationSystemServicesPropertiesEditionComponent.INFORMATIONSYSTEMSERVICES_PART.equals(part) && refinement == ApplicationArchitectureInformationSystemServicesPropertiesEditionComponent.class) || (ApplicationArchitectureLogicalApplicationComponentsPropertiesEditionComponent.LOGICALAPPLICATIONCOMPONENTS_PART.equals(part) && refinement == ApplicationArchitectureLogicalApplicationComponentsPropertiesEditionComponent.class) || (ApplicationArchitecturePhysicalApplicationComponentsPropertiesEditionComponent.PHYSICALAPPLICATIONCOMPONENTS_PART.equals(part) && refinement == ApplicationArchitecturePhysicalApplicationComponentsPropertiesEditionComponent.class));
 	}
@@ -116,7 +116,7 @@ public class ApplicationArchitecturePropertiesEditionProvider extends Properties
 	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#getPropertiesEditingComponent(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.String, java.lang.String, java.lang.Class)
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public IPropertiesEditionComponent getPropertiesEditingComponent(PropertiesEditingContext editingContext, String mode, String part, java.lang.Class refinement) {
 		if (editingContext.getEObject() instanceof ApplicationArchitecture) {
 			if (ApplicationArchitectureInformationSystemServicesPropertiesEditionComponent.INFORMATIONSYSTEMSERVICES_PART.equals(part)

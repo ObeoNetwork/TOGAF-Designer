@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -90,6 +91,7 @@ public class PhysicalDataComponentPropertiesEditionComponent extends SinglePartP
 	 * Settings for encapsulatesPhysicalApplicationComponents ReferencesTable
 	 */
 	private	ReferencesTableSettings encapsulatesPhysicalApplicationComponentsSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -328,27 +330,90 @@ public class PhysicalDataComponentPropertiesEditionComponent extends SinglePartP
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.delegates) {
+			return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.isDelegatedBy) {
+			return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getElement_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.description) {
+			return ContentfwkPackage.eINSTANCE.getElement_Description();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.category) {
+			return ContentfwkPackage.eINSTANCE.getElement_Category();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.source) {
+			return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.owner) {
+			return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.iD) {
+			return ContentfwkPackage.eINSTANCE.getElement_ID();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.standardClass) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardClass();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.standardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.lastStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_LastStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.nextStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_NextStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.Attributes.retireDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_RetireDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.extendsLogicalDataComponents) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalDataComponent_ExtendsLogicalDataComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.isHotedInLocation) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalDataComponent_IsHotedInLocation();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.decomposesPhysicalDataComponent) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalDataComponent_DecomposesPhysicalDataComponent();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.encapsulatesPhysicalApplicationComponents) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalDataComponent_EncapsulatesPhysicalApplicationComponents();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		PhysicalDataComponent physicalDataComponent = (PhysicalDataComponent)semanticObject;
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.delegates == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					delegatesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					delegatesSettings.removeFromReference((EObject) event.getNewValue());
+				delegatesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				delegatesSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.isDelegatedBy == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					isDelegatedBySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+				isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDelegatedBySettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.Attributes.name == event.getAffectedEditor()) {
@@ -385,18 +450,20 @@ public class PhysicalDataComponentPropertiesEditionComponent extends SinglePartP
 			physicalDataComponent.setRetireDate((java.util.Date)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEDate(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.extendsLogicalDataComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof LogicalDataComponent) {
 					extendsLogicalDataComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					extendsLogicalDataComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				extendsLogicalDataComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				extendsLogicalDataComponentsSettings.move(event.getNewIndex(), (LogicalDataComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.isHotedInLocation == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
+			if (event.getKind() == PropertiesEditionEvent.SET) {
 				isHotedInLocationSettings.setToReference((Location)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			} else if (event.getKind() == PropertiesEditionEvent.ADD) {
 				Location eObject = ContentfwkFactory.eINSTANCE.createLocation();
 				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);
@@ -410,9 +477,9 @@ public class PhysicalDataComponentPropertiesEditionComponent extends SinglePartP
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.decomposesPhysicalDataComponent == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
+			if (event.getKind() == PropertiesEditionEvent.SET) {
 				decomposesPhysicalDataComponentSettings.setToReference((PhysicalDataComponent)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			} else if (event.getKind() == PropertiesEditionEvent.ADD) {
 				PhysicalDataComponent eObject = ContentfwkFactory.eINSTANCE.createPhysicalDataComponent();
 				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);
@@ -426,12 +493,14 @@ public class PhysicalDataComponentPropertiesEditionComponent extends SinglePartP
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalDataComponent.RelatedElements.encapsulatesPhysicalApplicationComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalApplicationComponent) {
 					encapsulatesPhysicalApplicationComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					encapsulatesPhysicalApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				encapsulatesPhysicalApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				encapsulatesPhysicalApplicationComponentsSettings.move(event.getNewIndex(), (PhysicalApplicationComponent) event.getNewValue());
 			}
 		}
 	}

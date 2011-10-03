@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -95,6 +96,7 @@ public class PhysicalTechnologyComponentPropertiesEditionComponent extends Singl
 	 * Settings for isDependentOnPhysicalTechnologyComponents ReferencesTable
 	 */
 	private	ReferencesTableSettings isDependentOnPhysicalTechnologyComponentsSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -377,27 +379,105 @@ public class PhysicalTechnologyComponentPropertiesEditionComponent extends Singl
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.delegates) {
+			return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isDelegatedBy) {
+			return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getElement_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.description) {
+			return ContentfwkPackage.eINSTANCE.getElement_Description();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.category) {
+			return ContentfwkPackage.eINSTANCE.getElement_Category();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.source) {
+			return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.owner) {
+			return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.iD) {
+			return ContentfwkPackage.eINSTANCE.getElement_ID();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.standardClass) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardClass();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.standardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.lastStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_LastStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.nextStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_NextStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.retireDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_RetireDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.realizesApplicationComponents) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_RealizesApplicationComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.extendsLogicalTechnologyComponents) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_ExtendsLogicalTechnologyComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isHostedInLocation) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_IsHostedInLocation();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.productName) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_ProductName();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.moduleName) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_ModuleName();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.vendor) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_Vendor();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.version) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_Version();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.decomposesPhysicalTechnologyComponent) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_DecomposesPhysicalTechnologyComponent();
+		}
+		if (editorKey == ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isDependentOnPhysicalTechnologyComponents) {
+			return ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		PhysicalTechnologyComponent physicalTechnologyComponent = (PhysicalTechnologyComponent)semanticObject;
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.delegates == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					delegatesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					delegatesSettings.removeFromReference((EObject) event.getNewValue());
+				delegatesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				delegatesSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isDelegatedBy == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					isDelegatedBySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+				isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDelegatedBySettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.name == event.getAffectedEditor()) {
@@ -434,30 +514,36 @@ public class PhysicalTechnologyComponentPropertiesEditionComponent extends Singl
 			physicalTechnologyComponent.setRetireDate((java.util.Date)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEDate(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.realizesApplicationComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalApplicationComponent) {
 					realizesApplicationComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					realizesApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				realizesApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				realizesApplicationComponentsSettings.move(event.getNewIndex(), (PhysicalApplicationComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.extendsLogicalTechnologyComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof LogicalTechnologyComponent) {
 					extendsLogicalTechnologyComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					extendsLogicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				extendsLogicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				extendsLogicalTechnologyComponentsSettings.move(event.getNewIndex(), (LogicalTechnologyComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isHostedInLocation == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Location) {
 					isHostedInLocationSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isHostedInLocationSettings.removeFromReference((EObject) event.getNewValue());
+				isHostedInLocationSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isHostedInLocationSettings.move(event.getNewIndex(), (Location) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.Attributes.productName == event.getAffectedEditor()) {
@@ -473,9 +559,9 @@ public class PhysicalTechnologyComponentPropertiesEditionComponent extends Singl
 			physicalTechnologyComponent.setVersion((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEString(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.decomposesPhysicalTechnologyComponent == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
+			if (event.getKind() == PropertiesEditionEvent.SET) {
 				decomposesPhysicalTechnologyComponentSettings.setToReference((PhysicalTechnologyComponent)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			} else if (event.getKind() == PropertiesEditionEvent.ADD) {
 				PhysicalTechnologyComponent eObject = ContentfwkFactory.eINSTANCE.createPhysicalTechnologyComponent();
 				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);
@@ -489,12 +575,14 @@ public class PhysicalTechnologyComponentPropertiesEditionComponent extends Singl
 			}
 		}
 		if (ContentfwkViewsRepository.PhysicalTechnologyComponent.RelatedElements.isDependentOnPhysicalTechnologyComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalTechnologyComponent) {
 					isDependentOnPhysicalTechnologyComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDependentOnPhysicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				isDependentOnPhysicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDependentOnPhysicalTechnologyComponentsSettings.move(event.getNewIndex(), (PhysicalTechnologyComponent) event.getNewValue());
 			}
 		}
 	}

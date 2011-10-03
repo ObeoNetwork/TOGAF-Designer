@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -70,6 +71,7 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 	 * Settings for products ReferencesTable
 	 */
 	protected ReferencesTableSettings productsSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -193,13 +195,33 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.processes) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Processes();
+		}
+		if (editorKey == ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.events) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Events();
+		}
+		if (editorKey == ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.controls) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Controls();
+		}
+		if (editorKey == ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.products) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Products();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		BusinessArchitecture businessArchitecture = (BusinessArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.processes == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, processSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -218,11 +240,13 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					processSettings.removeFromReference((EObject) event.getNewValue());
+				processSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				processSettings.move(event.getNewIndex(), (Process) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.events == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, eventsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -241,11 +265,13 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					eventsSettings.removeFromReference((EObject) event.getNewValue());
+				eventsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				eventsSettings.move(event.getNewIndex(), (Event) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.controls == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, controlsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -264,11 +290,13 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					controlsSettings.removeFromReference((EObject) event.getNewValue());
+				controlsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				controlsSettings.move(event.getNewIndex(), (Control) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.ProcessEventControlProduct.Processeventcontrolproduct.products == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, productsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -287,7 +315,9 @@ public class BusinessArchitectureProcessEventControlProductPropertiesEditionComp
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					productsSettings.removeFromReference((EObject) event.getNewValue());
+				productsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				productsSettings.move(event.getNewIndex(), (Product) event.getNewValue());
 			}
 		}
 	}

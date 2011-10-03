@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -64,6 +65,7 @@ public class BusinessArchitectureDriverGoalObjectivePropertiesEditionComponent e
 	 * Settings for objectives ReferencesTable
 	 */
 	protected ReferencesTableSettings objectivesSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -166,13 +168,30 @@ public class BusinessArchitectureDriverGoalObjectivePropertiesEditionComponent e
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.drivers) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Drivers();
+		}
+		if (editorKey == ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.goals) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Goals();
+		}
+		if (editorKey == ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.objectives) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Objectives();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		BusinessArchitecture businessArchitecture = (BusinessArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.drivers == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, driversSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -191,11 +210,13 @@ public class BusinessArchitectureDriverGoalObjectivePropertiesEditionComponent e
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					driversSettings.removeFromReference((EObject) event.getNewValue());
+				driversSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				driversSettings.move(event.getNewIndex(), (Driver) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.goals == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, goalsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -214,11 +235,13 @@ public class BusinessArchitectureDriverGoalObjectivePropertiesEditionComponent e
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					goalsSettings.removeFromReference((EObject) event.getNewValue());
+				goalsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				goalsSettings.move(event.getNewIndex(), (Goal) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.DriverGoalObjective.Driversgoalfsobjectives.objectives == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, objectivesSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -237,7 +260,9 @@ public class BusinessArchitectureDriverGoalObjectivePropertiesEditionComponent e
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					objectivesSettings.removeFromReference((EObject) event.getNewValue());
+				objectivesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				objectivesSettings.move(event.getNewIndex(), (Objective) event.getNewValue());
 			}
 		}
 	}

@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -139,6 +140,7 @@ public class ProcessPropertiesEditionComponent extends SinglePartPropertiesEditi
 	 * Settings for followsProcesses ReferencesTable
 	 */
 	private	ReferencesTableSettings followsProcessesSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -608,27 +610,126 @@ public class ProcessPropertiesEditionComponent extends SinglePartPropertiesEditi
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.delegates) {
+			return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.isDelegatedBy) {
+			return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getElement_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.description) {
+			return ContentfwkPackage.eINSTANCE.getElement_Description();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.category) {
+			return ContentfwkPackage.eINSTANCE.getElement_Category();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.source) {
+			return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.owner) {
+			return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.iD) {
+			return ContentfwkPackage.eINSTANCE.getElement_ID();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.standardClass) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardClass();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.standardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_StandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.lastStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_LastStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.nextStandardCreationDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_NextStandardCreationDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.retireDate) {
+			return ContentfwkPackage.eINSTANCE.getStandard_RetireDate();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.orchestratesFunctions) {
+			return ContentfwkPackage.eINSTANCE.getProcess_OrchestratesFunctions();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.decomposesFunctions) {
+			return ContentfwkPackage.eINSTANCE.getProcess_DecomposesFunctions();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.involvesOrganizationUnits) {
+			return ContentfwkPackage.eINSTANCE.getProcess_InvolvesOrganizationUnits();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.orchestratesServices) {
+			return ContentfwkPackage.eINSTANCE.getProcess_OrchestratesServices();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.decomposesServices) {
+			return ContentfwkPackage.eINSTANCE.getProcess_DecomposesServices();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.involvesActors) {
+			return ContentfwkPackage.eINSTANCE.getProcess_InvolvesActors();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.isGuidedByControls) {
+			return ContentfwkPackage.eINSTANCE.getProcess_IsGuidedByControls();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.resolvesEvents) {
+			return ContentfwkPackage.eINSTANCE.getProcess_ResolvesEvents();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.generatesEvents) {
+			return ContentfwkPackage.eINSTANCE.getProcess_GeneratesEvents();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.producesProducts) {
+			return ContentfwkPackage.eINSTANCE.getProcess_ProducesProducts();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.processCritiality) {
+			return ContentfwkPackage.eINSTANCE.getProcess_ProcessCritiality();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.isAutomated) {
+			return ContentfwkPackage.eINSTANCE.getProcess_IsAutomated();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.Attributes.processVolumetrics) {
+			return ContentfwkPackage.eINSTANCE.getProcess_ProcessVolumetrics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.decomposesProcess) {
+			return ContentfwkPackage.eINSTANCE.getProcess_DecomposesProcess();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.precedesProcesses) {
+			return ContentfwkPackage.eINSTANCE.getProcess_PrecedesProcesses();
+		}
+		if (editorKey == ContentfwkViewsRepository.Process.RelatedElements.followsProcesses) {
+			return ContentfwkPackage.eINSTANCE.getProcess_FollowsProcesses();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		Process process = (Process)semanticObject;
 		if (ContentfwkViewsRepository.Process.RelatedElements.delegates == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					delegatesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					delegatesSettings.removeFromReference((EObject) event.getNewValue());
+				delegatesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				delegatesSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.isDelegatedBy == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					isDelegatedBySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+				isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDelegatedBySettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.Attributes.name == event.getAffectedEditor()) {
@@ -665,93 +766,113 @@ public class ProcessPropertiesEditionComponent extends SinglePartPropertiesEditi
 			process.setRetireDate((java.util.Date)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEDate(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.orchestratesFunctions == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Function) {
 					orchestratesFunctionsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					orchestratesFunctionsSettings.removeFromReference((EObject) event.getNewValue());
+				orchestratesFunctionsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				orchestratesFunctionsSettings.move(event.getNewIndex(), (Function) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.decomposesFunctions == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Function) {
 					decomposesFunctionsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					decomposesFunctionsSettings.removeFromReference((EObject) event.getNewValue());
+				decomposesFunctionsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				decomposesFunctionsSettings.move(event.getNewIndex(), (Function) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.involvesOrganizationUnits == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof OrganizationUnit) {
 					involvesOrganizationUnitsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					involvesOrganizationUnitsSettings.removeFromReference((EObject) event.getNewValue());
+				involvesOrganizationUnitsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				involvesOrganizationUnitsSettings.move(event.getNewIndex(), (OrganizationUnit) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.orchestratesServices == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Service) {
 					orchestratesServicesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					orchestratesServicesSettings.removeFromReference((EObject) event.getNewValue());
+				orchestratesServicesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				orchestratesServicesSettings.move(event.getNewIndex(), (Service) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.decomposesServices == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Service) {
 					decomposesServicesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					decomposesServicesSettings.removeFromReference((EObject) event.getNewValue());
+				decomposesServicesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				decomposesServicesSettings.move(event.getNewIndex(), (Service) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.involvesActors == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Actor) {
 					involvesActorsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					involvesActorsSettings.removeFromReference((EObject) event.getNewValue());
+				involvesActorsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				involvesActorsSettings.move(event.getNewIndex(), (Actor) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.isGuidedByControls == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Control) {
 					isGuidedByControlsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isGuidedByControlsSettings.removeFromReference((EObject) event.getNewValue());
+				isGuidedByControlsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isGuidedByControlsSettings.move(event.getNewIndex(), (Control) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.resolvesEvents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Event) {
 					resolvesEventsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					resolvesEventsSettings.removeFromReference((EObject) event.getNewValue());
+				resolvesEventsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				resolvesEventsSettings.move(event.getNewIndex(), (Event) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.generatesEvents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Event) {
 					generatesEventsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					generatesEventsSettings.removeFromReference((EObject) event.getNewValue());
+				generatesEventsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				generatesEventsSettings.move(event.getNewIndex(), (Event) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.producesProducts == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Product) {
 					producesProductsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					producesProductsSettings.removeFromReference((EObject) event.getNewValue());
+				producesProductsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				producesProductsSettings.move(event.getNewIndex(), (Product) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.Attributes.processCritiality == event.getAffectedEditor()) {
@@ -764,9 +885,9 @@ public class ProcessPropertiesEditionComponent extends SinglePartPropertiesEditi
 			process.setProcessVolumetrics((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEString(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.decomposesProcess == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
+			if (event.getKind() == PropertiesEditionEvent.SET) {
 				decomposesProcessSettings.setToReference((Process)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			} else if (event.getKind() == PropertiesEditionEvent.ADD) {
 				Process eObject = ContentfwkFactory.eINSTANCE.createProcess();
 				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);
@@ -780,21 +901,25 @@ public class ProcessPropertiesEditionComponent extends SinglePartPropertiesEditi
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.precedesProcesses == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Process) {
 					precedesProcessesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					precedesProcessesSettings.removeFromReference((EObject) event.getNewValue());
+				precedesProcessesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				precedesProcessesSettings.move(event.getNewIndex(), (Process) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Process.RelatedElements.followsProcesses == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Process) {
 					followsProcessesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					followsProcessesSettings.removeFromReference((EObject) event.getNewValue());
+				followsProcessesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				followsProcessesSettings.move(event.getNewIndex(), (Process) event.getNewValue());
 			}
 		}
 	}

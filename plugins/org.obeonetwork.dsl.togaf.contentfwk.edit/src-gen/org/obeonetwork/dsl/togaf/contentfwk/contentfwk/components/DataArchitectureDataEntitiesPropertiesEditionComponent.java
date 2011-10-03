@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -52,6 +53,7 @@ public class DataArchitectureDataEntitiesPropertiesEditionComponent extends Sing
 	 * Settings for data-entity ReferencesTable
 	 */
 	protected ReferencesTableSettings dataentitySettings;
+	
 	
 	/**
 	 * Default constructor
@@ -112,13 +114,24 @@ public class DataArchitectureDataEntitiesPropertiesEditionComponent extends Sing
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.DataEntities.Properties.dataEntities_) {
+			return ContentfwkPackage.eINSTANCE.getDataArchitecture_Entities();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		DataArchitecture dataArchitecture = (DataArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.DataEntities.Properties.dataEntities_ == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, dataentitySettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -137,7 +150,9 @@ public class DataArchitectureDataEntitiesPropertiesEditionComponent extends Sing
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					dataentitySettings.removeFromReference((EObject) event.getNewValue());
+				dataentitySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				dataentitySettings.move(event.getNewIndex(), (DataEntity) event.getNewValue());
 			}
 		}
 	}

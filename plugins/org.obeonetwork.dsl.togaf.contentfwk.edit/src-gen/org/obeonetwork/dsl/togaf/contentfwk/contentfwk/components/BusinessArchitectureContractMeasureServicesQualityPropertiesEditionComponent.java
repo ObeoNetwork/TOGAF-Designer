@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -64,6 +65,7 @@ public class BusinessArchitectureContractMeasureServicesQualityPropertiesEdition
 	 * Settings for services quality ReferencesTable
 	 */
 	protected ReferencesTableSettings servicesQualitySettings;
+	
 	
 	/**
 	 * Default constructor
@@ -166,13 +168,30 @@ public class BusinessArchitectureContractMeasureServicesQualityPropertiesEdition
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.contracts) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Contracts();
+		}
+		if (editorKey == ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.measures) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Measures();
+		}
+		if (editorKey == ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.servicesQuality) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_ServicesQuality();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		BusinessArchitecture businessArchitecture = (BusinessArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.contracts == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, contractsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -191,11 +210,13 @@ public class BusinessArchitectureContractMeasureServicesQualityPropertiesEdition
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					contractsSettings.removeFromReference((EObject) event.getNewValue());
+				contractsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				contractsSettings.move(event.getNewIndex(), (Contract) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.measures == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, measuresSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -214,11 +235,13 @@ public class BusinessArchitectureContractMeasureServicesQualityPropertiesEdition
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					measuresSettings.removeFromReference((EObject) event.getNewValue());
+				measuresSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				measuresSettings.move(event.getNewIndex(), (Measure) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.ContractMeasureServicesQuality.Contractsmeasures.servicesQuality == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, servicesQualitySettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -237,7 +260,9 @@ public class BusinessArchitectureContractMeasureServicesQualityPropertiesEdition
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					servicesQualitySettings.removeFromReference((EObject) event.getNewValue());
+				servicesQualitySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				servicesQualitySettings.move(event.getNewIndex(), (ServiceQuality) event.getNewValue());
 			}
 		}
 	}

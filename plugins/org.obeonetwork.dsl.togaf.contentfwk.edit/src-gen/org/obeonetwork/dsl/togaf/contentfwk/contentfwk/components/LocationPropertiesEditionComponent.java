@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -99,6 +100,7 @@ public class LocationPropertiesEditionComponent extends SinglePartPropertiesEdit
 	 * Settings for decomposesLocation EObjectFlatComboViewer
 	 */
 	private	EObjectFlatComboSettings decomposesLocationSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -360,27 +362,81 @@ public class LocationPropertiesEditionComponent extends SinglePartPropertiesEdit
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.delegates) {
+			return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.isDelegatedBy) {
+			return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getElement_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.description) {
+			return ContentfwkPackage.eINSTANCE.getElement_Description();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.category) {
+			return ContentfwkPackage.eINSTANCE.getElement_Category();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.source) {
+			return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.owner) {
+			return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.Attributes.iD) {
+			return ContentfwkPackage.eINSTANCE.getElement_ID();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.containsActors) {
+			return ContentfwkPackage.eINSTANCE.getLocation_ContainsActors();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.containsOrganizationUnits) {
+			return ContentfwkPackage.eINSTANCE.getLocation_ContainsOrganizationUnits();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalDataComponents) {
+			return ContentfwkPackage.eINSTANCE.getLocation_ContainsPhysicalDataComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalApplicationComponents) {
+			return ContentfwkPackage.eINSTANCE.getLocation_ContainsPhysicalApplicationComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalTechnologyComponents) {
+			return ContentfwkPackage.eINSTANCE.getLocation_ContainsPhysicalTechnologyComponents();
+		}
+		if (editorKey == ContentfwkViewsRepository.Location.RelatedElements.decomposesLocation) {
+			return ContentfwkPackage.eINSTANCE.getLocation_DecomposesLocation();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		Location location = (Location)semanticObject;
 		if (ContentfwkViewsRepository.Location.RelatedElements.delegates == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					delegatesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					delegatesSettings.removeFromReference((EObject) event.getNewValue());
+				delegatesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				delegatesSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.isDelegatedBy == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					isDelegatedBySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+				isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDelegatedBySettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.Attributes.name == event.getAffectedEditor()) {
@@ -402,54 +458,64 @@ public class LocationPropertiesEditionComponent extends SinglePartPropertiesEdit
 			location.setID((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEString(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.containsActors == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Actor) {
 					containsActorsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					containsActorsSettings.removeFromReference((EObject) event.getNewValue());
+				containsActorsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				containsActorsSettings.move(event.getNewIndex(), (Actor) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.containsOrganizationUnits == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof OrganizationUnit) {
 					containsOrganizationUnitsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					containsOrganizationUnitsSettings.removeFromReference((EObject) event.getNewValue());
+				containsOrganizationUnitsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				containsOrganizationUnitsSettings.move(event.getNewIndex(), (OrganizationUnit) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalDataComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalDataComponent) {
 					containsPhysicalDataComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					containsPhysicalDataComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				containsPhysicalDataComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				containsPhysicalDataComponentsSettings.move(event.getNewIndex(), (PhysicalDataComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalApplicationComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalApplicationComponent) {
 					containsPhysicalApplicationComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					containsPhysicalApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				containsPhysicalApplicationComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				containsPhysicalApplicationComponentsSettings.move(event.getNewIndex(), (PhysicalApplicationComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.containsPhysicalTechnologyComponents == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof PhysicalTechnologyComponent) {
 					containsPhysicalTechnologyComponentsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					containsPhysicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+				containsPhysicalTechnologyComponentsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				containsPhysicalTechnologyComponentsSettings.move(event.getNewIndex(), (PhysicalTechnologyComponent) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Location.RelatedElements.decomposesLocation == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.SET)  {
+			if (event.getKind() == PropertiesEditionEvent.SET) {
 				decomposesLocationSettings.setToReference((Location)event.getNewValue());
-			} else if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			} else if (event.getKind() == PropertiesEditionEvent.ADD) {
 				Location eObject = ContentfwkFactory.eINSTANCE.createLocation();
 				EObjectPropertiesEditionContext context = new EObjectPropertiesEditionContext(editingContext, this, eObject, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(eObject, PropertiesEditingProvider.class);

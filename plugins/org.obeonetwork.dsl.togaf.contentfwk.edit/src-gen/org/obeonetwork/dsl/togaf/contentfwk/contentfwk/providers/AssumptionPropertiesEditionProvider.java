@@ -65,7 +65,7 @@ public class AssumptionPropertiesEditionProvider extends PropertiesEditingProvid
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#provides(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.Class)
 	 * 
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, java.lang.Class refinement) {
 		return (editingContext.getEObject() instanceof Assumption) && (refinement == AssumptionPropertiesEditionComponent.class);
 	}
@@ -75,7 +75,7 @@ public class AssumptionPropertiesEditionProvider extends PropertiesEditingProvid
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#provides(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.String, java.lang.Class)
 	 * 
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public boolean provides(PropertiesEditingContext editingContext, String part, java.lang.Class refinement) {
 		return (editingContext.getEObject() instanceof Assumption) && ((AssumptionPropertiesEditionComponent.BASE_PART.equals(part) && refinement == AssumptionPropertiesEditionComponent.class));
 	}
@@ -109,7 +109,7 @@ public class AssumptionPropertiesEditionProvider extends PropertiesEditingProvid
 	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.providers.PropertiesEditingProvider#getPropertiesEditingComponent(org.eclipse.emf.eef.runtime.context.PropertiesEditingContext, java.lang.String, java.lang.String, java.lang.Class)
 	 */
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public IPropertiesEditionComponent getPropertiesEditingComponent(PropertiesEditingContext editingContext, String mode, String part, java.lang.Class refinement) {
 		if (editingContext.getEObject() instanceof Assumption) {
 			if (AssumptionPropertiesEditionComponent.BASE_PART.equals(part)

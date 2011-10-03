@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -53,6 +54,7 @@ public class ContainerPropertiesEditionComponent extends SinglePartPropertiesEdi
 	 * Settings for ownsElements ReferencesTable
 	 */
 	private	ReferencesTableSettings ownsElementsSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -121,6 +123,20 @@ public class ContainerPropertiesEditionComponent extends SinglePartPropertiesEdi
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.Container.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getContainer_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.Container.RelatedElements.ownsElements) {
+			return ContentfwkPackage.eINSTANCE.getContainer_OwnsElements();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
@@ -130,12 +146,14 @@ public class ContainerPropertiesEditionComponent extends SinglePartPropertiesEdi
 			container.setName((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEString(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.Container.RelatedElements.ownsElements == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					ownsElementsSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					ownsElementsSettings.removeFromReference((EObject) event.getNewValue());
+				ownsElementsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				ownsElementsSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 	}

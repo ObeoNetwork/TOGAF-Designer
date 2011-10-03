@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent;
 import org.eclipse.emf.eef.runtime.context.PropertiesEditingContext;
@@ -58,6 +59,7 @@ public class BusinessArchitectureBusinessServiceFunctionPropertiesEditionCompone
 	 * Settings for functions ReferencesTable
 	 */
 	protected ReferencesTableSettings functionsSettings;
+	
 	
 	/**
 	 * Default constructor
@@ -139,13 +141,27 @@ public class BusinessArchitectureBusinessServiceFunctionPropertiesEditionCompone
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.BusinessServiceFunction.Organizationactors.services) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Services();
+		}
+		if (editorKey == ContentfwkViewsRepository.BusinessServiceFunction.Organizationactors.functions) {
+			return ContentfwkPackage.eINSTANCE.getBusinessArchitecture_Functions();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		BusinessArchitecture businessArchitecture = (BusinessArchitecture)semanticObject;
 		if (ContentfwkViewsRepository.BusinessServiceFunction.Organizationactors.services == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, servicesSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -164,11 +180,13 @@ public class BusinessArchitectureBusinessServiceFunctionPropertiesEditionCompone
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					servicesSettings.removeFromReference((EObject) event.getNewValue());
+				servicesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				servicesSettings.move(event.getNewIndex(), (BusinessService) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.BusinessServiceFunction.Organizationactors.functions == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				EReferencePropertiesEditionContext context = new EReferencePropertiesEditionContext(editingContext, this, functionsSettings, editingContext.getAdapterFactory());
 				PropertiesEditingProvider provider = (PropertiesEditingProvider)editingContext.getAdapterFactory().adapt(semanticObject, PropertiesEditingProvider.class);
 				if (provider != null) {
@@ -187,7 +205,9 @@ public class BusinessArchitectureBusinessServiceFunctionPropertiesEditionCompone
 					}
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					functionsSettings.removeFromReference((EObject) event.getNewValue());
+				functionsSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				functionsSettings.move(event.getNewIndex(), (Function) event.getNewValue());
 			}
 		}
 	}

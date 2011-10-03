@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -312,6 +313,53 @@ public class EventPropertiesEditionComponent extends SinglePartPropertiesEditing
 	}
 
 	/**
+   * {@inheritDoc}
+   * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+   */
+  public EStructuralFeature associatedFeature(Object editorKey) {
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.delegates) {
+      return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isDelegatedBy) {
+      return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.name) {
+      return ContentfwkPackage.eINSTANCE.getElement_Name();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.description) {
+      return ContentfwkPackage.eINSTANCE.getElement_Description();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.category) {
+      return ContentfwkPackage.eINSTANCE.getElement_Category();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.source) {
+      return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.owner) {
+      return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.Attributes.iD) {
+      return ContentfwkPackage.eINSTANCE.getElement_ID();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isResolvedByBusinessServices) {
+      return ContentfwkPackage.eINSTANCE.getEvent_IsResolvedByBusinessServices();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isResolvedByProcesses) {
+      return ContentfwkPackage.eINSTANCE.getEvent_IsResolvedByProcesses();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isGeneratedByProcesses) {
+      return ContentfwkPackage.eINSTANCE.getEvent_IsGeneratedByProcesses();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isResolvedByActors) {
+      return ContentfwkPackage.eINSTANCE.getEvent_IsResolvedByActors();
+    }
+    if (editorKey == ContentfwkViewsRepository.Event.RelatedElements.isGeneratedByActors) {
+      return ContentfwkPackage.eINSTANCE.getEvent_IsGeneratedByActors();
+    }
+    return super.associatedFeature(editorKey);
+  }
+
+  /**
 	 * {@inheritDoc}
 	 * 
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)

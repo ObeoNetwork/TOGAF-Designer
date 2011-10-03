@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -70,6 +71,7 @@ public class ContractPropertiesEditionComponent extends SinglePartPropertiesEdit
 	 * Settings for meetsServiceQuality ReferencesTable
 	 */
 	private	ReferencesTableSettings meetsServiceQualitySettings;
+	
 	
 	/**
 	 * Default constructor
@@ -400,27 +402,168 @@ public class ContractPropertiesEditionComponent extends SinglePartPropertiesEdit
 
 	/**
 	 * {@inheritDoc}
+	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#associatedFeature(java.lang.Object)
+	 */
+	public EStructuralFeature associatedFeature(Object editorKey) {
+		if (editorKey == ContentfwkViewsRepository.Contract.RelatedElements.delegates) {
+			return ContentfwkPackage.eINSTANCE.getElement_Delegates();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.RelatedElements.isDelegatedBy) {
+			return ContentfwkPackage.eINSTANCE.getElement_IsDelegatedBy();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.name) {
+			return ContentfwkPackage.eINSTANCE.getElement_Name();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.description) {
+			return ContentfwkPackage.eINSTANCE.getElement_Description();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.category) {
+			return ContentfwkPackage.eINSTANCE.getElement_Category();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.source) {
+			return ContentfwkPackage.eINSTANCE.getElement_SourceDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.owner) {
+			return ContentfwkPackage.eINSTANCE.getElement_OwnerDescr();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.iD) {
+			return ContentfwkPackage.eINSTANCE.getElement_ID();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.RelatedElements.governsAndMeasuresBusinessServices) {
+			return ContentfwkPackage.eINSTANCE.getContract_GovernsAndMeasuresBusinessServices();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.RelatedElements.meetsServiceQuality) {
+			return ContentfwkPackage.eINSTANCE.getContract_MeetsServiceQuality();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.behaviorCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_BehaviorCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.serviceNameCaller) {
+			return ContentfwkPackage.eINSTANCE.getContract_ServiceNameCaller();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.serviceNameCalled) {
+			return ContentfwkPackage.eINSTANCE.getContract_ServiceNameCalled();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.serviceQualityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ServiceQualityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.availabilityQualityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_AvailabilityQualityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.servicesTimes) {
+			return ContentfwkPackage.eINSTANCE.getContract_ServicesTimes();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.manageabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ManageabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.serviceabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ServiceabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.performanceCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_PerformanceCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.responseCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ResponseCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.reliabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ReliabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.qualityOfInformationRequired) {
+			return ContentfwkPackage.eINSTANCE.getContract_QualityOfInformationRequired();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.contractControlRequirements) {
+			return ContentfwkPackage.eINSTANCE.getContract_ContractControlRequirements();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.resultControlRequirements) {
+			return ContentfwkPackage.eINSTANCE.getContract_ResultControlRequirements();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.recoverabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_RecoverabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.locatabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_LocatabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.securityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_SecurityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.privacyCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_PrivacyCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.integrityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_IntegrityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.credibilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_CredibilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.localizationCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_LocalizationCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.internationalizationCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_InternationalizationCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.interoperabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_InteroperabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.scalabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ScalabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.portabilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_PortabilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.extensibilityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_ExtensibilityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.capacityCharacteristics) {
+			return ContentfwkPackage.eINSTANCE.getContract_CapacityCharacteristics();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.throughput) {
+			return ContentfwkPackage.eINSTANCE.getContract_Throughput();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.throughputPeriod) {
+			return ContentfwkPackage.eINSTANCE.getContract_ThroughputPeriod();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.growth) {
+			return ContentfwkPackage.eINSTANCE.getContract_Growth();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.growthPeriod) {
+			return ContentfwkPackage.eINSTANCE.getContract_GrowthPeriod();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.peakProfileShortTerm) {
+			return ContentfwkPackage.eINSTANCE.getContract_PeakProfileShortTerm();
+		}
+		if (editorKey == ContentfwkViewsRepository.Contract.Attributes.peakProfileLongTerm) {
+			return ContentfwkPackage.eINSTANCE.getContract_PeakProfileLongTerm();
+		}
+		return super.associatedFeature(editorKey);
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @see org.eclipse.emf.eef.runtime.impl.components.StandardPropertiesEditionComponent#updateSemanticModel(org.eclipse.emf.eef.runtime.api.notify.IPropertiesEditionEvent)
 	 * 
 	 */
 	public void updateSemanticModel(final IPropertiesEditionEvent event) {
 		Contract contract = (Contract)semanticObject;
 		if (ContentfwkViewsRepository.Contract.RelatedElements.delegates == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					delegatesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					delegatesSettings.removeFromReference((EObject) event.getNewValue());
+				delegatesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				delegatesSettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Contract.RelatedElements.isDelegatedBy == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Element) {
 					isDelegatedBySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+				isDelegatedBySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				isDelegatedBySettings.move(event.getNewIndex(), (Element) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Contract.Attributes.name == event.getAffectedEditor()) {
@@ -442,21 +585,25 @@ public class ContractPropertiesEditionComponent extends SinglePartPropertiesEdit
 			contract.setID((java.lang.String)EEFConverterUtil.createFromString(EcorePackage.eINSTANCE.getEString(), (String)event.getNewValue()));
 		}
 		if (ContentfwkViewsRepository.Contract.RelatedElements.governsAndMeasuresBusinessServices == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof Service) {
 					governsAndMeasuresBusinessServicesSettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					governsAndMeasuresBusinessServicesSettings.removeFromReference((EObject) event.getNewValue());
+				governsAndMeasuresBusinessServicesSettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				governsAndMeasuresBusinessServicesSettings.move(event.getNewIndex(), (Service) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Contract.RelatedElements.meetsServiceQuality == event.getAffectedEditor()) {
-			if (event.getKind() == PropertiesEditionEvent.ADD)  {
+			if (event.getKind() == PropertiesEditionEvent.ADD) {
 				if (event.getNewValue() instanceof ServiceQuality) {
 					meetsServiceQualitySettings.addToReference((EObject) event.getNewValue());
 				}
 			} else if (event.getKind() == PropertiesEditionEvent.REMOVE) {
-					meetsServiceQualitySettings.removeFromReference((EObject) event.getNewValue());
+				meetsServiceQualitySettings.removeFromReference((EObject) event.getNewValue());
+			} else if (event.getKind() == PropertiesEditionEvent.MOVE) {
+				meetsServiceQualitySettings.move(event.getNewIndex(), (ServiceQuality) event.getNewValue());
 			}
 		}
 		if (ContentfwkViewsRepository.Contract.Attributes.behaviorCharacteristics == event.getAffectedEditor()) {
