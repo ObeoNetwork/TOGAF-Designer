@@ -191,7 +191,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business" label="TOGAF - Phase B - Business Architecture">
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='Drop_Service'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='Drop_Role'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='DropGoal']" name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" initialisation="true" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='Drop_Service'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='Drop_Role']" name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" initialisation="true" domainClass="BusinessArchitecture">
       <filters xsi:type="filter:CompositeFilterDescription" name="Role">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='DroppedRole']"/>
       </filters>
@@ -267,17 +267,29 @@
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Goal" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Goal']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Goal" referenceName="goals"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Objective" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Objective']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Objective" referenceName="objectives"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Business Service" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='DroppedBusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="Delegates" label="Supports Objective / Goal" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='SupportsObjective']">
             <sourceVariable name="source"/>
@@ -310,12 +322,6 @@
           <initialOperation>
             <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='DroppedRole']" containerViewExpression="&lt;%$newContainerView%>"/>
           </initialOperation>
-        </ownedTools>
-        <ownedTools xsi:type="tool:ContainerDropDescription" name="DropGoal" forceRefresh="true" dragSource="BOTH">
-          <oldContainer name="oldSemanticContainer"/>
-          <newContainer name="newSemanticContainer"/>
-          <element name="element"/>
-          <newViewContainer name="newContainerView"/>
         </ownedTools>
       </toolSection>
     </ownedRepresentations>
@@ -409,6 +415,11 @@
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -449,7 +460,6 @@
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Actor/Role Matrix" titleExpression="Actor/Role Matrix" initialisation="true" domainClass="BusinessArchitecture">
       <ownedLineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%actors[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role"/>
-      <ownedColumnMappings/>
       <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedLineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -598,7 +608,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="EventDiagram" initialisation="true" domainClass="BusinessArchitecture">
       <defaultLayer name="Default">
-        <nodeMappings name="Event" semanticCandidatesExpression="&lt;%events%>" domainClass="Event">
+        <nodeMappings name="Event" semanticCandidatesExpression="&lt;%events%>" domainClass="contentfwk.Event">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelSize="7" showIcon="false" sizeComputationExpression="2">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -633,14 +643,18 @@
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Event" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@nodeMappings[name='Event']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Event" referenceName="events">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Event_&quot;+eContainer().events.nSize()%>"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -932,7 +946,7 @@
           </style>
         </containerMappings>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Process">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1099,7 +1113,11 @@
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Data Entity" nodeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@nodeMappings[name='Data%20Entity']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="Relationship" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']">
             <sourceVariable name="source"/>
@@ -1208,7 +1226,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" domainClass="LogicalApplicationComponent" listContainer="true">
-          <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="Service">
+          <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
             <style xsi:type="style:SquareDescription" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1370,7 +1388,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Service" semanticCandidatesExpression="&lt;%getRootContainer().eAllContents.filter(&quot;Service&quot;)%>" domainClass="Service">
+        <containerMappings name="Service" semanticCandidatesExpression="&lt;%getRootContainer().eAllContents.filter(&quot;Service&quot;)%>" domainClass="contentfwk.Service">
           <style xsi:type="style:FlatContainerStyleDescription" showIcon="false">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2113,7 +2131,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="Physical Technology Components" semanticCandidatesExpression="&lt;%self%>" doubleClickDescription="//@ownedViewpoints[name='TOGAF%20-%20Content%20Metamodel']/@ownedRepresentations[name='Enterprise%20Architecture%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenISPhysicalApplicationComponentCatalog']" domainClass="TechnologyArchitecture">
+          <subContainerMappings name="Physical Technology Components" semanticCandidatesExpression="&lt;%self%>" doubleClickDescription="//@ownedViewpoints[name='TOGAF%20-%20Content%20Metamodel']/@ownedRepresentations[name='Enterprise%20Architecture%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenISPhysicalApplicationComponentCatalog2']" domainClass="TechnologyArchitecture">
             <style xsi:type="style:FlatContainerStyleDescription" labelSize="7" showIcon="false" labelExpression="Physical Technology Components" backgroundStyle="GradientTopToBottom">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2397,7 +2415,7 @@
           <ownedTools xsi:type="tool:ExternalJavaAction" name="OpenTechnologyArchitectureLogicalTechnologyComponentCatalogsAction" id="org.obeonetwork.dsl.togaf.ui.actions.OpenTechnologyCatalogsActionID">
             <parameters name="index" value="1"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="OpenISPhysicalApplicationComponentCatalog" mappings="//@ownedViewpoints[name='TOGAF%20-%20Content%20Metamodel']/@ownedRepresentations[name='Enterprise%20Architecture%20Diagram']/@defaultLayer/@containerMappings[name='TechnologyArchitecture']/@subContainerMappings[name='Physical%20Technology%20Components']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="OpenISPhysicalApplicationComponentCatalog2" mappings="//@ownedViewpoints[name='TOGAF%20-%20Content%20Metamodel']/@ownedRepresentations[name='Enterprise%20Architecture%20Diagram']/@defaultLayer/@containerMappings[name='TechnologyArchitecture']/@subContainerMappings[name='Physical%20Technology%20Components']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -2406,13 +2424,6 @@
           </ownedTools>
           <ownedTools xsi:type="tool:ExternalJavaAction" name="OpenTechnologyArchitecturePhysicalTechnologyComponentCatalogsAction" id="org.obeonetwork.dsl.togaf.ui.actions.OpenTechnologyCatalogsActionID">
             <parameters name="index" value="2"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="OpenISServicesCatalog">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ExternalJavaActionCall" name="OpenISServicesCatalogs" action="//@ownedViewpoints[name='TOGAF%20-%20Content%20Metamodel']/@ownedRepresentations[name='Enterprise%20Architecture%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OpenISServicesCatalogsAction']"/>
-            </initialOperation>
           </ownedTools>
           <ownedTools xsi:type="tool:ExternalJavaAction" name="OpenISServicesCatalogsAction" id="org.obeonetwork.dsl.togaf.ui.actions.OpenWizardToNavigateActionID">
             <parameters name="type" value="InformationSystemServices"/>
