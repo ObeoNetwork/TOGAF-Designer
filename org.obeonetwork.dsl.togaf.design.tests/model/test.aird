@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:viewpoint="http://www.obeo.fr/dsl/viewpoint/1.1.0" xsi:schemaLocation="http://www.obeo.fr/dsl/viewpoint/description/1.1.0 http://www.obeo.fr/dsl/viewpoint/1.1.0#//description" xmi:id="_M2yO8OttEeCQEP8DTD_PbA">
+  <eAnnotations xmi:type="description:DAnnotationEntry" xmi:id="_M2yO8ettEeCQEP8DTD_PbA" source="Migration">
+    <details>style</details>
+    <details>someViewsAreHiddenDeactivation</details>
+    <details>sequenceAbsoluteBoundsFlag</details>
+  </eAnnotations>
+</viewpoint:DAnalysis>

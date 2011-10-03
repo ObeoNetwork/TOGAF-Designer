@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contentfwk:EnterpriseArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:contentfwk="http://www.obeonetwork.org/dsl/togaf/contentfwk/9.0.0">
+  <architectures xsi:type="contentfwk:StrategicArchitecture"/>
+  <architectures xsi:type="contentfwk:BusinessArchitecture"/>
+  <architectures xsi:type="contentfwk:DataArchitecture"/>
+  <architectures xsi:type="contentfwk:ApplicationArchitecture"/>
+  <architectures xsi:type="contentfwk:TechnologyArchitecture"/>
+</contentfwk:EnterpriseArchitecture>
