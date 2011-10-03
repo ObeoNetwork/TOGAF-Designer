@@ -724,14 +724,14 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop_DataEntity'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop_BusinessService']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram" titleExpression="&lt;%name%> Business Service / Information Diagram" initialisation="true" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="BusinessService" semanticCandidatesExpression="&lt;%current.services%>" semanticElements="" domainClass="BusinessService">
+        <nodeMappings name="BusinessService" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditName']" semanticCandidatesExpression="&lt;%current.services%>" semanticElements="" domainClass="BusinessService">
           <style xsi:type="style:BundledImageDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="DataEntity" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" semanticElements="" synchronizationLock="true" domainClass="DataEntity">
+        <nodeMappings name="DataEntity" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditName']" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" semanticElements="" synchronizationLock="true" domainClass="DataEntity">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelPosition="node" horizontalDiameterComputationExpression="&lt;%name.length+1%>" verticalDiameterComputationExpression="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -838,6 +838,14 @@
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@nodeMappings[name='DataEntity']" containerViewExpression="&lt;%$newContainerView%>"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="EditName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
