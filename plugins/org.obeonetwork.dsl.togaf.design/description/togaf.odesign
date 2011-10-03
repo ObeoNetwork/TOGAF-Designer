@@ -447,11 +447,10 @@
       </optionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Actor/Role Matrix" titleExpression="Actor/Role Matrix" initialisation="true" domainClass="BusinessArchitecture">
-      <lineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%actors[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
-      <lineMappings/>
-      <columnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role"/>
-      <columnMappings/>
-      <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@lineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
+      <ownedLineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%actors[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role"/>
+      <ownedColumnMappings/>
+      <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedLineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
@@ -504,7 +503,7 @@
           </style>
         </edgeMappings>
         <containerMappings name="Function" semanticCandidatesExpression="&lt;%functions[decomposesFunction.nSize==0]%>" domainClass="Function">
-          <subContainerMappings name="Process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20support%20process']" semanticCandidatesExpression="&lt;%isRealizedByProcesses%>" doubleClickDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='ProcessEditor']" domainClass="Process" listContainer="true">
+          <subContainerMappings name="Process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20support%20process']" semanticCandidatesExpression="&lt;%isRealizedByProcesses%>" domainClass="Process" listContainer="true">
             <style xsi:type="style:FlatContainerStyleDescription" roundedCorner="true">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
@@ -570,37 +569,28 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="ProcessEditor" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='Process']">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true">
-                <diagramDescription href="../../org.obeonetwork.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Business Interaction Matrix" initialisation="true" domainClass="BusinessArchitecture">
-      <lineMappings name="Organizations" domainClass="OrganizationUnit" headerLabelExpression="&lt;%name%>">
-        <subLines name="ownsFunctions" domainClass="Function" semanticCandidatesExpression="&lt;%ownsFunctions%>" headerLabelExpression="&lt;%name%>">
-          <subLines name="isBoundedByBusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
-        </subLines>
-      </lineMappings>
-      <columnMappings name="BusinessServices" headerLabelExpression="Service &quot;&lt;%name%>&quot;" domainClass="BusinessService"/>
-      <intersection name="Organization owns and governs Business Services" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@lineMappings[name='Organizations']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%ownsAndGovernsBusinessServices%>"/>
-      <intersection name="Function is bounded by Business Services" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@lineMappings[name='Organizations']/@subLines[name='ownsFunctions']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@columnMappings.0" labelExpression="Is bounded by" columnFinderExpression="&lt;%isBoundedByServices%>">
+      <ownedLineMappings name="Organizations" domainClass="OrganizationUnit" headerLabelExpression="&lt;%name%>">
+        <ownedSubLines name="ownsFunctions" domainClass="Function" semanticCandidatesExpression="&lt;%ownsFunctions%>" headerLabelExpression="&lt;%name%>">
+          <ownedSubLines name="isBoundedByBusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
+        </ownedSubLines>
+      </ownedLineMappings>
+      <ownedColumnMappings name="BusinessServices" headerLabelExpression="Service &quot;&lt;%name%>&quot;" domainClass="BusinessService"/>
+      <intersection name="Organization owns and governs Business Services" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedLineMappings[name='Organizations']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%ownsAndGovernsBusinessServices%>"/>
+      <intersection name="Function is bounded by Business Services" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedLineMappings[name='Organizations']/@ownedSubLines[name='ownsFunctions']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedColumnMappings.0" labelExpression="Is bounded by" columnFinderExpression="&lt;%isBoundedByServices%>">
         <defaultBackground>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
         </defaultBackground>
       </intersection>
-      <intersection name="Business Service communicates with Business Service" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@lineMappings[name='Organizations']/@subLines[name='ownsFunctions']/@subLines[name='isBoundedByBusinessServices']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@columnMappings.0" labelExpression="Communicates with" columnFinderExpression="&lt;%decomposesBusinessServices%>">
+      <intersection name="Business Service communicates with Business Service" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedLineMappings[name='Organizations']/@ownedSubLines[name='ownsFunctions']/@ownedSubLines[name='isBoundedByBusinessServices']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedColumnMappings.0" labelExpression="Communicates with" columnFinderExpression="&lt;%decomposesBusinessServices%>">
         <defaultBackground>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
         </defaultBackground>
       </intersection>
-      <intersection name="Business Service is dependent Business Service" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@lineMappings[name='Organizations']/@subLines[name='ownsFunctions']/@subLines[name='isBoundedByBusinessServices']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@columnMappings.0" labelExpression="Is dependent" columnFinderExpression="&lt;%consumesServices%>">
+      <intersection name="Business Service is dependent Business Service" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedLineMappings[name='Organizations']/@ownedSubLines[name='ownsFunctions']/@ownedSubLines[name='isBoundedByBusinessServices']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Interaction%20Matrix']/@ownedColumnMappings.0" labelExpression="Is dependent" columnFinderExpression="&lt;%consumesServices%>">
         <defaultBackground>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
         </defaultBackground>
@@ -631,8 +621,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Process" detailDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20BPMN%202%20Process']" navigationDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Navigate%20to%20BPMN%202%20Process']" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
-          <doubleClickDescription href="../../org.obeonetwork.dsl.togaf.extensions.bpmn2.design/description/bpmn-ext.odesign#//@ownedViewpoints[name='TOGAF%20Extension%20-%20BPMN']/@ownedRepresentationExtensions[name='EventDiagramExtensionForBPMN2']/@layers[name='BPMN2']/@toolSections.0/@ownedTools[name='Open%20BPMN2%20Process']"/>
+        <containerMappings name="Process" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
           <style xsi:type="style:FlatContainerStyleDescription" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -705,33 +694,19 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="Create BPMN 2 Process" titleExpression="&lt;%name%>" browseExpression="&lt;%any%>">
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="any"/>
-            </initialOperation>
-            <containerViewVariable name="containerView"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="Navigate to BPMN 2 Process" browseExpression="&lt;%any%>">
-            <containerViewVariable name="containerView"/>
-            <containerVariable name="container"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']"/>
-          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop_DataEntity'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop_BusinessService']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram" titleExpression="&lt;%name%> Business Service / Information Diagram" initialisation="true" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="BusinessService" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditName']" semanticCandidatesExpression="&lt;%current.services%>" semanticElements="" domainClass="BusinessService">
+        <nodeMappings name="BusinessService" semanticCandidatesExpression="&lt;%current.services%>" semanticElements="" domainClass="BusinessService">
           <style xsi:type="style:BundledImageDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="DataEntity" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditName']" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" semanticElements="" synchronizationLock="true" domainClass="DataEntity">
+        <nodeMappings name="DataEntity" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" semanticElements="" synchronizationLock="true" domainClass="DataEntity">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelPosition="node" horizontalDiameterComputationExpression="&lt;%name.length+1%>" verticalDiameterComputationExpression="3">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -838,14 +813,6 @@
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@nodeMappings[name='DataEntity']" containerViewExpression="&lt;%$newContainerView%>"/>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DirectEditLabel" name="EditName">
-            <mask mask="{0}"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$self%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
-              </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
@@ -956,7 +923,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Process" detailDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20BPMN%202%20Process']" navigationDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Navigate%20to%20BPMN%202%20Process']" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
+        <containerMappings name="Process" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
           <style xsi:type="style:FlatContainerStyleDescription" roundedCorner="true">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -970,7 +937,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="bpmn2.Process" referenceName="processes">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="processes">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Process_&quot;+eContainer().processes.nSize()%>"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -991,33 +958,24 @@
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="ProcessEditor">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:Navigation" createIfNotExistent="true">
-                <diagramDescription href="../../org.obeonetwork.bpmn2.design/description/BPMN2.odesign#//@ownedViewpoints[name='Process']/@ownedRepresentations[name='ProcessDiagram']"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="data" label="TOGAF - Phase C. 1- Information Systems - Data Architecture">
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Data Entity/Business Function Matrix" titleExpression="Data Entity/Business Function Matrix" initialisation="true" domainClass="DataArchitecture">
-      <lineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
-        <subLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
-      </lineMappings>
-      <columnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity"/>
-      <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@lineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
-      <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@lineMappings[name='Functions']/@subLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@columnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
-      <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@lineMappings[name='Functions']/@subLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@columnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
+      <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
+        <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
+      </ownedLineMappings>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity"/>
+      <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedLineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
+      <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
+      <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Data Matrix" titleExpression="System/Data Matrix" initialisation="true" domainClass="DataArchitecture">
-      <lineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity"/>
-      <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@lineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity"/>
+      <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Data Dissemination Diagram" titleExpression="&lt;%name%>" initialisation="true" domainClass="DataArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -1126,7 +1084,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram" domainClass="DataArchitecture">
       <defaultLayer name="Default">
-        <nodeMappings name="Data Entity" detailDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Entity']" navigationDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Navigate%20to%20Entity%20Definition']" domainClass="DataEntity">
+        <nodeMappings name="Data Entity" domainClass="DataEntity">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
         </nodeMappings>
         <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetFinderExpression="&lt;%relatesTo%>">
@@ -1154,29 +1112,15 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="Create Entity" titleExpression="&lt;%name%>" browseExpression="&lt;%any%>">
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:CreateInstance" typeName="Block" referenceName="any"/>
-            </initialOperation>
-            <containerViewVariable name="containerView"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.dsl.is.design/description/is.odesign#//@ownedViewpoints[name='Entity%20Views']/@ownedRepresentations[name='Entity%20Diagram']"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="Navigate to Entity Definition" browseExpression="&lt;%any%>">
-            <containerViewVariable name="containerView"/>
-            <containerVariable name="container"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.dsl.is.design/description/is.odesign#//@ownedViewpoints[name='Entity%20Views']/@ownedRepresentations[name='Entity%20Diagram']"/>
-          </ownedTools>
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="application" label="TOGAF - Phase C. 2- Information Systems - Application Architecture">
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map)" titleExpression="Interface Catalog (Logical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent"/>
-      <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@lineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@columnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent"/>
+      <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
@@ -1199,9 +1143,9 @@
       </intersection>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map)" titleExpression="Interface Catalog (Physical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent"/>
-      <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@lineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@columnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
+      <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent"/>
+      <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
           <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
@@ -1224,34 +1168,34 @@
       </intersection>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Logical App Map)" titleExpression="System/Organization Matrix (Logical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
-      <intersection name="LogicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@lineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(implementsServices.isProvidedToActors.belongsTo+implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
+      <intersection name="LogicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(implementsServices.isProvidedToActors.belongsTo+implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Physical App Map)" titleExpression="System/Organization Matrix (Physical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
-      <intersection name="PhysicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@lineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(extendsLogicalApplicationComponents.implementsServices.isProvidedToActors.belongsTo+extendsLogicalApplicationComponents.implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
+      <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
+      <intersection name="PhysicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(extendsLogicalApplicationComponents.implementsServices.isProvidedToActors.belongsTo+extendsLogicalApplicationComponents.implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Logical App Map)" titleExpression="Role/System Matrix (Logical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
-      <intersection name="LogicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@lineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
+      <intersection name="LogicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Physical App Map)" titleExpression="Role/System Matrix (Physical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
-      <intersection name="PhysicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@lineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
+      <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
+      <intersection name="PhysicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Logical App Map)" titleExpression="Systems/Function Matrix (Logical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
-      <intersection name="LogicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@lineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
+      <intersection name="LogicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Physical App Map)" titleExpression="Systems/Function Matrix (Physical App Map)" initialisation="true" domainClass="ApplicationArchitecture">
-      <lineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <columnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
-      <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@lineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@columnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
+      <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
+      <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram" initialisation="true" domainClass="ApplicationArchitecture">
       <defaultLayer name="Default">
@@ -1426,7 +1370,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="Service" detailDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20SOA%20Service']" navigationDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Navigate%20to%20Entity%20Definition']" semanticCandidatesExpression="&lt;%getRootContainer().eAllContents.filter(&quot;Service&quot;)%>" domainClass="Service">
+        <containerMappings name="Service" semanticCandidatesExpression="&lt;%getRootContainer().eAllContents.filter(&quot;Service&quot;)%>" domainClass="Service">
           <style xsi:type="style:FlatContainerStyleDescription" showIcon="false">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1467,20 +1411,6 @@
                 <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="Create SOA Service" titleExpression="&lt;%name%>" browseExpression="&lt;%any%>">
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:CreateInstance" typeName="soa.Service" referenceName="any"/>
-            </initialOperation>
-            <containerViewVariable name="containerView"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.dsl.is.design/description/is.odesign#//@ownedViewpoints[name='SOA%20Views']/@ownedRepresentations[name='Component%20Contract%20Diagram']"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="Navigate to Entity Definition" browseExpression="&lt;%any%>">
-            <containerViewVariable name="containerView"/>
-            <containerVariable name="container"/>
-            <representationNameVariable name="diagramName"/>
-            <diagramDescription href="../../org.obeonetwork.dsl.is.design/description/is.odesign#//@ownedViewpoints[name='Entity%20Views']/@ownedRepresentations[name='Entity%20Diagram']"/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -1842,12 +1772,12 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Technology Matrix" titleExpression="System/Technology Matrix" initialisation="true" domainClass="TechnologyArchitecture">
-      <lineMappings name="LogicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
-        <subLines name="PhysicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%~extendsLogicalTechnologyComponents%>"/>
-      </lineMappings>
-      <lineMappings name="PhysicalTechnologyComponentWithoutParent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%physicalComponents[extendsLogicalTechnologyComponents==null]%>"/>
-      <columnMappings name="PhysicalApplicationComponentInSystemTechnologyMatrix" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer.architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
-      <intersection name="Realizes" lineMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@lineMappings[name='LogicalTechnologyComponentInSystem%2FTechnologyMatrix']/@subLines[name='PhysicalTechnologyComponentInSystem%2FTechnologyMatrix'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@lineMappings[name='PhysicalTechnologyComponentWithoutParent']" columnMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@columnMappings.0" labelExpression="Realizes" columnFinderExpression="&lt;%realizesApplicationComponents%>"/>
+      <ownedLineMappings name="LogicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
+        <ownedSubLines name="PhysicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%~extendsLogicalTechnologyComponents%>"/>
+      </ownedLineMappings>
+      <ownedLineMappings name="PhysicalTechnologyComponentWithoutParent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%physicalComponents[extendsLogicalTechnologyComponents==null]%>"/>
+      <ownedColumnMappings name="PhysicalApplicationComponentInSystemTechnologyMatrix" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer.architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
+      <intersection name="Realizes" lineMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='LogicalTechnologyComponentInSystem%2FTechnologyMatrix']/@ownedSubLines[name='PhysicalTechnologyComponentInSystem%2FTechnologyMatrix'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='PhysicalTechnologyComponentWithoutParent']" columnMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedColumnMappings.0" labelExpression="Realizes" columnFinderExpression="&lt;%realizesApplicationComponents%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="Impact Analysis" label="TOGAF - Impact Analysis">
