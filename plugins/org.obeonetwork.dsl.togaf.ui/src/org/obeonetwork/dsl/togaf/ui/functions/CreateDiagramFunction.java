@@ -20,29 +20,28 @@ import fr.obeo.dsl.viewpoint.collab.api.RepositoryConnectionException;
 import fr.obeo.dsl.viewpoint.description.RepresentationDescription;
 import fr.obeo.dsl.viewpoint.description.Viewpoint;
 
-public class EditDiagramFunction extends BrowserFunction {
+public class CreateDiagramFunction extends BrowserFunction {
 
-	public EditDiagramFunction(Browser browser, String name) {
+	public CreateDiagramFunction(Browser browser, String name) {
 		super(browser, name);
 	}
 
 	public Object function(Object[] arguments) {
 		ViewpointUtil.selectViewpoint(TogafViewpoint.BUSINESS.getID());
-		DRepresentation representation = RepresentationUtil.getRepresentation((String)arguments[0]);
-		RepresentationUtil.openEditor(representation);
-		CollaborativeSessionUtil.getCollaborativeSession().save();
-		WebIntroPart.browser.stop();
-		
-		/*Viewpoint viewpoint = ViewpointUtil.getViewpointIfSelected(TogafViewpoint.BUSINESS
+		Viewpoint viewpoint = ViewpointUtil.getViewpointIfSelected(TogafViewpoint.BUSINESS
 				.getID());
 		final BusinessArchitecture ba = SemanticModelUtil.getBusinessArchitecture();
 		final RepresentationDescription representationDescription = ViewpointUtil.getRepresentationDescription(
 				viewpoint, ba,
 				TogafRepresentation.GOAL_OBJECTIVE_SERVICE_DIAG.getID());
-		RepresentationUtil.createRepresentation("myRemoteRepresentation", ba,
+		RepresentationUtil.createRepresentation("Goal/Objective/Service", ba,
 				representationDescription);
-*/
-		
+
+		DRepresentation representation = RepresentationUtil.getRepresentation("Goal/Objective/Service");
+
+		RepresentationUtil.openEditor(representation);
+		CollaborativeSessionUtil.getCollaborativeSession().save();
+		WebIntroPart.browser.stop();
 		return null;
 	}
 

@@ -18,26 +18,32 @@ import org.eclipse.swt.browser.LocationListener;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.IntroPart;
 import org.obeonetwork.dsl.togaf.ui.functions.CloseViewpointSessionFunction;
+import org.obeonetwork.dsl.togaf.ui.functions.CreateDiagramFunction;
 import org.obeonetwork.dsl.togaf.ui.functions.EditDiagramFunction;
+import org.obeonetwork.dsl.togaf.ui.functions.OpenAllCatalogsFunction;
 import org.obeonetwork.dsl.togaf.ui.functions.SyncViewpointSessionFunction;
 
 public class WebIntroPart extends IntroPart {
+
+	public static Browser browser = null;
 
 	public void standbyStateChanged(boolean standby) {
 	}
 
 	@Override
 	public void createPartControl(Composite parent) {
-		final Browser browser;
+
 		try {
-			browser = new Browser(parent, SWT.WEBKIT);
+			browser = new Browser(parent, SWT.MOZILLA);
 		} catch (SWTError e) {
-			System.out.println("Could not instantiate Browser: " + e.getMessage());
+			System.out.println("Could not instantiate Browser: "
+					+ e.getMessage());
 			return;
 		}
 		String[] headers = { "user-agent: eclipse" };
 		browser.setUrl("http://localhost:9000", null, headers);
-		JavascriptViewpointApi jsViewpointApi = new JavascriptViewpointApi(browser);
+		JavascriptViewpointApi jsViewpointApi = new JavascriptViewpointApi(
+				browser);
 		browser.addLocationListener(jsViewpointApi);
 	}
 
@@ -58,6 +64,8 @@ public class WebIntroPart extends IntroPart {
 			new CloseViewpointSessionFunction(browser, "closeViewpointSession");
 			new SyncViewpointSessionFunction(browser, "syncViewpointSession");
 			new EditDiagramFunction(browser, "editDiagramFunction");
+			new CreateDiagramFunction(browser, "createDiagramFunction");
+			new OpenAllCatalogsFunction(browser, "openAllCatalogsFunction");
 		}
 
 		public void changed(LocationEvent event) {
