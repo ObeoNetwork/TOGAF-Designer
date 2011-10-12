@@ -43,4 +43,6 @@ public interface TOGAFModeler {
 
 	String BUSINESS_SERVICE_INFORMATION_D = "Business Service / Information Diagram";
 
+	String IMPACT_ANALYSIS_D = "Business Service / Information Diagram";
+
 }

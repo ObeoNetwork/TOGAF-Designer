@@ -19,7 +19,7 @@
  * Acceleo and Obeo are trademarks owned by Obeo.
  *
  *******************************************************************************/
-package fr.obeonetwork.dsl.togaf.design.businessServiceInformation.tests;
+package org.obeonetwork.dsl.togaf.design.businessServiceInformation.tests;
 
 import fr.obeo.dsl.viewpoint.DDiagram;
 import fr.obeo.dsl.viewpoint.DDiagramElement;
@@ -42,7 +42,7 @@ public class BusinessServiceInformationDiagramToolsTest extends ViewpointDiagram
 		genericSetUp(SEMANTIC_MODEL_PATH, MODELER_PATH + "/togaf.odesign");
 		initViewpoint(BUSINESS_VP);
 		diagram = (DDiagram)getRepresentations(BUSINESS_SERVICE_INFORMATION_D).toArray()[0];
-		EnterpriseArchitecture ea = (EnterpriseArchitecture)semanticModel;
+		// EnterpriseArchitecture ea = (EnterpriseArchitecture)semanticModel;
 		// ea.getArchitectures().add(ContentfwkFactory.eINSTANCE.createBusinessArchitecture());
 	}
 
