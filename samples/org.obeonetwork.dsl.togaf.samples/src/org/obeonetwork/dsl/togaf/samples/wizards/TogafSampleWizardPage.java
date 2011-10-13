@@ -26,9 +26,7 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 
 /**
- * 
  * @author Stephane Drapeau - Obeo
- * 
  */
 public class TogafSampleWizardPage extends WizardPage {
 
@@ -59,14 +57,12 @@ public class TogafSampleWizardPage extends WizardPage {
 	 * @param title
 	 * @param titleImage
 	 */
-	protected TogafSampleWizardPage(String pageName, String title,
-			ImageDescriptor titleImage) {
+	protected TogafSampleWizardPage(String pageName, String title, ImageDescriptor titleImage) {
 		super(pageName, title, titleImage);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
 	 * @see org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets.Composite)
 	 */
 	public void createControl(Composite parent) {
@@ -89,28 +85,24 @@ public class TogafSampleWizardPage extends WizardPage {
 		});
 
 		TableItem tableItem = null;
-		for (TogafSample togafSample : ((ProjectUnzipperNewWizard) this
-				.getWizard()).getTogafSamples()) {
+		for (TogafSample togafSample : ((ProjectUnzipperNewWizard)this.getWizard()).getTogafSamples()) {
 			tableItem = new TableItem(table, SWT.NONE);
 			tableItem.setText(togafSample.getTitle());
 		}
-		GridData gdTable = new GridData(GridData.HORIZONTAL_ALIGN_FILL
-				| GridData.FILL_VERTICAL);
+		GridData gdTable = new GridData(GridData.HORIZONTAL_ALIGN_FILL | GridData.FILL_VERTICAL);
 		gdTable.heightHint = 100;
 		table.setLayoutData(gdTable);
 
 		browser.createControl(container);
 		Control c = browser.getControl();
-		GridData gd = new GridData(GridData.HORIZONTAL_ALIGN_FILL
-				| GridData.FILL_VERTICAL);
+		GridData gd = new GridData(GridData.HORIZONTAL_ALIGN_FILL | GridData.FILL_VERTICAL);
 		gd.heightHint = 100;
 		gd.widthHint = 400;
 		c.setLayoutData(gd);
 
 		canvas = new ImageCanvas(container, SWT.NONE);
 		canvas.setImage(null);
-		GridData gdImage = new GridData(GridData.HORIZONTAL_ALIGN_FILL
-				| GridData.FILL_VERTICAL);
+		GridData gdImage = new GridData(GridData.HORIZONTAL_ALIGN_FILL | GridData.FILL_VERTICAL);
 		gdImage.heightHint = 100;
 		gdImage.widthHint = 450;
 		canvas.setLayoutData(gdImage);
@@ -131,16 +123,17 @@ public class TogafSampleWizardPage extends WizardPage {
 	 */
 	private void handleEvent() {
 		if (this.getSelection() > -1) {
-			browser.setText(((ProjectUnzipperNewWizard) this.getWizard())
-					.getTogafSamples().get(table.getSelectionIndex())
-					.getDescription());
-			ImageDescriptor imageDescriptor = ((ProjectUnzipperNewWizard) this
-					.getWizard()).getTogafSamples().get(
-					table.getSelectionIndex()).getImageDesc();
-			Image image = imageDescriptor.createImage();
-			if(image!=null){
-				this.canvas.setImage(image);	
-			}			
+			browser.setText(((ProjectUnzipperNewWizard)this.getWizard()).getTogafSamples().get(
+					table.getSelectionIndex()).getDescription());
+			ImageDescriptor imageDescriptor = ((ProjectUnzipperNewWizard)this.getWizard()).getTogafSamples()
+					.get(table.getSelectionIndex()).getImageDesc();
+			Image image = null;
+			if (imageDescriptor != null) {
+				imageDescriptor.createImage();
+			}
+			if (image != null) {
+				this.canvas.setImage(image);
+			}
 		}
 	}
 
