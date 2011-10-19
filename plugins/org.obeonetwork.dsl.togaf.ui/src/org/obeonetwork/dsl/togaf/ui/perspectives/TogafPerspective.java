@@ -10,43 +10,36 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.perspectives;
 
-import fr.obeo.dsl.viewpoint.ui.tools.api.views.modelexplorerview.IModelExplorerView;
-
 import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
-import org.eclipse.ui.IViewPart;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.PlatformUI;
 
 import fr.obeo.dsl.viewpoint.ui.tools.api.views.modelexplorerview.IModelExplorerView;
 
 public class TogafPerspective implements IPerspectiveFactory {
 
-	public final static String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective";
+    public final static String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective";
 
-	private IPageLayout factory;
+    private IPageLayout factory;
 
-	public TogafPerspective() {
-		super();
-	}
+    public TogafPerspective() {
+        super();
+    }
 
-	public void createInitialLayout(IPageLayout factory) {
-		this.factory = factory;
-		addViews();
-	}
+    public void createInitialLayout(IPageLayout factory) {
+        this.factory = factory;
+        addViews();
+    }
 
-	private void addViews() {
-		IFolderLayout topLeft = factory.createFolder("topLeft", IPageLayout.LEFT, 0.25f, factory
-				.getEditorArea()); // NON-NLS-1
-		topLeft.addView(IModelExplorerView.ID);
+    private void addViews() {
+        IFolderLayout topLeft = factory.createFolder("topLeft", IPageLayout.LEFT, 0.25f, factory.getEditorArea()); // NON-NLS-1
+        topLeft.addView(IModelExplorerView.ID);
 
-		topLeft.addView("org.eclipse.ui.navigator.ProjectExplorer");
-		topLeft.addView("fr.obeo.dsl.viewpoint.ui.tools.views.sessionview");
+        topLeft.addView("org.eclipse.ui.navigator.ProjectExplorer");
+        // topLeft.addView("fr.obeo.dsl.viewpoint.ui.tools.views.sessionview");
 
-		IFolderLayout bottom = factory.createFolder("bottomRight", IPageLayout.BOTTOM, 0.7f, factory
-				.getEditorArea()); // NON-NLS-1
-		bottom.addView(IPageLayout.ID_PROP_SHEET); // NON-NLS-1
+        IFolderLayout bottom = factory.createFolder("bottomRight", IPageLayout.BOTTOM, 0.7f, factory.getEditorArea()); // NON-NLS-1
+        bottom.addView(IPageLayout.ID_PROP_SHEET); // NON-NLS-1
 
-	}
+    }
 }

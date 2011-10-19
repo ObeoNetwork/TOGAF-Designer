@@ -25,51 +25,49 @@ import org.obeonetwork.dsl.togaf.ui.functions.SyncViewpointSessionFunction;
 
 public class WebIntroPart extends IntroPart {
 
-	public static Browser browser = null;
+    public static Browser browser = null;
 
-	public void standbyStateChanged(boolean standby) {
-	}
+    public void standbyStateChanged(boolean standby) {
+    }
 
-	@Override
-	public void createPartControl(Composite parent) {
+    @Override
+    public void createPartControl(Composite parent) {
 
-		try {
-			browser = new Browser(parent, SWT.MOZILLA);
-		} catch (SWTError e) {
-			System.out.println("Could not instantiate Browser: "
-					+ e.getMessage());
-			return;
-		}
-		String[] headers = { "user-agent: eclipse" };
-		browser.setUrl("http://localhost:9000", null, headers);
-		JavascriptViewpointApi jsViewpointApi = new JavascriptViewpointApi(
-				browser);
-		browser.addLocationListener(jsViewpointApi);
-	}
+        try {
+            browser = new Browser(parent, SWT.WEBKIT);
+        } catch (SWTError e) {
+            System.out.println("Could not instantiate Browser: " + e.getMessage());
+            return;
+        }
+        String[] headers = { "user-agent: eclipse" };
+        browser.setUrl("http://localhost:9000", null, headers);
+        JavascriptViewpointApi jsViewpointApi = new JavascriptViewpointApi(browser);
+        browser.addLocationListener(jsViewpointApi);
+    }
 
-	@Override
-	public void setFocus() {
+    @Override
+    public void setFocus() {
 
-	}
+    }
 
-	private class JavascriptViewpointApi implements LocationListener {
-		Browser browser;
+    private class JavascriptViewpointApi implements LocationListener {
+        Browser browser;
 
-		public JavascriptViewpointApi(Browser browser) {
-			this.browser = browser;
-		}
+        public JavascriptViewpointApi(Browser browser) {
+            this.browser = browser;
+        }
 
-		public void changing(LocationEvent event) {
-			// TODO maybe use singleton for each functions ?
-			new CloseViewpointSessionFunction(browser, "closeViewpointSession");
-			new SyncViewpointSessionFunction(browser, "syncViewpointSession");
-			new EditDiagramFunction(browser, "editDiagramFunction");
-			new CreateDiagramFunction(browser, "createDiagramFunction");
-			new OpenAllCatalogsFunction(browser, "openAllCatalogsFunction");
-		}
+        public void changing(LocationEvent event) {
+            // TODO maybe use singleton for each functions ?
+            new CloseViewpointSessionFunction(browser, "closeViewpointSession");
+            new SyncViewpointSessionFunction(browser, "syncViewpointSession");
+            new EditDiagramFunction(browser, "editDiagramFunction");
+            new CreateDiagramFunction(browser, "createDiagramFunction");
+            new OpenAllCatalogsFunction(browser, "openAllCatalogsFunction");
+        }
 
-		public void changed(LocationEvent event) {
-		}
-	}
+        public void changed(LocationEvent event) {
+        }
+    }
 
 }
