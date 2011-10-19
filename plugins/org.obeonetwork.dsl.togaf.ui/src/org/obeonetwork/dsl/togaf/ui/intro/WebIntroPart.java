@@ -34,6 +34,7 @@ public class WebIntroPart extends IntroPart {
     public void createPartControl(Composite parent) {
 
         try {
+            // http://www.eclipse.org/swt/faq.php#howusewebkit
             browser = new Browser(parent, SWT.WEBKIT);
         } catch (SWTError e) {
             System.out.println("Could not instantiate Browser: " + e.getMessage());

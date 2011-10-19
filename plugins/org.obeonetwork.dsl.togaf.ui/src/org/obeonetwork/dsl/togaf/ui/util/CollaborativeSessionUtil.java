@@ -23,10 +23,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyArchitecture;
 import org.obeonetwork.dsl.togaf.ui.Activator;
 
-import fr.obeo.dsl.viewpoint.DAnalysis;
 import fr.obeo.dsl.viewpoint.ViewpointFactory;
-import fr.obeo.dsl.viewpoint.business.api.session.danalysis.DAnalysisSelector;
-import fr.obeo.dsl.viewpoint.business.api.session.danalysis.SimpleAnalysisSelector;
 import fr.obeo.dsl.viewpoint.business.api.session.factory.SessionFactory;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManager;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManagerRegistry;
@@ -94,17 +91,20 @@ public class CollaborativeSessionUtil {
             // Open the collaborative session
             openSession();
             prepareSemanticResource();
-            closeSession();
 
-            openSession();
-            prepareRepresentationsResource();
-            closeSession();
-
-            openSession();
-            CDOResource remoteDAnalysisResource = repositoryManager.getOrCreateTransaction(collaborativeSession).getOrCreateResource(VIEWPOINT_MODEL_URI);
-            DAnalysis dAnalysis = (DAnalysis) remoteDAnalysisResource.getContents().get(0);
-            DAnalysisSelector dAnalysisSelector = new SimpleAnalysisSelector(dAnalysis);
-            collaborativeSession.setAnalysisSelector(dAnalysisSelector);
+            /*
+             * closeSession();
+             * 
+             * openSession(); prepareRepresentationsResource(); closeSession();
+             * 
+             * openSession(); CDOResource remoteDAnalysisResource =
+             * repositoryManager
+             * .getOrCreateTransaction(collaborativeSession).getOrCreateResource
+             * (VIEWPOINT_MODEL_URI); DAnalysis dAnalysis = (DAnalysis)
+             * remoteDAnalysisResource.getContents().get(0); DAnalysisSelector
+             * dAnalysisSelector = new SimpleAnalysisSelector(dAnalysis);
+             * collaborativeSession.setAnalysisSelector(dAnalysisSelector);
+             */
 
         } catch (Exception e) {
             Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot open Viewpoint session.", e));
@@ -122,8 +122,7 @@ public class CollaborativeSessionUtil {
             }
 
             public IPasswordCredentials getCredentials() {
-                // TODO get credentials with a dedicated login Javascript/Java
-                // function
+                // TODO get credentials with a dedicated login Js/Java function
                 return new IPasswordCredentials() {
                     public String getUserID() {
                         return "admin";
@@ -131,6 +130,16 @@ public class CollaborativeSessionUtil {
 
                     public char[] getPassword() {
                         return hashPassword("admin").toCharArray();
+                    }
+
+                    public String hashPassword(String password) {
+                        try {
+                            MessageDigest m = MessageDigest.getInstance("MD5");
+                            byte[] out = m.digest(password.getBytes());
+                            return new String(Base64.encodeBase64(out));
+                        } catch (NoSuchAlgorithmException e) {
+                            return null;
+                        }
                     }
                 };
             }
@@ -144,16 +153,6 @@ public class CollaborativeSessionUtil {
 
         // Get the class used to access the CDO repository
         repositoryManager = CDORepositoryManagerRegistry.getRepositoryManager(collaborativeSession);
-    }
-
-    public static String hashPassword(String password) {
-        try {
-            MessageDigest m = MessageDigest.getInstance("MD5");
-            byte[] out = m.digest(password.getBytes());
-            return new String(Base64.encodeBase64(out));
-        } catch (NoSuchAlgorithmException e) {
-            return null;
-        }
     }
 
     private static void prepareRepresentationsResource() throws RepositoryConnectionException {
