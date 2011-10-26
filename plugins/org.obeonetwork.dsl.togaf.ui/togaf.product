@@ -254,7 +254,7 @@
       <plugin id="org.eclipse.ui.workbench"/>
       <plugin id="org.eclipse.ui.workbench.texteditor"/>
       <plugin id="org.eclipse.update.configurator"/>
-      <plugin id="org.eclipse.xsd"/>
+      <plugin id="org.eclipse.xsd" fragment=""/>
       <plugin id="org.hamcrest.core"/>
       <plugin id="org.junit"/>
       <plugin id="org.junit4"/>
@@ -278,14 +278,15 @@
       <plugin id="org.obeonetwork.dsl.togaf.extensions.entity.design" fragment=""/>
       <plugin id="org.obeonetwork.dsl.togaf.extensions.sca.design" fragment=""/>
       <plugin id="org.obeonetwork.dsl.togaf.extensions.soa.design" fragment=""/>
-      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder"/>
-      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.design"/>
-      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.edit"/>
-      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.editor"/>
+      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder" fragment=""/>
+      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.design" fragment=""/>
+      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.edit" fragment=""/>
+      <plugin id="org.obeonetwork.dsl.togaf.extensions.stakeholder.editor" fragment=""/>
+      <plugin id="org.obeonetwork.dsl.togaf.representations"/>
       <plugin id="org.obeonetwork.dsl.togaf.samples"/>
       <plugin id="org.obeonetwork.dsl.togaf.samples.pack.core"/>
       <plugin id="org.obeonetwork.dsl.togaf.ui"/>
-      <plugin id="org.obeonetwork.dsl.viewpoint.addons"/>
+      <plugin id="org.obeonetwork.dsl.viewpoint.addons" fragment=""/>
       <plugin id="org.obeonetwork.dsl.viewpoint.eef.adapters" fragment=""/>
       <plugin id="org.sat4j.core"/>
       <plugin id="org.sat4j.pb"/>

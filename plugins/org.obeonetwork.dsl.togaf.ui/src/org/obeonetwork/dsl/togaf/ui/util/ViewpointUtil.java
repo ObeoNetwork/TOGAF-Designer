@@ -1,12 +1,11 @@
 package org.obeonetwork.dsl.togaf.ui.util;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.swt.widgets.Shell;
-import org.eclipse.ui.PlatformUI;
 
 import com.google.common.collect.Lists;
 
@@ -18,9 +17,13 @@ import fr.obeo.dsl.viewpoint.ui.business.api.session.UserSession;
 public class ViewpointUtil {
 
 	public static void selectAllTogafViewpoints() {
-		for (TogafViewpoint togafViewpoint : TogafViewpoint.values()) {
-			selectViewpoint(togafViewpoint.getID());
+		TogafViewpoint[] vs = TogafViewpoint.values();
+		List<String> viewpoints = new ArrayList<String>();
+		for (TogafViewpoint tv : vs) {
+			viewpoints.add(tv.getID());
 		}
+		UserSession.from(CollaborativeSessionUtil.getCollaborativeSession())
+				.selectViewpoints(viewpoints);
 	}
 
 	public static Collection<Viewpoint> getSelectedViewpoints() {
@@ -40,15 +43,19 @@ public class ViewpointUtil {
 
 		Viewpoint result = null;
 		Iterator<Viewpoint> it = getSelectedViewpoints().iterator();
+		System.err.println("Searched : " + viewpointID);
+
 		while (result == null && it.hasNext()) {
 			Viewpoint v = it.next();
+			System.err.println("Searched : " + viewpointID + " // candidate : "
+					+ v.getName());
 			if (viewpointID.equals(v.getName())) {
 				result = v;
 			}
 		}
 		return result;
 	}
-	
+
 	public static Collection<RepresentationDescription> getAvailableRepresentationDescriptions(
 			Viewpoint viewpoint, EObject semanticElement) {
 		return DialectManager.INSTANCE.getAvailableRepresentationDescriptions(
@@ -62,13 +69,12 @@ public class ViewpointUtil {
 		Iterator<RepresentationDescription> it = getAvailableRepresentationDescriptions(
 				viewpoint, semanticElement).iterator();
 		while (result == null && it.hasNext()) {
-			RepresentationDescription rd =  it
-					.next();
+			RepresentationDescription rd = it.next();
 			if (representationID.equals(rd.getName())) {
 				result = rd;
 			}
 		}
 		return result;
 	}
-	
+
 }

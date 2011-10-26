@@ -4,6 +4,7 @@ import java.util.Iterator;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
@@ -42,6 +43,32 @@ public class SemanticModelUtil {
 			Architecture a = architectures.next();
 			if (a instanceof BusinessArchitecture) {
 				result = (BusinessArchitecture) a;
+			}
+		}
+		return result;
+	}
+	
+	public static ApplicationArchitecture getApplicationArchitecture() {
+		ApplicationArchitecture result = null;
+		EnterpriseArchitecture ea = getEnterpriseArchitecture();
+		if (ea != null) {
+			result = getApplicationArchitecture(ea);
+		}
+		return result;
+	}
+
+	public static ApplicationArchitecture getApplicationArchitecture(
+			EnterpriseArchitecture ea) {
+		if (ea == null) {
+			return null;
+		}
+
+		ApplicationArchitecture result = null;
+		Iterator<Architecture> architectures = ea.getArchitectures().iterator();
+		while (result == null && architectures.hasNext()) {
+			Architecture a = architectures.next();
+			if (a instanceof ApplicationArchitecture) {
+				result = (ApplicationArchitecture) a;
 			}
 		}
 		return result;

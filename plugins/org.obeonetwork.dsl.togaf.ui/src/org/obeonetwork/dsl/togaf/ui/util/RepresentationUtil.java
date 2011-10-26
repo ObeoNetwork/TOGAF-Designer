@@ -5,10 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.ecore.EObject;
-
-import com.google.common.collect.Iterables;
+import org.eclipse.emf.ecore.resource.Resource;
 
 import fr.obeo.dsl.viewpoint.DAnalysis;
 import fr.obeo.dsl.viewpoint.DRepresentation;
@@ -29,22 +27,43 @@ public class RepresentationUtil {
 	public static List<DRepresentation> getAllRepresentations() {
 		CollaborativeSession collaborativeSession = CollaborativeSessionUtil
 				.getCollaborativeSession();
-		
-/*		DAnalysis dAnalysis =((DAnalysis) Iterables
-				.filter(collaborativeSession.getAllSessionResources(),
-						CDOResource.class).iterator().next().getContents()
-				.iterator().next())
-				.getOwnedViews().iterator().next()
-				.getOwnedRepresentations();*/
-		
-		Iterable<CDOResource> iterable = Iterables
-				.filter(collaborativeSession.getAllSessionResources(),
-						CDOResource.class);
-		DAnalysis dAnalysis = (DAnalysis) iterable.iterator().next().getContents()
-				.iterator().next();
-		
-		List<DRepresentation> result = dAnalysis.getOwnedViews().iterator().next()
-				.getOwnedRepresentations();
+
+		/*
+		 * DAnalysis dAnalysis =((DAnalysis) Iterables
+		 * .filter(collaborativeSession.getAllSessionResources(),
+		 * CDOResource.class).iterator().next().getContents()
+		 * .iterator().next()) .getOwnedViews().iterator().next()
+		 * .getOwnedRepresentations();
+		 */
+
+		/*
+		 * Iterable<CDOResource> iterable = Iterables
+		 * .filter(collaborativeSession.getAllSessionResources(),
+		 * CDOResource.class); DAnalysis dAnalysis = (DAnalysis)
+		 * iterable.iterator().next().getContents() .iterator().next();
+		 * 
+		 * List<DRepresentation> result =
+		 * dAnalysis.getOwnedViews().iterator().next()
+		 * .getOwnedRepresentations();
+		 */
+
+		List<DRepresentation> result = new ArrayList<DRepresentation>();
+		Iterator<Resource> resources = collaborativeSession
+				.getAllSessionResources().iterator();
+		DAnalysis dAnalysis = null;
+		while (resources.hasNext()) {
+			Resource r = resources.next();
+			for (Object o : r.getContents()) {
+				if (o instanceof DAnalysis) {
+					dAnalysis = (DAnalysis) o;
+				}
+			}
+		}
+		if (dAnalysis != null && dAnalysis.getOwnedViews() != null
+				&& dAnalysis.getOwnedViews().iterator().hasNext()) {
+			result = dAnalysis.getOwnedViews().iterator().next()
+					.getOwnedRepresentations();
+		}
 		return result;
 	}
 

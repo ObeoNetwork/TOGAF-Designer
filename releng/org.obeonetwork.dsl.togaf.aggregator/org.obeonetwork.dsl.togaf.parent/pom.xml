@@ -25,17 +25,12 @@
   <repository>
    <id>helios</id>
     <layout>p2</layout>
-    <url>http://mirror.update.eclipse.obeo.fr/release-helios-3.6/</url>
+    <url>http://download.eclipse.org/eclipse/updates/3.7</url>
   </repository>
   <repository>
    <id>EEF</id>
     <layout>p2</layout>
-    <url>http://download.eclipse.org/modeling/emft/eef/updates/releases/0.9</url>
-  </repository>
-  <repository>
-   <id>EEF-EPF</id>
-    <layout>p2</layout>
-    <url>http://build.eclipse.org/modeling/emf/eef/epf/</url>
+    <url>http://download.eclipse.org/modeling/emft/eef/updates/releases/1.0</url>
   </repository>
   <repository>
    <id>EEF-ODBridge</id>
