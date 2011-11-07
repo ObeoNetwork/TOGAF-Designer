@@ -13,8 +13,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://www.obeonetwork.org/dsl/togaf/representations/1.0"
-            class="representations.RepresentationsPackage"
-            genModel="model/representations.genmodel"/>
+            class="org.obeonetwork.dsl.togaf.representations.RepresentationsPackage"
+            genModel="model/representationsCDO.genmodel"/>
    </extension>
 
 </plugin>

@@ -15,9 +15,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="representations.presentation.RepresentationsModelWizardID"
+            id="org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsModelWizardID"
             name="%_UI_RepresentationsModelWizard_label"
-            class="representations.presentation.RepresentationsModelWizard"
+            class="org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/RepresentationsModelFile.gif">
          <description>%_UI_RepresentationsModelWizard_description</description>
@@ -27,12 +27,12 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="representations.presentation.RepresentationsEditorID"
+            id="org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsEditorID"
             name="%_UI_RepresentationsEditor_label"
             icon="icons/full/obj16/RepresentationsModelFile.gif"
             extensions="representations"
-            class="representations.presentation.RepresentationsEditor"
-            contributorClass="representations.presentation.RepresentationsActionBarContributor">
+            class="org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsEditor"
+            contributorClass="org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsActionBarContributor">
       </editor>
    </extension>
 

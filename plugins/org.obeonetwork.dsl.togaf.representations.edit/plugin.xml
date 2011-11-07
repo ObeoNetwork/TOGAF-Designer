@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <factory
             uri="http://www.obeonetwork.org/dsl/togaf/representations/1.0"
-            class="representations.provider.RepresentationsItemProviderAdapterFactory"
+            class="org.obeonetwork.dsl.togaf.representations.provider.RepresentationsItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

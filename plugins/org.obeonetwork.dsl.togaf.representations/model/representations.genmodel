@@ -5,13 +5,18 @@
     modelPluginID="org.obeonetwork.dsl.togaf.representations" modelName="Representations"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
   <foreignModel>representations.ecore</foreignModel>
-  <genPackages prefix="Representations" disposableProviderFactory="true" ecorePackage="representations.ecore#/">
+  <genPackages prefix="Representations" basePackage="org.obeonetwork.dsl.togaf" disposableProviderFactory="true"
+      ecorePackage="representations.ecore#/">
     <genClasses ecoreClass="representations.ecore#//Representation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute representations.ecore#//Representation/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute representations.ecore#//Representation/content"/>
     </genClasses>
-    <genClasses ecoreClass="representations.ecore#//RepresentationsContainer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference representations.ecore#//RepresentationsContainer/representations"/>
+    <genClasses ecoreClass="representations.ecore#//ViewContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference representations.ecore#//ViewContainer/views"/>
+    </genClasses>
+    <genClasses ecoreClass="representations.ecore#//View">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference representations.ecore#//View/representations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute representations.ecore#//View/viewpointURI"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

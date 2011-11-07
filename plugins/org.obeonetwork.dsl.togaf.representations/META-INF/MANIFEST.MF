@@ -7,10 +7,10 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: representations,
- representations.impl,
- representations.util
+Export-Package: org.obeonetwork.dsl.togaf.representations,
+ org.obeonetwork.dsl.togaf.representations.impl,
+ org.obeonetwork.dsl.togaf.representations.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.cdo;bundle-version="4.0.0"
+ org.eclipse.emf.cdo;visibility:=reexport
 Bundle-ActivationPolicy: lazy

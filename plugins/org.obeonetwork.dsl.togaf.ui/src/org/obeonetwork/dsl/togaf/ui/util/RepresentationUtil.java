@@ -7,21 +7,42 @@ import java.util.List;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IPropertyListener;
+import org.eclipse.ui.IWorkbenchPartConstants;
+import org.eclipse.ui.internal.WorkbenchPartReference;
 
 import fr.obeo.dsl.viewpoint.DAnalysis;
 import fr.obeo.dsl.viewpoint.DRepresentation;
 import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
 import fr.obeo.dsl.viewpoint.collab.api.remotesession.CollaborativeSession;
 import fr.obeo.dsl.viewpoint.description.RepresentationDescription;
+import fr.obeo.dsl.viewpoint.diagram.tools.api.editor.DDiagramEditor;
 import fr.obeo.dsl.viewpoint.tools.api.command.ViewpointCommand;
 import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectUIManager;
 
 public class RepresentationUtil {
 
 	public static void openEditor(DRepresentation representation) {
-		DialectUIManager.INSTANCE.openEditor(
+		IEditorPart editor = DialectUIManager.INSTANCE.openEditor(
 				CollaborativeSessionUtil.getCollaborativeSession(),
 				representation);
+	}
+	
+	public static void openEditor(DRepresentation representation, final CollaborativeSession session) {
+		IEditorPart editor = DialectUIManager.INSTANCE.openEditor(
+				CollaborativeSessionUtil.getCollaborativeSession(),
+				representation);
+		editor.addPropertyListener(new IPropertyListener() {
+			
+			public void propertyChanged(Object source, int propId) {
+				if (source instanceof WorkbenchPartReference && propId == WorkbenchPartReference.INTERNAL_PROPERTY_CLOSED) {
+					//session.save();
+				} else if (source instanceof DDiagramEditor && propId == IWorkbenchPartConstants.PROP_DIRTY) {
+					//session.save();
+				}
+			}
+		});
 	}
 
 	public static List<DRepresentation> getAllRepresentations() {

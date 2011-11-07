@@ -4,11 +4,11 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.representations.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: representations.presentation.RepresentationsEditorPlugin$Implementation
+Bundle-Activator: org.obeonetwork.dsl.togaf.representations.presentation.RepresentationsCDOEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: representations.presentation
+Export-Package: org.obeonetwork.dsl.togaf.representations.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.obeonetwork.dsl.togaf.representations.edit;visibility:=reexport,

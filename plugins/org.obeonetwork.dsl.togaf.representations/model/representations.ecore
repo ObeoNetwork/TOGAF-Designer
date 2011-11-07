@@ -7,8 +7,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EByteArray"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RepresentationsContainer">
+  <eClassifiers xsi:type="ecore:EClass" name="ViewContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
+        eType="#//View" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="View">
     <eStructuralFeatures xsi:type="ecore:EReference" name="representations" upperBound="-1"
         eType="#//Representation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="viewpointURI" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

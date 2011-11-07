@@ -18,7 +18,7 @@ import org.obeonetwork.dsl.togaf.ui.Activator;
 import fr.obeo.dsl.viewpoint.DRepresentation;
 
 public class XMIMarshaller implements Marshaller {
-
+	
 	public byte[] marshall(DRepresentation dRepresentation) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
@@ -42,7 +42,7 @@ public class XMIMarshaller implements Marshaller {
 		}
 		return null;
 	}
-
+	
 	public DRepresentation unMarshall(byte[] bytes) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
@@ -51,7 +51,7 @@ public class XMIMarshaller implements Marshaller {
 			Resource resource = resourceSet.createResource(URI.createURI("http:///Diagram.xmi"));
 			resource.load(in, null);
 			DRepresentation dRepresentation = (DRepresentation) resource.getContents().get(0);
-			return dRepresentation;
+			return EcoreUtil.copy(dRepresentation);
 		} catch (IOException e) {
 			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot unMarshall DRepresentation.", e));
 		} finally {
