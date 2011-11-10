@@ -12,13 +12,13 @@ import java.util.Set;
 import org.apache.commons.codec.binary.Base64;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.cdo.util.CommitException;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.transaction.RecordingCommand;
@@ -29,8 +29,10 @@ import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.net4j.util.security.IPasswordCredentials;
 import org.eclipse.ui.PlatformUI;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkFactory;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture;
@@ -49,7 +51,6 @@ import fr.obeo.dsl.viewpoint.DRepresentationContainer;
 import fr.obeo.dsl.viewpoint.DView;
 import fr.obeo.dsl.viewpoint.ViewpointFactory;
 import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
 import fr.obeo.dsl.viewpoint.business.api.helper.ViewpointResourceHelper;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManager;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManagerRegistry;
@@ -128,9 +129,11 @@ public class CollaborativeSessionUtil {
 
 	    prepareSemanticResources();
 
+	    // BEGIN - Tests
 	    // testCreateDRepresentation();
-	    testOpenGoalObjectiveServiceDiagram();
-	    // testOpenApplicationCommunicationDiagram();
+	    testOpenDiagram("business", "Goal/Objective/Service Diagram", ContentfwkPackage.Literals.BUSINESS_ARCHITECTURE);
+	    testOpenDiagram("application", "Application Communication Diagram", ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE);
+	    // END - Tests
 
 	} catch (Exception e) {
 	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot open Viewpoint session.", e));
@@ -199,7 +202,7 @@ public class CollaborativeSessionUtil {
 
 	    initSemanticRepresentationsResourceInSession(semanticRepresentationsResource);
 
-	    // Required to avoid this issue: "Cannot activate read/write transaction in read-only transaction context"
+	    // Required to avoid this issue: "Cannot activate read/write transaction in read-only transaction context" during modifications.
 	    collaborativeSession.save();
 
 	    // => Select the viewpoints in relation to TOGAF business (roles, credentials...) in the Viewpoint CDO session
@@ -447,8 +450,8 @@ public class CollaborativeSessionUtil {
 		    if (notification.getEventType() == Notification.ADD || notification.getEventType() == Notification.SET) {
 			System.out.println("add or update diagram " + dRepresentation.getName());
 			result = save(dRepresentation);
+			break;
 		    } else if (notification.getEventType() == Notification.REMOVE) {
-			// TODO handle delete representation
 			System.out.println("delete diagram " + dRepresentation.getName());
 			remove(dRepresentation);
 		    }
@@ -461,6 +464,7 @@ public class CollaborativeSessionUtil {
 			if (dRepresentation != null) {
 			    System.out.println("modify gmf diagram " + dRepresentation.getName());
 			    result = save(dRepresentation);
+			    break;
 			}
 		    }
 		}
@@ -468,7 +472,7 @@ public class CollaborativeSessionUtil {
 
 	    // Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
 	    // The dialog to do "save and commit" during closing of the editor does not make this operation.
-	    collaborativeSession.save();
+	    // collaborativeSession.save();
 
 	    return result;
 	}
@@ -526,23 +530,31 @@ public class CollaborativeSessionUtil {
 			sr.setContent(marshaller.marshall(dRepresentation));
 
 			// Find the right View to store the storable representation
-			View view = null;
-			Iterator<View> views = container.getViews().iterator();
-			while (views.hasNext()) {
-			    view = views.next();
-			    Viewpoint viewpoint = ((DRepresentationContainer) dRepresentation.eContainer()).getViewpoint();
-			    if (view.getViewpointURI().equals(viewpoint.eResource().getURIFragment(viewpoint))) {
-				break;
-			    }
-			}
+			View view = getView(dRepresentation, container);
 
 			view.getRepresentations().add(sr);
+
+			// test
+			collaborativeSession.save();
 
 			System.err.println("lock : " + container.cdoWriteLock().isLocked() + "//" + container.cdoWriteLock().isLockedByOthers());
 		    } catch (Exception e) {
 			System.err.println("ERROR OCCURED DURING RESULT COMMAND");
 			e.printStackTrace();
 		    }
+		}
+
+		private View getView(final DRepresentation dRepresentation, final ViewContainer container) {
+		    View result = null;
+		    Iterator<View> views = container.getViews().iterator();
+		    while (views.hasNext()) {
+			result = views.next();
+			Viewpoint viewpoint = ((DRepresentationContainer) dRepresentation.eContainer()).getViewpoint();
+			if (result.getViewpointURI().equals(viewpoint.eResource().getURIFragment(viewpoint))) {
+			    break;
+			}
+		    }
+		    return result;
 		}
 	    };
 	} else {
@@ -555,6 +567,9 @@ public class CollaborativeSessionUtil {
 			System.err.println("UPDATING MARSHALLED");
 			sr.setName(dRepresentation.getName());
 			sr.setContent(marshaller.marshall(dRepresentation));
+
+			// test
+			collaborativeSession.save();
 		    } catch (Exception e) {
 			e.printStackTrace();
 		    }
@@ -562,70 +577,84 @@ public class CollaborativeSessionUtil {
 	    };
 
 	}
-	
+
 	return result;
     }
 
-    private static void testOpenGoalObjectiveServiceDiagram() {
+    private static void testOpenDiagram(final String viewpointName, final String repName, final EClass architectureKind) {
 
-	System.err.println("Open Goal/Objective/Service Diagram");
+	System.err.println(repName);
 
-	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().asyncExec(new Runnable() {
+	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().syncExec(new Runnable() {
 	    public void run() {
 
 		for (DView view : collaborativeSession.getOwnedViews()) {
 
-		    for (DRepresentation rep : view.getOwnedRepresentations()) {
-			if ("Goal/Objective/Service Diagram".equals(rep.getName())) {
-			    RepresentationUtil.openEditor(rep, collaborativeSession);
+		    DRepresentation representation = getRepresentation(view, repName);
+
+		    if (representation == null) {
+			if (view.getViewpoint().getName().equals(viewpointName) && getRepresentation(view, repName) == null) {
+			    representation = RepresentationUtil.createRepresentation(repName, getArchitecture(architectureKind),
+				    getRepresentationDescription(repName));
 			}
 		    }
+
+		    if (representation != null) {
+			RepresentationUtil.openEditor(representation, collaborativeSession);
+			break;
+		    }
+
 		}
 
 	    }
 
 	});
+
+	// collaborativeSession.save();
     }
 
-    private static void testOpenApplicationCommunicationDiagram() {
-	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().asyncExec(new Runnable() {
-	    public void run() {
-		System.err.println("Open Application Communication Diagram");
-		// ViewpointUtil.selectAllTogafViewpoints();
-		ViewpointUtil.selectViewpoint(TogafViewpoint.APPLICATION.getID());
-		System.err.println("Open Really Application Communication Diagram");
-		DRepresentation representation = RepresentationUtil.getRepresentation("Application Communication Diagram");
-		RepresentationUtil.openEditor(representation);
+    private static RepresentationDescription getRepresentationDescription(String name) {
+	for (Viewpoint viewpoint : getViewpoints("TOGAF")) {
+	    for (RepresentationDescription repDesc : viewpoint.getOwnedRepresentations()) {
+		if (repDesc.getName().equals(name)) {
+		    return repDesc;
+		}
 	    }
-	});
-    }
-
-    private static DRepresentation testCreateDRepresentation() {
-	// SDR
-	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().asyncExec(new Runnable() {
-	    public void run() {
-		ViewpointUtil.selectAllTogafViewpoints();
-		collaborativeSession.save();
-		collaborativeSession.getTransactionalEditingDomain().getCommandStack()
-			.execute(new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
-			    final Viewpoint viewpoint = ViewpointUtil.getViewpointIfSelected(TogafViewpoint.BUSINESS.getID());
-			    final BusinessArchitecture ba = SemanticModelUtil.getBusinessArchitecture();
-			    final RepresentationDescription representationDescription = ViewpointUtil.getRepresentationDescription(viewpoint, ba,
-				    TogafRepresentation.GOAL_OBJECTIVE_SERVICE_DIAG.getID());
-
-			    @Override
-			    protected void doExecute() {
-				DialectManager.INSTANCE.createRepresentation("GoalObjectiveService3", ba, representationDescription,
-					collaborativeSession, new NullProgressMonitor());
-			    }
-
-			});
-
-	    }
-
-	});
-
+	}
 	return null;
     }
-    
+
+    private static DRepresentation getRepresentation(DView view, String repName) {
+	for (DRepresentation rep : view.getOwnedRepresentations()) {
+	    if (rep.getName().equals(repName)) {
+		return rep;
+	    }
+	}
+	return null;
+    }
+
+    private static Resource getSemanticBusinessResource() {
+	for (Resource resource : collaborativeSession.getSemanticResources()) {
+	    if (resource.getURI().path().equals(SEMANTIC_MODEL_URI)) {
+		return resource;
+	    }
+	}
+	return null;
+    }
+
+    private static Architecture getArchitecture(EClass architectureKind) {
+	Resource resource = getSemanticBusinessResource();
+	if (resource != null) {
+	    EObject root = resource.getContents().get(0);
+	    if (root instanceof EnterpriseArchitecture) {
+		for (Architecture architecture : ((EnterpriseArchitecture) root).getArchitectures()) {
+		    if (architectureKind.isInstance(architecture)) {
+			return architecture;
+		    }
+		}
+	    }
+	}
+	return null;
+    }
+
 }
