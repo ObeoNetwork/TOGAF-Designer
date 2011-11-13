@@ -4,7 +4,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +15,7 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.cdo.util.CommitException;
 import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -27,6 +27,9 @@ import org.eclipse.emf.transaction.ResourceSetListenerImpl;
 import org.eclipse.emf.transaction.RollbackException;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
 import org.eclipse.net4j.util.security.IPasswordCredentials;
+import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.IPartListener;
+import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PlatformUI;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
@@ -65,9 +68,8 @@ import fr.obeo.dsl.viewpoint.description.Group;
 import fr.obeo.dsl.viewpoint.description.RepresentationDescription;
 import fr.obeo.dsl.viewpoint.description.Viewpoint;
 import fr.obeo.dsl.viewpoint.tools.api.command.ViewpointCommand;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelection.Callback;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import fr.obeo.dsl.viewpoint.ui.business.internal.commands.ChangeViewpointSelectionCommand;
+import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectEditor;
+import fr.obeo.dsl.viewpoint.ui.business.api.session.UserSession;
 
 /**
  * 
@@ -78,7 +80,7 @@ public class CollaborativeSessionUtil {
 
     public static final String REPOSITORY_NAME = "demo";
 
-    public static final String SEMANTIC_MODEL_URI = "/datas.service";
+    public static final String SEMANTIC_MODEL_URI = "/data.togaf";
 
     public static final String REPRESENTATIONS_MODEL_URI = "/rep.representations";
 
@@ -102,7 +104,7 @@ public class CollaborativeSessionUtil {
     private static Marshaller marshaller = MarshallerFactory.getInstance().getMarshaller(MarshallerFactory.MarshallerKind.XMI);
 
     private static HashMap<DRepresentation, Representation> loadedRepresentations = new HashMap<DRepresentation, Representation>();
-
+    
     private static CollaborativeSession collaborativeSession = createCollaborativeSession();
 
     private static CDORepositoryManager repositoryManager;
@@ -113,9 +115,27 @@ public class CollaborativeSessionUtil {
 
     private static final String SESSION_URI = "in-memory.aird";
 
-    private static void closeSession() {
+    public static void saveRepresentationWithPermanentOIDs(DRepresentation representation) {
+	
+	// Enables to get permanent id for business added objects
 	collaborativeSession.save();
-	collaborativeSession.close();
+//	try {
+//	    commitForNewResource();
+//	} catch (RepositoryConnectionException e) {
+//	    // TODO Auto-generated catch block
+//	    e.printStackTrace();
+//	}
+	collaborativeSession.getTransactionalEditingDomain().getCommandStack().execute(save(representation));
+	
+	collaborativeSession.save();
+//	try {
+//	    commitForNewResource();
+//	} catch (RepositoryConnectionException e) {
+//	    // TODO Auto-generated catch block
+//	    e.printStackTrace();
+//	}
+	
+	//collaborativeSession.close();
     }
 
     private static CollaborativeSession createCollaborativeSession() {
@@ -134,10 +154,10 @@ public class CollaborativeSessionUtil {
 	    testOpenDiagram("business", "Goal/Objective/Service Diagram", ContentfwkPackage.Literals.BUSINESS_ARCHITECTURE);
 	    testOpenDiagram("application", "Application Communication Diagram", ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE);
 	    // END - Tests
-
 	} catch (Exception e) {
 	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot open Viewpoint session.", e));
 	}
+
 	return collaborativeSession;
     }
 
@@ -202,12 +222,11 @@ public class CollaborativeSessionUtil {
 
 	    initSemanticRepresentationsResourceInSession(semanticRepresentationsResource);
 
-	    // Required to avoid this issue: "Cannot activate read/write transaction in read-only transaction context" during modifications.
-	    collaborativeSession.save();
-
 	    // => Select the viewpoints in relation to TOGAF business (roles, credentials...) in the Viewpoint CDO session
 	    // => Create empty representations (because it is specified in the odesign).
 	    initSelectedViewpoints();
+
+	    collaborativeSession.save();
 
 	    // Enables to store the changes related to the representations, in DB.
 	    registerListeners();
@@ -216,24 +235,35 @@ public class CollaborativeSessionUtil {
     }
 
     private static void initSelectedViewpoints() {
+
+	final Set<String> viewpointNamesToSelect = Sets.newHashSet();
+
 	final Set<Viewpoint> viewpointsToSelect = Sets.newHashSet();
 
 	for (Viewpoint viewpoint : getViewpoints("TOGAF")) {
 	    final Viewpoint v = ViewpointResourceHelper.getCorrespondingViewpoint(collaborativeSession, viewpoint);
 	    viewpointsToSelect.add(v); // For the demo, all of the TOGAF viewpoints are selected.
+	    viewpointNamesToSelect.add(v.getName());
 	}
 
-	final Callback callback = new ViewpointSelectionCallback();
-	final Command changeViewpointSelectionCommand = new ChangeViewpointSelectionCommand(collaborativeSession, callback, viewpointsToSelect,
-		new HashSet<Viewpoint>());
-	collaborativeSession.getTransactionalEditingDomain().getCommandStack().execute(changeViewpointSelectionCommand);
+	// viewpointNamesToSelect.add("business");
+
+	UserSession userSession = UserSession.from(collaborativeSession);
+	userSession.selectViewpoints(viewpointNamesToSelect);
+
+	// final Callback callback = new ViewpointSelectionCallback();
+	// final Command changeViewpointSelectionCommand = new ChangeViewpointSelectionCommand(collaborativeSession, callback, viewpointsToSelect,
+	// new HashSet<Viewpoint>());
+	// collaborativeSession.getTransactionalEditingDomain().getCommandStack().execute(changeViewpointSelectionCommand);
     }
 
-    private static void initSemanticRepresentationsResourceInSession(final Resource semanticRepresentationsResource) {
+    private static void initSemanticRepresentationsResourceInSession(final Resource semanticRepresentationsResource)
+	    throws RepositoryConnectionException {
 	if (semanticRepresentationsResource.getContents().isEmpty()) {
 
 	    // Init this resource with the container of views and views if the DB is empty
 	    initSemanticRepresentationsResource(semanticRepresentationsResource);
+	    commitForNewResource();
 
 	} else {
 
@@ -252,10 +282,11 @@ public class CollaborativeSessionUtil {
 		});
     }
 
-    private static void initSemanticBusinessResourceInSession(final Resource semanticBusinessResource) {
+    private static void initSemanticBusinessResourceInSession(final Resource semanticBusinessResource) throws RepositoryConnectionException {
 	// Init this resource with TOGAF architectures if the DB is empty
 	if (semanticBusinessResource.getContents().isEmpty()) {
 	    initSemanticBusinessResource(semanticBusinessResource);
+	    commitForNewResource();
 	}
 
 	// Add this resource to the Viewpoint CDO session
@@ -272,7 +303,8 @@ public class CollaborativeSessionUtil {
 	// Get the business semantic resource
 	final Resource resource = repositoryManager.getOrCreateTransaction(collaborativeSession).getOrCreateResource(uri);
 
-	commitForNewResource();
+	// commitForNewResource();
+
 	return resource;
     }
 
@@ -284,7 +316,6 @@ public class CollaborativeSessionUtil {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
-	collaborativeSession.save();
     }
 
     private static void initSemanticBusinessResource(Resource semanticResource) {
@@ -436,7 +467,7 @@ public class CollaborativeSessionUtil {
 
 	@Override
 	public Command transactionAboutToCommit(final ResourceSetChangeEvent event) throws RollbackException {
-	    Command result = null;
+	    CompoundCommand result = new CompoundCommand();
 
 	    List<Notification> notifications = event.getNotifications();
 
@@ -449,11 +480,10 @@ public class CollaborativeSessionUtil {
 		    // handle diagram creation and update
 		    if (notification.getEventType() == Notification.ADD || notification.getEventType() == Notification.SET) {
 			System.out.println("add or update diagram " + dRepresentation.getName());
-			result = save(dRepresentation);
-			break;
+			result.append(save(dRepresentation));			
 		    } else if (notification.getEventType() == Notification.REMOVE) {
-			System.out.println("delete diagram " + dRepresentation.getName());
-			remove(dRepresentation);
+			// System.out.println("delete diagram " + dRepresentation.getName());
+			// result.append(remove(dRepresentation));
 		    }
 
 		} else if (notification.getNotifier() instanceof EObject) {
@@ -463,18 +493,13 @@ public class CollaborativeSessionUtil {
 			DRepresentation dRepresentation = findDRepresentation(eObject);
 			if (dRepresentation != null) {
 			    System.out.println("modify gmf diagram " + dRepresentation.getName());
-			    result = save(dRepresentation);
-			    break;
+			    result.append(save(dRepresentation));
 			}
 		    }
 		}
 	    }
 
-	    // Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
-	    // The dialog to do "save and commit" during closing of the editor does not make this operation.
-	    // collaborativeSession.save();
-
-	    return result;
+	    return result.unwrap();
 	}
 
 	private DRepresentation findDRepresentation(EObject eObject) {
@@ -488,95 +513,76 @@ public class CollaborativeSessionUtil {
 	}
     }
 
-    private static void remove(DRepresentation dRepresentation) {
-	Representation representation = loadedRepresentations.get(dRepresentation);
-	System.out.println("Remove representation : " + representation.getName());
-	representation.setContent(null);
-	loadedRepresentations.remove(dRepresentation);
-    }
+    private static Command remove(final DRepresentation dRepresentation) {
 
-    private static Command save(DRepresentation dRepresentation) {
-	Command result = null;
-	Representation representation = null;
-	boolean newRepresentation = false;
-	if (!loadedRepresentations.containsKey(dRepresentation)) {
-	    System.err.println("create new marshalled representaiton");
-	    representation = RepresentationsFactory.eINSTANCE.createRepresentation();
-	    loadedRepresentations.put(dRepresentation, representation);
-	    newRepresentation = true;
-	} else {
-	    System.err.println("getting already marshalled representaiton");
-	    representation = loadedRepresentations.get(dRepresentation);
-	}
-	result = syncStorableRepresentation(dRepresentation, representation, newRepresentation);
+	Command result = new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
+	    @Override
+	    protected void doExecute() {
+		Representation representation = loadedRepresentations.get(dRepresentation);
+		View view = (View) representation.eContainer();
+		System.out.println("Remove representation : " + representation.getName());
+		view.getRepresentations().remove(representation);
+		loadedRepresentations.remove(dRepresentation);
+	    }
+	};
 	return result;
     }
 
-    private static Command syncStorableRepresentation(final DRepresentation dRepresentation, Representation storableRepresentation,
-	    boolean newRepresentation) {
+    private static Command save(final DRepresentation dRepresentation) {
 	Command result = null;
-	if (newRepresentation) {
-	    final Representation sr = storableRepresentation;
-	    result = new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
-		@Override
-		protected void doExecute() {
-		    try {
+
+	result = new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
+	    @Override
+	    protected void doExecute() {
+		try {
+
+		    if (!loadedRepresentations.containsKey(dRepresentation)) {
+
+			final Representation representation = RepresentationsFactory.eINSTANCE.createRepresentation();
+			loadedRepresentations.put(dRepresentation, representation);
 
 			final CDOResource resourceRepresentations = repositoryManager.getOrCreateTransaction(collaborativeSession)
 				.getOrCreateResource(REPRESENTATIONS_MODEL_URI);
 
 			final ViewContainer container = (ViewContainer) resourceRepresentations.getContents().get(0);
-			sr.setName(dRepresentation.getName());
-			sr.setContent(marshaller.marshall(dRepresentation));
+			representation.setName(dRepresentation.getName());
+			representation.setContent(marshaller.marshall(dRepresentation));
 
 			// Find the right View to store the storable representation
 			View view = getView(dRepresentation, container);
 
-			view.getRepresentations().add(sr);
-
-			// test
-			collaborativeSession.save();
+			view.getRepresentations().add(representation);
 
 			System.err.println("lock : " + container.cdoWriteLock().isLocked() + "//" + container.cdoWriteLock().isLockedByOthers());
-		    } catch (Exception e) {
-			System.err.println("ERROR OCCURED DURING RESULT COMMAND");
-			e.printStackTrace();
-		    }
-		}
 
-		private View getView(final DRepresentation dRepresentation, final ViewContainer container) {
-		    View result = null;
-		    Iterator<View> views = container.getViews().iterator();
-		    while (views.hasNext()) {
-			result = views.next();
-			Viewpoint viewpoint = ((DRepresentationContainer) dRepresentation.eContainer()).getViewpoint();
-			if (result.getViewpointURI().equals(viewpoint.eResource().getURIFragment(viewpoint))) {
-			    break;
-			}
-		    }
-		    return result;
-		}
-	    };
-	} else {
-	    final Representation sr = storableRepresentation;
+		    } else {
+			System.err.println("getting already marshalled representaiton");
+			final Representation representation = loadedRepresentations.get(dRepresentation);
 
-	    result = new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
-		@Override
-		protected void doExecute() {
-		    try {
 			System.err.println("UPDATING MARSHALLED");
-			sr.setName(dRepresentation.getName());
-			sr.setContent(marshaller.marshall(dRepresentation));
+			representation.setName(dRepresentation.getName());
+			representation.setContent(marshaller.marshall(dRepresentation));
+		    }
 
-			// test
-			collaborativeSession.save();
-		    } catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+		    System.err.println("ERROR OCCURED DURING RESULT COMMAND");
+		    e.printStackTrace();
+		}
+	    }
+
+	    private View getView(final DRepresentation dRepresentation, final ViewContainer container) {
+		View result = null;
+		Iterator<View> views = container.getViews().iterator();
+		while (views.hasNext()) {
+		    result = views.next();
+		    Viewpoint viewpoint = ((DRepresentationContainer) dRepresentation.eContainer()).getViewpoint();
+		    if (result.getViewpointURI().equals(viewpoint.eResource().getURIFragment(viewpoint))) {
+			break;
 		    }
 		}
-	    };
-
-	}
+		return result;
+	    }
+	};
 
 	return result;
     }
@@ -600,7 +606,46 @@ public class CollaborativeSessionUtil {
 		    }
 
 		    if (representation != null) {
-			RepresentationUtil.openEditor(representation, collaborativeSession);
+			// final DRepresentation rep = representation;
+			// new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
+			// @Override
+			// protected void doExecute() {
+			// RepresentationUtil.openEditor(rep, collaborativeSession);
+			// }
+			// }.execute();
+			final IEditorPart editor = RepresentationUtil.openEditor(representation);
+			if (editor != null) {
+			    editor.getSite().getPage().addPartListener(new IPartListener() {
+				    
+				    public void partOpened(IWorkbenchPart part) {
+					// TODO Auto-generated method stub
+					
+				    }
+				    
+				    public void partDeactivated(IWorkbenchPart part) {
+					// TODO Auto-generated method stub
+					
+				    }
+				    
+				    public void partClosed(IWorkbenchPart part) {
+					// Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
+					// The dialog to do "save and commit" during closing of the editor does not make this operation.
+					if (editor instanceof DialectEditor && part == editor) {
+					    saveRepresentationWithPermanentOIDs(((DialectEditor)editor).getRepresentation());
+					}
+					// The ideal solution would be, when we decide to save a representation, to retrieve all the new business semantic objects (with temporary OID) referenced by the representation to commit them before to commit the representation.
+				    }
+				    
+				    public void partBroughtToTop(IWorkbenchPart part) {
+					
+				    }
+				    
+				    public void partActivated(IWorkbenchPart part) {
+					// TODO Auto-generated method stub
+					
+				    }
+				});
+			}
 			break;
 		    }
 
@@ -609,8 +654,6 @@ public class CollaborativeSessionUtil {
 	    }
 
 	});
-
-	// collaborativeSession.save();
     }
 
     private static RepresentationDescription getRepresentationDescription(String name) {

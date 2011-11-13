@@ -19,8 +19,8 @@ import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectUIManager;
 
 public class RepresentationUtil {
 
-    public static void openEditor(DRepresentation representation) {
-	IEditorPart editor = DialectUIManager.INSTANCE.openEditor(CollaborativeSessionUtil.getCollaborativeSession(), representation);
+    public static IEditorPart openEditor(DRepresentation representation) {
+	return DialectUIManager.INSTANCE.openEditor(CollaborativeSessionUtil.getCollaborativeSession(), representation);
     }
 
     public static void openEditor(DRepresentation representation, final CollaborativeSession session) {
