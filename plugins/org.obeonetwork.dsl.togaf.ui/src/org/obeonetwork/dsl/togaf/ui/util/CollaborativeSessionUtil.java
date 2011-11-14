@@ -32,7 +32,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkFactory;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture;
@@ -78,7 +77,7 @@ public class CollaborativeSessionUtil {
 
     public static final String REPOSITORY_NAME = "demo";
 
-    public static final String SEMANTIC_MODEL_URI = "/datas.service";
+    public static final String SEMANTIC_MODEL_URI = "/datas.togaf";
 
     public static final String REPRESENTATIONS_MODEL_URI = "/rep.representations";
 
@@ -131,8 +130,8 @@ public class CollaborativeSessionUtil {
 
 	    // BEGIN - Tests
 	    // testCreateDRepresentation();
-	    testOpenDiagram("business", "Goal/Objective/Service Diagram", ContentfwkPackage.Literals.BUSINESS_ARCHITECTURE);
-	    testOpenDiagram("application", "Application Communication Diagram", ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE);
+	    // testOpenDiagram("business", "Goal/Objective/Service Diagram", ContentfwkPackage.Literals.BUSINESS_ARCHITECTURE);
+	    // testOpenDiagram("application", "Application Communication Diagram", ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE);
 	    // END - Tests
 
 	} catch (Exception e) {
@@ -222,7 +221,7 @@ public class CollaborativeSessionUtil {
 	    final Viewpoint v = ViewpointResourceHelper.getCorrespondingViewpoint(collaborativeSession, viewpoint);
 	    viewpointsToSelect.add(v); // For the demo, all of the TOGAF viewpoints are selected.
 	}
-
+	// ViewpointUtil.selectAllTogafViewpoints();
 	final Callback callback = new ViewpointSelectionCallback();
 	final Command changeViewpointSelectionCommand = new ChangeViewpointSelectionCommand(collaborativeSession, callback, viewpointsToSelect,
 		new HashSet<Viewpoint>());
@@ -613,7 +612,7 @@ public class CollaborativeSessionUtil {
 	// collaborativeSession.save();
     }
 
-    private static RepresentationDescription getRepresentationDescription(String name) {
+    public static RepresentationDescription getRepresentationDescription(String name) {
 	for (Viewpoint viewpoint : getViewpoints("TOGAF")) {
 	    for (RepresentationDescription repDesc : viewpoint.getOwnedRepresentations()) {
 		if (repDesc.getName().equals(name)) {
@@ -624,7 +623,7 @@ public class CollaborativeSessionUtil {
 	return null;
     }
 
-    private static DRepresentation getRepresentation(DView view, String repName) {
+    public static DRepresentation getRepresentation(DView view, String repName) {
 	for (DRepresentation rep : view.getOwnedRepresentations()) {
 	    if (rep.getName().equals(repName)) {
 		return rep;
@@ -642,7 +641,7 @@ public class CollaborativeSessionUtil {
 	return null;
     }
 
-    private static Architecture getArchitecture(EClass architectureKind) {
+    public static Architecture getArchitecture(EClass architectureKind) {
 	Resource resource = getSemanticBusinessResource();
 	if (resource != null) {
 	    EObject root = resource.getContents().get(0);
