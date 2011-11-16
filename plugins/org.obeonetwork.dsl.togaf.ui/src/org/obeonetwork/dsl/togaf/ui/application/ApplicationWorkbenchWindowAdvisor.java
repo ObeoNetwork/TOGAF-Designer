@@ -17,7 +17,9 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.bindings.Binding;
 import org.eclipse.jface.bindings.BindingManager;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IWorkbenchPreferenceConstants;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.IActionBarConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
@@ -26,150 +28,140 @@ import org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor;
 import org.eclipse.ui.internal.keys.BindingService;
 import org.eclipse.ui.internal.util.PrefUtil;
 import org.eclipse.ui.keys.IBindingService;
+import org.obeonetwork.dsl.togaf.ui.actions.OpenBrowserAction;
 
 public class ApplicationWorkbenchWindowAdvisor extends
-		/* WorkbenchWindowAdvisor */IDEWorkbenchWindowAdvisor {
+/* WorkbenchWindowAdvisor */IDEWorkbenchWindowAdvisor {
 
-	public ApplicationWorkbenchWindowAdvisor(IDEWorkbenchAdvisor wbAdvisor,
-			IWorkbenchWindowConfigurer configurer) {
-		super(wbAdvisor, configurer);
-		PrefUtil.getAPIPreferenceStore().setValue(
-				IWorkbenchPreferenceConstants.SHOW_INTRO, true);
-		PrefUtil.saveAPIPrefs();
-	}
+    public ApplicationWorkbenchWindowAdvisor(IDEWorkbenchAdvisor wbAdvisor, IWorkbenchWindowConfigurer configurer) {
+	super(wbAdvisor, configurer);
+	PrefUtil.getAPIPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_INTRO, true);
+	PrefUtil.saveAPIPrefs();
+    }
 
-	@Override
-	public void createWindowContents(Shell shell) {
-		super.createWindowContents(shell);
-	}
+    @Override
+    public void createWindowContents(Shell shell) {
+	super.createWindowContents(shell);
+    }
 
-	@Override
-	public void preWindowOpen() {
-		super.preWindowOpen();
-		IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
-		configurer.setShowFastViewBars(false);
-		configurer.setShowPerspectiveBar(false);
-		configurer.setShowStatusLine(false);
-		configurer.setShowProgressIndicator(false);
-		configurer.setShowCoolBar(false);
-	}
+    @Override
+    public void preWindowOpen() {
+	super.preWindowOpen();
+	IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
+	configurer.setShowFastViewBars(false);
+	configurer.setShowPerspectiveBar(false);
+	configurer.setShowStatusLine(false);
+	configurer.setShowProgressIndicator(false);
+	configurer.setShowCoolBar(false);
+    }
 
-	@Override
-	public void postWindowOpen() {
-		super.postWindowOpen();
-		replaceActionBarMenu();
-		// clearCoolBar();
-		clearKeybinding();
+    @Override
+    public void postWindowOpen() {
+	super.postWindowOpen();
+	replaceActionBarMenu();
+	// clearCoolBar();
+	clearKeybinding();
 
-		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
-				.resetPerspective();
-	}
+	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().resetPerspective();
+	new OpenBrowserAction().run();
+    }
 
-	@Override
-	public void openIntro() {
-		// TODO Auto-generated method stub
-		super.openIntro();
-	}
+    @Override
+    public void openIntro() {
+	// TODO Auto-generated method stub
+	super.openIntro();
+    }
 
-	private void replaceActionBarMenu() {
-		clearActionBarMenu();
-		//addActionBarMenu();
-	}
-	
-	private void addActionBarMenu(){
-		IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer();
-		IActionBarConfigurer actionBarConfigurer = workbenchWindowConfigurer
-				.getActionBarConfigurer();
-		IMenuManager mainMenu = actionBarConfigurer.getMenuManager();
-		MenuManager fileMenu = new MenuManager("&Fichier", "1");
-		fileMenu.add(new Action("&Quitter") {
-			@Override
-			public void run() {
-				PlatformUI.getWorkbench().close();
-			}
-		});
-		mainMenu.add(fileMenu);
-		MenuManager viewMenu = new MenuManager("&Affichage", "2");
-		viewMenu.add(new Action("Vue PropriÃ©tÃ©s") {
-		});
-		mainMenu.add(viewMenu);
+    private void replaceActionBarMenu() {
+	clearActionBarMenu();
+	addActionBarMenu();
+    }
 
-		mainMenu.update(true);
-	}
-
-	private void clearActionBarMenu() {
-		IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer();
-		IActionBarConfigurer actionBarConfigurer = workbenchWindowConfigurer
-				.getActionBarConfigurer();
-		IMenuManager menuManager = actionBarConfigurer.getMenuManager();
-		IContributionItem[] menuItems = menuManager.getItems();
-		for (IContributionItem menuItem : menuItems) {
-			// Hack to remove standard Eclipse menu without using the
-			// "org.eclipse.ui.activities" extension
-			if (menuItem.getId() != null
-					&& !menuItem.getId().startsWith("fr.obeo.od4ea.menu")) {
-				menuManager.remove(menuItem);
-			}
+    private void addActionBarMenu() {
+	IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer();
+	IActionBarConfigurer actionBarConfigurer = workbenchWindowConfigurer.getActionBarConfigurer();
+	IMenuManager mainMenu = actionBarConfigurer.getMenuManager();
+	MenuManager fileMenu = new MenuManager("&Fichier", "1");
+	fileMenu.add(new Action("&Quitter") {
+	    @Override
+	    public void run() {
+		PlatformUI.getWorkbench().close();
+	    }
+	});
+	mainMenu.add(fileMenu);
+	MenuManager viewMenu = new MenuManager("&Affichage", "2");
+	viewMenu.add(new OpenBrowserAction());
+	viewMenu.add(new Action("Vue Propriétés") {
+	    @Override
+	    public void run() {
+		try {
+		    PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(IPageLayout.ID_PROP_SHEET);
+		} catch (PartInitException e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
 		}
-		menuManager.update(true);
-	}
+	    }
+	});
+	mainMenu.add(viewMenu);
 
-	private void clearKeybinding() {
-		final IBindingService bindingService = (IBindingService) PlatformUI
-				.getWorkbench().getService(IBindingService.class);
-		BindingManager bindingManager = ((BindingService) bindingService)
-				.getBindingManager();
-		Binding[] bindings = bindingManager.getBindings();
-		for (Binding binding : bindings) {
-			String key = binding.getTriggerSequence().toString();
-			// if(key!=null && (key.startsWith("ALT+SHIFT") ||
-			// key.startsWith("ALT+CTRL") || key.startsWith("CTRL+SHIFT"))){
-			if (key != null
-					&& (key.startsWith("ALT+") || key.startsWith("CTRL+"))) {
-				bindingManager.removeBinding(binding);
-			}// else {
-				// System.out.println("========> preserve binding:" + key);
-				// }
-		}
-	}
+	mainMenu.update(true);
+    }
 
-	/*
-	 * private void clearCoolBar() {
-	 * 
-	 * IWorkbenchWindowConfigurer workbenchWindowConfigurer =
-	 * getWindowConfigurer(); IActionBarConfigurer actionBarConfigurer =
-	 * workbenchWindowConfigurer.getActionBarConfigurer(); ICoolBarManager
-	 * coolBarManager = actionBarConfigurer.getCoolBarManager();
-	 * 
-	 * IContributionItem[] menuItems = coolBarManager.getItems(); for
-	 * (IContributionItem menuItem : menuItems) { // Hack to remove standard
-	 * Eclipse menu without using the // "org.eclipse.ui.activities" extension
-	 * 
-	 * if (menuItem.getId() != null &&
-	 * !menuItem.getId().startsWith("fr.obeo.od4ea.menu") &&
-	 * (menuItem.getId().startsWith("org.eclipse.debug.ui") ||
-	 * menuItem.getId().startsWith("org.eclipse.search.searchActionSet") ||
-	 * menuItem.getId().startsWith("org.eclipse.wst.xml") ||
-	 * menuItem.getId().startsWith("org.eclipse.ui.workbench.navigate") ||
-	 * menuItem.getId().startsWith("fr.obeo"))) {
-	 * coolBarManager.remove(menuItem); }else {
-	 * System.out.println("==========> " + menuItem.getId());
-	 * 
-	 * } } coolBarManager.update(true);
-	 * 
-	 * SaveAction saveAction = new
-	 * SaveAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow());
-	 * saveAction
-	 * .setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().
-	 * getImageDescriptor(ISharedImages.IMG_ETOOL_SAVE_EDIT));
-	 * 
-	 * coolBarManager.add(new Separator(IWorkbenchActionConstants.NEW_GROUP));
-	 * coolBarManager.add(saveAction); coolBarManager.add(new
-	 * GroupMarker(IWorkbenchActionConstants.NEW_EXT)); coolBarManager.add(new
-	 * GroupMarker(IWorkbenchActionConstants.SAVE_GROUP));
-	 * coolBarManager.add(saveAction);
-	 * 
-	 * coolBarManager.update(true); }
-	 */
+    private void clearActionBarMenu() {
+	IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer();
+	IActionBarConfigurer actionBarConfigurer = workbenchWindowConfigurer.getActionBarConfigurer();
+	IMenuManager menuManager = actionBarConfigurer.getMenuManager();
+	IContributionItem[] menuItems = menuManager.getItems();
+	for (IContributionItem menuItem : menuItems) {
+	    // Hack to remove standard Eclipse menu without using the
+	    // "org.eclipse.ui.activities" extension
+	    if (menuItem.getId() != null && !menuItem.getId().startsWith("fr.obeo.od4ea.menu")) {
+		menuManager.remove(menuItem);
+	    }
+	}
+	menuManager.update(true);
+    }
+
+    private void clearKeybinding() {
+	final IBindingService bindingService = (IBindingService) PlatformUI.getWorkbench().getService(IBindingService.class);
+	BindingManager bindingManager = ((BindingService) bindingService).getBindingManager();
+	Binding[] bindings = bindingManager.getBindings();
+	for (Binding binding : bindings) {
+	    String key = binding.getTriggerSequence().toString();
+	    // if(key!=null && (key.startsWith("ALT+SHIFT") ||
+	    // key.startsWith("ALT+CTRL") || key.startsWith("CTRL+SHIFT"))){
+	    if (key != null && !key.startsWith("CTRL+S") && (key.startsWith("ALT+") || key.startsWith("CTRL+"))) {
+		bindingManager.removeBinding(binding);
+	    }// else {
+	     // System.out.println("========> preserve binding:" + key);
+	     // }
+	}
+    }
+
+    /*
+     * private void clearCoolBar() {
+     * 
+     * IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer(); IActionBarConfigurer actionBarConfigurer =
+     * workbenchWindowConfigurer.getActionBarConfigurer(); ICoolBarManager coolBarManager = actionBarConfigurer.getCoolBarManager();
+     * 
+     * IContributionItem[] menuItems = coolBarManager.getItems(); for (IContributionItem menuItem : menuItems) { // Hack to remove standard Eclipse
+     * menu without using the // "org.eclipse.ui.activities" extension
+     * 
+     * if (menuItem.getId() != null && !menuItem.getId().startsWith("fr.obeo.od4ea.menu") && (menuItem.getId().startsWith("org.eclipse.debug.ui") ||
+     * menuItem.getId().startsWith("org.eclipse.search.searchActionSet") || menuItem.getId().startsWith("org.eclipse.wst.xml") ||
+     * menuItem.getId().startsWith("org.eclipse.ui.workbench.navigate") || menuItem.getId().startsWith("fr.obeo"))) { coolBarManager.remove(menuItem);
+     * }else { System.out.println("==========> " + menuItem.getId());
+     * 
+     * } } coolBarManager.update(true);
+     * 
+     * SaveAction saveAction = new SaveAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow()); saveAction
+     * .setImageDescriptor(PlatformUI.getWorkbench().getSharedImages(). getImageDescriptor(ISharedImages.IMG_ETOOL_SAVE_EDIT));
+     * 
+     * coolBarManager.add(new Separator(IWorkbenchActionConstants.NEW_GROUP)); coolBarManager.add(saveAction); coolBarManager.add(new
+     * GroupMarker(IWorkbenchActionConstants.NEW_EXT)); coolBarManager.add(new GroupMarker(IWorkbenchActionConstants.SAVE_GROUP));
+     * coolBarManager.add(saveAction);
+     * 
+     * coolBarManager.update(true); }
+     */
 
 }

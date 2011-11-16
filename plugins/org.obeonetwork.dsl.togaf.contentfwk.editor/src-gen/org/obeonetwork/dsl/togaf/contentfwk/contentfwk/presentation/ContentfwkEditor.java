@@ -292,7 +292,7 @@ public class ContentfwkEditor extends InteractiveEEFEditor {
 				Iterator<Resource> it = getEditingDomain().getResourceSet().getResources().iterator();
 				while(input==null&&it.hasNext()){
 					Resource r = it.next();
-					if("cdo://demo/datas.togaf".equals(r.getURI().toString())){
+					if("cdo://demo/data.togaf".equals(r.getURI().toString())){
 						input = r;
 					}
 				}

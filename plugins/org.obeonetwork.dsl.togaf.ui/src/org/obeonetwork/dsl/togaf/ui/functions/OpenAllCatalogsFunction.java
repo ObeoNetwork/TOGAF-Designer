@@ -9,7 +9,6 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.internal.Workbench;
-import org.obeonetwork.dsl.togaf.ui.intro.WebIntroPart;
 import org.obeonetwork.dsl.togaf.ui.util.CollaborativeSessionUtil;
 
 public class OpenAllCatalogsFunction extends BrowserFunction {
@@ -27,7 +26,6 @@ public class OpenAllCatalogsFunction extends BrowserFunction {
 				.getSemanticResource();
 		
 		if (semanticResource == null) {
-			WebIntroPart.browser.stop();
 			return false;
 		}
 
@@ -40,11 +38,9 @@ public class OpenAllCatalogsFunction extends BrowserFunction {
 			IEditorPart editorPart = IDE.openEditor(page, uriEditorInput,
 					TOGAF_EDITOR);
 			editorPart.setFocus();
-			WebIntroPart.browser.stop();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			WebIntroPart.browser.stop();
 			return false;
 		}
 		return true;

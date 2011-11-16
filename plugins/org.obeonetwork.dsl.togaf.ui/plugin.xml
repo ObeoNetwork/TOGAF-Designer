@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+
+<extension point="org.eclipse.ui.editors"> 
+<editor
+ id="org.obeonetwork.dsl.togaf.ui.WebBrowser" 
+name="WebBrowser" 
+class="org.obeonetwork.dsl.togaf.ui.editors.WebBrowserEditor" 
+icon="icons/browser.gif" default="true"> 
+</editor> 
+</extension>
+
    <extension
          point="org.eclipse.core.runtime.products"
          id="org.obeonetwork.dsl.togaf.ui.product">
@@ -53,6 +63,7 @@
       </perspective>
    </extension>
    
+   <!--
    <extension point="org.eclipse.ui.perspectiveExtensions"> 
         <perspectiveExtension targetID="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"> 
             <view
@@ -75,8 +86,8 @@
                   visible="true"/> 
         </perspectiveExtension> 
     </extension> 
-   
-   
+   -->
+<!--   
    <extension point="org.eclipse.ui.intro">
       <intro
       		id="org.obeonetwork.dsl.togaf.ui.intro"
@@ -86,8 +97,8 @@
             introId="org.obeonetwork.dsl.togaf.ui.intro"
             productId="org.obeonetwork.dsl.togaf.ui.product">
       </introProductBinding>
-   </extension>
-   
+   </extension>-->
+
 	<!--
 	<extension point="org.eclipse.ui.activities">
 		<activity id="org.obeonetwork.dsl.togaf.ui.activity" name="TOGAF"/>   	
