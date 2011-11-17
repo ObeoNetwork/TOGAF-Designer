@@ -122,7 +122,8 @@ public class WebBrowserEditor extends EditorPart {
 	data.horizontalSpan = 4;
 	browser.setLayoutData(data);
 
-	browser.setUrl(editorInput.getUrl());
+	String[] headers = { "user-agent: eclipse" };
+	browser.setUrl(editorInput.getUrl(), null, headers);
 
 	browser.addTitleListener(new TitleListener() {
 	    public void changed(TitleEvent event) {

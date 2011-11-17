@@ -54,14 +54,12 @@ import fr.obeo.dsl.viewpoint.DView;
 import fr.obeo.dsl.viewpoint.ViewpointFactory;
 import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
 import fr.obeo.dsl.viewpoint.business.api.helper.ViewpointResourceHelper;
-import fr.obeo.dsl.viewpoint.collab.CDOViewpointActivator;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManager;
 import fr.obeo.dsl.viewpoint.collab.api.CDOAuthenticationManagerRegistry;
 import fr.obeo.dsl.viewpoint.collab.api.CDORepositoryManager;
 import fr.obeo.dsl.viewpoint.collab.api.CDORepositoryManagerRegistry;
 import fr.obeo.dsl.viewpoint.collab.api.RepositoryConnectionException;
 import fr.obeo.dsl.viewpoint.collab.api.model.cdoconfig.utils.CDOConfigUtils;
-import fr.obeo.dsl.viewpoint.collab.api.preferences.CDOViewpointPreferenceKeys;
 import fr.obeo.dsl.viewpoint.collab.api.remotesession.CollaborativeSession;
 import fr.obeo.dsl.viewpoint.collab.internal.session.factory.CollaborativeSessionFactoryImpl;
 import fr.obeo.dsl.viewpoint.collab.model.cdoconfig.RepositoryConfig;
@@ -116,7 +114,7 @@ public class CollaborativeSessionUtil {
 
     // The scheme "memory" enables to instantiate an InMemoryResourceImpl and not to serialize it in a file.
     // This feature requires to get the EMF bug fix on the WorkspaceSynchronizer.
-    private static final String SESSION_URI = "memory:in-memory.aird";
+    private static final String SESSION_URI = "in-memory.aird";
 
     public static void saveRepresentationWithPermanentOIDs(DRepresentation representation) {
 	
@@ -209,7 +207,7 @@ public class CollaborativeSessionUtil {
 	repositoryManager = CDORepositoryManagerRegistry.getRepositoryManager(collaborativeSession);
 	
 	// Enables not to store durable locks in an aird and not to have the confirmation dialog during closing editors (save and commit, save only...)
-	CDOViewpointActivator.getDefault().getPreferenceStore().setValue(CDOViewpointPreferenceKeys.PREF_ENABLE_DURABLE_LOCKING.name(), false);
+	//CDOViewpointActivator.getDefault().getPreferenceStore().setValue(CDOViewpointPreferenceKeys.PREF_ENABLE_DURABLE_LOCKING.name(), false);
     }
 
     private static void initRepresentationsResource(Resource remoteDAnalysisResource) {
