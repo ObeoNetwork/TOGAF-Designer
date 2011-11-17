@@ -62,6 +62,42 @@ icon="icons/browser.gif" default="true">
             name="Obeo Designer for EA">
       </perspective>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.obeonetwork.dsl.togaf.ui.application"
+            name="TOGAF Modeler">
+         <property
+               name="windowImages"
+               value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/aboutpage_OD4EA.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="appName"
+               value="TOGAF Modeler">
+         </property>
+      </product>
+   </extension>
    
    <!--
    <extension point="org.eclipse.ui.perspectiveExtensions"> 
