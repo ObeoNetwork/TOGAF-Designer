@@ -129,14 +129,4 @@
   </architectures>
   <containers name="Database Engine" ownsElements="//@architectures.4/@physicalComponents.1 //@architectures.4/@physicalComponents.0 //@architectures.4/@logicalComponents.0"/>
   <containers name="Business Rules" ownsElements="//@architectures.4/@logicalComponents.2"/>
-  <any xsi:type="layer:Layer" name="Plan d'Occupation des Sols Applicatif">
-    <subLayers name="Back-Office">
-      <subLayers name="Comptabilité" elements="//@architectures.3/@logicalApplicationComponents.1 //@architectures.3/@logicalApplicationComponents.2"/>
-      <subLayers name="Gestion Client" elements="//@architectures.3/@logicalApplicationComponents.0"/>
-      <subLayers name="Offre" elements="//@architectures.3/@logicalApplicationComponents.3 //@architectures.3/@logicalApplicationComponents.4"/>
-    </subLayers>
-    <subLayers name="Front-Office" elements="//@architectures.3/@logicalApplicationComponents.3">
-      <subLayers name="Distribution" elements="//@architectures.3/@logicalApplicationComponents.5"/>
-    </subLayers>
-  </any>
 </contentfwk:EnterpriseArchitecture>
