@@ -18,5 +18,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.obeonetwork.dsl.togaf.contentfwk;visibility:=reexport,
  org.eclipse.emf.edit,
  org.eclipse.emf.eef.runtime;visibility:=reexport,
- org.eclipse.emf.eef.runtime.extended;visibility:=reexport
+ org.eclipse.emf.eef.runtime.extended;visibility:=reexport,
+ org.eclipse.emf.cdo;resolution:=optional
 Bundle-ActivationPolicy: lazy

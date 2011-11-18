@@ -4,18 +4,8 @@ Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton=true
 Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: fr.obeo.acceleo.gen,
- org.eclipse.ui,
- org.eclipse.ui.ide,
- org.eclipse.core.runtime,
- fr.obeo.dsl.viewpoint,
  fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
- org.eclipse.gmf.runtime.notation;bundle-version="1.4.1",
  org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.4.1",
- fr.obeo.dsl.common.ui;bundle-version="2.4.0",
- org.eclipse.emf.eef.runtime,
- org.eclipse.emf.ecore.edit,
- org.obeonetwork.dsl.togaf.contentfwk;visibility:=reexport,
- org.obeonetwork.dsl.togaf.contentfwk.edit;visibility:=reexport,
  org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

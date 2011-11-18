@@ -89,12 +89,76 @@ icon="icons/browser.gif" default="true">
                value="7,252,445,20">
          </property>
          <property
+               name="appName"
+               value="TOGAF Modeler">
+         </property>
+         <property
                name="preferenceCustomization"
                value="plugin_customization.ini">
          </property>
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.obeonetwork.dsl.togaf.application.application"
+            name="TOGAF Modeler">
          <property
-               name="appName"
-               value="TOGAF Modeler">
+               name="windowImages"
+               value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/aboutpage_OD4EA.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.obeonetwork.dsl.togaf.application.application"
+            name="TOGAF Modeler">
+         <property
+               name="windowImages"
+               value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/aboutpage_OD4EA.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="5,275,445,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="7,252,445,20">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
          </property>
       </product>
    </extension>
