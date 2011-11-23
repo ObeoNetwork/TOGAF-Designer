@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dawnEmfGenmodel:DawnEMFGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dawnEmfGenmodel="http://www.eclipse.org/emf/cdo/dawn/2010/GenModel/emf" fragmentName="org.obeonetwork.dsl.togaf.contentfwk.editor.dawn" dawnEditorClassName="DawnContentfwkEditor">
+  <dawnGenerator href="contentfwk.dawngenmodel#/"/>
+  <emfGenModel href="contentfwk.genmodel#/"/>
+</dawnEmfGenmodel:DawnEMFGenerator>

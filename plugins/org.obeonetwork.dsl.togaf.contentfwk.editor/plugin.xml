@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkModelWizardID"
+            name="%_UI_ContentfwkModelWizard_label"
+            class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContentfwkModelFile.gif">
+         <description>%_UI_ContentfwkModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditorID"
+            name="%_UI_ContentfwkEditor_label"
+            icon="icons/full/obj16/ContentfwkModelFile.gif"
+            extensions="contentfwk"
+            class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditor"
+            contributorClass="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
