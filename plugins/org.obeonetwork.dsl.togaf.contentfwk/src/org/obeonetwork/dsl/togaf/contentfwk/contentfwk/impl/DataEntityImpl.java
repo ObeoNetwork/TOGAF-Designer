@@ -62,6 +62,34 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  */
 public class DataEntityImpl extends ElementImpl implements DataEntity {
 	/**
+	 * The default value of the '{@link #getDataEntityCategory() <em>Data Entity Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataEntityCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final DataEntityCategory DATA_ENTITY_CATEGORY_EDEFAULT = DataEntityCategory.MESSAGE;
+	/**
+	 * The default value of the '{@link #getPrivacyClassification() <em>Privacy Classification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrivacyClassification()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PRIVACY_CLASSIFICATION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRetentionClassification() <em>Retention Classification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetentionClassification()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RETENTION_CLASSIFICATION_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -87,7 +115,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getIsSuppliedByActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS, ContentfwkPackage.Literals.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS, true, true);
 	}
 
 	/**
@@ -97,7 +125,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getIsConsumedByActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__IS_CONSUMED_BY_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS, ContentfwkPackage.Literals.DATA_ENTITY__IS_CONSUMED_BY_ACTORS, true, true);
 	}
 
 	/**
@@ -107,7 +135,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getIsAccessedByServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__IS_ACCESSED_BY_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES, ContentfwkPackage.Literals.DATA_ENTITY__IS_ACCESSED_BY_SERVICES, true, true);
 	}
 
 	/**
@@ -117,7 +145,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getIsUpdatedThroughServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES, ContentfwkPackage.Literals.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES, true, true);
 	}
 
 	/**
@@ -126,7 +154,26 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public LogicalDataComponent getResidesWithinLogicalDataComponent() {
-		return (LogicalDataComponent)eGet(ContentfwkPackage.Literals.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, true);
+		return (LogicalDataComponent)eDynamicGet(ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, ContentfwkPackage.Literals.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LogicalDataComponent basicGetResidesWithinLogicalDataComponent() {
+		return (LogicalDataComponent)eDynamicGet(ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, ContentfwkPackage.Literals.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResidesWithinLogicalDataComponent(LogicalDataComponent newResidesWithinLogicalDataComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newResidesWithinLogicalDataComponent, ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, msgs);
+		return msgs;
 	}
 
 	/**
@@ -135,7 +182,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setResidesWithinLogicalDataComponent(LogicalDataComponent newResidesWithinLogicalDataComponent) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, newResidesWithinLogicalDataComponent);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, ContentfwkPackage.Literals.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT, newResidesWithinLogicalDataComponent);
 	}
 
 	/**
@@ -145,7 +192,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LogicalApplicationComponent> getIsProcessesByLogicalApplicationComponents() {
-		return (EList<LogicalApplicationComponent>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS, true);
+		return (EList<LogicalApplicationComponent>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS, true, true);
 	}
 
 	/**
@@ -154,7 +201,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public DataEntityCategory getDataEntityCategory() {
-		return (DataEntityCategory)eGet(ContentfwkPackage.Literals.DATA_ENTITY__DATA_ENTITY_CATEGORY, true);
+		return (DataEntityCategory)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY, ContentfwkPackage.Literals.DATA_ENTITY__DATA_ENTITY_CATEGORY, true, true);
 	}
 
 	/**
@@ -163,7 +210,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setDataEntityCategory(DataEntityCategory newDataEntityCategory) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__DATA_ENTITY_CATEGORY, newDataEntityCategory);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY, ContentfwkPackage.Literals.DATA_ENTITY__DATA_ENTITY_CATEGORY, newDataEntityCategory);
 	}
 
 	/**
@@ -172,7 +219,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public String getPrivacyClassification() {
-		return (String)eGet(ContentfwkPackage.Literals.DATA_ENTITY__PRIVACY_CLASSIFICATION, true);
+		return (String)eDynamicGet(ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION, ContentfwkPackage.Literals.DATA_ENTITY__PRIVACY_CLASSIFICATION, true, true);
 	}
 
 	/**
@@ -181,7 +228,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setPrivacyClassification(String newPrivacyClassification) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__PRIVACY_CLASSIFICATION, newPrivacyClassification);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION, ContentfwkPackage.Literals.DATA_ENTITY__PRIVACY_CLASSIFICATION, newPrivacyClassification);
 	}
 
 	/**
@@ -190,7 +237,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public String getRetentionClassification() {
-		return (String)eGet(ContentfwkPackage.Literals.DATA_ENTITY__RETENTION_CLASSIFICATION, true);
+		return (String)eDynamicGet(ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION, ContentfwkPackage.Literals.DATA_ENTITY__RETENTION_CLASSIFICATION, true, true);
 	}
 
 	/**
@@ -199,7 +246,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setRetentionClassification(String newRetentionClassification) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__RETENTION_CLASSIFICATION, newRetentionClassification);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION, ContentfwkPackage.Literals.DATA_ENTITY__RETENTION_CLASSIFICATION, newRetentionClassification);
 	}
 
 	/**
@@ -208,7 +255,16 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public DataEntity getDecomposeEntity() {
-		return (DataEntity)eGet(ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, true);
+		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataEntity basicGetDecomposeEntity() {
+		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, false, true);
 	}
 
 	/**
@@ -217,7 +273,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setDecomposeEntity(DataEntity newDecomposeEntity) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, newDecomposeEntity);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, newDecomposeEntity);
 	}
 
 	/**
@@ -227,7 +283,7 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataEntity> getRelatesTo() {
-		return (EList<DataEntity>)eGet(ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO, true);
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__RELATES_TO, ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO, true, true);
 	}
 
 	/**
@@ -236,7 +292,17 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public EObject getAny() {
-		return (EObject)eGet(ContentfwkPackage.Literals.DATA_ENTITY__ANY, true);
+		return (EObject)eDynamicGet(ContentfwkPackage.DATA_ENTITY__ANY, ContentfwkPackage.Literals.DATA_ENTITY__ANY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAny(EObject newAny, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newAny, ContentfwkPackage.DATA_ENTITY__ANY, msgs);
+		return msgs;
 	}
 
 	/**
@@ -245,7 +311,238 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * @generated
 	 */
 	public void setAny(EObject newAny) {
-		eSet(ContentfwkPackage.Literals.DATA_ENTITY__ANY, newAny);
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__ANY, ContentfwkPackage.Literals.DATA_ENTITY__ANY, newAny);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsSuppliedByActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsConsumedByActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsAccessedByServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsUpdatedThroughServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				LogicalDataComponent residesWithinLogicalDataComponent = basicGetResidesWithinLogicalDataComponent();
+				if (residesWithinLogicalDataComponent != null)
+					msgs = ((InternalEObject)residesWithinLogicalDataComponent).eInverseRemove(this, ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES, LogicalDataComponent.class, msgs);
+				return basicSetResidesWithinLogicalDataComponent((LogicalDataComponent)otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsProcessesByLogicalApplicationComponents()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				return ((InternalEList<?>)getIsSuppliedByActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				return ((InternalEList<?>)getIsConsumedByActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				return ((InternalEList<?>)getIsAccessedByServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				return ((InternalEList<?>)getIsUpdatedThroughServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				return basicSetResidesWithinLogicalDataComponent(null, msgs);
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getIsProcessesByLogicalApplicationComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DATA_ENTITY__ANY:
+				return basicSetAny(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				return getIsSuppliedByActors();
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				return getIsConsumedByActors();
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				return getIsAccessedByServices();
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				return getIsUpdatedThroughServices();
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				if (resolve) return getResidesWithinLogicalDataComponent();
+				return basicGetResidesWithinLogicalDataComponent();
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return getIsProcessesByLogicalApplicationComponents();
+			case ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY:
+				return getDataEntityCategory();
+			case ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION:
+				return getPrivacyClassification();
+			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
+				return getRetentionClassification();
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
+				if (resolve) return getDecomposeEntity();
+				return basicGetDecomposeEntity();
+			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
+				return getRelatesTo();
+			case ContentfwkPackage.DATA_ENTITY__ANY:
+				return getAny();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				getIsSuppliedByActors().clear();
+				getIsSuppliedByActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				getIsConsumedByActors().clear();
+				getIsConsumedByActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				getIsAccessedByServices().clear();
+				getIsAccessedByServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				getIsUpdatedThroughServices().clear();
+				getIsUpdatedThroughServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				setResidesWithinLogicalDataComponent((LogicalDataComponent)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				getIsProcessesByLogicalApplicationComponents().clear();
+				getIsProcessesByLogicalApplicationComponents().addAll((Collection<? extends LogicalApplicationComponent>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY:
+				setDataEntityCategory((DataEntityCategory)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION:
+				setPrivacyClassification((String)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
+				setRetentionClassification((String)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
+				setDecomposeEntity((DataEntity)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
+				getRelatesTo().clear();
+				getRelatesTo().addAll((Collection<? extends DataEntity>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__ANY:
+				setAny((EObject)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				getIsSuppliedByActors().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				getIsConsumedByActors().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				getIsAccessedByServices().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				getIsUpdatedThroughServices().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				setResidesWithinLogicalDataComponent((LogicalDataComponent)null);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				getIsProcessesByLogicalApplicationComponents().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY:
+				setDataEntityCategory(DATA_ENTITY_CATEGORY_EDEFAULT);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION:
+				setPrivacyClassification(PRIVACY_CLASSIFICATION_EDEFAULT);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
+				setRetentionClassification(RETENTION_CLASSIFICATION_EDEFAULT);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
+				setDecomposeEntity((DataEntity)null);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
+				getRelatesTo().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__ANY:
+				setAny((EObject)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.DATA_ENTITY__IS_SUPPLIED_BY_ACTORS:
+				return !getIsSuppliedByActors().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__IS_CONSUMED_BY_ACTORS:
+				return !getIsConsumedByActors().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__IS_ACCESSED_BY_SERVICES:
+				return !getIsAccessedByServices().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__IS_UPDATED_THROUGH_SERVICES:
+				return !getIsUpdatedThroughServices().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__RESIDES_WITHIN_LOGICAL_DATA_COMPONENT:
+				return basicGetResidesWithinLogicalDataComponent() != null;
+			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return !getIsProcessesByLogicalApplicationComponents().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__DATA_ENTITY_CATEGORY:
+				return getDataEntityCategory() != DATA_ENTITY_CATEGORY_EDEFAULT;
+			case ContentfwkPackage.DATA_ENTITY__PRIVACY_CLASSIFICATION:
+				return PRIVACY_CLASSIFICATION_EDEFAULT == null ? getPrivacyClassification() != null : !PRIVACY_CLASSIFICATION_EDEFAULT.equals(getPrivacyClassification());
+			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
+				return RETENTION_CLASSIFICATION_EDEFAULT == null ? getRetentionClassification() != null : !RETENTION_CLASSIFICATION_EDEFAULT.equals(getRetentionClassification());
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
+				return basicGetDecomposeEntity() != null;
+			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
+				return !getRelatesTo().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__ANY:
+				return getAny() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //DataEntityImpl

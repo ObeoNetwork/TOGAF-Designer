@@ -53,6 +53,61 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
  */
 public class ElementImpl extends CDOObjectImpl implements Element {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getSourceDescr() <em>Source Descr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceDescr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SOURCE_DESCR_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getOwnerDescr() <em>Owner Descr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnerDescr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_DESCR_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -88,7 +143,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Element> getDelegates() {
-		return (EList<Element>)eGet(ContentfwkPackage.Literals.ELEMENT__DELEGATES, true);
+		return (EList<Element>)eDynamicGet(ContentfwkPackage.ELEMENT__DELEGATES, ContentfwkPackage.Literals.ELEMENT__DELEGATES, true, true);
 	}
 
 	/**
@@ -98,7 +153,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Element> getIsDelegatedBy() {
-		return (EList<Element>)eGet(ContentfwkPackage.Literals.ELEMENT__IS_DELEGATED_BY, true);
+		return (EList<Element>)eDynamicGet(ContentfwkPackage.ELEMENT__IS_DELEGATED_BY, ContentfwkPackage.Literals.ELEMENT__IS_DELEGATED_BY, true, true);
 	}
 
 	/**
@@ -107,7 +162,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getName() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__NAME, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__NAME, ContentfwkPackage.Literals.ELEMENT__NAME, true, true);
 	}
 
 	/**
@@ -116,7 +171,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__NAME, newName);
+		eDynamicSet(ContentfwkPackage.ELEMENT__NAME, ContentfwkPackage.Literals.ELEMENT__NAME, newName);
 	}
 
 	/**
@@ -125,7 +180,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getDescription() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__DESCRIPTION, ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, true, true);
 	}
 
 	/**
@@ -134,7 +189,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setDescription(String newDescription) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, newDescription);
+		eDynamicSet(ContentfwkPackage.ELEMENT__DESCRIPTION, ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, newDescription);
 	}
 
 	/**
@@ -143,7 +198,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getCategory() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__CATEGORY, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
 	}
 
 	/**
@@ -152,7 +207,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setCategory(String newCategory) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
+		eDynamicSet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
 	}
 
 	/**
@@ -161,7 +216,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getSourceDescr() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__SOURCE_DESCR, ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, true, true);
 	}
 
 	/**
@@ -170,7 +225,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setSourceDescr(String newSourceDescr) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, newSourceDescr);
+		eDynamicSet(ContentfwkPackage.ELEMENT__SOURCE_DESCR, ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, newSourceDescr);
 	}
 
 	/**
@@ -179,7 +234,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getOwnerDescr() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__OWNER_DESCR, ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, true, true);
 	}
 
 	/**
@@ -188,7 +243,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setOwnerDescr(String newOwnerDescr) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, newOwnerDescr);
+		eDynamicSet(ContentfwkPackage.ELEMENT__OWNER_DESCR, ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, newOwnerDescr);
 	}
 
 	/**
@@ -197,7 +252,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public String getID() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__ID, true);
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__ID, ContentfwkPackage.Literals.ELEMENT__ID, true, true);
 	}
 
 	/**
@@ -206,7 +261,171 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	public void setID(String newID) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__ID, newID);
+		eDynamicSet(ContentfwkPackage.ELEMENT__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				return getDelegates();
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				return getIsDelegatedBy();
+			case ContentfwkPackage.ELEMENT__NAME:
+				return getName();
+			case ContentfwkPackage.ELEMENT__DESCRIPTION:
+				return getDescription();
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return getCategory();
+			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
+				return getSourceDescr();
+			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
+				return getOwnerDescr();
+			case ContentfwkPackage.ELEMENT__ID:
+				return getID();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				getDelegates().clear();
+				getDelegates().addAll((Collection<? extends Element>)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				getIsDelegatedBy().clear();
+				getIsDelegatedBy().addAll((Collection<? extends Element>)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__NAME:
+				setName((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				setCategory((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
+				setSourceDescr((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
+				setOwnerDescr((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__ID:
+				setID((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				getDelegates().clear();
+				return;
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				getIsDelegatedBy().clear();
+				return;
+			case ContentfwkPackage.ELEMENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				setCategory(CATEGORY_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
+				setSourceDescr(SOURCE_DESCR_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
+				setOwnerDescr(OWNER_DESCR_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__ID:
+				setID(ID_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ELEMENT__DELEGATES:
+				return !getDelegates().isEmpty();
+			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
+				return !getIsDelegatedBy().isEmpty();
+			case ContentfwkPackage.ELEMENT__NAME:
+				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+			case ContentfwkPackage.ELEMENT__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
+			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
+				return SOURCE_DESCR_EDEFAULT == null ? getSourceDescr() != null : !SOURCE_DESCR_EDEFAULT.equals(getSourceDescr());
+			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
+				return OWNER_DESCR_EDEFAULT == null ? getOwnerDescr() != null : !OWNER_DESCR_EDEFAULT.equals(getOwnerDescr());
+			case ContentfwkPackage.ELEMENT__ID:
+				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ElementImpl

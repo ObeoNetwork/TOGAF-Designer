@@ -49,6 +49,16 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role;
  */
 public class RoleImpl extends ElementImpl implements Role {
 	/**
+	 * The default value of the '{@link #getEstimatedFTEs() <em>Estimated FT Es</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstimatedFTEs()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ESTIMATED_FT_ES_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -74,7 +84,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getIsAssumedByActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.ROLE__IS_ASSUMED_BY_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS, ContentfwkPackage.Literals.ROLE__IS_ASSUMED_BY_ACTORS, true, true);
 	}
 
 	/**
@@ -84,7 +94,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Function> getAccessesFunctions() {
-		return (EList<Function>)eGet(ContentfwkPackage.Literals.ROLE__ACCESSES_FUNCTIONS, true);
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS, ContentfwkPackage.Literals.ROLE__ACCESSES_FUNCTIONS, true, true);
 	}
 
 	/**
@@ -93,7 +103,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * @generated
 	 */
 	public String getEstimatedFTEs() {
-		return (String)eGet(ContentfwkPackage.Literals.ROLE__ESTIMATED_FT_ES, true);
+		return (String)eDynamicGet(ContentfwkPackage.ROLE__ESTIMATED_FT_ES, ContentfwkPackage.Literals.ROLE__ESTIMATED_FT_ES, true, true);
 	}
 
 	/**
@@ -102,7 +112,7 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * @generated
 	 */
 	public void setEstimatedFTEs(String newEstimatedFTEs) {
-		eSet(ContentfwkPackage.Literals.ROLE__ESTIMATED_FT_ES, newEstimatedFTEs);
+		eDynamicSet(ContentfwkPackage.ROLE__ESTIMATED_FT_ES, ContentfwkPackage.Literals.ROLE__ESTIMATED_FT_ES, newEstimatedFTEs);
 	}
 
 	/**
@@ -111,7 +121,16 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * @generated
 	 */
 	public Role getDecomposesRole() {
-		return (Role)eGet(ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, true);
+		return (Role)eDynamicGet(ContentfwkPackage.ROLE__DECOMPOSES_ROLE, ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Role basicGetDecomposesRole() {
+		return (Role)eDynamicGet(ContentfwkPackage.ROLE__DECOMPOSES_ROLE, ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, false, true);
 	}
 
 	/**
@@ -120,7 +139,132 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * @generated
 	 */
 	public void setDecomposesRole(Role newDecomposesRole) {
-		eSet(ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, newDecomposesRole);
+		eDynamicSet(ContentfwkPackage.ROLE__DECOMPOSES_ROLE, ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, newDecomposesRole);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsAssumedByActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAccessesFunctions()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				return ((InternalEList<?>)getIsAssumedByActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				return ((InternalEList<?>)getAccessesFunctions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				return getIsAssumedByActors();
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				return getAccessesFunctions();
+			case ContentfwkPackage.ROLE__ESTIMATED_FT_ES:
+				return getEstimatedFTEs();
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				if (resolve) return getDecomposesRole();
+				return basicGetDecomposesRole();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				getIsAssumedByActors().clear();
+				getIsAssumedByActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				getAccessesFunctions().clear();
+				getAccessesFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case ContentfwkPackage.ROLE__ESTIMATED_FT_ES:
+				setEstimatedFTEs((String)newValue);
+				return;
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				setDecomposesRole((Role)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				getIsAssumedByActors().clear();
+				return;
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				getAccessesFunctions().clear();
+				return;
+			case ContentfwkPackage.ROLE__ESTIMATED_FT_ES:
+				setEstimatedFTEs(ESTIMATED_FT_ES_EDEFAULT);
+				return;
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				setDecomposesRole((Role)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ROLE__IS_ASSUMED_BY_ACTORS:
+				return !getIsAssumedByActors().isEmpty();
+			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
+				return !getAccessesFunctions().isEmpty();
+			case ContentfwkPackage.ROLE__ESTIMATED_FT_ES:
+				return ESTIMATED_FT_ES_EDEFAULT == null ? getEstimatedFTEs() != null : !ESTIMATED_FT_ES_EDEFAULT.equals(getEstimatedFTEs());
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				return basicGetDecomposesRole() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //RoleImpl

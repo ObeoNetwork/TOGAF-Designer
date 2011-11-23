@@ -75,6 +75,79 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  */
 public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process {
 	/**
+	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
+	/**
+	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetireDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date RETIRE_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getProcessCritiality() <em>Process Critiality</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProcessCritiality()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROCESS_CRITIALITY_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #isIsAutomated() <em>Is Automated</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsAutomated()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_AUTOMATED_EDEFAULT = false;
+	/**
+	 * The default value of the '{@link #getProcessVolumetrics() <em>Process Volumetrics</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProcessVolumetrics()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PROCESS_VOLUMETRICS_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -99,7 +172,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.PROCESS__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -108,7 +181,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
+		eDynamicSet(ContentfwkPackage.PROCESS__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -117,7 +190,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public Date getStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -126,7 +199,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
 	}
 
 	/**
@@ -135,7 +208,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public Date getLastStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -144,7 +217,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
 	}
 
 	/**
@@ -153,7 +226,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public Date getNextStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -162,7 +235,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
 	}
 
 	/**
@@ -171,7 +244,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public Date getRetireDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
 	}
 
 	/**
@@ -180,7 +253,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setRetireDate(Date newRetireDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
+		eDynamicSet(ContentfwkPackage.PROCESS__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 	/**
@@ -190,7 +263,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Function> getOrchestratesFunctions() {
-		return (EList<Function>)eGet(ContentfwkPackage.Literals.PROCESS__ORCHESTRATES_FUNCTIONS, true);
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS, ContentfwkPackage.Literals.PROCESS__ORCHESTRATES_FUNCTIONS, true, true);
 	}
 
 	/**
@@ -200,7 +273,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Function> getDecomposesFunctions() {
-		return (EList<Function>)eGet(ContentfwkPackage.Literals.PROCESS__DECOMPOSES_FUNCTIONS, true);
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_FUNCTIONS, true, true);
 	}
 
 	/**
@@ -210,7 +283,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OrganizationUnit> getInvolvesOrganizationUnits() {
-		return (EList<OrganizationUnit>)eGet(ContentfwkPackage.Literals.PROCESS__INVOLVES_ORGANIZATION_UNITS, true);
+		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS, ContentfwkPackage.Literals.PROCESS__INVOLVES_ORGANIZATION_UNITS, true, true);
 	}
 
 	/**
@@ -220,7 +293,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getOrchestratesServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.PROCESS__ORCHESTRATES_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES, ContentfwkPackage.Literals.PROCESS__ORCHESTRATES_SERVICES, true, true);
 	}
 
 	/**
@@ -230,7 +303,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getDecomposesServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.PROCESS__DECOMPOSES_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_SERVICES, true, true);
 	}
 
 	/**
@@ -240,7 +313,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getInvolvesActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.PROCESS__INVOLVES_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.PROCESS__INVOLVES_ACTORS, ContentfwkPackage.Literals.PROCESS__INVOLVES_ACTORS, true, true);
 	}
 
 	/**
@@ -250,7 +323,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Control> getIsGuidedByControls() {
-		return (EList<Control>)eGet(ContentfwkPackage.Literals.PROCESS__IS_GUIDED_BY_CONTROLS, true);
+		return (EList<Control>)eDynamicGet(ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS, ContentfwkPackage.Literals.PROCESS__IS_GUIDED_BY_CONTROLS, true, true);
 	}
 
 	/**
@@ -260,7 +333,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Event> getResolvesEvents() {
-		return (EList<Event>)eGet(ContentfwkPackage.Literals.PROCESS__RESOLVES_EVENTS, true);
+		return (EList<Event>)eDynamicGet(ContentfwkPackage.PROCESS__RESOLVES_EVENTS, ContentfwkPackage.Literals.PROCESS__RESOLVES_EVENTS, true, true);
 	}
 
 	/**
@@ -270,7 +343,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Event> getGeneratesEvents() {
-		return (EList<Event>)eGet(ContentfwkPackage.Literals.PROCESS__GENERATES_EVENTS, true);
+		return (EList<Event>)eDynamicGet(ContentfwkPackage.PROCESS__GENERATES_EVENTS, ContentfwkPackage.Literals.PROCESS__GENERATES_EVENTS, true, true);
 	}
 
 	/**
@@ -280,7 +353,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Product> getProducesProducts() {
-		return (EList<Product>)eGet(ContentfwkPackage.Literals.PROCESS__PRODUCES_PRODUCTS, true);
+		return (EList<Product>)eDynamicGet(ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS, ContentfwkPackage.Literals.PROCESS__PRODUCES_PRODUCTS, true, true);
 	}
 
 	/**
@@ -289,7 +362,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public String getProcessCritiality() {
-		return (String)eGet(ContentfwkPackage.Literals.PROCESS__PROCESS_CRITIALITY, true);
+		return (String)eDynamicGet(ContentfwkPackage.PROCESS__PROCESS_CRITIALITY, ContentfwkPackage.Literals.PROCESS__PROCESS_CRITIALITY, true, true);
 	}
 
 	/**
@@ -298,7 +371,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setProcessCritiality(String newProcessCritiality) {
-		eSet(ContentfwkPackage.Literals.PROCESS__PROCESS_CRITIALITY, newProcessCritiality);
+		eDynamicSet(ContentfwkPackage.PROCESS__PROCESS_CRITIALITY, ContentfwkPackage.Literals.PROCESS__PROCESS_CRITIALITY, newProcessCritiality);
 	}
 
 	/**
@@ -307,7 +380,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public boolean isIsAutomated() {
-		return (Boolean)eGet(ContentfwkPackage.Literals.PROCESS__IS_AUTOMATED, true);
+		return (Boolean)eDynamicGet(ContentfwkPackage.PROCESS__IS_AUTOMATED, ContentfwkPackage.Literals.PROCESS__IS_AUTOMATED, true, true);
 	}
 
 	/**
@@ -316,7 +389,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setIsAutomated(boolean newIsAutomated) {
-		eSet(ContentfwkPackage.Literals.PROCESS__IS_AUTOMATED, newIsAutomated);
+		eDynamicSet(ContentfwkPackage.PROCESS__IS_AUTOMATED, ContentfwkPackage.Literals.PROCESS__IS_AUTOMATED, newIsAutomated);
 	}
 
 	/**
@@ -325,7 +398,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public String getProcessVolumetrics() {
-		return (String)eGet(ContentfwkPackage.Literals.PROCESS__PROCESS_VOLUMETRICS, true);
+		return (String)eDynamicGet(ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS, ContentfwkPackage.Literals.PROCESS__PROCESS_VOLUMETRICS, true, true);
 	}
 
 	/**
@@ -334,7 +407,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setProcessVolumetrics(String newProcessVolumetrics) {
-		eSet(ContentfwkPackage.Literals.PROCESS__PROCESS_VOLUMETRICS, newProcessVolumetrics);
+		eDynamicSet(ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS, ContentfwkPackage.Literals.PROCESS__PROCESS_VOLUMETRICS, newProcessVolumetrics);
 	}
 
 	/**
@@ -343,7 +416,16 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process getDecomposesProcess() {
-		return (org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)eGet(ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, true);
+		return (org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)eDynamicGet(ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process basicGetDecomposesProcess() {
+		return (org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)eDynamicGet(ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, false, true);
 	}
 
 	/**
@@ -352,7 +434,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setDecomposesProcess(org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process newDecomposesProcess) {
-		eSet(ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, newDecomposesProcess);
+		eDynamicSet(ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, newDecomposesProcess);
 	}
 
 	/**
@@ -362,7 +444,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getPrecedesProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.PROCESS__PRECEDES_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PROCESS__PRECEDES_PROCESSES, ContentfwkPackage.Literals.PROCESS__PRECEDES_PROCESSES, true, true);
 	}
 
 	/**
@@ -372,7 +454,7 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getFollowsProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.PROCESS__FOLLOWS_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES, ContentfwkPackage.Literals.PROCESS__FOLLOWS_PROCESSES, true, true);
 	}
 
 	/**
@@ -381,7 +463,17 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public EObject getAny() {
-		return (EObject)eGet(ContentfwkPackage.Literals.PROCESS__ANY, true);
+		return (EObject)eDynamicGet(ContentfwkPackage.PROCESS__ANY, ContentfwkPackage.Literals.PROCESS__ANY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAny(EObject newAny, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newAny, ContentfwkPackage.PROCESS__ANY, msgs);
+		return msgs;
 	}
 
 	/**
@@ -390,7 +482,364 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * @generated
 	 */
 	public void setAny(EObject newAny) {
-		eSet(ContentfwkPackage.Literals.PROCESS__ANY, newAny);
+		eDynamicSet(ContentfwkPackage.PROCESS__ANY, ContentfwkPackage.Literals.PROCESS__ANY, newAny);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOrchestratesFunctions()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecomposesFunctions()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvesOrganizationUnits()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOrchestratesServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecomposesServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInvolvesActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsGuidedByControls()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResolvesEvents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGeneratesEvents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducesProducts()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrecedesProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFollowsProcesses()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				return ((InternalEList<?>)getOrchestratesFunctions()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				return ((InternalEList<?>)getDecomposesFunctions()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				return ((InternalEList<?>)getInvolvesOrganizationUnits()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				return ((InternalEList<?>)getOrchestratesServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				return ((InternalEList<?>)getDecomposesServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				return ((InternalEList<?>)getInvolvesActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				return ((InternalEList<?>)getIsGuidedByControls()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				return ((InternalEList<?>)getResolvesEvents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				return ((InternalEList<?>)getGeneratesEvents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				return ((InternalEList<?>)getProducesProducts()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				return ((InternalEList<?>)getPrecedesProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				return ((InternalEList<?>)getFollowsProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__ANY:
+				return basicSetAny(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__STANDARD_CLASS:
+				return getStandardClass();
+			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
+				return getStandardCreationDate();
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
+				return getLastStandardCreationDate();
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
+				return getNextStandardCreationDate();
+			case ContentfwkPackage.PROCESS__RETIRE_DATE:
+				return getRetireDate();
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				return getOrchestratesFunctions();
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				return getDecomposesFunctions();
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				return getInvolvesOrganizationUnits();
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				return getOrchestratesServices();
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				return getDecomposesServices();
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				return getInvolvesActors();
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				return getIsGuidedByControls();
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				return getResolvesEvents();
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				return getGeneratesEvents();
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				return getProducesProducts();
+			case ContentfwkPackage.PROCESS__PROCESS_CRITIALITY:
+				return getProcessCritiality();
+			case ContentfwkPackage.PROCESS__IS_AUTOMATED:
+				return isIsAutomated();
+			case ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS:
+				return getProcessVolumetrics();
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				if (resolve) return getDecomposesProcess();
+				return basicGetDecomposesProcess();
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				return getPrecedesProcesses();
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				return getFollowsProcesses();
+			case ContentfwkPackage.PROCESS__ANY:
+				return getAny();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__STANDARD_CLASS:
+				setStandardClass((StandardsClass)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
+				setStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__RETIRE_DATE:
+				setRetireDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				getOrchestratesFunctions().clear();
+				getOrchestratesFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				getDecomposesFunctions().clear();
+				getDecomposesFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				getInvolvesOrganizationUnits().clear();
+				getInvolvesOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				getOrchestratesServices().clear();
+				getOrchestratesServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				getDecomposesServices().clear();
+				getDecomposesServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				getInvolvesActors().clear();
+				getInvolvesActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				getIsGuidedByControls().clear();
+				getIsGuidedByControls().addAll((Collection<? extends Control>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				getResolvesEvents().clear();
+				getResolvesEvents().addAll((Collection<? extends Event>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				getGeneratesEvents().clear();
+				getGeneratesEvents().addAll((Collection<? extends Event>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				getProducesProducts().clear();
+				getProducesProducts().addAll((Collection<? extends Product>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__PROCESS_CRITIALITY:
+				setProcessCritiality((String)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__IS_AUTOMATED:
+				setIsAutomated((Boolean)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS:
+				setProcessVolumetrics((String)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				setDecomposesProcess((org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				getPrecedesProcesses().clear();
+				getPrecedesProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				getFollowsProcesses().clear();
+				getFollowsProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+			case ContentfwkPackage.PROCESS__ANY:
+				setAny((EObject)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__STANDARD_CLASS:
+				setStandardClass(STANDARD_CLASS_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
+				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__RETIRE_DATE:
+				setRetireDate(RETIRE_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				getOrchestratesFunctions().clear();
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				getDecomposesFunctions().clear();
+				return;
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				getInvolvesOrganizationUnits().clear();
+				return;
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				getOrchestratesServices().clear();
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				getDecomposesServices().clear();
+				return;
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				getInvolvesActors().clear();
+				return;
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				getIsGuidedByControls().clear();
+				return;
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				getResolvesEvents().clear();
+				return;
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				getGeneratesEvents().clear();
+				return;
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				getProducesProducts().clear();
+				return;
+			case ContentfwkPackage.PROCESS__PROCESS_CRITIALITY:
+				setProcessCritiality(PROCESS_CRITIALITY_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__IS_AUTOMATED:
+				setIsAutomated(IS_AUTOMATED_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS:
+				setProcessVolumetrics(PROCESS_VOLUMETRICS_EDEFAULT);
+				return;
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				setDecomposesProcess((org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)null);
+				return;
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				getPrecedesProcesses().clear();
+				return;
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				getFollowsProcesses().clear();
+				return;
+			case ContentfwkPackage.PROCESS__ANY:
+				setAny((EObject)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PROCESS__STANDARD_CLASS:
+				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
+			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
+				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
+				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
+				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.PROCESS__RETIRE_DATE:
+				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
+				return !getOrchestratesFunctions().isEmpty();
+			case ContentfwkPackage.PROCESS__DECOMPOSES_FUNCTIONS:
+				return !getDecomposesFunctions().isEmpty();
+			case ContentfwkPackage.PROCESS__INVOLVES_ORGANIZATION_UNITS:
+				return !getInvolvesOrganizationUnits().isEmpty();
+			case ContentfwkPackage.PROCESS__ORCHESTRATES_SERVICES:
+				return !getOrchestratesServices().isEmpty();
+			case ContentfwkPackage.PROCESS__DECOMPOSES_SERVICES:
+				return !getDecomposesServices().isEmpty();
+			case ContentfwkPackage.PROCESS__INVOLVES_ACTORS:
+				return !getInvolvesActors().isEmpty();
+			case ContentfwkPackage.PROCESS__IS_GUIDED_BY_CONTROLS:
+				return !getIsGuidedByControls().isEmpty();
+			case ContentfwkPackage.PROCESS__RESOLVES_EVENTS:
+				return !getResolvesEvents().isEmpty();
+			case ContentfwkPackage.PROCESS__GENERATES_EVENTS:
+				return !getGeneratesEvents().isEmpty();
+			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
+				return !getProducesProducts().isEmpty();
+			case ContentfwkPackage.PROCESS__PROCESS_CRITIALITY:
+				return PROCESS_CRITIALITY_EDEFAULT == null ? getProcessCritiality() != null : !PROCESS_CRITIALITY_EDEFAULT.equals(getProcessCritiality());
+			case ContentfwkPackage.PROCESS__IS_AUTOMATED:
+				return isIsAutomated() != IS_AUTOMATED_EDEFAULT;
+			case ContentfwkPackage.PROCESS__PROCESS_VOLUMETRICS:
+				return PROCESS_VOLUMETRICS_EDEFAULT == null ? getProcessVolumetrics() != null : !PROCESS_VOLUMETRICS_EDEFAULT.equals(getProcessVolumetrics());
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				return basicGetDecomposesProcess() != null;
+			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
+				return !getPrecedesProcesses().isEmpty();
+			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
+				return !getFollowsProcesses().isEmpty();
+			case ContentfwkPackage.PROCESS__ANY:
+				return getAny() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**

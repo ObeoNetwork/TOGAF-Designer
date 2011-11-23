@@ -60,6 +60,52 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  */
 public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDataComponent {
 	/**
+	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
+	/**
+	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetireDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date RETIRE_DATE_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -84,7 +130,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -93,7 +139,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -102,7 +148,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public Date getStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -111,7 +157,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
 	}
 
 	/**
@@ -120,7 +166,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public Date getLastStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -129,7 +175,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
 	}
 
 	/**
@@ -138,7 +184,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public Date getNextStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -147,7 +193,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
 	}
 
 	/**
@@ -156,7 +202,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public Date getRetireDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
 	}
 
 	/**
@@ -165,7 +211,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setRetireDate(Date newRetireDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 	/**
@@ -175,7 +221,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LogicalDataComponent> getExtendsLogicalDataComponents() {
-		return (EList<LogicalDataComponent>)eGet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS, true);
+		return (EList<LogicalDataComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS, true, true);
 	}
 
 	/**
@@ -184,7 +230,26 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public Location getIsHotedInLocation() {
-		return (Location)eGet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, true);
+		return (Location)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetIsHotedInLocation() {
+		return (Location)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIsHotedInLocation(Location newIsHotedInLocation, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newIsHotedInLocation, ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, msgs);
+		return msgs;
 	}
 
 	/**
@@ -193,7 +258,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setIsHotedInLocation(Location newIsHotedInLocation) {
-		eSet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, newIsHotedInLocation);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION, newIsHotedInLocation);
 	}
 
 	/**
@@ -202,7 +267,16 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public PhysicalDataComponent getDecomposesPhysicalDataComponent() {
-		return (PhysicalDataComponent)eGet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, true);
+		return (PhysicalDataComponent)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PhysicalDataComponent basicGetDecomposesPhysicalDataComponent() {
+		return (PhysicalDataComponent)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, false, true);
 	}
 
 	/**
@@ -211,7 +285,7 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	public void setDecomposesPhysicalDataComponent(PhysicalDataComponent newDecomposesPhysicalDataComponent) {
-		eSet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, newDecomposesPhysicalDataComponent);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, newDecomposesPhysicalDataComponent);
 	}
 
 	/**
@@ -221,7 +295,186 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalApplicationComponent> getEncapsulatesPhysicalApplicationComponents() {
-		return (EList<PhysicalApplicationComponent>)eGet(ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS, true);
+		return (EList<PhysicalApplicationComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExtendsLogicalDataComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				Location isHotedInLocation = basicGetIsHotedInLocation();
+				if (isHotedInLocation != null)
+					msgs = ((InternalEObject)isHotedInLocation).eInverseRemove(this, ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS, Location.class, msgs);
+				return basicSetIsHotedInLocation((Location)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				return ((InternalEList<?>)getExtendsLogicalDataComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				return basicSetIsHotedInLocation(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS:
+				return getStandardClass();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				return getStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				return getLastStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				return getNextStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
+				return getRetireDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				return getExtendsLogicalDataComponents();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				if (resolve) return getIsHotedInLocation();
+				return basicGetIsHotedInLocation();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				if (resolve) return getDecomposesPhysicalDataComponent();
+				return basicGetDecomposesPhysicalDataComponent();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				return getEncapsulatesPhysicalApplicationComponents();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS:
+				setStandardClass((StandardsClass)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
+				setRetireDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				getExtendsLogicalDataComponents().clear();
+				getExtendsLogicalDataComponents().addAll((Collection<? extends LogicalDataComponent>)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				setIsHotedInLocation((Location)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				setDecomposesPhysicalDataComponent((PhysicalDataComponent)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				getEncapsulatesPhysicalApplicationComponents().clear();
+				getEncapsulatesPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS:
+				setStandardClass(STANDARD_CLASS_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
+				setRetireDate(RETIRE_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				getExtendsLogicalDataComponents().clear();
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				setIsHotedInLocation((Location)null);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				setDecomposesPhysicalDataComponent((PhysicalDataComponent)null);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				getEncapsulatesPhysicalApplicationComponents().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS:
+				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
+				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
+				return !getExtendsLogicalDataComponents().isEmpty();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
+				return basicGetIsHotedInLocation() != null;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				return basicGetDecomposesPhysicalDataComponent() != null;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				return !getEncapsulatesPhysicalApplicationComponents().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**

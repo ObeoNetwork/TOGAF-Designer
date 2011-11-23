@@ -2,15 +2,15 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.contentfwk;singleton:=true
-Bundle-Version: 0.7.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.obeonetwork.dsl.togaf.contentfwk.contentfwk,
  org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl,
  org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.cdo;bundle-version="4.0.0";visibility:=reexport
+ org.eclipse.emf.cdo;visibility:=reexport
 Bundle-ActivationPolicy: lazy

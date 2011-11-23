@@ -69,7 +69,7 @@ public class StrategicArchitectureImpl extends ArchitectureImpl implements Strat
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Capability> getCapabilities() {
-		return (EList<Capability>)eGet(ContentfwkPackage.Literals.STRATEGIC_ARCHITECTURE__CAPABILITIES, true);
+		return (EList<Capability>)eDynamicGet(ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES, ContentfwkPackage.Literals.STRATEGIC_ARCHITECTURE__CAPABILITIES, true, true);
 	}
 
 	/**
@@ -79,7 +79,94 @@ public class StrategicArchitectureImpl extends ArchitectureImpl implements Strat
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<StrategicElement> getStrategicElements() {
-		return (EList<StrategicElement>)eGet(ContentfwkPackage.Literals.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS, true);
+		return (EList<StrategicElement>)eDynamicGet(ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS, ContentfwkPackage.Literals.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES:
+				return ((InternalEList<?>)getCapabilities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS:
+				return ((InternalEList<?>)getStrategicElements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES:
+				return getCapabilities();
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS:
+				return getStrategicElements();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES:
+				getCapabilities().clear();
+				getCapabilities().addAll((Collection<? extends Capability>)newValue);
+				return;
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS:
+				getStrategicElements().clear();
+				getStrategicElements().addAll((Collection<? extends StrategicElement>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES:
+				getCapabilities().clear();
+				return;
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS:
+				getStrategicElements().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__CAPABILITIES:
+				return !getCapabilities().isEmpty();
+			case ContentfwkPackage.STRATEGIC_ARCHITECTURE__STRATEGIC_ELEMENTS:
+				return !getStrategicElements().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //StrategicArchitectureImpl

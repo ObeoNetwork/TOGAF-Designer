@@ -10,7 +10,9 @@ import java.util.Set;
 
 import org.apache.commons.codec.binary.Base64;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.cdo.eresource.CDOResource;
 import org.eclipse.emf.cdo.util.CommitException;
@@ -31,14 +33,9 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PlatformUI;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkFactory;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyArchitecture;
 import org.obeonetwork.dsl.togaf.representations.Representation;
 import org.obeonetwork.dsl.togaf.representations.RepresentationsFactory;
 import org.obeonetwork.dsl.togaf.representations.View;
@@ -103,10 +100,12 @@ public class CollaborativeSessionUtil {
     private static Marshaller marshaller = MarshallerFactory.getInstance().getMarshaller(MarshallerFactory.MarshallerKind.XMI);
 
     private static HashMap<DRepresentation, Representation> loadedRepresentations = new HashMap<DRepresentation, Representation>();
-    
+
     private static CollaborativeSession collaborativeSession = createCollaborativeSession();
 
     private static CDORepositoryManager repositoryManager;
+
+    private static List<String> viewpointsAdded;
 
     private static final String SERVER_LOCATION = "localhost";
 
@@ -117,26 +116,26 @@ public class CollaborativeSessionUtil {
     private static final String SESSION_URI = "in-memory.aird";
 
     public static void saveRepresentationWithPermanentOIDs(DRepresentation representation) {
-	
+
 	// Enables to get permanent id for business added objects
 	collaborativeSession.save();
-//	try {
-//	    commitForNewResource();
-//	} catch (RepositoryConnectionException e) {
-//	    // TODO Auto-generated catch block
-//	    e.printStackTrace();
-//	}
+	// try {
+	// commitForNewResource();
+	// } catch (RepositoryConnectionException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
 	collaborativeSession.getTransactionalEditingDomain().getCommandStack().execute(save(representation));
-	
+
 	collaborativeSession.save();
-//	try {
-//	    commitForNewResource();
-//	} catch (RepositoryConnectionException e) {
-//	    // TODO Auto-generated catch block
-//	    e.printStackTrace();
-//	}
-	
-	//collaborativeSession.close();
+	// try {
+	// commitForNewResource();
+	// } catch (RepositoryConnectionException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+
+	// collaborativeSession.close();
     }
 
     private static CollaborativeSession createCollaborativeSession() {
@@ -145,6 +144,7 @@ public class CollaborativeSessionUtil {
 	}
 
 	try {
+	    initViewpointsAdded();
 	    // Open the collaborative session
 	    openSession();
 
@@ -160,6 +160,16 @@ public class CollaborativeSessionUtil {
 	}
 
 	return collaborativeSession;
+    }
+
+    private static void initViewpointsAdded() {
+	viewpointsAdded = new ArrayList<String>();
+	IConfigurationElement[] config = Platform.getExtensionRegistry()
+		.getConfigurationElementsFor("org.obeonetwork.dsl.togaf.ui.newViewpoint");
+		for (IConfigurationElement e : config) {
+			String name = e.getAttribute("name");
+			    viewpointsAdded.add(name);
+		}
     }
 
     public static void openSession() throws RepositoryConnectionException, CoreException {
@@ -205,9 +215,10 @@ public class CollaborativeSessionUtil {
 
 	// Get the class used to access the CDO repository
 	repositoryManager = CDORepositoryManagerRegistry.getRepositoryManager(collaborativeSession);
-	
-	// Enables not to store durable locks in an aird and not to have the confirmation dialog during closing editors (save and commit, save only...)
-	//CDOViewpointActivator.getDefault().getPreferenceStore().setValue(CDOViewpointPreferenceKeys.PREF_ENABLE_DURABLE_LOCKING.name(), false);
+
+	// Enables not to store durable locks in an aird and not to have the confirmation dialog during closing editors (save and commit, save
+	// only...)
+	// CDOViewpointActivator.getDefault().getPreferenceStore().setValue(CDOViewpointPreferenceKeys.PREF_ENABLE_DURABLE_LOCKING.name(), false);
     }
 
     private static void initRepresentationsResource(Resource remoteDAnalysisResource) {
@@ -248,6 +259,14 @@ public class CollaborativeSessionUtil {
 	    final Viewpoint v = ViewpointResourceHelper.getCorrespondingViewpoint(collaborativeSession, viewpoint);
 	    viewpointsToSelect.add(v); // For the demo, all of the TOGAF viewpoints are selected.
 	    viewpointNamesToSelect.add(v.getName());
+	}
+
+	for (String viewpointAdded : viewpointsAdded) {
+	    for (Viewpoint viewpoint : getViewpoints(viewpointAdded)) {
+		final Viewpoint v = ViewpointResourceHelper.getCorrespondingViewpoint(collaborativeSession, viewpoint);
+		viewpointsToSelect.add(v);
+		viewpointNamesToSelect.add(v.getName());
+	    }
 	}
 
 	// viewpointNamesToSelect.add("business");
@@ -324,22 +343,22 @@ public class CollaborativeSessionUtil {
 
     private static void initSemanticBusinessResource(Resource semanticResource) {
 	EnterpriseArchitecture enterpriseArchitecture = ContentfwkFactory.eINSTANCE.createEnterpriseArchitecture();
-
-	StrategicArchitecture strategicArchitecture = ContentfwkFactory.eINSTANCE.createStrategicArchitecture();
-	enterpriseArchitecture.getArchitectures().add(strategicArchitecture);
-
-	BusinessArchitecture businessArchitecture = ContentfwkFactory.eINSTANCE.createBusinessArchitecture();
-	enterpriseArchitecture.getArchitectures().add(businessArchitecture);
-
-	DataArchitecture dataArchitecture = ContentfwkFactory.eINSTANCE.createDataArchitecture();
-	enterpriseArchitecture.getArchitectures().add(dataArchitecture);
-
-	ApplicationArchitecture applicationArchitecture = ContentfwkFactory.eINSTANCE.createApplicationArchitecture();
-	enterpriseArchitecture.getArchitectures().add(applicationArchitecture);
-
-	TechnologyArchitecture technologyArchitecture = ContentfwkFactory.eINSTANCE.createTechnologyArchitecture();
-	enterpriseArchitecture.getArchitectures().add(technologyArchitecture);
-
+	/*
+	 * StrategicArchitecture strategicArchitecture = ContentfwkFactory.eINSTANCE.createStrategicArchitecture();
+	 * enterpriseArchitecture.getArchitectures().add(strategicArchitecture);
+	 * 
+	 * BusinessArchitecture businessArchitecture = ContentfwkFactory.eINSTANCE.createBusinessArchitecture();
+	 * enterpriseArchitecture.getArchitectures().add(businessArchitecture);
+	 * 
+	 * DataArchitecture dataArchitecture = ContentfwkFactory.eINSTANCE.createDataArchitecture();
+	 * enterpriseArchitecture.getArchitectures().add(dataArchitecture);
+	 * 
+	 * ApplicationArchitecture applicationArchitecture = ContentfwkFactory.eINSTANCE.createApplicationArchitecture();
+	 * enterpriseArchitecture.getArchitectures().add(applicationArchitecture);
+	 * 
+	 * TechnologyArchitecture technologyArchitecture = ContentfwkFactory.eINSTANCE.createTechnologyArchitecture();
+	 * enterpriseArchitecture.getArchitectures().add(technologyArchitecture);
+	 */
 	semanticResource.getContents().add(enterpriseArchitecture);
     }
 
@@ -355,6 +374,18 @@ public class CollaborativeSessionUtil {
 	    view.setViewpointURI(viewpointUriFragment);
 
 	    container.getViews().add(view);
+	}
+
+	for (String viewpointAdded : viewpointsAdded) {
+	    for (Viewpoint viewpoint : getViewpoints(viewpointAdded)) {
+		String viewpointUriFragment = viewpoint.eResource().getURIFragment(viewpoint);
+
+		// Create the View
+		View view = RepresentationsFactory.eINSTANCE.createView();
+		view.setViewpointURI(viewpointUriFragment);
+
+		container.getViews().add(view);
+	    }
 	}
 
 	semanticResource.getContents().add(container);
@@ -452,6 +483,17 @@ public class CollaborativeSessionUtil {
 		break;
 	    }
 	}
+	if (result == null) {
+	    for (String viewpointAdded : viewpointsAdded) {
+		for (Viewpoint viewpoint : getViewpoints(viewpointAdded)) {
+		    String uriFragment = viewpoint.eResource().getURIFragment(viewpoint);
+		    if (uriFragment.equals(viewpointUri)) {
+			result = viewpoint;
+			break;
+		    }
+		}
+	    }
+	}
 	return result;
     }
 
@@ -484,7 +526,7 @@ public class CollaborativeSessionUtil {
 		    // handle diagram creation and update
 		    if (notification.getEventType() == Notification.ADD || notification.getEventType() == Notification.SET) {
 			System.out.println("add or update diagram " + dRepresentation.getName());
-			result.append(save(dRepresentation));			
+			result.append(save(dRepresentation));
 		    } else if (notification.getEventType() == Notification.REMOVE) {
 			// System.out.println("delete diagram " + dRepresentation.getName());
 			// result.append(remove(dRepresentation));
@@ -557,19 +599,19 @@ public class CollaborativeSessionUtil {
 
 			view.getRepresentations().add(representation);
 
-			System.err.println("lock : " + container.cdoWriteLock().isLocked() + "//" + container.cdoWriteLock().isLockedByOthers());
+			// System.err.println("lock : " + container.cdoWriteLock().isLocked() + "//" + container.cdoWriteLock().isLockedByOthers());
 
 		    } else {
-			System.err.println("getting already marshalled representaiton");
+			// System.err.println("getting already marshalled representaiton");
 			final Representation representation = loadedRepresentations.get(dRepresentation);
 
-			System.err.println("UPDATING MARSHALLED");
+			// System.err.println("UPDATING MARSHALLED");
 			representation.setName(dRepresentation.getName());
 			representation.setContent(marshaller.marshall(dRepresentation));
 		    }
 
 		} catch (Exception e) {
-		    System.err.println("ERROR OCCURED DURING RESULT COMMAND");
+		    // System.err.println("ERROR OCCURED DURING RESULT COMMAND");
 		    e.printStackTrace();
 		}
 	    }
@@ -593,7 +635,7 @@ public class CollaborativeSessionUtil {
 
     private static void testOpenDiagram(final String viewpointName, final String repName, final EClass architectureKind) {
 
-	System.err.println(repName);
+	// System.err.println(repName);
 
 	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().syncExec(new Runnable() {
 	    public void run() {
@@ -620,35 +662,37 @@ public class CollaborativeSessionUtil {
 			final IEditorPart editor = RepresentationUtil.openEditor(representation);
 			if (editor != null) {
 			    editor.getSite().getPage().addPartListener(new IPartListener() {
-				    
-				    public void partOpened(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
+
+				public void partOpened(IWorkbenchPart part) {
+				    // TODO Auto-generated method stub
+
+				}
+
+				public void partDeactivated(IWorkbenchPart part) {
+				    // TODO Auto-generated method stub
+
+				}
+
+				public void partClosed(IWorkbenchPart part) {
+				    // Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
+				    // The dialog to do "save and commit" during closing of the editor does not make this operation.
+				    if (editor instanceof DialectEditor && part == editor) {
+					saveRepresentationWithPermanentOIDs(((DialectEditor) editor).getRepresentation());
 				    }
-				    
-				    public void partDeactivated(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
-				    }
-				    
-				    public void partClosed(IWorkbenchPart part) {
-					// Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
-					// The dialog to do "save and commit" during closing of the editor does not make this operation.
-					if (editor instanceof DialectEditor && part == editor) {
-					    saveRepresentationWithPermanentOIDs(((DialectEditor)editor).getRepresentation());
-					}
-					// The ideal solution would be, when we decide to save a representation, to retrieve all the new business semantic objects (with temporary OID) referenced by the representation to commit them before to commit the representation.
-				    }
-				    
-				    public void partBroughtToTop(IWorkbenchPart part) {
-					
-				    }
-				    
-				    public void partActivated(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
-				    }
-				});
+				    // The ideal solution would be, when we decide to save a representation, to retrieve all the new business semantic
+				    // objects (with temporary OID) referenced by the representation to commit them before to commit the
+				    // representation.
+				}
+
+				public void partBroughtToTop(IWorkbenchPart part) {
+
+				}
+
+				public void partActivated(IWorkbenchPart part) {
+				    // TODO Auto-generated method stub
+
+				}
+			    });
 			}
 			break;
 		    }
@@ -665,6 +709,15 @@ public class CollaborativeSessionUtil {
 	    for (RepresentationDescription repDesc : viewpoint.getOwnedRepresentations()) {
 		if (repDesc.getName().equals(name)) {
 		    return repDesc;
+		}
+	    }
+	}
+	for (String viewpointAdded : viewpointsAdded) {
+	    for (Viewpoint viewpoint : getViewpoints(viewpointAdded)) {
+		for (RepresentationDescription repDesc : viewpoint.getOwnedRepresentations()) {
+		    if (repDesc.getName().equals(name)) {
+			return repDesc;
+		    }
 		}
 	    }
 	}

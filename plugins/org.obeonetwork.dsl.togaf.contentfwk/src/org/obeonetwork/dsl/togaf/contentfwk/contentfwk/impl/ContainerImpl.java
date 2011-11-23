@@ -45,6 +45,16 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
  */
 public class ContainerImpl extends CDOObjectImpl implements Container {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -79,7 +89,7 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 	 * @generated
 	 */
 	public String getName() {
-		return (String)eGet(ContentfwkPackage.Literals.CONTAINER__NAME, true);
+		return (String)eDynamicGet(ContentfwkPackage.CONTAINER__NAME, ContentfwkPackage.Literals.CONTAINER__NAME, true, true);
 	}
 
 	/**
@@ -88,7 +98,7 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(ContentfwkPackage.Literals.CONTAINER__NAME, newName);
+		eDynamicSet(ContentfwkPackage.CONTAINER__NAME, ContentfwkPackage.Literals.CONTAINER__NAME, newName);
 	}
 
 	/**
@@ -98,7 +108,77 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Element> getOwnsElements() {
-		return (EList<Element>)eGet(ContentfwkPackage.Literals.CONTAINER__OWNS_ELEMENTS, true);
+		return (EList<Element>)eDynamicGet(ContentfwkPackage.CONTAINER__OWNS_ELEMENTS, ContentfwkPackage.Literals.CONTAINER__OWNS_ELEMENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTAINER__NAME:
+				return getName();
+			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
+				return getOwnsElements();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTAINER__NAME:
+				setName((String)newValue);
+				return;
+			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
+				getOwnsElements().clear();
+				getOwnsElements().addAll((Collection<? extends Element>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTAINER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
+				getOwnsElements().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTAINER__NAME:
+				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
+				return !getOwnsElements().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ContainerImpl

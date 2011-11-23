@@ -75,7 +75,7 @@ public class EventImpl extends ElementImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getIsResolvedByBusinessServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES, ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES, true, true);
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class EventImpl extends ElementImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsResolvedByProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES, ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_PROCESSES, true, true);
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class EventImpl extends ElementImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsGeneratedByProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES, ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_PROCESSES, true, true);
 	}
 
 	/**
@@ -105,7 +105,7 @@ public class EventImpl extends ElementImpl implements Event {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getIsResolvedByActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS, ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_ACTORS, true, true);
 	}
 
 	/**
@@ -114,7 +114,26 @@ public class EventImpl extends ElementImpl implements Event {
 	 * @generated
 	 */
 	public Actor getIsGeneratedByActors() {
-		return (Actor)eGet(ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_ACTORS, true);
+		return (Actor)eDynamicGet(ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS, ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_ACTORS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Actor basicGetIsGeneratedByActors() {
+		return (Actor)eDynamicGet(ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS, ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_ACTORS, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIsGeneratedByActors(Actor newIsGeneratedByActors, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newIsGeneratedByActors, ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS, msgs);
+		return msgs;
 	}
 
 	/**
@@ -123,7 +142,159 @@ public class EventImpl extends ElementImpl implements Event {
 	 * @generated
 	 */
 	public void setIsGeneratedByActors(Actor newIsGeneratedByActors) {
-		eSet(ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_ACTORS, newIsGeneratedByActors);
+		eDynamicSet(ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS, ContentfwkPackage.Literals.EVENT__IS_GENERATED_BY_ACTORS, newIsGeneratedByActors);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsResolvedByBusinessServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsResolvedByProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsGeneratedByProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsResolvedByActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				Actor isGeneratedByActors = basicGetIsGeneratedByActors();
+				if (isGeneratedByActors != null)
+					msgs = ((InternalEObject)isGeneratedByActors).eInverseRemove(this, ContentfwkPackage.ACTOR__GENERATES_EVENTS, Actor.class, msgs);
+				return basicSetIsGeneratedByActors((Actor)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				return ((InternalEList<?>)getIsResolvedByBusinessServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				return ((InternalEList<?>)getIsResolvedByProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				return ((InternalEList<?>)getIsGeneratedByProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				return ((InternalEList<?>)getIsResolvedByActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				return basicSetIsGeneratedByActors(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				return getIsResolvedByBusinessServices();
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				return getIsResolvedByProcesses();
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				return getIsGeneratedByProcesses();
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				return getIsResolvedByActors();
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				if (resolve) return getIsGeneratedByActors();
+				return basicGetIsGeneratedByActors();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				getIsResolvedByBusinessServices().clear();
+				getIsResolvedByBusinessServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				getIsResolvedByProcesses().clear();
+				getIsResolvedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				getIsGeneratedByProcesses().clear();
+				getIsGeneratedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				getIsResolvedByActors().clear();
+				getIsResolvedByActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				setIsGeneratedByActors((Actor)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				getIsResolvedByBusinessServices().clear();
+				return;
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				getIsResolvedByProcesses().clear();
+				return;
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				getIsGeneratedByProcesses().clear();
+				return;
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				getIsResolvedByActors().clear();
+				return;
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				setIsGeneratedByActors((Actor)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES:
+				return !getIsResolvedByBusinessServices().isEmpty();
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_PROCESSES:
+				return !getIsResolvedByProcesses().isEmpty();
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_PROCESSES:
+				return !getIsGeneratedByProcesses().isEmpty();
+			case ContentfwkPackage.EVENT__IS_RESOLVED_BY_ACTORS:
+				return !getIsResolvedByActors().isEmpty();
+			case ContentfwkPackage.EVENT__IS_GENERATED_BY_ACTORS:
+				return basicGetIsGeneratedByActors() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //EventImpl

@@ -56,6 +56,52 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  */
 public class LogicalDataComponentImpl extends ElementImpl implements LogicalDataComponent {
 	/**
+	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
+	/**
+	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetireDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date RETIRE_DATE_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -80,7 +126,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -89,7 +135,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
+		eDynamicSet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -98,7 +144,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public Date getStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -107,7 +153,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
 	}
 
 	/**
@@ -116,7 +162,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public Date getLastStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -125,7 +171,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
 	}
 
 	/**
@@ -134,7 +180,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public Date getNextStandardCreationDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
 	}
 
 	/**
@@ -143,7 +189,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+		eDynamicSet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
 	}
 
 	/**
@@ -152,7 +198,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public Date getRetireDate() {
-		return (Date)eGet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true);
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
 	}
 
 	/**
@@ -161,7 +207,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 * @generated
 	 */
 	public void setRetireDate(Date newRetireDate) {
-		eSet(ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
+		eDynamicSet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 	/**
@@ -171,7 +217,7 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<DataEntity> getEncapsulatesDataEntities() {
-		return (EList<DataEntity>)eGet(ContentfwkPackage.Literals.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES, true);
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES, ContentfwkPackage.Literals.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -181,7 +227,161 @@ public class LogicalDataComponentImpl extends ElementImpl implements LogicalData
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalDataComponent> getIsExtendedByPhysicalDataComponents() {
-		return (EList<PhysicalDataComponent>)eGet(ContentfwkPackage.Literals.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS, true);
+		return (EList<PhysicalDataComponent>)eDynamicGet(ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS, ContentfwkPackage.Literals.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEncapsulatesDataEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsExtendedByPhysicalDataComponents()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				return ((InternalEList<?>)getEncapsulatesDataEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<?>)getIsExtendedByPhysicalDataComponents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS:
+				return getStandardClass();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				return getStandardCreationDate();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				return getLastStandardCreationDate();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				return getNextStandardCreationDate();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE:
+				return getRetireDate();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				return getEncapsulatesDataEntities();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				return getIsExtendedByPhysicalDataComponents();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS:
+				setStandardClass((StandardsClass)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE:
+				setRetireDate((Date)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				getEncapsulatesDataEntities().clear();
+				getEncapsulatesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				getIsExtendedByPhysicalDataComponents().clear();
+				getIsExtendedByPhysicalDataComponents().addAll((Collection<? extends PhysicalDataComponent>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS:
+				setStandardClass(STANDARD_CLASS_EDEFAULT);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE:
+				setRetireDate(RETIRE_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				getEncapsulatesDataEntities().clear();
+				return;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				getIsExtendedByPhysicalDataComponents().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CLASS:
+				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
+				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
+				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__RETIRE_DATE:
+				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__ENCAPSULATES_DATA_ENTITIES:
+				return !getEncapsulatesDataEntities().isEmpty();
+			case ContentfwkPackage.LOGICAL_DATA_COMPONENT__IS_EXTENDED_BY_PHYSICAL_DATA_COMPONENTS:
+				return !getIsExtendedByPhysicalDataComponents().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**

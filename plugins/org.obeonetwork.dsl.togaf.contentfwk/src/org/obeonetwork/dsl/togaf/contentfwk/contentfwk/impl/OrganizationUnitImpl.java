@@ -57,6 +57,16 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  */
 public class OrganizationUnitImpl extends ElementImpl implements OrganizationUnit {
 	/**
+	 * The default value of the '{@link #getHeadcount() <em>Headcount</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHeadcount()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HEADCOUNT_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -82,7 +92,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getOwnsAndGovernsServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES, ContentfwkPackage.Literals.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES, true, true);
 	}
 
 	/**
@@ -92,7 +102,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getContainsActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__CONTAINS_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS, ContentfwkPackage.Literals.ORGANIZATION_UNIT__CONTAINS_ACTORS, true, true);
 	}
 
 	/**
@@ -102,7 +112,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Function> getOwnsFunctions() {
-		return (EList<Function>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__OWNS_FUNCTIONS, true);
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS, ContentfwkPackage.Literals.ORGANIZATION_UNIT__OWNS_FUNCTIONS, true, true);
 	}
 
 	/**
@@ -112,7 +122,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getParticipatesInProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES, ContentfwkPackage.Literals.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES, true, true);
 	}
 
 	/**
@@ -122,7 +132,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Driver> getIsMotivatedByDrivers() {
-		return (EList<Driver>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS, true);
+		return (EList<Driver>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS, ContentfwkPackage.Literals.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS, true, true);
 	}
 
 	/**
@@ -132,7 +142,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Product> getProducesProducts() {
-		return (EList<Product>)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__PRODUCES_PRODUCTS, true);
+		return (EList<Product>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS, ContentfwkPackage.Literals.ORGANIZATION_UNIT__PRODUCES_PRODUCTS, true, true);
 	}
 
 	/**
@@ -141,7 +151,26 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 * @generated
 	 */
 	public Location getOperatesInLocation() {
-		return (Location)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, true);
+		return (Location)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, ContentfwkPackage.Literals.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetOperatesInLocation() {
+		return (Location)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, ContentfwkPackage.Literals.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOperatesInLocation(Location newOperatesInLocation, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newOperatesInLocation, ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, msgs);
+		return msgs;
 	}
 
 	/**
@@ -150,7 +179,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 * @generated
 	 */
 	public void setOperatesInLocation(Location newOperatesInLocation) {
-		eSet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, newOperatesInLocation);
+		eDynamicSet(ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, ContentfwkPackage.Literals.ORGANIZATION_UNIT__OPERATES_IN_LOCATION, newOperatesInLocation);
 	}
 
 	/**
@@ -159,7 +188,7 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 * @generated
 	 */
 	public String getHeadcount() {
-		return (String)eGet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__HEADCOUNT, true);
+		return (String)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT, ContentfwkPackage.Literals.ORGANIZATION_UNIT__HEADCOUNT, true, true);
 	}
 
 	/**
@@ -168,7 +197,199 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 * @generated
 	 */
 	public void setHeadcount(String newHeadcount) {
-		eSet(ContentfwkPackage.Literals.ORGANIZATION_UNIT__HEADCOUNT, newHeadcount);
+		eDynamicSet(ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT, ContentfwkPackage.Literals.ORGANIZATION_UNIT__HEADCOUNT, newHeadcount);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOwnsAndGovernsServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOwnsFunctions()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParticipatesInProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsMotivatedByDrivers()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducesProducts()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				Location operatesInLocation = basicGetOperatesInLocation();
+				if (operatesInLocation != null)
+					msgs = ((InternalEObject)operatesInLocation).eInverseRemove(this, ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS, Location.class, msgs);
+				return basicSetOperatesInLocation((Location)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				return ((InternalEList<?>)getOwnsAndGovernsServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				return ((InternalEList<?>)getContainsActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				return ((InternalEList<?>)getOwnsFunctions()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				return ((InternalEList<?>)getParticipatesInProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				return ((InternalEList<?>)getIsMotivatedByDrivers()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				return ((InternalEList<?>)getProducesProducts()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				return basicSetOperatesInLocation(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				return getOwnsAndGovernsServices();
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				return getContainsActors();
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				return getOwnsFunctions();
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				return getParticipatesInProcesses();
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				return getIsMotivatedByDrivers();
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				return getProducesProducts();
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				if (resolve) return getOperatesInLocation();
+				return basicGetOperatesInLocation();
+			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
+				return getHeadcount();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				getOwnsAndGovernsServices().clear();
+				getOwnsAndGovernsServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				getContainsActors().clear();
+				getContainsActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				getOwnsFunctions().clear();
+				getOwnsFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				getParticipatesInProcesses().clear();
+				getParticipatesInProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				getIsMotivatedByDrivers().clear();
+				getIsMotivatedByDrivers().addAll((Collection<? extends Driver>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				getProducesProducts().clear();
+				getProducesProducts().addAll((Collection<? extends Product>)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				setOperatesInLocation((Location)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
+				setHeadcount((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				getOwnsAndGovernsServices().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				getContainsActors().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				getOwnsFunctions().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				getParticipatesInProcesses().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				getIsMotivatedByDrivers().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				getProducesProducts().clear();
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				setOperatesInLocation((Location)null);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
+				setHeadcount(HEADCOUNT_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_AND_GOVERNS_SERVICES:
+				return !getOwnsAndGovernsServices().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS:
+				return !getContainsActors().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS:
+				return !getOwnsFunctions().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__PARTICIPATES_IN_PROCESSES:
+				return !getParticipatesInProcesses().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_MOTIVATED_BY_DRIVERS:
+				return !getIsMotivatedByDrivers().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__PRODUCES_PRODUCTS:
+				return !getProducesProducts().isEmpty();
+			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
+				return basicGetOperatesInLocation() != null;
+			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
+				return HEADCOUNT_EDEFAULT == null ? getHeadcount() != null : !HEADCOUNT_EDEFAULT.equals(getHeadcount());
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //OrganizationUnitImpl

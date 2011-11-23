@@ -68,7 +68,7 @@ public class ProductImpl extends ElementImpl implements Product {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OrganizationUnit> getIsProducedByOrganizationUnits() {
-		return (EList<OrganizationUnit>)eGet(ContentfwkPackage.Literals.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS, true);
+		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS, ContentfwkPackage.Literals.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS, true, true);
 	}
 
 	/**
@@ -78,7 +78,111 @@ public class ProductImpl extends ElementImpl implements Product {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsProducedByProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.PRODUCT__IS_PRODUCED_BY_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES, ContentfwkPackage.Literals.PRODUCT__IS_PRODUCED_BY_PROCESSES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsProducedByOrganizationUnits()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsProducedByProcesses()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				return ((InternalEList<?>)getIsProducedByOrganizationUnits()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				return ((InternalEList<?>)getIsProducedByProcesses()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				return getIsProducedByOrganizationUnits();
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				return getIsProducedByProcesses();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				getIsProducedByOrganizationUnits().clear();
+				getIsProducedByOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
+				return;
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				getIsProducedByProcesses().clear();
+				getIsProducedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				getIsProducedByOrganizationUnits().clear();
+				return;
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				getIsProducedByProcesses().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS:
+				return !getIsProducedByOrganizationUnits().isEmpty();
+			case ContentfwkPackage.PRODUCT__IS_PRODUCED_BY_PROCESSES:
+				return !getIsProducedByProcesses().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ProductImpl

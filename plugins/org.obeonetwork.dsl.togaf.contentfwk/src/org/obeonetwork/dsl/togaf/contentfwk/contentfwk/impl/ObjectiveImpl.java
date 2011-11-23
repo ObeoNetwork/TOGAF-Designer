@@ -73,7 +73,7 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Goal> getRealizesGoals() {
-		return (EList<Goal>)eGet(ContentfwkPackage.Literals.OBJECTIVE__REALIZES_GOALS, true);
+		return (EList<Goal>)eDynamicGet(ContentfwkPackage.OBJECTIVE__REALIZES_GOALS, ContentfwkPackage.Literals.OBJECTIVE__REALIZES_GOALS, true, true);
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Measure> getIsTrackedAgainstMeasures() {
-		return (EList<Measure>)eGet(ContentfwkPackage.Literals.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES, true);
+		return (EList<Measure>)eDynamicGet(ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES, ContentfwkPackage.Literals.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES, true, true);
 	}
 
 	/**
@@ -92,7 +92,16 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * @generated
 	 */
 	public Objective getDecomposesObjective() {
-		return (Objective)eGet(ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, true);
+		return (Objective)eDynamicGet(ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE, ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Objective basicGetDecomposesObjective() {
+		return (Objective)eDynamicGet(ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE, ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, false, true);
 	}
 
 	/**
@@ -101,7 +110,122 @@ public class ObjectiveImpl extends ElementImpl implements Objective {
 	 * @generated
 	 */
 	public void setDecomposesObjective(Objective newDecomposesObjective) {
-		eSet(ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, newDecomposesObjective);
+		eDynamicSet(ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE, ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE, newDecomposesObjective);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRealizesGoals()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsTrackedAgainstMeasures()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				return ((InternalEList<?>)getRealizesGoals()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				return ((InternalEList<?>)getIsTrackedAgainstMeasures()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				return getRealizesGoals();
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				return getIsTrackedAgainstMeasures();
+			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
+				if (resolve) return getDecomposesObjective();
+				return basicGetDecomposesObjective();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				getRealizesGoals().clear();
+				getRealizesGoals().addAll((Collection<? extends Goal>)newValue);
+				return;
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				getIsTrackedAgainstMeasures().clear();
+				getIsTrackedAgainstMeasures().addAll((Collection<? extends Measure>)newValue);
+				return;
+			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
+				setDecomposesObjective((Objective)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				getRealizesGoals().clear();
+				return;
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				getIsTrackedAgainstMeasures().clear();
+				return;
+			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
+				setDecomposesObjective((Objective)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.OBJECTIVE__REALIZES_GOALS:
+				return !getRealizesGoals().isEmpty();
+			case ContentfwkPackage.OBJECTIVE__IS_TRACKED_AGAINST_MEASURES:
+				return !getIsTrackedAgainstMeasures().isEmpty();
+			case ContentfwkPackage.OBJECTIVE__DECOMPOSES_OBJECTIVE:
+				return basicGetDecomposesObjective() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ObjectiveImpl

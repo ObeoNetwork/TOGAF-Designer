@@ -69,7 +69,7 @@ public class ServiceQualityImpl extends ElementImpl implements ServiceQuality {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Service> getAppliesToServices() {
-		return (EList<Service>)eGet(ContentfwkPackage.Literals.SERVICE_QUALITY__APPLIES_TO_SERVICES, true);
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES, ContentfwkPackage.Literals.SERVICE_QUALITY__APPLIES_TO_SERVICES, true, true);
 	}
 
 	/**
@@ -79,7 +79,111 @@ public class ServiceQualityImpl extends ElementImpl implements ServiceQuality {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Contract> getAppliesToContracts() {
-		return (EList<Contract>)eGet(ContentfwkPackage.Literals.SERVICE_QUALITY__APPLIES_TO_CONTRACTS, true);
+		return (EList<Contract>)eDynamicGet(ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS, ContentfwkPackage.Literals.SERVICE_QUALITY__APPLIES_TO_CONTRACTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAppliesToServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAppliesToContracts()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				return ((InternalEList<?>)getAppliesToServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				return ((InternalEList<?>)getAppliesToContracts()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				return getAppliesToServices();
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				return getAppliesToContracts();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				getAppliesToServices().clear();
+				getAppliesToServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				getAppliesToContracts().clear();
+				getAppliesToContracts().addAll((Collection<? extends Contract>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				getAppliesToServices().clear();
+				return;
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				getAppliesToContracts().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_SERVICES:
+				return !getAppliesToServices().isEmpty();
+			case ContentfwkPackage.SERVICE_QUALITY__APPLIES_TO_CONTRACTS:
+				return !getAppliesToContracts().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ServiceQualityImpl

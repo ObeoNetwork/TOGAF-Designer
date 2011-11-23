@@ -3,13 +3,13 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.togaf.contentfwk/src"
     modelPluginID="org.obeonetwork.dsl.togaf.contentfwk" modelName="Contentfwk" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
-    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" reflectiveDelegation="true"
-    importerID="org.eclipse.emf.importer.cdo" featureDelegation="Reflective" complianceLevel="6.0"
-    copyrightFields="false">
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" importerID="org.eclipse.emf.importer.cdo"
+    featureDelegation="Dynamic" complianceLevel="6.0" copyrightFields="false">
   <foreignModel>contentfwk.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
   <genPackages prefix="Contentfwk" basePackage="org.obeonetwork.dsl.togaf.contentfwk"
-      disposableProviderFactory="true" ecorePackage="contentfwk.ecore#/">
+      disposableProviderFactory="true" extensibleProviderFactory="true" childCreationExtenders="true"
+      ecorePackage="contentfwk.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="contentfwk.ecore#//PrincipleCategory">
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//PrincipleCategory/GuidingPrinciple"/>
       <genEnumLiterals ecoreEnumLiteral="contentfwk.ecore#//PrincipleCategory/BusinessPrinciple"/>

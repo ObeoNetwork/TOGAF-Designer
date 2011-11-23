@@ -66,7 +66,96 @@ public class ControlImpl extends ElementImpl implements Control {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getEnsuresCorrectOperationOfProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eGet(ContentfwkPackage.Literals.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES, true);
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES, ContentfwkPackage.Literals.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEnsuresCorrectOperationOfProcesses()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				return ((InternalEList<?>)getEnsuresCorrectOperationOfProcesses()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				return getEnsuresCorrectOperationOfProcesses();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				getEnsuresCorrectOperationOfProcesses().clear();
+				getEnsuresCorrectOperationOfProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				getEnsuresCorrectOperationOfProcesses().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTROL__ENSURES_CORRECT_OPERATION_OF_PROCESSES:
+				return !getEnsuresCorrectOperationOfProcesses().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //ControlImpl

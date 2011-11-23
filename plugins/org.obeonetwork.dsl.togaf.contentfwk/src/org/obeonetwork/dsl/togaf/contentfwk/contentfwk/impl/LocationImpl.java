@@ -79,7 +79,7 @@ public class LocationImpl extends ElementImpl implements Location {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Actor> getContainsActors() {
-		return (EList<Actor>)eGet(ContentfwkPackage.Literals.LOCATION__CONTAINS_ACTORS, true);
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.LOCATION__CONTAINS_ACTORS, ContentfwkPackage.Literals.LOCATION__CONTAINS_ACTORS, true, true);
 	}
 
 	/**
@@ -89,7 +89,7 @@ public class LocationImpl extends ElementImpl implements Location {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OrganizationUnit> getContainsOrganizationUnits() {
-		return (EList<OrganizationUnit>)eGet(ContentfwkPackage.Literals.LOCATION__CONTAINS_ORGANIZATION_UNITS, true);
+		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS, ContentfwkPackage.Literals.LOCATION__CONTAINS_ORGANIZATION_UNITS, true, true);
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class LocationImpl extends ElementImpl implements Location {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalDataComponent> getContainsPhysicalDataComponents() {
-		return (EList<PhysicalDataComponent>)eGet(ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS, true);
+		return (EList<PhysicalDataComponent>)eDynamicGet(ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS, ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS, true, true);
 	}
 
 	/**
@@ -109,7 +109,7 @@ public class LocationImpl extends ElementImpl implements Location {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalApplicationComponent> getContainsPhysicalApplicationComponents() {
-		return (EList<PhysicalApplicationComponent>)eGet(ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS, true);
+		return (EList<PhysicalApplicationComponent>)eDynamicGet(ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS, true, true);
 	}
 
 	/**
@@ -119,7 +119,7 @@ public class LocationImpl extends ElementImpl implements Location {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalTechnologyComponent> getContainsPhysicalTechnologyComponents() {
-		return (EList<PhysicalTechnologyComponent>)eGet(ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS, true);
+		return (EList<PhysicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS, ContentfwkPackage.Literals.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS, true, true);
 	}
 
 	/**
@@ -128,7 +128,16 @@ public class LocationImpl extends ElementImpl implements Location {
 	 * @generated
 	 */
 	public Location getDecomposesLocation() {
-		return (Location)eGet(ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, true);
+		return (Location)eDynamicGet(ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION, ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Location basicGetDecomposesLocation() {
+		return (Location)eDynamicGet(ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION, ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, false, true);
 	}
 
 	/**
@@ -137,7 +146,167 @@ public class LocationImpl extends ElementImpl implements Location {
 	 * @generated
 	 */
 	public void setDecomposesLocation(Location newDecomposesLocation) {
-		eSet(ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, newDecomposesLocation);
+		eDynamicSet(ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION, ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, newDecomposesLocation);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsOrganizationUnits()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsPhysicalDataComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				return ((InternalEList<?>)getContainsActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				return ((InternalEList<?>)getContainsOrganizationUnits()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<?>)getContainsPhysicalDataComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getContainsPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getContainsPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				return getContainsActors();
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				return getContainsOrganizationUnits();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				return getContainsPhysicalDataComponents();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				return getContainsPhysicalApplicationComponents();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return getContainsPhysicalTechnologyComponents();
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				if (resolve) return getDecomposesLocation();
+				return basicGetDecomposesLocation();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				getContainsActors().clear();
+				getContainsActors().addAll((Collection<? extends Actor>)newValue);
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				getContainsOrganizationUnits().clear();
+				getContainsOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				getContainsPhysicalDataComponents().clear();
+				getContainsPhysicalDataComponents().addAll((Collection<? extends PhysicalDataComponent>)newValue);
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				getContainsPhysicalApplicationComponents().clear();
+				getContainsPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				getContainsPhysicalTechnologyComponents().clear();
+				getContainsPhysicalTechnologyComponents().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
+				return;
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				setDecomposesLocation((Location)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				getContainsActors().clear();
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				getContainsOrganizationUnits().clear();
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				getContainsPhysicalDataComponents().clear();
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				getContainsPhysicalApplicationComponents().clear();
+				return;
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				getContainsPhysicalTechnologyComponents().clear();
+				return;
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				setDecomposesLocation((Location)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.LOCATION__CONTAINS_ACTORS:
+				return !getContainsActors().isEmpty();
+			case ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS:
+				return !getContainsOrganizationUnits().isEmpty();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS:
+				return !getContainsPhysicalDataComponents().isEmpty();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_APPLICATION_COMPONENTS:
+				return !getContainsPhysicalApplicationComponents().isEmpty();
+			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return !getContainsPhysicalTechnologyComponents().isEmpty();
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				return basicGetDecomposesLocation() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //LocationImpl

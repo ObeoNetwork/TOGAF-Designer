@@ -2,21 +2,14 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.contentfwk.edit;singleton:=true
-Bundle-Version: 0.7.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: org.obeonetwork.dsl.togaf.contentfwk.contentfwk.provider.ContentfwkEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.obeonetwork.dsl.togaf.contentfwk.contentfwk.components,
- org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts,
- org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.forms,
- org.obeonetwork.dsl.togaf.contentfwk.contentfwk.parts.impl,
- org.obeonetwork.dsl.togaf.contentfwk.contentfwk.provider,
- org.obeonetwork.dsl.togaf.contentfwk.contentfwk.providers
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.obeonetwork.dsl.togaf.contentfwk.contentfwk.provider
 Require-Bundle: org.eclipse.core.runtime,
  org.obeonetwork.dsl.togaf.contentfwk;visibility:=reexport,
- org.eclipse.emf.edit,
- org.eclipse.emf.eef.runtime;visibility:=reexport,
- org.eclipse.emf.eef.runtime.extended;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

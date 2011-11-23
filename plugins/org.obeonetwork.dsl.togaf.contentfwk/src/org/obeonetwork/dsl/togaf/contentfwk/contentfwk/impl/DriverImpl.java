@@ -73,7 +73,7 @@ public class DriverImpl extends ElementImpl implements Driver {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Goal> getCreatesGoals() {
-		return (EList<Goal>)eGet(ContentfwkPackage.Literals.DRIVER__CREATES_GOALS, true);
+		return (EList<Goal>)eDynamicGet(ContentfwkPackage.DRIVER__CREATES_GOALS, ContentfwkPackage.Literals.DRIVER__CREATES_GOALS, true, true);
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class DriverImpl extends ElementImpl implements Driver {
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<OrganizationUnit> getMotivatesOrganizationUnits() {
-		return (EList<OrganizationUnit>)eGet(ContentfwkPackage.Literals.DRIVER__MOTIVATES_ORGANIZATION_UNITS, true);
+		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS, ContentfwkPackage.Literals.DRIVER__MOTIVATES_ORGANIZATION_UNITS, true, true);
 	}
 
 	/**
@@ -92,7 +92,16 @@ public class DriverImpl extends ElementImpl implements Driver {
 	 * @generated
 	 */
 	public Driver getDecomposesDriver() {
-		return (Driver)eGet(ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, true);
+		return (Driver)eDynamicGet(ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER, ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Driver basicGetDecomposesDriver() {
+		return (Driver)eDynamicGet(ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER, ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, false, true);
 	}
 
 	/**
@@ -101,7 +110,122 @@ public class DriverImpl extends ElementImpl implements Driver {
 	 * @generated
 	 */
 	public void setDecomposesDriver(Driver newDecomposesDriver) {
-		eSet(ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, newDecomposesDriver);
+		eDynamicSet(ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER, ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, newDecomposesDriver);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCreatesGoals()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMotivatesOrganizationUnits()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				return ((InternalEList<?>)getCreatesGoals()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				return ((InternalEList<?>)getMotivatesOrganizationUnits()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				return getCreatesGoals();
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				return getMotivatesOrganizationUnits();
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				if (resolve) return getDecomposesDriver();
+				return basicGetDecomposesDriver();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				getCreatesGoals().clear();
+				getCreatesGoals().addAll((Collection<? extends Goal>)newValue);
+				return;
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				getMotivatesOrganizationUnits().clear();
+				getMotivatesOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
+				return;
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				setDecomposesDriver((Driver)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				getCreatesGoals().clear();
+				return;
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				getMotivatesOrganizationUnits().clear();
+				return;
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				setDecomposesDriver((Driver)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.DRIVER__CREATES_GOALS:
+				return !getCreatesGoals().isEmpty();
+			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
+				return !getMotivatesOrganizationUnits().isEmpty();
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				return basicGetDecomposesDriver() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //DriverImpl

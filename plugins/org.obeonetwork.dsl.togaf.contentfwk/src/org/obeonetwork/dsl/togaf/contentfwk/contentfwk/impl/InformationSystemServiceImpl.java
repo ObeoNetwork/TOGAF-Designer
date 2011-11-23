@@ -54,6 +54,61 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
  */
 public class InformationSystemServiceImpl extends ServiceImpl implements InformationSystemService {
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getSourceDescr() <em>Source Descr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSourceDescr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SOURCE_DESCR_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getOwnerDescr() <em>Owner Descr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOwnerDescr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OWNER_DESCR_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -79,7 +134,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Element> getDelegates() {
-		return (EList<Element>)eGet(ContentfwkPackage.Literals.ELEMENT__DELEGATES, true);
+		return (EList<Element>)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES, ContentfwkPackage.Literals.ELEMENT__DELEGATES, true, true);
 	}
 
 	/**
@@ -89,7 +144,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Element> getIsDelegatedBy() {
-		return (EList<Element>)eGet(ContentfwkPackage.Literals.ELEMENT__IS_DELEGATED_BY, true);
+		return (EList<Element>)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY, ContentfwkPackage.Literals.ELEMENT__IS_DELEGATED_BY, true, true);
 	}
 
 	/**
@@ -98,7 +153,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getName() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__NAME, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME, ContentfwkPackage.Literals.ELEMENT__NAME, true, true);
 	}
 
 	/**
@@ -107,7 +162,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setName(String newName) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__NAME, newName);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME, ContentfwkPackage.Literals.ELEMENT__NAME, newName);
 	}
 
 	/**
@@ -116,7 +171,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getDescription() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION, ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, true, true);
 	}
 
 	/**
@@ -125,7 +180,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setDescription(String newDescription) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, newDescription);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION, ContentfwkPackage.Literals.ELEMENT__DESCRIPTION, newDescription);
 	}
 
 	/**
@@ -134,7 +189,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getCategory() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__CATEGORY, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
 	}
 
 	/**
@@ -143,7 +198,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setCategory(String newCategory) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
 	}
 
 	/**
@@ -152,7 +207,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getSourceDescr() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR, ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, true, true);
 	}
 
 	/**
@@ -161,7 +216,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setSourceDescr(String newSourceDescr) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, newSourceDescr);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR, ContentfwkPackage.Literals.ELEMENT__SOURCE_DESCR, newSourceDescr);
 	}
 
 	/**
@@ -170,7 +225,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getOwnerDescr() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR, ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, true, true);
 	}
 
 	/**
@@ -179,7 +234,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setOwnerDescr(String newOwnerDescr) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, newOwnerDescr);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR, ContentfwkPackage.Literals.ELEMENT__OWNER_DESCR, newOwnerDescr);
 	}
 
 	/**
@@ -188,7 +243,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public String getID() {
-		return (String)eGet(ContentfwkPackage.Literals.ELEMENT__ID, true);
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID, ContentfwkPackage.Literals.ELEMENT__ID, true, true);
 	}
 
 	/**
@@ -197,7 +252,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setID(String newID) {
-		eSet(ContentfwkPackage.Literals.ELEMENT__ID, newID);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
 	}
 
 	/**
@@ -206,7 +261,16 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public EObject getAny() {
-		return (EObject)eGet(ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, true);
+		return (EObject)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EObject basicGetAny() {
+		return (EObject)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, false, true);
 	}
 
 	/**
@@ -215,7 +279,182 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	public void setAny(EObject newAny) {
-		eSet(ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, newAny);
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, newAny);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				return getDelegates();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				return getIsDelegatedBy();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME:
+				return getName();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
+				return getDescription();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return getCategory();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
+				return getSourceDescr();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
+				return getOwnerDescr();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
+				return getID();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
+				if (resolve) return getAny();
+				return basicGetAny();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				getDelegates().clear();
+				getDelegates().addAll((Collection<? extends Element>)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				getIsDelegatedBy().clear();
+				getIsDelegatedBy().addAll((Collection<? extends Element>)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME:
+				setName((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				setCategory((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
+				setSourceDescr((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
+				setOwnerDescr((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
+				setID((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
+				setAny((EObject)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				getDelegates().clear();
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				getIsDelegatedBy().clear();
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				setCategory(CATEGORY_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
+				setSourceDescr(SOURCE_DESCR_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
+				setOwnerDescr(OWNER_DESCR_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
+				setID(ID_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
+				setAny((EObject)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DELEGATES:
+				return !getDelegates().isEmpty();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
+				return !getIsDelegatedBy().isEmpty();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME:
+				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
+				return SOURCE_DESCR_EDEFAULT == null ? getSourceDescr() != null : !SOURCE_DESCR_EDEFAULT.equals(getSourceDescr());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
+				return OWNER_DESCR_EDEFAULT == null ? getOwnerDescr() != null : !OWNER_DESCR_EDEFAULT.equals(getOwnerDescr());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
+				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
+				return basicGetAny() != null;
+		}
+		return super.eIsSet(featureID);
 	}
 
 	/**

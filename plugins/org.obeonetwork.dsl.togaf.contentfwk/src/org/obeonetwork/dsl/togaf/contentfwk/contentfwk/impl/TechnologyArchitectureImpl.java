@@ -71,7 +71,7 @@ public class TechnologyArchitectureImpl extends ArchitectureImpl implements Tech
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PlatformService> getPlatformServices() {
-		return (EList<PlatformService>)eGet(ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES, true);
+		return (EList<PlatformService>)eDynamicGet(ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES, ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES, true, true);
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class TechnologyArchitectureImpl extends ArchitectureImpl implements Tech
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<PhysicalTechnologyComponent> getPhysicalComponents() {
-		return (EList<PhysicalTechnologyComponent>)eGet(ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS, true);
+		return (EList<PhysicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS, ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS, true, true);
 	}
 
 	/**
@@ -91,7 +91,107 @@ public class TechnologyArchitectureImpl extends ArchitectureImpl implements Tech
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<LogicalTechnologyComponent> getLogicalComponents() {
-		return (EList<LogicalTechnologyComponent>)eGet(ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS, true);
+		return (EList<LogicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS, ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES:
+				return ((InternalEList<?>)getPlatformServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS:
+				return ((InternalEList<?>)getPhysicalComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS:
+				return ((InternalEList<?>)getLogicalComponents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES:
+				return getPlatformServices();
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS:
+				return getPhysicalComponents();
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS:
+				return getLogicalComponents();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES:
+				getPlatformServices().clear();
+				getPlatformServices().addAll((Collection<? extends PlatformService>)newValue);
+				return;
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS:
+				getPhysicalComponents().clear();
+				getPhysicalComponents().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
+				return;
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS:
+				getLogicalComponents().clear();
+				getLogicalComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES:
+				getPlatformServices().clear();
+				return;
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS:
+				getPhysicalComponents().clear();
+				return;
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS:
+				getLogicalComponents().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PLATFORM_SERVICES:
+				return !getPlatformServices().isEmpty();
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__PHYSICAL_COMPONENTS:
+				return !getPhysicalComponents().isEmpty();
+			case ContentfwkPackage.TECHNOLOGY_ARCHITECTURE__LOGICAL_COMPONENTS:
+				return !getLogicalComponents().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //TechnologyArchitectureImpl

@@ -84,7 +84,7 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Architecture> getArchitectures() {
-		return (EList<Architecture>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, true);
+		return (EList<Architecture>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, true, true);
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Container> getContainers() {
-		return (EList<Container>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS, true);
+		return (EList<Container>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS, true, true);
 	}
 
 	/**
@@ -104,7 +104,107 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<EObject> getAny() {
-		return (EList<EObject>)eGet(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY, true);
+		return (EList<EObject>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return ((InternalEList<?>)getArchitectures()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
+				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+				return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return getArchitectures();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
+				return getContainers();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+				return getAny();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				getArchitectures().clear();
+				getArchitectures().addAll((Collection<? extends Architecture>)newValue);
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
+				getContainers().clear();
+				getContainers().addAll((Collection<? extends Container>)newValue);
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+				getAny().clear();
+				getAny().addAll((Collection<? extends EObject>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				getArchitectures().clear();
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
+				getContainers().clear();
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+				getAny().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return !getArchitectures().isEmpty();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
+				return !getContainers().isEmpty();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+				return !getAny().isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //EnterpriseArchitectureImpl

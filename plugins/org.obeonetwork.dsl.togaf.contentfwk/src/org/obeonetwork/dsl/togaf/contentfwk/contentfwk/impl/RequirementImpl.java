@@ -37,6 +37,34 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement;
  */
 public class RequirementImpl extends StrategicElementImpl implements Requirement {
 	/**
+	 * The default value of the '{@link #getStatementOfRequirement() <em>Statement Of Requirement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatementOfRequirement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STATEMENT_OF_REQUIREMENT_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRationale() <em>Rationale</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRationale()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String RATIONALE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getAcceptanceCriteria() <em>Acceptance Criteria</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAcceptanceCriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ACCEPTANCE_CRITERIA_EDEFAULT = null;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -61,7 +89,7 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public String getStatementOfRequirement() {
-		return (String)eGet(ContentfwkPackage.Literals.REQUIREMENT__STATEMENT_OF_REQUIREMENT, true);
+		return (String)eDynamicGet(ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT, ContentfwkPackage.Literals.REQUIREMENT__STATEMENT_OF_REQUIREMENT, true, true);
 	}
 
 	/**
@@ -70,7 +98,7 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public void setStatementOfRequirement(String newStatementOfRequirement) {
-		eSet(ContentfwkPackage.Literals.REQUIREMENT__STATEMENT_OF_REQUIREMENT, newStatementOfRequirement);
+		eDynamicSet(ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT, ContentfwkPackage.Literals.REQUIREMENT__STATEMENT_OF_REQUIREMENT, newStatementOfRequirement);
 	}
 
 	/**
@@ -79,7 +107,7 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public String getRationale() {
-		return (String)eGet(ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, true);
+		return (String)eDynamicGet(ContentfwkPackage.REQUIREMENT__RATIONALE, ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, true, true);
 	}
 
 	/**
@@ -88,7 +116,7 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public void setRationale(String newRationale) {
-		eSet(ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, newRationale);
+		eDynamicSet(ContentfwkPackage.REQUIREMENT__RATIONALE, ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, newRationale);
 	}
 
 	/**
@@ -97,7 +125,7 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public String getAcceptanceCriteria() {
-		return (String)eGet(ContentfwkPackage.Literals.REQUIREMENT__ACCEPTANCE_CRITERIA, true);
+		return (String)eDynamicGet(ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA, ContentfwkPackage.Literals.REQUIREMENT__ACCEPTANCE_CRITERIA, true, true);
 	}
 
 	/**
@@ -106,7 +134,85 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @generated
 	 */
 	public void setAcceptanceCriteria(String newAcceptanceCriteria) {
-		eSet(ContentfwkPackage.Literals.REQUIREMENT__ACCEPTANCE_CRITERIA, newAcceptanceCriteria);
+		eDynamicSet(ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA, ContentfwkPackage.Literals.REQUIREMENT__ACCEPTANCE_CRITERIA, newAcceptanceCriteria);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
+				return getStatementOfRequirement();
+			case ContentfwkPackage.REQUIREMENT__RATIONALE:
+				return getRationale();
+			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
+				return getAcceptanceCriteria();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
+				setStatementOfRequirement((String)newValue);
+				return;
+			case ContentfwkPackage.REQUIREMENT__RATIONALE:
+				setRationale((String)newValue);
+				return;
+			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
+				setAcceptanceCriteria((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
+				setStatementOfRequirement(STATEMENT_OF_REQUIREMENT_EDEFAULT);
+				return;
+			case ContentfwkPackage.REQUIREMENT__RATIONALE:
+				setRationale(RATIONALE_EDEFAULT);
+				return;
+			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
+				setAcceptanceCriteria(ACCEPTANCE_CRITERIA_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
+				return STATEMENT_OF_REQUIREMENT_EDEFAULT == null ? getStatementOfRequirement() != null : !STATEMENT_OF_REQUIREMENT_EDEFAULT.equals(getStatementOfRequirement());
+			case ContentfwkPackage.REQUIREMENT__RATIONALE:
+				return RATIONALE_EDEFAULT == null ? getRationale() != null : !RATIONALE_EDEFAULT.equals(getRationale());
+			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
+				return ACCEPTANCE_CRITERIA_EDEFAULT == null ? getAcceptanceCriteria() != null : !ACCEPTANCE_CRITERIA_EDEFAULT.equals(getAcceptanceCriteria());
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //RequirementImpl
