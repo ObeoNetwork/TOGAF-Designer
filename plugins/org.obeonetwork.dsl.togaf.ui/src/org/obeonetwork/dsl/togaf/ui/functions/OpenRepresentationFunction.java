@@ -1,110 +1,113 @@
+/*******************************************************************************
+ * Copyright (c) 2011 Obeo.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Obeo - initial API and implementation
+ *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.functions;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.swt.browser.Browser;
 import org.eclipse.swt.browser.BrowserFunction;
-import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IPageLayout;
-import org.eclipse.ui.IPartListener;
-import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
+import org.obeonetwork.dsl.togaf.ui.Activator;
 import org.obeonetwork.dsl.togaf.ui.util.CollaborativeSessionUtil;
-import org.obeonetwork.dsl.togaf.ui.util.RepresentationUtil;
-import org.obeonetwork.dsl.togaf.ui.util.TogafRepresentation;
+import org.obeonetwork.dsl.togaf.ui.util.meta.TogafRepresentation;
 
 import fr.obeo.dsl.viewpoint.DRepresentation;
 import fr.obeo.dsl.viewpoint.DView;
-import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectEditor;
+import fr.obeo.dsl.viewpoint.business.api.dialect.DialectManager;
+import fr.obeo.dsl.viewpoint.collab.api.remotesession.CollaborativeSession;
+import fr.obeo.dsl.viewpoint.description.RepresentationDescription;
+import fr.obeo.dsl.viewpoint.tools.api.command.ViewpointCommand;
+import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectUIManager;
 
-public class EditDiagramFunction extends BrowserFunction {
+/**
+ * @author sdrapeau
+ *
+ */
+public class OpenRepresentationFunction extends BrowserFunction {
 
-    public EditDiagramFunction(Browser browser, String name) {
+    /**
+     * @param browser
+     * @param name
+     */
+    public OpenRepresentationFunction(Browser browser, String name) {
 	super(browser, name);
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.swt.browser.BrowserFunction#function(java.lang.Object[])
+     */
     public Object function(Object[] arguments) {
 	String diagName = (String) arguments[0];
 	String viewpointName = TogafRepresentation.getViewpoint(diagName);
 	EClass architectureKind = TogafRepresentation.getArchitectureKind(diagName);
-	 try {
+	try {
 	    PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(IPageLayout.ID_PROP_SHEET);
 	} catch (PartInitException e) {
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
+	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.OpenRepresentationFunction_0, e));
 	}
-	testOpenDiagram(viewpointName, diagName, architectureKind);
+	openRepresentation(viewpointName, diagName, architectureKind);
 	return null;
     }
 
-   
-
-    private static void testOpenDiagram(final String viewpointName, final String repName, final EClass architectureKind) {
-	System.err.println(repName);
-
+    /**
+     * Open the representation <code>repName</code> of the wiewpoint <code> viewpointName</code>.
+     * @param viewpointName
+     * @param repName
+     * @param architectureKind
+     */
+    private static void openRepresentation(final String viewpointName, final String repName, final EClass architectureKind) {
 	PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getDisplay().syncExec(new Runnable() {
 	    public void run() {
-
 		for (DView view : CollaborativeSessionUtil.getCollaborativeSession().getOwnedViews()) {
-
 		    DRepresentation representation = CollaborativeSessionUtil.getRepresentation(view, repName);
-
 		    if (representation == null) {
 			if (view.getViewpoint().getName().equals(viewpointName) && CollaborativeSessionUtil.getRepresentation(view, repName) == null) {
-			    representation = RepresentationUtil.createRepresentation(repName, CollaborativeSessionUtil.getArchitecture(architectureKind),
+			    representation = createRepresentation(repName,
+				    CollaborativeSessionUtil.getArchitecture(architectureKind),
 				    CollaborativeSessionUtil.getRepresentationDescription(repName));
 			}
 		    }
-
 		    if (representation != null) {
-			// final DRepresentation rep = representation;
-			// new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
-			// @Override
-			// protected void doExecute() {
-			// RepresentationUtil.openEditor(rep, collaborativeSession);
-			// }
-			// }.execute();
-			final IEditorPart editor = RepresentationUtil.openEditor(representation);
-			if (editor != null) {
-			    editor.getSite().getPage().addPartListener(new IPartListener() {
-				    
-				    public void partOpened(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
-				    }
-				    
-				    public void partDeactivated(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
-				    }
-				    
-				    public void partClosed(IWorkbenchPart part) {
-					// Save in DB FIXME: The save has to be on demand (through CTRL-S or a specific button).
-					// The dialog to do "save and commit" during closing of the editor does not make this operation.
-					if (editor instanceof DialectEditor && part == editor) {
-					    CollaborativeSessionUtil.saveRepresentationWithPermanentOIDs(((DialectEditor)editor).getRepresentation());
-					}
-					// The ideal solution would be, when we decide to save a representation, to retrieve all the new business semantic objects (with temporary OID) referenced by the representation to commit them before to commit the representation.
-				    }
-				    
-				    public void partBroughtToTop(IWorkbenchPart part) {
-					
-				    }
-				    
-				    public void partActivated(IWorkbenchPart part) {
-					// TODO Auto-generated method stub
-					
-				    }
-				});
-			}
-			break;
+			DialectUIManager.INSTANCE.openEditor(CollaborativeSessionUtil.getCollaborativeSession(), representation);
 		    }
-
 		}
-
 	    }
-
 	});
+    }
+    
+    private static DRepresentation createRepresentation(final String representationName, final EObject semanticElement,
+	    final RepresentationDescription representationDescription) {
+	final List<DRepresentation> result = new ArrayList<DRepresentation>();
+	final CollaborativeSession collaborativeSession = CollaborativeSessionUtil.getCollaborativeSession();
+	collaborativeSession.getTransactionalEditingDomain().getCommandStack().execute(
+	new ViewpointCommand(collaborativeSession.getTransactionalEditingDomain()) {
+	    @Override
+	    protected void doExecute() {
+		result.add(DialectManager.INSTANCE.createRepresentation(representationName, semanticElement, representationDescription,
+			collaborativeSession, new NullProgressMonitor()));
+	    }
+	});
+	if (!result.isEmpty()) {
+	    return result.get(0);
+	}
+	return null;
+
     }
 
 }

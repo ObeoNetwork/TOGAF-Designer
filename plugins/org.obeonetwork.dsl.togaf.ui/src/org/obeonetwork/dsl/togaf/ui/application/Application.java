@@ -18,16 +18,20 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 
+/**
+ * @author sdrapeau
+ *
+ */
 public class Application implements IApplication {
 
     public Object start(IApplicationContext context) throws Exception {
 	Display display = PlatformUI.createDisplay();
 	try {
-	    File f = new File("in-memory.aird");
+	    File f = new File("in-memory.aird"); //$NON-NLS-1$
 	    if (f.exists()) {
 		boolean inMemoryAirdFeleted = f.delete();
 		if (!inMemoryAirdFeleted) {
-		    throw new IllegalStateException("Old version of the file in-memory.aird can't be deleted");
+		    throw new IllegalStateException(Messages.Application_1);
 		}
 	    }
 	    int returnCode = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());

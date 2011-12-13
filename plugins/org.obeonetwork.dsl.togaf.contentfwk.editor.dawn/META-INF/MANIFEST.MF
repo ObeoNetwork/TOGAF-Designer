@@ -10,3 +10,4 @@ Require-Bundle: org.eclipse.emf.cdo.dawn;bundle-version="[1.0.0,2.0.0)",
  org.eclipse.emf.cdo.dawn.util;bundle-version="[1.0.0,2.0.0)",
  org.eclipse.emf.cdo.ui;bundle-version="[4.0.0,5.0.0)",
  org.obeonetwork.dsl.togaf.common;bundle-version="0.7.0"
+Export-Package: org.obeonetwork.dsl.togaf.contentfwk.presentation

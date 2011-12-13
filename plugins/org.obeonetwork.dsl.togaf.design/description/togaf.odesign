@@ -202,7 +202,7 @@
         <nodeMappings name="Driver" semanticCandidatesExpression="&lt;%drivers%>" domainClass="Driver">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif"/>
         </nodeMappings>
-        <nodeMappings name="Goal" semanticCandidatesExpression="&lt;%goals%>" domainClass="Goal">
+        <nodeMappings name="Goal" detailDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@toolSection/@ownedTools[name='Create%20Organization%20Decomposition%20Diagram']" semanticCandidatesExpression="&lt;%goals%>" domainClass="Goal">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif"/>
         </nodeMappings>
         <nodeMappings name="Objective" semanticCandidatesExpression="&lt;%objectives%>" domainClass="Objective">
@@ -322,6 +322,10 @@
           <initialOperation>
             <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='DroppedRole']" containerViewExpression="&lt;%$newContainerView%>"/>
           </initialOperation>
+        </ownedTools>
+        <ownedTools xsi:type="tool:DiagramCreationDescription" name="Create Organization Decomposition Diagram" browseExpression="&lt;%eContainer(&quot;BusinessArchitecture&quot;)%>" diagramDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']">
+          <containerViewVariable name="containerView"/>
+          <representationNameVariable name="diagramName"/>
         </ownedTools>
       </toolSection>
     </ownedRepresentations>

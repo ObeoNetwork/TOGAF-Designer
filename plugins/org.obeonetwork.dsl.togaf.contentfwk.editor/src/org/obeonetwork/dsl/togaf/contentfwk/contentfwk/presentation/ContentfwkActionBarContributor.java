@@ -176,12 +176,13 @@ public class ContentfwkActionBarContributor
 	 * as well as the sub-menus for object creation items.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
+	 * Removed because the menu bar is not displayed in the EA product. 
 	 */
 	@Override
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
-
+/*
 		IMenuManager submenuManager = new MenuManager(ContentfwkEditorPlugin.INSTANCE.getString("_UI_ContentfwkEditor_menu"), "org.obeonetwork.dsl.togaf.contentfwk.contentfwkMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
@@ -209,6 +210,7 @@ public class ContentfwkActionBarContributor
 			 });
 
 		addGlobalActions(submenuManager);
+		*/
 	}
 
 	/**

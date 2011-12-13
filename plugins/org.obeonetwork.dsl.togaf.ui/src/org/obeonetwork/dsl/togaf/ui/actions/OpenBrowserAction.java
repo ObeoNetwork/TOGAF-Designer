@@ -28,21 +28,34 @@ import org.eclipse.ui.progress.IProgressService;
 import org.obeonetwork.dsl.togaf.ui.Activator;
 import org.obeonetwork.dsl.togaf.ui.editors.WebBrowserEditor;
 import org.obeonetwork.dsl.togaf.ui.editors.WebBrowserInput;
+import org.obeonetwork.dsl.togaf.ui.util.properties.TogafProperties;
 
+/**
+ * @author sdrapeau
+ *
+ */
 public class OpenBrowserAction extends Action implements IWorkbenchWindowActionDelegate {
 
+    /**
+     * 
+     */
     public OpenBrowserAction() {
-	setText("Open Browser");
-	setToolTipText("Open Browser");
-	setImageDescriptor(Activator.getImageDescriptor("browser.gif"));
+	setText(Messages.OpenBrowserAction_0);
+	setToolTipText(Messages.OpenBrowserAction_1);
+	setImageDescriptor(Activator.getImageDescriptor("browser.gif")); //$NON-NLS-1$
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
+     */
     public void run(IAction action) {
 	openEditor();
     }
 
+    /**
+     * 
+     */
     private void openEditor() {
-
 	try {
 	    IProgressService service = PlatformUI.getWorkbench().getProgressService();
 	    service.busyCursorWhile(new IRunnableWithProgress() {
@@ -51,11 +64,11 @@ public class OpenBrowserAction extends Action implements IWorkbenchWindowActionD
 			public void run() {
 			    try {
 				IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-				WebBrowserInput input = new WebBrowserInput("http://localhost:9000");
+				WebBrowserInput input = new WebBrowserInput("http://" + TogafProperties.WEB_SERVER + ":" + TogafProperties.WEB_PORT); //$NON-NLS-1$ //$NON-NLS-2$
 				page.openEditor(input, WebBrowserEditor.ID);
 
 			    } catch (PartInitException e) {
-				MessageDialog.openError(Activator.getActiveWorkbenchShell(), "Error opening editor", e.getLocalizedMessage());
+				MessageDialog.openError(Activator.getActiveWorkbenchShell(), Messages.OpenBrowserAction_5, e.getLocalizedMessage());
 			    }
 			}
 		    });
@@ -63,22 +76,36 @@ public class OpenBrowserAction extends Action implements IWorkbenchWindowActionD
 		};
 	    });
 	} catch (Exception e) {
-	    MessageDialog.openError(Activator.getActiveWorkbenchShell(), "Error", "Unable to open editor");
+	    MessageDialog.openError(Activator.getActiveWorkbenchShell(), Messages.OpenBrowserAction_6, Messages.OpenBrowserAction_7);
 	}
-
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.jface.action.Action#run()
+     */
     public void run() {
 	run(this);
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.ui.IWorkbenchWindowActionDelegate#init(org.eclipse.ui.IWorkbenchWindow)
+     */
     public void init(IWorkbenchWindow window) {
+	//Nada.
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.ui.IWorkbenchWindowActionDelegate#dispose()
+     */
     public void dispose() {
+	//Nada.
     }
 
+    /* (non-Javadoc)
+     * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction, org.eclipse.jface.viewers.ISelection)
+     */
     public void selectionChanged(IAction action, ISelection selection) {
+	//Nada.
     }
 
 }

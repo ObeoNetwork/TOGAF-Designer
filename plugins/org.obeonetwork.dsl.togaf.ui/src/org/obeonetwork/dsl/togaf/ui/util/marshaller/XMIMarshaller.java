@@ -1,4 +1,14 @@
-package org.obeonetwork.dsl.togaf.ui.util;
+/*******************************************************************************
+ * Copyright (c) 2011 Obeo.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Obeo - initial API and implementation
+ *******************************************************************************/
+package org.obeonetwork.dsl.togaf.ui.util.marshaller;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -17,53 +27,69 @@ import org.obeonetwork.dsl.togaf.ui.Activator;
 
 import fr.obeo.dsl.viewpoint.DRepresentation;
 
+/**
+ * @author sdrapeau
+ * 
+ */
 public class XMIMarshaller implements Marshaller {
-	
-	public byte[] marshall(DRepresentation dRepresentation) {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		ByteArrayOutputStream bout = new ByteArrayOutputStream();
-		BufferedOutputStream out = new BufferedOutputStream(bout);
+
+    private static final String RESOURCE_URI = "http:///Diagram.xmi"; //$NON-NLS-1$
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.obeonetwork.dsl.togaf.ui.util.marshaller.Marshaller#marshall(fr.obeo.dsl.viewpoint.DRepresentation)
+     */
+    public byte[] marshall(DRepresentation dRepresentation) {
+	ResourceSet resourceSet = new ResourceSetImpl();
+	ByteArrayOutputStream bout = new ByteArrayOutputStream();
+	BufferedOutputStream out = new BufferedOutputStream(bout);
+	try {
+	    Resource resource = resourceSet.createResource(URI.createURI(RESOURCE_URI));
+	    resource.getContents().add(EcoreUtil.copy(dRepresentation));
+	    resource.save(out, null);
+	    out.flush();
+	    return bout.toByteArray();
+	} catch (IOException e) {
+	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.XMIMarshaller_1, e));
+	} finally {
+	    if (out != null) {
 		try {
-			Resource resource = resourceSet.createResource(URI.createURI("http:///Diagram.xmi"));
-			resource.getContents().add(EcoreUtil.copy(dRepresentation));
-			resource.save(out, null);
-			out.flush();
-			return bout.toByteArray();
+		    out.close();
 		} catch (IOException e) {
-			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot marshall DRepresentation.", e));
-		} finally {
-			if (out != null) {
-				try {
-					out.close();
-				} catch (IOException e) {
-					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot marshall DRepresentation.", e));
-				}
-			}
+		    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.XMIMarshaller_2, e));
 		}
-		return null;
+	    }
 	}
-	
-	public DRepresentation unMarshall(byte[] bytes) {
-		ResourceSet resourceSet = new ResourceSetImpl();
-		ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
-		BufferedInputStream in = new BufferedInputStream(bin);
+	return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.obeonetwork.dsl.togaf.ui.util.marshaller.Marshaller#unMarshall(byte[])
+     */
+    public DRepresentation unMarshall(byte[] bytes) {
+	ResourceSet resourceSet = new ResourceSetImpl();
+	ByteArrayInputStream bin = new ByteArrayInputStream(bytes);
+	BufferedInputStream in = new BufferedInputStream(bin);
+	try {
+	    Resource resource = resourceSet.createResource(URI.createURI(RESOURCE_URI));
+	    resource.load(in, null);
+	    DRepresentation dRepresentation = (DRepresentation) resource.getContents().get(0);
+	    return EcoreUtil.copy(dRepresentation);
+	} catch (IOException e) {
+	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.XMIMarshaller_3, e));
+	} finally {
+	    if (in != null) {
 		try {
-			Resource resource = resourceSet.createResource(URI.createURI("http:///Diagram.xmi"));
-			resource.load(in, null);
-			DRepresentation dRepresentation = (DRepresentation) resource.getContents().get(0);
-			return EcoreUtil.copy(dRepresentation);
+		    in.close();
 		} catch (IOException e) {
-			Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot unMarshall DRepresentation.", e));
-		} finally {
-			if (in != null) {
-				try {
-					in.close();
-				} catch (IOException e) {
-					Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, "Cannot unMarshall DRepresentation.", e));
-				}
-			}
+		    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.XMIMarshaller_4, e));
 		}
-		return null;
+	    }
 	}
+	return null;
+    }
 
 }

@@ -14,31 +14,32 @@ import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
+/**
+ * @author sdrapeau
+ * 
+ */
 public class TogafPerspective implements IPerspectiveFactory {
 
-    public final static String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective";
+    /**
+     * ID of the perspective
+     */
+    public final static String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective";  //$NON-NLS-1$
 
-    private IPageLayout factory;
-
+    /**
+     * 
+     */
     public TogafPerspective() {
-        super();
+	super();
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see org.eclipse.ui.IPerspectiveFactory#createInitialLayout(org.eclipse.ui.IPageLayout)
+     */
     public void createInitialLayout(IPageLayout factory) {
-        this.factory = factory;
-        addViews();
+	IFolderLayout bottom = factory.createFolder("bottomRight", IPageLayout.BOTTOM, 0.7f, factory.getEditorArea()); //$NON-NLS-1$
+	bottom.addView(IPageLayout.ID_PROP_SHEET); 
     }
 
-    private void addViews() {
-/*	
-        IFolderLayout topLeft = factory.createFolder("topLeft", IPageLayout.LEFT, 0.25f, factory.getEditorArea()); // NON-NLS-1
-        topLeft.addView(IModelExplorerView.ID);
-
-        topLeft.addView("org.eclipse.ui.navigator.ProjectExplorer");
-        // topLeft.addView("fr.obeo.dsl.viewpoint.ui.tools.views.sessionview");
-*/
-        IFolderLayout bottom = factory.createFolder("bottomRight", IPageLayout.BOTTOM, 0.7f, factory.getEditorArea()); // NON-NLS-1
-        bottom.addView(IPageLayout.ID_PROP_SHEET); // NON-NLS-1
-
-    }
 }

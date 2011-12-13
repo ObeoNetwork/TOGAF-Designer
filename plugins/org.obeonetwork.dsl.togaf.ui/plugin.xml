@@ -91,7 +91,7 @@ icon="icons/browser.gif" default="true">
          </property>
          <property
                name="appName"
-               value="TOGAF Modeler">
+               value="TOGAF Designer">
          </property>
          <property
                name="preferenceCustomization"
@@ -104,7 +104,7 @@ icon="icons/browser.gif" default="true">
          point="org.eclipse.core.runtime.products">
       <product
             application="org.obeonetwork.dsl.togaf.application.application"
-            name="TOGAF Modeler">
+            name="TOGAF Designer">
          <property
                name="windowImages"
                value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
@@ -136,7 +136,7 @@ icon="icons/browser.gif" default="true">
          point="org.eclipse.core.runtime.products">
       <product
             application="org.obeonetwork.dsl.togaf.application.application"
-            name="TOGAF Modeler">
+            name="TOGAF Designer">
          <property
                name="windowImages"
                value="icons/logo_16.gif,icons/logo_32.gif,icons/logo_64.gif">
@@ -217,6 +217,20 @@ icon="icons/browser.gif" default="true">
 		<defaultEnablement id="org.obeonetwork.dsl.togaf.ui.activity"/>
 	</extension>
 	-->
- 
-	      
+	
+<!--	<extension point="org.eclipse.ui.handlers">
+<handler
+         class="org.obeonetwork.dsl.togaf.ui.handlers.TogafForODSaveHandler"
+         commandId="org.eclipse.ui.file.saveAll">
+       <activeWhen>
+    <with
+          variable="activeEditorId">
+       <equals
+             value="fr.obeo.dsl.viewpoint.diagram.part.ViewpointDiagramEditorID">
+       </equals>
+    </with>
+</activeWhen>
+</handler>
+</extension>-->
+    
 </plugin>

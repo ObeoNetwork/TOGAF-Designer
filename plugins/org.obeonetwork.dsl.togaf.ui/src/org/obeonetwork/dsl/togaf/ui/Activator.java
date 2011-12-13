@@ -23,20 +23,23 @@ import org.osgi.framework.BundleContext;
 
 /**
  * The activator class controls the plug-in life cycle
+ * 
+ * @author sdrapeau
+ * 
  */
 public class Activator extends AbstractUIPlugin {
 
     // The plug-in ID
-    public static final String PLUGIN_ID = "org.obeonetwork.dsl.togaf.ui";
+    public static final String PLUGIN_ID = "org.obeonetwork.dsl.togaf.ui"; //$NON-NLS-1$
 
     // The shared instance
     private static Activator plugin;
 
-    public static final String IMG_STRATEGIC_ARCHITECTURE = "strategic_architecture.png";
-    public static final String IMG_BUSINESS_ARCHITECTURE = "business_architecture.png";
-    public static final String IMG_DATA_ARCHITECTURE = "data_architecture.png";
-    public static final String IMG_APPLICATION_ARCHITECTURE = "application_architecture.png";
-    public static final String IMG_TECHNOLOGY_ARCHITECTURE = "technology_architecture.png";
+    public static final String IMG_STRATEGIC_ARCHITECTURE = "strategic_architecture.png"; //$NON-NLS-1$
+    public static final String IMG_BUSINESS_ARCHITECTURE = "business_architecture.png"; //$NON-NLS-1$
+    public static final String IMG_DATA_ARCHITECTURE = "data_architecture.png"; //$NON-NLS-1$
+    public static final String IMG_APPLICATION_ARCHITECTURE = "application_architecture.png"; //$NON-NLS-1$
+    public static final String IMG_TECHNOLOGY_ARCHITECTURE = "technology_architecture.png"; //$NON-NLS-1$
 
     /**
      * The constructor

@@ -10,6 +10,8 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.ui.application;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IContributionItem;
 import org.eclipse.jface.action.IMenuManager;
@@ -28,10 +30,15 @@ import org.eclipse.ui.internal.ide.application.IDEWorkbenchWindowAdvisor;
 import org.eclipse.ui.internal.keys.BindingService;
 import org.eclipse.ui.internal.util.PrefUtil;
 import org.eclipse.ui.keys.IBindingService;
+import org.obeonetwork.dsl.togaf.ui.Activator;
 import org.obeonetwork.dsl.togaf.ui.actions.OpenBrowserAction;
 
-public class ApplicationWorkbenchWindowAdvisor extends
-/* WorkbenchWindowAdvisor */IDEWorkbenchWindowAdvisor {
+/**
+ * @author sdrapeau
+ *
+ */
+@SuppressWarnings("restriction")
+public class ApplicationWorkbenchWindowAdvisor extends IDEWorkbenchWindowAdvisor {
 
     public ApplicationWorkbenchWindowAdvisor(IDEWorkbenchAdvisor wbAdvisor, IWorkbenchWindowConfigurer configurer) {
 	super(wbAdvisor, configurer);
@@ -68,7 +75,6 @@ public class ApplicationWorkbenchWindowAdvisor extends
 
     @Override
     public void openIntro() {
-	// TODO Auto-generated method stub
 	super.openIntro();
     }
 
@@ -81,29 +87,27 @@ public class ApplicationWorkbenchWindowAdvisor extends
 	IWorkbenchWindowConfigurer workbenchWindowConfigurer = getWindowConfigurer();
 	IActionBarConfigurer actionBarConfigurer = workbenchWindowConfigurer.getActionBarConfigurer();
 	IMenuManager mainMenu = actionBarConfigurer.getMenuManager();
-	MenuManager fileMenu = new MenuManager("&Fichier", "1");
-	fileMenu.add(new Action("&Quitter") {
+	MenuManager fileMenu = new MenuManager(Messages.ApplicationWorkbenchWindowAdvisor_0, "1"); //$NON-NLS-2$
+	fileMenu.add(new Action(Messages.ApplicationWorkbenchWindowAdvisor_2) {
 	    @Override
 	    public void run() {
 		PlatformUI.getWorkbench().close();
 	    }
 	});
 	mainMenu.add(fileMenu);
-	MenuManager viewMenu = new MenuManager("&Affichage", "2");
+	MenuManager viewMenu = new MenuManager(Messages.ApplicationWorkbenchWindowAdvisor_3, "2"); //$NON-NLS-2$
 	viewMenu.add(new OpenBrowserAction());
-	viewMenu.add(new Action("Vue Propriétés") {
+	viewMenu.add(new Action(Messages.ApplicationWorkbenchWindowAdvisor_5) {
 	    @Override
 	    public void run() {
 		try {
 		    PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(IPageLayout.ID_PROP_SHEET);
 		} catch (PartInitException e) {
-		    // TODO Auto-generated catch block
-		    e.printStackTrace();
+		    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.ApplicationWorkbenchWindowAdvisor_6, e));
 		}
 	    }
 	});
 	mainMenu.add(viewMenu);
-
 	mainMenu.update(true);
     }
 
@@ -115,7 +119,7 @@ public class ApplicationWorkbenchWindowAdvisor extends
 	for (IContributionItem menuItem : menuItems) {
 	    // Hack to remove standard Eclipse menu without using the
 	    // "org.eclipse.ui.activities" extension
-	    if (menuItem.getId() != null && !menuItem.getId().startsWith("fr.obeo.od4ea.menu")) {
+	    if (menuItem.getId() != null && !menuItem.getId().startsWith("fr.obeo.od4ea.menu")) { //$NON-NLS-1$
 		menuManager.remove(menuItem);
 	    }
 	}
@@ -130,7 +134,7 @@ public class ApplicationWorkbenchWindowAdvisor extends
 	    String key = binding.getTriggerSequence().toString();
 	    // if(key!=null && (key.startsWith("ALT+SHIFT") ||
 	    // key.startsWith("ALT+CTRL") || key.startsWith("CTRL+SHIFT"))){
-	    if (key != null && !key.startsWith("CTRL+S") && (key.startsWith("ALT+") || key.startsWith("CTRL+"))) {
+	    if (key != null && !key.startsWith("CTRL+S") && (key.startsWith("ALT+") || key.startsWith("CTRL+"))) { //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		bindingManager.removeBinding(binding);
 	    }// else {
 	     // System.out.println("========> preserve binding:" + key);

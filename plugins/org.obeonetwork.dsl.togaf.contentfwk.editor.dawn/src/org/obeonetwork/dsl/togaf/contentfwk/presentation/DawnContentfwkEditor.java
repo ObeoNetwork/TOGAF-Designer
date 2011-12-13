@@ -16,12 +16,11 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorInput;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditor;
 import org.obeonetwork.dsl.togaf.common.MyCDOConnectionUtil;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditor;
 
-public class DawnContentfwkEditor extends ContentfwkEditor
-		implements
-			IDawnEditor {
+public class DawnContentfwkEditor extends ContentfwkEditor implements
+		IDawnEditor {
 	private IDawnEditorSupport dawnEditorSupport;
 
 	public static String ID = "org.obeonetwork.dsl.togaf.contentfwk.presentation.DawnContentfwkEditorID";
