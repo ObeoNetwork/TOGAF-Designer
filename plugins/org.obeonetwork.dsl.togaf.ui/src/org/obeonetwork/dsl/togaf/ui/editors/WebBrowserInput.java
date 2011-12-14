@@ -25,8 +25,8 @@ public class WebBrowserInput implements IEditorInput {
 	
 	private String url;
 	
-	public WebBrowserInput(String url) {
-		this.url = url;
+	public WebBrowserInput(String urlCst) {
+		this.url = urlCst;
 	}
 	
 	public String getUrl() {

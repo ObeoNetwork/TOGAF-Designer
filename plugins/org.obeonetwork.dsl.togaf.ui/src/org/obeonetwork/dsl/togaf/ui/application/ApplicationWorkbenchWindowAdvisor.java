@@ -136,7 +136,7 @@ public class ApplicationWorkbenchWindowAdvisor extends IDEWorkbenchWindowAdvisor
 	    // key.startsWith("ALT+CTRL") || key.startsWith("CTRL+SHIFT"))){
 	    if (key != null && !key.startsWith("CTRL+S") && (key.startsWith("ALT+") || key.startsWith("CTRL+"))) { //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		bindingManager.removeBinding(binding);
-	    }// else {
+	    } // else {
 	     // System.out.println("========> preserve binding:" + key);
 	     // }
 	}

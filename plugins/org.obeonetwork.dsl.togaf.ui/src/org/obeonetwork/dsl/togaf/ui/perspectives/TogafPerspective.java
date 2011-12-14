@@ -23,7 +23,7 @@ public class TogafPerspective implements IPerspectiveFactory {
     /**
      * ID of the perspective
      */
-    public final static String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective";  //$NON-NLS-1$
+    public static final String ID = "org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"; //$NON-NLS-1$
 
     /**
      * 
@@ -39,7 +39,7 @@ public class TogafPerspective implements IPerspectiveFactory {
      */
     public void createInitialLayout(IPageLayout factory) {
 	IFolderLayout bottom = factory.createFolder("bottomRight", IPageLayout.BOTTOM, 0.7f, factory.getEditorArea()); //$NON-NLS-1$
-	bottom.addView(IPageLayout.ID_PROP_SHEET); 
+	bottom.addView(IPageLayout.ID_PROP_SHEET);
     }
 
 }

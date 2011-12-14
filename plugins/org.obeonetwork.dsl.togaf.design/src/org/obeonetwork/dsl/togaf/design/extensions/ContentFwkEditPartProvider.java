@@ -25,7 +25,7 @@ public class ContentFwkEditPartProvider extends AbstractEditPartProvider {
 	public static final String DYNAMIC_IMAGE_ID = "DynamicImage";
 	
 	@Override
-	protected Class getNodeEditPartClass(View view) {
+	protected Class<?> getNodeEditPartClass(View view) {
 		if (view.getElement() instanceof CustomStyle) {
 			CustomStyle customStyle = (CustomStyle) view.getElement();
 			if (customStyle.getId().equals(DYNAMIC_IMAGE_ID)) {

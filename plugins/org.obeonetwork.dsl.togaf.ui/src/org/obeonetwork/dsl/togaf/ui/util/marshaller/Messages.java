@@ -16,7 +16,7 @@ import org.eclipse.osgi.util.NLS;
  * @author sdrapeau
  * 
  */
-public class Messages extends NLS {
+public final class Messages extends NLS {
 
     private static final String BUNDLE_NAME = "org.obeonetwork.dsl.togaf.ui.util.marshaller.messages"; //$NON-NLS-1$
 

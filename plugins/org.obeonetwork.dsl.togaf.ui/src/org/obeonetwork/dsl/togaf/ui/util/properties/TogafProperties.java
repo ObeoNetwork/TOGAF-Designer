@@ -23,16 +23,20 @@ import org.obeonetwork.dsl.togaf.ui.Activator;
  * @author sdrapeau
  * 
  */
-public class TogafProperties {
+public final class TogafProperties {
 
-    private static final Properties prop;
+    private static final Properties PROPERTIES;
+
+    private TogafProperties() {
+	// Nada.
+    }
 
     static {
-	prop = new Properties();
+	PROPERTIES = new Properties();
 	FileInputStream input = null;
 	try {
 	    input = new FileInputStream("application.properties"); //$NON-NLS-1$
-	    prop.load(input);
+	    PROPERTIES.load(input);
 	} catch (FileNotFoundException e) {
 	    Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, Messages.TogafProperties_0));
 	} catch (IOException e) {
@@ -51,21 +55,21 @@ public class TogafProperties {
     /**
      * The URI of the web server (default: localhost).
      */
-    public static final String WEB_SERVER = prop.getProperty("webServer", "localhost"); //$NON-NLS-1$ //$NON-NLS-2$
+    public static final String WEB_SERVER = PROPERTIES.getProperty("webServer", "localhost"); //$NON-NLS-1$ //$NON-NLS-2$
 
     /**
      * The port of the web server (default: 9000).
      */
-    public static final String WEB_PORT = prop.getProperty("webPort", "9000"); //$NON-NLS-1$ //$NON-NLS-2$
+    public static final String WEB_PORT = PROPERTIES.getProperty("webPort", "9000"); //$NON-NLS-1$ //$NON-NLS-2$
 
     /**
      * The URI of the repository server (default: localhost).
      */
-    public static final String REPOSITORY_SERVER = prop.getProperty("repositoryServer", "localhost"); //$NON-NLS-1$ //$NON-NLS-2$
+    public static final String REPOSITORY_SERVER = PROPERTIES.getProperty("repositoryServer", "localhost"); //$NON-NLS-1$ //$NON-NLS-2$
 
     /**
      * The port of the repository server (default: 2036).
      */
-    public static final String REPOSITORY_PORT = prop.getProperty("repositoryPort", "2036"); //$NON-NLS-1$ //$NON-NLS-2$
+    public static final String REPOSITORY_PORT = PROPERTIES.getProperty("repositoryPort", "2036"); //$NON-NLS-1$ //$NON-NLS-2$
 
 }

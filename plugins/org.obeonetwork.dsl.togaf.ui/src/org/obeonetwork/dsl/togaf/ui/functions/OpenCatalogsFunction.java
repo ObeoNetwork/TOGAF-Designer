@@ -39,7 +39,7 @@ public class OpenCatalogsFunction extends BrowserFunction {
     /**
      * TOGAF editor ID.
      */
-    private final static String TOGAF_EDITOR = "org.obeonetwork.dsl.togaf.contentfwk.presentation.DawnContentfwkEditorID"; //$NON-NLS-1$
+    private static final String TOGAF_EDITOR = "org.obeonetwork.dsl.togaf.contentfwk.presentation.DawnContentfwkEditorID"; //$NON-NLS-1$
 
     /**
      * @param browser
@@ -57,7 +57,7 @@ public class OpenCatalogsFunction extends BrowserFunction {
     public Object function(Object[] arguments) {
 	CDOResource semanticResource = CollaborativeSessionUtil.getSemanticResource();
 	if (semanticResource == null) {
-	    return false;
+	    return Boolean.FALSE;
 	}
 
 	CDOSession cdoSession = null;
@@ -67,7 +67,7 @@ public class OpenCatalogsFunction extends BrowserFunction {
 	    cdoSession = tx.getSession();
 	} catch (RepositoryConnectionException e) {
 	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.OpenCatalogsFunction_1, e));
-	    return false;
+	    return Boolean.FALSE;
 	}
 
 	MyCDOConnectionUtil.instance.init(cdoSession);
@@ -81,9 +81,9 @@ public class OpenCatalogsFunction extends BrowserFunction {
 	    editorPart.setFocus();
 	} catch (Exception e) {
 	    Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Messages.OpenCatalogsFunction_2, e));
-	    return false;
+	    return Boolean.FALSE;
 	}
-	return true;
+	return Boolean.TRUE;
     }
 
 }

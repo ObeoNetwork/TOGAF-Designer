@@ -47,13 +47,12 @@ public enum TogafRepresentation {
     // Technology Phase
     ENVIRONMENTS_AND_LOCATION_DIAG("Environments and Locations Diagram"), // //$NON-NLS-1$
     PLATFORM_DECOMPOSITION_DIAG("Platform Decomposition Diagram"), // //$NON-NLS-1$
-    SYSTEM_TECHNOLOGY_MATRIX("System/Technology Matrix")// //$NON-NLS-1$
-    ;
+    SYSTEM_TECHNOLOGY_MATRIX("System/Technology Matrix"); // //$NON-NLS-1$
 
     private final String id;
 
-    private TogafRepresentation(String id) {
-	this.id = id;
+    private TogafRepresentation(final String idCst) {
+	this.id = idCst;
     }
 
     public String getID() {
@@ -66,7 +65,7 @@ public enum TogafRepresentation {
      * @param representationName
      * @return
      */
-    public static String getViewpoint(String representationName) {
+    public static String getViewpoint(final String representationName) {
 	if (TogafRepresentation.GOAL_OBJECTIVE_SERVICE_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.ORGANIZATION_DECOMPOSITION_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.ACTOR_ROLE_MATRIX.getID().equals(representationName)
@@ -75,14 +74,14 @@ public enum TogafRepresentation {
 		|| TogafRepresentation.EVENT_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.BUSINESS_SERVICE_INFORMATION_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.BUSINESS_FOOTPRINT_DIAG.getID().equals(representationName)
-		|| TogafRepresentation.BUSINESS_USE_CASE_DIAG.getID().equals(representationName))
+		|| TogafRepresentation.BUSINESS_USE_CASE_DIAG.getID().equals(representationName)) {
 	    return "business"; //$NON-NLS-1$
-	else if (TogafRepresentation.DATA_ENTITY_BUSINESS_FUNCTION_MATRIX.getID().equals(representationName)
+	} else if (TogafRepresentation.DATA_ENTITY_BUSINESS_FUNCTION_MATRIX.getID().equals(representationName)
 		|| TogafRepresentation.SYSTEM_DATA_MATRIX.getID().equals(representationName)
 		|| TogafRepresentation.DATA_DISSEMINATION_DIAG.getID().equals(representationName)
-		|| TogafRepresentation.CLASS_DIAG.getID().equals(representationName))
+		|| TogafRepresentation.CLASS_DIAG.getID().equals(representationName)) {
 	    return "data"; //$NON-NLS-1$
-	else if (TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__LOGICAL.getID().equals(representationName)
+	} else if (TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__LOGICAL.getID().equals(representationName)
 		|| TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__PHYSICAL.getID().equals(representationName)
 		|| TogafRepresentation.ROLE_SYSTEM_MATRIX_LOGICAL.getID().equals(representationName)
 		|| TogafRepresentation.ROLE_SYSTEM_MATRIX__PHYSICAL.getID().equals(representationName)
@@ -90,12 +89,13 @@ public enum TogafRepresentation {
 		|| TogafRepresentation.SYSTEM_FUNCTION_MATRIX__PHYSICAL.getID().equals(representationName)
 		|| TogafRepresentation.APPLICATION_COMMUNICATION_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.APPLICATION_AND_USER_LOCATION_DIAG.getID().equals(representationName)
-		|| TogafRepresentation.SYSTEM_USE_CASE_DIAG.getID().equals(representationName))
+		|| TogafRepresentation.SYSTEM_USE_CASE_DIAG.getID().equals(representationName)) {
 	    return "application"; //$NON-NLS-1$
-	else if (TogafRepresentation.ENVIRONMENTS_AND_LOCATION_DIAG.getID().equals(representationName)
+	} else if (TogafRepresentation.ENVIRONMENTS_AND_LOCATION_DIAG.getID().equals(representationName)
 		|| TogafRepresentation.PLATFORM_DECOMPOSITION_DIAG.getID().equals(representationName)
-		|| TogafRepresentation.SYSTEM_TECHNOLOGY_MATRIX.getID().equals(representationName))
+		|| TogafRepresentation.SYSTEM_TECHNOLOGY_MATRIX.getID().equals(representationName)) {
 	    return "technology"; //$NON-NLS-1$
+	}
 	return null;
     }
 
@@ -103,7 +103,7 @@ public enum TogafRepresentation {
      * @param diagName
      * @return
      */
-    public static EClass getArchitectureKind(String diagName) {
+    public static EClass getArchitectureKind(final String diagName) {
 	EClass result = null;
 	if (TogafRepresentation.GOAL_OBJECTIVE_SERVICE_DIAG.getID().equals(diagName)
 		|| TogafRepresentation.ORGANIZATION_DECOMPOSITION_DIAG.getID().equals(diagName)
@@ -112,13 +112,13 @@ public enum TogafRepresentation {
 		|| TogafRepresentation.BUSINESS_INTERACTION_MATRIX.getID().equals(diagName)
 		|| TogafRepresentation.EVENT_DIAG.getID().equals(diagName)
 		|| TogafRepresentation.BUSINESS_SERVICE_INFORMATION_DIAG.getID().equals(diagName)
-		|| TogafRepresentation.BUSINESS_FOOTPRINT_DIAG.getID().equals(diagName))
+		|| TogafRepresentation.BUSINESS_FOOTPRINT_DIAG.getID().equals(diagName)) {
 	    result = ContentfwkPackage.Literals.BUSINESS_ARCHITECTURE;
-	else if (TogafRepresentation.DATA_ENTITY_BUSINESS_FUNCTION_MATRIX.getID().equals(diagName)
+	} else if (TogafRepresentation.DATA_ENTITY_BUSINESS_FUNCTION_MATRIX.getID().equals(diagName)
 		|| TogafRepresentation.SYSTEM_DATA_MATRIX.getID().equals(diagName)
-		|| TogafRepresentation.DATA_DISSEMINATION_DIAG.getID().equals(diagName) || TogafRepresentation.CLASS_DIAG.getID().equals(diagName))
+		|| TogafRepresentation.DATA_DISSEMINATION_DIAG.getID().equals(diagName) || TogafRepresentation.CLASS_DIAG.getID().equals(diagName)) {
 	    result = ContentfwkPackage.Literals.DATA_ARCHITECTURE;
-	else if (TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__LOGICAL.getID().equals(diagName)
+	} else if (TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__LOGICAL.getID().equals(diagName)
 		|| TogafRepresentation.SYSTEM_ORGANIZATION_MATRIX__PHYSICAL.getID().equals(diagName)
 		|| TogafRepresentation.ROLE_SYSTEM_MATRIX_LOGICAL.getID().equals(diagName)
 		|| TogafRepresentation.ROLE_SYSTEM_MATRIX__PHYSICAL.getID().equals(diagName)
@@ -126,13 +126,14 @@ public enum TogafRepresentation {
 		|| TogafRepresentation.SYSTEM_FUNCTION_MATRIX__PHYSICAL.getID().equals(diagName)
 		|| TogafRepresentation.APPLICATION_COMMUNICATION_DIAG.getID().equals(diagName)
 		|| TogafRepresentation.APPLICATION_AND_USER_LOCATION_DIAG.getID().equals(diagName)
-		|| TogafRepresentation.SYSTEM_USE_CASE_DIAG.getID().equals(diagName))
+		|| TogafRepresentation.SYSTEM_USE_CASE_DIAG.getID().equals(diagName)) {
 	    result = ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE;
-	else if (TogafRepresentation.ENVIRONMENTS_AND_LOCATION_DIAG.getID().equals(diagName)
+	} else if (TogafRepresentation.ENVIRONMENTS_AND_LOCATION_DIAG.getID().equals(diagName)
 		|| TogafRepresentation.PLATFORM_DECOMPOSITION_DIAG.getID().equals(diagName)
-		|| TogafRepresentation.SYSTEM_TECHNOLOGY_MATRIX.getID().equals(diagName))
+		|| TogafRepresentation.SYSTEM_TECHNOLOGY_MATRIX.getID().equals(diagName)) {
 	    result = ContentfwkPackage.Literals.TECHNOLOGY_ARCHITECTURE;
+	}
 	return result;
     }
-    
+
 }

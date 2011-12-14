@@ -15,7 +15,7 @@ package org.obeonetwork.dsl.togaf.ui.util.marshaller;
  * @author sdrapeau
  * 
  */
-public class MarshallerFactory {
+public final class MarshallerFactory {
 
     /**
 	 * 

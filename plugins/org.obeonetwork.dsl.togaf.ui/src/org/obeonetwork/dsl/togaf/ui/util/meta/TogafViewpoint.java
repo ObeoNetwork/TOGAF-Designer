@@ -18,12 +18,18 @@ public enum TogafViewpoint {
 
     BUSINESS("business"), DATA("data"), APPLICATION("application"), TECHNOLOGY("technology"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 
+    /**
+     * The ID of the TOGAF point of view as defined in the file togaf.odesign.
+     */
     private final String id;
 
-    private TogafViewpoint(String id) {
-	this.id = id;
+    private TogafViewpoint(final String idCst) {
+	this.id = idCst;
     }
 
+    /**
+     * @return Return the ID of the TOGAF point of view as defined in the file togaf.odesign.
+     */
     public String getID() {
 	return this.id;
     }

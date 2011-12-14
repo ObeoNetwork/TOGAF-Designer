@@ -54,7 +54,7 @@ import fr.obeo.dsl.viewpoint.ui.business.api.dialect.DialectEditor;
  */
 public class WebBrowserEditor extends EditorPart {
 
-    public final static String ID = "org.obeonetwork.dsl.togaf.ui.WebBrowser"; //$NON-NLS-1$
+    public static final String ID = "org.obeonetwork.dsl.togaf.ui.WebBrowser"; //$NON-NLS-1$
 
     private Browser browser;
 
@@ -98,23 +98,23 @@ public class WebBrowserEditor extends EditorPart {
 
 	this.getSite().getPage().addPartListener(new IPartListener() {
 
-	    public void partOpened(IWorkbenchPart part) {
+	    public void partOpened(final IWorkbenchPart part) {
 		// Nada.
 	    }
 
-	    public void partDeactivated(IWorkbenchPart part) {
+	    public void partDeactivated(final IWorkbenchPart part) {
 		// Nada.
 	    }
 
-	    public void partClosed(IWorkbenchPart part) {
+	    public void partClosed(final IWorkbenchPart part) {
 		// Nada.
 	    }
 
-	    public void partBroughtToTop(IWorkbenchPart part) {
+	    public void partBroughtToTop(final IWorkbenchPart part) {
 		// Nada.
 	    }
 
-	    public void partActivated(IWorkbenchPart part) {
+	    public void partActivated(final IWorkbenchPart part) {
 		if (part instanceof DialectEditor) {
 		    try {
 			PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
@@ -142,7 +142,7 @@ public class WebBrowserEditor extends EditorPart {
     /**
      * Register WindowEvent listeners
      */
-   private static void initialize(final Display display, Browser browser) {
+    private static void initialize(final Display display, Browser browser) {
 	browser.addOpenWindowListener(new OpenWindowListener() {
 	    public void open(WindowEvent event) {
 		Shell shell = new Shell(display);
@@ -164,8 +164,9 @@ public class WebBrowserEditor extends EditorPart {
 	    public void show(WindowEvent event) {
 		Browser browser = (Browser) event.widget;
 		final Shell shell = browser.getShell();
-		if (event.location != null)
+		if (event.location != null) {
 		    shell.setLocation(event.location);
+		}
 		if (event.size != null) {
 		    Point size = event.size;
 		    shell.setSize(shell.computeSize(size.x, size.y));
@@ -225,7 +226,7 @@ public class WebBrowserEditor extends EditorPart {
 	}
 
 	public void changing(LocationEvent event) {
-	    //FIXME maybe use singleton for each functions ?
+	    // FIXME maybe use singleton for each functions ?
 	    new CloseViewpointSessionFunction(browser, "closeViewpointSession"); //$NON-NLS-1$
 	    new SyncViewpointSessionFunction(browser, "syncViewpointSession"); //$NON-NLS-1$
 	    new OpenRepresentationFunction(browser, "openRepresentationFunction"); //$NON-NLS-1$

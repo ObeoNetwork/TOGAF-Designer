@@ -1,13 +1,13 @@
-  /*******************************************************************************
-     * Copyright (c) 2004 - 2011 Eike Stepper (Berlin, Germany) and others.
-     * All rights reserved. This program and the accompanying materials
-     * are made available under the terms of the Eclipse Public License v1.0
-     * which accompanies this distribution, and is available at
-     * http://www.eclipse.org/legal/epl-v10.html
-     *
-     * Contributors:
-     *     Martin Fluegge - initial API and implementation
-     ******************************************************************************/
+/*******************************************************************************
+ * Copyright (c) 2004 - 2011 Eike Stepper (Berlin, Germany) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Martin Fluegge - initial API and implementation
+ ******************************************************************************/
 package org.obeonetwork.dsl.togaf.common;
 
 import java.util.HashMap;
@@ -37,177 +37,147 @@ import org.eclipse.net4j.util.om.trace.ContextTracer;
 /**
  * @author Martin Fluegge
  */
-public class MyCDOConnectionUtil extends CDOConnectionUtil{
- 
-      private static final ContextTracer TRACER = new ContextTracer(OM.DEBUG, CDOConnectionUtil.class);
+public class MyCDOConnectionUtil extends CDOConnectionUtil {
 
-      public static MyCDOConnectionUtil instance = new MyCDOConnectionUtil();
+	private static final ContextTracer TRACER = new ContextTracer(OM.DEBUG,
+			CDOConnectionUtil.class);
 
-      public CDOSession currentSession;
+	public static MyCDOConnectionUtil instance = new MyCDOConnectionUtil();
 
-      private String repositoryName;
+	public CDOSession currentSession;
 
-      private String protocol;
+	private Map<String, CDOTransaction> transactions;
 
-      private String host;
+	private IConnector connector;
 
-      private Map<String, CDOTransaction> transactions;
+	static {
+		if (!OMPlatform.INSTANCE.isOSGiRunning()) {
+			Net4jUtil.prepareContainer(IPluginContainer.INSTANCE);
+			TCPUtil.prepareContainer(IPluginContainer.INSTANCE);
+			CDONet4jUtil.prepareContainer(IPluginContainer.INSTANCE);
+		}
+	}
 
-      private IConnector connector;
+	public MyCDOConnectionUtil() {
+	}
 
-      static
-      {
-        if (!OMPlatform.INSTANCE.isOSGiRunning())
-        {
-          Net4jUtil.prepareContainer(IPluginContainer.INSTANCE);
-          TCPUtil.prepareContainer(IPluginContainer.INSTANCE);
-          CDONet4jUtil.prepareContainer(IPluginContainer.INSTANCE);
-        }
-      }
+	public void init(CDOSession cdoSession) {
+		if (!CDOUtil.isLegacyModeDefault()) {
+			CDOUtil.setLegacyModeDefault(true);
+		}
+		this.currentSession = cdoSession;
+	}
 
-      public MyCDOConnectionUtil()
-      {
-      }
-      
-      public void init(CDOSession cdoSession){
-	  if (!CDOUtil.isLegacyModeDefault())
-	        {
-	          CDOUtil.setLegacyModeDefault(true);
-	        }
-	  this.currentSession = cdoSession;
-      }
+	public void init(String repositoryName, String protocol, String host) {
+		setConnector(Net4jUtil.getConnector(IPluginContainer.INSTANCE,
+				protocol, host));
+	}
 
-      public void init(String repositoryName, String protocol, String host)
-      {
-        this.repositoryName = repositoryName;
-        this.protocol = protocol;
-        this.host = host;
-        setConnector(Net4jUtil.getConnector(IPluginContainer.INSTANCE, protocol, host));
-      }
+	public void registerPackages(List<EPackage> packages) {
+		if (packages == null) {
+			return;
+		}
 
-      public void registerPackages(List<EPackage> packages)
-      {
-        if (packages == null)
-        {
-          return;
-        }
+		for (EPackage pack : packages) {
+			pack.eClass();
+		}
+	}
 
-        for (EPackage pack : packages)
-        {
-          pack.eClass();
-        }
-      }
+	/**
+	 * opens the session if it is not opened.
+	 */
+	public CDOSession openSession() {
 
-      /**
-       * opens the session if it is not opened.
-       */
-      public CDOSession openSession()
-      {
-       
+		return currentSession;
+	}
 
-        return currentSession;
-      }
+	public void closeCurrentSession() {
+		getCurrentSession().close();
+	}
 
-      public void closeCurrentSession()
-      {
-        getCurrentSession().close();
-      }
+	/**
+	 * opens a transaction on the given resourceSet
+	 */
+	public CDOTransaction openCurrentTransaction(ResourceSet resourceSet,
+			String id) {
+		if (id == null) {
+			throw new DawnInvalidIdException("The identifier '" + id
+					+ "' is invalid for openeing a transaction");
+		}
 
-      /**
-       * opens a transaction on the given resourceSet
-       */
-      public CDOTransaction openCurrentTransaction(ResourceSet resourceSet, String id)
-      {
-        if (id == null)
-        {
-          throw new DawnInvalidIdException("The identifier '" + id + "' is invalid for openeing a transaction");
-        }
+		if (TRACER.isEnabled()) {
+			TRACER.format("Opening transaction for {0} on {1}", id, resourceSet); //$NON-NLS-1$
+		}
 
-        if (TRACER.isEnabled())
-        {
-          TRACER.format("Opening transaction for {0} on {1}", id, resourceSet); //$NON-NLS-1$
-        }
+		id = convert(id);
+		CDOTransaction transaction = getCurrentSession().openTransaction(
+				resourceSet);
+		getTransactions().put(id, transaction);
+		return transaction;
+	}
 
-        id = convert(id);
-        CDOTransaction transaction = getCurrentSession().openTransaction(resourceSet);
-        getTransactions().put(id, transaction);
-        return transaction;
-      }
+	public void setChangeSubscribtionPolicyForCurrentTransaction(
+			CDOAdapterPolicy policy, String id) {
+		id = convert(id);
+		getTransactions().get(id).options().addChangeSubscriptionPolicy(policy);
+	}
 
-      public void setChangeSubscribtionPolicyForCurrentTransaction(CDOAdapterPolicy policy, String id)
-      {
-        id = convert(id);
-        getTransactions().get(id).options().addChangeSubscriptionPolicy(policy);
-      }
+	public CDOTransaction getCurrentTransaction(String id) {
+		id = convert(id);
+		return getTransactions().get(id);
+	}
 
-      public CDOTransaction getCurrentTransaction(String id)
-      {
-        id = convert(id);
-        return getTransactions().get(id);
-      }
+	// TODO find a better way to solve this problem
+	private String convert(String id) {
+		return id.replace("dawn", "cdo");
+	}
 
-      // TODO find a better way to solve this problem
-      private String convert(String id)
-      {
-        return id.replace("dawn", "cdo");
-      }
+	public CDOSession getCurrentSession() {
+		return currentSession;
+	}
 
-      public CDOSession getCurrentSession()
-      {
-        return currentSession;
-      }
+	public Map<String, CDOTransaction> getTransactions() {
+		if (transactions == null) {
+			transactions = new HashMap<String, CDOTransaction>();
+		}
 
-      public Map<String, CDOTransaction> getTransactions()
-      {
-        if (transactions == null)
-        {
-          transactions = new HashMap<String, CDOTransaction>();
-        }
+		return transactions;
+	}
 
-        return transactions;
-      }
+	public CDOView openView(CDOSession session) {
+		return session.openView();
+	}
 
-      public CDOView openView(CDOSession session)
-      {
-        return session.openView();
-      }
+	public CDOTransaction openTransaction(CDOSession session) {
+		return session.openTransaction();
+	}
 
-      public CDOTransaction openTransaction(CDOSession session)
-      {
-        return session.openTransaction();
-      }
+	@Deprecated
+	public static void closeSession(CDOSession session) {
+		session.close();
+	}
 
-      @Deprecated
-      public static void closeSession(CDOSession session)
-      {
-        session.close();
-      }
+	public CDOTransaction getOrOpenCurrentTransaction(String id,
+			ResourceSet resourceSet, String repositoryName) {
+		CDOTransaction transaction = getCurrentTransaction(id);
+		CDOViewSet viewSet = CDOUtil.getViewSet(resourceSet);
+		if (viewSet != null) {
+			return ((InternalCDOView) viewSet.resolveView(repositoryName))
+					.toTransaction();
+		}
 
-      public CDOTransaction getOrOpenCurrentTransaction(String id, ResourceSet resourceSet, String repositoryName)
-      {
-        CDOTransaction transaction = getCurrentTransaction(id);
-        CDOViewSet viewSet = CDOUtil.getViewSet(resourceSet);
-        if (viewSet != null)
-        {
-          return ((InternalCDOView)viewSet.resolveView(repositoryName)).toTransaction();
-        }
+		if (transaction == null) {
+			transaction = openCurrentTransaction(resourceSet, id);
+		}
 
-        if (transaction == null)
-        {
-          transaction = openCurrentTransaction(resourceSet, id);
-        }
+		return transaction;
+	}
 
-        return transaction;
-      }
+	public void setConnector(IConnector connector) {
+		this.connector = connector;
+	}
 
-      public void setConnector(IConnector connector)
-      {
-        this.connector = connector;
-      }
-
-      public IConnector getConnector()
-      {
-        return connector;
-      }
-    }
-
+	public IConnector getConnector() {
+		return connector;
+	}
+}

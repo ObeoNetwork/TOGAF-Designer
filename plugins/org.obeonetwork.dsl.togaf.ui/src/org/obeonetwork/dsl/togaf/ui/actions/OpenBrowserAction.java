@@ -32,7 +32,7 @@ import org.obeonetwork.dsl.togaf.ui.util.properties.TogafProperties;
 
 /**
  * @author sdrapeau
- *
+ * 
  */
 public class OpenBrowserAction extends Action implements IWorkbenchWindowActionDelegate {
 
@@ -45,10 +45,12 @@ public class OpenBrowserAction extends Action implements IWorkbenchWindowActionD
 	setImageDescriptor(Activator.getImageDescriptor("browser.gif")); //$NON-NLS-1$
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
      */
-    public void run(IAction action) {
+    public final void run(final IAction action) {
 	openEditor();
     }
 
@@ -59,7 +61,7 @@ public class OpenBrowserAction extends Action implements IWorkbenchWindowActionD
 	try {
 	    IProgressService service = PlatformUI.getWorkbench().getProgressService();
 	    service.busyCursorWhile(new IRunnableWithProgress() {
-		public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+		public void run(final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		    Display.getDefault().asyncExec(new Runnable() {
 			public void run() {
 			    try {
@@ -73,39 +75,47 @@ public class OpenBrowserAction extends Action implements IWorkbenchWindowActionD
 			}
 		    });
 
-		};
+		}
 	    });
 	} catch (Exception e) {
 	    MessageDialog.openError(Activator.getActiveWorkbenchShell(), Messages.OpenBrowserAction_6, Messages.OpenBrowserAction_7);
 	}
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.eclipse.jface.action.Action#run()
      */
-    public void run() {
+    public final void run() {
 	run(this);
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.eclipse.ui.IWorkbenchWindowActionDelegate#init(org.eclipse.ui.IWorkbenchWindow)
      */
-    public void init(IWorkbenchWindow window) {
-	//Nada.
+    public void init(final IWorkbenchWindow window) {
+	// Nada.
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.eclipse.ui.IWorkbenchWindowActionDelegate#dispose()
      */
     public void dispose() {
-	//Nada.
+	// Nada.
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
+     * 
      * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction, org.eclipse.jface.viewers.ISelection)
      */
-    public void selectionChanged(IAction action, ISelection selection) {
-	//Nada.
+    public void selectionChanged(final IAction action, final ISelection selection) {
+	// Nada.
     }
 
 }

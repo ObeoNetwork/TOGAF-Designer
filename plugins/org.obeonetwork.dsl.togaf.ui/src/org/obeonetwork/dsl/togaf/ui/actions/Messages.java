@@ -13,10 +13,10 @@ package org.obeonetwork.dsl.togaf.ui.actions;
 import org.eclipse.osgi.util.NLS;
 
 /**
- * @author SDrapeau
+ * @author sdrapeau
  *
  */
-public class Messages extends NLS {
+public final class Messages extends NLS {
     
     private static final String BUNDLE_NAME = "org.obeonetwork.dsl.togaf.ui.actions.messages"; //$NON-NLS-1$
     
