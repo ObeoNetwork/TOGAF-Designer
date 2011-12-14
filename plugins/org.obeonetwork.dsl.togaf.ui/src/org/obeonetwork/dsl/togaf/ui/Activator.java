@@ -12,6 +12,7 @@ package org.obeonetwork.dsl.togaf.ui;
 
 import java.net.URL;
 
+import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -91,7 +92,7 @@ public class Activator extends AbstractUIPlugin {
     private Image registerImage(String key) {
 	try {
 	    IPath path = new Path("icons/" + key); //$NON-NLS-1$
-	    URL url = find(path);
+	    URL url = FileLocator.find(this.getBundle(), path, null);
 	    if (url != null) {
 		ImageDescriptor desc = ImageDescriptor.createFromURL(url);
 		getImageRegistry().put(key, desc);
