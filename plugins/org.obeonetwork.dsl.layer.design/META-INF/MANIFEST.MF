@@ -1,8 +1,9 @@
 Manifest-Version: 1.0
-Bundle-Name: Obeo Designer Viewpoint Project
+Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.layer.design;singleton=true
-Bundle-Version: 0.7.0.qualifier
+Bundle-Version: 0.8.0.qualifier
 Bundle-Activator: org.obeonetwork.dsl.layer.design.Activator
+Bundle-Vendor: %providerName
 Require-Bundle: fr.obeo.acceleo.gen,
  org.eclipse.ui,
  org.eclipse.core.runtime,
