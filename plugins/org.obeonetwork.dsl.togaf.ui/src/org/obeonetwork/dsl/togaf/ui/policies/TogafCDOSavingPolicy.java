@@ -72,12 +72,6 @@ public class TogafCDOSavingPolicy extends CDOSavingPolicy {
 	return savedResources;
     }
 
-    /**
-     * 
-     * {@inheritDoc}
-     * 
-     * @see fr.obeo.dsl.viewpoint.collab.api.savingpolicy.CollaborativeSavingPolicy#saveRemoteResources(java.util.Set, java.util.Map)
-     */
     public Collection<CDOResource> saveRemoteResources(Set<CDOResource> remoteResources, Map<?, ?> options) {
 	Collection<CDOResource> savedResources = super.saveRemoteResources(remoteResources, options);
 	return savedResources;

@@ -151,8 +151,7 @@ public class CollaborativeSessionUtil {
 	    }
 
 	    public IPasswordCredentials getCredentials() {
-		// TODO get credentials with a dedicated login Js/Java
-		// function
+		// TODO get credentials with a dedicated login Js/Java function
 		return new IPasswordCredentials() {
 		    public String getUserID() {
 			return "admin";
@@ -172,6 +171,13 @@ public class CollaborativeSessionUtil {
 			}
 		    }
 		};
+	    }
+
+	    public boolean notifyAuthenticationFailed(String arg0) {
+		return true;
+	    }
+
+	    public void setRepositoryConfig(RepositoryConfig arg0) {		
 	    }
 	});
 
