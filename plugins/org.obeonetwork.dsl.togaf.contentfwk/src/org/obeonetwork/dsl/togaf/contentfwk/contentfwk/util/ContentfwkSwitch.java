@@ -11,11 +11,7 @@
  */
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util;
 
-import java.util.List;
-
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor;

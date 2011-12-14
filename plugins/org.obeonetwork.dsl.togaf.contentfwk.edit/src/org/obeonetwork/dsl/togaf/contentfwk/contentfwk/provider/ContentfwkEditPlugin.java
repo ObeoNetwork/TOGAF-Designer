@@ -7,7 +7,6 @@
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.provider;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 
 /**

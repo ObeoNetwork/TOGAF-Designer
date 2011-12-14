@@ -13,11 +13,8 @@ package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationComponent;

@@ -10,14 +10,6 @@
  *******************************************************************************/
 package org.obeonetwork.dsl.togaf.design.extensions;
 
-import fr.obeo.dsl.viewpoint.ViewpointFactory;
-import fr.obeo.dsl.viewpoint.WorkspaceImage;
-import fr.obeo.dsl.viewpoint.diagram.edit.api.part.AbstractNotSelectableShapeNodeEditPart;
-import fr.obeo.dsl.viewpoint.diagram.edit.api.part.IDiagramBorderNodeEditPart;
-import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramBorderNodeEditPartOperation;
-import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.AirStyleDefaultSizeNodeFigure;
-import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.WorkspaceImageFigure;
-
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.StackLayout;
@@ -39,7 +31,6 @@ import fr.obeo.dsl.viewpoint.WorkspaceImage;
 import fr.obeo.dsl.viewpoint.diagram.edit.api.part.AbstractNotSelectableShapeNodeEditPart;
 import fr.obeo.dsl.viewpoint.diagram.edit.api.part.IDiagramBorderNodeEditPart;
 import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramBorderNodeEditPartOperation;
-import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramNodeEditPartOperation;
 import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.AirStyleDefaultSizeNodeFigure;
 import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.WorkspaceImageFigure;
 

@@ -12,7 +12,6 @@
 package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
 
