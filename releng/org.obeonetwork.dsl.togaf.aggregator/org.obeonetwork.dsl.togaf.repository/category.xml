@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/org.obeonetwork.dsl.togaf.feature_0.7.0.qualifier.jar" id="org.obeonetwork.dsl.togaf.feature" version="0.7.0.qualifier">
-      <category name="Togaf-Editor"/>
-   </feature>
-   <category-def name="Togaf-Editor" label="Togaf Editor"/>
-</site>
