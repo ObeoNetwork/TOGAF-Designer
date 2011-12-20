@@ -142,13 +142,12 @@ public class WebBrowserEditor extends EditorPart {
     /**
      * Register WindowEvent listeners
      */
-    private static void initialize(final Display display, Browser browser) {
+    private static void initialize(final Display display, final Browser browser) {
 	browser.addOpenWindowListener(new OpenWindowListener() {
 	    public void open(WindowEvent event) {
 		Shell shell = new Shell(display);
 		shell.setText(Messages.WebBrowserEditor_7);
 		shell.setLayout(new FillLayout());
-		Browser browser = new Browser(shell, SWT.NONE);
 		initialize(display, browser);
 		event.browser = browser;
 	    }
