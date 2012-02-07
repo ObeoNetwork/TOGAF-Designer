@@ -24,6 +24,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getOwnsElements <em>Owns Elements</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers <em>Sub Containers</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels <em>Labels</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +76,37 @@ public interface Container extends CDOObject {
 	 * @generated
 	 */
 	EList<Element> getOwnsElements();
+
+	/**
+	 * Returns the value of the '<em><b>Sub Containers</b></em>' containment reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sub Containers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sub Containers</em>' containment reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getContainer_SubContainers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Container> getSubContainers();
+
+	/**
+	 * Returns the value of the '<em><b>Labels</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Labels</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Labels</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getContainer_Labels()
+	 * @model
+	 * @generated
+	 */
+	EList<Label> getLabels();
 
 } // Container

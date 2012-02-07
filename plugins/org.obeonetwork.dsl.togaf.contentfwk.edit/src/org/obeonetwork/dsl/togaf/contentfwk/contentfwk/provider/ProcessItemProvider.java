@@ -770,6 +770,11 @@ public class ProcessItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ContentfwkPackage.Literals.PROCESS__ANY,
+				 ContentfwkFactory.eINSTANCE.createLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ContentfwkPackage.Literals.PROCESS__ANY,
 				 ContentfwkFactory.eINSTANCE.createLocation()));
 
 		newChildDescriptors.add

@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.obeonetwork.dsl.togaf.contentfwk/src"
     modelPluginID="org.obeonetwork.dsl.togaf.contentfwk" modelName="Contentfwk" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject"
-    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" importerID="org.eclipse.emf.importer.cdo"
+    rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl" importerID="org.eclipse.emf.importer.ecore"
     featureDelegation="Dynamic" complianceLevel="6.0" copyrightFields="false">
   <foreignModel>contentfwk.ecore</foreignModel>
   <modelPluginVariables>CDO=org.eclipse.emf.cdo</modelPluginVariables>
@@ -47,7 +47,7 @@
     <genClasses ecoreClass="contentfwk.ecore#//EnterpriseArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/architectures"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/containers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/labels"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//Architecture"/>
     <genClasses ecoreClass="contentfwk.ecore#//BusinessArchitecture">
@@ -268,6 +268,12 @@
     <genClasses ecoreClass="contentfwk.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/ownsElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/subContainers"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/labels"/>
+    </genClasses>
+    <genClasses ecoreClass="contentfwk.ecore#//Label">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Label/subLabels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Label/name"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Location">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/containsActors"/>

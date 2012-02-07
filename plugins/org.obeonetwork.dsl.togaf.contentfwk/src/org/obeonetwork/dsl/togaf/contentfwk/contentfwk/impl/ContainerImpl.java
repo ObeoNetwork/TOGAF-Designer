@@ -13,12 +13,16 @@ package org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,6 +33,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getOwnsElements <em>Owns Elements</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getSubContainers <em>Sub Containers</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getLabels <em>Labels</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,6 +113,40 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
+	public EList<Container> getSubContainers() {
+		return (EList<Container>)eDynamicGet(ContentfwkPackage.CONTAINER__SUB_CONTAINERS, ContentfwkPackage.Literals.CONTAINER__SUB_CONTAINERS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Label> getLabels() {
+		return (EList<Label>)eDynamicGet(ContentfwkPackage.CONTAINER__LABELS, ContentfwkPackage.Literals.CONTAINER__LABELS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
+				return ((InternalEList<?>)getSubContainers()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -114,6 +154,10 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 				return getName();
 			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
 				return getOwnsElements();
+			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
+				return getSubContainers();
+			case ContentfwkPackage.CONTAINER__LABELS:
+				return getLabels();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -134,6 +178,14 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 				getOwnsElements().clear();
 				getOwnsElements().addAll((Collection<? extends Element>)newValue);
 				return;
+			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
+				getSubContainers().clear();
+				getSubContainers().addAll((Collection<? extends Container>)newValue);
+				return;
+			case ContentfwkPackage.CONTAINER__LABELS:
+				getLabels().clear();
+				getLabels().addAll((Collection<? extends Label>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -152,6 +204,12 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
 				getOwnsElements().clear();
 				return;
+			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
+				getSubContainers().clear();
+				return;
+			case ContentfwkPackage.CONTAINER__LABELS:
+				getLabels().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -168,6 +226,10 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
 				return !getOwnsElements().isEmpty();
+			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
+				return !getSubContainers().isEmpty();
+			case ContentfwkPackage.CONTAINER__LABELS:
+				return !getLabels().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

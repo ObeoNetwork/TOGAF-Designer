@@ -94,13 +94,13 @@ public interface ContentfwkPackage extends EPackage {
 	int ENTERPRISE_ARCHITECTURE__CONTAINERS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Any</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTERPRISE_ARCHITECTURE__ANY = 2;
+	int ENTERPRISE_ARCHITECTURE__LABELS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Enterprise Architecture</em>' class.
@@ -4025,13 +4025,68 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTAINER__OWNS_ELEMENTS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Sub Containers</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__SUB_CONTAINERS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Labels</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__LABELS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = 2;
+	int CONTAINER_FEATURE_COUNT = 4;
+
+	/**
+	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLabel()
+	 * @generated
+	 */
+	int LABEL = 26;
+
+	/**
+	 * The feature id for the '<em><b>Sub Labels</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__SUB_LABELS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Label</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
@@ -4041,7 +4096,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 26;
+	int LOCATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4186,7 +4241,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getCapability()
 	 * @generated
 	 */
-	int CAPABILITY = 27;
+	int CAPABILITY = 28;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4304,7 +4359,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStrategicElement()
 	 * @generated
 	 */
-	int STRATEGIC_ELEMENT = 28;
+	int STRATEGIC_ELEMENT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4395,7 +4450,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPrinciple()
 	 * @generated
 	 */
-	int PRINCIPLE = 29;
+	int PRINCIPLE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4540,7 +4595,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 30;
+	int CONSTRAINT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4631,7 +4686,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getAssumption()
 	 * @generated
 	 */
-	int ASSUMPTION = 31;
+	int ASSUMPTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4722,7 +4777,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 32;
+	int REQUIREMENT = 33;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4840,7 +4895,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getGap()
 	 * @generated
 	 */
-	int GAP = 33;
+	int GAP = 34;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4931,7 +4986,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getWorkPackage()
 	 * @generated
 	 */
-	int WORK_PACKAGE = 34;
+	int WORK_PACKAGE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5040,7 +5095,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLogicalDataComponent()
 	 * @generated
 	 */
-	int LOGICAL_DATA_COMPONENT = 35;
+	int LOGICAL_DATA_COMPONENT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5194,7 +5249,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPhysicalDataComponent()
 	 * @generated
 	 */
-	int PHYSICAL_DATA_COMPONENT = 36;
+	int PHYSICAL_DATA_COMPONENT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5366,7 +5421,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getApplicationArchitecture()
 	 * @generated
 	 */
-	int APPLICATION_ARCHITECTURE = 37;
+	int APPLICATION_ARCHITECTURE = 38;
 
 	/**
 	 * The feature id for the '<em><b>Logical Application Components</b></em>' containment reference list.
@@ -5421,7 +5476,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPhysicalApplicationComponent()
 	 * @generated
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT = 38;
+	int PHYSICAL_APPLICATION_COMPONENT = 39;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5881,7 +5936,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLogicalTechnologyComponent()
 	 * @generated
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT = 39;
+	int LOGICAL_TECHNOLOGY_COMPONENT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -6062,7 +6117,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStrategicArchitecture()
 	 * @generated
 	 */
-	int STRATEGIC_ARCHITECTURE = 40;
+	int STRATEGIC_ARCHITECTURE = 41;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
@@ -6099,7 +6154,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStandard()
 	 * @generated
 	 */
-	int STANDARD = 41;
+	int STANDARD = 42;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6163,7 +6218,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 42;
+	int SERVICE = 43;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6362,7 +6417,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getApplicationComponent()
 	 * @generated
 	 */
-	int APPLICATION_COMPONENT = 43;
+	int APPLICATION_COMPONENT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6426,7 +6481,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getInformationSystemService()
 	 * @generated
 	 */
-	int INFORMATION_SYSTEM_SERVICE = 44;
+	int INFORMATION_SYSTEM_SERVICE = 45;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6706,7 +6761,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getDataComponent()
 	 * @generated
 	 */
-	int DATA_COMPONENT = 45;
+	int DATA_COMPONENT = 46;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6770,7 +6825,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getTechnologyComponent()
 	 * @generated
 	 */
-	int TECHNOLOGY_COMPONENT = 46;
+	int TECHNOLOGY_COMPONENT = 47;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6834,7 +6889,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPrincipleCategory()
 	 * @generated
 	 */
-	int PRINCIPLE_CATEGORY = 47;
+	int PRINCIPLE_CATEGORY = 48;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass <em>Standards Class</em>}' enum.
@@ -6844,7 +6899,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStandardsClass()
 	 * @generated
 	 */
-	int STANDARDS_CLASS = 48;
+	int STANDARDS_CLASS = 49;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LifeCycleStatus <em>Life Cycle Status</em>}' enum.
@@ -6854,7 +6909,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLifeCycleStatus()
 	 * @generated
 	 */
-	int LIFE_CYCLE_STATUS = 49;
+	int LIFE_CYCLE_STATUS = 50;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntityCategory <em>Data Entity Category</em>}' enum.
@@ -6864,7 +6919,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getDataEntityCategory()
 	 * @generated
 	 */
-	int DATA_ENTITY_CATEGORY = 50;
+	int DATA_ENTITY_CATEGORY = 51;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackageCategory <em>Work Package Category</em>}' enum.
@@ -6874,7 +6929,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getWorkPackageCategory()
 	 * @generated
 	 */
-	int WORK_PACKAGE_CATEGORY = 51;
+	int WORK_PACKAGE_CATEGORY = 52;
 
 
 	/**
@@ -6910,15 +6965,15 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getEnterpriseArchitecture_Containers();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getAny <em>Any</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getLabels <em>Labels</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Any</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getAny()
+	 * @return the meta object for the containment reference list '<em>Labels</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getLabels()
 	 * @see #getEnterpriseArchitecture()
 	 * @generated
 	 */
-	EReference getEnterpriseArchitecture_Any();
+	EReference getEnterpriseArchitecture_Labels();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture <em>Architecture</em>}'.
@@ -9052,6 +9107,60 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getContainer_OwnsElements();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers <em>Sub Containers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sub Containers</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_SubContainers();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels <em>Labels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Labels</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EReference getContainer_Labels();
+
+	/**
+	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Label</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label
+	 * @generated
+	 */
+	EClass getLabel();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getSubLabels <em>Sub Labels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sub Labels</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getSubLabels()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EReference getLabel_SubLabels();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getName()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EAttribute getLabel_Name();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10394,12 +10503,12 @@ public interface ContentfwkPackage extends EPackage {
 		EReference ENTERPRISE_ARCHITECTURE__CONTAINERS = eINSTANCE.getEnterpriseArchitecture_Containers();
 
 		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTERPRISE_ARCHITECTURE__ANY = eINSTANCE.getEnterpriseArchitecture_Any();
+		EReference ENTERPRISE_ARCHITECTURE__LABELS = eINSTANCE.getEnterpriseArchitecture_Labels();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ArchitectureImpl <em>Architecture</em>}' class.
@@ -12018,6 +12127,48 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTAINER__OWNS_ELEMENTS = eINSTANCE.getContainer_OwnsElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Containers</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__SUB_CONTAINERS = eINSTANCE.getContainer_SubContainers();
+
+		/**
+		 * The meta object literal for the '<em><b>Labels</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTAINER__LABELS = eINSTANCE.getContainer_Labels();
+
+		/**
+		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl
+		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLabel()
+		 * @generated
+		 */
+		EClass LABEL = eINSTANCE.getLabel();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Labels</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LABEL__SUB_LABELS = eINSTANCE.getLabel_SubLabels();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LABEL__NAME = eINSTANCE.getLabel_Name();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.

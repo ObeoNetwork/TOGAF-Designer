@@ -38,6 +38,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Gap;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalDataComponent;
@@ -304,6 +305,12 @@ public class ContentfwkSwitch<T> extends Switch<T> {
 			case ContentfwkPackage.CONTAINER: {
 				Container container = (Container)theEObject;
 				T result = caseContainer(container);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ContentfwkPackage.LABEL: {
+				Label label = (Label)theEObject;
+				T result = caseLabel(label);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -860,6 +867,21 @@ public class ContentfwkSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseContainer(Container object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLabel(Label object) {
 		return null;
 	}
 

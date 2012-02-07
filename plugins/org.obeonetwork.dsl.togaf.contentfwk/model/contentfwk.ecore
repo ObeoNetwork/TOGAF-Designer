@@ -12,8 +12,8 @@
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
         eType="#//Container" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="any" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
+        eType="#//Label" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Architecture" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="BusinessArchitecture" eSuperTypes="#//Architecture">
@@ -435,6 +435,15 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownsElements" upperBound="-1"
         eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subContainers" upperBound="-1"
+        eType="#//Container" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
+        eType="#//Label"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subLabels" upperBound="-1"
+        eType="#//Label" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Location" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containsActors" upperBound="-1"

@@ -536,6 +536,11 @@ public class DataEntityItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(ContentfwkPackage.Literals.DATA_ENTITY__ANY,
+				 ContentfwkFactory.eINSTANCE.createLabel()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ContentfwkPackage.Literals.DATA_ENTITY__ANY,
 				 ContentfwkFactory.eINSTANCE.createLocation()));
 
 		newChildDescriptors.add

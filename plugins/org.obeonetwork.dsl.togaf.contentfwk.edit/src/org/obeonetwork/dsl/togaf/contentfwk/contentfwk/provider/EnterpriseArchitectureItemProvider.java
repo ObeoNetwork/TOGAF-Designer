@@ -80,7 +80,7 @@ public class EnterpriseArchitectureItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES);
 			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS);
-			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY);
+			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__LABELS);
 		}
 		return childrenFeatures;
 	}
@@ -134,7 +134,7 @@ public class EnterpriseArchitectureItemProvider
 		switch (notification.getFeatureID(EnterpriseArchitecture.class)) {
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ANY:
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -184,227 +184,8 @@ public class EnterpriseArchitectureItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createEnterpriseArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createBusinessArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createDataArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createTechnologyArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createElement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createDriver()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createGoal()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createObjective()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createOrganizationUnit()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createActor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createRole()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createDataEntity()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createLogicalApplicationComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createBusinessService()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createProcess()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createPlatformService()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createPhysicalTechnologyComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createProduct()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createMeasure()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createServiceQuality()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createContract()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createEvent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createControl()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createContainer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createLocation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createCapability()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createPrinciple()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createConstraint()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createAssumption()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createRequirement()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createGap()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createWorkPackage()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createLogicalDataComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createPhysicalDataComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createApplicationArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createPhysicalApplicationComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createLogicalTechnologyComponent()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createStrategicArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY,
-				 ContentfwkFactory.eINSTANCE.createInformationSystemService()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES ||
-			childFeature == ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ANY ||
-			childFeature == ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__LABELS,
+				 ContentfwkFactory.eINSTANCE.createLabel()));
 	}
 
 	/**

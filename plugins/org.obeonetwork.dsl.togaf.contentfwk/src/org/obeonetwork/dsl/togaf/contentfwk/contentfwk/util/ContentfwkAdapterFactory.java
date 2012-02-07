@@ -39,6 +39,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Gap;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalDataComponent;
@@ -222,6 +223,10 @@ public class ContentfwkAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseContainer(Container object) {
 				return createContainerAdapter();
+			}
+			@Override
+			public Adapter caseLabel(Label object) {
+				return createLabelAdapter();
 			}
 			@Override
 			public Adapter caseLocation(Location object) {
@@ -688,6 +693,20 @@ public class ContentfwkAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label <em>Label</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label
+	 * @generated
+	 */
+	public Adapter createLabelAdapter() {
 		return null;
 	}
 

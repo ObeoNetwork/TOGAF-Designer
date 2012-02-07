@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getArchitectures <em>Architectures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getContainers <em>Containers</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getAny <em>Any</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getLabels <em>Labels</em>}</li>
  * </ul>
  * </p>
  *
@@ -67,19 +67,19 @@ public interface EnterpriseArchitecture extends CDOObject {
 	EList<Container> getContainers();
 
 	/**
-	 * Returns the value of the '<em><b>Any</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * Returns the value of the '<em><b>Labels</b></em>' containment reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Any</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Labels</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Any</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getEnterpriseArchitecture_Any()
+	 * @return the value of the '<em>Labels</em>' containment reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getEnterpriseArchitecture_Labels()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EObject> getAny();
+	EList<Label> getLabels();
 
 } // EnterpriseArchitecture
