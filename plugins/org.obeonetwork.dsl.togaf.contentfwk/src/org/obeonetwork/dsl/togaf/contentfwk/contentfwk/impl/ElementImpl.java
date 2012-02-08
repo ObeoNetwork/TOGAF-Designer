@@ -252,6 +252,8 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategory()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -268,6 +270,8 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
 				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return ((InternalEList<?>)getCategory()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

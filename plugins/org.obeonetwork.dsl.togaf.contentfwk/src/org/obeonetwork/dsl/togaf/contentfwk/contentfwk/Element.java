@@ -128,11 +128,13 @@ public interface Element extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements <em>Owned Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Category</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getElement_Category()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements
+	 * @model opposite="ownedElements"
 	 * @generated
 	 */
 	EList<Label> getCategory();

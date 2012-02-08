@@ -79,6 +79,7 @@ public interface Container extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Labels</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers <em>Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Labels</em>' reference list isn't clear,
@@ -87,7 +88,8 @@ public interface Container extends CDOObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Labels</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getContainer_Labels()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers
+	 * @model opposite="containers"
 	 * @generated
 	 */
 	EList<Label> getLabels();

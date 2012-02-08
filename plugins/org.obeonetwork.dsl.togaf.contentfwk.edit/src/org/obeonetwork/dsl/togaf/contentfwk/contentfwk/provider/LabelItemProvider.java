@@ -69,6 +69,8 @@ public class LabelItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addOwnedElementsPropertyDescriptor(object);
+			addContainersPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +93,50 @@ public class LabelItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Owned Elements feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOwnedElementsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Label_ownedElements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_ownedElements_feature", "_UI_Label_type"),
+				 ContentfwkPackage.Literals.LABEL__OWNED_ELEMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Containers feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addContainersPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Label_containers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Label_containers_feature", "_UI_Label_type"),
+				 ContentfwkPackage.Literals.LABEL__CONTAINERS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

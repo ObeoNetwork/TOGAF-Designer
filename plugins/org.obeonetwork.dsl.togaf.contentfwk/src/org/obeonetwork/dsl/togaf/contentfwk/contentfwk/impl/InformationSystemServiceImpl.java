@@ -271,6 +271,8 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategory()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -287,6 +289,8 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
 				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return ((InternalEList<?>)getCategory()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

@@ -20,6 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getSubLabels <em>Sub Labels</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getName <em>Name</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements <em>Owned Elements</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers <em>Containers</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,5 +72,41 @@ public interface Label extends CDOObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Owned Elements</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Owned Elements</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Owned Elements</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLabel_OwnedElements()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory
+	 * @model opposite="category"
+	 * @generated
+	 */
+	EList<Element> getOwnedElements();
+
+	/**
+	 * Returns the value of the '<em><b>Containers</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels <em>Labels</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Containers</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Containers</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLabel_Containers()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels
+	 * @model opposite="labels"
+	 * @generated
+	 */
+	EList<Container> getContainers();
 
 } // Label

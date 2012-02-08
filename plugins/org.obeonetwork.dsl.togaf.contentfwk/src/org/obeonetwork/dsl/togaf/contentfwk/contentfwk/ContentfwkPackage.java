@@ -4071,13 +4071,31 @@ public interface ContentfwkPackage extends EPackage {
 	int LABEL__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Owned Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__OWNED_ELEMENTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Containers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__CONTAINERS = 3;
+
+	/**
 	 * The number of structural features of the '<em>Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = 2;
+	int LABEL_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
@@ -9141,6 +9159,28 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getLabel_Name();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements <em>Owned Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Owned Elements</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EReference getLabel_OwnedElements();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers <em>Containers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Containers</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EReference getLabel_Containers();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12141,6 +12181,22 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute LABEL__NAME = eINSTANCE.getLabel_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Owned Elements</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LABEL__OWNED_ELEMENTS = eINSTANCE.getLabel_OwnedElements();
+
+		/**
+		 * The meta object literal for the '<em><b>Containers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LABEL__CONTAINERS = eINSTANCE.getLabel_Containers();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
