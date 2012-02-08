@@ -4016,22 +4016,13 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTAINER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Owns Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__OWNS_ELEMENTS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Sub Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__SUB_CONTAINERS = 2;
+	int CONTAINER__SUB_CONTAINERS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Labels</b></em>' reference list.
@@ -4040,7 +4031,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__LABELS = 3;
+	int CONTAINER__LABELS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -4049,7 +4040,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = 4;
+	int CONTAINER_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
@@ -9096,17 +9087,6 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getContainer_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getOwnsElements <em>Owns Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Owns Elements</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getOwnsElements()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EReference getContainer_OwnsElements();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers <em>Sub Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12119,14 +12099,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CONTAINER__NAME = eINSTANCE.getContainer_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Owns Elements</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTAINER__OWNS_ELEMENTS = eINSTANCE.getContainer_OwnsElements();
 
 		/**
 		 * The meta object literal for the '<em><b>Sub Containers</b></em>' containment reference list feature.

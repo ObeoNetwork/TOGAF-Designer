@@ -65,7 +65,6 @@ public class ContainerItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addOwnsElementsPropertyDescriptor(object);
 			addLabelsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -89,28 +88,6 @@ public class ContainerItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Owns Elements feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOwnsElementsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Container_ownsElements_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Container_ownsElements_feature", "_UI_Container_type"),
-				 ContentfwkPackage.Literals.CONTAINER__OWNS_ELEMENTS,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

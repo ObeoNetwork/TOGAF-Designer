@@ -32,7 +32,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getOwnsElements <em>Owns Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getSubContainers <em>Sub Containers</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl#getLabels <em>Labels</em>}</li>
  * </ul>
@@ -104,16 +103,6 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Element> getOwnsElements() {
-		return (EList<Element>)eDynamicGet(ContentfwkPackage.CONTAINER__OWNS_ELEMENTS, ContentfwkPackage.Literals.CONTAINER__OWNS_ELEMENTS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
 	public EList<Container> getSubContainers() {
 		return (EList<Container>)eDynamicGet(ContentfwkPackage.CONTAINER__SUB_CONTAINERS, ContentfwkPackage.Literals.CONTAINER__SUB_CONTAINERS, true, true);
 	}
@@ -152,8 +141,6 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 		switch (featureID) {
 			case ContentfwkPackage.CONTAINER__NAME:
 				return getName();
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				return getOwnsElements();
 			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
 				return getSubContainers();
 			case ContentfwkPackage.CONTAINER__LABELS:
@@ -173,10 +160,6 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 		switch (featureID) {
 			case ContentfwkPackage.CONTAINER__NAME:
 				setName((String)newValue);
-				return;
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				getOwnsElements().clear();
-				getOwnsElements().addAll((Collection<? extends Element>)newValue);
 				return;
 			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
 				getSubContainers().clear();
@@ -201,9 +184,6 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 			case ContentfwkPackage.CONTAINER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				getOwnsElements().clear();
-				return;
 			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
 				getSubContainers().clear();
 				return;
@@ -224,8 +204,6 @@ public class ContainerImpl extends CDOObjectImpl implements Container {
 		switch (featureID) {
 			case ContentfwkPackage.CONTAINER__NAME:
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
-			case ContentfwkPackage.CONTAINER__OWNS_ELEMENTS:
-				return !getOwnsElements().isEmpty();
 			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:
 				return !getSubContainers().isEmpty();
 			case ContentfwkPackage.CONTAINER__LABELS:

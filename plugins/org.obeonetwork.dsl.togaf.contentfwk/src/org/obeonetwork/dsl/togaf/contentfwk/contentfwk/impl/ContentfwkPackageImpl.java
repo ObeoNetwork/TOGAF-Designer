@@ -2306,7 +2306,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_OwnsElements() {
+	public EReference getContainer_SubContainers() {
 		return (EReference)containerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -2315,17 +2315,8 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_SubContainers() {
-		return (EReference)containerEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getContainer_Labels() {
-		return (EReference)containerEClass.getEStructuralFeatures().get(3);
+		return (EReference)containerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3687,7 +3678,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 
 		containerEClass = createEClass(CONTAINER);
 		createEAttribute(containerEClass, CONTAINER__NAME);
-		createEReference(containerEClass, CONTAINER__OWNS_ELEMENTS);
 		createEReference(containerEClass, CONTAINER__SUB_CONTAINERS);
 		createEReference(containerEClass, CONTAINER__LABELS);
 
@@ -4146,7 +4136,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 
 		initEClass(containerEClass, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_OwnsElements(), this.getElement(), null, "ownsElements", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_SubContainers(), this.getContainer(), null, "subContainers", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_Labels(), this.getLabel(), null, "labels", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -267,7 +267,6 @@
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/ownsElements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/subContainers"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/labels"/>
     </genClasses>
