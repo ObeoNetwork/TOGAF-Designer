@@ -102,33 +102,21 @@
         <edgeMappings name="Chain1" semanticCandidatesExpression="&lt;%current%>" sourceMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='InboundLogistics']" targetMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='Operations']" targetFinderExpression="&lt;%current%>" sourceFinderExpression="&lt;%current%>" domainClass="StrategicArchitecture" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Chain2" semanticCandidatesExpression="&lt;%current%>" sourceMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='Operations']" targetMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='OutboundLogistics']" targetFinderExpression="&lt;%current%>" sourceFinderExpression="&lt;%current%>" domainClass="StrategicArchitecture" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Chain3" semanticCandidatesExpression="&lt;%current%>" sourceMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='OutboundLogistics']" targetMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='MarketingSales']" targetFinderExpression="&lt;%current%>" sourceFinderExpression="&lt;%current%>" domainClass="StrategicArchitecture" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Chain4" semanticCandidatesExpression="&lt;%current%>" sourceMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='MarketingSales']" targetMapping="//@ownedViewpoints[name='architecture']/@ownedRepresentations[name='ValueChain']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%current%>" sourceFinderExpression="&lt;%current%>" domainClass="StrategicArchitecture" useDomainElement="true">
           <style targetArrow="InputFillClosedArrow" sizeComputationExpression="4">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="InboundLogistics" semanticCandidatesExpression="&lt;%self%>" domainClass="StrategicArchitecture" listContainer="true">
@@ -211,41 +199,26 @@
         <edgeMappings name="AddressesDriver" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Goal']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Driver']" targetFinderExpression="&lt;%addressesDrivers%>">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="RealizesGoal" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Objective']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Goal']" targetFinderExpression="&lt;%current.realizesGoals%>">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="SupportsObjective" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='DroppedBusinessService']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Objective']" targetFinderExpression="&lt;%current.supportsObjective%>">
-          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+          <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="PlayRoleIn" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='DroppedRole']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='DroppedBusinessService']" targetFinderExpression="&lt;%~performsTaskInRoles.performsFunctions.isBoundedByServices.filter(&quot;BusinessService&quot;)%>">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="DecomposesGoal" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Goal']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Goal']" targetFinderExpression="&lt;%current.decomposesGoal%>">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="DroppedBusinessService" semanticCandidatesExpression="&lt;%services%>" domainClass="BusinessService" listContainer="true">
@@ -298,7 +271,7 @@
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="supportObjectives" valueExpression="&lt;%$target%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="supportsObjective" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -349,9 +322,6 @@
         <edgeMappings name="Contains" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@nodeMappings[name='Organization']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetFinderExpression="&lt;%containsActors%>">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditLabel']" semanticCandidatesExpression="&lt;%current.eAllContents.filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor" listContainer="true">
@@ -446,17 +416,11 @@
         <edgeMappings name="Actor performs task in Roles" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@optionalLayers[name='RoleActor']/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@optionalLayers[name='RoleActor']/@nodeMappings[name='Role']" targetFinderExpression="&lt;%performsTaskInRoles%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Location contains Actors" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@optionalLayers[name='RoleActor']/@nodeMappings[name='Location']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@optionalLayers[name='RoleActor']/@nodeMappings[name='Actor']" targetFinderExpression="&lt;%containsActors%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
       </optionalLayers>
@@ -622,17 +586,11 @@
         <edgeMappings name="ResolvedBy" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@nodeMappings[name='Event']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%isResolvedByProcesses%>">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="GeneratedBy" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@nodeMappings[name='Event']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%isGeneratedByProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Generated%20By%20(changeProcess)']">
           <style targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Process" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
@@ -851,17 +809,11 @@
         <edgeMappings name="Function To BusinessService" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20function%20to%20business%20bound']" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="&lt;%&quot;&quot;%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@nodeMappings[name='Function']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']" targetFinderExpression="&lt;%isBoundedByServices%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="OrganizationToBusinessService" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@nodeMappings[name='OrganizationUnit']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@nodeMappings[name='Function']" targetFinderExpression="&lt;%ownsFunctions%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%current.services%>" synchronizationLock="true" domainClass="BusinessService" listContainer="true">
@@ -911,12 +863,9 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer()%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="ownsFunctions" valueExpression="&lt;%$instance%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%$container.functions.nSize()%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -924,6 +873,17 @@
           <ownedTools xsi:type="tool:DiagramCreationDescription" name="Business Footprint diagram" titleExpression="&lt;%name%>" diagramDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']">
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OrganizationToBusinessService" label="Organization to Business service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='OrganizationToBusinessService']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;% $source %>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="ownsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -934,11 +894,8 @@
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
         </nodeMappings>
         <edgeMappings name="Actor to Process" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%participatesInProcesses%>">
-          <style>
+          <style sizeComputationExpression="">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Process" semanticCandidatesExpression="&lt;%processes%>" domainClass="Process" listContainer="true">
@@ -1000,9 +957,6 @@
         <edgeMappings name="LogicalApplicationComponent to BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']" targetFinderExpression="&lt;%implementsServices%>">
           <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" domainClass="LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Data%20entity%20into%20logical%20component']" listContainer="true">
@@ -1108,9 +1062,6 @@
         <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetFinderExpression="&lt;%relatesTo%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <toolSections>
@@ -1224,9 +1175,6 @@
         <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Reconnect1']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" domainClass="LogicalApplicationComponent" listContainer="true">
@@ -1288,17 +1236,11 @@
         <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='PhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Actor application usage" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%consumesServices.isRealizedThroughLogicalApplicationComponent.isExtendedByPhysicalApplicationComponents.nMinimize()%>">
           <style targetArrow="NoDecoration" sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Location" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Actors']">
@@ -1324,9 +1266,9 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;).nGet(0) %>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Location" referenceName="locations">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location &lt;%$container.locations.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location &lt;%$container.eContainer().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;).nFirst().locations.nSize %>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -1392,17 +1334,11 @@
         <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="BusinessServiceToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <centerLabelStyleDescription showIcon="false">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Service" semanticCandidatesExpression="&lt;%getRootContainer().eAllContents.filter(&quot;Service&quot;)%>" domainClass="contentfwk.Service">
@@ -1573,9 +1509,6 @@
         <edgeMappings name="Location to Component Usage" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Environments%20and%20Locations%20Diagram']/@defaultLayer/@containerMappings[name='Location']" targetMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Environments%20and%20Locations%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='PhysicalApplicationComponent'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='Environments%20and%20Locations%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subNodeMappings[name='PhysicalTechnologyComponent']" targetFinderExpression="&lt;%(containsActors.consumesServices.isImplementedOnLogicalTechnologyComponents.isRealizedByPhysicalTechnologyComponents + containsActors.consumesServices.isRealizedThroughLogicalApplicationComponent.isExtendedByPhysicalApplicationComponents).nMinimize()%>">
           <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <containerMappings name="Location" semanticCandidatesExpression="&lt;%eContainer().architectures.filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location">
@@ -1827,9 +1760,6 @@
         <edgeMappings name="Impact_Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Impact%20Analysis']/@ownedRepresentations[name='Impact%20Analysis%20Diagram']/@defaultLayer/@nodeMappings[name='Impacted_Element']" targetMapping="//@ownedViewpoints[name='Impact%20Analysis']/@ownedRepresentations[name='Impact%20Analysis%20Diagram']/@defaultLayer/@nodeMappings[name='Impacted_Element']" targetFinderExpression="&lt;%~.filter(&quot;Element&quot;).nMinimize()%>">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <toolSections name="Tools">
