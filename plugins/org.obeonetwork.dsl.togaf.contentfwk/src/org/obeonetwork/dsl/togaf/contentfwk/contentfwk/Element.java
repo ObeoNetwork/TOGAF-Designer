@@ -26,10 +26,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getIsDelegatedBy <em>Is Delegated By</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getDescription <em>Description</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getSourceDescr <em>Source Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getOwnerDescr <em>Owner Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getID <em>ID</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}</li>
  * </ul>
  * </p>
  *
@@ -126,29 +126,16 @@ public interface Element extends CDOObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' attribute.
+	 * Returns the value of the '<em><b>Category</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * User-definable categorization taxonomy for each metamodel object. 
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Category</em>' attribute.
-	 * @see #setCategory(String)
+	 * @return the value of the '<em>Category</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getElement_Category()
 	 * @model
 	 * @generated
 	 */
-	String getCategory();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Category</em>' attribute.
-	 * @see #getCategory()
-	 * @generated
-	 */
-	void setCategory(String value);
+	EList<Label> getCategory();
 
 	/**
 	 * Returns the value of the '<em><b>Source Descr</b></em>' attribute.

@@ -2252,8 +2252,8 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Category() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(4);
+	public EReference getElement_Category() {
+		return (EReference)elementEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2262,7 +2262,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * @generated
 	 */
 	public EAttribute getElement_SourceDescr() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(5);
+		return (EAttribute)elementEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2271,7 +2271,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * @generated
 	 */
 	public EAttribute getElement_OwnerDescr() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(6);
+		return (EAttribute)elementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2280,7 +2280,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * @generated
 	 */
 	public EAttribute getElement_ID() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(7);
+		return (EAttribute)elementEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -3680,10 +3680,10 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEReference(elementEClass, ELEMENT__IS_DELEGATED_BY);
 		createEAttribute(elementEClass, ELEMENT__NAME);
 		createEAttribute(elementEClass, ELEMENT__DESCRIPTION);
-		createEAttribute(elementEClass, ELEMENT__CATEGORY);
 		createEAttribute(elementEClass, ELEMENT__SOURCE_DESCR);
 		createEAttribute(elementEClass, ELEMENT__OWNER_DESCR);
 		createEAttribute(elementEClass, ELEMENT__ID);
+		createEReference(elementEClass, ELEMENT__CATEGORY);
 
 		containerEClass = createEClass(CONTAINER);
 		createEAttribute(containerEClass, CONTAINER__NAME);
@@ -4139,10 +4139,10 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEReference(getElement_IsDelegatedBy(), this.getElement(), this.getElement_Delegates(), "isDelegatedBy", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_Description(), ecorePackage.getEString(), "description", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Category(), ecorePackage.getEString(), "category", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_SourceDescr(), ecorePackage.getEString(), "sourceDescr", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_OwnerDescr(), ecorePackage.getEString(), "ownerDescr", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getElement_Category(), this.getLabel(), null, "category", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containerEClass, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

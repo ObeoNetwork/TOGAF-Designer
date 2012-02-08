@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,10 +34,10 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getIsDelegatedBy <em>Is Delegated By</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getSourceDescr <em>Source Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getOwnerDescr <em>Owner Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getID <em>ID</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ElementImpl#getCategory <em>Category</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,15 +62,6 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CATEGORY_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getSourceDescr() <em>Source Descr</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -188,17 +180,9 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCategory() {
-		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategory(String newCategory) {
-		eDynamicSet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
+	@SuppressWarnings("unchecked")
+	public EList<Label> getCategory() {
+		return (EList<Label>)eDynamicGet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
 	}
 
 	/**
@@ -304,14 +288,14 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return getName();
 			case ContentfwkPackage.ELEMENT__DESCRIPTION:
 				return getDescription();
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				return getCategory();
 			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
 				return getSourceDescr();
 			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
 				return getOwnerDescr();
 			case ContentfwkPackage.ELEMENT__ID:
 				return getID();
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -339,9 +323,6 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 			case ContentfwkPackage.ELEMENT__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				setCategory((String)newValue);
-				return;
 			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
 				setSourceDescr((String)newValue);
 				return;
@@ -350,6 +331,10 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return;
 			case ContentfwkPackage.ELEMENT__ID:
 				setID((String)newValue);
+				return;
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				getCategory().clear();
+				getCategory().addAll((Collection<? extends Label>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -375,9 +360,6 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 			case ContentfwkPackage.ELEMENT__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				setCategory(CATEGORY_EDEFAULT);
-				return;
 			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
 				setSourceDescr(SOURCE_DESCR_EDEFAULT);
 				return;
@@ -386,6 +368,9 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return;
 			case ContentfwkPackage.ELEMENT__ID:
 				setID(ID_EDEFAULT);
+				return;
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				getCategory().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -407,14 +392,14 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case ContentfwkPackage.ELEMENT__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
 			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
 				return SOURCE_DESCR_EDEFAULT == null ? getSourceDescr() != null : !SOURCE_DESCR_EDEFAULT.equals(getSourceDescr());
 			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
 				return OWNER_DESCR_EDEFAULT == null ? getOwnerDescr() != null : !OWNER_DESCR_EDEFAULT.equals(getOwnerDescr());
 			case ContentfwkPackage.ELEMENT__ID:
 				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
+			case ContentfwkPackage.ELEMENT__CATEGORY:
+				return !getCategory().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

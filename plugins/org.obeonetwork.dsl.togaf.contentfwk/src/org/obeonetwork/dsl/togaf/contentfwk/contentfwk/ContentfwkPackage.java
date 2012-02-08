@@ -432,22 +432,13 @@ public interface ContentfwkPackage extends EPackage {
 	int ELEMENT__DESCRIPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__CATEGORY = 4;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__SOURCE_DESCR = 5;
+	int ELEMENT__SOURCE_DESCR = 4;
 
 	/**
 	 * The feature id for the '<em><b>Owner Descr</b></em>' attribute.
@@ -456,7 +447,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__OWNER_DESCR = 6;
+	int ELEMENT__OWNER_DESCR = 5;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -465,7 +456,16 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__ID = 7;
+	int ELEMENT__ID = 6;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELEMENT__CATEGORY = 7;
 
 	/**
 	 * The number of structural features of the '<em>Element</em>' class.
@@ -523,15 +523,6 @@ public interface ContentfwkPackage extends EPackage {
 	int DRIVER__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DRIVER__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -557,6 +548,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int DRIVER__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Creates Goals</b></em>' reference list.
@@ -641,15 +641,6 @@ public interface ContentfwkPackage extends EPackage {
 	int GOAL__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GOAL__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -675,6 +666,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int GOAL__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Addresses Drivers</b></em>' reference list.
@@ -759,15 +759,6 @@ public interface ContentfwkPackage extends EPackage {
 	int OBJECTIVE__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OBJECTIVE__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -793,6 +784,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int OBJECTIVE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECTIVE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Realizes Goals</b></em>' reference list.
@@ -877,15 +877,6 @@ public interface ContentfwkPackage extends EPackage {
 	int ORGANIZATION_UNIT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ORGANIZATION_UNIT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -911,6 +902,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int ORGANIZATION_UNIT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATION_UNIT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Owns And Governs Services</b></em>' reference list.
@@ -1040,15 +1040,6 @@ public interface ContentfwkPackage extends EPackage {
 	int ACTOR__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1074,6 +1065,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTOR__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Supplies Entities</b></em>' reference list.
@@ -1266,15 +1266,6 @@ public interface ContentfwkPackage extends EPackage {
 	int ROLE__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1300,6 +1291,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROLE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Is Assumed By Actors</b></em>' reference list.
@@ -1393,15 +1393,6 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_ENTITY__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1427,6 +1418,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_ENTITY__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ENTITY__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Is Supplied By Actors</b></em>' reference list.
@@ -1592,15 +1592,6 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_APPLICATION_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_APPLICATION_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1626,6 +1617,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGICAL_APPLICATION_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_APPLICATION_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -1782,15 +1782,6 @@ public interface ContentfwkPackage extends EPackage {
 	int FUNCTION__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1816,6 +1807,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -1999,15 +1999,6 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUSINESS_SERVICE__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2033,6 +2024,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUSINESS_SERVICE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_SERVICE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -2279,15 +2279,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PROCESS__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2313,6 +2304,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROCESS__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -2568,15 +2568,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PLATFORM_SERVICE__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2602,6 +2593,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PLATFORM_SERVICE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLATFORM_SERVICE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -2848,15 +2848,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_TECHNOLOGY_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2882,6 +2873,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_TECHNOLOGY_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -3065,15 +3065,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PRODUCT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRODUCT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3099,6 +3090,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRODUCT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Is Produced By Organization Units</b></em>' reference list.
@@ -3174,15 +3174,6 @@ public interface ContentfwkPackage extends EPackage {
 	int MEASURE__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEASURE__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3208,6 +3199,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEASURE__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEASURE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Sets Performance Criteria For Objectives</b></em>' reference list.
@@ -3292,15 +3292,6 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE_QUALITY__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_QUALITY__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3326,6 +3317,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICE_QUALITY__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_QUALITY__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Applies To Services</b></em>' reference list.
@@ -3401,15 +3401,6 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTRACT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTRACT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3435,6 +3426,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTRACT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTRACT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Governs And Measures Business Services</b></em>' reference list.
@@ -3807,15 +3807,6 @@ public interface ContentfwkPackage extends EPackage {
 	int EVENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3841,6 +3832,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int EVENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Is Resolved By Business Services</b></em>' reference list.
@@ -3943,15 +3943,6 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTROL__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTROL__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3977,6 +3968,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Ensures Correct Operation Of Processes</b></em>' reference list.
@@ -4135,15 +4135,6 @@ public interface ContentfwkPackage extends EPackage {
 	int LOCATION__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOCATION__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4169,6 +4160,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOCATION__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Contains Actors</b></em>' reference list.
@@ -4280,15 +4280,6 @@ public interface ContentfwkPackage extends EPackage {
 	int CAPABILITY__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CAPABILITY__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4314,6 +4305,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int CAPABILITY__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Is Delivered By</b></em>' reference.
@@ -4398,15 +4398,6 @@ public interface ContentfwkPackage extends EPackage {
 	int STRATEGIC_ELEMENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRATEGIC_ELEMENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4432,6 +4423,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRATEGIC_ELEMENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRATEGIC_ELEMENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The number of structural features of the '<em>Strategic Element</em>' class.
@@ -4489,15 +4489,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PRINCIPLE__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRINCIPLE__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4523,6 +4514,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRINCIPLE__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRINCIPLE__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Principle Category</b></em>' attribute.
@@ -4634,15 +4634,6 @@ public interface ContentfwkPackage extends EPackage {
 	int CONSTRAINT__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONSTRAINT__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4668,6 +4659,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONSTRAINT__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONSTRAINT__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The number of structural features of the '<em>Constraint</em>' class.
@@ -4725,15 +4725,6 @@ public interface ContentfwkPackage extends EPackage {
 	int ASSUMPTION__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSUMPTION__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4759,6 +4750,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int ASSUMPTION__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSUMPTION__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The number of structural features of the '<em>Assumption</em>' class.
@@ -4816,15 +4816,6 @@ public interface ContentfwkPackage extends EPackage {
 	int REQUIREMENT__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4850,6 +4841,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIREMENT__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Statement Of Requirement</b></em>' attribute.
@@ -4934,15 +4934,6 @@ public interface ContentfwkPackage extends EPackage {
 	int GAP__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAP__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4968,6 +4959,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int GAP__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAP__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The number of structural features of the '<em>Gap</em>' class.
@@ -5025,15 +5025,6 @@ public interface ContentfwkPackage extends EPackage {
 	int WORK_PACKAGE__DESCRIPTION = STRATEGIC_ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WORK_PACKAGE__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5059,6 +5050,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int WORK_PACKAGE__ID = STRATEGIC_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PACKAGE__CATEGORY = STRATEGIC_ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Work Package Category</b></em>' attribute.
@@ -5134,15 +5134,6 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_DATA_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_DATA_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5168,6 +5159,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGICAL_DATA_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_DATA_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -5288,15 +5288,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_DATA_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_DATA_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5322,6 +5313,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_DATA_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_DATA_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -5515,15 +5515,6 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_APPLICATION_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_APPLICATION_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5549,6 +5540,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int PHYSICAL_APPLICATION_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_APPLICATION_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -5975,15 +5975,6 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_TECHNOLOGY_COMPONENT__DESCRIPTION = ELEMENT__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6009,6 +6000,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGICAL_TECHNOLOGY_COMPONENT__ID = ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6700,22 +6700,13 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__DESCRIPTION = SERVICE_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION_SYSTEM_SERVICE__CATEGORY = SERVICE_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR = SERVICE_FEATURE_COUNT + 5;
+	int INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR = SERVICE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Owner Descr</b></em>' attribute.
@@ -6724,7 +6715,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__OWNER_DESCR = SERVICE_FEATURE_COUNT + 6;
+	int INFORMATION_SYSTEM_SERVICE__OWNER_DESCR = SERVICE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -6733,7 +6724,16 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__ID = SERVICE_FEATURE_COUNT + 7;
+	int INFORMATION_SYSTEM_SERVICE__ID = SERVICE_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SYSTEM_SERVICE__CATEGORY = SERVICE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Any</b></em>' reference.
@@ -9031,15 +9031,15 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getElement_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @return the meta object for the reference list '<em>Category</em>'.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EAttribute getElement_Category();
+	EReference getElement_Category();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getSourceDescr <em>Source Descr</em>}'.
@@ -12071,12 +12071,12 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute ELEMENT__DESCRIPTION = eINSTANCE.getElement_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Category</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ELEMENT__CATEGORY = eINSTANCE.getElement_Category();
+		EReference ELEMENT__CATEGORY = eINSTANCE.getElement_Category();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Descr</b></em>' attribute feature.

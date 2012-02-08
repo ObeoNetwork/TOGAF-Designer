@@ -260,10 +260,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Element/isDelegatedBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/sourceDescr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/ownerDescr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/ID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference contentfwk.ecore#//Element/category"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/name"/>

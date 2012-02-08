@@ -66,10 +66,10 @@ public class ElementItemProvider
 			addIsDelegatedByPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addCategoryPropertyDescriptor(object);
 			addSourceDescrPropertyDescriptor(object);
 			addOwnerDescrPropertyDescriptor(object);
 			addIDPropertyDescriptor(object);
+			addCategoryPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -179,7 +179,7 @@ public class ElementItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null,
 				 null));
 	}
@@ -289,10 +289,10 @@ public class ElementItemProvider
 		switch (notification.getFeatureID(Element.class)) {
 			case ContentfwkPackage.ELEMENT__NAME:
 			case ContentfwkPackage.ELEMENT__DESCRIPTION:
-			case ContentfwkPackage.ELEMENT__CATEGORY:
 			case ContentfwkPackage.ELEMENT__SOURCE_DESCR:
 			case ContentfwkPackage.ELEMENT__OWNER_DESCR:
 			case ContentfwkPackage.ELEMENT__ID:
+			case ContentfwkPackage.ELEMENT__CATEGORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -63,10 +63,10 @@ public class InformationSystemServiceItemProvider
 			addIsDelegatedByPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addCategoryPropertyDescriptor(object);
 			addSourceDescrPropertyDescriptor(object);
 			addOwnerDescrPropertyDescriptor(object);
 			addIDPropertyDescriptor(object);
+			addCategoryPropertyDescriptor(object);
 			addAnyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -177,7 +177,7 @@ public class InformationSystemServiceItemProvider
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
 				 null,
 				 null));
 	}
@@ -309,10 +309,10 @@ public class InformationSystemServiceItemProvider
 		switch (notification.getFeatureID(InformationSystemService.class)) {
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME:
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

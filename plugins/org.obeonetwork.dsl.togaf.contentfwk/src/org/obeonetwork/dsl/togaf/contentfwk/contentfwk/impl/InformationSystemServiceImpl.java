@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,10 +35,10 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getIsDelegatedBy <em>Is Delegated By</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getSourceDescr <em>Source Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getOwnerDescr <em>Owner Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getID <em>ID</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
@@ -63,15 +64,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @ordered
 	 */
 	protected static final String DESCRIPTION_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCategory()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CATEGORY_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getSourceDescr() <em>Source Descr</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -180,17 +172,9 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCategory() {
-		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCategory(String newCategory) {
-		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
+	@SuppressWarnings("unchecked")
+	public EList<Label> getCategory() {
+		return (EList<Label>)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
 	}
 
 	/**
@@ -323,14 +307,14 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return getName();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
 				return getDescription();
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				return getCategory();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
 				return getSourceDescr();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
 				return getOwnerDescr();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
 				return getID();
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return getCategory();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
 				if (resolve) return getAny();
 				return basicGetAny();
@@ -361,9 +345,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				setCategory((String)newValue);
-				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
 				setSourceDescr((String)newValue);
 				return;
@@ -372,6 +353,10 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
 				setID((String)newValue);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				getCategory().clear();
+				getCategory().addAll((Collection<? extends Label>)newValue);
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
 				setAny((EObject)newValue);
@@ -400,9 +385,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				setCategory(CATEGORY_EDEFAULT);
-				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
 				setSourceDescr(SOURCE_DESCR_EDEFAULT);
 				return;
@@ -411,6 +393,9 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
 				setID(ID_EDEFAULT);
+				return;
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				getCategory().clear();
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
 				setAny((EObject)null);
@@ -435,14 +420,14 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return NAME_EDEFAULT == null ? getName() != null : !NAME_EDEFAULT.equals(getName());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR:
 				return SOURCE_DESCR_EDEFAULT == null ? getSourceDescr() != null : !SOURCE_DESCR_EDEFAULT.equals(getSourceDescr());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR:
 				return OWNER_DESCR_EDEFAULT == null ? getOwnerDescr() != null : !OWNER_DESCR_EDEFAULT.equals(getOwnerDescr());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
 				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
+			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
+				return !getCategory().isEmpty();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
 				return basicGetAny() != null;
 		}
@@ -462,10 +447,10 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY: return ContentfwkPackage.ELEMENT__IS_DELEGATED_BY;
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME: return ContentfwkPackage.ELEMENT__NAME;
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION: return ContentfwkPackage.ELEMENT__DESCRIPTION;
-				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY: return ContentfwkPackage.ELEMENT__CATEGORY;
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR: return ContentfwkPackage.ELEMENT__SOURCE_DESCR;
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR: return ContentfwkPackage.ELEMENT__OWNER_DESCR;
 				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID: return ContentfwkPackage.ELEMENT__ID;
+				case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY: return ContentfwkPackage.ELEMENT__CATEGORY;
 				default: return -1;
 			}
 		}
@@ -485,10 +470,10 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY;
 				case ContentfwkPackage.ELEMENT__NAME: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__NAME;
 				case ContentfwkPackage.ELEMENT__DESCRIPTION: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__DESCRIPTION;
-				case ContentfwkPackage.ELEMENT__CATEGORY: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY;
 				case ContentfwkPackage.ELEMENT__SOURCE_DESCR: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__SOURCE_DESCR;
 				case ContentfwkPackage.ELEMENT__OWNER_DESCR: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__OWNER_DESCR;
 				case ContentfwkPackage.ELEMENT__ID: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID;
+				case ContentfwkPackage.ELEMENT__CATEGORY: return ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY;
 				default: return -1;
 			}
 		}
