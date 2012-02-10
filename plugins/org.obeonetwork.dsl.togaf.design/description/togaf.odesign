@@ -2392,6 +2392,102 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
+  <ownedViewpoints name="application-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Container" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" initialisation="true" domainClass="Container" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Filter Business Services">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@optionalLayers[name='Other%20Logical%20Application%20Components']/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
+      </filters>
+      <defaultLayer name="Default">
+        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@optionalLayers[name='Other%20Logical%20Application%20Components']/@containerMappings[name='OtherLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@optionalLayers[name='Other%20Logical%20Application%20Components']/@containerMappings[name='OtherLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Reconnect1']">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="LogicalApplicationComponent" listContainer="true">
+          <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
+            <style xsi:type="style:SquareDescription" labelPosition="node">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect1" forceRefresh="true">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <optionalLayers name="Other Logical Application Components">
+        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;).communicatesWith.nMinimize - labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="LogicalApplicationComponent" listContainer="true">
+          <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
+            <style xsi:type="style:SquareDescription" labelPosition="node">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelExpression="&lt;%name%> (&lt;%category.name%>)">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Other Logical Application Components">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" message="Select a Logical Application Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents-self.category.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+    </ownedRepresentations>
+  </ownedViewpoints>
   <userColorsPalettes name="UserColors">
     <entries xsi:type="description:UserFixedColor" red="10" green="100" blue="190" name="Blue-BusinessArchitecture"/>
     <entries xsi:type="description:UserFixedColor" red="20" green="150" blue="250" name="Blue-BusinessArchitecture-SubComponent"/>
