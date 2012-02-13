@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton=true
-Bundle-Version: 0.8.0.qualifier
+Bundle-Version: 0.9.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
