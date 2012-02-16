@@ -716,7 +716,7 @@
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram" titleExpression="&lt;%name%>" domainClass="BusinessArchitecture">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" detailDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Business%20Use-Case%20Diagram']" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
         </nodeMappings>
         <edgeMappings name="Actor to Process" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%participatesInProcesses%>">
           <style sizeComputationExpression="">
@@ -1094,7 +1094,7 @@
             </style>
           </subNodeMappings>
           <subNodeMappings name="Actor" semanticCandidatesExpression="&lt;%containsActors%>" domainClass="contentfwk.Actor">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" showIcon="false">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
@@ -1181,7 +1181,7 @@
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="ApplicationArchitecture">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
         </nodeMappings>
         <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>">
           <style sizeComputationExpression="2">
@@ -1759,7 +1759,7 @@
             </conditionnalStyles>
           </subNodeMappings>
           <subNodeMappings name="Actor" semanticCandidatesExpression="&lt;%containsActors%>" domainClass="contentfwk.Actor">
-            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="&lt;%name%> (external)" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="&lt;%name%> (external)" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
             <conditionnalStyles predicateExpression="&lt;%$view.eContainer(&quot;DSemanticDiagram&quot;).target.labels.ownedElements.nContains(current)%>">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
             </conditionnalStyles>
@@ -1863,7 +1863,7 @@
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram Container" titleExpression="System Use Case Diagram" domainClass="Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.design/img/actor.png"/>
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
         </nodeMappings>
         <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>">
           <style sizeComputationExpression="2">
@@ -2203,14 +2203,14 @@
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
       </ownedLineMappings>
-      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
       <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
       <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
       <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Data Matrix Container" titleExpression="System/Data Matrix" domainClass="Container">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
       <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='System%2FData%20Matrix%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='System%2FData%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Data Dissemination Diagram Container" titleExpression="&lt;%name%>" domainClass="Container" enablePopupBars="true">
@@ -2220,7 +2220,7 @@
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" domainClass="LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Data%20entity%20into%20logical%20component']" listContainer="true">
+        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.category.containers.nContains($containerView.target)] + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[category.containers.nContains($containerView.target)]).nMinimize%>" domainClass="LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Data%20entity%20into%20logical%20component']" listContainer="true">
           <subNodeMappings name="DataEntity" deletionDescription="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20data%20entity%20from%20logical%20component']" semanticCandidatesExpression="&lt;%operatesOnDataEntities%>" domainClass="DataEntity">
             <style xsi:type="style:SquareDescription">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2235,7 +2235,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%eContainer().architectures.filter(&quot;BusinessArchitecture&quot;).services%>" domainClass="BusinessService">
+        <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.category.containers.nContains($containerView.target)] + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[category.containers.nContains($containerView.target)]).nMinimize.implementsServices%>" domainClass="BusinessService">
           <style xsi:type="style:FlatContainerStyleDescription">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -2272,7 +2272,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer().target%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity &lt;%eContainer().entities.nSize()%>"/>
                   <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
@@ -2320,7 +2320,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram Container" domainClass="Container">
       <defaultLayer name="Default">
-        <nodeMappings name="Data Entity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="DataEntity">
+        <nodeMappings name="Data Entity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>" domainClass="DataEntity">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
         </nodeMappings>
         <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetFinderExpression="&lt;%relatesTo%>">
@@ -2333,9 +2333,9 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity &lt;%$container.eContainer(EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).entities.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity &lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
                   <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -2353,6 +2353,71 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="data-element" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Element">
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix Element" titleExpression="Data Entity/Business Function Matrix" domainClass="DataEntity">
+      <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
+        <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
+      </ownedLineMappings>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%self%>"/>
+      <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedLineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
+      <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
+      <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Data Matrix Element" titleExpression="System/Data Matrix" domainClass="DataEntity">
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%self%>"/>
+      <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='System%2FData%20Matrix%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='System%2FData%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Data Dissemination Diagram Element" titleExpression="&lt;%name%>" domainClass="DataEntity" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="LogicalApplicationComponent to BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20Element']/@defaultLayer/@containerMappings[name='BusinessService']" targetFinderExpression="&lt;%implementsServices%>">
+          <style sizeComputationExpression="1">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.nContains($containerView.target)] ).nMinimize%>" domainClass="LogicalApplicationComponent" listContainer="true">
+          <subNodeMappings name="DataEntity" semanticCandidatesExpression="&lt;%operatesOnDataEntities%>" domainClass="DataEntity">
+            <style xsi:type="style:SquareDescription">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.nContains($containerView.target)].implementsServices%>" domainClass="BusinessService">
+          <style xsi:type="style:FlatContainerStyleDescription">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tools"/>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram Element" domainClass="DataEntity">
+      <defaultLayer name="Default">
+        <nodeMappings name="Data Entity" semanticCandidatesExpression="&lt;%self%>" domainClass="DataEntity">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
+        </nodeMappings>
+        <nodeMappings name="Other Data Entity" semanticCandidatesExpression="&lt;%(self.relatesTo+self.~relatesTo).nMinimize%>" domainClass="DataEntity">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
+        </nodeMappings>
+        <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@nodeMappings[name='Other%20Data%20Entity']" targetFinderExpression="&lt;%relatesTo%>">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <toolSections/>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
