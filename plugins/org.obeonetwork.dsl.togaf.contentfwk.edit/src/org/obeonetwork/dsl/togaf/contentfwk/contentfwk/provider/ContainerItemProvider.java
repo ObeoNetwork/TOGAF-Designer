@@ -66,6 +66,8 @@ public class ContainerItemProvider
 
 			addNamePropertyDescriptor(object);
 			addLabelsPropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -110,6 +112,50 @@ public class ContainerItemProvider
 				 false,
 				 true,
 				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Container_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Container_id_feature", "_UI_Container_type"),
+				 ContentfwkPackage.Literals.CONTAINER__ID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Container_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Container_description_feature", "_UI_Container_type"),
+				 ContentfwkPackage.Literals.CONTAINER__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -182,6 +228,8 @@ public class ContainerItemProvider
 
 		switch (notification.getFeatureID(Container.class)) {
 			case ContentfwkPackage.CONTAINER__NAME:
+			case ContentfwkPackage.CONTAINER__ID:
+			case ContentfwkPackage.CONTAINER__DESCRIPTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ContentfwkPackage.CONTAINER__SUB_CONTAINERS:

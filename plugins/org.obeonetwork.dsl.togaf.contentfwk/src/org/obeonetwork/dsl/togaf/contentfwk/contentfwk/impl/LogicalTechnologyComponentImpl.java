@@ -45,6 +45,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getDecomposesLogicalTechnologyComponent <em>Decomposes Logical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsDependentOnLogicalTechnologyComponents <em>Is Dependent On Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getCategoryTRM <em>Category TRM</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,6 +97,16 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * @ordered
 	 */
 	protected static final Date RETIRE_DATE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCategoryTRM() <em>Category TRM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategoryTRM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_TRM_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -278,6 +289,24 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCategoryTRM() {
+		return (String)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategoryTRM(String newCategoryTRM) {
+		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, newCategoryTRM);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -339,6 +368,8 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return basicGetDecomposesLogicalTechnologyComponent();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return getIsDependentOnLogicalTechnologyComponents();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				return getCategoryTRM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -386,6 +417,9 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				getIsDependentOnLogicalTechnologyComponents().clear();
 				getIsDependentOnLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
 				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				setCategoryTRM((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -428,6 +462,9 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getIsDependentOnLogicalTechnologyComponents().clear();
 				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -460,6 +497,8 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return basicGetDecomposesLogicalTechnologyComponent() != null;
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return !getIsDependentOnLogicalTechnologyComponents().isEmpty();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
 		}
 		return super.eIsSet(featureID);
 	}

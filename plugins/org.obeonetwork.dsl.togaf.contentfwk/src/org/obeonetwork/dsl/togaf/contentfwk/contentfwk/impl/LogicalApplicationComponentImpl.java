@@ -46,7 +46,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getIsExtendedByPhysicalApplicationComponents <em>Is Extended By Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getCommunicatesWith <em>Communicates With</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getDecomposesLogicalApplicationComponent <em>Decomposes Logical Application Component</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -280,33 +279,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY, ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__ANY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY, ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__ANY, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAny(EObject newAny) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY, ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__ANY, newAny);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -368,9 +340,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				if (resolve) return getDecomposesLogicalApplicationComponent();
 				return basicGetDecomposesLogicalApplicationComponent();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				if (resolve) return getAny();
-				return basicGetAny();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -418,9 +387,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)newValue);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				setAny((EObject)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -463,9 +429,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)null);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				setAny((EObject)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -498,8 +461,6 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return !getCommunicatesWith().isEmpty();
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				return basicGetDecomposesLogicalApplicationComponent() != null;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__ANY:
-				return basicGetAny() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -80,6 +80,7 @@ public class PlatformServiceItemProvider
 			addConsumesServicesPropertyDescriptor(object);
 			addDecomposesServicesPropertyDescriptor(object);
 			addIsSuppliedByLogicalTechnologyComponentsPropertyDescriptor(object);
+			addCategoryTRMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -547,6 +548,28 @@ public class PlatformServiceItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Category TRM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCategoryTRMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PlatformService_categoryTRM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PlatformService_categoryTRM_feature", "_UI_PlatformService_type"),
+				 ContentfwkPackage.Literals.PLATFORM_SERVICE__CATEGORY_TRM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PlatformService.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -588,6 +611,7 @@ public class PlatformServiceItemProvider
 			case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE:
 			case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE:
 			case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE:
+			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

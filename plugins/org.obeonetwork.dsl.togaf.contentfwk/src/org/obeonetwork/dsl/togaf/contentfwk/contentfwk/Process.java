@@ -42,7 +42,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getDecomposesProcess <em>Decomposes Process</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getPrecedesProcesses <em>Precedes Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getFollowsProcesses <em>Follows Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -370,31 +369,5 @@ public interface Process extends Element, Standard {
 	 * @generated
 	 */
 	EList<Process> getFollowsProcesses();
-
-	/**
-	 * Returns the value of the '<em><b>Any</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Any</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Any</em>' containment reference.
-	 * @see #setAny(EObject)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getProcess_Any()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EObject getAny();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getAny <em>Any</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Any</em>' containment reference.
-	 * @see #getAny()
-	 * @generated
-	 */
-	void setAny(EObject value);
 
 } // Process

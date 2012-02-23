@@ -1528,22 +1528,13 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__RELATES_TO = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Any</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA_ENTITY__ANY = ELEMENT_FEATURE_COUNT + 11;
-
-	/**
 	 * The number of structural features of the '<em>Data Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 12;
+	int DATA_ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl <em>Logical Application Component</em>}' class.
@@ -1718,22 +1709,13 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Any</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_APPLICATION_COMPONENT__ANY = ELEMENT_FEATURE_COUNT + 10;
-
-	/**
 	 * The number of structural features of the '<em>Logical Application Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
+	int LOGICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl <em>Function</em>}' class.
@@ -2504,22 +2486,13 @@ public interface ContentfwkPackage extends EPackage {
 	int PROCESS__FOLLOWS_PROCESSES = ELEMENT_FEATURE_COUNT + 20;
 
 	/**
-	 * The feature id for the '<em><b>Any</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESS__ANY = ELEMENT_FEATURE_COUNT + 21;
-
-	/**
 	 * The number of structural features of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 22;
+	int PROCESS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl <em>Platform Service</em>}' class.
@@ -2793,13 +2766,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 20;
 
 	/**
+	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLATFORM_SERVICE__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 21;
+
+	/**
 	 * The number of structural features of the '<em>Platform Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLATFORM_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 21;
+	int PLATFORM_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 22;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl <em>Physical Technology Component</em>}' class.
@@ -3010,13 +2992,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
+	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>Physical Technology Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 14;
+	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProductImpl <em>Product</em>}' class.
@@ -4034,13 +4025,31 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTAINER__LABELS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__ID = 3;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINER__DESCRIPTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = 3;
+	int CONTAINER_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
@@ -4089,13 +4098,31 @@ public interface ContentfwkPackage extends EPackage {
 	int LABEL__CONTAINERS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__ID = 4;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LABEL__DESCRIPTION = 5;
+
+	/**
 	 * The number of structural features of the '<em>Label</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LABEL_FEATURE_COUNT = 4;
+	int LABEL_FEATURE_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
@@ -5460,22 +5487,13 @@ public interface ContentfwkPackage extends EPackage {
 	int APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES = ARCHITECTURE_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Any Ref</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int APPLICATION_ARCHITECTURE__ANY_REF = ARCHITECTURE_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Application Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_ARCHITECTURE_FEATURE_COUNT = ARCHITECTURE_FEATURE_COUNT + 4;
+	int APPLICATION_ARCHITECTURE_FEATURE_COUNT = ARCHITECTURE_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl <em>Physical Application Component</em>}' class.
@@ -6110,13 +6128,22 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Logical Technology Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
+	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StrategicArchitectureImpl <em>Strategic Architecture</em>}' class.
@@ -6745,22 +6772,13 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__CATEGORY = SERVICE_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Any</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION_SYSTEM_SERVICE__ANY = SERVICE_FEATURE_COUNT + 8;
-
-	/**
 	 * The number of structural features of the '<em>Information System Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE_FEATURE_COUNT = SERVICE_FEATURE_COUNT + 9;
+	int INFORMATION_SYSTEM_SERVICE_FEATURE_COUNT = SERVICE_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataComponentImpl <em>Data Component</em>}' class.
@@ -7854,17 +7872,6 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getDataEntity_RelatesTo();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getAny <em>Any</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Any</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getAny()
-	 * @see #getDataEntity()
-	 * @generated
-	 */
-	EReference getDataEntity_Any();
-
-	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent <em>Logical Application Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7928,17 +7935,6 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLogicalApplicationComponent_DecomposesLogicalApplicationComponent();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getAny <em>Any</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Any</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getAny()
-	 * @see #getLogicalApplicationComponent()
-	 * @generated
-	 */
-	EReference getLogicalApplicationComponent_Any();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function <em>Function</em>}'.
@@ -8257,17 +8253,6 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getProcess_FollowsProcesses();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getAny <em>Any</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Any</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getAny()
-	 * @see #getProcess()
-	 * @generated
-	 */
-	EReference getProcess_Any();
-
-	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService <em>Platform Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8287,6 +8272,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlatformService_IsSuppliedByLogicalTechnologyComponents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getCategoryTRM <em>Category TRM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category TRM</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getCategoryTRM()
+	 * @see #getPlatformService()
+	 * @generated
+	 */
+	EAttribute getPlatformService_CategoryTRM();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent <em>Physical Technology Component</em>}'.
@@ -8396,6 +8392,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category TRM</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getCategoryTRM()
+	 * @see #getPhysicalTechnologyComponent()
+	 * @generated
+	 */
+	EAttribute getPhysicalTechnologyComponent_CategoryTRM();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Product <em>Product</em>}'.
@@ -9127,6 +9134,28 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getContainer_Labels();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getId()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EAttribute getContainer_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getDescription()
+	 * @see #getContainer()
+	 * @generated
+	 */
+	EAttribute getContainer_Description();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9179,6 +9208,28 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLabel_Containers();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getId()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EAttribute getLabel_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getDescription()
+	 * @see #getLabel()
+	 * @generated
+	 */
+	EAttribute getLabel_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location <em>Location</em>}'.
@@ -9618,17 +9669,6 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getApplicationArchitecture_InformationSystemServices();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getAnyRef <em>Any Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Any Ref</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getAnyRef()
-	 * @see #getApplicationArchitecture()
-	 * @generated
-	 */
-	EReference getApplicationArchitecture_AnyRef();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent <em>Physical Application Component</em>}'.
@@ -10102,6 +10142,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getLogicalTechnologyComponent_IsDependentOnLogicalTechnologyComponents();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category TRM</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getCategoryTRM()
+	 * @see #getLogicalTechnologyComponent()
+	 * @generated
+	 */
+	EAttribute getLogicalTechnologyComponent_CategoryTRM();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture <em>Strategic Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10392,17 +10443,6 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInformationSystemService();
-
-	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService#getAny <em>Any</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Any</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService#getAny()
-	 * @see #getInformationSystemService()
-	 * @generated
-	 */
-	EReference getInformationSystemService_Any();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataComponent <em>Data Component</em>}'.
@@ -11193,14 +11233,6 @@ public interface ContentfwkPackage extends EPackage {
 		EReference DATA_ENTITY__RELATES_TO = eINSTANCE.getDataEntity_RelatesTo();
 
 		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DATA_ENTITY__ANY = eINSTANCE.getDataEntity_Any();
-
-		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl <em>Logical Application Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11249,14 +11281,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT = eINSTANCE.getLogicalApplicationComponent_DecomposesLogicalApplicationComponent();
-
-		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LOGICAL_APPLICATION_COMPONENT__ANY = eINSTANCE.getLogicalApplicationComponent_Any();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl <em>Function</em>}' class.
@@ -11497,14 +11521,6 @@ public interface ContentfwkPackage extends EPackage {
 		EReference PROCESS__FOLLOWS_PROCESSES = eINSTANCE.getProcess_FollowsProcesses();
 
 		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESS__ANY = eINSTANCE.getProcess_Any();
-
-		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl <em>Platform Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11521,6 +11537,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getPlatformService_IsSuppliedByLogicalTechnologyComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Category TRM</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLATFORM_SERVICE__CATEGORY_TRM = eINSTANCE.getPlatformService_CategoryTRM();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl <em>Physical Technology Component</em>}' class.
@@ -11603,6 +11627,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Category TRM</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = eINSTANCE.getPhysicalTechnologyComponent_CategoryTRM();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProductImpl <em>Product</em>}' class.
@@ -12157,6 +12189,22 @@ public interface ContentfwkPackage extends EPackage {
 		EReference CONTAINER__LABELS = eINSTANCE.getContainer_Labels();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTAINER__ID = eINSTANCE.getContainer_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONTAINER__DESCRIPTION = eINSTANCE.getContainer_Description();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12197,6 +12245,22 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LABEL__CONTAINERS = eINSTANCE.getLabel_Containers();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LABEL__ID = eINSTANCE.getLabel_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LABEL__DESCRIPTION = eINSTANCE.getLabel_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
@@ -12551,14 +12615,6 @@ public interface ContentfwkPackage extends EPackage {
 		EReference APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES = eINSTANCE.getApplicationArchitecture_InformationSystemServices();
 
 		/**
-		 * The meta object literal for the '<em><b>Any Ref</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference APPLICATION_ARCHITECTURE__ANY_REF = eINSTANCE.getApplicationArchitecture_AnyRef();
-
-		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl <em>Physical Application Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12907,6 +12963,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getLogicalTechnologyComponent_IsDependentOnLogicalTechnologyComponents();
 
 		/**
+		 * The meta object literal for the '<em><b>Category TRM</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = eINSTANCE.getLogicalTechnologyComponent_CategoryTRM();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StrategicArchitectureImpl <em>Strategic Architecture</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -13131,14 +13195,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INFORMATION_SYSTEM_SERVICE = eINSTANCE.getInformationSystemService();
-
-		/**
-		 * The meta object literal for the '<em><b>Any</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INFORMATION_SYSTEM_SERVICE__ANY = eINSTANCE.getInformationSystemService_Any();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataComponentImpl <em>Data Component</em>}' class.

@@ -63,6 +63,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getConsumesServices <em>Consumes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getDecomposesServices <em>Decomposes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsSuppliedByLogicalTechnologyComponents <em>Is Supplied By Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getCategoryTRM <em>Category TRM</em>}</li>
  * </ul>
  * </p>
  *
@@ -114,6 +115,16 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	 * @ordered
 	 */
 	protected static final Date RETIRE_DATE_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCategoryTRM() <em>Category TRM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategoryTRM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_TRM_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -389,6 +400,24 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCategoryTRM() {
+		return (String)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM, ContentfwkPackage.Literals.PLATFORM_SERVICE__CATEGORY_TRM, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategoryTRM(String newCategoryTRM) {
+		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM, ContentfwkPackage.Literals.PLATFORM_SERVICE__CATEGORY_TRM, newCategoryTRM);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -511,6 +540,8 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 				return getDecomposesServices();
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return getIsSuppliedByLogicalTechnologyComponents();
+			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
+				return getCategoryTRM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -603,6 +634,9 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 				getIsSuppliedByLogicalTechnologyComponents().clear();
 				getIsSuppliedByLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
 				return;
+			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
+				setCategoryTRM((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -678,6 +712,9 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getIsSuppliedByLogicalTechnologyComponents().clear();
 				return;
+			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
+				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -732,6 +769,8 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 				return !getDecomposesServices().isEmpty();
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return !getIsSuppliedByLogicalTechnologyComponents().isEmpty();
+			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
+				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
 		}
 		return super.eIsSet(featureID);
 	}

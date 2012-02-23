@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getLogicalApplicationComponents <em>Logical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getPhysicalApplicationComponents <em>Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getInformationSystemServices <em>Information System Services</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture#getAnyRef <em>Any Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,21 +80,5 @@ public interface ApplicationArchitecture extends Architecture {
 	 * @generated
 	 */
 	EList<InformationSystemService> getInformationSystemServices();
-
-	/**
-	 * Returns the value of the '<em><b>Any Ref</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Any Ref</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Any Ref</em>' containment reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getApplicationArchitecture_AnyRef()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<EObject> getAnyRef();
 
 } // ApplicationArchitecture

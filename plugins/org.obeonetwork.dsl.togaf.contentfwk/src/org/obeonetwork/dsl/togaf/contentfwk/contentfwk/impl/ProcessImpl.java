@@ -59,7 +59,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getDecomposesProcess <em>Decomposes Process</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getPrecedesProcesses <em>Precedes Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getFollowsProcesses <em>Follows Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -454,34 +453,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.PROCESS__ANY, ContentfwkPackage.Literals.PROCESS__ANY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAny(EObject newAny, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newAny, ContentfwkPackage.PROCESS__ANY, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAny(EObject newAny) {
-		eDynamicSet(ContentfwkPackage.PROCESS__ANY, ContentfwkPackage.Literals.PROCESS__ANY, newAny);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -546,8 +517,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return ((InternalEList<?>)getPrecedesProcesses()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return ((InternalEList<?>)getFollowsProcesses()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PROCESS__ANY:
-				return basicSetAny(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -603,8 +572,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return getPrecedesProcesses();
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return getFollowsProcesses();
-			case ContentfwkPackage.PROCESS__ANY:
-				return getAny();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -693,9 +660,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				getFollowsProcesses().clear();
 				getFollowsProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
 				return;
-			case ContentfwkPackage.PROCESS__ANY:
-				setAny((EObject)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -771,9 +735,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				getFollowsProcesses().clear();
 				return;
-			case ContentfwkPackage.PROCESS__ANY:
-				setAny((EObject)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -828,8 +789,6 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return !getPrecedesProcesses().isEmpty();
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return !getFollowsProcesses().isEmpty();
-			case ContentfwkPackage.PROCESS__ANY:
-				return getAny() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -45,7 +45,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getRetentionClassification <em>Retention Classification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getDecomposeEntity <em>Decompose Entity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getRelatesTo <em>Relates To</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -282,34 +281,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.DATA_ENTITY__ANY, ContentfwkPackage.Literals.DATA_ENTITY__ANY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAny(EObject newAny, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newAny, ContentfwkPackage.DATA_ENTITY__ANY, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAny(EObject newAny) {
-		eDynamicSet(ContentfwkPackage.DATA_ENTITY__ANY, ContentfwkPackage.Literals.DATA_ENTITY__ANY, newAny);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -353,8 +324,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				return basicSetResidesWithinLogicalDataComponent(null, msgs);
 			case ContentfwkPackage.DATA_ENTITY__IS_PROCESSES_BY_LOGICAL_APPLICATION_COMPONENTS:
 				return ((InternalEList<?>)getIsProcessesByLogicalApplicationComponents()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.DATA_ENTITY__ANY:
-				return basicSetAny(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -391,8 +360,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				return basicGetDecomposeEntity();
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				return getRelatesTo();
-			case ContentfwkPackage.DATA_ENTITY__ANY:
-				return getAny();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -445,9 +412,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				getRelatesTo().clear();
 				getRelatesTo().addAll((Collection<? extends DataEntity>)newValue);
 				return;
-			case ContentfwkPackage.DATA_ENTITY__ANY:
-				setAny((EObject)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -493,9 +457,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				getRelatesTo().clear();
 				return;
-			case ContentfwkPackage.DATA_ENTITY__ANY:
-				setAny((EObject)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -530,8 +491,6 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				return basicGetDecomposeEntity() != null;
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				return !getRelatesTo().isEmpty();
-			case ContentfwkPackage.DATA_ENTITY__ANY:
-				return getAny() != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -35,7 +35,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationCompon
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl#getLogicalApplicationComponents <em>Logical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl#getPhysicalApplicationComponents <em>Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl#getInformationSystemServices <em>Information System Services</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl#getAnyRef <em>Any Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -96,16 +95,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<EObject> getAnyRef() {
-		return (EList<EObject>)eDynamicGet(ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF, ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__ANY_REF, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -115,8 +104,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 				return ((InternalEList<?>)getPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
 				return ((InternalEList<?>)getInformationSystemServices()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return ((InternalEList<?>)getAnyRef()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -135,8 +122,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 				return getPhysicalApplicationComponents();
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
 				return getInformationSystemServices();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return getAnyRef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,10 +147,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 				getInformationSystemServices().clear();
 				getInformationSystemServices().addAll((Collection<? extends InformationSystemService>)newValue);
 				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				getAnyRef().clear();
-				getAnyRef().addAll((Collection<? extends EObject>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -187,9 +168,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
 				getInformationSystemServices().clear();
 				return;
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				getAnyRef().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -208,8 +186,6 @@ public class ApplicationArchitectureImpl extends ArchitectureImpl implements App
 				return !getPhysicalApplicationComponents().isEmpty();
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
 				return !getInformationSystemServices().isEmpty();
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
-				return !getAnyRef().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

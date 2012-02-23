@@ -78,7 +78,6 @@ public class ApplicationArchitectureItemProvider
 			childrenFeatures.add(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS);
 			childrenFeatures.add(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS);
 			childrenFeatures.add(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES);
-			childrenFeatures.add(ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__ANY_REF);
 		}
 		return childrenFeatures;
 	}
@@ -133,7 +132,6 @@ public class ApplicationArchitectureItemProvider
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS:
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS:
 			case ContentfwkPackage.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES:
-			case ContentfwkPackage.APPLICATION_ARCHITECTURE__ANY_REF:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -167,31 +165,6 @@ public class ApplicationArchitectureItemProvider
 				 ContentfwkFactory.eINSTANCE.createInformationSystemService()));
 
 		
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS ||
-			childFeature == ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__ANY_REF ||
-			childFeature == ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS ||
-			childFeature == ContentfwkPackage.Literals.APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

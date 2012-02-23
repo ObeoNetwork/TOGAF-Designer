@@ -1271,15 +1271,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataEntity_Any() {
-		return (EReference)dataEntityEClass.getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLogicalApplicationComponent() {
 		return logicalApplicationComponentEClass;
 	}
@@ -1327,15 +1318,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 */
 	public EReference getLogicalApplicationComponent_DecomposesLogicalApplicationComponent() {
 		return (EReference)logicalApplicationComponentEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLogicalApplicationComponent_Any() {
-		return (EReference)logicalApplicationComponentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1604,15 +1586,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcess_Any() {
-		return (EReference)processEClass.getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPlatformService() {
 		return platformServiceEClass;
 	}
@@ -1624,6 +1597,15 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 */
 	public EReference getPlatformService_IsSuppliedByLogicalTechnologyComponents() {
 		return (EReference)platformServiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPlatformService_CategoryTRM() {
+		return (EAttribute)platformServiceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1714,6 +1696,15 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 */
 	public EReference getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents() {
 		return (EReference)physicalTechnologyComponentEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPhysicalTechnologyComponent_CategoryTRM() {
+		return (EAttribute)physicalTechnologyComponentEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -2324,6 +2315,24 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getContainer_Id() {
+		return (EAttribute)containerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getContainer_Description() {
+		return (EAttribute)containerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLabel() {
 		return labelEClass;
 	}
@@ -2362,6 +2371,24 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 */
 	public EReference getLabel_Containers() {
 		return (EReference)labelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLabel_Id() {
+		return (EAttribute)labelEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLabel_Description() {
+		return (EAttribute)labelEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2731,15 +2758,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 */
 	public EReference getApplicationArchitecture_InformationSystemServices() {
 		return (EReference)applicationArchitectureEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getApplicationArchitecture_AnyRef() {
-		return (EReference)applicationArchitectureEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3134,6 +3152,15 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getLogicalTechnologyComponent_CategoryTRM() {
+		return (EAttribute)logicalTechnologyComponentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStrategicArchitecture() {
 		return strategicArchitectureEClass;
 	}
@@ -3377,15 +3404,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInformationSystemService_Any() {
-		return (EReference)informationSystemServiceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDataComponent() {
 		return dataComponentEClass;
 	}
@@ -3567,7 +3585,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEAttribute(dataEntityEClass, DATA_ENTITY__RETENTION_CLASSIFICATION);
 		createEReference(dataEntityEClass, DATA_ENTITY__DECOMPOSE_ENTITY);
 		createEReference(dataEntityEClass, DATA_ENTITY__RELATES_TO);
-		createEReference(dataEntityEClass, DATA_ENTITY__ANY);
 
 		logicalApplicationComponentEClass = createEClass(LOGICAL_APPLICATION_COMPONENT);
 		createEReference(logicalApplicationComponentEClass, LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES);
@@ -3575,7 +3592,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEReference(logicalApplicationComponentEClass, LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS);
 		createEReference(logicalApplicationComponentEClass, LOGICAL_APPLICATION_COMPONENT__COMMUNICATES_WITH);
 		createEReference(logicalApplicationComponentEClass, LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT);
-		createEReference(logicalApplicationComponentEClass, LOGICAL_APPLICATION_COMPONENT__ANY);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__IS_PERFORMED_BY_ACTORS);
@@ -3608,10 +3624,10 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEReference(processEClass, PROCESS__DECOMPOSES_PROCESS);
 		createEReference(processEClass, PROCESS__PRECEDES_PROCESSES);
 		createEReference(processEClass, PROCESS__FOLLOWS_PROCESSES);
-		createEReference(processEClass, PROCESS__ANY);
 
 		platformServiceEClass = createEClass(PLATFORM_SERVICE);
 		createEReference(platformServiceEClass, PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS);
+		createEAttribute(platformServiceEClass, PLATFORM_SERVICE__CATEGORY_TRM);
 
 		physicalTechnologyComponentEClass = createEClass(PHYSICAL_TECHNOLOGY_COMPONENT);
 		createEReference(physicalTechnologyComponentEClass, PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS);
@@ -3623,6 +3639,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEAttribute(physicalTechnologyComponentEClass, PHYSICAL_TECHNOLOGY_COMPONENT__VERSION);
 		createEReference(physicalTechnologyComponentEClass, PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT);
 		createEReference(physicalTechnologyComponentEClass, PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS);
+		createEAttribute(physicalTechnologyComponentEClass, PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM);
 
 		productEClass = createEClass(PRODUCT);
 		createEReference(productEClass, PRODUCT__IS_PRODUCED_BY_ORGANIZATION_UNITS);
@@ -3698,12 +3715,16 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEAttribute(containerEClass, CONTAINER__NAME);
 		createEReference(containerEClass, CONTAINER__SUB_CONTAINERS);
 		createEReference(containerEClass, CONTAINER__LABELS);
+		createEAttribute(containerEClass, CONTAINER__ID);
+		createEAttribute(containerEClass, CONTAINER__DESCRIPTION);
 
 		labelEClass = createEClass(LABEL);
 		createEReference(labelEClass, LABEL__SUB_LABELS);
 		createEAttribute(labelEClass, LABEL__NAME);
 		createEReference(labelEClass, LABEL__OWNED_ELEMENTS);
 		createEReference(labelEClass, LABEL__CONTAINERS);
+		createEAttribute(labelEClass, LABEL__ID);
+		createEAttribute(labelEClass, LABEL__DESCRIPTION);
 
 		locationEClass = createEClass(LOCATION);
 		createEReference(locationEClass, LOCATION__CONTAINS_ACTORS);
@@ -3757,7 +3778,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEReference(applicationArchitectureEClass, APPLICATION_ARCHITECTURE__LOGICAL_APPLICATION_COMPONENTS);
 		createEReference(applicationArchitectureEClass, APPLICATION_ARCHITECTURE__PHYSICAL_APPLICATION_COMPONENTS);
 		createEReference(applicationArchitectureEClass, APPLICATION_ARCHITECTURE__INFORMATION_SYSTEM_SERVICES);
-		createEReference(applicationArchitectureEClass, APPLICATION_ARCHITECTURE__ANY_REF);
 
 		physicalApplicationComponentEClass = createEClass(PHYSICAL_APPLICATION_COMPONENT);
 		createEReference(physicalApplicationComponentEClass, PHYSICAL_APPLICATION_COMPONENT__EXTENDS_LOGICAL_APPLICATION_COMPONENTS);
@@ -3803,6 +3823,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEReference(logicalTechnologyComponentEClass, LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS);
 		createEReference(logicalTechnologyComponentEClass, LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT);
 		createEReference(logicalTechnologyComponentEClass, LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS);
+		createEAttribute(logicalTechnologyComponentEClass, LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM);
 
 		strategicArchitectureEClass = createEClass(STRATEGIC_ARCHITECTURE);
 		createEReference(strategicArchitectureEClass, STRATEGIC_ARCHITECTURE__CAPABILITIES);
@@ -3835,7 +3856,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		applicationComponentEClass = createEClass(APPLICATION_COMPONENT);
 
 		informationSystemServiceEClass = createEClass(INFORMATION_SYSTEM_SERVICE);
-		createEReference(informationSystemServiceEClass, INFORMATION_SYSTEM_SERVICE__ANY);
 
 		dataComponentEClass = createEClass(DATA_COMPONENT);
 
@@ -4027,7 +4047,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getDataEntity_RetentionClassification(), ecorePackage.getEString(), "retentionClassification", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataEntity_DecomposeEntity(), this.getDataEntity(), null, "decomposeEntity", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataEntity_RelatesTo(), this.getDataEntity(), null, "relatesTo", null, 0, -1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataEntity_Any(), ecorePackage.getEObject(), null, "any", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(logicalApplicationComponentEClass, LogicalApplicationComponent.class, "LogicalApplicationComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLogicalApplicationComponent_ImplementsServices(), this.getService(), this.getService_IsRealizedThroughLogicalApplicationComponent(), "implementsServices", null, 0, -1, LogicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4035,7 +4054,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEReference(getLogicalApplicationComponent_IsExtendedByPhysicalApplicationComponents(), this.getPhysicalApplicationComponent(), this.getPhysicalApplicationComponent_ExtendsLogicalApplicationComponents(), "isExtendedByPhysicalApplicationComponents", null, 0, -1, LogicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLogicalApplicationComponent_CommunicatesWith(), this.getLogicalApplicationComponent(), null, "communicatesWith", null, 0, -1, LogicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLogicalApplicationComponent_DecomposesLogicalApplicationComponent(), this.getLogicalApplicationComponent(), null, "decomposesLogicalApplicationComponent", null, 0, 1, LogicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getLogicalApplicationComponent_Any(), ecorePackage.getEObject(), null, "any", null, 0, 1, LogicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_IsPerformedByActors(), this.getActor(), this.getActor_PerformsFunctions(), "isPerformedByActors", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4068,10 +4086,10 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEReference(getProcess_DecomposesProcess(), this.getProcess(), null, "decomposesProcess", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcess_PrecedesProcesses(), this.getProcess(), this.getProcess_FollowsProcesses(), "precedesProcesses", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcess_FollowsProcesses(), this.getProcess(), this.getProcess_PrecedesProcesses(), "followsProcesses", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcess_Any(), ecorePackage.getEObject(), null, "any", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(platformServiceEClass, PlatformService.class, "PlatformService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlatformService_IsSuppliedByLogicalTechnologyComponents(), this.getLogicalTechnologyComponent(), this.getLogicalTechnologyComponent_SuppliesPlatformServices(), "isSuppliedByLogicalTechnologyComponents", null, 0, -1, PlatformService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlatformService_CategoryTRM(), ecorePackage.getEString(), "categoryTRM", null, 0, 1, PlatformService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalTechnologyComponentEClass, PhysicalTechnologyComponent.class, "PhysicalTechnologyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPhysicalTechnologyComponent_RealizesApplicationComponents(), this.getPhysicalApplicationComponent(), null, "realizesApplicationComponents", null, 0, -1, PhysicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4083,6 +4101,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getPhysicalTechnologyComponent_Version(), ecorePackage.getEString(), "version", null, 0, 1, PhysicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPhysicalTechnologyComponent_DecomposesPhysicalTechnologyComponent(), this.getPhysicalTechnologyComponent(), null, "decomposesPhysicalTechnologyComponent", null, 0, 1, PhysicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents(), this.getPhysicalTechnologyComponent(), null, "isDependentOnPhysicalTechnologyComponents", null, 0, -1, PhysicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPhysicalTechnologyComponent_CategoryTRM(), ecorePackage.getEString(), "categoryTRM", null, 0, 1, PhysicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProduct_IsProducedByOrganizationUnits(), this.getOrganizationUnit(), this.getOrganizationUnit_ProducesProducts(), "isProducedByOrganizationUnits", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4158,12 +4177,16 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_SubContainers(), this.getContainer(), null, "subContainers", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContainer_Labels(), this.getLabel(), this.getLabel_Containers(), "labels", null, 0, -1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainer_Id(), ecorePackage.getEString(), "id", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getContainer_Description(), ecorePackage.getEString(), "description", null, 0, 1, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLabel_SubLabels(), this.getLabel(), null, "subLabels", null, 0, -1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLabel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabel_OwnedElements(), this.getElement(), this.getElement_Category(), "ownedElements", null, 0, -1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLabel_Containers(), this.getContainer(), this.getContainer_Labels(), "containers", null, 0, -1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLabel_Id(), ecorePackage.getEString(), "id", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLabel_Description(), ecorePackage.getEString(), "description", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLocation_ContainsActors(), this.getActor(), this.getActor_OperatesInLocation(), "containsActors", null, 0, -1, Location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4217,7 +4240,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEReference(getApplicationArchitecture_LogicalApplicationComponents(), this.getLogicalApplicationComponent(), null, "logicalApplicationComponents", null, 0, -1, ApplicationArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplicationArchitecture_PhysicalApplicationComponents(), this.getPhysicalApplicationComponent(), null, "physicalApplicationComponents", null, 0, -1, ApplicationArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getApplicationArchitecture_InformationSystemServices(), this.getInformationSystemService(), null, "informationSystemServices", null, 0, -1, ApplicationArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getApplicationArchitecture_AnyRef(), ecorePackage.getEObject(), null, "anyRef", null, 0, -1, ApplicationArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalApplicationComponentEClass, PhysicalApplicationComponent.class, "PhysicalApplicationComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPhysicalApplicationComponent_ExtendsLogicalApplicationComponents(), this.getLogicalApplicationComponent(), this.getLogicalApplicationComponent_IsExtendedByPhysicalApplicationComponents(), "extendsLogicalApplicationComponents", null, 0, -1, PhysicalApplicationComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4263,6 +4285,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEReference(getLogicalTechnologyComponent_IsRealizedByPhysicalTechnologyComponents(), this.getPhysicalTechnologyComponent(), this.getPhysicalTechnologyComponent_ExtendsLogicalTechnologyComponents(), "isRealizedByPhysicalTechnologyComponents", null, 0, -1, LogicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLogicalTechnologyComponent_DecomposesLogicalTechnologyComponent(), this.getLogicalTechnologyComponent(), null, "decomposesLogicalTechnologyComponent", null, 0, 1, LogicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLogicalTechnologyComponent_IsDependentOnLogicalTechnologyComponents(), this.getLogicalTechnologyComponent(), null, "isDependentOnLogicalTechnologyComponents", null, 0, -1, LogicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLogicalTechnologyComponent_CategoryTRM(), ecorePackage.getEString(), "categoryTRM", null, 0, 1, LogicalTechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(strategicArchitectureEClass, StrategicArchitecture.class, "StrategicArchitecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStrategicArchitecture_Capabilities(), this.getCapability(), null, "capabilities", null, 0, -1, StrategicArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4295,7 +4318,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEClass(applicationComponentEClass, ApplicationComponent.class, "ApplicationComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(informationSystemServiceEClass, InformationSystemService.class, "InformationSystemService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInformationSystemService_Any(), ecorePackage.getEObject(), null, "any", null, 0, 1, InformationSystemService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataComponentEClass, DataComponent.class, "DataComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

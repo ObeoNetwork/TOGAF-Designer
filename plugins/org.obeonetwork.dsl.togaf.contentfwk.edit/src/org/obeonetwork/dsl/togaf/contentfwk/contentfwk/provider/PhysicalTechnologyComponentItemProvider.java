@@ -73,6 +73,7 @@ public class PhysicalTechnologyComponentItemProvider
 			addVersionPropertyDescriptor(object);
 			addDecomposesPhysicalTechnologyComponentPropertyDescriptor(object);
 			addIsDependentOnPhysicalTechnologyComponentsPropertyDescriptor(object);
+			addCategoryTRMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -386,6 +387,28 @@ public class PhysicalTechnologyComponentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Category TRM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCategoryTRMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PhysicalTechnologyComponent_categoryTRM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalTechnologyComponent_categoryTRM_feature", "_UI_PhysicalTechnologyComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PhysicalTechnologyComponent.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -431,6 +454,7 @@ public class PhysicalTechnologyComponentItemProvider
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME:
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR:
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__VERSION:
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

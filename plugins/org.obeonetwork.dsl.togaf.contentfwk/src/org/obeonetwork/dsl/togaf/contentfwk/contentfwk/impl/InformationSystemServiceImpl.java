@@ -39,7 +39,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getOwnerDescr <em>Owner Descr</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getID <em>ID</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getCategory <em>Category</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.InformationSystemServiceImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -236,33 +235,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EObject basicGetAny() {
-		return (EObject)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, false, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAny(EObject newAny) {
-		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY, ContentfwkPackage.Literals.INFORMATION_SYSTEM_SERVICE__ANY, newAny);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -319,9 +291,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return getID();
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
 				return getCategory();
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
-				if (resolve) return getAny();
-				return basicGetAny();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -362,9 +331,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				getCategory().clear();
 				getCategory().addAll((Collection<? extends Label>)newValue);
 				return;
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
-				setAny((EObject)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -401,9 +367,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
 				getCategory().clear();
 				return;
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
-				setAny((EObject)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -432,8 +395,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
 				return !getCategory().isEmpty();
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ANY:
-				return basicGetAny() != null;
 		}
 		return super.eIsSet(featureID);
 	}

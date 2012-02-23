@@ -49,6 +49,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getDecomposesPhysicalTechnologyComponent <em>Decomposes Physical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsDependentOnPhysicalTechnologyComponents <em>Is Dependent On Physical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getCategoryTRM <em>Category TRM</em>}</li>
  * </ul>
  * </p>
  *
@@ -136,6 +137,16 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @ordered
 	 */
 	protected static final String VERSION_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCategoryTRM() <em>Category TRM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategoryTRM()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_TRM_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -390,6 +401,24 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCategoryTRM() {
+		return (String)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategoryTRM(String newCategoryTRM) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM, newCategoryTRM);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -455,6 +484,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 				return basicGetDecomposesPhysicalTechnologyComponent();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return getIsDependentOnPhysicalTechnologyComponents();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				return getCategoryTRM();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -514,6 +545,9 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 				getIsDependentOnPhysicalTechnologyComponents().clear();
 				getIsDependentOnPhysicalTechnologyComponents().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
 				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				setCategoryTRM((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -568,6 +602,9 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				getIsDependentOnPhysicalTechnologyComponents().clear();
 				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -608,6 +645,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 				return basicGetDecomposesPhysicalTechnologyComponent() != null;
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return !getIsDependentOnPhysicalTechnologyComponents().isEmpty();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
+				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
 		}
 		return super.eIsSet(featureID);
 	}

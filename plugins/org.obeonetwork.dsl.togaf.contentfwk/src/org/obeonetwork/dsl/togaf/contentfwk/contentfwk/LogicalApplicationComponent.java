@@ -27,7 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsExtendedByPhysicalApplicationComponents <em>Is Extended By Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getCommunicatesWith <em>Communicates With</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getDecomposesLogicalApplicationComponent <em>Decomposes Logical Application Component</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,31 +130,5 @@ public interface LogicalApplicationComponent extends Element, ApplicationCompone
 	 * @generated
 	 */
 	void setDecomposesLogicalApplicationComponent(LogicalApplicationComponent value);
-
-	/**
-	 * Returns the value of the '<em><b>Any</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Any</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Any</em>' reference.
-	 * @see #setAny(EObject)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalApplicationComponent_Any()
-	 * @model
-	 * @generated
-	 */
-	EObject getAny();
-
-	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getAny <em>Any</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Any</em>' reference.
-	 * @see #getAny()
-	 * @generated
-	 */
-	void setAny(EObject value);
 
 } // LogicalApplicationComponent

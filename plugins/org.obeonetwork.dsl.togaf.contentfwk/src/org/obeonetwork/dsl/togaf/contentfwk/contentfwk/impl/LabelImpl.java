@@ -35,6 +35,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl#getOwnedElements <em>Owned Elements</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl#getContainers <em>Containers</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl#getId <em>Id</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,6 +52,25 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +154,42 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getId() {
+		return (String)eDynamicGet(ContentfwkPackage.LABEL__ID, ContentfwkPackage.Literals.LABEL__ID, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		eDynamicSet(ContentfwkPackage.LABEL__ID, ContentfwkPackage.Literals.LABEL__ID, newId);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDescription() {
+		return (String)eDynamicGet(ContentfwkPackage.LABEL__DESCRIPTION, ContentfwkPackage.Literals.LABEL__DESCRIPTION, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		eDynamicSet(ContentfwkPackage.LABEL__DESCRIPTION, ContentfwkPackage.Literals.LABEL__DESCRIPTION, newDescription);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -179,6 +236,10 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 				return getOwnedElements();
 			case ContentfwkPackage.LABEL__CONTAINERS:
 				return getContainers();
+			case ContentfwkPackage.LABEL__ID:
+				return getId();
+			case ContentfwkPackage.LABEL__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,6 +268,12 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 				getContainers().clear();
 				getContainers().addAll((Collection<? extends Container>)newValue);
 				return;
+			case ContentfwkPackage.LABEL__ID:
+				setId((String)newValue);
+				return;
+			case ContentfwkPackage.LABEL__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -231,6 +298,12 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 			case ContentfwkPackage.LABEL__CONTAINERS:
 				getContainers().clear();
 				return;
+			case ContentfwkPackage.LABEL__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case ContentfwkPackage.LABEL__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -251,6 +324,10 @@ public class LabelImpl extends CDOObjectImpl implements Label {
 				return !getOwnedElements().isEmpty();
 			case ContentfwkPackage.LABEL__CONTAINERS:
 				return !getContainers().isEmpty();
+			case ContentfwkPackage.LABEL__ID:
+				return ID_EDEFAULT == null ? getId() != null : !ID_EDEFAULT.equals(getId());
+			case ContentfwkPackage.LABEL__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? getDescription() != null : !DESCRIPTION_EDEFAULT.equals(getDescription());
 		}
 		return super.eIsSet(featureID);
 	}

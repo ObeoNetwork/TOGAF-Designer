@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getDecomposesLogicalTechnologyComponent <em>Decomposes Logical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDependentOnLogicalTechnologyComponents <em>Is Dependent On Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,5 +130,31 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 	 * @generated
 	 */
 	EList<LogicalTechnologyComponent> getIsDependentOnLogicalTechnologyComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Category TRM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Category TRM</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category TRM</em>' attribute.
+	 * @see #setCategoryTRM(String)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_CategoryTRM()
+	 * @model
+	 * @generated
+	 */
+	String getCategoryTRM();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category TRM</em>' attribute.
+	 * @see #getCategoryTRM()
+	 * @generated
+	 */
+	void setCategoryTRM(String value);
 
 } // LogicalTechnologyComponent

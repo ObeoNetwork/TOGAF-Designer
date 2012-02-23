@@ -26,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getIsSuppliedByLogicalTechnologyComponents <em>Is Supplied By Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getCategoryTRM <em>Category TRM</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,5 +52,31 @@ public interface PlatformService extends Element, Service {
 	 * @generated
 	 */
 	EList<LogicalTechnologyComponent> getIsSuppliedByLogicalTechnologyComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Category TRM</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Category TRM</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Category TRM</em>' attribute.
+	 * @see #setCategoryTRM(String)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPlatformService_CategoryTRM()
+	 * @model
+	 * @generated
+	 */
+	String getCategoryTRM();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getCategoryTRM <em>Category TRM</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category TRM</em>' attribute.
+	 * @see #getCategoryTRM()
+	 * @generated
+	 */
+	void setCategoryTRM(String value);
 
 } // PlatformService

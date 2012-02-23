@@ -69,6 +69,7 @@ public class LogicalTechnologyComponentItemProvider
 			addIsRealizedByPhysicalTechnologyComponentsPropertyDescriptor(object);
 			addDecomposesLogicalTechnologyComponentPropertyDescriptor(object);
 			addIsDependentOnLogicalTechnologyComponentsPropertyDescriptor(object);
+			addCategoryTRMPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -294,6 +295,28 @@ public class LogicalTechnologyComponentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Category TRM feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCategoryTRMPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_LogicalTechnologyComponent_categoryTRM_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_LogicalTechnologyComponent_categoryTRM_feature", "_UI_LogicalTechnologyComponent_type"),
+				 ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns LogicalTechnologyComponent.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,6 +358,7 @@ public class LogicalTechnologyComponentItemProvider
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
