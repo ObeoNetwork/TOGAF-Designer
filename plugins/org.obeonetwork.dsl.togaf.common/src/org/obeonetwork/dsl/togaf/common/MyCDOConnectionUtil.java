@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.cdo.common.branch.CDOBranch;
 import org.eclipse.emf.cdo.dawn.internal.util.bundle.OM;
 import org.eclipse.emf.cdo.dawn.util.connection.CDOConnectionUtil;
 import org.eclipse.emf.cdo.dawn.util.exceptions.DawnInvalidIdException;
@@ -45,6 +46,7 @@ public class MyCDOConnectionUtil extends CDOConnectionUtil {
 	public static MyCDOConnectionUtil instance = new MyCDOConnectionUtil();
 
 	public CDOSession currentSession;
+	public String branchName;
 
 	private Map<String, CDOTransaction> transactions;
 
@@ -61,11 +63,12 @@ public class MyCDOConnectionUtil extends CDOConnectionUtil {
 	public MyCDOConnectionUtil() {
 	}
 
-	public void init(CDOSession cdoSession) {
+	public void init(CDOSession cdoSession, String branchName) {
 		if (!CDOUtil.isLegacyModeDefault()) {
 			CDOUtil.setLegacyModeDefault(true);
 		}
 		this.currentSession = cdoSession;
+		this.branchName = branchName;
 	}
 
 	public void init(String repositoryName, String protocol, String host) {
@@ -110,7 +113,8 @@ public class MyCDOConnectionUtil extends CDOConnectionUtil {
 		}
 
 		id = convert(id);
-		CDOTransaction transaction = getCurrentSession().openTransaction(
+	    CDOBranch branch = getCurrentSession().getBranchManager().getBranch(branchName);
+		CDOTransaction transaction = getCurrentSession().openTransaction(branch,
 				resourceSet);
 		getTransactions().put(id, transaction);
 		return transaction;
@@ -145,11 +149,13 @@ public class MyCDOConnectionUtil extends CDOConnectionUtil {
 	}
 
 	public CDOView openView(CDOSession session) {
-		return session.openView();
+		CDOBranch branch = getCurrentSession().getBranchManager().getBranch(branchName);
+		return session.openView(branch);
 	}
 
 	public CDOTransaction openTransaction(CDOSession session) {
-		return session.openTransaction();
+		CDOBranch branch = getCurrentSession().getBranchManager().getBranch(branchName);
+		return session.openTransaction(branch);
 	}
 
 	@Deprecated
@@ -166,7 +172,7 @@ public class MyCDOConnectionUtil extends CDOConnectionUtil {
 					.toTransaction();
 		}
 
-		if (transaction == null) {
+		if (transaction == null) {			
 			transaction = openCurrentTransaction(resourceSet, id);
 		}
 
