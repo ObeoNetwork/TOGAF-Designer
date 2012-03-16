@@ -2038,7 +2038,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
           </style>
         </containerMappings>
-        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(self.communicatesWith + self.~communicatesWith - self).nMinimize%>" domainClass="LogicalApplicationComponent" listContainer="true">
+        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(self.communicatesWith + self.~communicatesWith).nMinimize - self%>" domainClass="LogicalApplicationComponent" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
             <style xsi:type="style:SquareDescription" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
