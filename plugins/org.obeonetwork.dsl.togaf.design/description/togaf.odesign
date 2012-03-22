@@ -80,6 +80,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Driver" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@nodeMappings[name='Driver']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="NewDriver"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Business Service" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='DroppedBusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -97,6 +108,39 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="supportsObjective" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="RealizesGoal" label="Realizes goal" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='RealizesGoal']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="realizesGoals" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="AdressesDriver" label="Adresses Driver" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='AddressesDriver']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="addressesDrivers" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesGoal" label="Decomposes Goal" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesGoal']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesGoal" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -146,6 +190,11 @@
         </nodeMappings>
         <edgeMappings name="Contains" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@nodeMappings[name='Organization']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetFinderExpression="&lt;%containsActors%>">
           <style targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DecomposesActor" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetFinderExpression="&lt;%decomposesActors%>">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
           </style>
         </edgeMappings>
@@ -220,6 +269,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesActor']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesActors" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </defaultLayer>
       <optionalLayers name="RoleActor">
@@ -278,18 +338,18 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram " titleExpression="&lt;%name%>" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DropFunctionToDiagram']" name="Functional Decomposition Diagram " titleExpression="&lt;%name%>" domainClass="BusinessArchitecture">
       <filters xsi:type="filter:CompositeFilterDescription" name="FilterProcesses">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='Process']"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="orchestrate">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@edgeMappings[name='Orchestrates']"/>
+        <filters xsi:type="filter:MappingFilter"/>
       </filters>
       <filters xsi:type="filter:CompositeFilterDescription" name="communicates with">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@edgeMappings[name='CommunicatesWith']"/>
       </filters>
       <defaultLayer name="Default">
-        <edgeMappings name="CommunicatesWith" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']/@subContainerMappings[name='ThirdLevelFunction']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']/@subContainerMappings[name='ThirdLevelFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>">
+        <edgeMappings name="CommunicatesWith" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>">
           <style sizeComputationExpression="2" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="&lt;%&quot;communicates with&quot;%>">
@@ -297,16 +357,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="Orchestrates" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']/@subContainerMappings[name='ThirdLevelFunction']" targetFinderExpression="&lt;%orchestratesFunctions%>">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
-            <centerLabelStyleDescription showIcon="false" labelExpression="orchestrates">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <containerMappings name="Function" semanticCandidatesExpression="&lt;%functions[decomposesFunction.nSize==0]%>" domainClass="Function">
-          <subContainerMappings name="Process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20support%20process']" semanticCandidatesExpression="&lt;%isRealizedByProcesses%>" domainClass="Process" listContainer="true">
+        <containerMappings name="Function" semanticCandidatesExpression="&lt;%functions[decomposesFunction.nSize==0]%>" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DropFunctionToFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DropProcessToFunction']">
+          <subContainerMappings name="Process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteIsRealizedByrProcess']" semanticCandidatesExpression="&lt;%isRealizedByProcesses%>" domainClass="Process" listContainer="true">
             <style xsi:type="style:FlatContainerStyleDescription" roundedCorner="true">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
@@ -314,15 +366,7 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="SecondLevelFunction" semanticCandidatesExpression="&lt;%~decomposesFunction%>" domainClass="Function">
-            <subContainerMappings name="ThirdLevelFunction" semanticCandidatesExpression="&lt;%~decomposesFunction%>" domainClass="Function">
-              <style xsi:type="style:FlatContainerStyleDescription">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </subContainerMappings>
+          <subContainerMappings name="SecondLevelFunction" semanticCandidatesExpression="&lt;%~decomposesFunction%>" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DropFunctionToFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.0/@ownedTools[name='DropProcessToFunction']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='Process']">
             <style xsi:type="style:FlatContainerStyleDescription">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
@@ -338,7 +382,7 @@
           </style>
         </containerMappings>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Support process" precondition="&lt;%self.filter(&quot;Function&quot;) &amp;&amp; $containerView.eContainer().filter(&quot;DDiagram&quot;) != null%>" forceRefresh="true" candidatesExpression="&lt;%eContainer().processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="IsRelalizedByProcess" label="Is realized by process" precondition="&lt;%self.filter(&quot;Function&quot;)%>" forceRefresh="true" candidatesExpression="&lt;%eContainer().processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -348,7 +392,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete support process" forceRefresh="true">
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteIsRealizedByrProcess" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
@@ -358,7 +402,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -366,9 +410,60 @@
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="ownsFunctions" valueExpression="&lt;%$instance%>"/>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;% $container.filter(&quot;BusinessArchitecture&quot;) != null %>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="ownsFunctions" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;% $container.filter(&quot;Function&quot;) != null %>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$container%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropFunctionToFunction" forceRefresh="true" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$newSemanticContainer%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropFunctionToDiagram" forceRefresh="true" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SecondLevelFunction']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunction" elementExpression="&lt;%$oldSemanticContainer%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropProcessToFunction" forceRefresh="true" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='Process']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer.trace()%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="isRealizedByProcesses" valueExpression="&lt;%$element.trace()%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CommunicatesWith" label="Communicates with" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@edgeMappings[name='CommunicatesWith']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatedWithFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
