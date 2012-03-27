@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="TOGAF">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:description_2="http://www.obeo.fr/dsl/viewpoint/tree/description/1.0.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="TOGAF">
   <eAnnotations source="Migration">
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
   </eAnnotations>
@@ -2419,6 +2419,1658 @@
         </edgeMappings>
         <toolSections/>
       </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Organization-Actors Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Organization Units">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Organization" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%units%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='OrganizationUnits']/@subItemMappings[name='Organization']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Organization Unit" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='OrganizationUnits']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="OrganizationUnit" referenceName="units">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Organization_&lt;%eContainer.units.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Actors" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Actors">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Actor" domainClass="Actor" semanticCandidatesExpression="&lt;%actors%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='OrganizationUnits']/@subItemMappings[name='Organization']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='Actors']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%eContainer.actors.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Driver-Goal-Objective Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Drivers" label="Drivers" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Drivers">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Driver" domainClass="Driver" semanticCandidatesExpression="&lt;%drivers%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Driver" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Drivers']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Driver_&lt;%eContainer.drivers.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Goals" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Goals">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Goal" domainClass="Goal" semanticCandidatesExpression="&lt;%goals%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Goal" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Goals']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Goal" referenceName="goals">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Goal_&lt;%eContainer.goals.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Objectives" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Objectives">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Objective" domainClass="Objective" semanticCandidatesExpression="&lt;%objectives%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Objective" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Objectives']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Objective" referenceName="objectives">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Objective_&lt;%eContainer.objectives.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Role Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Roles" label="Roles" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Roles">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Role" domainClass="Role" semanticCandidatesExpression="&lt;%roles%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Role%20Catalog']/@subItemMappings[name='Roles']/@subItemMappings[name='Role']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Role" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Role%20Catalog']/@subItemMappings[name='Roles']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Role" referenceName="roles">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Role_&lt;%eContainer.roles.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="BusinessService-Function Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="BusinessServices" label="Business Services" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Business Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="BusinessService" domainClass="BusinessService" semanticCandidatesExpression="&lt;%services%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%eContainer.services.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Functions" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Functions">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Function" domainClass="Function" semanticCandidatesExpression="&lt;%functions%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%eContainer.functions.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Location Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Locations" label="Locations" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Locations">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Location" domainClass="Location" semanticCandidatesExpression="&lt;%locations%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Location%20Catalog']/@subItemMappings[name='Locations']/@subItemMappings[name='Location']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Location%20Catalog']/@subItemMappings[name='Locations']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location_&lt;%eContainer.locations.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Process-Event-Control-Product Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Processes" label="Processes" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Processes">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Process" domainClass="Process" semanticCandidatesExpression="&lt;%processes%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Process" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="processes">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%eContainer.processes.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Events" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Events">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Event" domainClass="Event" semanticCandidatesExpression="&lt;%events%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Events']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Event_&lt;%eContainer.events.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Controls" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Controls">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Control" domainClass="Control" semanticCandidatesExpression="&lt;%controls%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Control" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Controls']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Control" referenceName="controls">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Control_&lt;%eContainer.controls.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Products" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Products">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Product" domainClass="Product" semanticCandidatesExpression="&lt;%products%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Product" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Products']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Product" referenceName="products">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Product_&lt;%eContainer.products.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Contract-Measure Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Contracts" label="Contracts" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Contracts">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Contract" domainClass="Contract" semanticCandidatesExpression="&lt;%contracts%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Contracts']/@subItemMappings[name='Contract']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Contract" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Contracts']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Contract" referenceName="contracts">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Contract_&lt;%eContainer.contracts.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Measures" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Measures">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Measure" domainClass="Measure" semanticCandidatesExpression="&lt;%measures%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Contracts']/@subItemMappings[name='Contract']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Measure" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Measures']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Measure" referenceName="measures">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Measure_&lt;%eContainer.measures.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="business-catalogs-container" label="TOGAF - Phase B - Business Architecture - Catalogs - Container">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Organization-Actors Catalog Container" domainClass="Container">
+      <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Organization Units">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Organization" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;OrganizationUnit&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='OrganizationUnits']/@subItemMappings[name='Organization']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Organization Unit" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='OrganizationUnits']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="OrganizationUnit" referenceName="units">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Organization_&lt;%eContainer.units.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Actors" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Actors">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Actor" domainClass="Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='OrganizationUnits']/@subItemMappings[name='Organization']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='Actors']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%eContainer.actors.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Driver-Goal-Objective Catalog Container" domainClass="Container">
+      <subItemMappings name="Drivers" label="Drivers" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Drivers">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Driver" domainClass="Driver" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Driver&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Driver" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Driver_&lt;%eContainer.drivers.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Goals" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Goals">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Goal" domainClass="Goal" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Goal&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Goal" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Goals']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Goal" referenceName="goals">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Goal_&lt;%eContainer.goals.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Objectives" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Objectives">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Objective" domainClass="Objective" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Objective&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']/@subItemMappings[name='Driver']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Objective" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Objectives']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Objective" referenceName="objectives">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Objective_&lt;%eContainer.objectives.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Role Catalog Container" domainClass="Container">
+      <subItemMappings name="Roles" label="Roles" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Roles">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Role" domainClass="Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Role%20Catalog%20Container']/@subItemMappings[name='Roles']/@subItemMappings[name='Role']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Role" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Role%20Catalog%20Container']/@subItemMappings[name='Roles']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Role" referenceName="roles">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Role_&lt;%eContainer.roles.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="BusinessService-Function Catalog Container" domainClass="Container">
+      <subItemMappings name="BusinessServices" label="Business Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Business Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="BusinessService" domainClass="BusinessService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='BusinessServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%eContainer.services.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Functions" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Functions">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Function" domainClass="Function" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Function&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='Functions']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%eContainer.functions.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Location Catalog Container" domainClass="Container">
+      <subItemMappings name="Locations" label="Locations" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Locations">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Location" domainClass="Location" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Location&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Location%20Catalog%20Container']/@subItemMappings[name='Locations']/@subItemMappings[name='Location']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Location%20Catalog%20Container']/@subItemMappings[name='Locations']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location_&lt;%eContainer.locations.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Process-Event-Control-Product Catalog Container" domainClass="Container">
+      <subItemMappings name="Processes" label="Processes" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Processes">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Process" domainClass="Process" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Process&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Process" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="processes">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%eContainer.processes.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Events" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Events">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Event" domainClass="Event" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Event&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Events']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Event_&lt;%eContainer.events.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Controls" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Controls">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Control" domainClass="Control" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Control&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Control" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Controls']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Control" referenceName="controls">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Control_&lt;%eContainer.controls.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Products" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Products">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Product" domainClass="Product" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Product&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']/@subItemMappings[name='Process']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Product" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Products']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Product" referenceName="products">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Product_&lt;%eContainer.products.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Contract-Measure Catalog Container" domainClass="Container">
+      <subItemMappings name="Contracts" label="Contracts" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Contracts">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Contract" domainClass="Contract" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Contract&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Contracts']/@subItemMappings[name='Contract']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Contract" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Contracts']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Contract" referenceName="contracts">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Contract_&lt;%eContainer.contracts.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Measures" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Measures">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Measure" domainClass="Measure" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Measure&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Contracts']/@subItemMappings[name='Contract']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Measure" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Measures']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Measure" referenceName="measures">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Measure_&lt;%eContainer.measures.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="data-catalogs" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Data Entity-Data Component Catalog" domainClass="DataArchitecture">
+      <subItemMappings name="DataEntities" label="Data Entities" domainClass="DataArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Data Entities">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="DataEntity" domainClass="DataEntity" semanticCandidatesExpression="&lt;%entities%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Data Entity" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='DataEntities']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity_&lt;%eContainer.entities.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalDataComponents" label="Logical Data Components" domainClass="DataArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Data Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalDataComponent" domainClass="LogicalDataComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Data Component" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='LogicalDataComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalDataComponent" referenceName="logicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalDataComponents" label="Physical Data Components" domainClass="DataArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Data Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalDataComponent" domainClass="PhysicalDataComponent" semanticCandidatesExpression="&lt;%physicalComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Data Component" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='PhysicalDataComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalDataComponent" referenceName="physicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalDataComponent_&lt;%eContainer.physicalComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="data-catalogs-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs - Container">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Data Entity-Data Component Catalog Container" domainClass="Container">
+      <subItemMappings name="DataEntities" label="Data Entities" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Data Entities">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="DataEntity" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Data Entity" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='DataEntities']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity_&lt;%eContainer.entities.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalDataComponents" label="Logical Data Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Data Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalDataComponent" domainClass="LogicalDataComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalDataComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Data Component" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='LogicalDataComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalDataComponent" referenceName="logicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalDataComponents" label="Physical Data Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Data Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalDataComponent" domainClass="PhysicalDataComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalDataComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='DataEntities']/@subItemMappings[name='DataEntity']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Data Component" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='PhysicalDataComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalDataComponent" referenceName="physicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalDataComponent_&lt;%eContainer.physicalComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="application-catalogs" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Application Portfolio Catalog" domainClass="ApplicationArchitecture">
+      <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="ApplicationArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Information System Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="InformationSystemService" domainClass="InformationSystemService" semanticCandidatesExpression="&lt;%informationSystemServices%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Information System Service" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='InformationSystemServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="InformationSystemService_&lt;%eContainer.informationSystemServices.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalApplicationComponents" label="Logical Application Components" domainClass="ApplicationArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Application Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='LogicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="ApplicationArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Application Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalApplicationComponent" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Application Component" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='PhysicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalApplicationComponent_&lt;%eContainer.physicalApplicationComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="application-catalogs-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs - Container">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Application Portfolio Catalog Container" domainClass="Container">
+      <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Information System Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="InformationSystemService" domainClass="InformationSystemService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;InformationSystemService&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Information System Service" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='InformationSystemServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="InformationSystemService_&lt;%eContainer.informationSystemServices.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalApplicationComponents" label="Logical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Application Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='LogicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Application Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalApplicationComponent" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalApplicationComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='InformationSystemServices']/@subItemMappings[name='InformationSystemService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Application Component" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PhysicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalApplicationComponent_&lt;%eContainer.physicalApplicationComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="technology-catalogs" label="TOGAF - Phase D - Technology Architecture - Catalogs">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Technology Portfolio Catalog" domainClass="TechnologyArchitecture">
+      <subItemMappings name="PlatformServices" label="Platform Services" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Platform Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PlatformService" domainClass="PlatformService" semanticCandidatesExpression="&lt;%platformServices%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Platform Service" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PlatformServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PlatformService" referenceName="platformServices">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PlatformService_&lt;%eContainer.platformServices.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalTechnologyComponents" label="Logical Technology Components" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Technology Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalTechnologyComponent" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='LogicalTechnologyComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalTechnologyComponent" referenceName="logicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalTechnologyComponent_&lt;%eContainer.logicalComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Technology Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalTechnologyComponent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%physicalComponents%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PhysicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalTechnologyComponent" referenceName="physicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalTechnologyComponent_&lt;%eContainer.physicalComponents.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="technology-catalogs-container" label="TOGAF - Phase D - Technology Architecture - Catalogs - Container">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Technology Portfolio Catalog Container" domainClass="Container">
+      <subItemMappings name="PlatformServices" label="Platform Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Platform Services">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PlatformService" domainClass="PlatformService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PlatformService&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Platform Service" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PlatformServices']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PlatformService" referenceName="platformServices">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PlatformService_&lt;%eContainer.platformServices.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="LogicalTechnologyComponents" label="Logical Technology Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Logical Technology Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="LogicalTechnologyComponent" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalTechnologyComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Logical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='LogicalTechnologyComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalTechnologyComponent" referenceName="logicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalTechnologyComponent_&lt;%eContainer.logicalComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Physical Technology Components">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="PhysicalTechnologyComponent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalTechnologyComponent&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PlatformServices']/@subItemMappings[name='PlatformService']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <create name="Physical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PhysicalApplicationComponents']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalTechnologyComponent" referenceName="physicalComponents">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalTechnologyComponent_&lt;%eContainer.physicalComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
+  <ownedViewpoints name="Togaf-administration">
+    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Labels And Containers" domainClass="EnterpriseArchitecture">
+      <subItemMappings name="Labels" label="Labels" domainClass="EnterpriseArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Labels">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Label" domainClass="Label" semanticCandidatesExpression="&lt;%labels%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+          <subItemMappings name="SubLabel" domainClass="Label" semanticCandidatesExpression="&lt;%subLabels%>" reusedTreeItemMappings="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']/@subItemMappings[name='SubLabel']">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperation>
+              <mask mask="{0}"/>
+              <element name="element"/>
+              <root name="root"/>
+            </directEdit>
+            <create name="Sub Sub Label" label="Label" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Label" referenceName="subLabels">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Label_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Label&quot;).nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperation>
+              <variables name="root" documentation="The semantic element of the tree."/>
+              <variables name="element" documentation="The semantic currently edited element."/>
+              <variables name="container" documentation="The semantic element corresponding to the view container."/>
+            </create>
+          </subItemMappings>
+          <create name="Sub Label" label="Label" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:CreateInstance" typeName="Label" referenceName="subLabels">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Label_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Label&quot;).nSize()%>"/>
+              </subModelOperations>
+            </firstModelOperation>
+            <variables name="root" documentation="The semantic element of the tree."/>
+            <variables name="element" documentation="The semantic currently edited element."/>
+            <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          </create>
+        </subItemMappings>
+        <create name="Label" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Label" referenceName="labels">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Label_&lt;%eContainer.eAllContents(&quot;Label&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Containers" label="Containers" domainClass="EnterpriseArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Containers">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Container" domainClass="Container" semanticCandidatesExpression="&lt;%containers%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+          <subItemMappings name="SubContainer" domainClass="Container" semanticCandidatesExpression="&lt;%subContainers%>" reusedTreeItemMappings="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']/@subItemMappings[name='SubContainer']">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']/@subItemMappings[name='Label']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperation>
+              <mask mask="{0}"/>
+              <element name="element"/>
+              <root name="root"/>
+            </directEdit>
+            <create name="Sub Sub Container" label="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="subContainers">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Container&quot;).nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperation>
+              <variables name="root" documentation="The semantic element of the tree."/>
+              <variables name="element" documentation="The semantic currently edited element."/>
+              <variables name="container" documentation="The semantic element corresponding to the view container."/>
+            </create>
+          </subItemMappings>
+          <create name="Sub Container" label="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="subContainers">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Container&quot;).nSize()%>"/>
+              </subModelOperations>
+            </firstModelOperation>
+            <variables name="root" documentation="The semantic element of the tree."/>
+            <variables name="element" documentation="The semantic currently edited element."/>
+            <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          </create>
+        </subItemMappings>
+        <create name="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="containers">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eAllContents(&quot;Container&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
   <userColorsPalettes name="UserColors">
