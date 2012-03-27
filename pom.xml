@@ -45,11 +45,9 @@
     <module>features/org.obeonetwork.dsl.togaf.feature</module>
     <module>features/org.obeonetwork.dsl.togaf.repository</module>
 
-    <module>plugins/org.obeonetwork.dsl.togaf.common</module>
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk</module>
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.edit</module>
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.editor</module>
-    <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.editor.dawn</module>
     <module>plugins/org.obeonetwork.dsl.togaf.design</module>
   </modules>
   
