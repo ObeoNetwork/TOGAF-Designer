@@ -73,7 +73,7 @@
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
-      <url>http://update.obeo.fr/release/designer/release-6.0beta1/indigo/update/repository/</url>
+     <url>http://update.obeo.fr/release/designer/release-6.0.0/indigo/update/repository/</url>
     </repository>
     <repository>
       <id>Acceleo2</id>
