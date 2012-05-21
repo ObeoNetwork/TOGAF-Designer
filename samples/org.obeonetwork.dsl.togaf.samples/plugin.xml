@@ -20,18 +20,17 @@
 <extension
          point="org.eclipse.ui.newWizards">
       <category
-            name="TOGAF"
+            name="Togaf"
             parentCategory="org.eclipse.ui.Examples"
             id="org.obeonetwork.dsl.togaf.samples.TogafSamples.plugin">
       </category>
       
       <wizard
-            name="TOGAF Samples"
+            name="Togaf Samples"
             icon="icons/togaf_logo.gif"
             category="org.eclipse.ui.Examples/org.obeonetwork.dsl.togaf.samples.TogafSamples.plugin"
             class="org.obeonetwork.dsl.togaf.samples.wizards.ProjectUnzipperNewWizard"
             project="true"
-            finalPerspective="org.obeonetwork.dsl.togaf.ui.perspectives.TogafPerspective"
             id="org.obeonetwork.dsl.togaf.samples.wizards.togafSamples">
          <description>
             Create a project with a TOGAF sample.

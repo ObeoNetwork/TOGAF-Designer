@@ -28,6 +28,8 @@ public final class Messages extends NLS {
 
 	public static String TogafVoyageDiscountSample_title;
 	public static String TogafVoyageDiscountSample_desc;
+	public static String TogafVoyageDiscountSampleFr_title;
+	public static String TogafVoyageDiscountSampleFr_desc;
 
 	static {
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

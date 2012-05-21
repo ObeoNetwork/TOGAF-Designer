@@ -37,7 +37,7 @@ public class VoyageDiscountSample extends TogafSample {
 				CoreSamplePlugin
 						.getDefault()
 						.findImageDescriptor(
-								"/org.obeonetwork.dsl.togaf.samples.pack.core/images/voyagediscount.png")); //$NON-NLS-1$
+								"/org.obeonetwork.dsl.togaf.samples.pack.core/images/voyageDiscount.png")); //$NON-NLS-1$
 	}
 
 }

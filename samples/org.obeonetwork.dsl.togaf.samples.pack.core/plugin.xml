@@ -21,5 +21,10 @@
             id="org.obeonetwork.dsl.togaf.samples.pack.core.TogafSample1"
             name="oorg.obeonetwork.dsl.togaf.samples.pack.core.TogafSample1">
       </TogafSample>
+      <TogafSample
+            class="org.obeonetwork.dsl.togaf.samples.pack.core.VoyageDiscountSampleFr"
+            id="org.obeonetwork.dsl.togaf.samples.pack.core.TogafSample2"
+            name="oorg.obeonetwork.dsl.togaf.samples.pack.core.TogafSample2">
+      </TogafSample>
    </extension>
 </plugin>

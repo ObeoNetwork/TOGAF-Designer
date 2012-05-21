@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
    <description url="http://www.obeo.fr">
-   	TOGAF Designer 
+      TOGAF Designer
    </description>
    <feature url="features/org.obeonetwork.dsl.togaf.feature_0.0.0.qualifier.jar" id="org.obeonetwork.dsl.togaf.feature" version="0.0.0">
-      <category name="Obeo Network"/>
+      <category name="Togaf Designer"/>
    </feature>
-   <category-def name="Obeo Network" label="Obeo Network">
+   <category-def name="Togaf Designer" label="Togaf Designer">
       <description>
-         The Obeo Network.
+         This module provides a set of viewpoints for TOGAF.
       </description>
    </category-def>
 </site>
