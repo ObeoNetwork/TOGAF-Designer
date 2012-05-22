@@ -4,7 +4,7 @@
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
   </eAnnotations>
   <ownedViewpoints name="business" label="TOGAF - Phase B - Business Architecture" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="driverCreatesGoals" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal']" targetFinderExpression="&lt;%createsGoals%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20createsGoals'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20createsGoals']">
           <style sizeComputationExpression="2">
@@ -546,7 +546,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram" titleExpression="Organization Decomposition Diagram" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram" titleExpression="Organization Decomposition Diagram" domainClass="BusinessArchitecture" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Location" label="Hide Locations">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Location']"/>
       </filters>
@@ -865,7 +865,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram " titleExpression="&lt;%name%>" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram " titleExpression="&lt;%name%>" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20functionCommunicatesWithfunction']">
           <style sizeComputationExpression="2">
@@ -1271,7 +1271,7 @@
         </defaultBackground>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='']" name="EventDiagram" domainClass="contentfwk.BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='']" name="EventDiagram" domainClass="contentfwk.BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Event" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%events%>" domainClass="contentfwk.Event">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelSize="7" showIcon="false" sizeComputationExpression="2">
@@ -2442,7 +2442,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram" titleExpression="&lt;%name%>" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram" titleExpression="&lt;%name%>" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%actors%>" domainClass="contentfwk.Actor">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
@@ -3267,7 +3267,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20functionCommunicatesWithfunction']">
           <style sizeComputationExpression="2">
@@ -4022,7 +4022,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='dorp%20BusinessService']" name="Goal/Objective/Service Diagram Container" label="Goal/Objective/Service Diagram Container" titleExpression="Goal/Objective/Service Diagram" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='dorp%20BusinessService']" name="Goal/Objective/Service Diagram Container" label="Goal/Objective/Service Diagram Container" titleExpression="Goal/Objective/Service Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="driverCreatesGoals" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal']" targetFinderExpression="&lt;%createsGoals%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20createsGoals'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20createsGoals']">
           <style sizeComputationExpression="2">
@@ -4576,7 +4576,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
@@ -4800,7 +4800,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram Container" titleExpression="Organization Decomposition Diagram" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram Container" titleExpression="Organization Decomposition Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Location">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Location']"/>
       </filters>
@@ -5186,7 +5186,7 @@
         </defaultBackground>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']" name="EventDiagram Container" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']" name="EventDiagram Container" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Event" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Event&quot;)%>" domainClass="contentfwk.Event">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelSize="7" showIcon="false" sizeComputationExpression="2">
@@ -6524,7 +6524,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" name="Class Diagram" domainClass="contentfwk.DataArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" name="Class Diagram" domainClass="contentfwk.DataArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%relatesTo%>" reconnections="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20DataEntityRelatesToDataEntity'] //@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20DataEntityRelatesTo']">
           <style sizeComputationExpression="2">
@@ -6849,7 +6849,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" name="Class Diagram Container" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" name="Class Diagram Container" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%relatesTo%>" reconnections="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20DataEntityRelatesToDataEntity'] //@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20DataEntityRelatesTo']">
           <style sizeComputationExpression="2">
@@ -7017,7 +7017,7 @@
         <toolSections name="Tools"/>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram Element" domainClass="contentfwk.DataEntity">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram Element" domainClass="contentfwk.DataEntity" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Data Entity" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.DataEntity">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
@@ -7614,7 +7614,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="contentfwk.ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
@@ -8982,7 +8982,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Platform%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TechnologyComponent%20into%20Container']" name="Platform Decomposition Diagram" titleExpression="Platform Decomposition Diagram" domainClass="contentfwk.TechnologyArchitecture">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Platform%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TechnologyComponent%20into%20Container']" name="Platform Decomposition Diagram" titleExpression="Platform Decomposition Diagram" domainClass="contentfwk.TechnologyArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="Container" labelDirectEdit="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Platform%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%eContents.filter(&quot;TechnologyComponent&quot;).~ownedElements.~labels.nMinimize%>" domainClass="contentfwk.Container" dropDescriptions="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Platform%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='TechnologyComponent%20into%20Container']">
           <subNodeMappings name="LogicalTechnologyComponent" labelDirectEdit="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Platform%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%self.filter(&quot;Container&quot;).labels.ownedElements[eContainer() == $diagram.target]%>" domainClass="contentfwk.LogicalTechnologyComponent">
