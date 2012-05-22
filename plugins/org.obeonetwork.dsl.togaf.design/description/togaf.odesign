@@ -3,7 +3,7 @@
   <eAnnotations source="Migration">
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
   </eAnnotations>
-  <ownedViewpoints name="business" label="TOGAF - Phase B - Business Architecture">
+  <ownedViewpoints name="business" label="TOGAF - Phase B - Business Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="BusinessArchitecture">
       <defaultLayer name="Default">
         <edgeMappings name="driverCreatesGoals" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal']" targetFinderExpression="&lt;%createsGoals%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20createsGoals'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20createsGoals']">
@@ -2643,7 +2643,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="business-container" label="TOGAF - Phase B - Business Architecture - Container">
+  <ownedViewpoints name="business-container" label="TOGAF - Phase B - Business Architecture - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" documentation="A Business Footprint diagram describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability.&#xA;A Business Footprint diagram provides a clear traceability between a technical component and the business goal that it satisfies, whilst also demonstrating ownership of the services identified.&#xA;A Business Footprint diagram demonstrates only the key facts linking organization unit functions to delivery services and is utilized as a communication platform for senior-level (CxO) stakeholders. " name="Business Footprint Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" label="Function communicated with Functions" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20functionCommunicatesWithfunction']">
@@ -5403,7 +5403,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs">
+  <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Organization-Actors Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Organization Units">
@@ -5869,7 +5869,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="business-catalogs-container" label="TOGAF - Phase B - Business Architecture - Catalogs - Container">
+  <ownedViewpoints name="business-catalogs-container" label="TOGAF - Phase B - Business Architecture - Catalogs - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Organization-Actors Catalog Container" domainClass="Container">
       <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Organization Units">
@@ -6350,7 +6350,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="data" label="TOGAF - Phase C. 1- Information Systems - Data Architecture">
+  <ownedViewpoints name="data" label="TOGAF - Phase C. 1- Information Systems - Data Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix" titleExpression="Data Entity/Business Function Matrix" domainClass="DataArchitecture">
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
@@ -6649,7 +6649,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="data-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Container">
+  <ownedViewpoints name="data-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix Container" titleExpression="Data Entity/Business Function Matrix" domainClass="Container">
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
@@ -6969,7 +6969,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="data-element" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Element">
+  <ownedViewpoints name="data-element" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Element" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix Element" titleExpression="Data Entity/Business Function Matrix" domainClass="DataEntity">
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
@@ -7034,7 +7034,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="data-catalogs" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs">
+  <ownedViewpoints name="data-catalogs" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Data Entity-Data Component Catalog" domainClass="DataArchitecture">
       <subItemMappings name="DataEntities" label="Data Entities" domainClass="DataArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Data Entities">
@@ -7128,7 +7128,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="data-catalogs-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs - Container">
+  <ownedViewpoints name="data-catalogs-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Data Entity-Data Component Catalog Container" domainClass="Container">
       <subItemMappings name="DataEntities" label="Data Entities" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Data Entities">
@@ -7225,7 +7225,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="application" label="TOGAF - Phase C. 2- Information Systems - Application Architecture">
+  <ownedViewpoints name="application" label="TOGAF - Phase C. 2- Information Systems - Application Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Logical App Map)" titleExpression="Interface Catalog (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
@@ -7756,7 +7756,7 @@
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="application-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Container">
+  <ownedViewpoints name="application-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Container" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="contentfwk.Container" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Filter Business Services">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@optionalLayers[name='Other%20Logical%20Application%20Components']/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
@@ -8389,7 +8389,7 @@
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="application-element" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Element">
+  <ownedViewpoints name="application-element" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Element" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Element" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="contentfwk.LogicalApplicationComponent" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Filter Business Services">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
@@ -8575,7 +8575,7 @@
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="application-catalogs" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs">
+  <ownedViewpoints name="application-catalogs" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Application Portfolio Catalog" domainClass="ApplicationArchitecture">
       <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="ApplicationArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Information System Services">
@@ -8669,7 +8669,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="application-catalogs-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs - Container">
+  <ownedViewpoints name="application-catalogs-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Application Portfolio Catalog Container" domainClass="Container">
       <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Information System Services">
@@ -8766,7 +8766,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="technology" label="TOGAF - Phase D - Technology Architecture">
+  <ownedViewpoints name="technology" label="TOGAF - Phase D - Technology Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Technology Standards Catalog" titleExpression="Technology Standards Catalog" domainClass="contentfwk.TechnologyArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
         <containerMappings name="TechnologyStandards" semanticCandidatesExpression="&lt;%self+self.eAllContents%>" domainClass="contentfwk.TechnologyArchitecture" listContainer="true">
@@ -9150,7 +9150,7 @@
       <intersection name="Realizes" lineMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='LogicalTechnologyComponentInSystem%2FTechnologyMatrix']/@ownedSubLines[name='PhysicalTechnologyComponentInSystem%2FTechnologyMatrix'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='PhysicalTechnologyComponentWithoutParent']" columnMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedColumnMappings.0" labelExpression="Realizes" columnFinderExpression="&lt;%realizesApplicationComponents%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="technology-catalogs" label="TOGAF - Phase D - Technology Architecture - Catalogs">
+  <ownedViewpoints name="technology-catalogs" label="TOGAF - Phase D - Technology Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Technology Portfolio Catalog" domainClass="TechnologyArchitecture">
       <subItemMappings name="PlatformServices" label="Platform Services" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Platform Services">
@@ -9244,7 +9244,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="technology-catalogs-container" label="TOGAF - Phase D - Technology Architecture - Catalogs - Container">
+  <ownedViewpoints name="technology-catalogs-container" label="TOGAF - Phase D - Technology Architecture - Catalogs - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Technology Portfolio Catalog Container" domainClass="Container">
       <subItemMappings name="PlatformServices" label="Platform Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Platform Services">
@@ -9341,7 +9341,7 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
-  <ownedViewpoints name="Togaf-administration">
+  <ownedViewpoints name="Togaf-administration" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="Labels And Containers" domainClass="EnterpriseArchitecture">
       <subItemMappings name="Labels" label="Labels" domainClass="EnterpriseArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Labels">
