@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="ASCII"?>
+<!--
+ Copyright (c) 2011-2012 Obeo.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ 
+ Contributors:
+     Obeo - initial API and implementation
+-->
 <contentfwk:EnterpriseArchitecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:contentfwk="http://www.obeonetwork.org/dsl/togaf/contentfwk/9.0.0">
   <architectures xsi:type="contentfwk:StrategicArchitecture"/>
   <architectures xsi:type="contentfwk:BusinessArchitecture">

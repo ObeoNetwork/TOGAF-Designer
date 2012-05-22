@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2010-2011 Obeo. All Rights Reserved.
+ * Copyright (c) 2011-2012 Obeo.
  *
  * This file is part of Obeo Knowledge.
  *
