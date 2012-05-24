@@ -13,6 +13,7 @@ package org.obeonetwork.dsl.togaf.design;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -72,6 +73,20 @@ public class Activator extends AbstractUIPlugin {
 	 */
 	public static Activator getDefault() {
 		return plugin;
+	}
+	
+	/**
+	 * A helper to log plugin errors.
+	 * 
+	 * @param severity
+	 *            the error severity.
+	 * @param message
+	 *            the error message.
+	 * @param exception
+	 *            the error exception.
+	 */
+	public static void log(int severity, String message, Throwable exception) {
+		getDefault().getLog().log(new Status(severity, PLUGIN_ID, message, exception));
 	}
 
 }

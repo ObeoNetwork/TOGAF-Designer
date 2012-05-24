@@ -6,7 +6,11 @@ Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
  org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.4.1",
- org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport
+ org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport,
+ fr.obeo.dsl.common;bundle-version="3.3.0",
+ com.google.guava;bundle-version="11.0.1",
+ org.eclipse.core.expressions;bundle-version="3.4.300"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Provide-Package: org.obeonetwork.dsl.togaf.design
+Bundle-Localization: plugin
