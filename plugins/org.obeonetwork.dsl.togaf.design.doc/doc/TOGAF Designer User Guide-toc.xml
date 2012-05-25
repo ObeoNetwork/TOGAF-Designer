@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="doc/TOGAF Designer User Guide.html" label="TOGAF Designer User Guide">
+	<topic href="doc/TOGAF Designer User Guide.html" label="Getting Started">
+		<topic href="doc/TOGAF Designer User Guide.html#startingFromTravelAgency" label="Starting from the Travel Agency example"></topic>
+		<topic href="doc/TOGAF Designer User Guide.html#createTOGAF" label="Create a new TOGAF model &amp; TOGAF project"></topic>
+	</topic>
+	<topic href="doc/TOGAF Designer User Guide.html#Diagrams" label="Features">
+		<topic href="doc/TOGAF Designer User Guide.html#businessArchitecture" label="Business Architecture"></topic>
+		<topic href="doc/TOGAF Designer User Guide.html#dataArchitecture" label="Data Architecture"></topic>
+		<topic href="doc/TOGAF Designer User Guide.html#applicationArchitecture" label="Application Architecture"></topic>
+		<topic href="doc/TOGAF Designer User Guide.html#technologyArchitecture" label="Technology Architecture"></topic>
+	</topic>
+</toc>
