@@ -13,6 +13,7 @@ package org.obeonetwork.dsl.togaf.design.extensions;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.PositionConstants;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gef.DragTracker;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
@@ -22,15 +23,18 @@ import org.eclipse.gef.editpolicies.LayoutEditPolicy;
 import org.eclipse.gef.editpolicies.NonResizableEditPolicy;
 import org.eclipse.gef.editpolicies.ResizableEditPolicy;
 import org.eclipse.gef.requests.CreateRequest;
+import org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.swt.graphics.Rectangle;
 
 import fr.obeo.dsl.viewpoint.ViewpointFactory;
 import fr.obeo.dsl.viewpoint.WorkspaceImage;
 import fr.obeo.dsl.viewpoint.diagram.edit.api.part.AbstractNotSelectableShapeNodeEditPart;
 import fr.obeo.dsl.viewpoint.diagram.edit.api.part.IDiagramBorderNodeEditPart;
 import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramBorderNodeEditPartOperation;
+import fr.obeo.dsl.viewpoint.diagram.edit.internal.part.DiagramNodeEditPartOperation;
 import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.AirStyleDefaultSizeNodeFigure;
 import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.WorkspaceImageFigure;
 
@@ -69,20 +73,20 @@ public abstract class CustomWorkspaceImageEditPart extends AbstractNotSelectable
 	protected void refreshVisuals() {
 		super.refreshVisuals();
 		// TODO : implement this method for OD6.
-		throw new UnsupportedOperationException("Unimplemented : not ported to OD6 yet -- RG");
-		// super.refreshVisuals();
-		// WorkspaceImageFigure figure = this.getPrimaryShape();
-		// EObject element = this.resolveSemanticElement();
-		// if (element instanceof WorkspaceImage) {
-		// WorkspaceImage bundledImage = (WorkspaceImage) element;
-		//
-		// setPath(bundledImage);
-		//
-		// figure.refreshFigure(bundledImage);
-		// DiagramNodeEditPartOperation.refreshNodeLabelAlignment(figure, bundledImage);
-		// ((GraphicalEditPart) this.getParent()).setLayoutConstraint(this, this.getFigure(), new Rectangle(0,
-		// 0, figure.getPreferredSize().width, figure.getPreferredSize().height));
-		// }
+		//throw new UnsupportedOperationException("Unimplemented : not ported to OD6 yet -- RG");
+		 //super.refreshVisuals();
+		 WorkspaceImageFigure figure = this.getPrimaryShape();
+		 EObject element = this.resolveSemanticElement();
+		 if (element instanceof WorkspaceImage) {
+		 WorkspaceImage bundledImage = (WorkspaceImage) element;
+		
+		 setPath(bundledImage);
+		
+		 figure.refreshFigure(bundledImage);
+		 DiagramNodeEditPartOperation.refreshNodeLabelAlignment(figure, bundledImage);
+		 ((GraphicalEditPart) this.getParent()).setLayoutConstraint(this, this.getFigure(), new Rectangle(0,
+		 0, figure.getPreferredSize().width, figure.getPreferredSize().height));
+		 }
 	}
 
 	protected IFigure createNodeShape() {
