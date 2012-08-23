@@ -51,4 +51,40 @@
             id="org.obeonetwork.dsl.togaf.ui.actions.OpenTechnologyCatalogsActionID">
       </javaActions>
   </extension>
+  <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="org.obeonetwork.dsl.togaf.design.category"
+           name="%togafDesignerCategory"
+           parentCategory="fr.obeo.dsl.viewpoint.category">
+     </category>
+     <wizard
+           category="fr.obeo.dsl.viewpoint.category/org.obeonetwork.dsl.togaf.design.category"
+           class="org.obeonetwork.dsl.togaf.ui.wizards.newmodel.TogafModelWizard"
+           icon="img/ContentfwkModelFile.gif"
+           id="org.obeonetwork.dsl.togaf.design.model.wizard"
+           name="%togafModelWizard">
+     </wizard>
+     <wizard
+           category="fr.obeo.dsl.viewpoint.category/org.obeonetwork.dsl.togaf.design.category"
+           class="org.obeonetwork.dsl.togaf.ui.wizards.newmodel.TogafProjectWizard"
+           finalPerspective="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling"
+           icon="img/ContentfwkModelFile.gif"
+           id="org.obeonetwork.dsl.togaf.design.project.wizard"
+           name="%togafProjectWizard"
+           project="true">
+     </wizard>
+  </extension>
+  <extension
+        point="org.eclipse.ui.perspectiveExtensions">
+     <perspectiveExtension
+           targetID="fr.obeo.dsl.viewpoint.ui.tools.perspective.modeling">
+        <newWizardShortcut
+              id="org.obeonetwork.dsl.togaf.design.model.wizard">
+        </newWizardShortcut>
+        <newWizardShortcut
+              id="org.obeonetwork.dsl.togaf.design.project.wizard">
+        </newWizardShortcut>
+     </perspectiveExtension>
+  </extension>
 </plugin>
