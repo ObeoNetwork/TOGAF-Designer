@@ -18,15 +18,6 @@
 		</component>
 		</extension>
   <extension
-        point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders">
-     <editpartProvider
-           class="org.obeonetwork.dsl.togaf.design.extensions.ContentFwkEditPartProvider">
-        <Priority
-              name="Highest">
-        </Priority>
-     </editpartProvider>
-  </extension>
-  <extension
         id="OpenDataCatalogs"
         name="OpenDataCatalogs"
         point="fr.obeo.dsl.viewpoint.externalJavaAction">

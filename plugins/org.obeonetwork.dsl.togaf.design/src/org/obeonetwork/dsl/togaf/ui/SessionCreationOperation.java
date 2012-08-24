@@ -49,7 +49,7 @@ import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallbac
 import fr.obeo.dsl.viewpoint.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
 
 /**
- * An operation to create and initialize a new session with empty semantic BPMN
+ * An operation to create and initialize a new session with empty semantic TOGAF
  * model.
  * 
  * @author ymortier
@@ -57,7 +57,7 @@ import fr.obeo.dsl.viewpoint.ui.tools.internal.actions.nature.ModelingToggleNatu
 public class SessionCreationOperation extends WorkspaceModifyOperation {
 
 	/**
-	 * The type name of a bpmn2.Definitions element.
+	 * The type name of a togaf.Definitions element.
 	 */
 	public static final String ENTERPRISE_ARCHITECTURE_OBJECT = "EnterpriseArchitecture"; //$NON-NLS-1$
 
