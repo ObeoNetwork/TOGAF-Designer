@@ -7927,7 +7927,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" labelExpression="&lt;%name%> (&lt;%category.name%>)" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" labelExpression="&lt;%name%> (&lt;%formatLabels()%>) " foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -8580,6 +8580,7 @@
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.ApplicationArchitecture"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.LabelsUtils"/>
   </ownedViewpoints>
   <ownedViewpoints name="application-element" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Element" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Element" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="contentfwk.LogicalApplicationComponent" enablePopupBars="true">
@@ -8613,7 +8614,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" labelExpression="&lt;%name%> (&lt;%category.name%>)" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" labelExpression="&lt;%name%> (&lt;%formatLabels()%>)" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -8762,6 +8763,7 @@
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.LabelsUtils"/>
   </ownedViewpoints>
   <ownedViewpoints name="application-catalogs" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="To identify and maintain a list of all the applications in the enterprise. This list helps to define the horizontal scope of change initiatives that may impact particular kinds of applications. An agreed Application Portfolio allows a standard set of applications to be defined and governed." name="Application Portfolio Catalog" domainClass="ApplicationArchitecture">
