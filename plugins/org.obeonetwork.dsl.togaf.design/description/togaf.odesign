@@ -5281,6 +5281,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Organization Unit" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='OrganizationUnits']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="OrganizationUnit" referenceName="units">
@@ -5311,6 +5315,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='Actors']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
@@ -5343,6 +5351,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Driver" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Drivers']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
@@ -5373,6 +5385,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Goal" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Goals']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Goal" referenceName="goals">
@@ -5403,6 +5419,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Objective" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog']/@subItemMappings[name='Objectives']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Objective" referenceName="objectives">
@@ -5435,6 +5455,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Role" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Role%20Catalog']/@subItemMappings[name='Roles']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Role" referenceName="roles">
@@ -5467,6 +5491,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
@@ -5497,6 +5525,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
@@ -5529,6 +5561,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Location%20Catalog']/@subItemMappings[name='Locations']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
@@ -5561,6 +5597,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Process" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Processes']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="processes">
@@ -5591,6 +5631,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Events']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
@@ -5621,6 +5665,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Control" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Controls']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Control" referenceName="controls">
@@ -5651,6 +5699,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Product" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Products']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Product" referenceName="products">
@@ -5683,6 +5735,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Contract" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Contracts']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Contract" referenceName="contracts">
@@ -5713,6 +5769,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Measure" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Contract-Measure%20Catalog']/@subItemMappings[name='Measures']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Measure" referenceName="measures">
@@ -5747,6 +5807,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Organization Unit" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='OrganizationUnits']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="OrganizationUnit" referenceName="units">
@@ -5778,6 +5842,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='Actors']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
@@ -5811,6 +5879,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Driver" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
@@ -5842,6 +5914,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Goal" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Goals']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Goal" referenceName="goals">
@@ -5873,6 +5949,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Objective" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Objectives']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Objective" referenceName="objectives">
@@ -5906,6 +5986,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Role" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Role%20Catalog%20Container']/@subItemMappings[name='Roles']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Role" referenceName="roles">
@@ -5939,6 +6023,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='BusinessServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
@@ -5970,6 +6058,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='Functions']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
@@ -6003,6 +6095,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Location%20Catalog%20Container']/@subItemMappings[name='Locations']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
@@ -6036,6 +6132,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Process" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Processes']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Process" referenceName="processes">
@@ -6067,6 +6167,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Events']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
@@ -6098,6 +6202,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Control" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Controls']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Control" referenceName="controls">
@@ -6129,6 +6237,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Product" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Products']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Product" referenceName="products">
@@ -6162,6 +6274,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Contract" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Contracts']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Contract" referenceName="contracts">
@@ -6193,6 +6309,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Measure" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Measures']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Measure" referenceName="measures">
@@ -6904,6 +7024,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Data Entity" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='DataEntities']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
@@ -6934,6 +7058,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Data Component" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='LogicalDataComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalDataComponent" referenceName="logicalComponents">
@@ -6964,6 +7092,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Data Component" mapping="//@ownedViewpoints[name='data-catalogs']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog']/@subItemMappings[name='PhysicalDataComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalDataComponent" referenceName="physicalComponents">
@@ -6998,6 +7130,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Data Entity" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='DataEntities']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
@@ -7029,6 +7165,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Data Component" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='LogicalDataComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalDataComponent" referenceName="logicalComponents">
@@ -7060,6 +7200,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Data Component" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='PhysicalDataComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalDataComponent" referenceName="physicalComponents">
@@ -8640,6 +8784,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Information System Service" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='InformationSystemServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
@@ -8670,6 +8818,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='LogicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
@@ -8700,6 +8852,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Application Component" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='PhysicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
@@ -8734,6 +8890,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Information System Service" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='InformationSystemServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
@@ -8765,6 +8925,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='LogicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
@@ -8796,6 +8960,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Application Component" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PhysicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
@@ -9099,6 +9267,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Platform Service" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PlatformServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PlatformService" referenceName="platformServices">
@@ -9129,6 +9301,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='LogicalTechnologyComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalTechnologyComponent" referenceName="logicalComponents">
@@ -9159,6 +9335,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog']/@subItemMappings[name='PhysicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalTechnologyComponent" referenceName="physicalComponents">
@@ -9191,6 +9371,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Standard" mapping="//@ownedViewpoints[name='technology-catalogs']/@ownedRepresentations[name='Technology%20Standards%20Catalog']/@subItemMappings[name='LogicalTechnologyComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalTechnologyComponent" referenceName="logicalComponents">
@@ -9226,6 +9410,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Platform Service" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PlatformServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PlatformService" referenceName="platformServices">
@@ -9257,6 +9445,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Logical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='LogicalTechnologyComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalTechnologyComponent" referenceName="logicalComponents">
@@ -9288,6 +9480,10 @@
             <root name="root"/>
           </directEdit>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Physical Technology Component" mapping="//@ownedViewpoints[name='technology-catalogs-container']/@ownedRepresentations[name='Technology%20Portfolio%20Catalog%20Container']/@subItemMappings[name='PhysicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalTechnologyComponent" referenceName="physicalComponents">
@@ -9357,6 +9553,10 @@
             <variables name="container" documentation="The semantic element corresponding to the view container."/>
           </create>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Label" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Labels']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Label" referenceName="labels">
@@ -9421,6 +9621,10 @@
             <variables name="container" documentation="The semantic element corresponding to the view container."/>
           </create>
         </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
         <create name="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="containers">
