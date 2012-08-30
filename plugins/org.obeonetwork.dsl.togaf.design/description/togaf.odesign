@@ -127,7 +127,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -238,7 +238,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -329,7 +329,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -420,7 +420,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -589,7 +589,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='Contains']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -643,7 +643,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesActor']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -938,7 +938,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates with" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates with" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1007,7 +1007,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionSupportsProcesses" label="Supports process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionSupportsProcesses" label="Supports process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1124,7 +1124,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1220,7 +1220,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" label="Generated by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='GeneratedBy']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" label="Generated by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1261,7 +1261,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" label="Resolved by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ResolvedBy']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" label="Resolved by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1326,7 +1326,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" label="Preceeds" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" label="Preceeds" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1457,7 +1457,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" label="Consumes data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" label="Consumes data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1468,7 +1468,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" label="Provides data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" label="Provides data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1479,7 +1479,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" label="Consumes service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" label="Consumes service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1654,7 +1654,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1749,7 +1749,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1790,7 +1790,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" label="Decomposes process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" label="Decomposes process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1846,7 +1846,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" label="Participates in process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" label="Participates in process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2197,7 +2197,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates with" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates with" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2266,7 +2266,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" label="Is bounded by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" label="Is bounded by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2375,7 +2375,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" label="Consumes" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" label="Consumes" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2598,7 +2598,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2711,7 +2711,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2804,7 +2804,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2897,7 +2897,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3428,7 +3428,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3497,7 +3497,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3634,7 +3634,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3850,7 +3850,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3919,7 +3919,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionSupportsProcesses" label="Function Supports Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionSupportsProcesses" label="Function Supports Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4037,7 +4037,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Process Precedes Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Process Precedes Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4158,7 +4158,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Business Service">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4169,7 +4169,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4180,7 +4180,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4389,7 +4389,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4505,7 +4505,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4546,7 +4546,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4613,7 +4613,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4746,7 +4746,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Contains']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4813,7 +4813,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DecomposesActor']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5109,7 +5109,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='GeneratedBy']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5150,7 +5150,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ResolvedBy']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5215,7 +5215,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -6398,7 +6398,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -6494,7 +6494,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" label="Implements" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" label="Implements" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -6694,7 +6694,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -6893,7 +6893,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7255,7 +7255,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" label="Communicates with" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" label="Communicates with" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7465,7 +7465,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7595,7 +7595,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7649,7 +7649,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessServiceToBusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessServiceToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7821,7 +7821,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates with" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates with" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8065,7 +8065,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8217,7 +8217,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8390,7 +8390,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8455,7 +8455,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Service consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='BusinessServiceToBusinessService']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Service consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='BusinessServiceToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8632,7 +8632,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@edgeMappings[name='Communication%20Link']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
