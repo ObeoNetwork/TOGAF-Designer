@@ -1,8 +1,216 @@
 <?xml version="1.0" encoding="ASCII"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:description_2="http://www.obeo.fr/dsl/viewpoint/tree/description/1.0.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="TOGAF">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/tree/description/1.0.0" xmlns:description_2="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:filter="http://www.obeo.fr/dsl/viewpoint/description/filter/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="TOGAF">
   <eAnnotations source="Migration">
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
   </eAnnotations>
+  <ownedViewpoints name="vision" label="TOGAF - Phase A - Vision" modelFileExtension="togaf">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" name="Capabilities-Constraints-Assumptions-Gaps-WorkPackages Catalog" domainClass="StrategicArchitecture">
+      <subItemMappings name="Capability" label="Capabilities" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Capabilities">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Capability" domainClass="Capability" semanticCandidatesExpression="&lt;%capabilities.nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="Capability" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Capability" referenceName="capabilities">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Capability_&lt;%eContainer.capabilities.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Constraints" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Constraints">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Constraint" domainClass="contentfwk.Constraint" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Constraint&quot;).nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="Constraint" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Constraints']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Constraint" referenceName="strategicElements">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Constraint_&lt;%eContainer.strategicElements.filter(&quot;Constraint&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Assumptions" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Assumptions">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Assumption" domainClass="Assumption" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Assumption&quot;).nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="Assumption" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Assumptions']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Assumption" referenceName="strategicElements">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Assumption_&lt;%eContainer.strategicElements.filter(&quot;Assumption&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Gaps" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Gaps">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Gap" domainClass="Gap" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Gap&quot;).nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="Gap" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Gaps']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Gap" referenceName="strategicElements">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Gap_&lt;%eContainer.strategicElements.filter(&quot;Gap&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="WorkPackages" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="WorkPackages">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="WorkPackage" domainClass="WorkPackage" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;WorkPackage&quot;).nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="WorkPackage" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='WorkPackages']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="WorkPackage" referenceName="strategicElements">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="WorkPackage_&lt;%eContainer.strategicElements.filter(&quot;WorkPackage&quot;).nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:EditionTableDescription" name="ArchitecturePrinciples" label="Architecture Principles" domainClass="StrategicArchitecture">
+      <ownedLineMappings name="Principle" domainClass="Principle" semanticCandidatesExpression="&lt;%self.strategicElements.filter(&quot;Principle&quot;)%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedCreateLine name="Principle" forceRefresh="true" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='ArchitecturePrinciples']/@ownedLineMappings[name='Principle']">
+        <variables name="root" documentation="The semantic element of the table."/>
+        <variables name="element" documentation="The semantic currently edited element."/>
+        <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+          <subModelOperations xsi:type="tool:CreateInstance" typeName="Principle" referenceName="strategicElements">
+            <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Principle_&lt;%eContainer.strategicElements.filter(&quot;Principle&quot;).nSize()%>"/>
+          </subModelOperations>
+        </firstModelOperation>
+      </ownedCreateLine>
+      <ownedColumnMappings name="Statement" label="Statement" headerLabelExpression="Statement" featureName="statementOfPrinciple" labelExpression="&lt;%self.statementOfPrinciple%>">
+        <backgroundConditionalStyle predicateExpression="&lt;%self.statementOfPrinciple==null || self.statementOfPrinciple.equalsIgnoreCase(&quot;&quot;)%>">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="Rationale" label="Rationale" headerLabelExpression="Rationale" featureName="rationale" labelExpression="&lt;%self.rationale%>">
+        <backgroundConditionalStyle predicateExpression="&lt;%self.rationale==null || self.rationale.equalsIgnoreCase(&quot;&quot;)%>">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+      <ownedColumnMappings name="Implication" label="Implication" headerLabelExpression="Implication" featureName="implication" labelExpression="&lt;%self.implication%>">
+        <backgroundConditionalStyle predicateExpression="&lt;%self.implication==null || self.implication.equalsIgnoreCase(&quot;&quot;)%>">
+          <style>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </backgroundConditionalStyle>
+      </ownedColumnMappings>
+    </ownedRepresentations>
+  </ownedViewpoints>
   <ownedViewpoints name="business" label="TOGAF - Phase B - Business Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" endUserDocumentation="This defines the ways in which a service contributes to the achievement of a business vision or strategy. Services are associated with the drivers, goals, objectives, and measures that they support, allowing the enterprise to understand which services contribute to similar aspects of business performance." name="Goal/Objective/Service Diagram" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="BusinessArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -524,7 +732,6 @@
       <filters xsi:type="filter:CompositeFilterDescription" name="Functions" label="Hide Functions">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']"/>
       </filters>
-      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%containsActors%>"/>
       <defaultLayer name="Default">
         <edgeMappings name="Contains" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Organization']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetFinderExpression="&lt;%containsActors%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20OUContainsActors'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20OUContainsActors']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" targetArrow="InputClosedArrow" sizeComputationExpression="1" routingStyle="manhattan">
@@ -2419,7 +2626,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" endUserDocumentation="The purpose of this matrix is to show which actors perform which roles, supporting definition of security and skills requirements." name="Actor/Role Matrix" titleExpression="Actor/Role Matrix" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" endUserDocumentation="The purpose of this matrix is to show which actors perform which roles, supporting definition of security and skills requirements." name="Actor/Role Matrix" titleExpression="Actor/Role Matrix" domainClass="BusinessArchitecture">
       <ownedLineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%actors[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role"/>
       <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedLineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Actor%2FRole%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
@@ -2447,7 +2654,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" endUserDocumentation="The purpose of this matrix is to depict the relationship interactions between organizations and business functions across the enterprise." name="Business Interaction Matrix" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" endUserDocumentation="The purpose of this matrix is to depict the relationship interactions between organizations and business functions across the enterprise." name="Business Interaction Matrix" domainClass="BusinessArchitecture">
       <ownedLineMappings name="Organizations" domainClass="OrganizationUnit" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="ownsFunctions" domainClass="Function" semanticCandidatesExpression="&lt;%ownsFunctions%>" headerLabelExpression="&lt;%name%>">
           <ownedSubLines name="isBoundedByBusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
@@ -3678,7 +3885,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20functionCommunicatesWithfunction']">
           <style sizeComputationExpression="2">
@@ -4081,7 +4288,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram Container" titleExpression="&lt;%name%> Business Service / Information Diagram" domainClass="Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram Container" titleExpression="&lt;%name%> Business Service / Information Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="DataEntity consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%consumesEntities%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceConsumesDataEntity']">
           <style lineStyle="dash" sizeComputationExpression="2">
@@ -4439,7 +4646,7 @@
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
         </nodeMappings>
         <edgeMappings name="Actor participates in Process" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%participatesInProcesses%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20ActorParticipatesInProcesses'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20ActorparticipatesInProcesses']">
-          <style sizeComputationExpression="">
+          <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="participates in">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -4991,9 +5198,9 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Actor/Role Matrix Container" titleExpression="Actor/Role Matrix" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Actor/Role Matrix Container" titleExpression="Actor/Role Matrix" domainClass="contentfwk.Container">
       <ownedLineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;)%>"/>
+      <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="contentfwk.Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;)%>"/>
       <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Actor%2FRole%20Matrix%20Container']/@ownedLineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Actor%2FRole%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -5019,13 +5226,13 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Business Interaction Matrix Container" domainClass="Container">
-      <ownedLineMappings name="Organizations" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;OrganizationUnit&quot;)%>" headerLabelExpression="&lt;%name%>">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Business Interaction Matrix Container" domainClass="contentfwk.Container">
+      <ownedLineMappings name="Organizations" domainClass="contentfwk.OrganizationUnit" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;OrganizationUnit&quot;)%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="ownsFunctions" domainClass="Function" semanticCandidatesExpression="&lt;%ownsFunctions%>" headerLabelExpression="&lt;%name%>">
           <ownedSubLines name="isBoundedByBusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
         </ownedSubLines>
       </ownedLineMappings>
-      <ownedColumnMappings name="BusinessServices" headerLabelExpression="Service &quot;&lt;%name%>&quot;" domainClass="BusinessService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;)%>"/>
+      <ownedColumnMappings name="BusinessServices" headerLabelExpression="Service &quot;&lt;%name%>&quot;" domainClass="contentfwk.BusinessService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;)%>"/>
       <intersection name="Organization owns and governs Business Services" lineMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Interaction%20Matrix%20Container']/@ownedLineMappings[name='Organizations']" columnMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Interaction%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%ownsAndGovernsBusinessServices%>"/>
       <intersection name="Function is bounded by Business Services" lineMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Interaction%20Matrix%20Container']/@ownedLineMappings[name='Organizations']/@ownedSubLines[name='ownsFunctions']" columnMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Interaction%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="Is bounded by" columnFinderExpression="&lt;%isBoundedByServices%>">
         <defaultBackground>
@@ -5261,7 +5468,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Organization Units">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5296,12 +5503,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Actors" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Actors" domainClass="contentfwk.BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Actors">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Actor" domainClass="Actor" semanticCandidatesExpression="&lt;%actors.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Actor" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%actors.nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5321,7 +5528,7 @@
         </delete>
         <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Organization-Actors%20Catalog']/@subItemMappings[name='Actors']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%eContainer.actors.nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
@@ -5331,7 +5538,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A cross-organizational reference of how an organization meets its drivers in practical terms through goals, objectives, and (optionally) measures." name="Driver-Goal-Objective Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A cross-organizational reference of how an organization meets its drivers in practical terms through goals, objectives, and (optionally) measures." name="Driver-Goal-Objective Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="Drivers" label="Drivers" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Drivers">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5435,7 +5642,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The purpose of the Role catalog is to provide a listing of all authorization levels or zones within an enterprise. Frequently, application security or behavior is defined against locally understood concepts of authorization that create complex and unexpected consequences when combined on the user desktop." name="Role Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The purpose of the Role catalog is to provide a listing of all authorization levels or zones within an enterprise. Frequently, application security or behavior is defined against locally understood concepts of authorization that create complex and unexpected consequences when combined on the user desktop." name="Role Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="Roles" label="Roles" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Roles">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5471,7 +5678,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A functional decomposition in a form that can be filtered, reported on, and queried, as a supplement to graphical Functional Decomposition diagrams." name="BusinessService-Function Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A functional decomposition in a form that can be filtered, reported on, and queried, as a supplement to graphical Functional Decomposition diagrams." name="BusinessService-Function Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="BusinessServices" label="Business Services" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Business Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5541,13 +5748,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A listing of all locations where an enterprise carries out business operations or houses architecturally relevant assets, such as data centers or end-user computing equipment." name="Location Catalog" domainClass="BusinessArchitecture">
-      <subItemMappings name="Locations" label="Locations" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A listing of all locations where an enterprise carries out business operations or houses architecturally relevant assets, such as data centers or end-user computing equipment." name="Location Catalog" domainClass="BusinessArchitecture">
+      <subItemMappings name="Locations" label="Locations" domainClass="contentfwk.BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Locations">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Location" domainClass="Location" semanticCandidatesExpression="&lt;%locations.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Location" domainClass="contentfwk.Location" semanticCandidatesExpression="&lt;%locations.nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5567,7 +5774,7 @@
         </delete>
         <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Location%20Catalog']/@subItemMappings[name='Locations']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Location" referenceName="locations">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location_&lt;%eContainer.locations.nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
@@ -5577,7 +5784,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The Process/Event/Control/Product catalog provides a hierarchy of processes, events that trigger processes, outputs from processes, and controls applied to the execution of processes. This catalog provides a supplement to any Process Flow diagrams that are created and allows an enterprise to filter, report, and query across organizations and processes to identify scope, commonality, or impact." name="Process-Event-Control-Product Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The Process/Event/Control/Product catalog provides a hierarchy of processes, events that trigger processes, outputs from processes, and controls applied to the execution of processes. This catalog provides a supplement to any Process Flow diagrams that are created and allows an enterprise to filter, report, and query across organizations and processes to identify scope, commonality, or impact." name="Process-Event-Control-Product Catalog" domainClass="contentfwk.BusinessArchitecture">
       <subItemMappings name="Processes" label="Processes" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Processes">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5612,12 +5819,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Events" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Events" domainClass="contentfwk.BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Events">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Event" domainClass="Event" semanticCandidatesExpression="&lt;%events.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Event" domainClass="contentfwk.Event" semanticCandidatesExpression="&lt;%events.nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5637,7 +5844,7 @@
         </delete>
         <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog']/@subItemMappings[name='Events']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Event" referenceName="events">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Event_&lt;%eContainer.events.nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
@@ -5715,7 +5922,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A listing of all agreed service contracts and (optionally) the measures attached to those contracts. It forms the master list of service levels agreed to across the enterprise." name="Contract-Measure Catalog" domainClass="BusinessArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A listing of all agreed service contracts and (optionally) the measures attached to those contracts. It forms the master list of service levels agreed to across the enterprise." name="Contract-Measure Catalog" domainClass="BusinessArchitecture">
       <subItemMappings name="Contracts" label="Contracts" domainClass="BusinessArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Contracts">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5787,8 +5994,8 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business-catalogs-container" label="TOGAF - Phase B - Business Architecture - Catalogs - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog Container" domainClass="Container">
-      <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="OrganizationUnits" label="Organization Units" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Organization Units">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5823,12 +6030,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Actors" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Actors" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Actors">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Actor" domainClass="Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Actor" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5848,7 +6055,7 @@
         </delete>
         <create name="Actor" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Organization-Actors%20Catalog%20Container']/@subItemMappings[name='Actors']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%eContainer.actors.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -5859,13 +6066,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A cross-organizational reference of how an organization meets its drivers in practical terms through goals, objectives, and (optionally) measures." name="Driver-Goal-Objective Catalog Container" domainClass="Container">
-      <subItemMappings name="Drivers" label="Drivers" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A cross-organizational reference of how an organization meets its drivers in practical terms through goals, objectives, and (optionally) measures." name="Driver-Goal-Objective Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="Drivers" label="Drivers" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Drivers">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Driver" domainClass="Driver" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Driver&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Driver" domainClass="contentfwk.Driver" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Driver&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5885,7 +6092,7 @@
         </delete>
         <create name="Driver" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Driver-Goal-Objective%20Catalog%20Container']/@subItemMappings[name='Drivers']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Driver" referenceName="drivers">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Driver_&lt;%eContainer.drivers.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -5895,7 +6102,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Goals" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Goals" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Goals">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5930,7 +6137,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Objectives" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Objectives" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Objectives">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5966,13 +6173,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The purpose of the Role catalog is to provide a listing of all authorization levels or zones within an enterprise. Frequently, application security or behavior is defined against locally understood concepts of authorization that create complex and unexpected consequences when combined on the user desktop." name="Role Catalog Container" domainClass="Container">
-      <subItemMappings name="Roles" label="Roles" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The purpose of the Role catalog is to provide a listing of all authorization levels or zones within an enterprise. Frequently, application security or behavior is defined against locally understood concepts of authorization that create complex and unexpected consequences when combined on the user desktop." name="Role Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="Roles" label="Roles" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Roles">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Role" domainClass="Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Role" domainClass="contentfwk.Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -5992,7 +6199,7 @@
         </delete>
         <create name="Role" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Role%20Catalog%20Container']/@subItemMappings[name='Roles']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Role" referenceName="roles">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Role_&lt;%eContainer.roles.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6003,13 +6210,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A functional decomposition in a form that can be filtered, reported on, and queried, as a supplement to graphical Functional Decomposition diagrams." name="BusinessService-Function Catalog Container" domainClass="Container">
-      <subItemMappings name="BusinessServices" label="Business Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A functional decomposition in a form that can be filtered, reported on, and queried, as a supplement to graphical Functional Decomposition diagrams." name="BusinessService-Function Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="BusinessServices" label="Business Services" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Business Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="BusinessService" domainClass="BusinessService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="BusinessService" domainClass="contentfwk.BusinessService" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6029,7 +6236,7 @@
         </delete>
         <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='BusinessServices']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.BusinessService" referenceName="services">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%eContainer.services.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6039,12 +6246,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Functions" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Functions" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Functions">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Function" domainClass="Function" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Function&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Function" domainClass="contentfwk.Function" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Function&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6064,7 +6271,7 @@
         </delete>
         <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='BusinessService-Function%20Catalog%20Container']/@subItemMappings[name='Functions']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%eContainer.functions.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6075,13 +6282,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A listing of all locations where an enterprise carries out business operations or houses architecturally relevant assets, such as data centers or end-user computing equipment." name="Location Catalog Container" domainClass="Container">
-      <subItemMappings name="Locations" label="Locations" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A listing of all locations where an enterprise carries out business operations or houses architecturally relevant assets, such as data centers or end-user computing equipment." name="Location Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="Locations" label="Locations" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Locations">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Location" domainClass="Location" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Location&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Location" domainClass="contentfwk.Location" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Location&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6101,7 +6308,7 @@
         </delete>
         <create name="Location" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Location%20Catalog%20Container']/@subItemMappings[name='Locations']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Location" referenceName="locations">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Location" referenceName="locations">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location_&lt;%eContainer.locations.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6112,8 +6319,8 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The Process/Event/Control/Product catalog provides a hierarchy of processes, events that trigger processes, outputs from processes, and controls applied to the execution of processes. This catalog provides a supplement to any Process Flow diagrams that are created and allows an enterprise to filter, report, and query across organizations and processes to identify scope, commonality, or impact." name="Process-Event-Control-Product Catalog Container" domainClass="Container">
-      <subItemMappings name="Processes" label="Processes" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The Process/Event/Control/Product catalog provides a hierarchy of processes, events that trigger processes, outputs from processes, and controls applied to the execution of processes. This catalog provides a supplement to any Process Flow diagrams that are created and allows an enterprise to filter, report, and query across organizations and processes to identify scope, commonality, or impact." name="Process-Event-Control-Product Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="Processes" label="Processes" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Processes">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6148,12 +6355,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Events" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Events" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Events">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Event" domainClass="Event" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Event&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Event" domainClass="contentfwk.Event" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Event&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6173,7 +6380,7 @@
         </delete>
         <create name="Event" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Process-Event-Control-Product%20Catalog%20Container']/@subItemMappings[name='Events']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Event" referenceName="events">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Event" referenceName="events">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Event_&lt;%eContainer.events.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6183,7 +6390,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Controls" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Controls" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Controls">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6218,7 +6425,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Products" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Products" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Products">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6254,13 +6461,13 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="A listing of all agreed service contracts and (optionally) the measures attached to those contracts. It forms the master list of service levels agreed to across the enterprise." name="Contract-Measure Catalog Container" domainClass="Container">
-      <subItemMappings name="Contracts" label="Contracts" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A listing of all agreed service contracts and (optionally) the measures attached to those contracts. It forms the master list of service levels agreed to across the enterprise." name="Contract-Measure Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="Contracts" label="Contracts" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Contracts">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Contract" domainClass="Contract" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Contract&quot;)%>">
+        <subItemMappings name="Contract" domainClass="contentfwk.Contract" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Contract&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6280,7 +6487,7 @@
         </delete>
         <create name="Contract" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Contracts']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Contract" referenceName="contracts">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Contract" referenceName="contracts">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Contract_&lt;%eContainer.contracts.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6290,12 +6497,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="Measures" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="Measures" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Measures">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Measure" domainClass="Measure" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Measure&quot;)%>">
+        <subItemMappings name="Measure" domainClass="contentfwk.Measure" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Measure&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6315,7 +6522,7 @@
         </delete>
         <create name="Measure" mapping="//@ownedViewpoints[name='business-catalogs-container']/@ownedRepresentations[name='Contract-Measure%20Catalog%20Container']/@subItemMappings[name='Measures']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Measure" referenceName="measures">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Measure" referenceName="measures">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Measure_&lt;%eContainer.measures.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -6603,7 +6810,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix" titleExpression="Data Entity/Business Function Matrix" domainClass="DataArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Data Entity/Business Function Matrix" titleExpression="Data Entity/Business Function Matrix" domainClass="DataArchitecture">
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
       </ownedLineMappings>
@@ -6612,25 +6819,25 @@
       <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
       <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Data Matrix" titleExpression="System/Data Matrix" domainClass="DataArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Data Matrix" titleExpression="System/Data Matrix" domainClass="DataArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity"/>
       <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data']/@ownedRepresentations[name='System%2FData%20Matrix']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="data-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix Container" titleExpression="Data Entity/Business Function Matrix" domainClass="Container">
-      <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Data Entity/Business Function Matrix Container" titleExpression="Data Entity/Business Function Matrix" domainClass="contentfwk.Container">
+      <ownedLineMappings name="Functions" domainClass="contentfwk.Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
       </ownedLineMappings>
-      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="contentfwk.DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
       <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
       <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
       <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Data Matrix Container" titleExpression="System/Data Matrix" domainClass="Container">
-      <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Data Matrix Container" titleExpression="System/Data Matrix" domainClass="contentfwk.Container">
+      <ownedLineMappings name="LogicalApplicationComponents" domainClass="contentfwk.LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="contentfwk.DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)%>"/>
       <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='System%2FData%20Matrix%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='System%2FData%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Data Dissemination Diagram  Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
@@ -6939,7 +7146,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="data-element" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Element" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Data Entity/Business Function Matrix Element" titleExpression="Data Entity/Business Function Matrix" domainClass="DataEntity">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Data Entity/Business Function Matrix Element" titleExpression="Data Entity/Business Function Matrix" domainClass="DataEntity">
       <ownedLineMappings name="Functions" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
       </ownedLineMappings>
@@ -6948,7 +7155,7 @@
       <intersection name="BusinessService provides DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="P" columnFinderExpression="&lt;%providesEntities%>"/>
       <intersection name="BusinessService consumes DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedLineMappings[name='Functions']/@ownedSubLines[name='BusinessServices']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="C" columnFinderExpression="&lt;%consumesEntities%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Data Matrix Element" titleExpression="System/Data Matrix" domainClass="DataEntity">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Data Matrix Element" titleExpression="System/Data Matrix" domainClass="DataEntity">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="DataEntity" semanticCandidatesExpression="&lt;%self%>"/>
       <intersection name="LogicalApplicationComponent operates on DataEntities" lineMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='System%2FData%20Matrix%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='System%2FData%20Matrix%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%operatesOnDataEntities%>"/>
@@ -7004,7 +7211,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="data-catalogs" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="To identify and maintain a list of all the data use across the enterprise, including data entities and also the data components where data entities are stored." name="Data Entity-Data Component Catalog" domainClass="DataArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="To identify and maintain a list of all the data use across the enterprise, including data entities and also the data components where data entities are stored." name="Data Entity-Data Component Catalog" domainClass="DataArchitecture">
       <subItemMappings name="DataEntities" label="Data Entities" domainClass="DataArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Data Entities">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -7110,13 +7317,13 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="data-catalogs-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Catalogs - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="To identify and maintain a list of all the data use across the enterprise, including data entities and also the data components where data entities are stored." name="Data Entity-Data Component Catalog Container" domainClass="Container">
-      <subItemMappings name="DataEntities" label="Data Entities" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="To identify and maintain a list of all the data use across the enterprise, including data entities and also the data components where data entities are stored." name="Data Entity-Data Component Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="DataEntities" label="Data Entities" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Data Entities">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="DataEntity" domainClass="DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="DataEntity" domainClass="contentfwk.DataEntity" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -7146,12 +7353,12 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="LogicalDataComponents" label="Logical Data Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="LogicalDataComponents" label="Logical Data Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Logical Data Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="LogicalDataComponent" domainClass="LogicalDataComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalDataComponent&quot;).nSort(&quot;name&quot;)%>">
+        <subItemMappings name="LogicalDataComponent" domainClass="contentfwk.LogicalDataComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalDataComponent&quot;).nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -7171,7 +7378,7 @@
         </delete>
         <create name="Logical Data Component" mapping="//@ownedViewpoints[name='data-catalogs-container']/@ownedRepresentations[name='Data%20Entity-Data%20Component%20Catalog%20Container']/@subItemMappings[name='LogicalDataComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;)%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalDataComponent" referenceName="logicalComponents">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.LogicalDataComponent" referenceName="logicalComponents">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalComponents.nSize()%>"/>
               <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
             </subModelOperations>
@@ -7181,7 +7388,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="PhysicalDataComponents" label="Physical Data Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="PhysicalDataComponents" label="Physical Data Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Physical Data Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -7693,7 +7900,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Logical App Map)" titleExpression="Interface Catalog (Logical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map)" titleExpression="Interface Catalog (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
       <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -7718,7 +7925,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Physical App Map)" titleExpression="Interface Catalog (Physical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map)" titleExpression="Interface Catalog (Physical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -7743,32 +7950,32 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Logical App Map)" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Logical App Map)" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(implementsServices.isProvidedToActors.belongsTo+implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Physical App Map)" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Physical App Map)" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(extendsLogicalApplicationComponents.implementsServices.isProvidedToActors.belongsTo+extendsLogicalApplicationComponents.implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Logical App Map)" titleExpression="Role/System Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Logical App Map)" titleExpression="Role/System Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Physical App Map)" titleExpression="Role/System Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Physical App Map)" titleExpression="Role/System Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Logical App Map)" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Logical App Map)" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Physical App Map)" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Physical App Map)" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
@@ -7989,7 +8196,7 @@
           </style>
         </containerMappings>
         <toolSections name="Locations">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Location">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Location" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -8021,21 +8228,6 @@
           </ownedTools>
         </toolSections>
         <toolSections name="PhysicalApplicationComponent">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="PhysicalApplicationComponent">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).nFirst()%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalApplicationComponents &lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).nFirst().physicalApplicationComponents.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="containsPhysicalApplicationComponents" valueExpression="&lt;%$instance%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
@@ -8062,17 +8254,6 @@
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="containsPhysicalApplicationComponents" valueExpression="&lt;%$element%>"/>
                 </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -8108,21 +8289,6 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Actor">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer()%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%$container.eContainer().actors.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$instance%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
           <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Actor" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors%>">
             <element name="element"/>
             <containerView name="containerView"/>
@@ -8499,7 +8665,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Logical App Map) Container" titleExpression="Interface Catalog (Logical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map) Container" titleExpression="Interface Catalog (Logical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
       <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -8524,7 +8690,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Physical App Map) Container" titleExpression="Interface Catalog (Physical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map) Container" titleExpression="Interface Catalog (Physical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -8549,32 +8715,32 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Logical App Map) Container" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Logical App Map) Container" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(implementsServices.isProvidedToActors.belongsTo+implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Physical App Map) Container" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Physical App Map) Container" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(extendsLogicalApplicationComponents.implementsServices.isProvidedToActors.belongsTo+extendsLogicalApplicationComponents.implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Logical App Map) Container" titleExpression="Role/System Matrix (Logical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Logical App Map) Container" titleExpression="Role/System Matrix (Logical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Physical App Map) Container" titleExpression="Role/System Matrix (Physical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Physical App Map) Container" titleExpression="Role/System Matrix (Physical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Logical App Map) Container" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Logical App Map) Container" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Physical App Map) Container" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Physical App Map) Container" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="contentfwk.Container">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;PhysicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
@@ -8683,7 +8849,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Logical App Map) Element" titleExpression="Interface Catalog (Logical App Map)" domainClass="LogicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map) Element" titleExpression="Interface Catalog (Logical App Map)" domainClass="LogicalApplicationComponent">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
       <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -8708,7 +8874,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Interface Catalog (Physical App Map) Element" titleExpression="Interface Catalog (Physical App Map)" domainClass="PhysicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map) Element" titleExpression="Interface Catalog (Physical App Map)" domainClass="PhysicalApplicationComponent">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
@@ -8733,32 +8899,32 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Logical App Map) Element" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Logical App Map) Element" titleExpression="System/Organization Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(implementsServices.isProvidedToActors.belongsTo+implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Organization Matrix (Physical App Map) Element" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Organization Matrix (Physical App Map) Element" titleExpression="System/Organization Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="OrganizationUnits" headerLabelExpression="&lt;%name%>" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).units%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with OrganizationUnit" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='System%2FOrganization%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(extendsLogicalApplicationComponents.implementsServices.isProvidedToActors.belongsTo+extendsLogicalApplicationComponents.implementsServices.isOwnedAndGovernedByOrganizationUnits).nMinimize()%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Logical App Map) Element" titleExpression="Role/System Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Logical App Map) Element" titleExpression="Role/System Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Role/System Matrix (Physical App Map) Element" titleExpression="Role/System Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Role/System Matrix (Physical App Map) Element" titleExpression="Role/System Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="Role" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).roles%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Role" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Role%2FSystem%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions.canBeAccessedByRoles%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Logical App Map) Element" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Logical App Map) Element" titleExpression="Systems/Function Matrix (Logical App Map)" domainClass="LogicalApplicationComponent">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="LogicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Logical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="Systems/Function Matrix (Physical App Map) Element" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Systems/Function Matrix (Physical App Map) Element" titleExpression="Systems/Function Matrix (Physical App Map)" domainClass="PhysicalApplicationComponent">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
@@ -8766,7 +8932,7 @@
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.LabelsUtils"/>
   </ownedViewpoints>
   <ownedViewpoints name="application-catalogs" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="To identify and maintain a list of all the applications in the enterprise. This list helps to define the horizontal scope of change initiatives that may impact particular kinds of applications. An agreed Application Portfolio allows a standard set of applications to be defined and governed." name="Application Portfolio Catalog" domainClass="ApplicationArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="To identify and maintain a list of all the applications in the enterprise. This list helps to define the horizontal scope of change initiatives that may impact particular kinds of applications. An agreed Application Portfolio allows a standard set of applications to be defined and governed." name="Application Portfolio Catalog" domainClass="ApplicationArchitecture">
       <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="ApplicationArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Information System Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -8872,8 +9038,8 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="application-catalogs-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Catalogs - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="To identify and maintain a list of all the applications in the enterprise. This list helps to define the horizontal scope of change initiatives that may impact particular kinds of applications. An agreed Application Portfolio allows a standard set of applications to be defined and governed." name="Application Portfolio Catalog Container" domainClass="Container">
-      <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="To identify and maintain a list of all the applications in the enterprise. This list helps to define the horizontal scope of change initiatives that may impact particular kinds of applications. An agreed Application Portfolio allows a standard set of applications to be defined and governed." name="Application Portfolio Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="InformationSystemServices" label="Information System Services" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Information System Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -8908,7 +9074,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="LogicalApplicationComponents" label="Logical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="LogicalApplicationComponents" label="Logical Application Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Logical Application Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -8943,7 +9109,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Physical Application Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9239,7 +9405,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:CrossTableDescription" name="System/Technology Matrix" titleExpression="System/Technology Matrix" domainClass="TechnologyArchitecture">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Technology Matrix" titleExpression="System/Technology Matrix" domainClass="TechnologyArchitecture">
       <ownedLineMappings name="LogicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
         <ownedSubLines name="PhysicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%~extendsLogicalTechnologyComponents%>"/>
       </ownedLineMappings>
@@ -9249,7 +9415,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="technology-catalogs" label="TOGAF - Phase D - Technology Architecture - Catalogs" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The purpose of this catalog is to identify and maintain a list of all the technology in use across the enterprise, including hardware, infrastructure software, and application software. An agreed technology portfolio supports lifecycle management of technology products and versions and also forms the basis for definition of technology standards" name="Technology Portfolio Catalog" domainClass="TechnologyArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The purpose of this catalog is to identify and maintain a list of all the technology in use across the enterprise, including hardware, infrastructure software, and application software. An agreed technology portfolio supports lifecycle management of technology products and versions and also forms the basis for definition of technology standards" name="Technology Portfolio Catalog" domainClass="TechnologyArchitecture">
       <subItemMappings name="PlatformServices" label="Platform Services" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Platform Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9353,7 +9519,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Technology Standards Catalog" domainClass="TechnologyArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" name="Technology Standards Catalog" domainClass="TechnologyArchitecture">
       <subItemMappings name="LogicalTechnologyComponents" label="Logical Technology Components" domainClass="TechnologyArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Logical Technology Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9392,8 +9558,8 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="technology-catalogs-container" label="TOGAF - Phase D - Technology Architecture - Catalogs - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" endUserDocumentation="The purpose of this catalog is to identify and maintain a list of all the technology in use across the enterprise, including hardware, infrastructure software, and application software. An agreed technology portfolio supports lifecycle management of technology products and versions and also forms the basis for definition of technology standards" name="Technology Portfolio Catalog Container" domainClass="Container">
-      <subItemMappings name="PlatformServices" label="Platform Services" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The purpose of this catalog is to identify and maintain a list of all the technology in use across the enterprise, including hardware, infrastructure software, and application software. An agreed technology portfolio supports lifecycle management of technology products and versions and also forms the basis for definition of technology standards" name="Technology Portfolio Catalog Container" domainClass="contentfwk.Container">
+      <subItemMappings name="PlatformServices" label="Platform Services" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Platform Services">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9428,7 +9594,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="LogicalTechnologyComponents" label="Logical Technology Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="LogicalTechnologyComponents" label="Logical Technology Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Logical Technology Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9463,7 +9629,7 @@
           <variables name="container" documentation="The semantic element corresponding to the view container."/>
         </create>
       </subItemMappings>
-      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="Container" semanticCandidatesExpression="&lt;%self%>">
+      <subItemMappings name="PhysicalApplicationComponents" label="Physical Application Components" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Physical Technology Components">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9501,7 +9667,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="Togaf-administration" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_2:TreeDescription" name="Labels And Containers" domainClass="EnterpriseArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" name="Labels And Containers" domainClass="contentfwk.EnterpriseArchitecture">
       <subItemMappings name="Labels" label="Labels" domainClass="EnterpriseArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Labels">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9575,7 +9741,7 @@
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Container" domainClass="Container" semanticCandidatesExpression="&lt;%containers.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Container" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%containers.nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9588,7 +9754,7 @@
             <element name="element"/>
             <root name="root"/>
           </directEdit>
-          <subItemMappings name="SubContainer" domainClass="Container" semanticCandidatesExpression="&lt;%subContainers.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']/@subItemMappings[name='SubContainer']">
+          <subItemMappings name="SubContainer" domainClass="contentfwk.Container" semanticCandidatesExpression="&lt;%subContainers.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']/@subItemMappings[name='SubContainer']">
             <defaultStyle>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9603,7 +9769,7 @@
             </directEdit>
             <create name="Sub Sub Container" label="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']">
               <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="subContainers">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Container" referenceName="subContainers">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Container&quot;).nSize()%>"/>
                 </subModelOperations>
               </firstModelOperation>
@@ -9614,7 +9780,7 @@
           </subItemMappings>
           <create name="Sub Container" label="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']/@subItemMappings[name='Container']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-              <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="subContainers">
+              <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Container" referenceName="subContainers">
                 <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eContainer(&quot;EnterpriseArchitecture&quot;).eAllContents(&quot;Container&quot;).nSize()%>"/>
               </subModelOperations>
             </firstModelOperation>
@@ -9629,7 +9795,7 @@
         </delete>
         <create name="Container" mapping="//@ownedViewpoints[name='Togaf-administration']/@ownedRepresentations[name='Labels%20And%20Containers']/@subItemMappings[name='Containers']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-            <subModelOperations xsi:type="tool:CreateInstance" typeName="Container" referenceName="containers">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Container" referenceName="containers">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Container_&lt;%eContainer.eAllContents(&quot;Container&quot;).nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
