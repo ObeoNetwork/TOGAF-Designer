@@ -4,7 +4,7 @@
     <details key="SemanticCandidatesExpressionBehaviorChange" value=""/>
   </eAnnotations>
   <ownedViewpoints name="vision" label="TOGAF - Phase A - Vision" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description_1:TreeDescription" name="Capabilities-Constraints-Assumptions-Gaps-WorkPackages Catalog" domainClass="StrategicArchitecture">
+    <ownedRepresentations xsi:type="description_1:TreeDescription" name="Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages Catalog" domainClass="StrategicArchitecture">
       <subItemMappings name="Capability" label="Capabilities" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
         <defaultStyle labelExpression="Capabilities">
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -15,7 +15,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
             </firstModelOperation>
@@ -28,10 +28,44 @@
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="Capability" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']">
+        <create name="Capability" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Capability" referenceName="capabilities">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Capability_&lt;%eContainer.capabilities.nSize()%>"/>
+            </subModelOperations>
+          </firstModelOperation>
+          <variables name="root" documentation="The semantic element of the tree."/>
+          <variables name="element" documentation="The semantic currently edited element."/>
+          <variables name="container" documentation="The semantic element corresponding to the view container."/>
+        </create>
+      </subItemMappings>
+      <subItemMappings name="Principles" domainClass="StrategicArchitecture" semanticCandidatesExpression="&lt;%self%>">
+        <defaultStyle labelExpression="Principles">
+          <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+        </defaultStyle>
+        <subItemMappings name="Principle" domainClass="Principle" semanticCandidatesExpression="&lt;%strategicElements.filter(&quot;Principle&quot;).nSort(&quot;name&quot;)%>">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+            </firstModelOperation>
+            <mask mask="{0}"/>
+            <element name="element"/>
+            <root name="root"/>
+          </directEdit>
+        </subItemMappings>
+        <delete name="DisablingDeletionTool">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+        </delete>
+        <create name="Principle" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Principles']">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+            <subModelOperations xsi:type="tool:CreateInstance" typeName="Principle" referenceName="strategicElements">
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Principle_&lt;%eContainer.strategicElements.filter(&quot;Principle&quot;).nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
           <variables name="root" documentation="The semantic element of the tree."/>
@@ -49,7 +83,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
             </firstModelOperation>
@@ -62,7 +96,7 @@
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="Constraint" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Constraints']">
+        <create name="Constraint" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Constraints']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Constraint" referenceName="strategicElements">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Constraint_&lt;%eContainer.strategicElements.filter(&quot;Constraint&quot;).nSize()%>"/>
@@ -83,7 +117,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
             </firstModelOperation>
@@ -96,7 +130,7 @@
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="Assumption" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Assumptions']">
+        <create name="Assumption" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Assumptions']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Assumption" referenceName="strategicElements">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Assumption_&lt;%eContainer.strategicElements.filter(&quot;Assumption&quot;).nSize()%>"/>
@@ -117,7 +151,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
             </firstModelOperation>
@@ -130,7 +164,7 @@
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="Gap" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Gaps']">
+        <create name="Gap" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Gaps']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Gap" referenceName="strategicElements">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Gap_&lt;%eContainer.strategicElements.filter(&quot;Gap&quot;).nSize()%>"/>
@@ -151,7 +185,7 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
-          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
+          <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='Capability']/@subItemMappings[name='Capability']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
             </firstModelOperation>
@@ -164,7 +198,7 @@
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="WorkPackage" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='WorkPackages']">
+        <create name="WorkPackage" mapping="//@ownedViewpoints[name='vision']/@ownedRepresentations[name='Capabilities-Principles-Constraints-Assumptions-Gaps-WorkPackages%20Catalog']/@subItemMappings[name='WorkPackages']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="WorkPackage" referenceName="strategicElements">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="WorkPackage_&lt;%eContainer.strategicElements.filter(&quot;WorkPackage&quot;).nSize()%>"/>
