@@ -6568,6 +6568,143 @@
       </subItemMappings>
     </ownedRepresentations>
   </ownedViewpoints>
+  <ownedViewpoints name="business-element" label="TOGAF - Phase B - Business Architecture - Element">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Process Element" domainClass="contentfwk.Process" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="PreviousProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']" targetFinderExpression="&lt;%followsProcesses%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sizeComputationExpression="2">
+            <centerLabelStyleDescription showIcon="false" labelExpression="follow" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="NextProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']" targetFinderExpression="&lt;%precedesProcesses%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sizeComputationExpression="2">
+            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="NextSubProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetFinderExpression="&lt;%precedesProcesses%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="LinkToProduct" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process'] //@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Product'] //@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProduct']" targetFinderExpression="&lt;%producesProducts%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']" sizeComputationExpression="2">
+            <centerLabelStyleDescription labelExpression="produce" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Process" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.Process">
+          <subContainerMappings name="SubProcess" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process">
+            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="SubProduct" semanticCandidatesExpression="&lt;%~decomposesProcess.producesProducts%>" domainClass="contentfwk.Product">
+            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OtherProcess" semanticCandidatesExpression="&lt;%self.precedesProcesses+self.followsProcesses%>" domainClass="contentfwk.Process">
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Product" semanticCandidatesExpression="&lt;%self.producesProducts%>" domainClass="contentfwk.Product">
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select process decomposing this process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Process&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesProcess" valueExpression="&lt;%$container%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Follow" label="Select processes that this process follows" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Process&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="followsProcesses" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Preceed" label="Select processes that this process precedes" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Process&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="&lt;%$container%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create decompose" label="Create process decomposing this process" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesProcess" valueExpression="&lt;%$container%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%eContainer().processes.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createfollow" label="Create process that this process follows" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="followsProcesses" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%eContainer().processes.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createpreced" label="Create process that this process procedes" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%eContainer().processes.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="OthersSubProcesses" decoratorPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" preconditionExpression="&lt;%~decomposesProcess.nSize()>0%>" mappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
   <ownedViewpoints name="data" label="TOGAF - Phase C. 1- Information Systems - Data Architecture" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" name="Class Diagram" domainClass="contentfwk.DataArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -7229,18 +7366,125 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Class Diagram Element" domainClass="contentfwk.DataEntity" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Data Entity" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.DataEntity">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
-        </nodeMappings>
-        <nodeMappings name="Other Data Entity" semanticCandidatesExpression="&lt;%(self.relatesTo+self.~relatesTo).nMinimize%>" domainClass="contentfwk.DataEntity">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif"/>
-        </nodeMappings>
-        <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@nodeMappings[name='Data%20Entity']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@nodeMappings[name='Other%20Data%20Entity']" targetFinderExpression="&lt;%relatesTo%>">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+        <edgeMappings name="Relation Between Data Entity" label="Relationship" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='ParentDataEntity']/@subContainerMappings[name='DataEntity2']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='ParentDataEntity']/@subContainerMappings[name='DataEntity2']" targetFinderExpression="&lt;%relatesTo%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="relates to" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']"/>
           </style>
         </edgeMappings>
-        <toolSections/>
+        <containerMappings name="DataEntity" label="Data entity" labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%self[decomposeEntity.nSize()==0]%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']">
+          <subContainerMappings name="SubDataEntity" labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%~decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" reusedContainerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OtherDataEntity" label="Other data entity" labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%(self.relatesTo+self.~relatesTo).nMinimize%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="ParentDataEntity" label="Parent data entity " labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%self.decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']">
+          <subContainerMappings name="DataEntity2" label="Data entity 2" labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%$diagram.target%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']">
+            <subContainerMappings name="SubDataEntity2" labelDirectEdit="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="&lt;%~decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Drop%20DataEntity']" reusedContainerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='ParentDataEntity']/@subContainerMappings[name='DataEntity2']/@subContainerMappings[name='SubDataEntity2']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Data entities" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select data entity decomposing this entity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$container%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="RelatesTo" label="Select data entity that this entity relates to" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="OtherRelatesTo" label="Select data entity that relates to this entity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$container%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create decompose" label="Create data entity decomposing this data entity" containerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='ParentDataEntity']/@subContainerMappings[name='DataEntity2']/@subContainerMappings[name='SubDataEntity2']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DataArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$container%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity_&lt;%eContainer().entities.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create relatesTo" label="Create data entity that this data entity relates to" containerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherDataEntity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DataArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity_&lt;%eContainer().entities.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create other relatesTo" label="Create data entity that relates to this data entity" containerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Class%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherDataEntity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DataArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$container%>"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntity_&lt;%eContainer().entities.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
@@ -9878,5 +10122,7 @@
     <entries xsi:type="description:UserFixedColor" red="44" green="199" blue="211" name="PlatformServiceBorder"/>
     <entries xsi:type="description:UserFixedColor" red="244" green="204" blue="66" name="PhysicalTechnologyComponent"/>
     <entries xsi:type="description:UserFixedColor" red="217" green="171" blue="13" name="PhysicalTechnologyComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="184" green="175" blue="218" name="Product"/>
+    <entries xsi:type="description:UserFixedColor" red="128" green="128" blue="192" name="ProductBorder"/>
   </userColorsPalettes>
 </description:Group>
