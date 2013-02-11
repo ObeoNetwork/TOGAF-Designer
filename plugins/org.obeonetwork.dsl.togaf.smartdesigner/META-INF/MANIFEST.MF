@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-Name: org.obeonetwork.dsl.togaf.smartdesigner
+Bundle-SymbolicName: org.obeonetwork.dsl.togaf.smartdesigner;singleton=true
+Bundle-Version: 1.2.0
+Bundle-Activator: org.obeonetwork.dsl.togaf.smartdesigner.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ fr.obeo.dsl.viewpoint,
+ fr.obeo.dsl.common.acceleo.mtl,
+ org.obeonetwork.dsl.smartdesigner.design,
+ org.obeonetwork.dsl.togaf.contentfwk
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

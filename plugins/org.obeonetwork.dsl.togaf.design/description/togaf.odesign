@@ -2714,7 +2714,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business-container" label="TOGAF - Phase B - Business Architecture - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" name="Goal/Objective/Service Diagram Container" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Objective'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Measure'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='drop%20BusinessService']" name="Goal/Objective/Service Diagram Container" label="Goal/Objective/Service Diagram" titleExpression="Goal/Objective/Service Diagram" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="driverCreatesGoals" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@optionalLayers[name='External%20components']/@containerMappings[name='DriverExternal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@optionalLayers[name='External%20components']/@containerMappings[name='DriverExternal']/@subContainerMappings[name='SubDriverExternal']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@optionalLayers[name='External%20components']/@containerMappings[name='GoalExternal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@optionalLayers[name='External%20components']/@containerMappings[name='GoalExternal']/@subContainerMappings[name='SubGoalExternal']" targetFinderExpression="&lt;%createsGoals%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20createsGoals'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20createsGoals']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='DriverBorder']" sizeComputationExpression="1">
@@ -3296,7 +3296,7 @@
         </containerMappings>
       </optionalLayers>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" documentation="A Business Footprint diagram describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability.&#xA;A Business Footprint diagram provides a clear traceability between a technical component and the business goal that it satisfies, whilst also demonstrating ownership of the services identified.&#xA;A Business Footprint diagram demonstrates only the key facts linking organization unit functions to delivery services and is utilized as a communication platform for senior-level (CxO) stakeholders. " name="Business Footprint Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" documentation="A Business Footprint diagram describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability.&#xA;A Business Footprint diagram provides a clear traceability between a technical component and the business goal that it satisfies, whilst also demonstrating ownership of the services identified.&#xA;A Business Footprint diagram demonstrates only the key facts linking organization unit functions to delivery services and is utilized as a communication platform for senior-level (CxO) stakeholders. " name="Business Footprint Diagram Container" titleExpression="&lt;%name%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" label="Function communicated with Functions" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20functionCommunicatesWithfunction']">
           <style sizeComputationExpression="2">
@@ -3919,7 +3919,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Functional Decomposition Diagram Container" titleExpression="&lt;%name%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
         <edgeMappings name="functionCommunicatedWithFunctions" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']" targetFinderExpression="&lt;%communicatedWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20functionCommunicatesWithfunction'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20functionCommunicatesWithfunction']">
           <style sizeComputationExpression="2">
@@ -4322,9 +4322,9 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram Container" titleExpression="&lt;%name%> Business Service / Information Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " name="Business Service / Information Diagram Container" titleExpression="&lt;%name%> Business Service / Information Diagram" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="DataEntity consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%consumesEntities%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceConsumesDataEntity']">
+        <edgeMappings name="DataEntity consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherDataEntity']" targetFinderExpression="&lt;%consumesEntities%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceConsumesDataEntity']">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="consumes">
@@ -4332,7 +4332,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DataEntity provides by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%providesEntities%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceProvidesDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceProvidesDataEntity']">
+        <edgeMappings name="DataEntity provides by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherDataEntity']" targetFinderExpression="&lt;%providesEntities%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceProvidesDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceProvidesDataEntity']">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="provides">
@@ -4340,7 +4340,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="BusinessService consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20businessServiceConsumesBusinessService']">
+        <edgeMappings name="BusinessService consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherBusinessService']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherBusinessService']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesBusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20businessServiceConsumesBusinessService']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="consumes">
@@ -4348,7 +4348,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="DataEntityRelatesToDataEntity" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20DataEntityRelatesToDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20DataEntityRelatesTo']">
+        <edgeMappings name="DataEntityRelatesToDataEntity" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherDataEntity']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherDataEntity']" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20DataEntityRelatesToDataEntity'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20DataEntityRelatesTo']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -4356,7 +4356,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="DataEntity" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;DataEntity&quot;)[decomposeEntity.nSize()==0]%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']">
+        <containerMappings name="DataEntity" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%tags.taggedElements.filter(&quot;DataEntity&quot;)[decomposeEntity.nSize()==0]%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']">
           <subContainerMappings name="SubDataEntity" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" reusedContainerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
             <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
@@ -4365,14 +4365,12 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="BusinessService" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;BusinessService&quot;)[decomposesServices.nSize()==0]%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']">
+        <containerMappings name="BusinessService" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%tags.taggedElements.filter(&quot;BusinessService&quot;)[decomposesServices.nSize()==0]%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']">
           <subContainerMappings name="SubBusinessService" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposesServices%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']" reusedContainerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
             <style xsi:type="style:FlatContainerStyleDescription">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -4381,11 +4379,37 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OtherDataEntity" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%(self.tags.taggedElements.filter(&quot;BusinessService&quot;)[decomposesServices.nSize()==0].consumesEntities+self.tags.taggedElements.filter(&quot;BusinessService&quot;)[decomposesServices.nSize()==0].providesEntities)-self.tags.taggedElements.filter(&quot;DataEntity&quot;).nMinimize()%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']">
+          <subContainerMappings name="SubDataEntity" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" reusedContainerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherDataEntity']/@subContainerMappings[name='SubDataEntity']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OtherBusinessService" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%self.tags.taggedElements.filter(&quot;DataEntity&quot;)[decomposeEntity.nSize()==0].isAccessedByServices-self.tags.taggedElements.filter(&quot;BusinessService&quot;)[decomposesServices.nSize()==0]%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']">
+          <subContainerMappings name="SubBusinessService" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposesServices%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']" reusedContainerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@containerMappings[name='OtherBusinessService']/@subContainerMappings[name='SubBusinessService']">
+            <style xsi:type="style:FlatContainerStyleDescription">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
         <toolSections name="Tools">
@@ -4674,7 +4698,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram Container" titleExpression="&lt;%name%>" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram Container" titleExpression="&lt;%name%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
           <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
@@ -4898,7 +4922,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram Container" titleExpression="Organization Decomposition Diagram" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Organization Decomposition Diagram Container" titleExpression="Organization Decomposition Diagram" domainClass="TagContainer" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Location">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Location']"/>
       </filters>
@@ -5232,7 +5256,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Actor/Role Matrix Container" titleExpression="Actor/Role Matrix" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Actor/Role Matrix Container" titleExpression="Actor/Role Matrix" domainClass="TagContainer">
       <ownedLineMappings name="Actors" domainClass="contentfwk.Actor" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Actor&quot;)[performsTaskInRoles != null]%>" headerLabelExpression="&lt;%name%>"/>
       <ownedColumnMappings name="Roles" headerLabelExpression="&lt;%name%>" domainClass="contentfwk.Role" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Role&quot;)%>"/>
       <intersection name="Roles assumed by Actors" lineMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Actor%2FRole%20Matrix%20Container']/@ownedLineMappings[name='Actors']" columnMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Actor%2FRole%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%performsTaskInRoles%>">
@@ -5260,7 +5284,7 @@
         </create>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Business Interaction Matrix Container" domainClass="contentfwk.Container">
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Business Interaction Matrix Container" domainClass="TagContainer">
       <ownedLineMappings name="Organizations" domainClass="contentfwk.OrganizationUnit" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;OrganizationUnit&quot;)%>" headerLabelExpression="&lt;%name%>">
         <ownedSubLines name="ownsFunctions" domainClass="Function" semanticCandidatesExpression="&lt;%ownsFunctions%>" headerLabelExpression="&lt;%name%>">
           <ownedSubLines name="isBoundedByBusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
@@ -5284,7 +5308,7 @@
         </defaultBackground>
       </intersection>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']" name="EventDiagram Container" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']" name="EventDiagram Container" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="Event" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;Event&quot;)%>" domainClass="contentfwk.Event">
           <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelSize="7" showIcon="false" sizeComputationExpression="2">
@@ -7483,6 +7507,334 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" documentation="The Business Service/Information diagram shows the information needed to support one or more business services. The Business Service/Information diagram shows what data is consumed by or produced by a business service and may also show the source of information.&#xD;&#xA;The Business Service/Information diagram shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture). " endUserDocumentation="Shows the information needed to support one or more business services. Shows what data is consumed by or produced by a business service and may also show the source of information. Shows an initial representation of the information present within the architecture and therefore forms a basis for elaboration and refinement within Phase C (Data Architecture)." name="Business Service / Information Data Entity Element Diagram" titleExpression="&lt;%name%> Business Service / Information Diagram" domainClass="contentfwk.DataEntity" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="DataEntity consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%consumesEntities%>" reconnections="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceConsumesDataEntity']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" lineStyle="dot" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DataEntity provides by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%providesEntities%>" reconnections="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceProvidesDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20target%20businessServiceProvidesDataEntity']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" lineStyle="dash" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="provides" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BusinessService consumed by BusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='reconnect%20source%20businessServiceConsumesBusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20businessServiceConsumesBusinessService']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DataEntityRelatesToDataEntity" sourceMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetMapping="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']" targetFinderExpression="&lt;%relatesTo%>" reconnections="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20DataEntityRelatesToDataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20DataEntityRelatesTo']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="relates to" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="DataEntity" labelDirectEdit="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']">
+          <subContainerMappings name="SubDataEntity" labelDirectEdit="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposeEntity%>" domainClass="contentfwk.DataEntity" dropDescriptions="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20DataEntity']" reusedContainerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="BusinessService" labelDirectEdit="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%(self.~consumesEntities+self.~providesEntities).nMinimize()%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']">
+          <subContainerMappings name="SubBusinessService" labelDirectEdit="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposesServices%>" domainClass="contentfwk.BusinessService" dropDescriptions="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Drop%20BusinessService']" reusedContainerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="Edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Business Service" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.BusinessService" referenceName="services">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;BusinessService&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$container%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessServices_&lt;%eContainer().services.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" label="Select business service" precondition="&lt;%filter(&quot;BusinessService&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;BusinessService&quot;%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$container%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" label="Consumes data entity" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesEntities" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" label="Provides data entity" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesEntities" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" label="Consumes service" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnect source businessServiceConsumesDataEntity" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesEntities" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="consumesEntities" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnect target businessServiceConsumesDataEntity">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesEntities" valueExpression="&lt;%$target%>"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="consumesEntities" elementExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnect source businessServiceProvidesDataEntity" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesEntities" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="providesEntities" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnect target businessServiceProvidesDataEntity">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesEntities" valueExpression="&lt;%$target%>"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="providesEntities" elementExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="reconnect source businessServiceConsumesBusinessService" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="consumesServices" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target businessServiceConsumesBusinessService">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="consumesServices" elementExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop BusinessService" mappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;BusinessService&quot;%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                    <subModelOperations xsi:type="tool:Unset" featureName="decomposesServices" elementExpression="&lt;%$oldSemanticContainer%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.eClass().name == &quot;BusinessService&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$newSemanticContainer%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Data Entity" label="Data entities" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$container%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="DataEntiry_&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select data entity" precondition="&lt;%filter(&quot;DataEntity&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$container%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Drop DataEntity" mappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;DataEntity&quot;%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                    <subModelOperations xsi:type="tool:Unset" featureName="decomposeEntity" elementExpression="&lt;%$oldSemanticContainer%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.eClass().name == &quot;DataEntity&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$newSemanticContainer%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source DataEntityRelatesToDataEntity" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="relatesTo" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target DataEntityRelatesTo">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="relatesTo" valueExpression="&lt;%$target%>"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="relatesTo" elementExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
