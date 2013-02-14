@@ -613,7 +613,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="SelectRepresentation" label="Select representation" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null||$container.filter(&quot;Diagram&quot;)!=null%>" candidatesExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).accessControls[accessControl.equalsIgnoreCase($container.accessControl)].diagrams%>" message="Select an existing representation to link with the current representation." iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="SelectRepresentation" label="Select representation" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null||$container.filter(&quot;Diagram&quot;)!=null%>" candidatesExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).accessControls[accessControl.equalsIgnoreCase($container.eContainer(&quot;Diagram&quot;).accessControl)].diagrams%>" message="Select an existing representation to link with the current representation." iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1097,11 +1097,11 @@
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes" variableName="semanticElement">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles" variableName="semanticElement">
                         <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
                           <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
                         </subModelOperations>
-                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).processes.nSize()%>"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Role_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).roles.nSize()%>"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -1109,11 +1109,11 @@
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
                   <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;)%>">
-                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes" variableName="semanticElement">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Roles" referenceName="roles" variableName="semanticElement">
                         <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
                           <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
                         </subModelOperations>
-                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Process_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).processes.nSize()%>"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Role_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).roles.nSize()%>"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -2421,6 +2421,305 @@
                         </subModelOperations>
                         <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Business_Service_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).services.nSize()%>"/>
                       </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.PlatformService" referenceName="platformServices" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Platform_Service_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.PlatformService" referenceName="platformServices" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Platform_Service_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.LogicalTechnologyComponent" referenceName="logicalComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Logical_Technology_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.LogicalTechnologyComponent" referenceName="logicalComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Logical_Technology_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.PhysicalTechnologyComponent" referenceName="physicalComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Physical_Technology_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.PhysicalTechnologyComponent" referenceName="physicalComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Physical_Technology_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+      <optionalLayers name="Class diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+        <toolSections name="Class diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectClassDiagramElements" label="Select elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select elements from repository" candidatesExpression="&lt;%self.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities%> ">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Data_Entity_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Data_Entity_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+      <optionalLayers name="Data Dissemination diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+        <toolSections name="Data Dissemination diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectClassDiagramElements" label="Select elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select elements from repository" candidatesExpression="&lt;%self.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities+self.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).services+eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%> ">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.BusinessService" referenceName="services" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Business_Service_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).services.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.BusinessService" referenceName="services" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Business_Service_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).services.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Data_Entity_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.DataEntity" referenceName="entities" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Data_Entity_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).entities.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.LogicalApplicationComponent" referenceName="logicalApplicationComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Logical_Application_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.LogicalApplicationComponent" referenceName="logicalApplicationComponents" variableName="semanticElement">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$graphicalElement%>">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$semanticElement%>"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Logical_Application_Component_&lt;%$container.eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents.nSize()%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+      <optionalLayers name="Platform Decomposition diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+        <toolSections name="Platform Decomposition diagram" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectClassDiagramElements" label="Select elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices+eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents+eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
                     </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>

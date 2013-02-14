@@ -128,7 +128,7 @@ public class BasicDiagramTogafUtil {
 		list.add(ContentfwkPackage.eINSTANCE.getLogicalTechnologyComponent());
 		list.add(ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent());
 		all.put("Technology architecture", list);
-		result.put("All", all);
+		result.put(" Architectures", all);
 
 		Map<String, List<EClass>> strategic = new HashMap<String, List<EClass>>();
 		list = new ArrayList<EClass>();
@@ -186,7 +186,14 @@ public class BasicDiagramTogafUtil {
 		Map<String, List<EClass>> data = new HashMap<String, List<EClass>>();
 		// data.add("Conceptual Data diagram (TODO)");
 		// data.add("Logical Data diagram (TODO)");
-		// data.add("Data Dissemination diagram (TODO)");
+		list = new ArrayList<EClass>();
+		list.add(ContentfwkPackage.eINSTANCE.getDataEntity());
+		data.put("Class diagram",list);
+		list = new ArrayList<EClass>();
+		list.add(ContentfwkPackage.eINSTANCE.getLogicalApplicationComponent());
+		list.add(ContentfwkPackage.eINSTANCE.getBusinessService());
+		list.add(ContentfwkPackage.eINSTANCE.getDataEntity());
+		data.put("Data Dissemination diagram",list);
 		// data.add("Data Lifecycle diagram (TODO)");
 		// data.add("Data Security diagram (TODO)");
 		// data.add("Data Migration diagram (TODO)");
@@ -194,7 +201,11 @@ public class BasicDiagramTogafUtil {
 
 		Map<String, List<EClass>> technical = new HashMap<String, List<EClass>>();
 		// technical.add("Environments and Locations diagram (TODO)");
-		// technical.add("Platform Decomposition diagram (TODO)");
+		list = new ArrayList<EClass>();
+		list.add(ContentfwkPackage.eINSTANCE.getLogicalTechnologyComponent());
+		list.add(ContentfwkPackage.eINSTANCE.getPhysicalTechnologyComponent());
+		list.add(ContentfwkPackage.eINSTANCE.getPlatformService());
+		technical.put("Platform Decomposition diagram",list);
 		// technical.add("Processing diagram (TODO)");
 		// technical.add("Networked Computing/Hardware diagram (TODO)");
 		// technical.add("Communications Engineering diagram (TODO)");
