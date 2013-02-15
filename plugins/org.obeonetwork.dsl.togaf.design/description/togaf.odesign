@@ -4550,29 +4550,30 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;BusinessService&quot;%>">
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$container%>"/>
-                      <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
                     </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" candidatesExpression="&lt;%$container.getRootElement().eAllContents(&quot;BusinessService&quot;)%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;BusinessService&quot;%>">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$element%>"/>
-                    <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
-                  </subModelOperations>
+                <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -4607,7 +4608,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().eContents().filter(&quot;DataArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="DataEntity" referenceName="entities">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
                     <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
@@ -4615,19 +4616,22 @@
                     </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" candidatesExpression="&lt;%$container.getRootElement().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;DataEntity&quot;%>">
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposeEntity" valueExpression="&lt;%$container%>"/>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -5524,6 +5528,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.TagsService"/>
   </ownedViewpoints>
   <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog" domainClass="BusinessArchitecture">
@@ -8612,7 +8617,7 @@
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="application-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Container" modelFileExtension="togaf">
-    <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Container" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="contentfwk.Container" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Container" domainClass="TagContainer" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="Filter Business Services" label="Filter I.S. services">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@optionalLayers[name='External%20applications']/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
       </filters>
@@ -8622,7 +8627,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20service']" listContainer="true">
+        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%tags.taggedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20service']" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.InformationSystemService">
             <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -8640,21 +8645,27 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select logical application component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select logical application component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target.labels%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -8756,7 +8767,7 @@
         </toolSections>
       </defaultLayer>
       <optionalLayers name="External applications" activeByDefault="true">
-        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;).communicatesWith+labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;).~communicatesWith).nMinimize - labels.ownedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="contentfwk.LogicalApplicationComponent" listContainer="true">
+        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(tags.taggedElements.filter(&quot;LogicalApplicationComponent&quot;).communicatesWith+tags.taggedElements.filter(&quot;LogicalApplicationComponent&quot;).~communicatesWith).nMinimize - tags.taggedElements.filter(&quot;LogicalApplicationComponent&quot;)%>" domainClass="contentfwk.LogicalApplicationComponent" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
             <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9377,6 +9388,7 @@
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.ApplicationArchitecture"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.LabelsUtils"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.TagsService"/>
   </ownedViewpoints>
   <ownedViewpoints name="application-element" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Element" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Element" titleExpression="Application Communication Diagram Container_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="contentfwk.LogicalApplicationComponent" enablePopupBars="true">

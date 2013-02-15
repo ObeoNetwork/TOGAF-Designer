@@ -11,6 +11,7 @@
      Obeo - initial API and implementation
 -->
 <plugin>
+   <extension-point id="tags" name="org.obeonetwork.dsl.togaf.design.tags" schema="schema/tags.exsd"/>
 		<extension
 				point="fr.obeo.dsl.viewpoint.componentization">
 		<component
