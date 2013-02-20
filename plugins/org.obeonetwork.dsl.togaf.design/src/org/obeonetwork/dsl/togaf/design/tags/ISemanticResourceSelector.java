@@ -24,5 +24,11 @@ public interface ISemanticResourceSelector {
 	 * @return the root element of the semantic model.
 	 */
 	public EObject getRootElement();
+	
+	/**
+	 * 
+	 * @return the root element of the Tags model.
+	 */
+	public EObject getTagsRoot();
 
 }
