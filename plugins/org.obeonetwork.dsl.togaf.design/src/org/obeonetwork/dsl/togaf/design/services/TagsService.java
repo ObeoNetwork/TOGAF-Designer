@@ -36,4 +36,19 @@ public class TagsService {
 		return null;
 	}
 
+	/**
+	 * Get the root element of the Tags model.
+	 * 
+	 * @param e
+	 *            not used.
+	 * @return
+	 */
+	public EObject getTagsRoot() {
+		if (SemanticResourceSelectorHandler.getSemanticResourceSelector() != null) {
+			return SemanticResourceSelectorHandler
+					.getSemanticResourceSelector().getTagsRoot();
+		}
+		return null;
+	}
+
 }
