@@ -43,7 +43,7 @@ public class TagsService {
 	 *            not used.
 	 * @return
 	 */
-	public EObject getTagsRoot() {
+	public EObject getTagsRoot(EObject e) {
 		if (SemanticResourceSelectorHandler.getSemanticResourceSelector() != null) {
 			return SemanticResourceSelectorHandler
 					.getSemanticResourceSelector().getTagsRoot();
