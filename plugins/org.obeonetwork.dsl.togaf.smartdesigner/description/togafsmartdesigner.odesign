@@ -580,22 +580,9 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.target%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;GraphicalElement&quot;)!=null%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.target.filter(&quot;Diagram&quot;)!=null%>">
-                    <subModelOperations xsi:type="tool:Unset" featureName="elements" elementExpression="&lt;%$element%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.target.filter(&quot;GraphicalElement&quot;)!=null%>">
-                    <subModelOperations xsi:type="tool:Unset" featureName="child" elementExpression="&lt;%$element%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$element.filter(&quot;Diagram&quot;)!=null%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.target.filter(&quot;Diagram&quot;)!=null%>">
-                    <subModelOperations xsi:type="tool:Unset" featureName="diagrams" elementExpression="&lt;%$element%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.target.filter(&quot;GraphicalElement&quot;)!=null%>">
-                    <subModelOperations xsi:type="tool:Unset" featureName="diagrams" elementExpression="&lt;%$element%>"/>
-                  </subModelOperations>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.target.trace()%>">
+                <subModelOperations xsi:type="tool:ExternalJavaAction" name="DeleteGraphicalElement" id="org.obeonetwork.dsl.smartdesigner.design.actions.DeleteGraphicalElement">
+                  <parameters name="element" value="&lt;%$element%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
