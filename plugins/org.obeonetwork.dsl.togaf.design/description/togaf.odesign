@@ -8393,7 +8393,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="application usage" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Actors'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20PhysicalApplication']">
+        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20PhysicalApplication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Actors']">
           <subContainerMappings name="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%containsPhysicalApplicationComponents%>" domainClass="contentfwk.PhysicalApplicationComponent">
             <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -8457,7 +8457,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop PhysicalApplication">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop PhysicalApplication" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -8540,7 +8540,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Actors" moveEdges="true">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="Actors" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='Actor']" dragSource="BOTH" moveEdges="true">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -8978,7 +8978,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="application usage" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%tags.taggedElements.filter(&quot;Location&quot;)%>" domainClass="contentfwk.Location" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Actors'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20PhysicalApplication']">
+        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%tags.taggedElements.filter(&quot;Location&quot;)%>" domainClass="contentfwk.Location">
           <subContainerMappings name="PhysicalApplicationComponent" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%containsPhysicalApplicationComponents%>" domainClass="contentfwk.PhysicalApplicationComponent">
             <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9018,7 +9018,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Locations">
+        <toolSections name="Locations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Location" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -9043,120 +9043,6 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
                 <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="PhysicalApplicationComponent">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="containsPhysicalApplicationComponents" valueExpression="&lt;%$element%>"/>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop PhysicalApplication">
-            <oldContainer name="oldSemanticContainer"/>
-            <newContainer name="newSemanticContainer"/>
-            <element name="element"/>
-            <newViewContainer name="newContainerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;Location&quot;%>">
-                  <subModelOperations xsi:type="tool:Unset" featureName="containsPhysicalApplicationComponents" elementExpression="&lt;%$element%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="containsPhysicalApplicationComponents" valueExpression="&lt;%$element%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source communication" reconnectionKind="RECONNECT_SOURCE">
-            <source name="source"/>
-            <target name="target"/>
-            <sourceView name="sourceView"/>
-            <targetView name="targetView"/>
-            <element name="element"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
-                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-            <edgeView name="edgeView"/>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target communication">
-            <source name="source"/>
-            <target name="target"/>
-            <sourceView name="sourceView"/>
-            <targetView name="targetView"/>
-            <element name="element"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$source%>"/>
-                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
-              </firstModelOperations>
-            </initialOperation>
-            <edgeView name="edgeView"/>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="Actor">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Actor" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).actors%>">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$element%>"/>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="Actors" moveEdges="true">
-            <oldContainer name="oldSemanticContainer"/>
-            <newContainer name="newSemanticContainer"/>
-            <element name="element"/>
-            <newViewContainer name="newContainerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;Location&quot;%>">
-                  <subModelOperations xsi:type="tool:Unset" featureName="containsActors" elementExpression="&lt;%$element%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$element%>"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="Location" label="Locations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Location" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Location" referenceName="locations">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location &lt;%$container.eContainer().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;).nFirst().locations.nSize %>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
-                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -9310,15 +9196,15 @@
         </toolSections>
       </defaultLayer>
       <optionalLayers name="External" activeByDefault="true">
-        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%self.getExternalLocationContainingPhysicalApplicationComponentOrActorCommunicatingWithTaggedElement()-labels.ownedElements.filter(&quot;Location&quot;)%>" domainClass="contentfwk.Location" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Actors'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20PhysicalApplication']">
+        <containerMappings name="Location" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%self.getExternalLocationContainingPhysicalApplicationComponentOrActorCommunicatingWithTaggedElement()-labels.ownedElements.filter(&quot;Location&quot;)%>" domainClass="contentfwk.Location">
           <subContainerMappings name="PhysicalApplicationComponentExternal" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%containsPhysicalApplicationComponents%>" domainClass="contentfwk.PhysicalApplicationComponent">
             <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="2" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OutsideElementBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
-            <conditionnalStyles predicateExpression="&lt;%$view.eContainer(&quot;DSemanticDiagram&quot;).target.labels.ownedElements.nContains(current)%>">
+            <conditionnalStyles predicateExpression="&lt;%self.~taggedElements.trace().nContains(current(0).trace())%>">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
@@ -9328,7 +9214,7 @@
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
-            <conditionnalStyles predicateExpression="&lt;%$view.eContainer(&quot;DSemanticDiagram&quot;).target.labels.ownedElements.nContains(current)%>">
+            <conditionnalStyles predicateExpression="&lt;%self.~taggedElements.nContains(current(0))%>">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
