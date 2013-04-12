@@ -580,9 +580,10 @@
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.target.trace()%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.target%>">
                 <subModelOperations xsi:type="tool:ExternalJavaAction" name="DeleteGraphicalElement" id="org.obeonetwork.dsl.smartdesigner.design.actions.DeleteGraphicalElement">
                   <parameters name="element" value="&lt;%$element%>"/>
+                  <parameters name="parentElement" value="&lt;%$containerView.target%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
