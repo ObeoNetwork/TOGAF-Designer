@@ -17,10 +17,6 @@
       %license
    </license>
 
-   <includes
-         id="org.obeonetwork.dsl.smartdesigner.feature"
-         version="0.0.0"/>
-
    <requires>
       <import plugin="fr.obeo.mda.license"/>
       <import feature="fr.obeo.dsl.feature.designer.architect" version="6.0.0" match="greaterOrEqual"/>
@@ -32,6 +28,7 @@
       <import feature="fr.obeo.dsl.viewpoint.runtime.ocl" version="6.4.0" match="greaterOrEqual"/>
       <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui" version="6.4.0" match="greaterOrEqual"/>
       <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui.acceleo" version="6.4.0" match="greaterOrEqual"/>
+      <import feature="org.obeonetwork.dsl.smartdesigner.feature" version="1.2.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
