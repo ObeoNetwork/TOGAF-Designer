@@ -6,7 +6,7 @@
         <nodeMappings name="OtherDiagramDiagramLevel" detailDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='CreateDiagram']" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteGraphicalElement']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif"/>
         </nodeMappings>
-        <edgeMappings name="Edge2" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+        <edgeMappings name="ConnectedEdge" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
@@ -16,23 +16,23 @@
           <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isBidirectionalConnector($view.targetNode().target)&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
             <style sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              </endLabelStyleDescription>
               <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isBidirectionalConnector($view.targetNode().target)%>">
             <style sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-              </endLabelStyleDescription>
               <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </endLabelStyleDescription>
             </style>
           </conditionnalStyles>
           <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existRelation($view.sourceNode().target.getSemanticElement())&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
@@ -55,6 +55,60 @@
             <style sizeComputationExpression="1" routingStyle="manhattan">
               <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="ExtendedConnectedEdge" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getExtendedRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </endLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isExtendedBidirectionalConnector($view.targetNode().target)&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isExtendedBidirectionalConnector($view.targetNode().target)%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existExtendedRelation($view.sourceNode().target.getSemanticElement())&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existExtendedRelation($view.sourceNode().target.getSemanticElement())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden()%>">
+            <style lineStyle="dash" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               </endLabelStyleDescription>
             </style>
@@ -473,7 +527,7 @@
           </conditionnalStyles>
         </containerMappings>
         <toolSections name="General" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Connector" label="Connect" edgeMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@edgeMappings[name='Edge2']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/edge.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Connector" label="Connect" edgeMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@edgeMappings[name='ConnectedEdge']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/edge.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
