@@ -39,6 +39,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyCompone
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl#getContainsPhysicalApplicationComponents <em>Contains Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl#getContainsPhysicalTechnologyComponents <em>Contains Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl#getDecomposesLocation <em>Decomposes Location</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl#getIsDecomposedByLocations <em>Is Decomposed By Locations</em>}</li>
  * </ul>
  * </p>
  *
@@ -137,8 +138,28 @@ public class LocationImpl extends ElementImpl implements Location {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesLocation(Location newDecomposesLocation, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesLocation, ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesLocation(Location newDecomposesLocation) {
 		eDynamicSet(ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION, ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION, newDecomposesLocation);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Location> getIsDecomposedByLocations() {
+		return (EList<Location>)eDynamicGet(ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS, ContentfwkPackage.Literals.LOCATION__IS_DECOMPOSED_BY_LOCATIONS, true, true);
 	}
 
 	/**
@@ -160,6 +181,13 @@ public class LocationImpl extends ElementImpl implements Location {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getContainsPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				Location decomposesLocation = basicGetDecomposesLocation();
+				if (decomposesLocation != null)
+					msgs = ((InternalEObject)decomposesLocation).eInverseRemove(this, ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS, Location.class, msgs);
+				return basicSetDecomposesLocation((Location)otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByLocations()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -182,6 +210,10 @@ public class LocationImpl extends ElementImpl implements Location {
 				return ((InternalEList<?>)getContainsPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<?>)getContainsPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
+				return basicSetDecomposesLocation(null, msgs);
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				return ((InternalEList<?>)getIsDecomposedByLocations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -207,6 +239,8 @@ public class LocationImpl extends ElementImpl implements Location {
 			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
 				if (resolve) return getDecomposesLocation();
 				return basicGetDecomposesLocation();
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				return getIsDecomposedByLocations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,6 +277,10 @@ public class LocationImpl extends ElementImpl implements Location {
 			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
 				setDecomposesLocation((Location)newValue);
 				return;
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				getIsDecomposedByLocations().clear();
+				getIsDecomposedByLocations().addAll((Collection<? extends Location>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -273,6 +311,9 @@ public class LocationImpl extends ElementImpl implements Location {
 			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
 				setDecomposesLocation((Location)null);
 				return;
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				getIsDecomposedByLocations().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,6 +338,8 @@ public class LocationImpl extends ElementImpl implements Location {
 				return !getContainsPhysicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.LOCATION__DECOMPOSES_LOCATION:
 				return basicGetDecomposesLocation() != null;
+			case ContentfwkPackage.LOCATION__IS_DECOMPOSED_BY_LOCATIONS:
+				return !getIsDecomposedByLocations().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

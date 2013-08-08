@@ -25,9 +25,9 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesEntities <em>Supplies Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesEntities <em>Consumes Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesDataEntities <em>Supplies Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesDataEntities <em>Consumes Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit <em>Belongs To Organization Unit</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getInteractsWithFunctions <em>Interacts With Functions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getPerformsTaskInRoles <em>Performs Task In Roles</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getParticipatesInProcesses <em>Participates In Processes</em>}</li>
@@ -39,7 +39,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getActorGoal <em>Actor Goal</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getActorTasks <em>Actor Tasks</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getPerformsFunctions <em>Performs Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors <em>Decomposes Actors</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor <em>Decomposes Actor</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getIsDecomposedByActors <em>Is Decomposed By Actors</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,68 +50,68 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Actor extends Element {
 	/**
-	 * Returns the value of the '<em><b>Supplies Entities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Supplies Data Entities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsSuppliedByActors <em>Is Supplied By Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Supplies Entities</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Supplies Data Entities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Supplies Entities</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_SuppliesEntities()
+	 * @return the value of the '<em>Supplies Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_SuppliesDataEntities()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsSuppliedByActors
 	 * @model opposite="isSuppliedByActors"
 	 * @generated
 	 */
-	EList<DataEntity> getSuppliesEntities();
+	EList<DataEntity> getSuppliesDataEntities();
 
 	/**
-	 * Returns the value of the '<em><b>Consumes Entities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsConsumedByActors <em>Is Consumed By Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Consumes Entities</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Consumes Data Entities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consumes Entities</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_ConsumesEntities()
+	 * @return the value of the '<em>Consumes Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_ConsumesDataEntities()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsConsumedByActors
 	 * @model opposite="isConsumedByActors"
 	 * @generated
 	 */
-	EList<DataEntity> getConsumesEntities();
+	EList<DataEntity> getConsumesDataEntities();
 
 	/**
-	 * Returns the value of the '<em><b>Belongs To</b></em>' reference.
+	 * Returns the value of the '<em><b>Belongs To Organization Unit</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getContainsActors <em>Contains Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Belongs To</em>' reference isn't clear,
+	 * If the meaning of the '<em>Belongs To Organization Unit</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Belongs To</em>' reference.
-	 * @see #setBelongsTo(OrganizationUnit)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_BelongsTo()
+	 * @return the value of the '<em>Belongs To Organization Unit</em>' reference.
+	 * @see #setBelongsToOrganizationUnit(OrganizationUnit)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_BelongsToOrganizationUnit()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getContainsActors
 	 * @model opposite="containsActors"
 	 * @generated
 	 */
-	OrganizationUnit getBelongsTo();
+	OrganizationUnit getBelongsToOrganizationUnit();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo <em>Belongs To</em>}' reference.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit <em>Belongs To Organization Unit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Belongs To</em>' reference.
-	 * @see #getBelongsTo()
+	 * @param value the new value of the '<em>Belongs To Organization Unit</em>' reference.
+	 * @see #getBelongsToOrganizationUnit()
 	 * @generated
 	 */
-	void setBelongsTo(OrganizationUnit value);
+	void setBelongsToOrganizationUnit(OrganizationUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Interacts With Functions</b></em>' reference list.
@@ -169,6 +170,7 @@ public interface Actor extends Element {
 	/**
 	 * Returns the value of the '<em><b>Consumes Services</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsProvidedToActors <em>Is Provided To Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Consumes Services</em>' reference list isn't clear,
@@ -177,7 +179,8 @@ public interface Actor extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Consumes Services</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_ConsumesServices()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsProvidedToActors
+	 * @model opposite="isProvidedToActors"
 	 * @generated
 	 */
 	EList<Service> getConsumesServices();
@@ -340,19 +343,49 @@ public interface Actor extends Element {
 	EList<Function> getPerformsFunctions();
 
 	/**
-	 * Returns the value of the '<em><b>Decomposes Actors</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
+	 * Returns the value of the '<em><b>Decomposes Actor</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getIsDecomposedByActors <em>Is Decomposed By Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Decomposes Actors</em>' reference isn't clear,
+	 * If the meaning of the '<em>Decomposes Actor</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Decomposes Actors</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_DecomposesActors()
-	 * @model
+	 * @return the value of the '<em>Decomposes Actor</em>' reference.
+	 * @see #setDecomposesActor(Actor)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_DecomposesActor()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getIsDecomposedByActors
+	 * @model opposite="isDecomposedByActors"
 	 * @generated
 	 */
-	EList<Actor> getDecomposesActors();
+	Actor getDecomposesActor();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor <em>Decomposes Actor</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decomposes Actor</em>' reference.
+	 * @see #getDecomposesActor()
+	 * @generated
+	 */
+	void setDecomposesActor(Actor value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Actors</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor <em>Decomposes Actor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Actors</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Actors</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getActor_IsDecomposedByActors()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor
+	 * @model opposite="decomposesActor"
+	 * @generated
+	 */
+	EList<Actor> getIsDecomposedByActors();
 
 } // Actor

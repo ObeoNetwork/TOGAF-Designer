@@ -40,8 +40,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getOrchestratesFunctions <em>Orchestrates Functions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getDecomposesFunctions <em>Decomposes Functions</em>}</li>
@@ -59,6 +59,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getDecomposesProcess <em>Decomposes Process</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getPrecedesProcesses <em>Precedes Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getFollowsProcesses <em>Follows Processes</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl#getIsDecomposedByProcesses <em>Is Decomposed By Processes</em>}</li>
  * </ul>
  * </p>
  *
@@ -84,23 +85,23 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -198,8 +199,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -207,8 +208,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -216,8 +217,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -225,8 +226,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -424,6 +425,16 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesProcess(org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process newDecomposesProcess, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesProcess, ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesProcess(org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process newDecomposesProcess) {
 		eDynamicSet(ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS, ContentfwkPackage.Literals.PROCESS__DECOMPOSES_PROCESS, newDecomposesProcess);
 	}
@@ -446,6 +457,16 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 	@SuppressWarnings("unchecked")
 	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getFollowsProcesses() {
 		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES, ContentfwkPackage.Literals.PROCESS__FOLLOWS_PROCESSES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsDecomposedByProcesses() {
+		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES, ContentfwkPackage.Literals.PROCESS__IS_DECOMPOSED_BY_PROCESSES, true, true);
 	}
 
 	/**
@@ -477,10 +498,17 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getGeneratesEvents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProducesProducts()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process decomposesProcess = basicGetDecomposesProcess();
+				if (decomposesProcess != null)
+					msgs = ((InternalEObject)decomposesProcess).eInverseRemove(this, ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES, org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process.class, msgs);
+				return basicSetDecomposesProcess((org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process)otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPrecedesProcesses()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getFollowsProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByProcesses()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -513,10 +541,14 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return ((InternalEList<?>)getGeneratesEvents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__PRODUCES_PRODUCTS:
 				return ((InternalEList<?>)getProducesProducts()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__DECOMPOSES_PROCESS:
+				return basicSetDecomposesProcess(null, msgs);
 			case ContentfwkPackage.PROCESS__PRECEDES_PROCESSES:
 				return ((InternalEList<?>)getPrecedesProcesses()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return ((InternalEList<?>)getFollowsProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				return ((InternalEList<?>)getIsDecomposedByProcesses()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -533,10 +565,10 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return getStandardClass();
 			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.PROCESS__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
@@ -572,6 +604,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return getPrecedesProcesses();
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return getFollowsProcesses();
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				return getIsDecomposedByProcesses();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -591,11 +625,11 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.PROCESS__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -660,6 +694,10 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				getFollowsProcesses().clear();
 				getFollowsProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
 				return;
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				getIsDecomposedByProcesses().clear();
+				getIsDecomposedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -678,11 +716,11 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.PROCESS__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -735,6 +773,9 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				getFollowsProcesses().clear();
 				return;
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				getIsDecomposedByProcesses().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -751,10 +792,10 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.PROCESS__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.PROCESS__ORCHESTRATES_FUNCTIONS:
@@ -789,6 +830,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 				return !getPrecedesProcesses().isEmpty();
 			case ContentfwkPackage.PROCESS__FOLLOWS_PROCESSES:
 				return !getFollowsProcesses().isEmpty();
+			case ContentfwkPackage.PROCESS__IS_DECOMPOSED_BY_PROCESSES:
+				return !getIsDecomposedByProcesses().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -804,8 +847,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.PROCESS__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.PROCESS__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -824,8 +867,8 @@ public class ProcessImpl extends ElementImpl implements org.obeonetwork.dsl.toga
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PROCESS__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PROCESS__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.PROCESS__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.PROCESS__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.PROCESS__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.PROCESS__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PROCESS__RETIRE_DATE;
 				default: return -1;
 			}

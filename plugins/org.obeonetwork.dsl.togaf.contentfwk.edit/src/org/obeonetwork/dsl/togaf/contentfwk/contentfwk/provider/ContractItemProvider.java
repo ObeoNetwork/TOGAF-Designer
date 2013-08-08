@@ -180,8 +180,8 @@ public class ContractItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Contract_ServiceNameCaller_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Contract_ServiceNameCaller_feature", "_UI_Contract_type"),
+				 getString("_UI_Contract_serviceNameCaller_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Contract_serviceNameCaller_feature", "_UI_Contract_type"),
 				 ContentfwkPackage.Literals.CONTRACT__SERVICE_NAME_CALLER,
 				 true,
 				 false,
@@ -202,8 +202,8 @@ public class ContractItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Contract_ServiceNameCalled_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Contract_ServiceNameCalled_feature", "_UI_Contract_type"),
+				 getString("_UI_Contract_serviceNameCalled_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Contract_serviceNameCalled_feature", "_UI_Contract_type"),
 				 ContentfwkPackage.Literals.CONTRACT__SERVICE_NAME_CALLED,
 				 true,
 				 false,

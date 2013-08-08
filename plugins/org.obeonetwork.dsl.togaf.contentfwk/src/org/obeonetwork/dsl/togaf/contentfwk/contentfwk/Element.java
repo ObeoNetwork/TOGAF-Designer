@@ -126,18 +126,29 @@ public interface Element extends CDOObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Category</b></em>' reference list.
-	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements <em>Owned Elements</em>}'.
+	 * Returns the value of the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Category</em>' reference list.
+	 * <!-- begin-model-doc -->
+	 * Unique identifier for the architecture object. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Category</em>' attribute.
+	 * @see #setCategory(String)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getElement_Category()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements
-	 * @model opposite="ownedElements"
+	 * @model
 	 * @generated
 	 */
-	EList<Label> getCategory();
+	String getCategory();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Category</em>' attribute.
+	 * @see #getCategory()
+	 * @generated
+	 */
+	void setCategory(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Source Descr</b></em>' attribute.

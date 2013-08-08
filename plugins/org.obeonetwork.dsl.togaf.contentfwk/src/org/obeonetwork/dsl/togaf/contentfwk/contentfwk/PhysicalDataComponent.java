@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsHotedInLocation <em>Is Hoted In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getDecomposesPhysicalDataComponent <em>Decomposes Physical Data Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getEncapsulatesPhysicalApplicationComponents <em>Encapsulates Physical Application Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsDecomposedByPhysicalDataComponents <em>Is Decomposed By Physical Data Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -81,6 +82,7 @@ public interface PhysicalDataComponent extends Element, DataComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Physical Data Component</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsDecomposedByPhysicalDataComponents <em>Is Decomposed By Physical Data Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Physical Data Component</em>' reference isn't clear,
@@ -90,7 +92,8 @@ public interface PhysicalDataComponent extends Element, DataComponent {
 	 * @return the value of the '<em>Decomposes Physical Data Component</em>' reference.
 	 * @see #setDecomposesPhysicalDataComponent(PhysicalDataComponent)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalDataComponent_DecomposesPhysicalDataComponent()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsDecomposedByPhysicalDataComponents
+	 * @model opposite="isDecomposedByPhysicalDataComponents"
 	 * @generated
 	 */
 	PhysicalDataComponent getDecomposesPhysicalDataComponent();
@@ -108,6 +111,7 @@ public interface PhysicalDataComponent extends Element, DataComponent {
 	/**
 	 * Returns the value of the '<em><b>Encapsulates Physical Application Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getEncapsulatesPhysicalDataComponents <em>Encapsulates Physical Data Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Encapsulates Physical Application Components</em>' reference list isn't clear,
@@ -116,9 +120,28 @@ public interface PhysicalDataComponent extends Element, DataComponent {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Encapsulates Physical Application Components</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalDataComponent_EncapsulatesPhysicalApplicationComponents()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getEncapsulatesPhysicalDataComponents
+	 * @model opposite="encapsulatesPhysicalDataComponents"
 	 * @generated
 	 */
 	EList<PhysicalApplicationComponent> getEncapsulatesPhysicalApplicationComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Physical Data Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getDecomposesPhysicalDataComponent <em>Decomposes Physical Data Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Physical Data Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Physical Data Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalDataComponent_IsDecomposedByPhysicalDataComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getDecomposesPhysicalDataComponent
+	 * @model opposite="decomposesPhysicalDataComponent"
+	 * @generated
+	 */
+	EList<PhysicalDataComponent> getIsDecomposedByPhysicalDataComponents();
 
 } // PhysicalDataComponent

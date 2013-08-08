@@ -39,7 +39,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Gap;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LifeCycleStatus;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
@@ -132,8 +131,6 @@ public class ContentfwkFactoryImpl extends EFactoryImpl implements ContentfwkFac
 			case ContentfwkPackage.EVENT: return (EObject)createEvent();
 			case ContentfwkPackage.CONTROL: return (EObject)createControl();
 			case ContentfwkPackage.ELEMENT: return (EObject)createElement();
-			case ContentfwkPackage.CONTAINER: return (EObject)createContainer();
-			case ContentfwkPackage.LABEL: return (EObject)createLabel();
 			case ContentfwkPackage.LOCATION: return (EObject)createLocation();
 			case ContentfwkPackage.CAPABILITY: return (EObject)createCapability();
 			case ContentfwkPackage.PRINCIPLE: return (EObject)createPrinciple();
@@ -438,26 +435,6 @@ public class ContentfwkFactoryImpl extends EFactoryImpl implements ContentfwkFac
 	public Element createElement() {
 		ElementImpl element = new ElementImpl();
 		return element;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container createContainer() {
-		ContainerImpl container = new ContainerImpl();
-		return container;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Label createLabel() {
-		LabelImpl label = new LabelImpl();
-		return label;
 	}
 
 	/**

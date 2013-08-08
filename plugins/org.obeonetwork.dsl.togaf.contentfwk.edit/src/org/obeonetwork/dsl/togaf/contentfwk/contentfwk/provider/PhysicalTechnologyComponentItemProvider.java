@@ -65,11 +65,7 @@ public class PhysicalTechnologyComponentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addStandardClassPropertyDescriptor(object);
-			addStandardCreationDatePropertyDescriptor(object);
-			addLastStandardCreationDatePropertyDescriptor(object);
-			addNextStandardCreationDatePropertyDescriptor(object);
-			addRetireDatePropertyDescriptor(object);
-			addRealizesApplicationComponentsPropertyDescriptor(object);
+			addRealizesPhysicalApplicationComponentsPropertyDescriptor(object);
 			addExtendsLogicalTechnologyComponentsPropertyDescriptor(object);
 			addIsHostedInLocationPropertyDescriptor(object);
 			addProductNamePropertyDescriptor(object);
@@ -79,6 +75,8 @@ public class PhysicalTechnologyComponentItemProvider
 			addDecomposesPhysicalTechnologyComponentPropertyDescriptor(object);
 			addIsDependentOnPhysicalTechnologyComponentsPropertyDescriptor(object);
 			addCategoryTRMPropertyDescriptor(object);
+			addIsRequiredByPhysicalTechnologyComponentPropertyDescriptor(object);
+			addIsDecomposedByPhysicalTechnologyComponentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,9 +92,9 @@ public class PhysicalTechnologyComponentItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_standardClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_standardClass_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS,
+				 getString("_UI_TechnologyComponent_standardClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_TechnologyComponent_standardClass_feature", "_UI_TechnologyComponent_type"),
+				 ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS,
 				 true,
 				 false,
 				 false,
@@ -106,107 +104,19 @@ public class PhysicalTechnologyComponentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Standard Creation Date feature.
+	 * This adds a property descriptor for the Realizes Physical Application Components feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addRealizesPhysicalApplicationComponentsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_standardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_standardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Last Standard Creation Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addLastStandardCreationDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Standard_lastStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Standard Creation Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextStandardCreationDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Standard_nextStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Retire Date feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRetireDatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Standard_retireDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_retireDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__RETIRE_DATE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Realizes Application Components feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRealizesApplicationComponentsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_PhysicalTechnologyComponent_realizesApplicationComponents_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalTechnologyComponent_realizesApplicationComponents_feature", "_UI_PhysicalTechnologyComponent_type"),
-				 ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS,
+				 getString("_UI_PhysicalTechnologyComponent_realizesPhysicalApplicationComponents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalTechnologyComponent_realizesPhysicalApplicationComponents_feature", "_UI_PhysicalTechnologyComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS,
 				 true,
 				 false,
 				 true,
@@ -414,6 +324,50 @@ public class PhysicalTechnologyComponentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Required By Physical Technology Component feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsRequiredByPhysicalTechnologyComponentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PhysicalTechnologyComponent_isRequiredByPhysicalTechnologyComponent_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalTechnologyComponent_isRequiredByPhysicalTechnologyComponent_feature", "_UI_PhysicalTechnologyComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Physical Technology Components feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByPhysicalTechnologyComponentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PhysicalTechnologyComponent_isDecomposedByPhysicalTechnologyComponents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalTechnologyComponent_isDecomposedByPhysicalTechnologyComponents_feature", "_UI_PhysicalTechnologyComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PhysicalTechnologyComponent.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -451,10 +405,6 @@ public class PhysicalTechnologyComponentItemProvider
 
 		switch (notification.getFeatureID(PhysicalTechnologyComponent.class)) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__PRODUCT_NAME:
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME:
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR:

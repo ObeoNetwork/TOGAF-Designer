@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getContainsPhysicalApplicationComponents <em>Contains Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getContainsPhysicalTechnologyComponents <em>Contains Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getDecomposesLocation <em>Decomposes Location</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getIsDecomposedByLocations <em>Is Decomposed By Locations</em>}</li>
  * </ul>
  * </p>
  *
@@ -127,6 +128,7 @@ public interface Location extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Location</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getIsDecomposedByLocations <em>Is Decomposed By Locations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Location</em>' reference isn't clear,
@@ -136,7 +138,8 @@ public interface Location extends Element {
 	 * @return the value of the '<em>Decomposes Location</em>' reference.
 	 * @see #setDecomposesLocation(Location)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLocation_DecomposesLocation()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getIsDecomposedByLocations
+	 * @model opposite="isDecomposedByLocations"
 	 * @generated
 	 */
 	Location getDecomposesLocation();
@@ -150,5 +153,23 @@ public interface Location extends Element {
 	 * @generated
 	 */
 	void setDecomposesLocation(Location value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Locations</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getDecomposesLocation <em>Decomposes Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Locations</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Locations</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLocation_IsDecomposedByLocations()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getDecomposesLocation
+	 * @model opposite="decomposesLocation"
+	 * @generated
+	 */
+	EList<Location> getIsDecomposedByLocations();
 
 } // Location

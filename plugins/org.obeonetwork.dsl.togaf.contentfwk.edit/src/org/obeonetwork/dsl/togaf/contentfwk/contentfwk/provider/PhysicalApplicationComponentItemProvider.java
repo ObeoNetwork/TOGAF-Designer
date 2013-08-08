@@ -66,8 +66,8 @@ public class PhysicalApplicationComponentItemProvider
 
 			addStandardClassPropertyDescriptor(object);
 			addStandardCreationDatePropertyDescriptor(object);
-			addLastStandardCreationDatePropertyDescriptor(object);
-			addNextStandardCreationDatePropertyDescriptor(object);
+			addLastStandardReviewDatePropertyDescriptor(object);
+			addNextStandardReviewDatePropertyDescriptor(object);
 			addRetireDatePropertyDescriptor(object);
 			addExtendsLogicalApplicationComponentsPropertyDescriptor(object);
 			addIsHostedInLocationPropertyDescriptor(object);
@@ -77,7 +77,7 @@ public class PhysicalApplicationComponentItemProvider
 			addDateOfLastReleasePropertyDescriptor(object);
 			addDateOfNextReleasePropertyDescriptor(object);
 			addRetirementDatePropertyDescriptor(object);
-			addAvailabilityQualityCharacteristicsPropertyDescriptor(object);
+			addAvailabilityCharacteristicsPropertyDescriptor(object);
 			addServicesTimesPropertyDescriptor(object);
 			addManageabilityCharacteristicsPropertyDescriptor(object);
 			addServiceabilityCharacteristicsPropertyDescriptor(object);
@@ -105,6 +105,7 @@ public class PhysicalApplicationComponentItemProvider
 			addEncapsulatesPhysicalDataComponentsPropertyDescriptor(object);
 			addIsRealizedByPhysicalTechnologyComponentsPropertyDescriptor(object);
 			addDecomposesPhysicalApplicationComponentPropertyDescriptor(object);
+			addIsDecomposedByPhysicalApplicationComponentsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -154,19 +155,19 @@ public class PhysicalApplicationComponentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Last Standard Creation Date feature.
+	 * This adds a property descriptor for the Last Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLastStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addLastStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_lastStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_lastStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -176,19 +177,19 @@ public class PhysicalApplicationComponentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Next Standard Creation Date feature.
+	 * This adds a property descriptor for the Next Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addNextStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_nextStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_nextStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -396,19 +397,19 @@ public class PhysicalApplicationComponentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Availability Quality Characteristics feature.
+	 * This adds a property descriptor for the Availability Characteristics feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAvailabilityQualityCharacteristicsPropertyDescriptor(Object object) {
+	protected void addAvailabilityCharacteristicsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PhysicalApplicationComponent_availabilityQualityCharacteristics_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalApplicationComponent_availabilityQualityCharacteristics_feature", "_UI_PhysicalApplicationComponent_type"),
-				 ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS,
+				 getString("_UI_PhysicalApplicationComponent_availabilityCharacteristics_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalApplicationComponent_availabilityCharacteristics_feature", "_UI_PhysicalApplicationComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS,
 				 true,
 				 false,
 				 false,
@@ -1012,6 +1013,28 @@ public class PhysicalApplicationComponentItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Is Decomposed By Physical Application Components feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByPhysicalApplicationComponentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_PhysicalApplicationComponent_isDecomposedByPhysicalApplicationComponents_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PhysicalApplicationComponent_isDecomposedByPhysicalApplicationComponents_feature", "_UI_PhysicalApplicationComponent_type"),
+				 ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns PhysicalApplicationComponent.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1050,15 +1073,15 @@ public class PhysicalApplicationComponentItemProvider
 		switch (notification.getFeatureID(PhysicalApplicationComponent.class)) {
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CLASS:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LIFE_CYCLE_STATUS:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__INITIAL_LIVE_DATE:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DATE_OF_LAST_RELEASE:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DATE_OF_NEXT_RELEASE:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE:
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS:
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICES_TIMES:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__MANAGEABILITY_CHARACTERISTICS:
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICEABILITY_CHARACTERISTICS:

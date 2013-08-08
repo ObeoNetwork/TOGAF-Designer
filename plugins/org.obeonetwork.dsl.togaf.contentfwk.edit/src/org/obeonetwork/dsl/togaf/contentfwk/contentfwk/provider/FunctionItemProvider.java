@@ -66,18 +66,19 @@ public class FunctionItemProvider
 
 			addStandardClassPropertyDescriptor(object);
 			addStandardCreationDatePropertyDescriptor(object);
-			addLastStandardCreationDatePropertyDescriptor(object);
-			addNextStandardCreationDatePropertyDescriptor(object);
+			addLastStandardReviewDatePropertyDescriptor(object);
+			addNextStandardReviewDatePropertyDescriptor(object);
 			addRetireDatePropertyDescriptor(object);
 			addIsPerformedByActorsPropertyDescriptor(object);
-			addIsOwnedByUnitPropertyDescriptor(object);
+			addIsOwnedByOrganizationUnitPropertyDescriptor(object);
 			addIsBoundedByServicesPropertyDescriptor(object);
 			addSupportsProcessesPropertyDescriptor(object);
 			addIsRealizedByProcessesPropertyDescriptor(object);
 			addCanBeAccessedByRolesPropertyDescriptor(object);
 			addSupportsActorsPropertyDescriptor(object);
 			addDecomposesFunctionPropertyDescriptor(object);
-			addCommunicatedWithFunctionsPropertyDescriptor(object);
+			addCommunicatesWithFunctionsPropertyDescriptor(object);
+			addIsDecomposedByFunctionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -127,19 +128,19 @@ public class FunctionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Last Standard Creation Date feature.
+	 * This adds a property descriptor for the Last Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLastStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addLastStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_lastStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_lastStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -149,19 +150,19 @@ public class FunctionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Next Standard Creation Date feature.
+	 * This adds a property descriptor for the Next Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addNextStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_nextStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_nextStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -215,19 +216,19 @@ public class FunctionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Owned By Unit feature.
+	 * This adds a property descriptor for the Is Owned By Organization Unit feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsOwnedByUnitPropertyDescriptor(Object object) {
+	protected void addIsOwnedByOrganizationUnitPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Function_isOwnedByUnit_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Function_isOwnedByUnit_feature", "_UI_Function_type"),
-				 ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_UNIT,
+				 getString("_UI_Function_isOwnedByOrganizationUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_isOwnedByOrganizationUnit_feature", "_UI_Function_type"),
+				 ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT,
 				 true,
 				 false,
 				 true,
@@ -369,19 +370,41 @@ public class FunctionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Communicated With Functions feature.
+	 * This adds a property descriptor for the Communicates With Functions feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCommunicatedWithFunctionsPropertyDescriptor(Object object) {
+	protected void addCommunicatesWithFunctionsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Function_communicatedWithFunctions_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Function_communicatedWithFunctions_feature", "_UI_Function_type"),
-				 ContentfwkPackage.Literals.FUNCTION__COMMUNICATED_WITH_FUNCTIONS,
+				 getString("_UI_Function_communicatesWithFunctions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_communicatesWithFunctions_feature", "_UI_Function_type"),
+				 ContentfwkPackage.Literals.FUNCTION__COMMUNICATES_WITH_FUNCTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Functions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByFunctionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_isDecomposedByFunctions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_isDecomposedByFunctions_feature", "_UI_Function_type"),
+				 ContentfwkPackage.Literals.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS,
 				 true,
 				 false,
 				 true,
@@ -429,8 +452,8 @@ public class FunctionItemProvider
 		switch (notification.getFeatureID(Function.class)) {
 			case ContentfwkPackage.FUNCTION__STANDARD_CLASS:
 			case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE:
-			case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE:
+			case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE:
 			case ContentfwkPackage.FUNCTION__RETIRE_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

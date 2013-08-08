@@ -28,8 +28,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StandardImpl#getRetireDate <em>Retire Date</em>}</li>
  * </ul>
  * </p>
@@ -56,23 +56,23 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -153,8 +153,8 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -162,8 +162,8 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -171,8 +171,8 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -180,8 +180,8 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -214,10 +214,10 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 				return getStandardClass();
 			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.STANDARD__RETIRE_DATE:
 				return getRetireDate();
 		}
@@ -238,11 +238,11 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.STANDARD__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -265,11 +265,11 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.STANDARD__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -290,10 +290,10 @@ public abstract class StandardImpl extends CDOObjectImpl implements Standard {
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.STANDARD__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 		}

@@ -24,6 +24,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getRealizesGoals <em>Realizes Goals</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsTrackedAgainstMeasures <em>Is Tracked Against Measures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getDecomposesObjective <em>Decomposes Objective</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsSupportedByBusinessService <em>Is Supported By Business Service</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsDecomposedByObjectives <em>Is Decomposed By Objectives</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +72,7 @@ public interface Objective extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Objective</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsDecomposedByObjectives <em>Is Decomposed By Objectives</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Objective</em>' reference isn't clear,
@@ -79,7 +82,8 @@ public interface Objective extends Element {
 	 * @return the value of the '<em>Decomposes Objective</em>' reference.
 	 * @see #setDecomposesObjective(Objective)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getObjective_DecomposesObjective()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsDecomposedByObjectives
+	 * @model opposite="isDecomposedByObjectives"
 	 * @generated
 	 */
 	Objective getDecomposesObjective();
@@ -93,5 +97,41 @@ public interface Objective extends Element {
 	 * @generated
 	 */
 	void setDecomposesObjective(Objective value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Supported By Business Service</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessService}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessService#getSupportsObjective <em>Supports Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Supported By Business Service</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Supported By Business Service</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getObjective_IsSupportedByBusinessService()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessService#getSupportsObjective
+	 * @model opposite="supportsObjective"
+	 * @generated
+	 */
+	EList<BusinessService> getIsSupportedByBusinessService();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Objectives</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getDecomposesObjective <em>Decomposes Objective</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Objectives</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Objectives</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getObjective_IsDecomposedByObjectives()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getDecomposesObjective
+	 * @model opposite="decomposesObjective"
+	 * @generated
+	 */
+	EList<Objective> getIsDecomposedByObjectives();
 
 } // Objective

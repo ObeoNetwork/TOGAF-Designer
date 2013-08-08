@@ -68,6 +68,7 @@ public class LocationItemProvider
 			addContainsPhysicalApplicationComponentsPropertyDescriptor(object);
 			addContainsPhysicalTechnologyComponentsPropertyDescriptor(object);
 			addDecomposesLocationPropertyDescriptor(object);
+			addIsDecomposedByLocationsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -196,6 +197,28 @@ public class LocationItemProvider
 				 getString("_UI_Location_decomposesLocation_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Location_decomposesLocation_feature", "_UI_Location_type"),
 				 ContentfwkPackage.Literals.LOCATION__DECOMPOSES_LOCATION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Locations feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByLocationsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Location_isDecomposedByLocations_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Location_isDecomposedByLocations_feature", "_UI_Location_type"),
+				 ContentfwkPackage.Literals.LOCATION__IS_DECOMPOSED_BY_LOCATIONS,
 				 true,
 				 false,
 				 true,

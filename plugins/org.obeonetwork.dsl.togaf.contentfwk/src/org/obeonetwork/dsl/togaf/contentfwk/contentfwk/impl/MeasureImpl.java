@@ -33,6 +33,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.MeasureImpl#getSetsPerformanceCriteriaForObjectives <em>Sets Performance Criteria For Objectives</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.MeasureImpl#getSetsPerformanceCriteriaForServices <em>Sets Performance Criteria For Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.MeasureImpl#getDecomposesMeasure <em>Decomposes Measure</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.MeasureImpl#getIsDecomposedByMeasures <em>Is Decomposed By Measures</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,8 +102,28 @@ public class MeasureImpl extends ElementImpl implements Measure {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesMeasure(Measure newDecomposesMeasure, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesMeasure, ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesMeasure(Measure newDecomposesMeasure) {
 		eDynamicSet(ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE, ContentfwkPackage.Literals.MEASURE__DECOMPOSES_MEASURE, newDecomposesMeasure);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Measure> getIsDecomposedByMeasures() {
+		return (EList<Measure>)eDynamicGet(ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES, ContentfwkPackage.Literals.MEASURE__IS_DECOMPOSED_BY_MEASURES, true, true);
 	}
 
 	/**
@@ -118,6 +139,13 @@ public class MeasureImpl extends ElementImpl implements Measure {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSetsPerformanceCriteriaForObjectives()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSetsPerformanceCriteriaForServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
+				Measure decomposesMeasure = basicGetDecomposesMeasure();
+				if (decomposesMeasure != null)
+					msgs = ((InternalEObject)decomposesMeasure).eInverseRemove(this, ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES, Measure.class, msgs);
+				return basicSetDecomposesMeasure((Measure)otherEnd, msgs);
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByMeasures()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -134,6 +162,10 @@ public class MeasureImpl extends ElementImpl implements Measure {
 				return ((InternalEList<?>)getSetsPerformanceCriteriaForObjectives()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.MEASURE__SETS_PERFORMANCE_CRITERIA_FOR_SERVICES:
 				return ((InternalEList<?>)getSetsPerformanceCriteriaForServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
+				return basicSetDecomposesMeasure(null, msgs);
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				return ((InternalEList<?>)getIsDecomposedByMeasures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -153,6 +185,8 @@ public class MeasureImpl extends ElementImpl implements Measure {
 			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
 				if (resolve) return getDecomposesMeasure();
 				return basicGetDecomposesMeasure();
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				return getIsDecomposedByMeasures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,6 +211,10 @@ public class MeasureImpl extends ElementImpl implements Measure {
 			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
 				setDecomposesMeasure((Measure)newValue);
 				return;
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				getIsDecomposedByMeasures().clear();
+				getIsDecomposedByMeasures().addAll((Collection<? extends Measure>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +236,9 @@ public class MeasureImpl extends ElementImpl implements Measure {
 			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
 				setDecomposesMeasure((Measure)null);
 				return;
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				getIsDecomposedByMeasures().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,6 +257,8 @@ public class MeasureImpl extends ElementImpl implements Measure {
 				return !getSetsPerformanceCriteriaForServices().isEmpty();
 			case ContentfwkPackage.MEASURE__DECOMPOSES_MEASURE:
 				return basicGetDecomposesMeasure() != null;
+			case ContentfwkPackage.MEASURE__IS_DECOMPOSED_BY_MEASURES:
+				return !getIsDecomposedByMeasures().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

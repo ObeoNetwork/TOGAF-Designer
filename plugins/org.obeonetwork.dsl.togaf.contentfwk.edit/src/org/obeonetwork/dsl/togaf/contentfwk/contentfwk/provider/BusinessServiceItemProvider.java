@@ -66,13 +66,13 @@ public class BusinessServiceItemProvider
 
 			addStandardClassPropertyDescriptor(object);
 			addStandardCreationDatePropertyDescriptor(object);
-			addLastStandardCreationDatePropertyDescriptor(object);
-			addNextStandardCreationDatePropertyDescriptor(object);
+			addLastStandardReviewDatePropertyDescriptor(object);
+			addNextStandardReviewDatePropertyDescriptor(object);
 			addRetireDatePropertyDescriptor(object);
 			addIsProvidedToActorsPropertyDescriptor(object);
 			addProvidesGovernedInterfaceToAccessFunctionsPropertyDescriptor(object);
-			addProvidesEntitiesPropertyDescriptor(object);
-			addConsumesEntitiesPropertyDescriptor(object);
+			addProvidesDataEntitiesPropertyDescriptor(object);
+			addConsumesDataEntitiesPropertyDescriptor(object);
 			addIsGovernedAndMeasuredByContractsPropertyDescriptor(object);
 			addResolvesEventsPropertyDescriptor(object);
 			addIsImplementedOnLogicalTechnologyComponentsPropertyDescriptor(object);
@@ -81,9 +81,10 @@ public class BusinessServiceItemProvider
 			addIsTrackedAgainstMeasuresPropertyDescriptor(object);
 			addSupportsProcessesPropertyDescriptor(object);
 			addIsRealizedByProcessesPropertyDescriptor(object);
-			addMeetsQualitiesPropertyDescriptor(object);
+			addMeetsServiceQualitiesPropertyDescriptor(object);
 			addConsumesServicesPropertyDescriptor(object);
 			addDecomposesServicesPropertyDescriptor(object);
+			addIsDecomposedByServicesPropertyDescriptor(object);
 			addSupportsObjectivePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -134,19 +135,19 @@ public class BusinessServiceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Last Standard Creation Date feature.
+	 * This adds a property descriptor for the Last Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLastStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addLastStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_lastStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_lastStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -156,19 +157,19 @@ public class BusinessServiceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Next Standard Creation Date feature.
+	 * This adds a property descriptor for the Next Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addNextStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_nextStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_nextStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -244,19 +245,19 @@ public class BusinessServiceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Provides Entities feature.
+	 * This adds a property descriptor for the Provides Data Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidesEntitiesPropertyDescriptor(Object object) {
+	protected void addProvidesDataEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_providesEntities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_providesEntities_feature", "_UI_Service_type"),
-				 ContentfwkPackage.Literals.SERVICE__PROVIDES_ENTITIES,
+				 getString("_UI_Service_providesDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_providesDataEntities_feature", "_UI_Service_type"),
+				 ContentfwkPackage.Literals.SERVICE__PROVIDES_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,
@@ -266,19 +267,19 @@ public class BusinessServiceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Consumes Entities feature.
+	 * This adds a property descriptor for the Consumes Data Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConsumesEntitiesPropertyDescriptor(Object object) {
+	protected void addConsumesDataEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_consumesEntities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_consumesEntities_feature", "_UI_Service_type"),
-				 ContentfwkPackage.Literals.SERVICE__CONSUMES_ENTITIES,
+				 getString("_UI_Service_consumesDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_consumesDataEntities_feature", "_UI_Service_type"),
+				 ContentfwkPackage.Literals.SERVICE__CONSUMES_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,
@@ -464,19 +465,19 @@ public class BusinessServiceItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Meets Qualities feature.
+	 * This adds a property descriptor for the Meets Service Qualities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMeetsQualitiesPropertyDescriptor(Object object) {
+	protected void addMeetsServiceQualitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_meetsQualities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_meetsQualities_feature", "_UI_Service_type"),
-				 ContentfwkPackage.Literals.SERVICE__MEETS_QUALITIES,
+				 getString("_UI_Service_meetsServiceQualities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_meetsServiceQualities_feature", "_UI_Service_type"),
+				 ContentfwkPackage.Literals.SERVICE__MEETS_SERVICE_QUALITIES,
 				 true,
 				 false,
 				 true,
@@ -521,6 +522,28 @@ public class BusinessServiceItemProvider
 				 getString("_UI_Service_decomposesServices_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Service_decomposesServices_feature", "_UI_Service_type"),
 				 ContentfwkPackage.Literals.SERVICE__DECOMPOSES_SERVICES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Services feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByServicesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Service_isDecomposedByServices_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_isDecomposedByServices_feature", "_UI_Service_type"),
+				 ContentfwkPackage.Literals.SERVICE__IS_DECOMPOSED_BY_SERVICES,
 				 true,
 				 false,
 				 true,
@@ -590,8 +613,8 @@ public class BusinessServiceItemProvider
 		switch (notification.getFeatureID(BusinessService.class)) {
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CLASS:
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE:
-			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE:
+			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE:
 			case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

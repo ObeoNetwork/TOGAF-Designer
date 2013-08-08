@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesApplicationComponents <em>Realizes Application Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesPhysicalApplicationComponents <em>Realizes Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getExtendsLogicalTechnologyComponents <em>Extends Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsHostedInLocation <em>Is Hosted In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getProductName <em>Product Name</em>}</li>
@@ -31,6 +31,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getDecomposesPhysicalTechnologyComponent <em>Decomposes Physical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDependentOnPhysicalTechnologyComponents <em>Is Dependent On Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsRequiredByPhysicalTechnologyComponent <em>Is Required By Physical Technology Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDecomposedByPhysicalTechnologyComponents <em>Is Decomposed By Physical Technology Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -40,20 +42,22 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface PhysicalTechnologyComponent extends Element, TechnologyComponent {
 	/**
-	 * Returns the value of the '<em><b>Realizes Application Components</b></em>' reference list.
+	 * Returns the value of the '<em><b>Realizes Physical Application Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Realizes Application Components</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Realizes Physical Application Components</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Realizes Application Components</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_RealizesApplicationComponents()
-	 * @model
+	 * @return the value of the '<em>Realizes Physical Application Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_RealizesPhysicalApplicationComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsRealizedByPhysicalTechnologyComponents
+	 * @model opposite="isRealizedByPhysicalTechnologyComponents"
 	 * @generated
 	 */
-	EList<PhysicalApplicationComponent> getRealizesApplicationComponents();
+	EList<PhysicalApplicationComponent> getRealizesPhysicalApplicationComponents();
 
 	/**
 	 * Returns the value of the '<em><b>Extends Logical Technology Components</b></em>' reference list.
@@ -197,6 +201,7 @@ public interface PhysicalTechnologyComponent extends Element, TechnologyComponen
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Physical Technology Component</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDecomposedByPhysicalTechnologyComponents <em>Is Decomposed By Physical Technology Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Physical Technology Component</em>' reference isn't clear,
@@ -206,7 +211,8 @@ public interface PhysicalTechnologyComponent extends Element, TechnologyComponen
 	 * @return the value of the '<em>Decomposes Physical Technology Component</em>' reference.
 	 * @see #setDecomposesPhysicalTechnologyComponent(PhysicalTechnologyComponent)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_DecomposesPhysicalTechnologyComponent()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDecomposedByPhysicalTechnologyComponents
+	 * @model opposite="isDecomposedByPhysicalTechnologyComponents"
 	 * @generated
 	 */
 	PhysicalTechnologyComponent getDecomposesPhysicalTechnologyComponent();
@@ -224,6 +230,7 @@ public interface PhysicalTechnologyComponent extends Element, TechnologyComponen
 	/**
 	 * Returns the value of the '<em><b>Is Dependent On Physical Technology Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsRequiredByPhysicalTechnologyComponent <em>Is Required By Physical Technology Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Dependent On Physical Technology Components</em>' reference list isn't clear,
@@ -232,7 +239,8 @@ public interface PhysicalTechnologyComponent extends Element, TechnologyComponen
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Dependent On Physical Technology Components</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_IsDependentOnPhysicalTechnologyComponents()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsRequiredByPhysicalTechnologyComponent
+	 * @model opposite="isRequiredByPhysicalTechnologyComponent"
 	 * @generated
 	 */
 	EList<PhysicalTechnologyComponent> getIsDependentOnPhysicalTechnologyComponents();
@@ -262,5 +270,41 @@ public interface PhysicalTechnologyComponent extends Element, TechnologyComponen
 	 * @generated
 	 */
 	void setCategoryTRM(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Required By Physical Technology Component</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDependentOnPhysicalTechnologyComponents <em>Is Dependent On Physical Technology Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Required By Physical Technology Component</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Required By Physical Technology Component</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_IsRequiredByPhysicalTechnologyComponent()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDependentOnPhysicalTechnologyComponents
+	 * @model opposite="isDependentOnPhysicalTechnologyComponents"
+	 * @generated
+	 */
+	EList<PhysicalTechnologyComponent> getIsRequiredByPhysicalTechnologyComponent();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Physical Technology Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getDecomposesPhysicalTechnologyComponent <em>Decomposes Physical Technology Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Physical Technology Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Physical Technology Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalTechnologyComponent_IsDecomposedByPhysicalTechnologyComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getDecomposesPhysicalTechnologyComponent
+	 * @model opposite="decomposesPhysicalTechnologyComponent"
+	 * @generated
+	 */
+	EList<PhysicalTechnologyComponent> getIsDecomposedByPhysicalTechnologyComponents();
 
 } // PhysicalTechnologyComponent

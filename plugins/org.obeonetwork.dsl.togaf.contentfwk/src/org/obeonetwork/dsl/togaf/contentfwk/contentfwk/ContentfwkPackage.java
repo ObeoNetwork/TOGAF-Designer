@@ -85,31 +85,13 @@ public interface ContentfwkPackage extends EPackage {
 	int ENTERPRISE_ARCHITECTURE__ARCHITECTURES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTERPRISE_ARCHITECTURE__CONTAINERS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Labels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTERPRISE_ARCHITECTURE__LABELS = 2;
-
-	/**
 	 * The number of structural features of the '<em>Enterprise Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTERPRISE_ARCHITECTURE_FEATURE_COUNT = 3;
+	int ENTERPRISE_ARCHITECTURE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ArchitectureImpl <em>Architecture</em>}' class.
@@ -459,7 +441,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ELEMENT__ID = 6;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -550,7 +532,7 @@ public interface ContentfwkPackage extends EPackage {
 	int DRIVER__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -586,13 +568,22 @@ public interface ContentfwkPackage extends EPackage {
 	int DRIVER__DECOMPOSES_DRIVER = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Drivers</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRIVER__IS_DECOMPOSED_BY_DRIVERS = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Driver</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRIVER_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+	int DRIVER_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl <em>Goal</em>}' class.
@@ -668,7 +659,7 @@ public interface ContentfwkPackage extends EPackage {
 	int GOAL__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -704,13 +695,22 @@ public interface ContentfwkPackage extends EPackage {
 	int GOAL__DECOMPOSES_GOAL = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Goals</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GOAL__IS_DECOMPOSED_BY_GOALS = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Goal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GOAL_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+	int GOAL_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ObjectiveImpl <em>Objective</em>}' class.
@@ -786,7 +786,7 @@ public interface ContentfwkPackage extends EPackage {
 	int OBJECTIVE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -822,13 +822,31 @@ public interface ContentfwkPackage extends EPackage {
 	int OBJECTIVE__DECOMPOSES_OBJECTIVE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Is Supported By Business Service</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECTIVE__IS_SUPPORTED_BY_BUSINESS_SERVICE = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Objectives</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OBJECTIVE__IS_DECOMPOSED_BY_OBJECTIVES = ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Objective</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECTIVE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+	int OBJECTIVE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl <em>Organization Unit</em>}' class.
@@ -904,7 +922,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ORGANIZATION_UNIT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -985,13 +1003,31 @@ public interface ContentfwkPackage extends EPackage {
 	int ORGANIZATION_UNIT__HEADCOUNT = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Decomposes Organization Unit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT = ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Organization Units</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS = ELEMENT_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Organization Unit</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ORGANIZATION_UNIT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 8;
+	int ORGANIZATION_UNIT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl <em>Actor</em>}' class.
@@ -1067,7 +1103,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ACTOR__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1076,31 +1112,31 @@ public interface ContentfwkPackage extends EPackage {
 	int ACTOR__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
-	 * The feature id for the '<em><b>Supplies Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Supplies Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__SUPPLIES_ENTITIES = ELEMENT_FEATURE_COUNT + 0;
+	int ACTOR__SUPPLIES_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Consumes Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__CONSUMES_ENTITIES = ELEMENT_FEATURE_COUNT + 1;
+	int ACTOR__CONSUMES_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Belongs To</b></em>' reference.
+	 * The feature id for the '<em><b>Belongs To Organization Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__BELONGS_TO = ELEMENT_FEATURE_COUNT + 2;
+	int ACTOR__BELONGS_TO_ORGANIZATION_UNIT = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Interacts With Functions</b></em>' reference list.
@@ -1202,13 +1238,22 @@ public interface ContentfwkPackage extends EPackage {
 	int ACTOR__PERFORMS_FUNCTIONS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
-	 * The feature id for the '<em><b>Decomposes Actors</b></em>' reference list.
+	 * The feature id for the '<em><b>Decomposes Actor</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR__DECOMPOSES_ACTORS = ELEMENT_FEATURE_COUNT + 14;
+	int ACTOR__DECOMPOSES_ACTOR = ELEMENT_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Actors</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACTOR__IS_DECOMPOSED_BY_ACTORS = ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of structural features of the '<em>Actor</em>' class.
@@ -1217,7 +1262,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACTOR_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 15;
+	int ACTOR_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl <em>Role</em>}' class.
@@ -1293,7 +1338,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ROLE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1338,13 +1383,22 @@ public interface ContentfwkPackage extends EPackage {
 	int ROLE__DECOMPOSES_ROLE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Roles</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__IS_DECOMPOSED_BY_ROLES = ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
+	int ROLE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl <em>Data Entity</em>}' class.
@@ -1420,7 +1474,7 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1510,13 +1564,13 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__RETENTION_CLASSIFICATION = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Decompose Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Decomposes Data Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_ENTITY__DECOMPOSE_ENTITY = ELEMENT_FEATURE_COUNT + 9;
+	int DATA_ENTITY__DECOMPOSES_DATA_ENTITY = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Relates To</b></em>' reference list.
@@ -1528,13 +1582,22 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__RELATES_TO = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Data Entities</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>Data Entity</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
+	int DATA_ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl <em>Logical Application Component</em>}' class.
@@ -1610,7 +1673,7 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_APPLICATION_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1637,22 +1700,22 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -1709,13 +1772,22 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Logical Application Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 10;
+
+	/**
 	 * The number of structural features of the '<em>Logical Application Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
+	int LOGICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl <em>Function</em>}' class.
@@ -1791,7 +1863,7 @@ public interface ContentfwkPackage extends EPackage {
 	int FUNCTION__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1818,22 +1890,22 @@ public interface ContentfwkPackage extends EPackage {
 	int FUNCTION__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int FUNCTION__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int FUNCTION__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -1854,13 +1926,13 @@ public interface ContentfwkPackage extends EPackage {
 	int FUNCTION__IS_PERFORMED_BY_ACTORS = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Is Owned By Unit</b></em>' reference.
+	 * The feature id for the '<em><b>Is Owned By Organization Unit</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__IS_OWNED_BY_UNIT = ELEMENT_FEATURE_COUNT + 6;
+	int FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Is Bounded By Services</b></em>' reference list.
@@ -1917,13 +1989,22 @@ public interface ContentfwkPackage extends EPackage {
 	int FUNCTION__DECOMPOSES_FUNCTION = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Communicated With Functions</b></em>' reference list.
+	 * The feature id for the '<em><b>Communicates With Functions</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__COMMUNICATED_WITH_FUNCTIONS = ELEMENT_FEATURE_COUNT + 13;
+	int FUNCTION__COMMUNICATES_WITH_FUNCTIONS = ELEMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Functions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS = ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -1932,7 +2013,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 14;
+	int FUNCTION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl <em>Business Service</em>}' class.
@@ -2008,7 +2089,7 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2035,22 +2116,22 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -2080,22 +2161,22 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Provides Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Provides Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__PROVIDES_ENTITIES = ELEMENT_FEATURE_COUNT + 7;
+	int BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Consumes Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__CONSUMES_ENTITIES = ELEMENT_FEATURE_COUNT + 8;
+	int BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list.
@@ -2170,13 +2251,13 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES = ELEMENT_FEATURE_COUNT + 16;
 
 	/**
-	 * The feature id for the '<em><b>Meets Qualities</b></em>' reference list.
+	 * The feature id for the '<em><b>Meets Service Qualities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__MEETS_QUALITIES = ELEMENT_FEATURE_COUNT + 17;
+	int BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES = ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Consumes Services</b></em>' reference list.
@@ -2197,13 +2278,22 @@ public interface ContentfwkPackage extends EPackage {
 	int BUSINESS_SERVICE__DECOMPOSES_SERVICES = ELEMENT_FEATURE_COUNT + 19;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Services</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES = ELEMENT_FEATURE_COUNT + 20;
+
+	/**
 	 * The feature id for the '<em><b>Supports Objective</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE__SUPPORTS_OBJECTIVE = ELEMENT_FEATURE_COUNT + 20;
+	int BUSINESS_SERVICE__SUPPORTS_OBJECTIVE = ELEMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of structural features of the '<em>Business Service</em>' class.
@@ -2212,7 +2302,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUSINESS_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 21;
+	int BUSINESS_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 22;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProcessImpl <em>Process</em>}' class.
@@ -2288,7 +2378,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PROCESS__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2315,22 +2405,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PROCESS__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int PROCESS__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int PROCESS__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -2486,13 +2576,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PROCESS__FOLLOWS_PROCESSES = ELEMENT_FEATURE_COUNT + 20;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Processes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESS__IS_DECOMPOSED_BY_PROCESSES = ELEMENT_FEATURE_COUNT + 21;
+
+	/**
 	 * The number of structural features of the '<em>Process</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 21;
+	int PROCESS_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 22;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl <em>Platform Service</em>}' class.
@@ -2568,7 +2667,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PLATFORM_SERVICE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2577,193 +2676,13 @@ public interface ContentfwkPackage extends EPackage {
 	int PLATFORM_SERVICE__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
-	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__RETIRE_DATE = ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Is Provided To Actors</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS = ELEMENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Provides Governed Interface To Access Functions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS = ELEMENT_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Provides Entities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__PROVIDES_ENTITIES = ELEMENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Consumes Entities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__CONSUMES_ENTITIES = ELEMENT_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS = ELEMENT_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Resolves Events</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__RESOLVES_EVENTS = ELEMENT_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Is Implemented On Logical Technology Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Is Realized Through Logical Application Component</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT = ELEMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Is Owned And Governed By Organization Units</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS = ELEMENT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Is Tracked Against Measures</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES = ELEMENT_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Supports Processes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__SUPPORTS_PROCESSES = ELEMENT_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Is Realized By Processes</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES = ELEMENT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Meets Qualities</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__MEETS_QUALITIES = ELEMENT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Consumes Services</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__CONSUMES_SERVICES = ELEMENT_FEATURE_COUNT + 18;
-
-	/**
-	 * The feature id for the '<em><b>Decomposes Services</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLATFORM_SERVICE__DECOMPOSES_SERVICES = ELEMENT_FEATURE_COUNT + 19;
-
-	/**
 	 * The feature id for the '<em><b>Is Supplied By Logical Technology Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 20;
+	int PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
@@ -2772,7 +2691,16 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLATFORM_SERVICE__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 21;
+	int PLATFORM_SERVICE__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLATFORM_SERVICE__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Platform Service</em>' class.
@@ -2781,7 +2709,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLATFORM_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 22;
+	int PLATFORM_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl <em>Physical Technology Component</em>}' class.
@@ -2857,7 +2785,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_TECHNOLOGY_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2875,49 +2803,13 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Realizes Physical Application Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE = ELEMENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Realizes Application Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 5;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Extends Logical Technology Components</b></em>' reference list.
@@ -2926,7 +2818,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 6;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Hosted In Location</b></em>' reference list.
@@ -2935,7 +2827,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION = ELEMENT_FEATURE_COUNT + 7;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Product Name</b></em>' attribute.
@@ -2944,7 +2836,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__PRODUCT_NAME = ELEMENT_FEATURE_COUNT + 8;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__PRODUCT_NAME = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Module Name</b></em>' attribute.
@@ -2953,7 +2845,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME = ELEMENT_FEATURE_COUNT + 9;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Vendor</b></em>' attribute.
@@ -2962,7 +2854,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR = ELEMENT_FEATURE_COUNT + 10;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2971,7 +2863,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__VERSION = ELEMENT_FEATURE_COUNT + 11;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__VERSION = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Decomposes Physical Technology Component</b></em>' reference.
@@ -2980,7 +2872,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 12;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Is Dependent On Physical Technology Components</b></em>' reference list.
@@ -2989,7 +2881,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 13;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
@@ -2998,7 +2890,25 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 14;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Is Required By Physical Technology Component</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Physical Technology Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>Physical Technology Component</em>' class.
@@ -3007,7 +2917,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 15;
+	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProductImpl <em>Product</em>}' class.
@@ -3083,7 +2993,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PRODUCT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3192,7 +3102,7 @@ public interface ContentfwkPackage extends EPackage {
 	int MEASURE__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3228,13 +3138,22 @@ public interface ContentfwkPackage extends EPackage {
 	int MEASURE__DECOMPOSES_MEASURE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Measures</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEASURE__IS_DECOMPOSED_BY_MEASURES = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Measure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEASURE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
+	int MEASURE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceQualityImpl <em>Service Quality</em>}' class.
@@ -3310,7 +3229,7 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE_QUALITY__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3419,7 +3338,7 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTRACT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3825,7 +3744,7 @@ public interface ContentfwkPackage extends EPackage {
 	int EVENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3834,13 +3753,13 @@ public interface ContentfwkPackage extends EPackage {
 	int EVENT__CATEGORY = ELEMENT__CATEGORY;
 
 	/**
-	 * The feature id for the '<em><b>Is Resolved By Business Services</b></em>' reference list.
+	 * The feature id for the '<em><b>Is Resolved By Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES = ELEMENT_FEATURE_COUNT + 0;
+	int EVENT__IS_RESOLVED_BY_SERVICES = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Resolved By Processes</b></em>' reference list.
@@ -3870,7 +3789,7 @@ public interface ContentfwkPackage extends EPackage {
 	int EVENT__IS_RESOLVED_BY_ACTORS = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Is Generated By Actors</b></em>' reference.
+	 * The feature id for the '<em><b>Is Generated By Actors</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3961,7 +3880,7 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTROL__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3988,143 +3907,6 @@ public interface ContentfwkPackage extends EPackage {
 	int CONTROL_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl <em>Container</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getContainer()
-	 * @generated
-	 */
-	int CONTAINER = 25;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Sub Containers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__SUB_CONTAINERS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Labels</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__LABELS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__ID = 3;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__DESCRIPTION = 4;
-
-	/**
-	 * The number of structural features of the '<em>Container</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER_FEATURE_COUNT = 5;
-
-	/**
-	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLabel()
-	 * @generated
-	 */
-	int LABEL = 26;
-
-	/**
-	 * The feature id for the '<em><b>Sub Labels</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__SUB_LABELS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Owned Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__OWNED_ELEMENTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Containers</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__CONTAINERS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__ID = 4;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL__DESCRIPTION = 5;
-
-	/**
-	 * The number of structural features of the '<em>Label</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LABEL_FEATURE_COUNT = 6;
-
-	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4132,7 +3914,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 27;
+	int LOCATION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4198,7 +3980,7 @@ public interface ContentfwkPackage extends EPackage {
 	int LOCATION__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4261,13 +4043,22 @@ public interface ContentfwkPackage extends EPackage {
 	int LOCATION__DECOMPOSES_LOCATION = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Locations</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOCATION__IS_DECOMPOSED_BY_LOCATIONS = ELEMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Location</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 6;
+	int LOCATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.CapabilityImpl <em>Capability</em>}' class.
@@ -4277,7 +4068,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getCapability()
 	 * @generated
 	 */
-	int CAPABILITY = 28;
+	int CAPABILITY = 26;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4343,7 +4134,7 @@ public interface ContentfwkPackage extends EPackage {
 	int CAPABILITY__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4395,7 +4186,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStrategicElement()
 	 * @generated
 	 */
-	int STRATEGIC_ELEMENT = 29;
+	int STRATEGIC_ELEMENT = 27;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4461,7 +4252,7 @@ public interface ContentfwkPackage extends EPackage {
 	int STRATEGIC_ELEMENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4486,7 +4277,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPrinciple()
 	 * @generated
 	 */
-	int PRINCIPLE = 30;
+	int PRINCIPLE = 28;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4552,7 +4343,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PRINCIPLE__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4631,7 +4422,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 31;
+	int CONSTRAINT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4697,7 +4488,7 @@ public interface ContentfwkPackage extends EPackage {
 	int CONSTRAINT__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4722,7 +4513,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getAssumption()
 	 * @generated
 	 */
-	int ASSUMPTION = 32;
+	int ASSUMPTION = 30;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4788,7 +4579,7 @@ public interface ContentfwkPackage extends EPackage {
 	int ASSUMPTION__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4813,7 +4604,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getRequirement()
 	 * @generated
 	 */
-	int REQUIREMENT = 33;
+	int REQUIREMENT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4879,7 +4670,7 @@ public interface ContentfwkPackage extends EPackage {
 	int REQUIREMENT__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4897,22 +4688,13 @@ public interface ContentfwkPackage extends EPackage {
 	int REQUIREMENT__STATEMENT_OF_REQUIREMENT = STRATEGIC_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT__RATIONALE = STRATEGIC_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Acceptance Criteria</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__ACCEPTANCE_CRITERIA = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
+	int REQUIREMENT__ACCEPTANCE_CRITERIA = STRATEGIC_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Requirement</em>' class.
@@ -4921,7 +4703,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 3;
+	int REQUIREMENT_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GapImpl <em>Gap</em>}' class.
@@ -4931,7 +4713,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getGap()
 	 * @generated
 	 */
-	int GAP = 34;
+	int GAP = 32;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -4997,7 +4779,7 @@ public interface ContentfwkPackage extends EPackage {
 	int GAP__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5022,7 +4804,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getWorkPackage()
 	 * @generated
 	 */
-	int WORK_PACKAGE = 35;
+	int WORK_PACKAGE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5088,7 +4870,7 @@ public interface ContentfwkPackage extends EPackage {
 	int WORK_PACKAGE__ID = STRATEGIC_ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5115,13 +4897,22 @@ public interface ContentfwkPackage extends EPackage {
 	int WORK_PACKAGE__DELIVERS_CAPABILITIES = STRATEGIC_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Capability Delivered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_PACKAGE__CAPABILITY_DELIVERED = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Work Package</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_PACKAGE_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
+	int WORK_PACKAGE_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalDataComponentImpl <em>Logical Data Component</em>}' class.
@@ -5131,7 +4922,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLogicalDataComponent()
 	 * @generated
 	 */
-	int LOGICAL_DATA_COMPONENT = 36;
+	int LOGICAL_DATA_COMPONENT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5197,7 +4988,7 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_DATA_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5224,22 +5015,22 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_DATA_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int LOGICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int LOGICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -5285,7 +5076,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPhysicalDataComponent()
 	 * @generated
 	 */
-	int PHYSICAL_DATA_COMPONENT = 37;
+	int PHYSICAL_DATA_COMPONENT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5351,7 +5142,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_DATA_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5378,22 +5169,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -5441,13 +5232,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Physical Data Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Physical Data Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_DATA_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 9;
+	int PHYSICAL_DATA_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl <em>Application Architecture</em>}' class.
@@ -5457,7 +5257,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getApplicationArchitecture()
 	 * @generated
 	 */
-	int APPLICATION_ARCHITECTURE = 38;
+	int APPLICATION_ARCHITECTURE = 36;
 
 	/**
 	 * The feature id for the '<em><b>Logical Application Components</b></em>' containment reference list.
@@ -5503,7 +5303,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPhysicalApplicationComponent()
 	 * @generated
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT = 39;
+	int PHYSICAL_APPLICATION_COMPONENT = 37;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -5569,7 +5369,7 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_APPLICATION_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5596,22 +5396,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
+	int PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
+	int PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -5695,13 +5495,13 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
-	 * The feature id for the '<em><b>Availability Quality Characteristics</b></em>' attribute.
+	 * The feature id for the '<em><b>Availability Characteristics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS = ELEMENT_FEATURE_COUNT + 13;
+	int PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Services Times</b></em>' attribute.
@@ -5947,13 +5747,22 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT = ELEMENT_FEATURE_COUNT + 40;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Physical Application Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 41;
+
+	/**
 	 * The number of structural features of the '<em>Physical Application Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 41;
+	int PHYSICAL_APPLICATION_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 42;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl <em>Logical Technology Component</em>}' class.
@@ -5963,7 +5772,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLogicalTechnologyComponent()
 	 * @generated
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT = 40;
+	int LOGICAL_TECHNOLOGY_COMPONENT = 38;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -6029,7 +5838,7 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_TECHNOLOGY_COMPONENT__ID = ELEMENT__ID;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6047,49 +5856,13 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE = ELEMENT_FEATURE_COUNT + 4;
-
-	/**
 	 * The feature id for the '<em><b>Provides Platform For Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES = ELEMENT_FEATURE_COUNT + 5;
+	int LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Supplies Platform Services</b></em>' reference list.
@@ -6098,7 +5871,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES = ELEMENT_FEATURE_COUNT + 6;
+	int LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES = ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Is Realized By Physical Technology Components</b></em>' reference list.
@@ -6107,7 +5880,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 7;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Decomposes Logical Technology Component</b></em>' reference.
@@ -6116,7 +5889,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 8;
+	int LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Is Dependent On Logical Technology Components</b></em>' reference list.
@@ -6125,7 +5898,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
@@ -6134,7 +5907,34 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 10;
+	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Is Extended By Physical Technology Component</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Is Required By Logical Technology Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Logical Technology Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>Logical Technology Component</em>' class.
@@ -6143,7 +5943,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 11;
+	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StrategicArchitectureImpl <em>Strategic Architecture</em>}' class.
@@ -6153,7 +5953,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStrategicArchitecture()
 	 * @generated
 	 */
-	int STRATEGIC_ARCHITECTURE = 41;
+	int STRATEGIC_ARCHITECTURE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
@@ -6190,7 +5990,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStandard()
 	 * @generated
 	 */
-	int STANDARD = 42;
+	int STANDARD = 40;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6211,22 +6011,22 @@ public interface ContentfwkPackage extends EPackage {
 	int STANDARD__STANDARD_CREATION_DATE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STANDARD__LAST_STANDARD_CREATION_DATE = 2;
+	int STANDARD__LAST_STANDARD_REVIEW_DATE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STANDARD__NEXT_STANDARD_CREATION_DATE = 3;
+	int STANDARD__NEXT_STANDARD_REVIEW_DATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -6254,7 +6054,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getService()
 	 * @generated
 	 */
-	int SERVICE = 43;
+	int SERVICE = 41;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6275,22 +6075,22 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE__STANDARD_CREATION_DATE = STANDARD__STANDARD_CREATION_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__LAST_STANDARD_CREATION_DATE = STANDARD__LAST_STANDARD_CREATION_DATE;
+	int SERVICE__LAST_STANDARD_REVIEW_DATE = STANDARD__LAST_STANDARD_REVIEW_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__NEXT_STANDARD_CREATION_DATE = STANDARD__NEXT_STANDARD_CREATION_DATE;
+	int SERVICE__NEXT_STANDARD_REVIEW_DATE = STANDARD__NEXT_STANDARD_REVIEW_DATE;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -6320,22 +6120,22 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS = STANDARD_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Provides Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Provides Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__PROVIDES_ENTITIES = STANDARD_FEATURE_COUNT + 2;
+	int SERVICE__PROVIDES_DATA_ENTITIES = STANDARD_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Consumes Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__CONSUMES_ENTITIES = STANDARD_FEATURE_COUNT + 3;
+	int SERVICE__CONSUMES_DATA_ENTITIES = STANDARD_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list.
@@ -6410,13 +6210,13 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE__IS_REALIZED_BY_PROCESSES = STANDARD_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Meets Qualities</b></em>' reference list.
+	 * The feature id for the '<em><b>Meets Service Qualities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__MEETS_QUALITIES = STANDARD_FEATURE_COUNT + 12;
+	int SERVICE__MEETS_SERVICE_QUALITIES = STANDARD_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Consumes Services</b></em>' reference list.
@@ -6437,13 +6237,22 @@ public interface ContentfwkPackage extends EPackage {
 	int SERVICE__DECOMPOSES_SERVICES = STANDARD_FEATURE_COUNT + 14;
 
 	/**
+	 * The feature id for the '<em><b>Is Decomposed By Services</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__IS_DECOMPOSED_BY_SERVICES = STANDARD_FEATURE_COUNT + 15;
+
+	/**
 	 * The number of structural features of the '<em>Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_FEATURE_COUNT = STANDARD_FEATURE_COUNT + 15;
+	int SERVICE_FEATURE_COUNT = STANDARD_FEATURE_COUNT + 16;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationComponentImpl <em>Application Component</em>}' class.
@@ -6453,7 +6262,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getApplicationComponent()
 	 * @generated
 	 */
-	int APPLICATION_COMPONENT = 44;
+	int APPLICATION_COMPONENT = 42;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6474,22 +6283,22 @@ public interface ContentfwkPackage extends EPackage {
 	int APPLICATION_COMPONENT__STANDARD_CREATION_DATE = STANDARD__STANDARD_CREATION_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE = STANDARD__LAST_STANDARD_CREATION_DATE;
+	int APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE = STANDARD__LAST_STANDARD_REVIEW_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE = STANDARD__NEXT_STANDARD_CREATION_DATE;
+	int APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE = STANDARD__NEXT_STANDARD_REVIEW_DATE;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -6517,7 +6326,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getInformationSystemService()
 	 * @generated
 	 */
-	int INFORMATION_SYSTEM_SERVICE = 45;
+	int INFORMATION_SYSTEM_SERVICE = 43;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6538,22 +6347,22 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__STANDARD_CREATION_DATE = SERVICE__STANDARD_CREATION_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__LAST_STANDARD_CREATION_DATE = SERVICE__LAST_STANDARD_CREATION_DATE;
+	int INFORMATION_SYSTEM_SERVICE__LAST_STANDARD_REVIEW_DATE = SERVICE__LAST_STANDARD_REVIEW_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__NEXT_STANDARD_CREATION_DATE = SERVICE__NEXT_STANDARD_CREATION_DATE;
+	int INFORMATION_SYSTEM_SERVICE__NEXT_STANDARD_REVIEW_DATE = SERVICE__NEXT_STANDARD_REVIEW_DATE;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -6583,22 +6392,22 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS = SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Provides Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Provides Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__PROVIDES_ENTITIES = SERVICE__PROVIDES_ENTITIES;
+	int INFORMATION_SYSTEM_SERVICE__PROVIDES_DATA_ENTITIES = SERVICE__PROVIDES_DATA_ENTITIES;
 
 	/**
-	 * The feature id for the '<em><b>Consumes Entities</b></em>' reference list.
+	 * The feature id for the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__CONSUMES_ENTITIES = SERVICE__CONSUMES_ENTITIES;
+	int INFORMATION_SYSTEM_SERVICE__CONSUMES_DATA_ENTITIES = SERVICE__CONSUMES_DATA_ENTITIES;
 
 	/**
 	 * The feature id for the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list.
@@ -6673,13 +6482,13 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__IS_REALIZED_BY_PROCESSES = SERVICE__IS_REALIZED_BY_PROCESSES;
 
 	/**
-	 * The feature id for the '<em><b>Meets Qualities</b></em>' reference list.
+	 * The feature id for the '<em><b>Meets Service Qualities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_SYSTEM_SERVICE__MEETS_QUALITIES = SERVICE__MEETS_QUALITIES;
+	int INFORMATION_SYSTEM_SERVICE__MEETS_SERVICE_QUALITIES = SERVICE__MEETS_SERVICE_QUALITIES;
 
 	/**
 	 * The feature id for the '<em><b>Consumes Services</b></em>' reference list.
@@ -6698,6 +6507,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @ordered
 	 */
 	int INFORMATION_SYSTEM_SERVICE__DECOMPOSES_SERVICES = SERVICE__DECOMPOSES_SERVICES;
+
+	/**
+	 * The feature id for the '<em><b>Is Decomposed By Services</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION_SYSTEM_SERVICE__IS_DECOMPOSED_BY_SERVICES = SERVICE__IS_DECOMPOSED_BY_SERVICES;
 
 	/**
 	 * The feature id for the '<em><b>Delegates</b></em>' reference list.
@@ -6763,7 +6581,7 @@ public interface ContentfwkPackage extends EPackage {
 	int INFORMATION_SYSTEM_SERVICE__ID = SERVICE_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference list.
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6788,7 +6606,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getDataComponent()
 	 * @generated
 	 */
-	int DATA_COMPONENT = 46;
+	int DATA_COMPONENT = 44;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6809,22 +6627,22 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_COMPONENT__STANDARD_CREATION_DATE = STANDARD__STANDARD_CREATION_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_COMPONENT__LAST_STANDARD_CREATION_DATE = STANDARD__LAST_STANDARD_CREATION_DATE;
+	int DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE = STANDARD__LAST_STANDARD_REVIEW_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE = STANDARD__NEXT_STANDARD_CREATION_DATE;
+	int DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE = STANDARD__NEXT_STANDARD_REVIEW_DATE;
 
 	/**
 	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
@@ -6852,7 +6670,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getTechnologyComponent()
 	 * @generated
 	 */
-	int TECHNOLOGY_COMPONENT = 47;
+	int TECHNOLOGY_COMPONENT = 45;
 
 	/**
 	 * The feature id for the '<em><b>Standard Class</b></em>' attribute.
@@ -6861,43 +6679,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_COMPONENT__STANDARD_CLASS = STANDARD__STANDARD_CLASS;
-
-	/**
-	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = STANDARD__STANDARD_CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Last Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE = STANDARD__LAST_STANDARD_CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Next Standard Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE = STANDARD__NEXT_STANDARD_CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TECHNOLOGY_COMPONENT__RETIRE_DATE = STANDARD__RETIRE_DATE;
+	int TECHNOLOGY_COMPONENT__STANDARD_CLASS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Technology Component</em>' class.
@@ -6906,7 +6688,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_COMPONENT_FEATURE_COUNT = STANDARD_FEATURE_COUNT + 0;
+	int TECHNOLOGY_COMPONENT_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}' enum.
@@ -6916,7 +6698,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getPrincipleCategory()
 	 * @generated
 	 */
-	int PRINCIPLE_CATEGORY = 48;
+	int PRINCIPLE_CATEGORY = 46;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass <em>Standards Class</em>}' enum.
@@ -6926,7 +6708,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getStandardsClass()
 	 * @generated
 	 */
-	int STANDARDS_CLASS = 49;
+	int STANDARDS_CLASS = 47;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LifeCycleStatus <em>Life Cycle Status</em>}' enum.
@@ -6936,7 +6718,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLifeCycleStatus()
 	 * @generated
 	 */
-	int LIFE_CYCLE_STATUS = 50;
+	int LIFE_CYCLE_STATUS = 48;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntityCategory <em>Data Entity Category</em>}' enum.
@@ -6946,7 +6728,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getDataEntityCategory()
 	 * @generated
 	 */
-	int DATA_ENTITY_CATEGORY = 51;
+	int DATA_ENTITY_CATEGORY = 49;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackageCategory <em>Work Package Category</em>}' enum.
@@ -6956,7 +6738,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getWorkPackageCategory()
 	 * @generated
 	 */
-	int WORK_PACKAGE_CATEGORY = 52;
+	int WORK_PACKAGE_CATEGORY = 50;
 
 
 	/**
@@ -6979,28 +6761,6 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getEnterpriseArchitecture_Architectures();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getContainers <em>Containers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Containers</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getContainers()
-	 * @see #getEnterpriseArchitecture()
-	 * @generated
-	 */
-	EReference getEnterpriseArchitecture_Containers();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getLabels <em>Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Labels</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getLabels()
-	 * @see #getEnterpriseArchitecture()
-	 * @generated
-	 */
-	EReference getEnterpriseArchitecture_Labels();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture <em>Architecture</em>}'.
@@ -7328,6 +7088,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getDriver_DecomposesDriver();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getIsDecomposedByDrivers <em>Is Decomposed By Drivers</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Drivers</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getIsDecomposedByDrivers()
+	 * @see #getDriver()
+	 * @generated
+	 */
+	EReference getDriver_IsDecomposedByDrivers();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal <em>Goal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7371,6 +7142,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getGoal_DecomposesGoal();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsDecomposedByGoals <em>Is Decomposed By Goals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Goals</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsDecomposedByGoals()
+	 * @see #getGoal()
+	 * @generated
+	 */
+	EReference getGoal_IsDecomposedByGoals();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective <em>Objective</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7412,6 +7194,28 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getObjective_DecomposesObjective();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsSupportedByBusinessService <em>Is Supported By Business Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Supported By Business Service</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsSupportedByBusinessService()
+	 * @see #getObjective()
+	 * @generated
+	 */
+	EReference getObjective_IsSupportedByBusinessService();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsDecomposedByObjectives <em>Is Decomposed By Objectives</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Objectives</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsDecomposedByObjectives()
+	 * @see #getObjective()
+	 * @generated
+	 */
+	EReference getObjective_IsDecomposedByObjectives();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit <em>Organization Unit</em>}'.
@@ -7512,6 +7316,28 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getOrganizationUnit_Headcount();
 
 	/**
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit <em>Decomposes Organization Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Decomposes Organization Unit</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit()
+	 * @see #getOrganizationUnit()
+	 * @generated
+	 */
+	EReference getOrganizationUnit_DecomposesOrganizationUnit();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getIsDecomposedByOrganizationUnits <em>Is Decomposed By Organization Units</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Organization Units</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getIsDecomposedByOrganizationUnits()
+	 * @see #getOrganizationUnit()
+	 * @generated
+	 */
+	EReference getOrganizationUnit_IsDecomposedByOrganizationUnits();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor <em>Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7522,37 +7348,37 @@ public interface ContentfwkPackage extends EPackage {
 	EClass getActor();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesEntities <em>Supplies Entities</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesDataEntities <em>Supplies Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Supplies Entities</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesEntities()
+	 * @return the meta object for the reference list '<em>Supplies Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesDataEntities()
 	 * @see #getActor()
 	 * @generated
 	 */
-	EReference getActor_SuppliesEntities();
+	EReference getActor_SuppliesDataEntities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesEntities <em>Consumes Entities</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesDataEntities <em>Consumes Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Consumes Entities</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesEntities()
+	 * @return the meta object for the reference list '<em>Consumes Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesDataEntities()
 	 * @see #getActor()
 	 * @generated
 	 */
-	EReference getActor_ConsumesEntities();
+	EReference getActor_ConsumesDataEntities();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo <em>Belongs To</em>}'.
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit <em>Belongs To Organization Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Belongs To</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo()
+	 * @return the meta object for the reference '<em>Belongs To Organization Unit</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit()
 	 * @see #getActor()
 	 * @generated
 	 */
-	EReference getActor_BelongsTo();
+	EReference getActor_BelongsToOrganizationUnit();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getInteractsWithFunctions <em>Interacts With Functions</em>}'.
@@ -7676,15 +7502,26 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getActor_PerformsFunctions();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors <em>Decomposes Actors</em>}'.
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor <em>Decomposes Actor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Decomposes Actors</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActors()
+	 * @return the meta object for the reference '<em>Decomposes Actor</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getDecomposesActor()
 	 * @see #getActor()
 	 * @generated
 	 */
-	EReference getActor_DecomposesActors();
+	EReference getActor_DecomposesActor();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getIsDecomposedByActors <em>Is Decomposed By Actors</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Actors</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getIsDecomposedByActors()
+	 * @see #getActor()
+	 * @generated
+	 */
+	EReference getActor_IsDecomposedByActors();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role <em>Role</em>}'.
@@ -7739,6 +7576,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRole_DecomposesRole();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getIsDecomposedByRoles <em>Is Decomposed By Roles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Roles</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getIsDecomposedByRoles()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EReference getRole_IsDecomposedByRoles();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity <em>Data Entity</em>}'.
@@ -7850,15 +7698,15 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getDataEntity_RetentionClassification();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposeEntity <em>Decompose Entity</em>}'.
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposesDataEntity <em>Decomposes Data Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Decompose Entity</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposeEntity()
+	 * @return the meta object for the reference '<em>Decomposes Data Entity</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposesDataEntity()
 	 * @see #getDataEntity()
 	 * @generated
 	 */
-	EReference getDataEntity_DecomposeEntity();
+	EReference getDataEntity_DecomposesDataEntity();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesTo <em>Relates To</em>}'.
@@ -7870,6 +7718,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDataEntity_RelatesTo();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsDecomposedByDataEntities <em>Is Decomposed By Data Entities</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsDecomposedByDataEntities()
+	 * @see #getDataEntity()
+	 * @generated
+	 */
+	EReference getDataEntity_IsDecomposedByDataEntities();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent <em>Logical Application Component</em>}'.
@@ -7937,6 +7796,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getLogicalApplicationComponent_DecomposesLogicalApplicationComponent();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsDecomposedByLogicalApplicationComponents <em>Is Decomposed By Logical Application Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Logical Application Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsDecomposedByLogicalApplicationComponents()
+	 * @see #getLogicalApplicationComponent()
+	 * @generated
+	 */
+	EReference getLogicalApplicationComponent_IsDecomposedByLogicalApplicationComponents();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7958,15 +7828,15 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getFunction_IsPerformedByActors();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit <em>Is Owned By Unit</em>}'.
+	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit <em>Is Owned By Organization Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Is Owned By Unit</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit()
+	 * @return the meta object for the reference '<em>Is Owned By Organization Unit</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit()
 	 * @see #getFunction()
 	 * @generated
 	 */
-	EReference getFunction_IsOwnedByUnit();
+	EReference getFunction_IsOwnedByOrganizationUnit();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsBoundedByServices <em>Is Bounded By Services</em>}'.
@@ -8035,15 +7905,26 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getFunction_DecomposesFunction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatedWithFunctions <em>Communicated With Functions</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatesWithFunctions <em>Communicates With Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Communicated With Functions</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatedWithFunctions()
+	 * @return the meta object for the reference list '<em>Communicates With Functions</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatesWithFunctions()
 	 * @see #getFunction()
 	 * @generated
 	 */
-	EReference getFunction_CommunicatedWithFunctions();
+	EReference getFunction_CommunicatesWithFunctions();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsDecomposedByFunctions <em>Is Decomposed By Functions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Functions</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsDecomposedByFunctions()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_IsDecomposedByFunctions();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessService <em>Business Service</em>}'.
@@ -8253,6 +8134,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getProcess_FollowsProcesses();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getIsDecomposedByProcesses <em>Is Decomposed By Processes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Processes</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getIsDecomposedByProcesses()
+	 * @see #getProcess()
+	 * @generated
+	 */
+	EReference getProcess_IsDecomposedByProcesses();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService <em>Platform Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8285,6 +8177,17 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getPlatformService_CategoryTRM();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getStandardClass <em>Standard Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Standard Class</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getStandardClass()
+	 * @see #getPlatformService()
+	 * @generated
+	 */
+	EAttribute getPlatformService_StandardClass();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent <em>Physical Technology Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8295,15 +8198,15 @@ public interface ContentfwkPackage extends EPackage {
 	EClass getPhysicalTechnologyComponent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesApplicationComponents <em>Realizes Application Components</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesPhysicalApplicationComponents <em>Realizes Physical Application Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Realizes Application Components</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesApplicationComponents()
+	 * @return the meta object for the reference list '<em>Realizes Physical Application Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesPhysicalApplicationComponents()
 	 * @see #getPhysicalTechnologyComponent()
 	 * @generated
 	 */
-	EReference getPhysicalTechnologyComponent_RealizesApplicationComponents();
+	EReference getPhysicalTechnologyComponent_RealizesPhysicalApplicationComponents();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getExtendsLogicalTechnologyComponents <em>Extends Logical Technology Components</em>}'.
@@ -8405,6 +8308,28 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getPhysicalTechnologyComponent_CategoryTRM();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsRequiredByPhysicalTechnologyComponent <em>Is Required By Physical Technology Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Required By Physical Technology Component</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsRequiredByPhysicalTechnologyComponent()
+	 * @see #getPhysicalTechnologyComponent()
+	 * @generated
+	 */
+	EReference getPhysicalTechnologyComponent_IsRequiredByPhysicalTechnologyComponent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDecomposedByPhysicalTechnologyComponents <em>Is Decomposed By Physical Technology Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Physical Technology Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getIsDecomposedByPhysicalTechnologyComponents()
+	 * @see #getPhysicalTechnologyComponent()
+	 * @generated
+	 */
+	EReference getPhysicalTechnologyComponent_IsDecomposedByPhysicalTechnologyComponents();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Product <em>Product</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8478,6 +8403,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMeasure_DecomposesMeasure();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getIsDecomposedByMeasures <em>Is Decomposed By Measures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Measures</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getIsDecomposedByMeasures()
+	 * @see #getMeasure()
+	 * @generated
+	 */
+	EReference getMeasure_IsDecomposedByMeasures();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality <em>Service Quality</em>}'.
@@ -8917,15 +8853,15 @@ public interface ContentfwkPackage extends EPackage {
 	EClass getEvent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByBusinessServices <em>Is Resolved By Business Services</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByServices <em>Is Resolved By Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Is Resolved By Business Services</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByBusinessServices()
+	 * @return the meta object for the reference list '<em>Is Resolved By Services</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByServices()
 	 * @see #getEvent()
 	 * @generated
 	 */
-	EReference getEvent_IsResolvedByBusinessServices();
+	EReference getEvent_IsResolvedByServices();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByProcesses <em>Is Resolved By Processes</em>}'.
@@ -8961,10 +8897,10 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getEvent_IsResolvedByActors();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsGeneratedByActors <em>Is Generated By Actors</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsGeneratedByActors <em>Is Generated By Actors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Is Generated By Actors</em>'.
+	 * @return the meta object for the reference list '<em>Is Generated By Actors</em>'.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsGeneratedByActors()
 	 * @see #getEvent()
 	 * @generated
@@ -9047,15 +8983,15 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getElement_Description();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory <em>Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Category</em>'.
+	 * @return the meta object for the attribute '<em>Category</em>'.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getCategory()
 	 * @see #getElement()
 	 * @generated
 	 */
-	EReference getElement_Category();
+	EAttribute getElement_Category();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#getSourceDescr <em>Source Descr</em>}'.
@@ -9089,147 +9025,6 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getElement_ID();
-
-	/**
-	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container <em>Container</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Container</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container
-	 * @generated
-	 */
-	EClass getContainer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getName()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EAttribute getContainer_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers <em>Sub Containers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Containers</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getSubContainers()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EReference getContainer_SubContainers();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels <em>Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Labels</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getLabels()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EReference getContainer_Labels();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getId()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EAttribute getContainer_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container#getDescription()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EAttribute getContainer_Description();
-
-	/**
-	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label <em>Label</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Label</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label
-	 * @generated
-	 */
-	EClass getLabel();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getSubLabels <em>Sub Labels</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Labels</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getSubLabels()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EReference getLabel_SubLabels();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getName()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Name();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements <em>Owned Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Owned Elements</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getOwnedElements()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EReference getLabel_OwnedElements();
-
-	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers <em>Containers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Containers</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getContainers()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EReference getLabel_Containers();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getId()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label#getDescription()
-	 * @see #getLabel()
-	 * @generated
-	 */
-	EAttribute getLabel_Description();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location <em>Location</em>}'.
@@ -9306,6 +9101,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLocation_DecomposesLocation();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getIsDecomposedByLocations <em>Is Decomposed By Locations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Locations</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location#getIsDecomposedByLocations()
+	 * @see #getLocation()
+	 * @generated
+	 */
+	EReference getLocation_IsDecomposedByLocations();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Capability <em>Capability</em>}'.
@@ -9478,17 +9284,6 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getRequirement_StatementOfRequirement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale <em>Rationale</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rationale</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale()
-	 * @see #getRequirement()
-	 * @generated
-	 */
-	EAttribute getRequirement_Rationale();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getAcceptanceCriteria <em>Acceptance Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9540,6 +9335,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getWorkPackage_DeliversCapabilities();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getCapabilityDelivered <em>Capability Delivered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Capability Delivered</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getCapabilityDelivered()
+	 * @see #getWorkPackage()
+	 * @generated
+	 */
+	EAttribute getWorkPackage_CapabilityDelivered();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalDataComponent <em>Logical Data Component</em>}'.
@@ -9626,6 +9432,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPhysicalDataComponent_EncapsulatesPhysicalApplicationComponents();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsDecomposedByPhysicalDataComponents <em>Is Decomposed By Physical Data Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Physical Data Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getIsDecomposedByPhysicalDataComponents()
+	 * @see #getPhysicalDataComponent()
+	 * @generated
+	 */
+	EReference getPhysicalDataComponent_IsDecomposedByPhysicalDataComponents();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationArchitecture <em>Application Architecture</em>}'.
@@ -9769,15 +9586,15 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getPhysicalApplicationComponent_RetirementDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityQualityCharacteristics <em>Availability Quality Characteristics</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityCharacteristics <em>Availability Characteristics</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Availability Quality Characteristics</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityQualityCharacteristics()
+	 * @return the meta object for the attribute '<em>Availability Characteristics</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityCharacteristics()
 	 * @see #getPhysicalApplicationComponent()
 	 * @generated
 	 */
-	EAttribute getPhysicalApplicationComponent_AvailabilityQualityCharacteristics();
+	EAttribute getPhysicalApplicationComponent_AvailabilityCharacteristics();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getServicesTimes <em>Services Times</em>}'.
@@ -10077,6 +9894,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getPhysicalApplicationComponent_DecomposesPhysicalApplicationComponent();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsDecomposedByPhysicalApplicationComponents <em>Is Decomposed By Physical Application Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Physical Application Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsDecomposedByPhysicalApplicationComponents()
+	 * @see #getPhysicalApplicationComponent()
+	 * @generated
+	 */
+	EReference getPhysicalApplicationComponent_IsDecomposedByPhysicalApplicationComponents();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent <em>Logical Technology Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10153,6 +9981,39 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getLogicalTechnologyComponent_CategoryTRM();
 
 	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsExtendedByPhysicalTechnologyComponent <em>Is Extended By Physical Technology Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Extended By Physical Technology Component</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsExtendedByPhysicalTechnologyComponent()
+	 * @see #getLogicalTechnologyComponent()
+	 * @generated
+	 */
+	EReference getLogicalTechnologyComponent_IsExtendedByPhysicalTechnologyComponent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRequiredByLogicalTechnologyComponents <em>Is Required By Logical Technology Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Required By Logical Technology Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRequiredByLogicalTechnologyComponents()
+	 * @see #getLogicalTechnologyComponent()
+	 * @generated
+	 */
+	EReference getLogicalTechnologyComponent_IsRequiredByLogicalTechnologyComponents();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDecomposedByLogicalTechnologyComponents <em>Is Decomposed By Logical Technology Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Logical Technology Components</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDecomposedByLogicalTechnologyComponents()
+	 * @see #getLogicalTechnologyComponent()
+	 * @generated
+	 */
+	EReference getLogicalTechnologyComponent_IsDecomposedByLogicalTechnologyComponents();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StrategicArchitecture <em>Strategic Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10217,26 +10078,26 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getStandard_StandardCreationDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardCreationDate <em>Last Standard Creation Date</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardReviewDate <em>Last Standard Review Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Standard Creation Date</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardCreationDate()
+	 * @return the meta object for the attribute '<em>Last Standard Review Date</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardReviewDate()
 	 * @see #getStandard()
 	 * @generated
 	 */
-	EAttribute getStandard_LastStandardCreationDate();
+	EAttribute getStandard_LastStandardReviewDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardCreationDate <em>Next Standard Creation Date</em>}'.
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardReviewDate <em>Next Standard Review Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Next Standard Creation Date</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardCreationDate()
+	 * @return the meta object for the attribute '<em>Next Standard Review Date</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardReviewDate()
 	 * @see #getStandard()
 	 * @generated
 	 */
-	EAttribute getStandard_NextStandardCreationDate();
+	EAttribute getStandard_NextStandardReviewDate();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getRetireDate <em>Retire Date</em>}'.
@@ -10282,26 +10143,26 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getService_ProvidesGovernedInterfaceToAccessFunctions();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesEntities <em>Provides Entities</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesDataEntities <em>Provides Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Provides Entities</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesEntities()
+	 * @return the meta object for the reference list '<em>Provides Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesDataEntities()
 	 * @see #getService()
 	 * @generated
 	 */
-	EReference getService_ProvidesEntities();
+	EReference getService_ProvidesDataEntities();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesEntities <em>Consumes Entities</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesDataEntities <em>Consumes Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Consumes Entities</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesEntities()
+	 * @return the meta object for the reference list '<em>Consumes Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesDataEntities()
 	 * @see #getService()
 	 * @generated
 	 */
-	EReference getService_ConsumesEntities();
+	EReference getService_ConsumesDataEntities();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsGovernedAndMeasuredByContracts <em>Is Governed And Measured By Contracts</em>}'.
@@ -10392,15 +10253,15 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getService_IsRealizedByProcesses();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsQualities <em>Meets Qualities</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsServiceQualities <em>Meets Service Qualities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Meets Qualities</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsQualities()
+	 * @return the meta object for the reference list '<em>Meets Service Qualities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsServiceQualities()
 	 * @see #getService()
 	 * @generated
 	 */
-	EReference getService_MeetsQualities();
+	EReference getService_MeetsServiceQualities();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesServices <em>Consumes Services</em>}'.
@@ -10423,6 +10284,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getService_DecomposesServices();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsDecomposedByServices <em>Is Decomposed By Services</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Is Decomposed By Services</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsDecomposedByServices()
+	 * @see #getService()
+	 * @generated
+	 */
+	EReference getService_IsDecomposedByServices();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ApplicationComponent <em>Application Component</em>}'.
@@ -10463,6 +10335,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTechnologyComponent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent#getStandardClass <em>Standard Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Standard Class</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent#getStandardClass()
+	 * @see #getTechnologyComponent()
+	 * @generated
+	 */
+	EAttribute getTechnologyComponent_StandardClass();
 
 	/**
 	 * Returns the meta object for enum '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}'.
@@ -10553,22 +10436,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENTERPRISE_ARCHITECTURE__ARCHITECTURES = eINSTANCE.getEnterpriseArchitecture_Architectures();
-
-		/**
-		 * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTERPRISE_ARCHITECTURE__CONTAINERS = eINSTANCE.getEnterpriseArchitecture_Containers();
-
-		/**
-		 * The meta object literal for the '<em><b>Labels</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTERPRISE_ARCHITECTURE__LABELS = eINSTANCE.getEnterpriseArchitecture_Labels();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ArchitectureImpl <em>Architecture</em>}' class.
@@ -10821,6 +10688,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference DRIVER__DECOMPOSES_DRIVER = eINSTANCE.getDriver_DecomposesDriver();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Drivers</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DRIVER__IS_DECOMPOSED_BY_DRIVERS = eINSTANCE.getDriver_IsDecomposedByDrivers();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl <em>Goal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10855,6 +10730,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference GOAL__DECOMPOSES_GOAL = eINSTANCE.getGoal_DecomposesGoal();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Goals</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GOAL__IS_DECOMPOSED_BY_GOALS = eINSTANCE.getGoal_IsDecomposedByGoals();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ObjectiveImpl <em>Objective</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10887,6 +10770,22 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference OBJECTIVE__DECOMPOSES_OBJECTIVE = eINSTANCE.getObjective_DecomposesObjective();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Supported By Business Service</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OBJECTIVE__IS_SUPPORTED_BY_BUSINESS_SERVICE = eINSTANCE.getObjective_IsSupportedByBusinessService();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Objectives</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OBJECTIVE__IS_DECOMPOSED_BY_OBJECTIVES = eINSTANCE.getObjective_IsDecomposedByObjectives();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl <em>Organization Unit</em>}' class.
@@ -10963,6 +10862,22 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute ORGANIZATION_UNIT__HEADCOUNT = eINSTANCE.getOrganizationUnit_Headcount();
 
 		/**
+		 * The meta object literal for the '<em><b>Decomposes Organization Unit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT = eINSTANCE.getOrganizationUnit_DecomposesOrganizationUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Organization Units</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS = eINSTANCE.getOrganizationUnit_IsDecomposedByOrganizationUnits();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl <em>Actor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10973,28 +10888,28 @@ public interface ContentfwkPackage extends EPackage {
 		EClass ACTOR = eINSTANCE.getActor();
 
 		/**
-		 * The meta object literal for the '<em><b>Supplies Entities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Supplies Data Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTOR__SUPPLIES_ENTITIES = eINSTANCE.getActor_SuppliesEntities();
+		EReference ACTOR__SUPPLIES_DATA_ENTITIES = eINSTANCE.getActor_SuppliesDataEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Consumes Entities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Consumes Data Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTOR__CONSUMES_ENTITIES = eINSTANCE.getActor_ConsumesEntities();
+		EReference ACTOR__CONSUMES_DATA_ENTITIES = eINSTANCE.getActor_ConsumesDataEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Belongs To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Belongs To Organization Unit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTOR__BELONGS_TO = eINSTANCE.getActor_BelongsTo();
+		EReference ACTOR__BELONGS_TO_ORGANIZATION_UNIT = eINSTANCE.getActor_BelongsToOrganizationUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Interacts With Functions</b></em>' reference list feature.
@@ -11085,12 +11000,20 @@ public interface ContentfwkPackage extends EPackage {
 		EReference ACTOR__PERFORMS_FUNCTIONS = eINSTANCE.getActor_PerformsFunctions();
 
 		/**
-		 * The meta object literal for the '<em><b>Decomposes Actors</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Decomposes Actor</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTOR__DECOMPOSES_ACTORS = eINSTANCE.getActor_DecomposesActors();
+		EReference ACTOR__DECOMPOSES_ACTOR = eINSTANCE.getActor_DecomposesActor();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Actors</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACTOR__IS_DECOMPOSED_BY_ACTORS = eINSTANCE.getActor_IsDecomposedByActors();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl <em>Role</em>}' class.
@@ -11133,6 +11056,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROLE__DECOMPOSES_ROLE = eINSTANCE.getRole_DecomposesRole();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Roles</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE__IS_DECOMPOSED_BY_ROLES = eINSTANCE.getRole_IsDecomposedByRoles();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl <em>Data Entity</em>}' class.
@@ -11217,12 +11148,12 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute DATA_ENTITY__RETENTION_CLASSIFICATION = eINSTANCE.getDataEntity_RetentionClassification();
 
 		/**
-		 * The meta object literal for the '<em><b>Decompose Entity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Decomposes Data Entity</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ENTITY__DECOMPOSE_ENTITY = eINSTANCE.getDataEntity_DecomposeEntity();
+		EReference DATA_ENTITY__DECOMPOSES_DATA_ENTITY = eINSTANCE.getDataEntity_DecomposesDataEntity();
 
 		/**
 		 * The meta object literal for the '<em><b>Relates To</b></em>' reference list feature.
@@ -11231,6 +11162,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference DATA_ENTITY__RELATES_TO = eINSTANCE.getDataEntity_RelatesTo();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Data Entities</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES = eINSTANCE.getDataEntity_IsDecomposedByDataEntities();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl <em>Logical Application Component</em>}' class.
@@ -11283,6 +11222,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT = eINSTANCE.getLogicalApplicationComponent_DecomposesLogicalApplicationComponent();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Logical Application Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS = eINSTANCE.getLogicalApplicationComponent_IsDecomposedByLogicalApplicationComponents();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl <em>Function</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11301,12 +11248,12 @@ public interface ContentfwkPackage extends EPackage {
 		EReference FUNCTION__IS_PERFORMED_BY_ACTORS = eINSTANCE.getFunction_IsPerformedByActors();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Owned By Unit</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Is Owned By Organization Unit</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION__IS_OWNED_BY_UNIT = eINSTANCE.getFunction_IsOwnedByUnit();
+		EReference FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT = eINSTANCE.getFunction_IsOwnedByOrganizationUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Bounded By Services</b></em>' reference list feature.
@@ -11357,12 +11304,20 @@ public interface ContentfwkPackage extends EPackage {
 		EReference FUNCTION__DECOMPOSES_FUNCTION = eINSTANCE.getFunction_DecomposesFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Communicated With Functions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Communicates With Functions</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION__COMMUNICATED_WITH_FUNCTIONS = eINSTANCE.getFunction_CommunicatedWithFunctions();
+		EReference FUNCTION__COMMUNICATES_WITH_FUNCTIONS = eINSTANCE.getFunction_CommunicatesWithFunctions();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Functions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS = eINSTANCE.getFunction_IsDecomposedByFunctions();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl <em>Business Service</em>}' class.
@@ -11521,6 +11476,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference PROCESS__FOLLOWS_PROCESSES = eINSTANCE.getProcess_FollowsProcesses();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Processes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESS__IS_DECOMPOSED_BY_PROCESSES = eINSTANCE.getProcess_IsDecomposedByProcesses();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl <em>Platform Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11547,6 +11510,14 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute PLATFORM_SERVICE__CATEGORY_TRM = eINSTANCE.getPlatformService_CategoryTRM();
 
 		/**
+		 * The meta object literal for the '<em><b>Standard Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLATFORM_SERVICE__STANDARD_CLASS = eINSTANCE.getPlatformService_StandardClass();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl <em>Physical Technology Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11557,12 +11528,12 @@ public interface ContentfwkPackage extends EPackage {
 		EClass PHYSICAL_TECHNOLOGY_COMPONENT = eINSTANCE.getPhysicalTechnologyComponent();
 
 		/**
-		 * The meta object literal for the '<em><b>Realizes Application Components</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Realizes Physical Application Components</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS = eINSTANCE.getPhysicalTechnologyComponent_RealizesApplicationComponents();
+		EReference PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS = eINSTANCE.getPhysicalTechnologyComponent_RealizesPhysicalApplicationComponents();
 
 		/**
 		 * The meta object literal for the '<em><b>Extends Logical Technology Components</b></em>' reference list feature.
@@ -11637,6 +11608,22 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = eINSTANCE.getPhysicalTechnologyComponent_CategoryTRM();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Required By Physical Technology Component</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = eINSTANCE.getPhysicalTechnologyComponent_IsRequiredByPhysicalTechnologyComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Physical Technology Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getPhysicalTechnologyComponent_IsDecomposedByPhysicalTechnologyComponents();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProductImpl <em>Product</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11695,6 +11682,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MEASURE__DECOMPOSES_MEASURE = eINSTANCE.getMeasure_DecomposesMeasure();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Measures</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEASURE__IS_DECOMPOSED_BY_MEASURES = eINSTANCE.getMeasure_IsDecomposedByMeasures();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceQualityImpl <em>Service Quality</em>}' class.
@@ -12023,12 +12018,12 @@ public interface ContentfwkPackage extends EPackage {
 		EClass EVENT = eINSTANCE.getEvent();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Resolved By Business Services</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Is Resolved By Services</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES = eINSTANCE.getEvent_IsResolvedByBusinessServices();
+		EReference EVENT__IS_RESOLVED_BY_SERVICES = eINSTANCE.getEvent_IsResolvedByServices();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Resolved By Processes</b></em>' reference list feature.
@@ -12055,7 +12050,7 @@ public interface ContentfwkPackage extends EPackage {
 		EReference EVENT__IS_RESOLVED_BY_ACTORS = eINSTANCE.getEvent_IsResolvedByActors();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Generated By Actors</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Is Generated By Actors</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -12123,12 +12118,12 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute ELEMENT__DESCRIPTION = eINSTANCE.getElement_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT__CATEGORY = eINSTANCE.getElement_Category();
+		EAttribute ELEMENT__CATEGORY = eINSTANCE.getElement_Category();
 
 		/**
 		 * The meta object literal for the '<em><b>Source Descr</b></em>' attribute feature.
@@ -12153,114 +12148,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ELEMENT__ID = eINSTANCE.getElement_ID();
-
-		/**
-		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl <em>Container</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContainerImpl
-		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getContainer()
-		 * @generated
-		 */
-		EClass CONTAINER = eINSTANCE.getContainer();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTAINER__NAME = eINSTANCE.getContainer_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Containers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTAINER__SUB_CONTAINERS = eINSTANCE.getContainer_SubContainers();
-
-		/**
-		 * The meta object literal for the '<em><b>Labels</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTAINER__LABELS = eINSTANCE.getContainer_Labels();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTAINER__ID = eINSTANCE.getContainer_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CONTAINER__DESCRIPTION = eINSTANCE.getContainer_Description();
-
-		/**
-		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl <em>Label</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LabelImpl
-		 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ContentfwkPackageImpl#getLabel()
-		 * @generated
-		 */
-		EClass LABEL = eINSTANCE.getLabel();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Labels</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LABEL__SUB_LABELS = eINSTANCE.getLabel_SubLabels();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__NAME = eINSTANCE.getLabel_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Owned Elements</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LABEL__OWNED_ELEMENTS = eINSTANCE.getLabel_OwnedElements();
-
-		/**
-		 * The meta object literal for the '<em><b>Containers</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LABEL__CONTAINERS = eINSTANCE.getLabel_Containers();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__ID = eINSTANCE.getLabel_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LABEL__DESCRIPTION = eINSTANCE.getLabel_Description();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LocationImpl <em>Location</em>}' class.
@@ -12319,6 +12206,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOCATION__DECOMPOSES_LOCATION = eINSTANCE.getLocation_DecomposesLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Locations</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOCATION__IS_DECOMPOSED_BY_LOCATIONS = eINSTANCE.getLocation_IsDecomposedByLocations();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.CapabilityImpl <em>Capability</em>}' class.
@@ -12461,14 +12356,6 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute REQUIREMENT__STATEMENT_OF_REQUIREMENT = eINSTANCE.getRequirement_StatementOfRequirement();
 
 		/**
-		 * The meta object literal for the '<em><b>Rationale</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REQUIREMENT__RATIONALE = eINSTANCE.getRequirement_Rationale();
-
-		/**
 		 * The meta object literal for the '<em><b>Acceptance Criteria</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12511,6 +12398,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference WORK_PACKAGE__DELIVERS_CAPABILITIES = eINSTANCE.getWorkPackage_DeliversCapabilities();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability Delivered</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WORK_PACKAGE__CAPABILITY_DELIVERED = eINSTANCE.getWorkPackage_CapabilityDelivered();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalDataComponentImpl <em>Logical Data Component</em>}' class.
@@ -12579,6 +12474,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS = eINSTANCE.getPhysicalDataComponent_EncapsulatesPhysicalApplicationComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Physical Data Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS = eINSTANCE.getPhysicalDataComponent_IsDecomposedByPhysicalDataComponents();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationArchitectureImpl <em>Application Architecture</em>}' class.
@@ -12689,12 +12592,12 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE = eINSTANCE.getPhysicalApplicationComponent_RetirementDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Availability Quality Characteristics</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Availability Characteristics</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS = eINSTANCE.getPhysicalApplicationComponent_AvailabilityQualityCharacteristics();
+		EAttribute PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS = eINSTANCE.getPhysicalApplicationComponent_AvailabilityCharacteristics();
 
 		/**
 		 * The meta object literal for the '<em><b>Services Times</b></em>' attribute feature.
@@ -12913,6 +12816,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT = eINSTANCE.getPhysicalApplicationComponent_DecomposesPhysicalApplicationComponent();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Physical Application Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS = eINSTANCE.getPhysicalApplicationComponent_IsDecomposedByPhysicalApplicationComponents();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl <em>Logical Technology Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12971,6 +12882,30 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = eINSTANCE.getLogicalTechnologyComponent_CategoryTRM();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Extended By Physical Technology Component</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = eINSTANCE.getLogicalTechnologyComponent_IsExtendedByPhysicalTechnologyComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Required By Logical Technology Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getLogicalTechnologyComponent_IsRequiredByLogicalTechnologyComponents();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Logical Technology Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = eINSTANCE.getLogicalTechnologyComponent_IsDecomposedByLogicalTechnologyComponents();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StrategicArchitectureImpl <em>Strategic Architecture</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -13023,20 +12958,20 @@ public interface ContentfwkPackage extends EPackage {
 		EAttribute STANDARD__STANDARD_CREATION_DATE = eINSTANCE.getStandard_StandardCreationDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Last Standard Creation Date</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Last Standard Review Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STANDARD__LAST_STANDARD_CREATION_DATE = eINSTANCE.getStandard_LastStandardCreationDate();
+		EAttribute STANDARD__LAST_STANDARD_REVIEW_DATE = eINSTANCE.getStandard_LastStandardReviewDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Next Standard Creation Date</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Next Standard Review Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STANDARD__NEXT_STANDARD_CREATION_DATE = eINSTANCE.getStandard_NextStandardCreationDate();
+		EAttribute STANDARD__NEXT_STANDARD_REVIEW_DATE = eINSTANCE.getStandard_NextStandardReviewDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Retire Date</b></em>' attribute feature.
@@ -13073,20 +13008,20 @@ public interface ContentfwkPackage extends EPackage {
 		EReference SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS = eINSTANCE.getService_ProvidesGovernedInterfaceToAccessFunctions();
 
 		/**
-		 * The meta object literal for the '<em><b>Provides Entities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Provides Data Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__PROVIDES_ENTITIES = eINSTANCE.getService_ProvidesEntities();
+		EReference SERVICE__PROVIDES_DATA_ENTITIES = eINSTANCE.getService_ProvidesDataEntities();
 
 		/**
-		 * The meta object literal for the '<em><b>Consumes Entities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Consumes Data Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__CONSUMES_ENTITIES = eINSTANCE.getService_ConsumesEntities();
+		EReference SERVICE__CONSUMES_DATA_ENTITIES = eINSTANCE.getService_ConsumesDataEntities();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list feature.
@@ -13153,12 +13088,12 @@ public interface ContentfwkPackage extends EPackage {
 		EReference SERVICE__IS_REALIZED_BY_PROCESSES = eINSTANCE.getService_IsRealizedByProcesses();
 
 		/**
-		 * The meta object literal for the '<em><b>Meets Qualities</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Meets Service Qualities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SERVICE__MEETS_QUALITIES = eINSTANCE.getService_MeetsQualities();
+		EReference SERVICE__MEETS_SERVICE_QUALITIES = eINSTANCE.getService_MeetsServiceQualities();
 
 		/**
 		 * The meta object literal for the '<em><b>Consumes Services</b></em>' reference list feature.
@@ -13175,6 +13110,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SERVICE__DECOMPOSES_SERVICES = eINSTANCE.getService_DecomposesServices();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Decomposed By Services</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICE__IS_DECOMPOSED_BY_SERVICES = eINSTANCE.getService_IsDecomposedByServices();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ApplicationComponentImpl <em>Application Component</em>}' class.
@@ -13215,6 +13158,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TECHNOLOGY_COMPONENT = eINSTANCE.getTechnologyComponent();
+
+		/**
+		 * The meta object literal for the '<em><b>Standard Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TECHNOLOGY_COMPONENT__STANDARD_CLASS = eINSTANCE.getTechnologyComponent_StandardClass();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}' enum.

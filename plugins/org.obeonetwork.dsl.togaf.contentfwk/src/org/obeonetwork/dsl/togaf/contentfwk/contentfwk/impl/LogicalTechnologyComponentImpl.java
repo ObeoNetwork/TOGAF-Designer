@@ -36,16 +36,15 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getStandardClass <em>Standard Class</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getProvidesPlatformForServices <em>Provides Platform For Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getSuppliesPlatformServices <em>Supplies Platform Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getDecomposesLogicalTechnologyComponent <em>Decomposes Logical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsDependentOnLogicalTechnologyComponents <em>Is Dependent On Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsExtendedByPhysicalTechnologyComponent <em>Is Extended By Physical Technology Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsRequiredByLogicalTechnologyComponents <em>Is Required By Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalTechnologyComponentImpl#getIsDecomposedByLogicalTechnologyComponents <em>Is Decomposed By Logical Technology Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,43 +60,6 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * @ordered
 	 */
 	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
-	/**
-	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date RETIRE_DATE_EDEFAULT = null;
-
 	/**
 	 * The default value of the '{@link #getCategoryTRM() <em>Category TRM</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -133,7 +95,7 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -142,79 +104,7 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getRetireDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRetireDate(Date newRetireDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
+		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -270,6 +160,16 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesLogicalTechnologyComponent(LogicalTechnologyComponent newDecomposesLogicalTechnologyComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesLogicalTechnologyComponent, ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesLogicalTechnologyComponent(LogicalTechnologyComponent newDecomposesLogicalTechnologyComponent) {
 		eDynamicSet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT, newDecomposesLogicalTechnologyComponent);
 	}
@@ -308,6 +208,36 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	public EList<PhysicalTechnologyComponent> getIsExtendedByPhysicalTechnologyComponent() {
+		return (EList<PhysicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<LogicalTechnologyComponent> getIsRequiredByLogicalTechnologyComponents() {
+		return (EList<LogicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<LogicalTechnologyComponent> getIsDecomposedByLogicalTechnologyComponents() {
+		return (EList<LogicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS, ContentfwkPackage.Literals.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -317,6 +247,17 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuppliesPlatformServices()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedByPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT:
+				LogicalTechnologyComponent decomposesLogicalTechnologyComponent = basicGetDecomposesLogicalTechnologyComponent();
+				if (decomposesLogicalTechnologyComponent != null)
+					msgs = ((InternalEObject)decomposesLogicalTechnologyComponent).eInverseRemove(this, ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS, LogicalTechnologyComponent.class, msgs);
+				return basicSetDecomposesLogicalTechnologyComponent((LogicalTechnologyComponent)otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDependentOnLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRequiredByLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -335,6 +276,14 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return ((InternalEList<?>)getSuppliesPlatformServices()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<?>)getIsRealizedByPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT:
+				return basicSetDecomposesLogicalTechnologyComponent(null, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsDependentOnLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsRequiredByLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsDecomposedByLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -349,14 +298,6 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 		switch (featureID) {
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass();
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				return getStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				return getRetireDate();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES:
 				return getProvidesPlatformForServices();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES:
@@ -370,6 +311,12 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return getIsDependentOnLogicalTechnologyComponents();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				return getCategoryTRM();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return getIsExtendedByPhysicalTechnologyComponent();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return getIsRequiredByLogicalTechnologyComponents();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return getIsDecomposedByLogicalTechnologyComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -385,18 +332,6 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 		switch (featureID) {
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass((StandardsClass)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				setRetireDate((Date)newValue);
 				return;
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES:
 				getProvidesPlatformForServices().clear();
@@ -420,6 +355,18 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				setCategoryTRM((String)newValue);
 				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				getIsExtendedByPhysicalTechnologyComponent().clear();
+				getIsExtendedByPhysicalTechnologyComponent().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				getIsRequiredByLogicalTechnologyComponents().clear();
+				getIsRequiredByLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
+				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				getIsDecomposedByLogicalTechnologyComponents().clear();
+				getIsDecomposedByLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -434,18 +381,6 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 		switch (featureID) {
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass(STANDARD_CLASS_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				setRetireDate(RETIRE_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES:
 				getProvidesPlatformForServices().clear();
@@ -465,6 +400,15 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
 				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				getIsExtendedByPhysicalTechnologyComponent().clear();
+				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				getIsRequiredByLogicalTechnologyComponents().clear();
+				return;
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				getIsDecomposedByLogicalTechnologyComponents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -479,14 +423,6 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 		switch (featureID) {
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
-			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES:
 				return !getProvidesPlatformForServices().isEmpty();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES:
@@ -499,6 +435,12 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 				return !getIsDependentOnLogicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return !getIsExtendedByPhysicalTechnologyComponent().isEmpty();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return !getIsRequiredByLogicalTechnologyComponents().isEmpty();
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
+				return !getIsDecomposedByLogicalTechnologyComponents().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -510,18 +452,9 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (derivedFeatureID) {
-				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
-				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
-				default: return -1;
-			}
-		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (derivedFeatureID) {
+				case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}
@@ -535,18 +468,9 @@ public class LogicalTechnologyComponentImpl extends ElementImpl implements Logic
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (baseFeatureID) {
-				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
-				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE;
-				default: return -1;
-			}
-		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (baseFeatureID) {
+				case ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}

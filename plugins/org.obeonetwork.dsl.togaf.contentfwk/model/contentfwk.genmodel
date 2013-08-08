@@ -46,8 +46,6 @@
     </genEnums>
     <genClasses ecoreClass="contentfwk.ecore#//EnterpriseArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/architectures"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/containers"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/labels"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//Architecture"/>
     <genClasses ecoreClass="contentfwk.ecore#//BusinessArchitecture">
@@ -82,16 +80,20 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Driver/createsGoals"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Driver/motivatesOrganizationUnits"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Driver/decomposesDriver"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Driver/isDecomposedByDrivers"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Goal">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Goal/addressesDrivers"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Goal/isRealizedThroughObjectives"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Goal/decomposesGoal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Goal/isDecomposedByGoals"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Objective">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Objective/realizesGoals"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Objective/isTrackedAgainstMeasures"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Objective/decomposesObjective"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Objective/isSupportedByBusinessService"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Objective/isDecomposedByObjectives"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//OrganizationUnit">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//OrganizationUnit/ownsAndGovernsServices"/>
@@ -102,11 +104,13 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//OrganizationUnit/producesProducts"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//OrganizationUnit/operatesInLocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//OrganizationUnit/headcount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//OrganizationUnit/decomposesOrganizationUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//OrganizationUnit/isDecomposedByOrganizationUnits"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Actor">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/suppliesEntities"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/consumesEntities"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/belongsTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/suppliesDataEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/consumesDataEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/belongsToOrganizationUnit"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/interactsWithFunctions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/performsTaskInRoles"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/participatesInProcesses"/>
@@ -118,13 +122,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Actor/actorGoal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Actor/actorTasks"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/performsFunctions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/decomposesActors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/decomposesActor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Actor/isDecomposedByActors"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Role">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Role/isAssumedByActors"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Role/accessesFunctions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Role/estimatedFTEs"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Role/decomposesRole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Role/isDecomposedByRoles"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//DataEntity">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//DataEntity/isSuppliedByActors"/>
@@ -136,8 +142,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//DataEntity/dataEntityCategory"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//DataEntity/privacyClassification"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//DataEntity/retentionClassification"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//DataEntity/decomposeEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//DataEntity/decomposesDataEntity"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//DataEntity/relatesTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//DataEntity/isDecomposedByDataEntities"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//LogicalApplicationComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalApplicationComponent/implementsServices"/>
@@ -145,17 +152,19 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalApplicationComponent/isExtendedByPhysicalApplicationComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalApplicationComponent/communicatesWith"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalApplicationComponent/decomposesLogicalApplicationComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalApplicationComponent/isDecomposedByLogicalApplicationComponents"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Function">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isPerformedByActors"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isOwnedByUnit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isOwnedByOrganizationUnit"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isBoundedByServices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/supportsProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isRealizedByProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/canBeAccessedByRoles"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/supportsActors"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/decomposesFunction"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/communicatedWithFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/communicatesWithFunctions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Function/isDecomposedByFunctions"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//BusinessService">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//BusinessService/supportsObjective"/>
@@ -177,13 +186,15 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Process/decomposesProcess"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Process/precedesProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Process/followsProcesses"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Process/isDecomposedByProcesses"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//PlatformService">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PlatformService/isSuppliedByLogicalTechnologyComponents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PlatformService/categoryTRM"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PlatformService/standardClass"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//PhysicalTechnologyComponent">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/realizesApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/realizesPhysicalApplicationComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/extendsLogicalTechnologyComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/isHostedInLocation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalTechnologyComponent/productName"/>
@@ -193,6 +204,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/decomposesPhysicalTechnologyComponent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/isDependentOnPhysicalTechnologyComponents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalTechnologyComponent/categoryTRM"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/isRequiredByPhysicalTechnologyComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalTechnologyComponent/isDecomposedByPhysicalTechnologyComponents"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Product">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Product/isProducedByOrganizationUnits"/>
@@ -202,6 +215,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Measure/setsPerformanceCriteriaForObjectives"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Measure/setsPerformanceCriteriaForServices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Measure/decomposesMeasure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Measure/isDecomposedByMeasures"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//ServiceQuality">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//ServiceQuality/appliesToServices"/>
@@ -211,8 +225,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Contract/governsAndMeasuresBusinessServices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Contract/meetsServiceQuality"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/behaviorCharacteristics"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/ServiceNameCaller"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/ServiceNameCalled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/serviceNameCaller"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/serviceNameCalled"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/serviceQualityCharacteristics"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/availabilityQualityCharacteristics"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/servicesTimes"/>
@@ -245,7 +259,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Contract/peakProfileLongTerm"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Event">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Event/isResolvedByBusinessServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Event/isResolvedByServices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Event/isResolvedByProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Event/isGeneratedByProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Event/isResolvedByActors"/>
@@ -262,22 +276,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/sourceDescr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/ownerDescr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EReference contentfwk.ecore#//Element/category"/>
-    </genClasses>
-    <genClasses ecoreClass="contentfwk.ecore#//Container">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/subContainers"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Container/labels"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Container/description"/>
-    </genClasses>
-    <genClasses ecoreClass="contentfwk.ecore#//Label">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Label/subLabels"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Label/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Label/ownedElements"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Label/containers"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Label/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Label/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Element/category"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Location">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/containsActors"/>
@@ -286,6 +285,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/containsPhysicalApplicationComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/containsPhysicalTechnologyComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/decomposesLocation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Location/isDecomposedByLocations"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Capability">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Capability/isDeliveredBy"/>
@@ -305,13 +305,13 @@
     <genClasses ecoreClass="contentfwk.ecore#//Assumption"/>
     <genClasses ecoreClass="contentfwk.ecore#//Requirement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Requirement/statementOfRequirement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Requirement/rationale"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Requirement/acceptanceCriteria"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//Gap"/>
     <genClasses ecoreClass="contentfwk.ecore#//WorkPackage">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//WorkPackage/workPackageCategory"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//WorkPackage/deliversCapabilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//WorkPackage/capabilityDelivered"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//LogicalDataComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalDataComponent/encapsulatesDataEntities"/>
@@ -322,6 +322,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalDataComponent/isHotedInLocation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalDataComponent/decomposesPhysicalDataComponent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalDataComponent/encapsulatesPhysicalApplicationComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalDataComponent/isDecomposedByPhysicalDataComponents"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//ApplicationArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//ApplicationArchitecture/logicalApplicationComponents"/>
@@ -337,7 +338,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/dateOfLastRelease"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/dateOfNextRelease"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/retirementDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/availabilityQualityCharacteristics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/availabilityCharacteristics"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/servicesTimes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/manageabilityCharacteristics"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//PhysicalApplicationComponent/serviceabilityCharacteristics"/>
@@ -365,6 +366,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalApplicationComponent/encapsulatesPhysicalDataComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalApplicationComponent/isRealizedByPhysicalTechnologyComponents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalApplicationComponent/decomposesPhysicalApplicationComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//PhysicalApplicationComponent/isDecomposedByPhysicalApplicationComponents"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//LogicalTechnologyComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/providesPlatformForServices"/>
@@ -373,6 +375,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/decomposesLogicalTechnologyComponent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/isDependentOnLogicalTechnologyComponents"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//LogicalTechnologyComponent/categoryTRM"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/isExtendedByPhysicalTechnologyComponent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/isRequiredByLogicalTechnologyComponents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//LogicalTechnologyComponent/isDecomposedByLogicalTechnologyComponents"/>
     </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//StrategicArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//StrategicArchitecture/capabilities"/>
@@ -381,15 +386,15 @@
     <genClasses image="false" ecoreClass="contentfwk.ecore#//Standard">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/standardClass"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/standardCreationDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/lastStandardCreationDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/nextStandardCreationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/lastStandardReviewDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/nextStandardReviewDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Standard/retireDate"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//Service">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isProvidedToActors"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/providesGovernedInterfaceToAccessFunctions"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/providesEntities"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/consumesEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/providesDataEntities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/consumesDataEntities"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isGovernedAndMeasuredByContracts"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/resolvesEvents"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isImplementedOnLogicalTechnologyComponents"/>
@@ -398,13 +403,16 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isTrackedAgainstMeasures"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/supportsProcesses"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isRealizedByProcesses"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/meetsQualities"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/meetsServiceQualities"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/consumesServices"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/decomposesServices"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference contentfwk.ecore#//Service/isDecomposedByServices"/>
     </genClasses>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//ApplicationComponent"/>
     <genClasses ecoreClass="contentfwk.ecore#//InformationSystemService"/>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//DataComponent"/>
-    <genClasses image="false" ecoreClass="contentfwk.ecore#//TechnologyComponent"/>
+    <genClasses image="false" ecoreClass="contentfwk.ecore#//TechnologyComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//TechnologyComponent/standardClass"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

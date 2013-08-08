@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getDecomposesProcess <em>Decomposes Process</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getPrecedesProcesses <em>Precedes Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getFollowsProcesses <em>Follows Processes</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getIsDecomposedByProcesses <em>Is Decomposed By Processes</em>}</li>
  * </ul>
  * </p>
  *
@@ -310,6 +311,7 @@ public interface Process extends Element, Standard {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Process</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getIsDecomposedByProcesses <em>Is Decomposed By Processes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Process</em>' reference isn't clear,
@@ -319,7 +321,8 @@ public interface Process extends Element, Standard {
 	 * @return the value of the '<em>Decomposes Process</em>' reference.
 	 * @see #setDecomposesProcess(Process)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getProcess_DecomposesProcess()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getIsDecomposedByProcesses
+	 * @model opposite="isDecomposedByProcesses"
 	 * @generated
 	 */
 	Process getDecomposesProcess();
@@ -369,5 +372,23 @@ public interface Process extends Element, Standard {
 	 * @generated
 	 */
 	EList<Process> getFollowsProcesses();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Processes</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getDecomposesProcess <em>Decomposes Process</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Processes</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Processes</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getProcess_IsDecomposedByProcesses()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process#getDecomposesProcess
+	 * @model opposite="decomposesProcess"
+	 * @generated
+	 */
+	EList<Process> getIsDecomposedByProcesses();
 
 } // Process

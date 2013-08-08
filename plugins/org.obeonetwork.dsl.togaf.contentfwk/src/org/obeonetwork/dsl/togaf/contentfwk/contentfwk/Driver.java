@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getCreatesGoals <em>Creates Goals</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getMotivatesOrganizationUnits <em>Motivates Organization Units</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getDecomposesDriver <em>Decomposes Driver</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getIsDecomposedByDrivers <em>Is Decomposed By Drivers</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,7 @@ public interface Driver extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Driver</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getIsDecomposedByDrivers <em>Is Decomposed By Drivers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Driver</em>' reference isn't clear,
@@ -79,7 +81,8 @@ public interface Driver extends Element {
 	 * @return the value of the '<em>Decomposes Driver</em>' reference.
 	 * @see #setDecomposesDriver(Driver)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDriver_DecomposesDriver()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getIsDecomposedByDrivers
+	 * @model opposite="isDecomposedByDrivers"
 	 * @generated
 	 */
 	Driver getDecomposesDriver();
@@ -93,5 +96,23 @@ public interface Driver extends Element {
 	 * @generated
 	 */
 	void setDecomposesDriver(Driver value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Drivers</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getDecomposesDriver <em>Decomposes Driver</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Drivers</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Drivers</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDriver_IsDecomposedByDrivers()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Driver#getDecomposesDriver
+	 * @model opposite="decomposesDriver"
+	 * @generated
+	 */
+	EList<Driver> getIsDecomposedByDrivers();
 
 } // Driver

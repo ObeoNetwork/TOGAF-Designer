@@ -645,52 +645,6 @@ public class ContentfwkItemProviderAdapterFactory extends ContentfwkAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ContainerItemProvider containerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createContainerAdapter() {
-		if (containerItemProvider == null) {
-			containerItemProvider = new ContainerItemProvider(this);
-		}
-
-		return containerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LabelItemProvider labelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLabelAdapter() {
-		if (labelItemProvider == null) {
-			labelItemProvider = new LabelItemProvider(this);
-		}
-
-		return labelItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Location} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1185,8 +1139,6 @@ public class ContentfwkItemProviderAdapterFactory extends ContentfwkAdapterFacto
 		if (eventItemProvider != null) eventItemProvider.dispose();
 		if (controlItemProvider != null) controlItemProvider.dispose();
 		if (elementItemProvider != null) elementItemProvider.dispose();
-		if (containerItemProvider != null) containerItemProvider.dispose();
-		if (labelItemProvider != null) labelItemProvider.dispose();
 		if (locationItemProvider != null) locationItemProvider.dispose();
 		if (capabilityItemProvider != null) capabilityItemProvider.dispose();
 		if (principleItemProvider != null) principleItemProvider.dispose();

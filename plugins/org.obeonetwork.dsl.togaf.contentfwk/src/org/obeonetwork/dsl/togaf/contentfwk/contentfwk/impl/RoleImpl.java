@@ -34,6 +34,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl#getAccessesFunctions <em>Accesses Functions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl#getEstimatedFTEs <em>Estimated FT Es</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl#getDecomposesRole <em>Decomposes Role</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RoleImpl#getIsDecomposedByRoles <em>Is Decomposed By Roles</em>}</li>
  * </ul>
  * </p>
  *
@@ -130,8 +131,28 @@ public class RoleImpl extends ElementImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesRole(Role newDecomposesRole, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesRole, ContentfwkPackage.ROLE__DECOMPOSES_ROLE, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesRole(Role newDecomposesRole) {
 		eDynamicSet(ContentfwkPackage.ROLE__DECOMPOSES_ROLE, ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE, newDecomposesRole);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Role> getIsDecomposedByRoles() {
+		return (EList<Role>)eDynamicGet(ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES, ContentfwkPackage.Literals.ROLE__IS_DECOMPOSED_BY_ROLES, true, true);
 	}
 
 	/**
@@ -147,6 +168,13 @@ public class RoleImpl extends ElementImpl implements Role {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsAssumedByActors()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAccessesFunctions()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				Role decomposesRole = basicGetDecomposesRole();
+				if (decomposesRole != null)
+					msgs = ((InternalEObject)decomposesRole).eInverseRemove(this, ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES, Role.class, msgs);
+				return basicSetDecomposesRole((Role)otherEnd, msgs);
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByRoles()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -163,6 +191,10 @@ public class RoleImpl extends ElementImpl implements Role {
 				return ((InternalEList<?>)getIsAssumedByActors()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ROLE__ACCESSES_FUNCTIONS:
 				return ((InternalEList<?>)getAccessesFunctions()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
+				return basicSetDecomposesRole(null, msgs);
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				return ((InternalEList<?>)getIsDecomposedByRoles()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -184,6 +216,8 @@ public class RoleImpl extends ElementImpl implements Role {
 			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
 				if (resolve) return getDecomposesRole();
 				return basicGetDecomposesRole();
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				return getIsDecomposedByRoles();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,6 +245,10 @@ public class RoleImpl extends ElementImpl implements Role {
 			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
 				setDecomposesRole((Role)newValue);
 				return;
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				getIsDecomposedByRoles().clear();
+				getIsDecomposedByRoles().addAll((Collection<? extends Role>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -235,6 +273,9 @@ public class RoleImpl extends ElementImpl implements Role {
 			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
 				setDecomposesRole((Role)null);
 				return;
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				getIsDecomposedByRoles().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -255,6 +296,8 @@ public class RoleImpl extends ElementImpl implements Role {
 				return ESTIMATED_FT_ES_EDEFAULT == null ? getEstimatedFTEs() != null : !ESTIMATED_FT_ES_EDEFAULT.equals(getEstimatedFTEs());
 			case ContentfwkPackage.ROLE__DECOMPOSES_ROLE:
 				return basicGetDecomposesRole() != null;
+			case ContentfwkPackage.ROLE__IS_DECOMPOSED_BY_ROLES:
+				return !getIsDecomposedByRoles().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

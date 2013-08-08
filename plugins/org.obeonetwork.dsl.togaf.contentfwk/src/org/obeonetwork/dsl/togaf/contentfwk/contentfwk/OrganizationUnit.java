@@ -33,6 +33,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getProducesProducts <em>Produces Products</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getOperatesInLocation <em>Operates In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getHeadcount <em>Headcount</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit <em>Decomposes Organization Unit</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getIsDecomposedByOrganizationUnits <em>Is Decomposed By Organization Units</em>}</li>
  * </ul>
  * </p>
  *
@@ -62,7 +64,7 @@ public interface OrganizationUnit extends Element {
 	/**
 	 * Returns the value of the '<em><b>Contains Actors</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo <em>Belongs To</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit <em>Belongs To Organization Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Actors</em>' reference list isn't clear,
@@ -71,8 +73,8 @@ public interface OrganizationUnit extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Contains Actors</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getOrganizationUnit_ContainsActors()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsTo
-	 * @model opposite="belongsTo"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getBelongsToOrganizationUnit
+	 * @model opposite="belongsToOrganizationUnit"
 	 * @generated
 	 */
 	EList<Actor> getContainsActors();
@@ -80,7 +82,7 @@ public interface OrganizationUnit extends Element {
 	/**
 	 * Returns the value of the '<em><b>Owns Functions</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit <em>Is Owned By Unit</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit <em>Is Owned By Organization Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Owns Functions</em>' reference list isn't clear,
@@ -89,8 +91,8 @@ public interface OrganizationUnit extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Owns Functions</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getOrganizationUnit_OwnsFunctions()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit
-	 * @model opposite="isOwnedByUnit"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit
+	 * @model opposite="isOwnedByOrganizationUnit"
 	 * @generated
 	 */
 	EList<Function> getOwnsFunctions();
@@ -202,5 +204,51 @@ public interface OrganizationUnit extends Element {
 	 * @generated
 	 */
 	void setHeadcount(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Decomposes Organization Unit</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getIsDecomposedByOrganizationUnits <em>Is Decomposed By Organization Units</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decomposes Organization Unit</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decomposes Organization Unit</em>' reference.
+	 * @see #setDecomposesOrganizationUnit(OrganizationUnit)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getOrganizationUnit_DecomposesOrganizationUnit()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getIsDecomposedByOrganizationUnits
+	 * @model opposite="isDecomposedByOrganizationUnits"
+	 * @generated
+	 */
+	OrganizationUnit getDecomposesOrganizationUnit();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit <em>Decomposes Organization Unit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decomposes Organization Unit</em>' reference.
+	 * @see #getDecomposesOrganizationUnit()
+	 * @generated
+	 */
+	void setDecomposesOrganizationUnit(OrganizationUnit value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Organization Units</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit <em>Decomposes Organization Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Organization Units</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Organization Units</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getOrganizationUnit_IsDecomposedByOrganizationUnits()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getDecomposesOrganizationUnit
+	 * @model opposite="decomposesOrganizationUnit"
+	 * @generated
+	 */
+	EList<OrganizationUnit> getIsDecomposedByOrganizationUnits();
 
 } // OrganizationUnit

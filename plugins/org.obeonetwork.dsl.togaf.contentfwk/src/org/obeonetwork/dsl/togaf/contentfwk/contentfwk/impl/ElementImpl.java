@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,6 +88,16 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,8 +190,17 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Label> getCategory() {
-		return (EList<Label>)eDynamicGet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
+	public String getCategory() {
+		return (String)eDynamicGet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(String newCategory) {
+		eDynamicSet(ContentfwkPackage.ELEMENT__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
 	}
 
 	/**
@@ -252,8 +270,6 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategory()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -270,8 +286,6 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ELEMENT__IS_DELEGATED_BY:
 				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ELEMENT__CATEGORY:
-				return ((InternalEList<?>)getCategory()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -337,8 +351,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				setID((String)newValue);
 				return;
 			case ContentfwkPackage.ELEMENT__CATEGORY:
-				getCategory().clear();
-				getCategory().addAll((Collection<? extends Label>)newValue);
+				setCategory((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -374,7 +387,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 				setID(ID_EDEFAULT);
 				return;
 			case ContentfwkPackage.ELEMENT__CATEGORY:
-				getCategory().clear();
+				setCategory(CATEGORY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -403,7 +416,7 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 			case ContentfwkPackage.ELEMENT__ID:
 				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
 			case ContentfwkPackage.ELEMENT__CATEGORY:
-				return !getCategory().isEmpty();
+				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
 		}
 		return super.eIsSet(featureID);
 	}

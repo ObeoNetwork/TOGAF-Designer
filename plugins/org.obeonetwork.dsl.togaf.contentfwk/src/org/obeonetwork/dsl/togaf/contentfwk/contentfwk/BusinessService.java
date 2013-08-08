@@ -37,6 +37,7 @@ public interface BusinessService extends Element, Service {
 	/**
 	 * Returns the value of the '<em><b>Supports Objective</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsSupportedByBusinessService <em>Is Supported By Business Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -44,7 +45,8 @@ public interface BusinessService extends Element, Service {
 	 * <!-- end-model-doc -->
 	 * @return the value of the '<em>Supports Objective</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getBusinessService_SupportsObjective()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective#getIsSupportedByBusinessService
+	 * @model opposite="isSupportedByBusinessService"
 	 * @generated
 	 */
 	EList<Objective> getSupportsObjective();

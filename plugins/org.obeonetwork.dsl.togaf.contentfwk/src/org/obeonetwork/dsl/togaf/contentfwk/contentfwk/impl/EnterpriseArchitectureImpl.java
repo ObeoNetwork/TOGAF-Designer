@@ -21,10 +21,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Container;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,8 +32,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getArchitectures <em>Architectures</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getContainers <em>Containers</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getLabels <em>Labels</em>}</li>
  * </ul>
  * </p>
  *
@@ -86,35 +82,11 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	public EList<Container> getContainers() {
-		return (EList<Container>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Label> getLabels() {
-		return (EList<Label>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__LABELS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
 				return ((InternalEList<?>)getArchitectures()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return ((InternalEList<?>)getContainers()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
-				return ((InternalEList<?>)getLabels()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,10 +101,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 		switch (featureID) {
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
 				return getArchitectures();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return getContainers();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
-				return getLabels();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -150,14 +118,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 				getArchitectures().clear();
 				getArchitectures().addAll((Collection<? extends Architecture>)newValue);
 				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				getContainers().clear();
-				getContainers().addAll((Collection<? extends Container>)newValue);
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
-				getLabels().clear();
-				getLabels().addAll((Collection<? extends Label>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -173,12 +133,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
 				getArchitectures().clear();
 				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				getContainers().clear();
-				return;
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
-				getLabels().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,10 +147,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements Enterpr
 		switch (featureID) {
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
 				return !getArchitectures().isEmpty();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-				return !getContainers().isEmpty();
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
-				return !getLabels().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

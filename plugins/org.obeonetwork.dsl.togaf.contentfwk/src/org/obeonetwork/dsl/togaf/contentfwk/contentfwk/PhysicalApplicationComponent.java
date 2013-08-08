@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getDateOfLastRelease <em>Date Of Last Release</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getDateOfNextRelease <em>Date Of Next Release</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getRetirementDate <em>Retirement Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityQualityCharacteristics <em>Availability Quality Characteristics</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityCharacteristics <em>Availability Characteristics</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getServicesTimes <em>Services Times</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getManageabilityCharacteristics <em>Manageability Characteristics</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getServiceabilityCharacteristics <em>Serviceability Characteristics</em>}</li>
@@ -59,6 +59,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getEncapsulatesPhysicalDataComponents <em>Encapsulates Physical Data Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getDecomposesPhysicalApplicationComponent <em>Decomposes Physical Application Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsDecomposedByPhysicalApplicationComponents <em>Is Decomposed By Physical Application Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -253,30 +254,30 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	void setRetirementDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Availability Quality Characteristics</b></em>' attribute.
+	 * Returns the value of the '<em><b>Availability Characteristics</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Availability Quality Characteristics</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Availability Characteristics</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Availability Quality Characteristics</em>' attribute.
-	 * @see #setAvailabilityQualityCharacteristics(String)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_AvailabilityQualityCharacteristics()
+	 * @return the value of the '<em>Availability Characteristics</em>' attribute.
+	 * @see #setAvailabilityCharacteristics(String)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_AvailabilityCharacteristics()
 	 * @model
 	 * @generated
 	 */
-	String getAvailabilityQualityCharacteristics();
+	String getAvailabilityCharacteristics();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityQualityCharacteristics <em>Availability Quality Characteristics</em>}' attribute.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getAvailabilityCharacteristics <em>Availability Characteristics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Availability Quality Characteristics</em>' attribute.
-	 * @see #getAvailabilityQualityCharacteristics()
+	 * @param value the new value of the '<em>Availability Characteristics</em>' attribute.
+	 * @see #getAvailabilityCharacteristics()
 	 * @generated
 	 */
-	void setAvailabilityQualityCharacteristics(String value);
+	void setAvailabilityCharacteristics(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Services Times</b></em>' attribute.
@@ -905,6 +906,7 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	/**
 	 * Returns the value of the '<em><b>Encapsulates Physical Data Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getEncapsulatesPhysicalApplicationComponents <em>Encapsulates Physical Application Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Encapsulates Physical Data Components</em>' reference list isn't clear,
@@ -913,7 +915,8 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Encapsulates Physical Data Components</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_EncapsulatesPhysicalDataComponents()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalDataComponent#getEncapsulatesPhysicalApplicationComponents
+	 * @model opposite="encapsulatesPhysicalApplicationComponents"
 	 * @generated
 	 */
 	EList<PhysicalDataComponent> getEncapsulatesPhysicalDataComponents();
@@ -921,6 +924,7 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	/**
 	 * Returns the value of the '<em><b>Is Realized By Physical Technology Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesPhysicalApplicationComponents <em>Realizes Physical Application Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Realized By Physical Technology Components</em>' reference list isn't clear,
@@ -929,13 +933,15 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Realized By Physical Technology Components</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_IsRealizedByPhysicalTechnologyComponents()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent#getRealizesPhysicalApplicationComponents
+	 * @model opposite="realizesPhysicalApplicationComponents"
 	 * @generated
 	 */
 	EList<PhysicalTechnologyComponent> getIsRealizedByPhysicalTechnologyComponents();
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Physical Application Component</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsDecomposedByPhysicalApplicationComponents <em>Is Decomposed By Physical Application Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Physical Application Component</em>' reference isn't clear,
@@ -945,7 +951,8 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	 * @return the value of the '<em>Decomposes Physical Application Component</em>' reference.
 	 * @see #setDecomposesPhysicalApplicationComponent(PhysicalApplicationComponent)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_DecomposesPhysicalApplicationComponent()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getIsDecomposedByPhysicalApplicationComponents
+	 * @model opposite="isDecomposedByPhysicalApplicationComponents"
 	 * @generated
 	 */
 	PhysicalApplicationComponent getDecomposesPhysicalApplicationComponent();
@@ -959,5 +966,23 @@ public interface PhysicalApplicationComponent extends Element, ApplicationCompon
 	 * @generated
 	 */
 	void setDecomposesPhysicalApplicationComponent(PhysicalApplicationComponent value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Physical Application Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getDecomposesPhysicalApplicationComponent <em>Decomposes Physical Application Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Physical Application Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Physical Application Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPhysicalApplicationComponent_IsDecomposedByPhysicalApplicationComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalApplicationComponent#getDecomposesPhysicalApplicationComponent
+	 * @model opposite="decomposesPhysicalApplicationComponent"
+	 * @generated
+	 */
+	EList<PhysicalApplicationComponent> getIsDecomposedByPhysicalApplicationComponents();
 
 } // PhysicalApplicationComponent

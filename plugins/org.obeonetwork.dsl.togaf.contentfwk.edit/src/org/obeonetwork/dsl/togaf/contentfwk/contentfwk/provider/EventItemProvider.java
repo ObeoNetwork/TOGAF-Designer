@@ -62,7 +62,7 @@ public class EventItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIsResolvedByBusinessServicesPropertyDescriptor(object);
+			addIsResolvedByServicesPropertyDescriptor(object);
 			addIsResolvedByProcessesPropertyDescriptor(object);
 			addIsGeneratedByProcessesPropertyDescriptor(object);
 			addIsResolvedByActorsPropertyDescriptor(object);
@@ -72,19 +72,19 @@ public class EventItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Resolved By Business Services feature.
+	 * This adds a property descriptor for the Is Resolved By Services feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addIsResolvedByBusinessServicesPropertyDescriptor(Object object) {
+	protected void addIsResolvedByServicesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Event_isResolvedByBusinessServices_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Event_isResolvedByBusinessServices_feature", "_UI_Event_type"),
-				 ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_BUSINESS_SERVICES,
+				 getString("_UI_Event_isResolvedByServices_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Event_isResolvedByServices_feature", "_UI_Event_type"),
+				 ContentfwkPackage.Literals.EVENT__IS_RESOLVED_BY_SERVICES,
 				 true,
 				 false,
 				 true,

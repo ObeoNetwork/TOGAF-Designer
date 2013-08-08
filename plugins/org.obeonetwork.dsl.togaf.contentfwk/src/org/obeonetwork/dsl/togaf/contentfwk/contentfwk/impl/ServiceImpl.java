@@ -40,8 +40,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsProvidedToActors <em>Is Provided To Actors</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getProvidesGovernedInterfaceToAccessFunctions <em>Provides Governed Interface To Access Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getProvidesEntities <em>Provides Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getConsumesEntities <em>Consumes Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getProvidesDataEntities <em>Provides Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getConsumesDataEntities <em>Consumes Data Entities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsGovernedAndMeasuredByContracts <em>Is Governed And Measured By Contracts</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getResolvesEvents <em>Resolves Events</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsImplementedOnLogicalTechnologyComponents <em>Is Implemented On Logical Technology Components</em>}</li>
@@ -50,9 +50,10 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsTrackedAgainstMeasures <em>Is Tracked Against Measures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getSupportsProcesses <em>Supports Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getMeetsQualities <em>Meets Qualities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getMeetsServiceQualities <em>Meets Service Qualities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getConsumesServices <em>Consumes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getDecomposesServices <em>Decomposes Services</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ServiceImpl#getIsDecomposedByServices <em>Is Decomposed By Services</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,8 +105,8 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getProvidesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.SERVICE__PROVIDES_ENTITIES, ContentfwkPackage.Literals.SERVICE__PROVIDES_ENTITIES, true, true);
+	public EList<DataEntity> getProvidesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES, ContentfwkPackage.Literals.SERVICE__PROVIDES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -114,8 +115,8 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getConsumesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.SERVICE__CONSUMES_ENTITIES, ContentfwkPackage.Literals.SERVICE__CONSUMES_ENTITIES, true, true);
+	public EList<DataEntity> getConsumesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES, ContentfwkPackage.Literals.SERVICE__CONSUMES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -204,8 +205,8 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<ServiceQuality> getMeetsQualities() {
-		return (EList<ServiceQuality>)eDynamicGet(ContentfwkPackage.SERVICE__MEETS_QUALITIES, ContentfwkPackage.Literals.SERVICE__MEETS_QUALITIES, true, true);
+	public EList<ServiceQuality> getMeetsServiceQualities() {
+		return (EList<ServiceQuality>)eDynamicGet(ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES, ContentfwkPackage.Literals.SERVICE__MEETS_SERVICE_QUALITIES, true, true);
 	}
 
 	/**
@@ -234,15 +235,27 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	public EList<Service> getIsDecomposedByServices() {
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES, ContentfwkPackage.Literals.SERVICE__IS_DECOMPOSED_BY_SERVICES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsProvidedToActors()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesDataEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesDataEntities()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__RESOLVES_EVENTS:
@@ -259,8 +272,12 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportsProcesses()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedByProcesses()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMeetsQualities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMeetsServiceQualities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecomposesServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByServices()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -273,12 +290,14 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS:
+				return ((InternalEList<?>)getIsProvidedToActors()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return ((InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<?>)getProvidesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<?>)getConsumesEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				return ((InternalEList<?>)getProvidesDataEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<?>)getConsumesDataEntities()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return ((InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__RESOLVES_EVENTS:
@@ -295,8 +314,12 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return ((InternalEList<?>)getSupportsProcesses()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES:
 				return ((InternalEList<?>)getIsRealizedByProcesses()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<?>)getMeetsQualities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				return ((InternalEList<?>)getMeetsServiceQualities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
+				return ((InternalEList<?>)getDecomposesServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return ((InternalEList<?>)getIsDecomposedByServices()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -313,10 +336,10 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return getIsProvidedToActors();
 			case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return getProvidesGovernedInterfaceToAccessFunctions();
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				return getProvidesEntities();
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				return getConsumesEntities();
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				return getProvidesDataEntities();
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				return getConsumesDataEntities();
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return getIsGovernedAndMeasuredByContracts();
 			case ContentfwkPackage.SERVICE__RESOLVES_EVENTS:
@@ -333,12 +356,14 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return getSupportsProcesses();
 			case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES:
 				return getIsRealizedByProcesses();
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				return getMeetsQualities();
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				return getMeetsServiceQualities();
 			case ContentfwkPackage.SERVICE__CONSUMES_SERVICES:
 				return getConsumesServices();
 			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
 				return getDecomposesServices();
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return getIsDecomposedByServices();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -360,13 +385,13 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				getProvidesGovernedInterfaceToAccessFunctions().clear();
 				getProvidesGovernedInterfaceToAccessFunctions().addAll((Collection<? extends Function>)newValue);
 				return;
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
-				getProvidesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				getProvidesDataEntities().clear();
+				getProvidesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
-				getConsumesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
+				getConsumesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				getIsGovernedAndMeasuredByContracts().clear();
@@ -400,9 +425,9 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				getIsRealizedByProcesses().clear();
 				getIsRealizedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
 				return;
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
-				getMeetsQualities().addAll((Collection<? extends ServiceQuality>)newValue);
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				getMeetsServiceQualities().clear();
+				getMeetsServiceQualities().addAll((Collection<? extends ServiceQuality>)newValue);
 				return;
 			case ContentfwkPackage.SERVICE__CONSUMES_SERVICES:
 				getConsumesServices().clear();
@@ -411,6 +436,10 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
 				getDecomposesServices().clear();
 				getDecomposesServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				getIsDecomposedByServices().clear();
+				getIsDecomposedByServices().addAll((Collection<? extends Service>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -430,11 +459,11 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 			case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				getProvidesGovernedInterfaceToAccessFunctions().clear();
 				return;
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				getProvidesDataEntities().clear();
 				return;
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
 				return;
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				getIsGovernedAndMeasuredByContracts().clear();
@@ -460,14 +489,17 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 			case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES:
 				getIsRealizedByProcesses().clear();
 				return;
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				getMeetsServiceQualities().clear();
 				return;
 			case ContentfwkPackage.SERVICE__CONSUMES_SERVICES:
 				getConsumesServices().clear();
 				return;
 			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
 				getDecomposesServices().clear();
+				return;
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				getIsDecomposedByServices().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -485,10 +517,10 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return !getIsProvidedToActors().isEmpty();
 			case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return !getProvidesGovernedInterfaceToAccessFunctions().isEmpty();
-			case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES:
-				return !getProvidesEntities().isEmpty();
-			case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES:
-				return !getConsumesEntities().isEmpty();
+			case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES:
+				return !getProvidesDataEntities().isEmpty();
+			case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES:
+				return !getConsumesDataEntities().isEmpty();
 			case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return !getIsGovernedAndMeasuredByContracts().isEmpty();
 			case ContentfwkPackage.SERVICE__RESOLVES_EVENTS:
@@ -505,12 +537,14 @@ public abstract class ServiceImpl extends StandardImpl implements Service {
 				return !getSupportsProcesses().isEmpty();
 			case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES:
 				return !getIsRealizedByProcesses().isEmpty();
-			case ContentfwkPackage.SERVICE__MEETS_QUALITIES:
-				return !getMeetsQualities().isEmpty();
+			case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES:
+				return !getMeetsServiceQualities().isEmpty();
 			case ContentfwkPackage.SERVICE__CONSUMES_SERVICES:
 				return !getConsumesServices().isEmpty();
 			case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES:
 				return !getDecomposesServices().isEmpty();
+			case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return !getIsDecomposedByServices().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

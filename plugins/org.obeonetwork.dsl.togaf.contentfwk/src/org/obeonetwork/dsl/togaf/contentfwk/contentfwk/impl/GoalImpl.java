@@ -33,6 +33,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Objective;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl#getAddressesDrivers <em>Addresses Drivers</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl#getIsRealizedThroughObjectives <em>Is Realized Through Objectives</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl#getDecomposesGoal <em>Decomposes Goal</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GoalImpl#getIsDecomposedByGoals <em>Is Decomposed By Goals</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,8 +102,28 @@ public class GoalImpl extends ElementImpl implements Goal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesGoal(Goal newDecomposesGoal, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesGoal, ContentfwkPackage.GOAL__DECOMPOSES_GOAL, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesGoal(Goal newDecomposesGoal) {
 		eDynamicSet(ContentfwkPackage.GOAL__DECOMPOSES_GOAL, ContentfwkPackage.Literals.GOAL__DECOMPOSES_GOAL, newDecomposesGoal);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Goal> getIsDecomposedByGoals() {
+		return (EList<Goal>)eDynamicGet(ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS, ContentfwkPackage.Literals.GOAL__IS_DECOMPOSED_BY_GOALS, true, true);
 	}
 
 	/**
@@ -118,6 +139,13 @@ public class GoalImpl extends ElementImpl implements Goal {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAddressesDrivers()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedThroughObjectives()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
+				Goal decomposesGoal = basicGetDecomposesGoal();
+				if (decomposesGoal != null)
+					msgs = ((InternalEObject)decomposesGoal).eInverseRemove(this, ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS, Goal.class, msgs);
+				return basicSetDecomposesGoal((Goal)otherEnd, msgs);
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByGoals()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -134,6 +162,10 @@ public class GoalImpl extends ElementImpl implements Goal {
 				return ((InternalEList<?>)getAddressesDrivers()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.GOAL__IS_REALIZED_THROUGH_OBJECTIVES:
 				return ((InternalEList<?>)getIsRealizedThroughObjectives()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
+				return basicSetDecomposesGoal(null, msgs);
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				return ((InternalEList<?>)getIsDecomposedByGoals()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -153,6 +185,8 @@ public class GoalImpl extends ElementImpl implements Goal {
 			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
 				if (resolve) return getDecomposesGoal();
 				return basicGetDecomposesGoal();
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				return getIsDecomposedByGoals();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,6 +211,10 @@ public class GoalImpl extends ElementImpl implements Goal {
 			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
 				setDecomposesGoal((Goal)newValue);
 				return;
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				getIsDecomposedByGoals().clear();
+				getIsDecomposedByGoals().addAll((Collection<? extends Goal>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +236,9 @@ public class GoalImpl extends ElementImpl implements Goal {
 			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
 				setDecomposesGoal((Goal)null);
 				return;
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				getIsDecomposedByGoals().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,6 +257,8 @@ public class GoalImpl extends ElementImpl implements Goal {
 				return !getIsRealizedThroughObjectives().isEmpty();
 			case ContentfwkPackage.GOAL__DECOMPOSES_GOAL:
 				return basicGetDecomposesGoal() != null;
+			case ContentfwkPackage.GOAL__IS_DECOMPOSED_BY_GOALS:
+				return !getIsDecomposedByGoals().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

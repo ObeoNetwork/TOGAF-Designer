@@ -247,24 +247,6 @@ public interface ContentfwkFactory extends EFactory {
 	Element createElement();
 
 	/**
-	 * Returns a new object of class '<em>Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Container</em>'.
-	 * @generated
-	 */
-	Container createContainer();
-
-	/**
-	 * Returns a new object of class '<em>Label</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Label</em>'.
-	 * @generated
-	 */
-	Label createLabel();
-
-	/**
 	 * Returns a new object of class '<em>Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

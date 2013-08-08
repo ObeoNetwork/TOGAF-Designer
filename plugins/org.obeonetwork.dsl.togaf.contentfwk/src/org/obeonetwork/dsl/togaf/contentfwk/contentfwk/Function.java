@@ -26,14 +26,15 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsPerformedByActors <em>Is Performed By Actors</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit <em>Is Owned By Unit</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit <em>Is Owned By Organization Unit</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsBoundedByServices <em>Is Bounded By Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getSupportsProcesses <em>Supports Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCanBeAccessedByRoles <em>Can Be Accessed By Roles</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getSupportsActors <em>Supports Actors</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getDecomposesFunction <em>Decomposes Function</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatedWithFunctions <em>Communicated With Functions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getCommunicatesWithFunctions <em>Communicates With Functions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsDecomposedByFunctions <em>Is Decomposed By Functions</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,32 +62,32 @@ public interface Function extends Element, Standard {
 	EList<Actor> getIsPerformedByActors();
 
 	/**
-	 * Returns the value of the '<em><b>Is Owned By Unit</b></em>' reference.
+	 * Returns the value of the '<em><b>Is Owned By Organization Unit</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getOwnsFunctions <em>Owns Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Owned By Unit</em>' reference isn't clear,
+	 * If the meaning of the '<em>Is Owned By Organization Unit</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Owned By Unit</em>' reference.
-	 * @see #setIsOwnedByUnit(OrganizationUnit)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_IsOwnedByUnit()
+	 * @return the value of the '<em>Is Owned By Organization Unit</em>' reference.
+	 * @see #setIsOwnedByOrganizationUnit(OrganizationUnit)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_IsOwnedByOrganizationUnit()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit#getOwnsFunctions
 	 * @model opposite="ownsFunctions"
 	 * @generated
 	 */
-	OrganizationUnit getIsOwnedByUnit();
+	OrganizationUnit getIsOwnedByOrganizationUnit();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByUnit <em>Is Owned By Unit</em>}' reference.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsOwnedByOrganizationUnit <em>Is Owned By Organization Unit</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Owned By Unit</em>' reference.
-	 * @see #getIsOwnedByUnit()
+	 * @param value the new value of the '<em>Is Owned By Organization Unit</em>' reference.
+	 * @see #getIsOwnedByOrganizationUnit()
 	 * @generated
 	 */
-	void setIsOwnedByUnit(OrganizationUnit value);
+	void setIsOwnedByOrganizationUnit(OrganizationUnit value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Bounded By Services</b></em>' reference list.
@@ -180,6 +181,7 @@ public interface Function extends Element, Standard {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Function</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsDecomposedByFunctions <em>Is Decomposed By Functions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Function</em>' reference isn't clear,
@@ -189,7 +191,8 @@ public interface Function extends Element, Standard {
 	 * @return the value of the '<em>Decomposes Function</em>' reference.
 	 * @see #setDecomposesFunction(Function)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_DecomposesFunction()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getIsDecomposedByFunctions
+	 * @model opposite="isDecomposedByFunctions"
 	 * @generated
 	 */
 	Function getDecomposesFunction();
@@ -205,19 +208,37 @@ public interface Function extends Element, Standard {
 	void setDecomposesFunction(Function value);
 
 	/**
-	 * Returns the value of the '<em><b>Communicated With Functions</b></em>' reference list.
+	 * Returns the value of the '<em><b>Communicates With Functions</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Communicated With Functions</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Communicates With Functions</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Communicated With Functions</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_CommunicatedWithFunctions()
+	 * @return the value of the '<em>Communicates With Functions</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_CommunicatesWithFunctions()
 	 * @model
 	 * @generated
 	 */
-	EList<Function> getCommunicatedWithFunctions();
+	EList<Function> getCommunicatesWithFunctions();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Functions</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getDecomposesFunction <em>Decomposes Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Functions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Functions</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getFunction_IsDecomposedByFunctions()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function#getDecomposesFunction
+	 * @model opposite="decomposesFunction"
+	 * @generated
+	 */
+	EList<Function> getIsDecomposedByFunctions();
 
 } // Function

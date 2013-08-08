@@ -43,8 +43,9 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getDataEntityCategory <em>Data Entity Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getPrivacyClassification <em>Privacy Classification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getRetentionClassification <em>Retention Classification</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getDecomposeEntity <em>Decompose Entity</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getDecomposesDataEntity <em>Decomposes Data Entity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getRelatesTo <em>Relates To</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DataEntityImpl#getIsDecomposedByDataEntities <em>Is Decomposed By Data Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -244,8 +245,8 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataEntity getDecomposeEntity() {
-		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, true, true);
+	public DataEntity getDecomposesDataEntity() {
+		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, true, true);
 	}
 
 	/**
@@ -253,8 +254,8 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataEntity basicGetDecomposeEntity() {
-		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, false, true);
+	public DataEntity basicGetDecomposesDataEntity() {
+		return (DataEntity)eDynamicGet(ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, false, true);
 	}
 
 	/**
@@ -262,8 +263,8 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDecomposeEntity(DataEntity newDecomposeEntity) {
-		eDynamicSet(ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY, newDecomposeEntity);
+	public void setDecomposesDataEntity(DataEntity newDecomposesDataEntity) {
+		eDynamicSet(ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSES_DATA_ENTITY, newDecomposesDataEntity);
 	}
 
 	/**
@@ -274,6 +275,16 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 	@SuppressWarnings("unchecked")
 	public EList<DataEntity> getRelatesTo() {
 		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__RELATES_TO, ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<DataEntity> getIsDecomposedByDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES, ContentfwkPackage.Literals.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -355,11 +366,13 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				return getPrivacyClassification();
 			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
 				return getRetentionClassification();
-			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
-				if (resolve) return getDecomposeEntity();
-				return basicGetDecomposeEntity();
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY:
+				if (resolve) return getDecomposesDataEntity();
+				return basicGetDecomposesDataEntity();
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				return getRelatesTo();
+			case ContentfwkPackage.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES:
+				return getIsDecomposedByDataEntities();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -405,12 +418,16 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
 				setRetentionClassification((String)newValue);
 				return;
-			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
-				setDecomposeEntity((DataEntity)newValue);
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY:
+				setDecomposesDataEntity((DataEntity)newValue);
 				return;
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				getRelatesTo().clear();
 				getRelatesTo().addAll((Collection<? extends DataEntity>)newValue);
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES:
+				getIsDecomposedByDataEntities().clear();
+				getIsDecomposedByDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -451,11 +468,14 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
 				setRetentionClassification(RETENTION_CLASSIFICATION_EDEFAULT);
 				return;
-			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
-				setDecomposeEntity((DataEntity)null);
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY:
+				setDecomposesDataEntity((DataEntity)null);
 				return;
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				getRelatesTo().clear();
+				return;
+			case ContentfwkPackage.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES:
+				getIsDecomposedByDataEntities().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -487,10 +507,12 @@ public class DataEntityImpl extends ElementImpl implements DataEntity {
 				return PRIVACY_CLASSIFICATION_EDEFAULT == null ? getPrivacyClassification() != null : !PRIVACY_CLASSIFICATION_EDEFAULT.equals(getPrivacyClassification());
 			case ContentfwkPackage.DATA_ENTITY__RETENTION_CLASSIFICATION:
 				return RETENTION_CLASSIFICATION_EDEFAULT == null ? getRetentionClassification() != null : !RETENTION_CLASSIFICATION_EDEFAULT.equals(getRetentionClassification());
-			case ContentfwkPackage.DATA_ENTITY__DECOMPOSE_ENTITY:
-				return basicGetDecomposeEntity() != null;
+			case ContentfwkPackage.DATA_ENTITY__DECOMPOSES_DATA_ENTITY:
+				return basicGetDecomposesDataEntity() != null;
 			case ContentfwkPackage.DATA_ENTITY__RELATES_TO:
 				return !getRelatesTo().isEmpty();
+			case ContentfwkPackage.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES:
+				return !getIsDecomposedByDataEntities().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

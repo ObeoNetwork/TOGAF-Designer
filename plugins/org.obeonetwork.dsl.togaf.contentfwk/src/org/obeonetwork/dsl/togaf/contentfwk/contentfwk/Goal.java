@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getAddressesDrivers <em>Addresses Drivers</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsRealizedThroughObjectives <em>Is Realized Through Objectives</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getDecomposesGoal <em>Decomposes Goal</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsDecomposedByGoals <em>Is Decomposed By Goals</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,7 @@ public interface Goal extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Goal</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsDecomposedByGoals <em>Is Decomposed By Goals</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Goal</em>' reference isn't clear,
@@ -79,7 +81,8 @@ public interface Goal extends Element {
 	 * @return the value of the '<em>Decomposes Goal</em>' reference.
 	 * @see #setDecomposesGoal(Goal)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getGoal_DecomposesGoal()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getIsDecomposedByGoals
+	 * @model opposite="isDecomposedByGoals"
 	 * @generated
 	 */
 	Goal getDecomposesGoal();
@@ -93,5 +96,23 @@ public interface Goal extends Element {
 	 * @generated
 	 */
 	void setDecomposesGoal(Goal value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Goals</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getDecomposesGoal <em>Decomposes Goal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Goals</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Goals</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getGoal_IsDecomposedByGoals()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Goal#getDecomposesGoal
+	 * @model opposite="decomposesGoal"
+	 * @generated
+	 */
+	EList<Goal> getIsDecomposedByGoals();
 
 } // Goal

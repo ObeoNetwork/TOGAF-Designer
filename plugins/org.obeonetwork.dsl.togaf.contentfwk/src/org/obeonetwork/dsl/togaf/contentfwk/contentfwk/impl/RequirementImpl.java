@@ -23,7 +23,6 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RequirementImpl#getStatementOfRequirement <em>Statement Of Requirement</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RequirementImpl#getRationale <em>Rationale</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.RequirementImpl#getAcceptanceCriteria <em>Acceptance Criteria</em>}</li>
  * </ul>
  * </p>
@@ -40,15 +39,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * @ordered
 	 */
 	protected static final String STATEMENT_OF_REQUIREMENT_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getRationale() <em>Rationale</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRationale()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RATIONALE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getAcceptanceCriteria() <em>Acceptance Criteria</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,24 +91,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getRationale() {
-		return (String)eDynamicGet(ContentfwkPackage.REQUIREMENT__RATIONALE, ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRationale(String newRationale) {
-		eDynamicSet(ContentfwkPackage.REQUIREMENT__RATIONALE, ContentfwkPackage.Literals.REQUIREMENT__RATIONALE, newRationale);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getAcceptanceCriteria() {
 		return (String)eDynamicGet(ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA, ContentfwkPackage.Literals.REQUIREMENT__ACCEPTANCE_CRITERIA, true, true);
 	}
@@ -142,8 +114,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 		switch (featureID) {
 			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
 				return getStatementOfRequirement();
-			case ContentfwkPackage.REQUIREMENT__RATIONALE:
-				return getRationale();
 			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
 				return getAcceptanceCriteria();
 		}
@@ -160,9 +130,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 		switch (featureID) {
 			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
 				setStatementOfRequirement((String)newValue);
-				return;
-			case ContentfwkPackage.REQUIREMENT__RATIONALE:
-				setRationale((String)newValue);
 				return;
 			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
 				setAcceptanceCriteria((String)newValue);
@@ -182,9 +149,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
 				setStatementOfRequirement(STATEMENT_OF_REQUIREMENT_EDEFAULT);
 				return;
-			case ContentfwkPackage.REQUIREMENT__RATIONALE:
-				setRationale(RATIONALE_EDEFAULT);
-				return;
 			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
 				setAcceptanceCriteria(ACCEPTANCE_CRITERIA_EDEFAULT);
 				return;
@@ -202,8 +166,6 @@ public class RequirementImpl extends StrategicElementImpl implements Requirement
 		switch (featureID) {
 			case ContentfwkPackage.REQUIREMENT__STATEMENT_OF_REQUIREMENT:
 				return STATEMENT_OF_REQUIREMENT_EDEFAULT == null ? getStatementOfRequirement() != null : !STATEMENT_OF_REQUIREMENT_EDEFAULT.equals(getStatementOfRequirement());
-			case ContentfwkPackage.REQUIREMENT__RATIONALE:
-				return RATIONALE_EDEFAULT == null ? getRationale() != null : !RATIONALE_EDEFAULT.equals(getRationale());
 			case ContentfwkPackage.REQUIREMENT__ACCEPTANCE_CRITERIA:
 				return ACCEPTANCE_CRITERIA_EDEFAULT == null ? getAcceptanceCriteria() != null : !ACCEPTANCE_CRITERIA_EDEFAULT.equals(getAcceptanceCriteria());
 		}

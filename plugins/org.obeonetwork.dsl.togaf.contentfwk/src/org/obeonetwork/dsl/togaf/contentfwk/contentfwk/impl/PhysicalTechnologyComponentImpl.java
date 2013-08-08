@@ -36,11 +36,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getStandardClass <em>Standard Class</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getRetireDate <em>Retire Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getRealizesApplicationComponents <em>Realizes Application Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getRealizesPhysicalApplicationComponents <em>Realizes Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getExtendsLogicalTechnologyComponents <em>Extends Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsHostedInLocation <em>Is Hosted In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getProductName <em>Product Name</em>}</li>
@@ -50,6 +46,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getDecomposesPhysicalTechnologyComponent <em>Decomposes Physical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsDependentOnPhysicalTechnologyComponents <em>Is Dependent On Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsRequiredByPhysicalTechnologyComponent <em>Is Required By Physical Technology Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsDecomposedByPhysicalTechnologyComponents <em>Is Decomposed By Physical Technology Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,42 +63,6 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @ordered
 	 */
 	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
-	/**
-	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date RETIRE_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getProductName() <em>Product Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -173,7 +135,7 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -182,79 +144,7 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getRetireDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRetireDate(Date newRetireDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -263,8 +153,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<PhysicalApplicationComponent> getRealizesApplicationComponents() {
-		return (EList<PhysicalApplicationComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS, true, true);
+	public EList<PhysicalApplicationComponent> getRealizesPhysicalApplicationComponents() {
+		return (EList<PhysicalApplicationComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS, true, true);
 	}
 
 	/**
@@ -382,6 +272,16 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesPhysicalTechnologyComponent(PhysicalTechnologyComponent newDecomposesPhysicalTechnologyComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesPhysicalTechnologyComponent, ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesPhysicalTechnologyComponent(PhysicalTechnologyComponent newDecomposesPhysicalTechnologyComponent) {
 		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT, newDecomposesPhysicalTechnologyComponent);
 	}
@@ -420,13 +320,46 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	public EList<PhysicalTechnologyComponent> getIsRequiredByPhysicalTechnologyComponent() {
+		return (EList<PhysicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<PhysicalTechnologyComponent> getIsDecomposedByPhysicalTechnologyComponents() {
+		return (EList<PhysicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getRealizesPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExtendsLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsHostedInLocation()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT:
+				PhysicalTechnologyComponent decomposesPhysicalTechnologyComponent = basicGetDecomposesPhysicalTechnologyComponent();
+				if (decomposesPhysicalTechnologyComponent != null)
+					msgs = ((InternalEObject)decomposesPhysicalTechnologyComponent).eInverseRemove(this, ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS, PhysicalTechnologyComponent.class, msgs);
+				return basicSetDecomposesPhysicalTechnologyComponent((PhysicalTechnologyComponent)otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDependentOnPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRequiredByPhysicalTechnologyComponent()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -439,10 +372,20 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getRealizesPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<?>)getExtendsLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION:
 				return ((InternalEList<?>)getIsHostedInLocation()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return basicSetDecomposesPhysicalTechnologyComponent(null, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsDependentOnPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return ((InternalEList<?>)getIsRequiredByPhysicalTechnologyComponent()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsDecomposedByPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -457,16 +400,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 		switch (featureID) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass();
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				return getStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				return getRetireDate();
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS:
-				return getRealizesApplicationComponents();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				return getRealizesPhysicalApplicationComponents();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return getExtendsLogicalTechnologyComponents();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION:
@@ -486,6 +421,10 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 				return getIsDependentOnPhysicalTechnologyComponents();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				return getCategoryTRM();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return getIsRequiredByPhysicalTechnologyComponent();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return getIsDecomposedByPhysicalTechnologyComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -502,21 +441,9 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass((StandardsClass)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				setRetireDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS:
-				getRealizesApplicationComponents().clear();
-				getRealizesApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				getRealizesPhysicalApplicationComponents().clear();
+				getRealizesPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
 				return;
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getExtendsLogicalTechnologyComponents().clear();
@@ -548,6 +475,14 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				setCategoryTRM((String)newValue);
 				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				getIsRequiredByPhysicalTechnologyComponent().clear();
+				getIsRequiredByPhysicalTechnologyComponent().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				getIsDecomposedByPhysicalTechnologyComponents().clear();
+				getIsDecomposedByPhysicalTechnologyComponents().addAll((Collection<? extends PhysicalTechnologyComponent>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -563,20 +498,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass(STANDARD_CLASS_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				setRetireDate(RETIRE_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS:
-				getRealizesApplicationComponents().clear();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				getRealizesPhysicalApplicationComponents().clear();
 				return;
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getExtendsLogicalTechnologyComponents().clear();
@@ -605,6 +528,12 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
 				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				getIsRequiredByPhysicalTechnologyComponent().clear();
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				getIsDecomposedByPhysicalTechnologyComponents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -619,16 +548,8 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 		switch (featureID) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
-				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
-				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
-			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_APPLICATION_COMPONENTS:
-				return !getRealizesApplicationComponents().isEmpty();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
+				return !getRealizesPhysicalApplicationComponents().isEmpty();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return !getExtendsLogicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION:
@@ -647,6 +568,10 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 				return !getIsDependentOnPhysicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT:
+				return !getIsRequiredByPhysicalTechnologyComponent().isEmpty();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return !getIsDecomposedByPhysicalTechnologyComponents().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -658,18 +583,9 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (derivedFeatureID) {
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
-				default: return -1;
-			}
-		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (derivedFeatureID) {
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}
@@ -683,18 +599,9 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (baseFeatureID) {
-				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
-				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE;
-				default: return -1;
-			}
-		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (baseFeatureID) {
+				case ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}

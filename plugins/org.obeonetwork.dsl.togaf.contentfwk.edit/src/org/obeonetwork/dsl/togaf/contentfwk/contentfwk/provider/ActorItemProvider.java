@@ -64,9 +64,9 @@ public class ActorItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSuppliesEntitiesPropertyDescriptor(object);
-			addConsumesEntitiesPropertyDescriptor(object);
-			addBelongsToPropertyDescriptor(object);
+			addSuppliesDataEntitiesPropertyDescriptor(object);
+			addConsumesDataEntitiesPropertyDescriptor(object);
+			addBelongsToOrganizationUnitPropertyDescriptor(object);
 			addInteractsWithFunctionsPropertyDescriptor(object);
 			addPerformsTaskInRolesPropertyDescriptor(object);
 			addParticipatesInProcessesPropertyDescriptor(object);
@@ -78,25 +78,26 @@ public class ActorItemProvider
 			addActorGoalPropertyDescriptor(object);
 			addActorTasksPropertyDescriptor(object);
 			addPerformsFunctionsPropertyDescriptor(object);
-			addDecomposesActorsPropertyDescriptor(object);
+			addDecomposesActorPropertyDescriptor(object);
+			addIsDecomposedByActorsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Supplies Entities feature.
+	 * This adds a property descriptor for the Supplies Data Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSuppliesEntitiesPropertyDescriptor(Object object) {
+	protected void addSuppliesDataEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Actor_suppliesEntities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_suppliesEntities_feature", "_UI_Actor_type"),
-				 ContentfwkPackage.Literals.ACTOR__SUPPLIES_ENTITIES,
+				 getString("_UI_Actor_suppliesDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_suppliesDataEntities_feature", "_UI_Actor_type"),
+				 ContentfwkPackage.Literals.ACTOR__SUPPLIES_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,
@@ -106,19 +107,19 @@ public class ActorItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Consumes Entities feature.
+	 * This adds a property descriptor for the Consumes Data Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConsumesEntitiesPropertyDescriptor(Object object) {
+	protected void addConsumesDataEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Actor_consumesEntities_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_consumesEntities_feature", "_UI_Actor_type"),
-				 ContentfwkPackage.Literals.ACTOR__CONSUMES_ENTITIES,
+				 getString("_UI_Actor_consumesDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_consumesDataEntities_feature", "_UI_Actor_type"),
+				 ContentfwkPackage.Literals.ACTOR__CONSUMES_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,
@@ -128,19 +129,19 @@ public class ActorItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Belongs To feature.
+	 * This adds a property descriptor for the Belongs To Organization Unit feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addBelongsToPropertyDescriptor(Object object) {
+	protected void addBelongsToOrganizationUnitPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Actor_belongsTo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_belongsTo_feature", "_UI_Actor_type"),
-				 ContentfwkPackage.Literals.ACTOR__BELONGS_TO,
+				 getString("_UI_Actor_belongsToOrganizationUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_belongsToOrganizationUnit_feature", "_UI_Actor_type"),
+				 ContentfwkPackage.Literals.ACTOR__BELONGS_TO_ORGANIZATION_UNIT,
 				 true,
 				 false,
 				 true,
@@ -392,19 +393,41 @@ public class ActorItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Decomposes Actors feature.
+	 * This adds a property descriptor for the Decomposes Actor feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDecomposesActorsPropertyDescriptor(Object object) {
+	protected void addDecomposesActorPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Actor_decomposesActors_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_decomposesActors_feature", "_UI_Actor_type"),
-				 ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTORS,
+				 getString("_UI_Actor_decomposesActor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_decomposesActor_feature", "_UI_Actor_type"),
+				 ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTOR,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Actors feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByActorsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Actor_isDecomposedByActors_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Actor_isDecomposedByActors_feature", "_UI_Actor_type"),
+				 ContentfwkPackage.Literals.ACTOR__IS_DECOMPOSED_BY_ACTORS,
 				 true,
 				 false,
 				 true,

@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsExtendedByPhysicalApplicationComponents <em>Is Extended By Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getCommunicatesWith <em>Communicates With</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getDecomposesLogicalApplicationComponent <em>Decomposes Logical Application Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsDecomposedByLogicalApplicationComponents <em>Is Decomposed By Logical Application Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,6 +108,7 @@ public interface LogicalApplicationComponent extends Element, ApplicationCompone
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Logical Application Component</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsDecomposedByLogicalApplicationComponents <em>Is Decomposed By Logical Application Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Logical Application Component</em>' reference isn't clear,
@@ -116,7 +118,8 @@ public interface LogicalApplicationComponent extends Element, ApplicationCompone
 	 * @return the value of the '<em>Decomposes Logical Application Component</em>' reference.
 	 * @see #setDecomposesLogicalApplicationComponent(LogicalApplicationComponent)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalApplicationComponent_DecomposesLogicalApplicationComponent()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getIsDecomposedByLogicalApplicationComponents
+	 * @model opposite="isDecomposedByLogicalApplicationComponents"
 	 * @generated
 	 */
 	LogicalApplicationComponent getDecomposesLogicalApplicationComponent();
@@ -130,5 +133,23 @@ public interface LogicalApplicationComponent extends Element, ApplicationCompone
 	 * @generated
 	 */
 	void setDecomposesLogicalApplicationComponent(LogicalApplicationComponent value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Logical Application Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getDecomposesLogicalApplicationComponent <em>Decomposes Logical Application Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Logical Application Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Logical Application Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalApplicationComponent_IsDecomposedByLogicalApplicationComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent#getDecomposesLogicalApplicationComponent
+	 * @model opposite="decomposesLogicalApplicationComponent"
+	 * @generated
+	 */
+	EList<LogicalApplicationComponent> getIsDecomposedByLogicalApplicationComponents();
 
 } // LogicalApplicationComponent

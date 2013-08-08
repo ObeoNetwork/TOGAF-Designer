@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
-import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Label;
 
 /**
  * <!-- begin-user-doc -->
@@ -90,6 +89,16 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCategory()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CATEGORY_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,8 +181,17 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Label> getCategory() {
-		return (EList<Label>)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
+	public String getCategory() {
+		return (String)eDynamicGet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCategory(String newCategory) {
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
 	}
 
 	/**
@@ -243,8 +261,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDelegates()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDelegatedBy()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCategory()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -261,8 +277,6 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				return ((InternalEList<?>)getDelegates()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__IS_DELEGATED_BY:
 				return ((InternalEList<?>)getIsDelegatedBy()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				return ((InternalEList<?>)getCategory()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -328,8 +342,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				setID((String)newValue);
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				getCategory().clear();
-				getCategory().addAll((Collection<? extends Label>)newValue);
+				setCategory((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -365,7 +378,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 				setID(ID_EDEFAULT);
 				return;
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				getCategory().clear();
+				setCategory(CATEGORY_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -394,7 +407,7 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID:
 				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
 			case ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY:
-				return !getCategory().isEmpty();
+				return CATEGORY_EDEFAULT == null ? getCategory() != null : !CATEGORY_EDEFAULT.equals(getCategory());
 		}
 		return super.eIsSet(featureID);
 	}

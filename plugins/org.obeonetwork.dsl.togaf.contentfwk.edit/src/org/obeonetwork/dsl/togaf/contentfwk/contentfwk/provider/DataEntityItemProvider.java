@@ -75,8 +75,9 @@ public class DataEntityItemProvider
 			addDataEntityCategoryPropertyDescriptor(object);
 			addPrivacyClassificationPropertyDescriptor(object);
 			addRetentionClassificationPropertyDescriptor(object);
-			addDecomposeEntityPropertyDescriptor(object);
+			addDecomposesDataEntityPropertyDescriptor(object);
 			addRelatesToPropertyDescriptor(object);
+			addIsDecomposedByDataEntitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -280,19 +281,19 @@ public class DataEntityItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Decompose Entity feature.
+	 * This adds a property descriptor for the Decomposes Data Entity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDecomposeEntityPropertyDescriptor(Object object) {
+	protected void addDecomposesDataEntityPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DataEntity_decomposeEntity_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_decomposeEntity_feature", "_UI_DataEntity_type"),
-				 ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSE_ENTITY,
+				 getString("_UI_DataEntity_decomposesDataEntity_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_decomposesDataEntity_feature", "_UI_DataEntity_type"),
+				 ContentfwkPackage.Literals.DATA_ENTITY__DECOMPOSES_DATA_ENTITY,
 				 true,
 				 false,
 				 true,
@@ -315,6 +316,28 @@ public class DataEntityItemProvider
 				 getString("_UI_DataEntity_relatesTo_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_relatesTo_feature", "_UI_DataEntity_type"),
 				 ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Data Entities feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByDataEntitiesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_DataEntity_isDecomposedByDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_isDecomposedByDataEntities_feature", "_UI_DataEntity_type"),
+				 ContentfwkPackage.Literals.DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,

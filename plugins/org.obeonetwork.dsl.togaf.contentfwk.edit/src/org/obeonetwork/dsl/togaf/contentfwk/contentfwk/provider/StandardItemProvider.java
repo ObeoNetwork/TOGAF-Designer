@@ -70,8 +70,8 @@ public class StandardItemProvider
 
 			addStandardClassPropertyDescriptor(object);
 			addStandardCreationDatePropertyDescriptor(object);
-			addLastStandardCreationDatePropertyDescriptor(object);
-			addNextStandardCreationDatePropertyDescriptor(object);
+			addLastStandardReviewDatePropertyDescriptor(object);
+			addNextStandardReviewDatePropertyDescriptor(object);
 			addRetireDatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -122,19 +122,19 @@ public class StandardItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Last Standard Creation Date feature.
+	 * This adds a property descriptor for the Last Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLastStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addLastStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_lastStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_lastStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -144,19 +144,19 @@ public class StandardItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Next Standard Creation Date feature.
+	 * This adds a property descriptor for the Next Standard Review Date feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextStandardCreationDatePropertyDescriptor(Object object) {
+	protected void addNextStandardReviewDatePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Standard_nextStandardCreationDate_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardCreationDate_feature", "_UI_Standard_type"),
-				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE,
+				 getString("_UI_Standard_nextStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE,
 				 true,
 				 false,
 				 false,
@@ -216,8 +216,8 @@ public class StandardItemProvider
 		switch (notification.getFeatureID(Standard.class)) {
 			case ContentfwkPackage.STANDARD__STANDARD_CLASS:
 			case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE:
-			case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE:
-			case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE:
+			case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE:
 			case ContentfwkPackage.STANDARD__RETIRE_DATE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

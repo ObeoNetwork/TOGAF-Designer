@@ -42,80 +42,15 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getStandardClass <em>Standard Class</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getRetireDate <em>Retire Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsProvidedToActors <em>Is Provided To Actors</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getProvidesGovernedInterfaceToAccessFunctions <em>Provides Governed Interface To Access Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getProvidesEntities <em>Provides Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getConsumesEntities <em>Consumes Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsGovernedAndMeasuredByContracts <em>Is Governed And Measured By Contracts</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getResolvesEvents <em>Resolves Events</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsImplementedOnLogicalTechnologyComponents <em>Is Implemented On Logical Technology Components</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsRealizedThroughLogicalApplicationComponent <em>Is Realized Through Logical Application Component</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsOwnedAndGovernedByOrganizationUnits <em>Is Owned And Governed By Organization Units</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsTrackedAgainstMeasures <em>Is Tracked Against Measures</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getSupportsProcesses <em>Supports Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getMeetsQualities <em>Meets Qualities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getConsumesServices <em>Consumes Services</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getDecomposesServices <em>Decomposes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getIsSuppliedByLogicalTechnologyComponents <em>Is Supplied By Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PlatformServiceImpl#getStandardClass <em>Standard Class</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
 public class PlatformServiceImpl extends ElementImpl implements PlatformService {
-	/**
-	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
-	/**
-	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
-	/**
-	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRetireDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date RETIRE_DATE_EDEFAULT = null;
-
 	/**
 	 * The default value of the '{@link #getCategoryTRM() <em>Category TRM</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -125,6 +60,15 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	 * @ordered
 	 */
 	protected static final String CATEGORY_TRM_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getStandardClass() <em>Standard Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,7 +95,7 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS, ContentfwkPackage.Literals.PLATFORM_SERVICE__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -160,229 +104,7 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStandardCreationDate(Date newStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getRetireDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRetireDate(Date newRetireDate) {
-		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Actor> getIsProvidedToActors() {
-		return (EList<Actor>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS, ContentfwkPackage.Literals.SERVICE__IS_PROVIDED_TO_ACTORS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Function> getProvidesGovernedInterfaceToAccessFunctions() {
-		return (EList<Function>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS, ContentfwkPackage.Literals.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getProvidesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES, ContentfwkPackage.Literals.SERVICE__PROVIDES_ENTITIES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getConsumesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES, ContentfwkPackage.Literals.SERVICE__CONSUMES_ENTITIES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Contract> getIsGovernedAndMeasuredByContracts() {
-		return (EList<Contract>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS, ContentfwkPackage.Literals.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Event> getResolvesEvents() {
-		return (EList<Event>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS, ContentfwkPackage.Literals.SERVICE__RESOLVES_EVENTS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<LogicalTechnologyComponent> getIsImplementedOnLogicalTechnologyComponents() {
-		return (EList<LogicalTechnologyComponent>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS, ContentfwkPackage.Literals.SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<LogicalApplicationComponent> getIsRealizedThroughLogicalApplicationComponent() {
-		return (EList<LogicalApplicationComponent>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT, ContentfwkPackage.Literals.SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<OrganizationUnit> getIsOwnedAndGovernedByOrganizationUnits() {
-		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS, ContentfwkPackage.Literals.SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Measure> getIsTrackedAgainstMeasures() {
-		return (EList<Measure>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES, ContentfwkPackage.Literals.SERVICE__IS_TRACKED_AGAINST_MEASURES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getSupportsProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES, ContentfwkPackage.Literals.SERVICE__SUPPORTS_PROCESSES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsRealizedByProcesses() {
-		return (EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES, ContentfwkPackage.Literals.SERVICE__IS_REALIZED_BY_PROCESSES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<ServiceQuality> getMeetsQualities() {
-		return (EList<ServiceQuality>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES, ContentfwkPackage.Literals.SERVICE__MEETS_QUALITIES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Service> getConsumesServices() {
-		return (EList<Service>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES, ContentfwkPackage.Literals.SERVICE__CONSUMES_SERVICES, true, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EList<Service> getDecomposesServices() {
-		return (EList<Service>)eDynamicGet(ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES, ContentfwkPackage.Literals.SERVICE__DECOMPOSES_SERVICES, true, true);
+		eDynamicSet(ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS, ContentfwkPackage.Literals.PLATFORM_SERVICE__STANDARD_CLASS, newStandardClass);
 	}
 
 	/**
@@ -422,30 +144,6 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResolvesEvents()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsImplementedOnLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedThroughLogicalApplicationComponent()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsOwnedAndGovernedByOrganizationUnits()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsTrackedAgainstMeasures()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportsProcesses()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedByProcesses()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMeetsQualities()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsSuppliedByLogicalTechnologyComponents()).basicAdd(otherEnd, msgs);
 		}
@@ -460,30 +158,6 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				return ((InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<?>)getProvidesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<?>)getConsumesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				return ((InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				return ((InternalEList<?>)getResolvesEvents()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				return ((InternalEList<?>)getIsImplementedOnLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				return ((InternalEList<?>)getIsRealizedThroughLogicalApplicationComponent()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				return ((InternalEList<?>)getIsOwnedAndGovernedByOrganizationUnits()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				return ((InternalEList<?>)getIsTrackedAgainstMeasures()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				return ((InternalEList<?>)getSupportsProcesses()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				return ((InternalEList<?>)getIsRealizedByProcesses()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<?>)getMeetsQualities()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return ((InternalEList<?>)getIsSuppliedByLogicalTechnologyComponents()).basicRemove(otherEnd, msgs);
 		}
@@ -498,50 +172,12 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
-				return getStandardClass();
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE:
-				return getStandardCreationDate();
-			case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
-			case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE:
-				return getRetireDate();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS:
-				return getIsProvidedToActors();
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				return getProvidesGovernedInterfaceToAccessFunctions();
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				return getProvidesEntities();
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				return getConsumesEntities();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				return getIsGovernedAndMeasuredByContracts();
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				return getResolvesEvents();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				return getIsImplementedOnLogicalTechnologyComponents();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				return getIsRealizedThroughLogicalApplicationComponent();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				return getIsOwnedAndGovernedByOrganizationUnits();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				return getIsTrackedAgainstMeasures();
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				return getSupportsProcesses();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				return getIsRealizedByProcesses();
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				return getMeetsQualities();
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES:
-				return getConsumesServices();
-			case ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES:
-				return getDecomposesServices();
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return getIsSuppliedByLogicalTechnologyComponents();
 			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
 				return getCategoryTRM();
+			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
+				return getStandardClass();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -555,87 +191,15 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
-				setStandardClass((StandardsClass)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE:
-				setStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE:
-				setRetireDate((Date)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS:
-				getIsProvidedToActors().clear();
-				getIsProvidedToActors().addAll((Collection<? extends Actor>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				getProvidesGovernedInterfaceToAccessFunctions().clear();
-				getProvidesGovernedInterfaceToAccessFunctions().addAll((Collection<? extends Function>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
-				getProvidesEntities().addAll((Collection<? extends DataEntity>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
-				getConsumesEntities().addAll((Collection<? extends DataEntity>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				getIsGovernedAndMeasuredByContracts().clear();
-				getIsGovernedAndMeasuredByContracts().addAll((Collection<? extends Contract>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				getResolvesEvents().clear();
-				getResolvesEvents().addAll((Collection<? extends Event>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				getIsImplementedOnLogicalTechnologyComponents().clear();
-				getIsImplementedOnLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				getIsRealizedThroughLogicalApplicationComponent().clear();
-				getIsRealizedThroughLogicalApplicationComponent().addAll((Collection<? extends LogicalApplicationComponent>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				getIsOwnedAndGovernedByOrganizationUnits().clear();
-				getIsOwnedAndGovernedByOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				getIsTrackedAgainstMeasures().clear();
-				getIsTrackedAgainstMeasures().addAll((Collection<? extends Measure>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				getSupportsProcesses().clear();
-				getSupportsProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				getIsRealizedByProcesses().clear();
-				getIsRealizedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
-				getMeetsQualities().addAll((Collection<? extends ServiceQuality>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES:
-				getConsumesServices().clear();
-				getConsumesServices().addAll((Collection<? extends Service>)newValue);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES:
-				getDecomposesServices().clear();
-				getDecomposesServices().addAll((Collection<? extends Service>)newValue);
-				return;
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getIsSuppliedByLogicalTechnologyComponents().clear();
 				getIsSuppliedByLogicalTechnologyComponents().addAll((Collection<? extends LogicalTechnologyComponent>)newValue);
 				return;
 			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
 				setCategoryTRM((String)newValue);
+				return;
+			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
+				setStandardClass((StandardsClass)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -649,71 +213,14 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
-				setStandardClass(STANDARD_CLASS_EDEFAULT);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE:
-				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE:
-				setRetireDate(RETIRE_DATE_EDEFAULT);
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS:
-				getIsProvidedToActors().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				getProvidesGovernedInterfaceToAccessFunctions().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				getIsGovernedAndMeasuredByContracts().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				getResolvesEvents().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				getIsImplementedOnLogicalTechnologyComponents().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				getIsRealizedThroughLogicalApplicationComponent().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				getIsOwnedAndGovernedByOrganizationUnits().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				getIsTrackedAgainstMeasures().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				getSupportsProcesses().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				getIsRealizedByProcesses().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES:
-				getConsumesServices().clear();
-				return;
-			case ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES:
-				getDecomposesServices().clear();
-				return;
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				getIsSuppliedByLogicalTechnologyComponents().clear();
 				return;
 			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
 				setCategoryTRM(CATEGORY_TRM_EDEFAULT);
+				return;
+			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
+				setStandardClass(STANDARD_CLASS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -727,132 +234,14 @@ public class PlatformServiceImpl extends ElementImpl implements PlatformService 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
-				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
-			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE:
-				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
-			case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE:
-				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS:
-				return !getIsProvidedToActors().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
-				return !getProvidesGovernedInterfaceToAccessFunctions().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES:
-				return !getProvidesEntities().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES:
-				return !getConsumesEntities().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
-				return !getIsGovernedAndMeasuredByContracts().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS:
-				return !getResolvesEvents().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS:
-				return !getIsImplementedOnLogicalTechnologyComponents().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT:
-				return !getIsRealizedThroughLogicalApplicationComponent().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS:
-				return !getIsOwnedAndGovernedByOrganizationUnits().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES:
-				return !getIsTrackedAgainstMeasures().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES:
-				return !getSupportsProcesses().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES:
-				return !getIsRealizedByProcesses().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES:
-				return !getMeetsQualities().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES:
-				return !getConsumesServices().isEmpty();
-			case ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES:
-				return !getDecomposesServices().isEmpty();
 			case ContentfwkPackage.PLATFORM_SERVICE__IS_SUPPLIED_BY_LOGICAL_TECHNOLOGY_COMPONENTS:
 				return !getIsSuppliedByLogicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.PLATFORM_SERVICE__CATEGORY_TRM:
 				return CATEGORY_TRM_EDEFAULT == null ? getCategoryTRM() != null : !CATEGORY_TRM_EDEFAULT.equals(getCategoryTRM());
+			case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS:
+				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (derivedFeatureID) {
-				case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
-				case ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
-				default: return -1;
-			}
-		}
-		if (baseClass == Service.class) {
-			switch (derivedFeatureID) {
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS: return ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS;
-				case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS: return ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS;
-				case ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES: return ContentfwkPackage.SERVICE__PROVIDES_ENTITIES;
-				case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES: return ContentfwkPackage.SERVICE__CONSUMES_ENTITIES;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS: return ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS;
-				case ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS: return ContentfwkPackage.SERVICE__RESOLVES_EVENTS;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS: return ContentfwkPackage.SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT: return ContentfwkPackage.SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS: return ContentfwkPackage.SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES: return ContentfwkPackage.SERVICE__IS_TRACKED_AGAINST_MEASURES;
-				case ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES: return ContentfwkPackage.SERVICE__SUPPORTS_PROCESSES;
-				case ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES: return ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES;
-				case ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES: return ContentfwkPackage.SERVICE__MEETS_QUALITIES;
-				case ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES: return ContentfwkPackage.SERVICE__CONSUMES_SERVICES;
-				case ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES: return ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Standard.class) {
-			switch (baseFeatureID) {
-				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CLASS;
-				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PLATFORM_SERVICE__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.PLATFORM_SERVICE__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.PLATFORM_SERVICE__NEXT_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PLATFORM_SERVICE__RETIRE_DATE;
-				default: return -1;
-			}
-		}
-		if (baseClass == Service.class) {
-			switch (baseFeatureID) {
-				case ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS: return ContentfwkPackage.PLATFORM_SERVICE__IS_PROVIDED_TO_ACTORS;
-				case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS: return ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS;
-				case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES: return ContentfwkPackage.PLATFORM_SERVICE__PROVIDES_ENTITIES;
-				case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES: return ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_ENTITIES;
-				case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS: return ContentfwkPackage.PLATFORM_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS;
-				case ContentfwkPackage.SERVICE__RESOLVES_EVENTS: return ContentfwkPackage.PLATFORM_SERVICE__RESOLVES_EVENTS;
-				case ContentfwkPackage.SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS: return ContentfwkPackage.PLATFORM_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS;
-				case ContentfwkPackage.SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT: return ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_THROUGH_LOGICAL_APPLICATION_COMPONENT;
-				case ContentfwkPackage.SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS: return ContentfwkPackage.PLATFORM_SERVICE__IS_OWNED_AND_GOVERNED_BY_ORGANIZATION_UNITS;
-				case ContentfwkPackage.SERVICE__IS_TRACKED_AGAINST_MEASURES: return ContentfwkPackage.PLATFORM_SERVICE__IS_TRACKED_AGAINST_MEASURES;
-				case ContentfwkPackage.SERVICE__SUPPORTS_PROCESSES: return ContentfwkPackage.PLATFORM_SERVICE__SUPPORTS_PROCESSES;
-				case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES: return ContentfwkPackage.PLATFORM_SERVICE__IS_REALIZED_BY_PROCESSES;
-				case ContentfwkPackage.SERVICE__MEETS_QUALITIES: return ContentfwkPackage.PLATFORM_SERVICE__MEETS_QUALITIES;
-				case ContentfwkPackage.SERVICE__CONSUMES_SERVICES: return ContentfwkPackage.PLATFORM_SERVICE__CONSUMES_SERVICES;
-				case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES: return ContentfwkPackage.PLATFORM_SERVICE__DECOMPOSES_SERVICES;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //PlatformServiceImpl

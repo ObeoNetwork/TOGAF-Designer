@@ -23,8 +23,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsProvidedToActors <em>Is Provided To Actors</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesGovernedInterfaceToAccessFunctions <em>Provides Governed Interface To Access Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesEntities <em>Provides Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesEntities <em>Consumes Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesDataEntities <em>Provides Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesDataEntities <em>Consumes Data Entities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsGovernedAndMeasuredByContracts <em>Is Governed And Measured By Contracts</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getResolvesEvents <em>Resolves Events</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsImplementedOnLogicalTechnologyComponents <em>Is Implemented On Logical Technology Components</em>}</li>
@@ -33,9 +33,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsTrackedAgainstMeasures <em>Is Tracked Against Measures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getSupportsProcesses <em>Supports Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsQualities <em>Meets Qualities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsServiceQualities <em>Meets Service Qualities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesServices <em>Consumes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getDecomposesServices <em>Decomposes Services</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsDecomposedByServices <em>Is Decomposed By Services</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,6 +48,7 @@ public interface Service extends Standard {
 	/**
 	 * Returns the value of the '<em><b>Is Provided To Actors</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesServices <em>Consumes Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Provided To Actors</em>' reference list isn't clear,
@@ -55,7 +57,8 @@ public interface Service extends Standard {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Provided To Actors</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_IsProvidedToActors()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesServices
+	 * @model opposite="consumesServices"
 	 * @generated
 	 */
 	EList<Actor> getIsProvidedToActors();
@@ -79,40 +82,40 @@ public interface Service extends Standard {
 	EList<Function> getProvidesGovernedInterfaceToAccessFunctions();
 
 	/**
-	 * Returns the value of the '<em><b>Provides Entities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Provides Data Entities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsUpdatedThroughServices <em>Is Updated Through Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Provides Entities</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Provides Data Entities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provides Entities</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_ProvidesEntities()
+	 * @return the value of the '<em>Provides Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_ProvidesDataEntities()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsUpdatedThroughServices
 	 * @model opposite="isUpdatedThroughServices"
 	 * @generated
 	 */
-	EList<DataEntity> getProvidesEntities();
+	EList<DataEntity> getProvidesDataEntities();
 
 	/**
-	 * Returns the value of the '<em><b>Consumes Entities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Consumes Data Entities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsAccessedByServices <em>Is Accessed By Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Consumes Entities</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Consumes Data Entities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Consumes Entities</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_ConsumesEntities()
+	 * @return the value of the '<em>Consumes Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_ConsumesDataEntities()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsAccessedByServices
 	 * @model opposite="isAccessedByServices"
 	 * @generated
 	 */
-	EList<DataEntity> getConsumesEntities();
+	EList<DataEntity> getConsumesDataEntities();
 
 	/**
 	 * Returns the value of the '<em><b>Is Governed And Measured By Contracts</b></em>' reference list.
@@ -135,7 +138,7 @@ public interface Service extends Standard {
 	/**
 	 * Returns the value of the '<em><b>Resolves Events</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByBusinessServices <em>Is Resolved By Business Services</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByServices <em>Is Resolved By Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Resolves Events</em>' reference list isn't clear,
@@ -144,8 +147,8 @@ public interface Service extends Standard {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Resolves Events</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_ResolvesEvents()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByBusinessServices
-	 * @model opposite="isResolvedByBusinessServices"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Event#getIsResolvedByServices
+	 * @model opposite="isResolvedByServices"
 	 * @generated
 	 */
 	EList<Event> getResolvesEvents();
@@ -259,22 +262,22 @@ public interface Service extends Standard {
 	EList<org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process> getIsRealizedByProcesses();
 
 	/**
-	 * Returns the value of the '<em><b>Meets Qualities</b></em>' reference list.
+	 * Returns the value of the '<em><b>Meets Service Qualities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality}.
 	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality#getAppliesToServices <em>Applies To Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Meets Qualities</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Meets Service Qualities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Meets Qualities</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_MeetsQualities()
+	 * @return the value of the '<em>Meets Service Qualities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_MeetsServiceQualities()
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ServiceQuality#getAppliesToServices
 	 * @model opposite="appliesToServices"
 	 * @generated
 	 */
-	EList<ServiceQuality> getMeetsQualities();
+	EList<ServiceQuality> getMeetsServiceQualities();
 
 	/**
 	 * Returns the value of the '<em><b>Consumes Services</b></em>' reference list.
@@ -295,6 +298,7 @@ public interface Service extends Standard {
 	/**
 	 * Returns the value of the '<em><b>Decomposes Services</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsDecomposedByServices <em>Is Decomposed By Services</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Services</em>' reference list isn't clear,
@@ -303,9 +307,28 @@ public interface Service extends Standard {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Decomposes Services</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_DecomposesServices()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getIsDecomposedByServices
+	 * @model opposite="isDecomposedByServices"
 	 * @generated
 	 */
 	EList<Service> getDecomposesServices();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Services</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getDecomposesServices <em>Decomposes Services</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Services</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Services</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getService_IsDecomposedByServices()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getDecomposesServices
+	 * @model opposite="decomposesServices"
+	 * @generated
+	 */
+	EList<Service> getIsDecomposedByServices();
 
 } // Service

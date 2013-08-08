@@ -68,6 +68,7 @@ public class RoleItemProvider
 			addAccessesFunctionsPropertyDescriptor(object);
 			addEstimatedFTEsPropertyDescriptor(object);
 			addDecomposesRolePropertyDescriptor(object);
+			addIsDecomposedByRolesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -152,6 +153,28 @@ public class RoleItemProvider
 				 getString("_UI_Role_decomposesRole_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Role_decomposesRole_feature", "_UI_Role_type"),
 				 ContentfwkPackage.Literals.ROLE__DECOMPOSES_ROLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Roles feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByRolesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Role_isDecomposedByRoles_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Role_isDecomposedByRoles_feature", "_UI_Role_type"),
+				 ContentfwkPackage.Literals.ROLE__IS_DECOMPOSED_BY_ROLES,
 				 true,
 				 false,
 				 true,

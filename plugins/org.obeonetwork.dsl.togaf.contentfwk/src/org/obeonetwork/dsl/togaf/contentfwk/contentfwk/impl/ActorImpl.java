@@ -30,9 +30,9 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getSuppliesEntities <em>Supplies Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getConsumesEntities <em>Consumes Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getBelongsTo <em>Belongs To</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getSuppliesDataEntities <em>Supplies Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getConsumesDataEntities <em>Consumes Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getBelongsToOrganizationUnit <em>Belongs To Organization Unit</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getInteractsWithFunctions <em>Interacts With Functions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getPerformsTaskInRoles <em>Performs Task In Roles</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getParticipatesInProcesses <em>Participates In Processes</em>}</li>
@@ -44,7 +44,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getActorGoal <em>Actor Goal</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getActorTasks <em>Actor Tasks</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getPerformsFunctions <em>Performs Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getDecomposesActors <em>Decomposes Actors</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getDecomposesActor <em>Decomposes Actor</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ActorImpl#getIsDecomposedByActors <em>Is Decomposed By Actors</em>}</li>
  * </ul>
  * </p>
  *
@@ -104,8 +105,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getSuppliesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES, ContentfwkPackage.Literals.ACTOR__SUPPLIES_ENTITIES, true, true);
+	public EList<DataEntity> getSuppliesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES, ContentfwkPackage.Literals.ACTOR__SUPPLIES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -114,8 +115,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getConsumesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.ACTOR__CONSUMES_ENTITIES, ContentfwkPackage.Literals.ACTOR__CONSUMES_ENTITIES, true, true);
+	public EList<DataEntity> getConsumesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES, ContentfwkPackage.Literals.ACTOR__CONSUMES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -123,8 +124,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationUnit getBelongsTo() {
-		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ACTOR__BELONGS_TO, ContentfwkPackage.Literals.ACTOR__BELONGS_TO, true, true);
+	public OrganizationUnit getBelongsToOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, true, true);
 	}
 
 	/**
@@ -132,8 +133,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationUnit basicGetBelongsTo() {
-		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ACTOR__BELONGS_TO, ContentfwkPackage.Literals.ACTOR__BELONGS_TO, false, true);
+	public OrganizationUnit basicGetBelongsToOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, false, true);
 	}
 
 	/**
@@ -141,8 +142,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBelongsTo(OrganizationUnit newBelongsTo, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newBelongsTo, ContentfwkPackage.ACTOR__BELONGS_TO, msgs);
+	public NotificationChain basicSetBelongsToOrganizationUnit(OrganizationUnit newBelongsToOrganizationUnit, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newBelongsToOrganizationUnit, ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, msgs);
 		return msgs;
 	}
 
@@ -151,8 +152,8 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBelongsTo(OrganizationUnit newBelongsTo) {
-		eDynamicSet(ContentfwkPackage.ACTOR__BELONGS_TO, ContentfwkPackage.Literals.ACTOR__BELONGS_TO, newBelongsTo);
+	public void setBelongsToOrganizationUnit(OrganizationUnit newBelongsToOrganizationUnit) {
+		eDynamicSet(ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ACTOR__BELONGS_TO_ORGANIZATION_UNIT, newBelongsToOrganizationUnit);
 	}
 
 	/**
@@ -321,9 +322,46 @@ public class ActorImpl extends ElementImpl implements Actor {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Actor getDecomposesActor() {
+		return (Actor)eDynamicGet(ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR, ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTOR, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Actor basicGetDecomposesActor() {
+		return (Actor)eDynamicGet(ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR, ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTOR, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDecomposesActor(Actor newDecomposesActor, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesActor, ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDecomposesActor(Actor newDecomposesActor) {
+		eDynamicSet(ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR, ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTOR, newDecomposesActor);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
-	public EList<Actor> getDecomposesActors() {
-		return (EList<Actor>)eDynamicGet(ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS, ContentfwkPackage.Literals.ACTOR__DECOMPOSES_ACTORS, true, true);
+	public EList<Actor> getIsDecomposedByActors() {
+		return (EList<Actor>)eDynamicGet(ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS, ContentfwkPackage.Literals.ACTOR__IS_DECOMPOSED_BY_ACTORS, true, true);
 	}
 
 	/**
@@ -335,21 +373,23 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuppliesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				OrganizationUnit belongsTo = basicGetBelongsTo();
-				if (belongsTo != null)
-					msgs = ((InternalEObject)belongsTo).eInverseRemove(this, ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS, OrganizationUnit.class, msgs);
-				return basicSetBelongsTo((OrganizationUnit)otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuppliesDataEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesDataEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				OrganizationUnit belongsToOrganizationUnit = basicGetBelongsToOrganizationUnit();
+				if (belongsToOrganizationUnit != null)
+					msgs = ((InternalEObject)belongsToOrganizationUnit).eInverseRemove(this, ContentfwkPackage.ORGANIZATION_UNIT__CONTAINS_ACTORS, OrganizationUnit.class, msgs);
+				return basicSetBelongsToOrganizationUnit((OrganizationUnit)otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInteractsWithFunctions()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__PERFORMS_TASK_IN_ROLES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPerformsTaskInRoles()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__PARTICIPATES_IN_PROCESSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getParticipatesInProcesses()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__CONSUMES_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesServices()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__RESOLVES_EVENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResolvesEvents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__GENERATES_EVENTS:
@@ -361,6 +401,13 @@ public class ActorImpl extends ElementImpl implements Actor {
 				return basicSetOperatesInLocation((Location)otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPerformsFunctions()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				Actor decomposesActor = basicGetDecomposesActor();
+				if (decomposesActor != null)
+					msgs = ((InternalEObject)decomposesActor).eInverseRemove(this, ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS, Actor.class, msgs);
+				return basicSetDecomposesActor((Actor)otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByActors()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -373,18 +420,20 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				return ((InternalEList<?>)getSuppliesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				return ((InternalEList<?>)getConsumesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				return basicSetBelongsTo(null, msgs);
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				return ((InternalEList<?>)getSuppliesDataEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<?>)getConsumesDataEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				return basicSetBelongsToOrganizationUnit(null, msgs);
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				return ((InternalEList<?>)getInteractsWithFunctions()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__PERFORMS_TASK_IN_ROLES:
 				return ((InternalEList<?>)getPerformsTaskInRoles()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__PARTICIPATES_IN_PROCESSES:
 				return ((InternalEList<?>)getParticipatesInProcesses()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__CONSUMES_SERVICES:
+				return ((InternalEList<?>)getConsumesServices()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__RESOLVES_EVENTS:
 				return ((InternalEList<?>)getResolvesEvents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ACTOR__GENERATES_EVENTS:
@@ -393,6 +442,10 @@ public class ActorImpl extends ElementImpl implements Actor {
 				return basicSetOperatesInLocation(null, msgs);
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return ((InternalEList<?>)getPerformsFunctions()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				return basicSetDecomposesActor(null, msgs);
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				return ((InternalEList<?>)getIsDecomposedByActors()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -405,13 +458,13 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				return getSuppliesEntities();
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				return getConsumesEntities();
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				if (resolve) return getBelongsTo();
-				return basicGetBelongsTo();
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				return getSuppliesDataEntities();
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				return getConsumesDataEntities();
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				if (resolve) return getBelongsToOrganizationUnit();
+				return basicGetBelongsToOrganizationUnit();
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				return getInteractsWithFunctions();
 			case ContentfwkPackage.ACTOR__PERFORMS_TASK_IN_ROLES:
@@ -435,8 +488,11 @@ public class ActorImpl extends ElementImpl implements Actor {
 				return getActorTasks();
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return getPerformsFunctions();
-			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				return getDecomposesActors();
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				if (resolve) return getDecomposesActor();
+				return basicGetDecomposesActor();
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				return getIsDecomposedByActors();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -450,16 +506,16 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				getSuppliesEntities().clear();
-				getSuppliesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				getSuppliesDataEntities().clear();
+				getSuppliesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
-				getConsumesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
+				getConsumesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				setBelongsTo((OrganizationUnit)newValue);
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				setBelongsToOrganizationUnit((OrganizationUnit)newValue);
 				return;
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				getInteractsWithFunctions().clear();
@@ -501,9 +557,12 @@ public class ActorImpl extends ElementImpl implements Actor {
 				getPerformsFunctions().clear();
 				getPerformsFunctions().addAll((Collection<? extends Function>)newValue);
 				return;
-			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				getDecomposesActors().clear();
-				getDecomposesActors().addAll((Collection<? extends Actor>)newValue);
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				setDecomposesActor((Actor)newValue);
+				return;
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				getIsDecomposedByActors().clear();
+				getIsDecomposedByActors().addAll((Collection<? extends Actor>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -517,14 +576,14 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				getSuppliesEntities().clear();
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				getSuppliesDataEntities().clear();
 				return;
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
 				return;
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				setBelongsTo((OrganizationUnit)null);
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				setBelongsToOrganizationUnit((OrganizationUnit)null);
 				return;
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				getInteractsWithFunctions().clear();
@@ -559,8 +618,11 @@ public class ActorImpl extends ElementImpl implements Actor {
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				getPerformsFunctions().clear();
 				return;
-			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				getDecomposesActors().clear();
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				setDecomposesActor((Actor)null);
+				return;
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				getIsDecomposedByActors().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -574,12 +636,12 @@ public class ActorImpl extends ElementImpl implements Actor {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ContentfwkPackage.ACTOR__SUPPLIES_ENTITIES:
-				return !getSuppliesEntities().isEmpty();
-			case ContentfwkPackage.ACTOR__CONSUMES_ENTITIES:
-				return !getConsumesEntities().isEmpty();
-			case ContentfwkPackage.ACTOR__BELONGS_TO:
-				return basicGetBelongsTo() != null;
+			case ContentfwkPackage.ACTOR__SUPPLIES_DATA_ENTITIES:
+				return !getSuppliesDataEntities().isEmpty();
+			case ContentfwkPackage.ACTOR__CONSUMES_DATA_ENTITIES:
+				return !getConsumesDataEntities().isEmpty();
+			case ContentfwkPackage.ACTOR__BELONGS_TO_ORGANIZATION_UNIT:
+				return basicGetBelongsToOrganizationUnit() != null;
 			case ContentfwkPackage.ACTOR__INTERACTS_WITH_FUNCTIONS:
 				return !getInteractsWithFunctions().isEmpty();
 			case ContentfwkPackage.ACTOR__PERFORMS_TASK_IN_ROLES:
@@ -602,8 +664,10 @@ public class ActorImpl extends ElementImpl implements Actor {
 				return ACTOR_TASKS_EDEFAULT == null ? getActorTasks() != null : !ACTOR_TASKS_EDEFAULT.equals(getActorTasks());
 			case ContentfwkPackage.ACTOR__PERFORMS_FUNCTIONS:
 				return !getPerformsFunctions().isEmpty();
-			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTORS:
-				return !getDecomposesActors().isEmpty();
+			case ContentfwkPackage.ACTOR__DECOMPOSES_ACTOR:
+				return basicGetDecomposesActor() != null;
+			case ContentfwkPackage.ACTOR__IS_DECOMPOSED_BY_ACTORS:
+				return !getIsDecomposedByActors().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

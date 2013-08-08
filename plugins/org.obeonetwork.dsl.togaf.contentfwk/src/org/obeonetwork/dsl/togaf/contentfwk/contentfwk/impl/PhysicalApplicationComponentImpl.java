@@ -39,8 +39,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getExtendsLogicalApplicationComponents <em>Extends Logical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getIsHostedInLocation <em>Is Hosted In Location</em>}</li>
@@ -50,7 +50,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getDateOfLastRelease <em>Date Of Last Release</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getDateOfNextRelease <em>Date Of Next Release</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getRetirementDate <em>Retirement Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getAvailabilityQualityCharacteristics <em>Availability Quality Characteristics</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getAvailabilityCharacteristics <em>Availability Characteristics</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getServicesTimes <em>Services Times</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getManageabilityCharacteristics <em>Manageability Characteristics</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getServiceabilityCharacteristics <em>Serviceability Characteristics</em>}</li>
@@ -78,6 +78,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getEncapsulatesPhysicalDataComponents <em>Encapsulates Physical Data Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getIsRealizedByPhysicalTechnologyComponents <em>Is Realized By Physical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getDecomposesPhysicalApplicationComponent <em>Decomposes Physical Application Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalApplicationComponentImpl#getIsDecomposedByPhysicalApplicationComponents <em>Is Decomposed By Physical Application Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -103,23 +104,23 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -175,14 +176,14 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 */
 	protected static final Date RETIREMENT_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getAvailabilityQualityCharacteristics() <em>Availability Quality Characteristics</em>}' attribute.
+	 * The default value of the '{@link #getAvailabilityCharacteristics() <em>Availability Characteristics</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAvailabilityQualityCharacteristics()
+	 * @see #getAvailabilityCharacteristics()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String AVAILABILITY_QUALITY_CHARACTERISTICS_EDEFAULT = null;
+	protected static final String AVAILABILITY_CHARACTERISTICS_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getServicesTimes() <em>Services Times</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -460,8 +461,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -469,8 +470,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -478,8 +479,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -487,8 +488,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -634,8 +635,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAvailabilityQualityCharacteristics() {
-		return (String)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS, true, true);
+	public String getAvailabilityCharacteristics() {
+		return (String)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS, true, true);
 	}
 
 	/**
@@ -643,8 +644,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAvailabilityQualityCharacteristics(String newAvailabilityQualityCharacteristics) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS, newAvailabilityQualityCharacteristics);
+	public void setAvailabilityCharacteristics(String newAvailabilityCharacteristics) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS, newAvailabilityCharacteristics);
 	}
 
 	/**
@@ -1122,8 +1123,28 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesPhysicalApplicationComponent(PhysicalApplicationComponent newDecomposesPhysicalApplicationComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesPhysicalApplicationComponent, ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesPhysicalApplicationComponent(PhysicalApplicationComponent newDecomposesPhysicalApplicationComponent) {
 		eDynamicSet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT, newDecomposesPhysicalApplicationComponent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<PhysicalApplicationComponent> getIsDecomposedByPhysicalApplicationComponents() {
+		return (EList<PhysicalApplicationComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS, true, true);
 	}
 
 	/**
@@ -1139,6 +1160,17 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getExtendsLogicalApplicationComponents()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_HOSTED_IN_LOCATION:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsHostedInLocation()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__ENCAPSULATES_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEncapsulatesPhysicalDataComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedByPhysicalTechnologyComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
+				PhysicalApplicationComponent decomposesPhysicalApplicationComponent = basicGetDecomposesPhysicalApplicationComponent();
+				if (decomposesPhysicalApplicationComponent != null)
+					msgs = ((InternalEObject)decomposesPhysicalApplicationComponent).eInverseRemove(this, ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS, PhysicalApplicationComponent.class, msgs);
+				return basicSetDecomposesPhysicalApplicationComponent((PhysicalApplicationComponent)otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -1155,6 +1187,14 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return ((InternalEList<?>)getExtendsLogicalApplicationComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_HOSTED_IN_LOCATION:
 				return ((InternalEList<?>)getIsHostedInLocation()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__ENCAPSULATES_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<?>)getEncapsulatesPhysicalDataComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS:
+				return ((InternalEList<?>)getIsRealizedByPhysicalTechnologyComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
+				return basicSetDecomposesPhysicalApplicationComponent(null, msgs);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getIsDecomposedByPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -1171,10 +1211,10 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return getStandardClass();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__EXTENDS_LOGICAL_APPLICATION_COMPONENTS:
@@ -1193,8 +1233,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return getDateOfNextRelease();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE:
 				return getRetirementDate();
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS:
-				return getAvailabilityQualityCharacteristics();
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS:
+				return getAvailabilityCharacteristics();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICES_TIMES:
 				return getServicesTimes();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__MANAGEABILITY_CHARACTERISTICS:
@@ -1250,6 +1290,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
 				if (resolve) return getDecomposesPhysicalApplicationComponent();
 				return basicGetDecomposesPhysicalApplicationComponent();
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				return getIsDecomposedByPhysicalApplicationComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1269,11 +1311,11 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -1305,8 +1347,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE:
 				setRetirementDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS:
-				setAvailabilityQualityCharacteristics((String)newValue);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS:
+				setAvailabilityCharacteristics((String)newValue);
 				return;
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICES_TIMES:
 				setServicesTimes((String)newValue);
@@ -1391,6 +1433,10 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
 				setDecomposesPhysicalApplicationComponent((PhysicalApplicationComponent)newValue);
 				return;
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				getIsDecomposedByPhysicalApplicationComponents().clear();
+				getIsDecomposedByPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1409,11 +1455,11 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -1442,8 +1488,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE:
 				setRetirementDate(RETIREMENT_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS:
-				setAvailabilityQualityCharacteristics(AVAILABILITY_QUALITY_CHARACTERISTICS_EDEFAULT);
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS:
+				setAvailabilityCharacteristics(AVAILABILITY_CHARACTERISTICS_EDEFAULT);
 				return;
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICES_TIMES:
 				setServicesTimes(SERVICES_TIMES_EDEFAULT);
@@ -1526,6 +1572,9 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
 				setDecomposesPhysicalApplicationComponent((PhysicalApplicationComponent)null);
 				return;
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				getIsDecomposedByPhysicalApplicationComponents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1542,10 +1591,10 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__EXTENDS_LOGICAL_APPLICATION_COMPONENTS:
@@ -1564,8 +1613,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return DATE_OF_NEXT_RELEASE_EDEFAULT == null ? getDateOfNextRelease() != null : !DATE_OF_NEXT_RELEASE_EDEFAULT.equals(getDateOfNextRelease());
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIREMENT_DATE:
 				return RETIREMENT_DATE_EDEFAULT == null ? getRetirementDate() != null : !RETIREMENT_DATE_EDEFAULT.equals(getRetirementDate());
-			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_QUALITY_CHARACTERISTICS:
-				return AVAILABILITY_QUALITY_CHARACTERISTICS_EDEFAULT == null ? getAvailabilityQualityCharacteristics() != null : !AVAILABILITY_QUALITY_CHARACTERISTICS_EDEFAULT.equals(getAvailabilityQualityCharacteristics());
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__AVAILABILITY_CHARACTERISTICS:
+				return AVAILABILITY_CHARACTERISTICS_EDEFAULT == null ? getAvailabilityCharacteristics() != null : !AVAILABILITY_CHARACTERISTICS_EDEFAULT.equals(getAvailabilityCharacteristics());
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__SERVICES_TIMES:
 				return SERVICES_TIMES_EDEFAULT == null ? getServicesTimes() != null : !SERVICES_TIMES_EDEFAULT.equals(getServicesTimes());
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__MANAGEABILITY_CHARACTERISTICS:
@@ -1620,6 +1669,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 				return !getIsRealizedByPhysicalTechnologyComponents().isEmpty();
 			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__DECOMPOSES_PHYSICAL_APPLICATION_COMPONENT:
 				return basicGetDecomposesPhysicalApplicationComponent() != null;
+			case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_APPLICATION_COMPONENTS:
+				return !getIsDecomposedByPhysicalApplicationComponents().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1635,8 +1686,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -1660,8 +1711,8 @@ public class PhysicalApplicationComponentImpl extends ElementImpl implements Phy
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PHYSICAL_APPLICATION_COMPONENT__RETIRE_DATE;
 				default: return -1;
 			}

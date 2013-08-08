@@ -32,6 +32,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackageCategory;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.WorkPackageImpl#getWorkPackageCategory <em>Work Package Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.WorkPackageImpl#getDeliversCapabilities <em>Delivers Capabilities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.WorkPackageImpl#getCapabilityDelivered <em>Capability Delivered</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,6 +48,16 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 	 * @ordered
 	 */
 	protected static final WorkPackageCategory WORK_PACKAGE_CATEGORY_EDEFAULT = WorkPackageCategory.WORK_PACKAGE;
+
+	/**
+	 * The default value of the '{@link #getCapabilityDelivered() <em>Capability Delivered</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCapabilityDelivered()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CAPABILITY_DELIVERED_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,6 +111,24 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCapabilityDelivered() {
+		return (String)eDynamicGet(ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED, ContentfwkPackage.Literals.WORK_PACKAGE__CAPABILITY_DELIVERED, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCapabilityDelivered(String newCapabilityDelivered) {
+		eDynamicSet(ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED, ContentfwkPackage.Literals.WORK_PACKAGE__CAPABILITY_DELIVERED, newCapabilityDelivered);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -136,6 +165,8 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 				return getWorkPackageCategory();
 			case ContentfwkPackage.WORK_PACKAGE__DELIVERS_CAPABILITIES:
 				return getDeliversCapabilities();
+			case ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED:
+				return getCapabilityDelivered();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,6 +187,9 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 				getDeliversCapabilities().clear();
 				getDeliversCapabilities().addAll((Collection<? extends Capability>)newValue);
 				return;
+			case ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED:
+				setCapabilityDelivered((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -174,6 +208,9 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 			case ContentfwkPackage.WORK_PACKAGE__DELIVERS_CAPABILITIES:
 				getDeliversCapabilities().clear();
 				return;
+			case ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED:
+				setCapabilityDelivered(CAPABILITY_DELIVERED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -190,6 +227,8 @@ public class WorkPackageImpl extends StrategicElementImpl implements WorkPackage
 				return getWorkPackageCategory() != WORK_PACKAGE_CATEGORY_EDEFAULT;
 			case ContentfwkPackage.WORK_PACKAGE__DELIVERS_CAPABILITIES:
 				return !getDeliversCapabilities().isEmpty();
+			case ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED:
+				return CAPABILITY_DELIVERED_EDEFAULT == null ? getCapabilityDelivered() != null : !CAPABILITY_DELIVERED_EDEFAULT.equals(getCapabilityDelivered());
 		}
 		return super.eIsSet(featureID);
 	}

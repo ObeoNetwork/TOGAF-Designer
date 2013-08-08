@@ -42,6 +42,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl#getProducesProducts <em>Produces Products</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl#getOperatesInLocation <em>Operates In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl#getHeadcount <em>Headcount</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl#getDecomposesOrganizationUnit <em>Decomposes Organization Unit</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.OrganizationUnitImpl#getIsDecomposedByOrganizationUnits <em>Is Decomposed By Organization Units</em>}</li>
  * </ul>
  * </p>
  *
@@ -197,6 +199,53 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public OrganizationUnit getDecomposesOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrganizationUnit basicGetDecomposesOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, false, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDecomposesOrganizationUnit(OrganizationUnit newDecomposesOrganizationUnit, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesOrganizationUnit, ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDecomposesOrganizationUnit(OrganizationUnit newDecomposesOrganizationUnit) {
+		eDynamicSet(ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, ContentfwkPackage.Literals.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT, newDecomposesOrganizationUnit);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<OrganizationUnit> getIsDecomposedByOrganizationUnits() {
+		return (EList<OrganizationUnit>)eDynamicGet(ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS, ContentfwkPackage.Literals.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -218,6 +267,13 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 				if (operatesInLocation != null)
 					msgs = ((InternalEObject)operatesInLocation).eInverseRemove(this, ContentfwkPackage.LOCATION__CONTAINS_ORGANIZATION_UNITS, Location.class, msgs);
 				return basicSetOperatesInLocation((Location)otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				OrganizationUnit decomposesOrganizationUnit = basicGetDecomposesOrganizationUnit();
+				if (decomposesOrganizationUnit != null)
+					msgs = ((InternalEObject)decomposesOrganizationUnit).eInverseRemove(this, ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS, OrganizationUnit.class, msgs);
+				return basicSetDecomposesOrganizationUnit((OrganizationUnit)otherEnd, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByOrganizationUnits()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -244,6 +300,10 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 				return ((InternalEList<?>)getProducesProducts()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.ORGANIZATION_UNIT__OPERATES_IN_LOCATION:
 				return basicSetOperatesInLocation(null, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				return basicSetDecomposesOrganizationUnit(null, msgs);
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				return ((InternalEList<?>)getIsDecomposedByOrganizationUnits()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -273,6 +333,11 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 				return basicGetOperatesInLocation();
 			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
 				return getHeadcount();
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				if (resolve) return getDecomposesOrganizationUnit();
+				return basicGetDecomposesOrganizationUnit();
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				return getIsDecomposedByOrganizationUnits();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -316,6 +381,13 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
 				setHeadcount((String)newValue);
 				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				setDecomposesOrganizationUnit((OrganizationUnit)newValue);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				getIsDecomposedByOrganizationUnits().clear();
+				getIsDecomposedByOrganizationUnits().addAll((Collection<? extends OrganizationUnit>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -352,6 +424,12 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
 				setHeadcount(HEADCOUNT_EDEFAULT);
 				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				setDecomposesOrganizationUnit((OrganizationUnit)null);
+				return;
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				getIsDecomposedByOrganizationUnits().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -380,6 +458,10 @@ public class OrganizationUnitImpl extends ElementImpl implements OrganizationUni
 				return basicGetOperatesInLocation() != null;
 			case ContentfwkPackage.ORGANIZATION_UNIT__HEADCOUNT:
 				return HEADCOUNT_EDEFAULT == null ? getHeadcount() != null : !HEADCOUNT_EDEFAULT.equals(getHeadcount());
+			case ContentfwkPackage.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT:
+				return basicGetDecomposesOrganizationUnit() != null;
+			case ContentfwkPackage.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS:
+				return !getIsDecomposedByOrganizationUnits().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

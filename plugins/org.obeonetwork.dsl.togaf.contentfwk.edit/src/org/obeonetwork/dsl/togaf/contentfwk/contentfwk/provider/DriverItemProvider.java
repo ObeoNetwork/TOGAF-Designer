@@ -65,6 +65,7 @@ public class DriverItemProvider
 			addCreatesGoalsPropertyDescriptor(object);
 			addMotivatesOrganizationUnitsPropertyDescriptor(object);
 			addDecomposesDriverPropertyDescriptor(object);
+			addIsDecomposedByDriversPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -127,6 +128,28 @@ public class DriverItemProvider
 				 getString("_UI_Driver_decomposesDriver_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_decomposesDriver_feature", "_UI_Driver_type"),
 				 ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Drivers feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByDriversPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Driver_isDecomposedByDrivers_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Driver_isDecomposedByDrivers_feature", "_UI_Driver_type"),
+				 ContentfwkPackage.Literals.DRIVER__IS_DECOMPOSED_BY_DRIVERS,
 				 true,
 				 false,
 				 true,

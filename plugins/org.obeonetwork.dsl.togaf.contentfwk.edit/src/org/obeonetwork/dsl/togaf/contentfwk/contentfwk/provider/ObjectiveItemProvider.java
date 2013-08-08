@@ -65,6 +65,8 @@ public class ObjectiveItemProvider
 			addRealizesGoalsPropertyDescriptor(object);
 			addIsTrackedAgainstMeasuresPropertyDescriptor(object);
 			addDecomposesObjectivePropertyDescriptor(object);
+			addIsSupportedByBusinessServicePropertyDescriptor(object);
+			addIsDecomposedByObjectivesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -127,6 +129,50 @@ public class ObjectiveItemProvider
 				 getString("_UI_Objective_decomposesObjective_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Objective_decomposesObjective_feature", "_UI_Objective_type"),
 				 ContentfwkPackage.Literals.OBJECTIVE__DECOMPOSES_OBJECTIVE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Supported By Business Service feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsSupportedByBusinessServicePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Objective_isSupportedByBusinessService_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Objective_isSupportedByBusinessService_feature", "_UI_Objective_type"),
+				 ContentfwkPackage.Literals.OBJECTIVE__IS_SUPPORTED_BY_BUSINESS_SERVICE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Objectives feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByObjectivesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Objective_isDecomposedByObjectives_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Objective_isDecomposedByObjectives_feature", "_UI_Objective_type"),
+				 ContentfwkPackage.Literals.OBJECTIVE__IS_DECOMPOSED_BY_OBJECTIVES,
 				 true,
 				 false,
 				 true,

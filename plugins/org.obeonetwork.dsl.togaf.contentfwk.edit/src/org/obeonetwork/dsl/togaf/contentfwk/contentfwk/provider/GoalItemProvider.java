@@ -65,6 +65,7 @@ public class GoalItemProvider
 			addAddressesDriversPropertyDescriptor(object);
 			addIsRealizedThroughObjectivesPropertyDescriptor(object);
 			addDecomposesGoalPropertyDescriptor(object);
+			addIsDecomposedByGoalsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -127,6 +128,28 @@ public class GoalItemProvider
 				 getString("_UI_Goal_decomposesGoal_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_decomposesGoal_feature", "_UI_Goal_type"),
 				 ContentfwkPackage.Literals.GOAL__DECOMPOSES_GOAL,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Goals feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByGoalsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Goal_isDecomposedByGoals_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Goal_isDecomposedByGoals_feature", "_UI_Goal_type"),
+				 ContentfwkPackage.Literals.GOAL__IS_DECOMPOSED_BY_GOALS,
 				 true,
 				 false,
 				 true,

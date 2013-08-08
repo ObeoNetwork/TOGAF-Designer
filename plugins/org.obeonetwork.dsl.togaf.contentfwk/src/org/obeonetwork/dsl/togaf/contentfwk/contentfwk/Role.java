@@ -29,6 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getAccessesFunctions <em>Accesses Functions</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getEstimatedFTEs <em>Estimated FT Es</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getDecomposesRole <em>Decomposes Role</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getIsDecomposedByRoles <em>Is Decomposed By Roles</em>}</li>
  * </ul>
  * </p>
  *
@@ -100,6 +101,7 @@ public interface Role extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Role</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getIsDecomposedByRoles <em>Is Decomposed By Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Role</em>' reference isn't clear,
@@ -109,7 +111,8 @@ public interface Role extends Element {
 	 * @return the value of the '<em>Decomposes Role</em>' reference.
 	 * @see #setDecomposesRole(Role)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getRole_DecomposesRole()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getIsDecomposedByRoles
+	 * @model opposite="isDecomposedByRoles"
 	 * @generated
 	 */
 	Role getDecomposesRole();
@@ -123,5 +126,23 @@ public interface Role extends Element {
 	 * @generated
 	 */
 	void setDecomposesRole(Role value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Roles</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getDecomposesRole <em>Decomposes Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Roles</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Roles</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getRole_IsDecomposedByRoles()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Role#getDecomposesRole
+	 * @model opposite="decomposesRole"
+	 * @generated
+	 */
+	EList<Role> getIsDecomposedByRoles();
 
 } // Role

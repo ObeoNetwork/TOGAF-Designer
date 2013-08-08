@@ -25,8 +25,8 @@ import org.eclipse.emf.cdo.CDOObject;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getRetireDate <em>Retire Date</em>}</li>
  * </ul>
  * </p>
@@ -93,56 +93,56 @@ public interface Standard extends CDOObject {
 	void setStandardCreationDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Standard Creation Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Last Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Last Standard Creation Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Last Standard Review Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Standard Creation Date</em>' attribute.
-	 * @see #setLastStandardCreationDate(Date)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getStandard_LastStandardCreationDate()
+	 * @return the value of the '<em>Last Standard Review Date</em>' attribute.
+	 * @see #setLastStandardReviewDate(Date)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getStandard_LastStandardReviewDate()
 	 * @model
 	 * @generated
 	 */
-	Date getLastStandardCreationDate();
+	Date getLastStandardReviewDate();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardCreationDate <em>Last Standard Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getLastStandardReviewDate <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Standard Creation Date</em>' attribute.
-	 * @see #getLastStandardCreationDate()
+	 * @param value the new value of the '<em>Last Standard Review Date</em>' attribute.
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 */
-	void setLastStandardCreationDate(Date value);
+	void setLastStandardReviewDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Next Standard Creation Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Next Standard Review Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Next Standard Creation Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Next Standard Review Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next Standard Creation Date</em>' attribute.
-	 * @see #setNextStandardCreationDate(Date)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getStandard_NextStandardCreationDate()
+	 * @return the value of the '<em>Next Standard Review Date</em>' attribute.
+	 * @see #setNextStandardReviewDate(Date)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getStandard_NextStandardReviewDate()
 	 * @model
 	 * @generated
 	 */
-	Date getNextStandardCreationDate();
+	Date getNextStandardReviewDate();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardCreationDate <em>Next Standard Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Standard#getNextStandardReviewDate <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next Standard Creation Date</em>' attribute.
-	 * @see #getNextStandardCreationDate()
+	 * @param value the new value of the '<em>Next Standard Review Date</em>' attribute.
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 */
-	void setNextStandardCreationDate(Date value);
+	void setNextStandardReviewDate(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Retire Date</b></em>' attribute.

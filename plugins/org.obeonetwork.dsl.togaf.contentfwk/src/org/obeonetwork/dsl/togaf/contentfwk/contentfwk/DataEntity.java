@@ -35,8 +35,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDataEntityCategory <em>Data Entity Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getPrivacyClassification <em>Privacy Classification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRetentionClassification <em>Retention Classification</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposeEntity <em>Decompose Entity</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposesDataEntity <em>Decomposes Data Entity</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesTo <em>Relates To</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsDecomposedByDataEntities <em>Is Decomposed By Data Entities</em>}</li>
  * </ul>
  * </p>
  *
@@ -48,7 +49,7 @@ public interface DataEntity extends Element {
 	/**
 	 * Returns the value of the '<em><b>Is Supplied By Actors</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesEntities <em>Supplies Entities</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesDataEntities <em>Supplies Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Supplied By Actors</em>' reference list isn't clear,
@@ -57,8 +58,8 @@ public interface DataEntity extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Supplied By Actors</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_IsSuppliedByActors()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesEntities
-	 * @model opposite="suppliesEntities"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getSuppliesDataEntities
+	 * @model opposite="suppliesDataEntities"
 	 * @generated
 	 */
 	EList<Actor> getIsSuppliedByActors();
@@ -66,7 +67,7 @@ public interface DataEntity extends Element {
 	/**
 	 * Returns the value of the '<em><b>Is Consumed By Actors</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesEntities <em>Consumes Entities</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesDataEntities <em>Consumes Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Consumed By Actors</em>' reference list isn't clear,
@@ -75,8 +76,8 @@ public interface DataEntity extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Consumed By Actors</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_IsConsumedByActors()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesEntities
-	 * @model opposite="consumesEntities"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Actor#getConsumesDataEntities
+	 * @model opposite="consumesDataEntities"
 	 * @generated
 	 */
 	EList<Actor> getIsConsumedByActors();
@@ -84,7 +85,7 @@ public interface DataEntity extends Element {
 	/**
 	 * Returns the value of the '<em><b>Is Accessed By Services</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesEntities <em>Consumes Entities</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesDataEntities <em>Consumes Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Accessed By Services</em>' reference list isn't clear,
@@ -93,8 +94,8 @@ public interface DataEntity extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Accessed By Services</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_IsAccessedByServices()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesEntities
-	 * @model opposite="consumesEntities"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getConsumesDataEntities
+	 * @model opposite="consumesDataEntities"
 	 * @generated
 	 */
 	EList<Service> getIsAccessedByServices();
@@ -102,7 +103,7 @@ public interface DataEntity extends Element {
 	/**
 	 * Returns the value of the '<em><b>Is Updated Through Services</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesEntities <em>Provides Entities</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesDataEntities <em>Provides Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Updated Through Services</em>' reference list isn't clear,
@@ -111,8 +112,8 @@ public interface DataEntity extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Updated Through Services</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_IsUpdatedThroughServices()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesEntities
-	 * @model opposite="providesEntities"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getProvidesDataEntities
+	 * @model opposite="providesDataEntities"
 	 * @generated
 	 */
 	EList<Service> getIsUpdatedThroughServices();
@@ -245,30 +246,30 @@ public interface DataEntity extends Element {
 	void setRetentionClassification(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Decompose Entity</b></em>' reference.
+	 * Returns the value of the '<em><b>Decomposes Data Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Decompose Entity</em>' reference isn't clear,
+	 * If the meaning of the '<em>Decomposes Data Entity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Decompose Entity</em>' reference.
-	 * @see #setDecomposeEntity(DataEntity)
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_DecomposeEntity()
+	 * @return the value of the '<em>Decomposes Data Entity</em>' reference.
+	 * @see #setDecomposesDataEntity(DataEntity)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_DecomposesDataEntity()
 	 * @model
 	 * @generated
 	 */
-	DataEntity getDecomposeEntity();
+	DataEntity getDecomposesDataEntity();
 
 	/**
-	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposeEntity <em>Decompose Entity</em>}' reference.
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposesDataEntity <em>Decomposes Data Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Decompose Entity</em>' reference.
-	 * @see #getDecomposeEntity()
+	 * @param value the new value of the '<em>Decomposes Data Entity</em>' reference.
+	 * @see #getDecomposesDataEntity()
 	 * @generated
 	 */
-	void setDecomposeEntity(DataEntity value);
+	void setDecomposesDataEntity(DataEntity value);
 
 	/**
 	 * Returns the value of the '<em><b>Relates To</b></em>' reference list.
@@ -285,5 +286,21 @@ public interface DataEntity extends Element {
 	 * @generated
 	 */
 	EList<DataEntity> getRelatesTo();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Data Entities</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Data Entities</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_IsDecomposedByDataEntities()
+	 * @model
+	 * @generated
+	 */
+	EList<DataEntity> getIsDecomposedByDataEntities();
 
 } // DataEntity

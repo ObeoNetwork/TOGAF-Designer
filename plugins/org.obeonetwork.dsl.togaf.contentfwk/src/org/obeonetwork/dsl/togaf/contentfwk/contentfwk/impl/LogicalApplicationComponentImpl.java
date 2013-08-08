@@ -38,14 +38,15 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getImplementsServices <em>Implements Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getOperatesOnDataEntities <em>Operates On Data Entities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getIsExtendedByPhysicalApplicationComponents <em>Is Extended By Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getCommunicatesWith <em>Communicates With</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getDecomposesLogicalApplicationComponent <em>Decomposes Logical Application Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.LogicalApplicationComponentImpl#getIsDecomposedByLogicalApplicationComponents <em>Is Decomposed By Logical Application Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -71,23 +72,23 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -158,8 +159,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -167,8 +168,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -176,8 +177,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -185,8 +186,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -270,8 +271,28 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesLogicalApplicationComponent(LogicalApplicationComponent newDecomposesLogicalApplicationComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesLogicalApplicationComponent, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesLogicalApplicationComponent(LogicalApplicationComponent newDecomposesLogicalApplicationComponent) {
 		eDynamicSet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT, newDecomposesLogicalApplicationComponent);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<LogicalApplicationComponent> getIsDecomposedByLogicalApplicationComponents() {
+		return (EList<LogicalApplicationComponent>)eDynamicGet(ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS, ContentfwkPackage.Literals.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS, true, true);
 	}
 
 	/**
@@ -289,6 +310,13 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOperatesOnDataEntities()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsExtendedByPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
+				LogicalApplicationComponent decomposesLogicalApplicationComponent = basicGetDecomposesLogicalApplicationComponent();
+				if (decomposesLogicalApplicationComponent != null)
+					msgs = ((InternalEObject)decomposesLogicalApplicationComponent).eInverseRemove(this, ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS, LogicalApplicationComponent.class, msgs);
+				return basicSetDecomposesLogicalApplicationComponent((LogicalApplicationComponent)otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByLogicalApplicationComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -307,6 +335,10 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return ((InternalEList<?>)getOperatesOnDataEntities()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_EXTENDED_BY_PHYSICAL_APPLICATION_COMPONENTS:
 				return ((InternalEList<?>)getIsExtendedByPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
+				return basicSetDecomposesLogicalApplicationComponent(null, msgs);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getIsDecomposedByLogicalApplicationComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -323,10 +355,10 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return getStandardClass();
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
@@ -340,6 +372,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				if (resolve) return getDecomposesLogicalApplicationComponent();
 				return basicGetDecomposesLogicalApplicationComponent();
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return getIsDecomposedByLogicalApplicationComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -359,11 +393,11 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -387,6 +421,10 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)newValue);
 				return;
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				getIsDecomposedByLogicalApplicationComponents().clear();
+				getIsDecomposedByLogicalApplicationComponents().addAll((Collection<? extends LogicalApplicationComponent>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -405,11 +443,11 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -429,6 +467,9 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				setDecomposesLogicalApplicationComponent((LogicalApplicationComponent)null);
 				return;
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				getIsDecomposedByLogicalApplicationComponents().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -445,10 +486,10 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IMPLEMENTS_SERVICES:
@@ -461,6 +502,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 				return !getCommunicatesWith().isEmpty();
 			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__DECOMPOSES_LOGICAL_APPLICATION_COMPONENT:
 				return basicGetDecomposesLogicalApplicationComponent() != null;
+			case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_APPLICATION_COMPONENTS:
+				return !getIsDecomposedByLogicalApplicationComponents().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -476,8 +519,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -501,8 +544,8 @@ public class LogicalApplicationComponentImpl extends ElementImpl implements Logi
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.LOGICAL_APPLICATION_COMPONENT__RETIRE_DATE;
 				default: return -1;
 			}

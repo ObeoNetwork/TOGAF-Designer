@@ -72,6 +72,8 @@ public class OrganizationUnitItemProvider
 			addProducesProductsPropertyDescriptor(object);
 			addOperatesInLocationPropertyDescriptor(object);
 			addHeadcountPropertyDescriptor(object);
+			addDecomposesOrganizationUnitPropertyDescriptor(object);
+			addIsDecomposedByOrganizationUnitsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -248,6 +250,50 @@ public class OrganizationUnitItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Decomposes Organization Unit feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDecomposesOrganizationUnitPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OrganizationUnit_decomposesOrganizationUnit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationUnit_decomposesOrganizationUnit_feature", "_UI_OrganizationUnit_type"),
+				 ContentfwkPackage.Literals.ORGANIZATION_UNIT__DECOMPOSES_ORGANIZATION_UNIT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Is Decomposed By Organization Units feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIsDecomposedByOrganizationUnitsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_OrganizationUnit_isDecomposedByOrganizationUnits_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_OrganizationUnit_isDecomposedByOrganizationUnits_feature", "_UI_OrganizationUnit_type"),
+				 ContentfwkPackage.Literals.ORGANIZATION_UNIT__IS_DECOMPOSED_BY_ORGANIZATION_UNITS,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

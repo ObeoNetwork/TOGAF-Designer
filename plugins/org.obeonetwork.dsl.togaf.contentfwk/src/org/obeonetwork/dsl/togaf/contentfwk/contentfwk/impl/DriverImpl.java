@@ -33,6 +33,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DriverImpl#getCreatesGoals <em>Creates Goals</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DriverImpl#getMotivatesOrganizationUnits <em>Motivates Organization Units</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DriverImpl#getDecomposesDriver <em>Decomposes Driver</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.DriverImpl#getIsDecomposedByDrivers <em>Is Decomposed By Drivers</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,8 +102,28 @@ public class DriverImpl extends ElementImpl implements Driver {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesDriver(Driver newDecomposesDriver, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesDriver, ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesDriver(Driver newDecomposesDriver) {
 		eDynamicSet(ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER, ContentfwkPackage.Literals.DRIVER__DECOMPOSES_DRIVER, newDecomposesDriver);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Driver> getIsDecomposedByDrivers() {
+		return (EList<Driver>)eDynamicGet(ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS, ContentfwkPackage.Literals.DRIVER__IS_DECOMPOSED_BY_DRIVERS, true, true);
 	}
 
 	/**
@@ -118,6 +139,13 @@ public class DriverImpl extends ElementImpl implements Driver {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCreatesGoals()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMotivatesOrganizationUnits()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				Driver decomposesDriver = basicGetDecomposesDriver();
+				if (decomposesDriver != null)
+					msgs = ((InternalEObject)decomposesDriver).eInverseRemove(this, ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS, Driver.class, msgs);
+				return basicSetDecomposesDriver((Driver)otherEnd, msgs);
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByDrivers()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -134,6 +162,10 @@ public class DriverImpl extends ElementImpl implements Driver {
 				return ((InternalEList<?>)getCreatesGoals()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.DRIVER__MOTIVATES_ORGANIZATION_UNITS:
 				return ((InternalEList<?>)getMotivatesOrganizationUnits()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
+				return basicSetDecomposesDriver(null, msgs);
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				return ((InternalEList<?>)getIsDecomposedByDrivers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -153,6 +185,8 @@ public class DriverImpl extends ElementImpl implements Driver {
 			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
 				if (resolve) return getDecomposesDriver();
 				return basicGetDecomposesDriver();
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				return getIsDecomposedByDrivers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,6 +211,10 @@ public class DriverImpl extends ElementImpl implements Driver {
 			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
 				setDecomposesDriver((Driver)newValue);
 				return;
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				getIsDecomposedByDrivers().clear();
+				getIsDecomposedByDrivers().addAll((Collection<? extends Driver>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -198,6 +236,9 @@ public class DriverImpl extends ElementImpl implements Driver {
 			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
 				setDecomposesDriver((Driver)null);
 				return;
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				getIsDecomposedByDrivers().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -216,6 +257,8 @@ public class DriverImpl extends ElementImpl implements Driver {
 				return !getMotivatesOrganizationUnits().isEmpty();
 			case ContentfwkPackage.DRIVER__DECOMPOSES_DRIVER:
 				return basicGetDecomposesDriver() != null;
+			case ContentfwkPackage.DRIVER__IS_DECOMPOSED_BY_DRIVERS:
+				return !getIsDecomposedByDrivers().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

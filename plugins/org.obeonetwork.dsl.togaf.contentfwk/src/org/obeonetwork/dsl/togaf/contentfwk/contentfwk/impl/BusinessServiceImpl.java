@@ -45,13 +45,13 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsProvidedToActors <em>Is Provided To Actors</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getProvidesGovernedInterfaceToAccessFunctions <em>Provides Governed Interface To Access Functions</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getProvidesEntities <em>Provides Entities</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getConsumesEntities <em>Consumes Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getProvidesDataEntities <em>Provides Data Entities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getConsumesDataEntities <em>Consumes Data Entities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsGovernedAndMeasuredByContracts <em>Is Governed And Measured By Contracts</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getResolvesEvents <em>Resolves Events</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsImplementedOnLogicalTechnologyComponents <em>Is Implemented On Logical Technology Components</em>}</li>
@@ -60,9 +60,10 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsTrackedAgainstMeasures <em>Is Tracked Against Measures</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getSupportsProcesses <em>Supports Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getMeetsQualities <em>Meets Qualities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getMeetsServiceQualities <em>Meets Service Qualities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getConsumesServices <em>Consumes Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getDecomposesServices <em>Decomposes Services</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getIsDecomposedByServices <em>Is Decomposed By Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessServiceImpl#getSupportsObjective <em>Supports Objective</em>}</li>
  * </ul>
  * </p>
@@ -89,23 +90,23 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -176,8 +177,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -185,8 +186,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -194,8 +195,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -203,8 +204,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -251,8 +252,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getProvidesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES, ContentfwkPackage.Literals.SERVICE__PROVIDES_ENTITIES, true, true);
+	public EList<DataEntity> getProvidesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES, ContentfwkPackage.Literals.SERVICE__PROVIDES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -261,8 +262,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<DataEntity> getConsumesEntities() {
-		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES, ContentfwkPackage.Literals.SERVICE__CONSUMES_ENTITIES, true, true);
+	public EList<DataEntity> getConsumesDataEntities() {
+		return (EList<DataEntity>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES, ContentfwkPackage.Literals.SERVICE__CONSUMES_DATA_ENTITIES, true, true);
 	}
 
 	/**
@@ -351,8 +352,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<ServiceQuality> getMeetsQualities() {
-		return (EList<ServiceQuality>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES, ContentfwkPackage.Literals.SERVICE__MEETS_QUALITIES, true, true);
+	public EList<ServiceQuality> getMeetsServiceQualities() {
+		return (EList<ServiceQuality>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES, ContentfwkPackage.Literals.SERVICE__MEETS_SERVICE_QUALITIES, true, true);
 	}
 
 	/**
@@ -381,6 +382,16 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	public EList<Service> getIsDecomposedByServices() {
+		return (EList<Service>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES, ContentfwkPackage.Literals.SERVICE__IS_DECOMPOSED_BY_SERVICES, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	public EList<Objective> getSupportsObjective() {
 		return (EList<Objective>)eDynamicGet(ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE, ContentfwkPackage.Literals.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE, true, true);
 	}
@@ -394,12 +405,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsProvidedToActors()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesEntities()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getProvidesDataEntities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConsumesDataEntities()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS:
@@ -416,8 +429,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportsProcesses()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsRealizedByProcesses()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMeetsQualities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getMeetsServiceQualities()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecomposesServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByServices()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportsObjective()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -430,12 +449,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS:
+				return ((InternalEList<?>)getIsProvidedToActors()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return ((InternalEList<?>)getProvidesGovernedInterfaceToAccessFunctions()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				return ((InternalEList<?>)getProvidesEntities()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				return ((InternalEList<?>)getConsumesEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				return ((InternalEList<?>)getProvidesDataEntities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				return ((InternalEList<?>)getConsumesDataEntities()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return ((InternalEList<?>)getIsGovernedAndMeasuredByContracts()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS:
@@ -452,8 +473,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return ((InternalEList<?>)getSupportsProcesses()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES:
 				return ((InternalEList<?>)getIsRealizedByProcesses()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				return ((InternalEList<?>)getMeetsQualities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				return ((InternalEList<?>)getMeetsServiceQualities()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
+				return ((InternalEList<?>)getDecomposesServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return ((InternalEList<?>)getIsDecomposedByServices()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
+				return ((InternalEList<?>)getSupportsObjective()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -470,20 +497,20 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return getStandardClass();
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS:
 				return getIsProvidedToActors();
 			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return getProvidesGovernedInterfaceToAccessFunctions();
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				return getProvidesEntities();
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				return getConsumesEntities();
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				return getProvidesDataEntities();
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				return getConsumesDataEntities();
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return getIsGovernedAndMeasuredByContracts();
 			case ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS:
@@ -500,12 +527,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return getSupportsProcesses();
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES:
 				return getIsRealizedByProcesses();
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				return getMeetsQualities();
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				return getMeetsServiceQualities();
 			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES:
 				return getConsumesServices();
 			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
 				return getDecomposesServices();
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return getIsDecomposedByServices();
 			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
 				return getSupportsObjective();
 		}
@@ -527,11 +556,11 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -544,13 +573,13 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				getProvidesGovernedInterfaceToAccessFunctions().clear();
 				getProvidesGovernedInterfaceToAccessFunctions().addAll((Collection<? extends Function>)newValue);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
-				getProvidesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				getProvidesDataEntities().clear();
+				getProvidesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
-				getConsumesEntities().addAll((Collection<? extends DataEntity>)newValue);
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
+				getConsumesDataEntities().addAll((Collection<? extends DataEntity>)newValue);
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				getIsGovernedAndMeasuredByContracts().clear();
@@ -584,9 +613,9 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				getIsRealizedByProcesses().clear();
 				getIsRealizedByProcesses().addAll((Collection<? extends org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process>)newValue);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
-				getMeetsQualities().addAll((Collection<? extends ServiceQuality>)newValue);
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				getMeetsServiceQualities().clear();
+				getMeetsServiceQualities().addAll((Collection<? extends ServiceQuality>)newValue);
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES:
 				getConsumesServices().clear();
@@ -595,6 +624,10 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
 				getDecomposesServices().clear();
 				getDecomposesServices().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				getIsDecomposedByServices().clear();
+				getIsDecomposedByServices().addAll((Collection<? extends Service>)newValue);
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
 				getSupportsObjective().clear();
@@ -618,11 +651,11 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -633,11 +666,11 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				getProvidesGovernedInterfaceToAccessFunctions().clear();
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				getProvidesEntities().clear();
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				getProvidesDataEntities().clear();
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				getConsumesEntities().clear();
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				getConsumesDataEntities().clear();
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				getIsGovernedAndMeasuredByContracts().clear();
@@ -663,14 +696,17 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES:
 				getIsRealizedByProcesses().clear();
 				return;
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				getMeetsQualities().clear();
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				getMeetsServiceQualities().clear();
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES:
 				getConsumesServices().clear();
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
 				getDecomposesServices().clear();
+				return;
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				getIsDecomposedByServices().clear();
 				return;
 			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
 				getSupportsObjective().clear();
@@ -691,20 +727,20 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS:
 				return !getIsProvidedToActors().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS:
 				return !getProvidesGovernedInterfaceToAccessFunctions().isEmpty();
-			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES:
-				return !getProvidesEntities().isEmpty();
-			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES:
-				return !getConsumesEntities().isEmpty();
+			case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES:
+				return !getProvidesDataEntities().isEmpty();
+			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES:
+				return !getConsumesDataEntities().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS:
 				return !getIsGovernedAndMeasuredByContracts().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS:
@@ -721,12 +757,14 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				return !getSupportsProcesses().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES:
 				return !getIsRealizedByProcesses().isEmpty();
-			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES:
-				return !getMeetsQualities().isEmpty();
+			case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES:
+				return !getMeetsServiceQualities().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES:
 				return !getConsumesServices().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES:
 				return !getDecomposesServices().isEmpty();
+			case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES:
+				return !getIsDecomposedByServices().isEmpty();
 			case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_OBJECTIVE:
 				return !getSupportsObjective().isEmpty();
 		}
@@ -744,8 +782,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -754,8 +792,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS: return ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS;
 				case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS: return ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS;
-				case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES: return ContentfwkPackage.SERVICE__PROVIDES_ENTITIES;
-				case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES: return ContentfwkPackage.SERVICE__CONSUMES_ENTITIES;
+				case ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES: return ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES;
+				case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES: return ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES;
 				case ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS: return ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS;
 				case ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS: return ContentfwkPackage.SERVICE__RESOLVES_EVENTS;
 				case ContentfwkPackage.BUSINESS_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS: return ContentfwkPackage.SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS;
@@ -764,9 +802,10 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				case ContentfwkPackage.BUSINESS_SERVICE__IS_TRACKED_AGAINST_MEASURES: return ContentfwkPackage.SERVICE__IS_TRACKED_AGAINST_MEASURES;
 				case ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_PROCESSES: return ContentfwkPackage.SERVICE__SUPPORTS_PROCESSES;
 				case ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES: return ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES;
-				case ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES: return ContentfwkPackage.SERVICE__MEETS_QUALITIES;
+				case ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES: return ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES;
 				case ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES: return ContentfwkPackage.SERVICE__CONSUMES_SERVICES;
 				case ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES: return ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES;
+				case ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES: return ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES;
 				default: return -1;
 			}
 		}
@@ -784,8 +823,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.BUSINESS_SERVICE__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.BUSINESS_SERVICE__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.BUSINESS_SERVICE__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.BUSINESS_SERVICE__RETIRE_DATE;
 				default: return -1;
 			}
@@ -794,8 +833,8 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 			switch (baseFeatureID) {
 				case ContentfwkPackage.SERVICE__IS_PROVIDED_TO_ACTORS: return ContentfwkPackage.BUSINESS_SERVICE__IS_PROVIDED_TO_ACTORS;
 				case ContentfwkPackage.SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS: return ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_GOVERNED_INTERFACE_TO_ACCESS_FUNCTIONS;
-				case ContentfwkPackage.SERVICE__PROVIDES_ENTITIES: return ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_ENTITIES;
-				case ContentfwkPackage.SERVICE__CONSUMES_ENTITIES: return ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_ENTITIES;
+				case ContentfwkPackage.SERVICE__PROVIDES_DATA_ENTITIES: return ContentfwkPackage.BUSINESS_SERVICE__PROVIDES_DATA_ENTITIES;
+				case ContentfwkPackage.SERVICE__CONSUMES_DATA_ENTITIES: return ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_DATA_ENTITIES;
 				case ContentfwkPackage.SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS: return ContentfwkPackage.BUSINESS_SERVICE__IS_GOVERNED_AND_MEASURED_BY_CONTRACTS;
 				case ContentfwkPackage.SERVICE__RESOLVES_EVENTS: return ContentfwkPackage.BUSINESS_SERVICE__RESOLVES_EVENTS;
 				case ContentfwkPackage.SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS: return ContentfwkPackage.BUSINESS_SERVICE__IS_IMPLEMENTED_ON_LOGICAL_TECHNOLOGY_COMPONENTS;
@@ -804,9 +843,10 @@ public class BusinessServiceImpl extends ElementImpl implements BusinessService 
 				case ContentfwkPackage.SERVICE__IS_TRACKED_AGAINST_MEASURES: return ContentfwkPackage.BUSINESS_SERVICE__IS_TRACKED_AGAINST_MEASURES;
 				case ContentfwkPackage.SERVICE__SUPPORTS_PROCESSES: return ContentfwkPackage.BUSINESS_SERVICE__SUPPORTS_PROCESSES;
 				case ContentfwkPackage.SERVICE__IS_REALIZED_BY_PROCESSES: return ContentfwkPackage.BUSINESS_SERVICE__IS_REALIZED_BY_PROCESSES;
-				case ContentfwkPackage.SERVICE__MEETS_QUALITIES: return ContentfwkPackage.BUSINESS_SERVICE__MEETS_QUALITIES;
+				case ContentfwkPackage.SERVICE__MEETS_SERVICE_QUALITIES: return ContentfwkPackage.BUSINESS_SERVICE__MEETS_SERVICE_QUALITIES;
 				case ContentfwkPackage.SERVICE__CONSUMES_SERVICES: return ContentfwkPackage.BUSINESS_SERVICE__CONSUMES_SERVICES;
 				case ContentfwkPackage.SERVICE__DECOMPOSES_SERVICES: return ContentfwkPackage.BUSINESS_SERVICE__DECOMPOSES_SERVICES;
+				case ContentfwkPackage.SERVICE__IS_DECOMPOSED_BY_SERVICES: return ContentfwkPackage.BUSINESS_SERVICE__IS_DECOMPOSED_BY_SERVICES;
 				default: return -1;
 			}
 		}

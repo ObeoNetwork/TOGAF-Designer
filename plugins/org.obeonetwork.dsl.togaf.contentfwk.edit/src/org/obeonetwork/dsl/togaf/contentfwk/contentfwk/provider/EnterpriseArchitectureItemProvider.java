@@ -84,8 +84,6 @@ public class EnterpriseArchitectureItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES);
-			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS);
-			childrenFeatures.add(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__LABELS);
 		}
 		return childrenFeatures;
 	}
@@ -138,8 +136,6 @@ public class EnterpriseArchitectureItemProvider
 
 		switch (notification.getFeatureID(EnterpriseArchitecture.class)) {
 			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__CONTAINERS:
-			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__LABELS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,16 +177,6 @@ public class EnterpriseArchitectureItemProvider
 			(createChildParameter
 				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES,
 				 ContentfwkFactory.eINSTANCE.createStrategicArchitecture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__CONTAINERS,
-				 ContentfwkFactory.eINSTANCE.createContainer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__LABELS,
-				 ContentfwkFactory.eINSTANCE.createLabel()));
 	}
 
 	/**

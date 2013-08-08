@@ -24,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getSetsPerformanceCriteriaForObjectives <em>Sets Performance Criteria For Objectives</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getSetsPerformanceCriteriaForServices <em>Sets Performance Criteria For Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getDecomposesMeasure <em>Decomposes Measure</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getIsDecomposedByMeasures <em>Is Decomposed By Measures</em>}</li>
  * </ul>
  * </p>
  *
@@ -70,6 +71,7 @@ public interface Measure extends Element {
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Measure</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getIsDecomposedByMeasures <em>Is Decomposed By Measures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Measure</em>' reference isn't clear,
@@ -79,7 +81,8 @@ public interface Measure extends Element {
 	 * @return the value of the '<em>Decomposes Measure</em>' reference.
 	 * @see #setDecomposesMeasure(Measure)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getMeasure_DecomposesMeasure()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getIsDecomposedByMeasures
+	 * @model opposite="isDecomposedByMeasures"
 	 * @generated
 	 */
 	Measure getDecomposesMeasure();
@@ -93,5 +96,23 @@ public interface Measure extends Element {
 	 * @generated
 	 */
 	void setDecomposesMeasure(Measure value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Measures</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getDecomposesMeasure <em>Decomposes Measure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Measures</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Measures</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getMeasure_IsDecomposedByMeasures()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Measure#getDecomposesMeasure
+	 * @model opposite="decomposesMeasure"
+	 * @generated
+	 */
+	EList<Measure> getIsDecomposedByMeasures();
 
 } // Measure

@@ -34,7 +34,7 @@ public interface ServiceQuality extends Element {
 	/**
 	 * Returns the value of the '<em><b>Applies To Services</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service}.
-	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsQualities <em>Meets Qualities</em>}'.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsServiceQualities <em>Meets Service Qualities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Applies To Services</em>' reference list isn't clear,
@@ -43,8 +43,8 @@ public interface ServiceQuality extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Applies To Services</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getServiceQuality_AppliesToServices()
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsQualities
-	 * @model opposite="meetsQualities"
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service#getMeetsServiceQualities
+	 * @model opposite="meetsServiceQualities"
 	 * @generated
 	 */
 	EList<Service> getAppliesToServices();

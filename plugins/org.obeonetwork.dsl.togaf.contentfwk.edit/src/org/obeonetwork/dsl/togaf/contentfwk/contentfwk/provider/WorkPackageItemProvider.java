@@ -66,6 +66,7 @@ public class WorkPackageItemProvider
 
 			addWorkPackageCategoryPropertyDescriptor(object);
 			addDeliversCapabilitiesPropertyDescriptor(object);
+			addCapabilityDeliveredPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -115,6 +116,28 @@ public class WorkPackageItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Capability Delivered feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCapabilityDeliveredPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_WorkPackage_capabilityDelivered_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_WorkPackage_capabilityDelivered_feature", "_UI_WorkPackage_type"),
+				 ContentfwkPackage.Literals.WORK_PACKAGE__CAPABILITY_DELIVERED,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns WorkPackage.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -152,6 +175,7 @@ public class WorkPackageItemProvider
 
 		switch (notification.getFeatureID(WorkPackage.class)) {
 			case ContentfwkPackage.WORK_PACKAGE__WORK_PACKAGE_CATEGORY:
+			case ContentfwkPackage.WORK_PACKAGE__CAPABILITY_DELIVERED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

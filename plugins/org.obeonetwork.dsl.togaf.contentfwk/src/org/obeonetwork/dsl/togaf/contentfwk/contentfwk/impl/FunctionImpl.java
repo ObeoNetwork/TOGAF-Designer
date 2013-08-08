@@ -37,18 +37,19 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsPerformedByActors <em>Is Performed By Actors</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsOwnedByUnit <em>Is Owned By Unit</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsOwnedByOrganizationUnit <em>Is Owned By Organization Unit</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsBoundedByServices <em>Is Bounded By Services</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getSupportsProcesses <em>Supports Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsRealizedByProcesses <em>Is Realized By Processes</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getCanBeAccessedByRoles <em>Can Be Accessed By Roles</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getSupportsActors <em>Supports Actors</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getDecomposesFunction <em>Decomposes Function</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getCommunicatedWithFunctions <em>Communicated With Functions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getCommunicatesWithFunctions <em>Communicates With Functions</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.FunctionImpl#getIsDecomposedByFunctions <em>Is Decomposed By Functions</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,23 +75,23 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -161,8 +162,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -170,8 +171,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -179,8 +180,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -188,8 +189,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -225,8 +226,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationUnit getIsOwnedByUnit() {
-		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_UNIT, true, true);
+	public OrganizationUnit getIsOwnedByOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, true, true);
 	}
 
 	/**
@@ -234,8 +235,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OrganizationUnit basicGetIsOwnedByUnit() {
-		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_UNIT, false, true);
+	public OrganizationUnit basicGetIsOwnedByOrganizationUnit() {
+		return (OrganizationUnit)eDynamicGet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, false, true);
 	}
 
 	/**
@@ -243,8 +244,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIsOwnedByUnit(OrganizationUnit newIsOwnedByUnit, NotificationChain msgs) {
-		msgs = eDynamicInverseAdd((InternalEObject)newIsOwnedByUnit, ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT, msgs);
+	public NotificationChain basicSetIsOwnedByOrganizationUnit(OrganizationUnit newIsOwnedByOrganizationUnit, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newIsOwnedByOrganizationUnit, ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, msgs);
 		return msgs;
 	}
 
@@ -253,8 +254,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsOwnedByUnit(OrganizationUnit newIsOwnedByUnit) {
-		eDynamicSet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_UNIT, newIsOwnedByUnit);
+	public void setIsOwnedByOrganizationUnit(OrganizationUnit newIsOwnedByOrganizationUnit) {
+		eDynamicSet(ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, ContentfwkPackage.Literals.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT, newIsOwnedByOrganizationUnit);
 	}
 
 	/**
@@ -330,6 +331,16 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesFunction(Function newDecomposesFunction, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesFunction, ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesFunction(Function newDecomposesFunction) {
 		eDynamicSet(ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION, ContentfwkPackage.Literals.FUNCTION__DECOMPOSES_FUNCTION, newDecomposesFunction);
 	}
@@ -340,8 +351,18 @@ public class FunctionImpl extends ElementImpl implements Function {
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EList<Function> getCommunicatedWithFunctions() {
-		return (EList<Function>)eDynamicGet(ContentfwkPackage.FUNCTION__COMMUNICATED_WITH_FUNCTIONS, ContentfwkPackage.Literals.FUNCTION__COMMUNICATED_WITH_FUNCTIONS, true, true);
+	public EList<Function> getCommunicatesWithFunctions() {
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.FUNCTION__COMMUNICATES_WITH_FUNCTIONS, ContentfwkPackage.Literals.FUNCTION__COMMUNICATES_WITH_FUNCTIONS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Function> getIsDecomposedByFunctions() {
+		return (EList<Function>)eDynamicGet(ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS, ContentfwkPackage.Literals.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS, true, true);
 	}
 
 	/**
@@ -355,11 +376,11 @@ public class FunctionImpl extends ElementImpl implements Function {
 		switch (featureID) {
 			case ContentfwkPackage.FUNCTION__IS_PERFORMED_BY_ACTORS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsPerformedByActors()).basicAdd(otherEnd, msgs);
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				OrganizationUnit isOwnedByUnit = basicGetIsOwnedByUnit();
-				if (isOwnedByUnit != null)
-					msgs = ((InternalEObject)isOwnedByUnit).eInverseRemove(this, ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS, OrganizationUnit.class, msgs);
-				return basicSetIsOwnedByUnit((OrganizationUnit)otherEnd, msgs);
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				OrganizationUnit isOwnedByOrganizationUnit = basicGetIsOwnedByOrganizationUnit();
+				if (isOwnedByOrganizationUnit != null)
+					msgs = ((InternalEObject)isOwnedByOrganizationUnit).eInverseRemove(this, ContentfwkPackage.ORGANIZATION_UNIT__OWNS_FUNCTIONS, OrganizationUnit.class, msgs);
+				return basicSetIsOwnedByOrganizationUnit((OrganizationUnit)otherEnd, msgs);
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsBoundedByServices()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.FUNCTION__SUPPORTS_PROCESSES:
@@ -370,6 +391,13 @@ public class FunctionImpl extends ElementImpl implements Function {
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getCanBeAccessedByRoles()).basicAdd(otherEnd, msgs);
 			case ContentfwkPackage.FUNCTION__SUPPORTS_ACTORS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSupportsActors()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
+				Function decomposesFunction = basicGetDecomposesFunction();
+				if (decomposesFunction != null)
+					msgs = ((InternalEObject)decomposesFunction).eInverseRemove(this, ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS, Function.class, msgs);
+				return basicSetDecomposesFunction((Function)otherEnd, msgs);
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByFunctions()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -384,8 +412,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 		switch (featureID) {
 			case ContentfwkPackage.FUNCTION__IS_PERFORMED_BY_ACTORS:
 				return ((InternalEList<?>)getIsPerformedByActors()).basicRemove(otherEnd, msgs);
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				return basicSetIsOwnedByUnit(null, msgs);
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				return basicSetIsOwnedByOrganizationUnit(null, msgs);
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				return ((InternalEList<?>)getIsBoundedByServices()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.FUNCTION__SUPPORTS_PROCESSES:
@@ -396,6 +424,10 @@ public class FunctionImpl extends ElementImpl implements Function {
 				return ((InternalEList<?>)getCanBeAccessedByRoles()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.FUNCTION__SUPPORTS_ACTORS:
 				return ((InternalEList<?>)getSupportsActors()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
+				return basicSetDecomposesFunction(null, msgs);
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				return ((InternalEList<?>)getIsDecomposedByFunctions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -412,17 +444,17 @@ public class FunctionImpl extends ElementImpl implements Function {
 				return getStandardClass();
 			case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.FUNCTION__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.FUNCTION__IS_PERFORMED_BY_ACTORS:
 				return getIsPerformedByActors();
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				if (resolve) return getIsOwnedByUnit();
-				return basicGetIsOwnedByUnit();
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				if (resolve) return getIsOwnedByOrganizationUnit();
+				return basicGetIsOwnedByOrganizationUnit();
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				return getIsBoundedByServices();
 			case ContentfwkPackage.FUNCTION__SUPPORTS_PROCESSES:
@@ -436,8 +468,10 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
 				if (resolve) return getDecomposesFunction();
 				return basicGetDecomposesFunction();
-			case ContentfwkPackage.FUNCTION__COMMUNICATED_WITH_FUNCTIONS:
-				return getCommunicatedWithFunctions();
+			case ContentfwkPackage.FUNCTION__COMMUNICATES_WITH_FUNCTIONS:
+				return getCommunicatesWithFunctions();
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				return getIsDecomposedByFunctions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -457,11 +491,11 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.FUNCTION__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -470,8 +504,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 				getIsPerformedByActors().clear();
 				getIsPerformedByActors().addAll((Collection<? extends Actor>)newValue);
 				return;
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				setIsOwnedByUnit((OrganizationUnit)newValue);
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				setIsOwnedByOrganizationUnit((OrganizationUnit)newValue);
 				return;
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				getIsBoundedByServices().clear();
@@ -496,9 +530,13 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
 				setDecomposesFunction((Function)newValue);
 				return;
-			case ContentfwkPackage.FUNCTION__COMMUNICATED_WITH_FUNCTIONS:
-				getCommunicatedWithFunctions().clear();
-				getCommunicatedWithFunctions().addAll((Collection<? extends Function>)newValue);
+			case ContentfwkPackage.FUNCTION__COMMUNICATES_WITH_FUNCTIONS:
+				getCommunicatesWithFunctions().clear();
+				getCommunicatesWithFunctions().addAll((Collection<? extends Function>)newValue);
+				return;
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				getIsDecomposedByFunctions().clear();
+				getIsDecomposedByFunctions().addAll((Collection<? extends Function>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -518,11 +556,11 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.FUNCTION__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -530,8 +568,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__IS_PERFORMED_BY_ACTORS:
 				getIsPerformedByActors().clear();
 				return;
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				setIsOwnedByUnit((OrganizationUnit)null);
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				setIsOwnedByOrganizationUnit((OrganizationUnit)null);
 				return;
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				getIsBoundedByServices().clear();
@@ -551,8 +589,11 @@ public class FunctionImpl extends ElementImpl implements Function {
 			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
 				setDecomposesFunction((Function)null);
 				return;
-			case ContentfwkPackage.FUNCTION__COMMUNICATED_WITH_FUNCTIONS:
-				getCommunicatedWithFunctions().clear();
+			case ContentfwkPackage.FUNCTION__COMMUNICATES_WITH_FUNCTIONS:
+				getCommunicatesWithFunctions().clear();
+				return;
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				getIsDecomposedByFunctions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -570,16 +611,16 @@ public class FunctionImpl extends ElementImpl implements Function {
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.FUNCTION__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.FUNCTION__IS_PERFORMED_BY_ACTORS:
 				return !getIsPerformedByActors().isEmpty();
-			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_UNIT:
-				return basicGetIsOwnedByUnit() != null;
+			case ContentfwkPackage.FUNCTION__IS_OWNED_BY_ORGANIZATION_UNIT:
+				return basicGetIsOwnedByOrganizationUnit() != null;
 			case ContentfwkPackage.FUNCTION__IS_BOUNDED_BY_SERVICES:
 				return !getIsBoundedByServices().isEmpty();
 			case ContentfwkPackage.FUNCTION__SUPPORTS_PROCESSES:
@@ -592,8 +633,10 @@ public class FunctionImpl extends ElementImpl implements Function {
 				return !getSupportsActors().isEmpty();
 			case ContentfwkPackage.FUNCTION__DECOMPOSES_FUNCTION:
 				return basicGetDecomposesFunction() != null;
-			case ContentfwkPackage.FUNCTION__COMMUNICATED_WITH_FUNCTIONS:
-				return !getCommunicatedWithFunctions().isEmpty();
+			case ContentfwkPackage.FUNCTION__COMMUNICATES_WITH_FUNCTIONS:
+				return !getCommunicatesWithFunctions().isEmpty();
+			case ContentfwkPackage.FUNCTION__IS_DECOMPOSED_BY_FUNCTIONS:
+				return !getIsDecomposedByFunctions().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -609,8 +652,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.FUNCTION__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.FUNCTION__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -629,8 +672,8 @@ public class FunctionImpl extends ElementImpl implements Function {
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.FUNCTION__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.FUNCTION__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.FUNCTION__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.FUNCTION__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.FUNCTION__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.FUNCTION__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.FUNCTION__RETIRE_DATE;
 				default: return -1;
 			}

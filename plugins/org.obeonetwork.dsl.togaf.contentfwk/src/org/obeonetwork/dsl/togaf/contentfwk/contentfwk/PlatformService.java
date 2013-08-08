@@ -27,6 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getIsSuppliedByLogicalTechnologyComponents <em>Is Supplied By Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getStandardClass <em>Standard Class</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,7 +35,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface PlatformService extends Element, Service {
+public interface PlatformService extends Element {
 	/**
 	 * Returns the value of the '<em><b>Is Supplied By Logical Technology Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent}.
@@ -78,5 +79,34 @@ public interface PlatformService extends Element, Service {
 	 * @generated
 	 */
 	void setCategoryTRM(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Standard Class</b></em>' attribute.
+	 * The literals are from the enumeration {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Standard Class</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Standard Class</em>' attribute.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass
+	 * @see #setStandardClass(StandardsClass)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getPlatformService_StandardClass()
+	 * @model
+	 * @generated
+	 */
+	StandardsClass getStandardClass();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PlatformService#getStandardClass <em>Standard Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Standard Class</em>' attribute.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass
+	 * @see #getStandardClass()
+	 * @generated
+	 */
+	void setStandardClass(StandardsClass value);
 
 } // PlatformService

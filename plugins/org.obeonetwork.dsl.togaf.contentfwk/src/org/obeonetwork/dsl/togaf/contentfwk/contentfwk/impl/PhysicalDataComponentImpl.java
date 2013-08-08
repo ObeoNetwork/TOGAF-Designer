@@ -37,13 +37,14 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.StandardsClass;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getStandardClass <em>Standard Class</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getLastStandardCreationDate <em>Last Standard Creation Date</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getNextStandardCreationDate <em>Next Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getExtendsLogicalDataComponents <em>Extends Logical Data Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getIsHotedInLocation <em>Is Hoted In Location</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getDecomposesPhysicalDataComponent <em>Decomposes Physical Data Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getEncapsulatesPhysicalApplicationComponents <em>Encapsulates Physical Application Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalDataComponentImpl#getIsDecomposedByPhysicalDataComponents <em>Is Decomposed By Physical Data Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,23 +70,23 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 */
 	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getLastStandardCreationDate() <em>Last Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastStandardCreationDate()
+	 * @see #getLastStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
-	 * The default value of the '{@link #getNextStandardCreationDate() <em>Next Standard Creation Date</em>}' attribute.
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStandardCreationDate()
+	 * @see #getNextStandardReviewDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date NEXT_STANDARD_CREATION_DATE_EDEFAULT = null;
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -156,8 +157,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, true, true);
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -165,8 +166,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastStandardCreationDate(Date newLastStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_CREATION_DATE, newLastStandardCreationDate);
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
 	}
 
 	/**
@@ -174,8 +175,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getNextStandardCreationDate() {
-		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, true, true);
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
 	}
 
 	/**
@@ -183,8 +184,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStandardCreationDate(Date newNextStandardCreationDate) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_CREATION_DATE, newNextStandardCreationDate);
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
 	}
 
 	/**
@@ -275,6 +276,16 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public NotificationChain basicSetDecomposesPhysicalDataComponent(PhysicalDataComponent newDecomposesPhysicalDataComponent, NotificationChain msgs) {
+		msgs = eDynamicInverseAdd((InternalEObject)newDecomposesPhysicalDataComponent, ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void setDecomposesPhysicalDataComponent(PhysicalDataComponent newDecomposesPhysicalDataComponent) {
 		eDynamicSet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT, newDecomposesPhysicalDataComponent);
 	}
@@ -295,6 +306,16 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
+	public EList<PhysicalDataComponent> getIsDecomposedByPhysicalDataComponents() {
+		return (EList<PhysicalDataComponent>)eDynamicGet(ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS, ContentfwkPackage.Literals.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -305,6 +326,15 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				if (isHotedInLocation != null)
 					msgs = ((InternalEObject)isHotedInLocation).eInverseRemove(this, ContentfwkPackage.LOCATION__CONTAINS_PHYSICAL_DATA_COMPONENTS, Location.class, msgs);
 				return basicSetIsHotedInLocation((Location)otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				PhysicalDataComponent decomposesPhysicalDataComponent = basicGetDecomposesPhysicalDataComponent();
+				if (decomposesPhysicalDataComponent != null)
+					msgs = ((InternalEObject)decomposesPhysicalDataComponent).eInverseRemove(this, ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS, PhysicalDataComponent.class, msgs);
+				return basicSetDecomposesPhysicalDataComponent((PhysicalDataComponent)otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getEncapsulatesPhysicalApplicationComponents()).basicAdd(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIsDecomposedByPhysicalDataComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -321,6 +351,12 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return ((InternalEList<?>)getExtendsLogicalDataComponents()).basicRemove(otherEnd, msgs);
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_HOTED_IN_LOCATION:
 				return basicSetIsHotedInLocation(null, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__DECOMPOSES_PHYSICAL_DATA_COMPONENT:
+				return basicSetDecomposesPhysicalDataComponent(null, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
+				return ((InternalEList<?>)getEncapsulatesPhysicalApplicationComponents()).basicRemove(otherEnd, msgs);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				return ((InternalEList<?>)getIsDecomposedByPhysicalDataComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -337,10 +373,10 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return getStandardClass();
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
 				return getStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return getLastStandardCreationDate();
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return getNextStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
 				return getRetireDate();
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
@@ -353,6 +389,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return basicGetDecomposesPhysicalDataComponent();
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
 				return getEncapsulatesPhysicalApplicationComponents();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				return getIsDecomposedByPhysicalDataComponents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -372,11 +410,11 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
 				return;
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate((Date)newValue);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
 				return;
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
 				setRetireDate((Date)newValue);
@@ -394,6 +432,10 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
 				getEncapsulatesPhysicalApplicationComponents().clear();
 				getEncapsulatesPhysicalApplicationComponents().addAll((Collection<? extends PhysicalApplicationComponent>)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				getIsDecomposedByPhysicalDataComponents().clear();
+				getIsDecomposedByPhysicalDataComponents().addAll((Collection<? extends PhysicalDataComponent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -413,11 +455,11 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
 				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				setLastStandardCreationDate(LAST_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				setNextStandardCreationDate(NEXT_STANDARD_CREATION_DATE_EDEFAULT);
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
 				return;
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
 				setRetireDate(RETIRE_DATE_EDEFAULT);
@@ -433,6 +475,9 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return;
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
 				getEncapsulatesPhysicalApplicationComponents().clear();
+				return;
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				getIsDecomposedByPhysicalDataComponents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -450,10 +495,10 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE:
 				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE:
-				return LAST_STANDARD_CREATION_DATE_EDEFAULT == null ? getLastStandardCreationDate() != null : !LAST_STANDARD_CREATION_DATE_EDEFAULT.equals(getLastStandardCreationDate());
-			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE:
-				return NEXT_STANDARD_CREATION_DATE_EDEFAULT == null ? getNextStandardCreationDate() != null : !NEXT_STANDARD_CREATION_DATE_EDEFAULT.equals(getNextStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE:
 				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__EXTENDS_LOGICAL_DATA_COMPONENTS:
@@ -464,6 +509,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 				return basicGetDecomposesPhysicalDataComponent() != null;
 			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__ENCAPSULATES_PHYSICAL_APPLICATION_COMPONENTS:
 				return !getEncapsulatesPhysicalApplicationComponents().isEmpty();
+			case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_DATA_COMPONENTS:
+				return !getIsDecomposedByPhysicalDataComponents().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -479,8 +526,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 			switch (derivedFeatureID) {
 				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
 				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
 				default: return -1;
 			}
@@ -504,8 +551,8 @@ public class PhysicalDataComponentImpl extends ElementImpl implements PhysicalDa
 			switch (baseFeatureID) {
 				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CLASS;
 				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__LAST_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_CREATION_DATE;
-				case ContentfwkPackage.STANDARD__NEXT_STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__NEXT_STANDARD_REVIEW_DATE;
 				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PHYSICAL_DATA_COMPONENT__RETIRE_DATE;
 				default: return -1;
 			}

@@ -27,6 +27,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getDecomposesLogicalTechnologyComponent <em>Decomposes Logical Technology Component</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDependentOnLogicalTechnologyComponents <em>Is Dependent On Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getCategoryTRM <em>Category TRM</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsExtendedByPhysicalTechnologyComponent <em>Is Extended By Physical Technology Component</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRequiredByLogicalTechnologyComponents <em>Is Required By Logical Technology Components</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDecomposedByLogicalTechnologyComponents <em>Is Decomposed By Logical Technology Components</em>}</li>
  * </ul>
  * </p>
  *
@@ -91,6 +94,7 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 
 	/**
 	 * Returns the value of the '<em><b>Decomposes Logical Technology Component</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDecomposedByLogicalTechnologyComponents <em>Is Decomposed By Logical Technology Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decomposes Logical Technology Component</em>' reference isn't clear,
@@ -100,7 +104,8 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 	 * @return the value of the '<em>Decomposes Logical Technology Component</em>' reference.
 	 * @see #setDecomposesLogicalTechnologyComponent(LogicalTechnologyComponent)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_DecomposesLogicalTechnologyComponent()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDecomposedByLogicalTechnologyComponents
+	 * @model opposite="isDecomposedByLogicalTechnologyComponents"
 	 * @generated
 	 */
 	LogicalTechnologyComponent getDecomposesLogicalTechnologyComponent();
@@ -118,6 +123,7 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 	/**
 	 * Returns the value of the '<em><b>Is Dependent On Logical Technology Components</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRequiredByLogicalTechnologyComponents <em>Is Required By Logical Technology Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Dependent On Logical Technology Components</em>' reference list isn't clear,
@@ -126,7 +132,8 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Dependent On Logical Technology Components</em>' reference list.
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_IsDependentOnLogicalTechnologyComponents()
-	 * @model
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsRequiredByLogicalTechnologyComponents
+	 * @model opposite="isRequiredByLogicalTechnologyComponents"
 	 * @generated
 	 */
 	EList<LogicalTechnologyComponent> getIsDependentOnLogicalTechnologyComponents();
@@ -156,5 +163,57 @@ public interface LogicalTechnologyComponent extends Element, TechnologyComponent
 	 * @generated
 	 */
 	void setCategoryTRM(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Extended By Physical Technology Component</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PhysicalTechnologyComponent}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Extended By Physical Technology Component</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Extended By Physical Technology Component</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_IsExtendedByPhysicalTechnologyComponent()
+	 * @model
+	 * @generated
+	 */
+	EList<PhysicalTechnologyComponent> getIsExtendedByPhysicalTechnologyComponent();
+
+	/**
+	 * Returns the value of the '<em><b>Is Required By Logical Technology Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDependentOnLogicalTechnologyComponents <em>Is Dependent On Logical Technology Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Required By Logical Technology Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Required By Logical Technology Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_IsRequiredByLogicalTechnologyComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getIsDependentOnLogicalTechnologyComponents
+	 * @model opposite="isDependentOnLogicalTechnologyComponents"
+	 * @generated
+	 */
+	EList<LogicalTechnologyComponent> getIsRequiredByLogicalTechnologyComponents();
+
+	/**
+	 * Returns the value of the '<em><b>Is Decomposed By Logical Technology Components</b></em>' reference list.
+	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent}.
+	 * It is bidirectional and its opposite is '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getDecomposesLogicalTechnologyComponent <em>Decomposes Logical Technology Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Decomposed By Logical Technology Components</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Decomposed By Logical Technology Components</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getLogicalTechnologyComponent_IsDecomposedByLogicalTechnologyComponents()
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalTechnologyComponent#getDecomposesLogicalTechnologyComponent
+	 * @model opposite="decomposesLogicalTechnologyComponent"
+	 * @generated
+	 */
+	EList<LogicalTechnologyComponent> getIsDecomposedByLogicalTechnologyComponents();
 
 } // LogicalTechnologyComponent

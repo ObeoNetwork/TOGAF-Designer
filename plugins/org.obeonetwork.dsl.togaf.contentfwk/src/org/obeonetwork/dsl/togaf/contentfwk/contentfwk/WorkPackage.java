@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getWorkPackageCategory <em>Work Package Category</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getDeliversCapabilities <em>Delivers Capabilities</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getCapabilityDelivered <em>Capability Delivered</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,5 +78,30 @@ public interface WorkPackage extends StrategicElement {
 	 * @generated
 	 */
 	EList<Capability> getDeliversCapabilities();
+
+	/**
+	 * Returns the value of the '<em><b>Capability Delivered</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Statement of why the requirement exists. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Capability Delivered</em>' attribute.
+	 * @see #setCapabilityDelivered(String)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getWorkPackage_CapabilityDelivered()
+	 * @model
+	 * @generated
+	 */
+	String getCapabilityDelivered();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.WorkPackage#getCapabilityDelivered <em>Capability Delivered</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Capability Delivered</em>' attribute.
+	 * @see #getCapabilityDelivered()
+	 * @generated
+	 */
+	void setCapabilityDelivered(String value);
 
 } // WorkPackage
