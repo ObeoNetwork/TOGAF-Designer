@@ -9986,7 +9986,7 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalTechnologyComponent" referenceName="physicalComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalTehnologyComponent &lt;%eContainer().physicalComponents.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="isHostedInLocation" valueExpression="&lt;%$element.filter(&quot;Location&quot;)%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="isHostedInLocation" valueExpression="&lt;%$container.filter(&quot;Location&quot;)%>"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.filter(&quot;LogicalTechnologyComponent&quot;)%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="suppliesPlatformServices" valueExpression="&lt;%$element.filter(&quot;PlatformService&quot;)%>"/>
