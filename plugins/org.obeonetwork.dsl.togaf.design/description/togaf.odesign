@@ -338,7 +338,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Drivers" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+        <toolSections name="Driver" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Driver" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -357,7 +357,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" label="Decompose" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -369,7 +369,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Creates Goal" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -431,7 +431,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Goals" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+        <toolSections name="Goal" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Goal" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -448,7 +448,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" label="Decompose" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -480,7 +480,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Is Realized Through Objectives" label="Is Realized Through Objectives" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -522,7 +522,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Objectives" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
+        <toolSections name="Objective" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Objective" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Objective'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Objective']/@subContainerMappings[name='SubObjective']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -539,7 +539,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" label="Decompose" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).objectives%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).objectives%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -571,7 +571,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is Tracked Against Measure" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -613,7 +613,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Measures" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
+        <toolSections name="Measure" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Measure" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Measure'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='Measure']/@subContainerMappings[name='SubMeasure']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -630,7 +630,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" label="Decompose" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).measures%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).measures%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -662,7 +662,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets Performance Criteria For Service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -704,7 +704,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="BusinessService" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+        <toolSections name="BusinessService" label="BusinessService" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -721,7 +721,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" label="Decompose" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).services%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).services%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -810,7 +810,7 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="OrganizationUnit" label="Organizations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
+        <toolSections name="OrganizationUnit" label="OrganizationUnit" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Organization" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Organization']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -830,7 +830,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" label="Contains Actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -872,7 +872,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+        <toolSections name="Actor" label="Actor" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Actor" label="Actor" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -884,7 +884,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -926,7 +926,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Function" label="Functions" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Function" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Function']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -966,7 +966,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Role" label="Roles" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+        <toolSections name="Role" label="Role" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="create Role" label="Role" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Role']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1006,7 +1006,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Location" label="Locations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
+        <toolSections name="Location" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="create Location" label="Location" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='Actor']/@subNodeMappings[name='Location']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1449,7 +1449,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Event" label="Events" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
+        <toolSections name="Event" label="Event" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Event" nodeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@nodeMappings[name='Event']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1461,7 +1461,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" label="Generated by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" label="Generated By Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1502,7 +1502,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" label="Resolved by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" label="Resolved By Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1530,7 +1530,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Process" label="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+        <toolSections name="Process" label="Process" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1567,7 +1567,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" label="Preceeds" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" label="Process Precedes Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1667,7 +1667,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Business Service" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+        <toolSections name="Business Service" label="BusinessService" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1698,7 +1698,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" label="Consumes data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" label="Consumes DataEntity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1709,7 +1709,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" label="Provides data entity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" label="Provides DataEntity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1720,7 +1720,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" label="Consumes service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" label="Consumes Service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='BusinessService%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1895,7 +1895,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates To DataEntity" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -1978,7 +1978,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Process" label="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+        <toolSections name="Process" label="Process" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -1990,7 +1990,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2031,7 +2031,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" label="Decomposes process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" label="Decomposes Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2073,7 +2073,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+        <toolSections name="Actor" label="Actor" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2087,7 +2087,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" label="Participates in process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" label="Participates In Process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2228,7 +2228,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="OrganizationUnit" label="Organizations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
+        <toolSections name="OrganizationUnit" label="OrganizationUnit" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="OrganizationUnit" label="Organization" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2243,7 +2243,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Driver" label="Drivers" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+        <toolSections name="Driver" label="Driver" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Driver" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Driver']/@subContainerMappings[name='SubDriver']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2316,7 +2316,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Goal" label="Goals" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+        <toolSections name="Goal" label="Goal" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Goal" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Driver']/@subContainerMappings[name='Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Driver']/@subContainerMappings[name='Goal']/@subContainerMappings[name='SubGoal']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2392,7 +2392,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Function" label="Functions" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2438,7 +2438,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates with" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" label="Communicates With Function" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2507,7 +2507,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" label="Is bounded by" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" label="Is bounded by Services" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2549,8 +2549,8 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Services" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OService'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Service'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Service']/@subContainerMappings[name='SubService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+        <toolSections name="Services" label="BusinessService" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" label="BusinessService" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OService'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Service'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Service']/@subContainerMappings[name='SubService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2571,7 +2571,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" label="Select business service" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Service&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;Service&quot;)%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" label="Select BusinessService" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Service&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;Service&quot;)%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2616,7 +2616,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" label="Consumes" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" label="Consumes Service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2806,7 +2806,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Drivers" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+        <toolSections name="Driver" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Driver" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Driver']/@subContainerMappings[name='SubDriver']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2830,7 +2830,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" label="Decompose" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).drivers%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).drivers%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2847,7 +2847,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates goal" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="driverCreatesGoals" label="Creates Goal" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='driverCreatesGoals']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -2909,7 +2909,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="Goals" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+        <toolSections name="Goal" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Goal" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Goal']/@subContainerMappings[name='SubGoal']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -2931,7 +2931,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" label="Decompose" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).goals%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).goals%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2968,7 +2968,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is realized through objective" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GoalIsRealizedThroughObjectives" label="Is Realized Through Objective" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='GoalIsRealizedThroughObjectives']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3010,7 +3010,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Objectives" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
+        <toolSections name="Objective" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Objective" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Objective'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Objective']/@subContainerMappings[name='SubObjective']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -3032,7 +3032,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" label="Decompose" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).objectives%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).objectives%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3069,7 +3069,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against measure" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IstrackedAgainstMeasures" label="Is tracked against Measure" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ObjectiveIsTrackedAgainstMeasures']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3111,7 +3111,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="Measures" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
+        <toolSections name="Measure" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Measure" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Measure'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Measure']/@subContainerMappings[name='SubMeasure']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -3133,7 +3133,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" label="Decompose" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).measures%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).measures%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3170,7 +3170,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets performance criteria for service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="MeasureSetsPerformanceCriteriaForServices" label="Sets Performance Criteria For Service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='MeasureSetsPerformanceCriteriaForServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3212,7 +3212,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="BusinessService" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+        <toolSections name="BusinessService" label="BusinessService" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Goal%2FObjective%2FService%20Diagram%20Container']/@defaultLayer/@containerMappings[name='BusinessService']/@subContainerMappings[name='SubBusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -3234,7 +3234,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" label="Decompose" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).services%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).services%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3516,21 +3516,21 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="Driver" referenceName="drivers">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;OrganizationUnit&quot;%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="isMotivatedByDrivers" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Driver"/>
                     <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Driver&quot;%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="decomposesDriver" valueExpression="&lt;%$container%>"/>
                     </subModelOperations>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;OrganizationUnit&quot;%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="isMotivatedByDrivers" valueExpression="&lt;%$instance%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -3718,7 +3718,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With Function" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3787,7 +3787,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionIsBoundedByServices" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Is Bounded By Service" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Footprint%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -3930,7 +3930,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="serviceConsumesService" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='serviceConsumesService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4145,7 +4145,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionCommunicatedWithFunctions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With Function" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionCommunicatedWithFunctions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4214,7 +4214,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="functionSupportsProcesses" label="Function Supports Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Supports Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='functionSupportsProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4337,7 +4337,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Process Precedes Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Precedes Process" label="Process Precedes Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4474,7 +4474,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Business Service">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes DataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20consumed%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4485,7 +4485,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides Data Entity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides DataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntity%20provides%20by%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4709,7 +4709,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Relates To DataEntity" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4829,7 +4829,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Precedes Processes" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4870,7 +4870,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="processDecomposesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Decomposes Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessDecomposesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -4943,7 +4943,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Link" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Participates In Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20participates%20in%20Process']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5052,7 +5052,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="OrganizationUnit">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateOrganization" label="Organization" nodeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Organization']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OrganizationUnit" nodeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Organization']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -5070,7 +5070,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Organization" candidatesExpression="&lt;%$container.getRootElement().eContents().filter(&quot;BusinessArchitecture&quot;).units%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select OrganizationUnit" candidatesExpression="&lt;%$container.getRootElement().eContents().filter(&quot;BusinessArchitecture&quot;).units%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5082,7 +5082,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Contains Actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Contains']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5155,7 +5155,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DecomposesActor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Decomposes Actor" label="Decomposes Actor" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='DecomposesActor']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5464,7 +5464,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event generated by Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Generated by Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='GeneratedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5505,7 +5505,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Event Resolved By Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Resolved By Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ResolvedBy']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -5574,7 +5574,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcess" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Precedes Process" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@edgeMappings[name='ProcessPrecedesProcess']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -6801,7 +6801,7 @@
           </style>
         </containerMappings>
         <toolSections name="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select process decomposing this process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select Decompose Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6813,7 +6813,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Follow" label="Select processes that this process follows" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Follow" label="Select Follow Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6825,7 +6825,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Preceed" label="Select processes that this process precedes" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Preceed" label="Select Preceed Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6837,7 +6837,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create decompose" label="Create process decomposing this process" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create decompose" label="Decompose Process" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -6849,7 +6849,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createfollow" label="Create process that this process follows" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createfollow" label="Follow Process" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -6863,7 +6863,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createpreced" label="Create process that this process procedes" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Createpreced" label="Preceed Process" containerMappings="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -6921,7 +6921,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select data entity" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select DataEntity" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6955,7 +6955,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to Data Entity" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7031,7 +7031,7 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="LogicalApplicationComponent" label="Logical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+        <toolSections name="LogicalApplicationComponent" label="Logical Application Component" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
           <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
             <mask mask="{0}"/>
             <initialOperation>
@@ -7040,7 +7040,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" label="Logical application component" containerMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" label="LogicalApplicationComponent" containerMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -7051,7 +7051,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" label="Implements" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" label="Implements Services" edgeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7093,7 +7093,7 @@
             <edgeView name="edgeView"/>
           </ownedTools>
         </toolSections>
-        <toolSections name="BusinessService" label="Business services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+        <toolSections name="BusinessService" label="BusinessService" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Business Service" label="Business service" containerMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='BusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -7106,7 +7106,7 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="DataEntity" label="Data entities" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+        <toolSections name="DataEntity" label="DataEntity" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
           <ownedTools xsi:type="tool:ContainerDropDescription" name="Data entity into logical component" precondition="&lt;%$element.filter(&quot;contentfwk.DataEntity&quot;)%>" forceRefresh="true" mappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='DataEntity']" dragSource="BOTH">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
@@ -7123,7 +7123,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Data Entity" label="Data entity" nodeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='DataEntity']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Data Entity" label="DataEntity" nodeMappings="//@ownedViewpoints[name='data']/@ownedRepresentations[name='Data%20Dissemination%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='DataEntity']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -7147,7 +7147,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select data entity" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;DataEntity&quot;)%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select DataEntity" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;DataEntity&quot;)%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7178,7 +7178,7 @@
   <ownedViewpoints name="data-container" label="TOGAF - Phase C. 1- Information Systems - Data Architecture - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Data Entity/Business Function Matrix Container" titleExpression="Data Entity/Business Function Matrix" domainClass="TagContainer">
       <ownedLineMappings name="Functions" domainClass="contentfwk.Function" semanticCandidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).functions%>" headerLabelExpression="&lt;%name%>">
-        <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>"/>
+        <ownedSubLines name="BusinessServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" headerLabelExpression="&lt;%name%>"/>
       </ownedLineMappings>
       <ownedColumnMappings name="DataEntities" headerLabelExpression="&lt;%name%>" domainClass="contentfwk.DataEntity" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;DataEntity&quot;)%>"/>
       <intersection name="Function / DataEntity relationships" lineMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedLineMappings[name='Functions']" columnMapping="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Entity%2FBusiness%20Function%20Matrix%20Container']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%(isBoundedByServices.providesEntities+isBoundedByServices.consumesEntities).nMinimize()%>"/>
@@ -7227,7 +7227,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="LogicalApplicationComponent">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" containerMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="LogicalApplicationComponent" containerMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -7255,7 +7255,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Realization" label="Implements Service" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@edgeMappings[name='LogicalApplicationComponent%20to%20BusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7298,7 +7298,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="BusinessService">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Business Service" containerMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@containerMappings[name='BusinessService']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="BusinessService" containerMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Data%20Dissemination%20Diagram%20%20Container']/@defaultLayer/@containerMappings[name='BusinessService']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -7410,7 +7410,7 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections>
+        <toolSections name="DataEntity">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="DataEntity" containerMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity'] //@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@containerMappings[name='DataEntity']/@subContainerMappings[name='SubDataEntity']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -7470,7 +7470,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Relates To DataEntity" edgeMappings="//@ownedViewpoints[name='data-container']/@ownedRepresentations[name='Class%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Relation%20Between%20Data%20Entity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -7606,8 +7606,8 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="Data entities" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select data entity decomposing this entity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+        <toolSections name="Data entities" label="DataEntity" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Decompose DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7619,7 +7619,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="RelatesTo" label="Select data entity that this entity relates to" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="RelatesTo" label="Relates To DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7970,7 +7970,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="DataEntityRelatesToDataEntity" label="Relates to Data Entity" edgeMappings="//@ownedViewpoints[name='data-element']/@ownedRepresentations[name='Business%20Service%20%2F%20Information%20Data%20Entity%20Element%20Diagram']/@defaultLayer/@edgeMappings[name='DataEntityRelatesToDataEntity']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8268,7 +8268,7 @@
           </style>
         </containerMappings>
         <toolSections name="LogicalApplicationComponents" label="Logical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" label="Logical application component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" label="Logical Application Component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -8279,7 +8279,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" label="Communicates with" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" label="Communicates with LogicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8433,7 +8433,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="PhysicalApplicationComponent" label="Physical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical application component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical Application Component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -8473,7 +8473,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With PhysicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8561,7 +8561,10 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20ActorConsumesService']">
+        <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/icons/actor.jpg"/>
+        </nodeMappings>
+        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20ActorConsumesService']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
@@ -8577,14 +8580,16 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Actor" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" showIcon="false" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </style>
-        </containerMappings>
         <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -8595,15 +8600,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
-            <mask mask="{0}"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes Service" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8703,7 +8700,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map)" titleExpression="Interface Catalog (Logical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
+      <ownedColumnMappings name="LogicalApplicationComponentsColumn" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
       <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -8728,7 +8725,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map)" titleExpression="Interface Catalog (Physical App Map)" domainClass="ApplicationArchitecture">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%physicalApplicationComponents%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent"/>
+      <ownedColumnMappings name="PhysicalApplicationComponentsColumn" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -8807,23 +8804,23 @@
           </style>
         </containerMappings>
         <toolSections name="Logical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical application component" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical application component" label="Logical Application Component" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select logical application component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select logical application component" label="Select Logical Application Component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -8835,7 +8832,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates with" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates with LogicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -8909,13 +8906,13 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;InformationSystemService_&quot;+eContainer(&quot;ApplicationArchitecture&quot;).informationSystemServices.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -9049,7 +9046,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="PhysicalApplicationComponent" label="Physical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical application component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical Application Component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -9069,7 +9066,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" label="Select Physical Application Component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -9100,7 +9097,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With PhysicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -9230,8 +9227,8 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram Container" titleExpression="System Use Case Diagram_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
+        <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="Actor">
+          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/icons/actor.jpg"/>
         </nodeMappings>
         <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ActorConsumesService']">
           <style sizeComputationExpression="2">
@@ -9243,7 +9240,7 @@
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="Service" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;InformationSystemService&quot;)%>" domainClass="contentfwk.InformationSystemService">
+        <containerMappings name="Service" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;InformationSystemService&quot;)%>" domainClass="contentfwk.InformationSystemService">
           <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" showIcon="false" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -9265,18 +9262,18 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;BusinessArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%$container.getRootElement().filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="select Actor" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).actors%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="select Actor" label="Select Actor" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).actors%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -9335,19 +9332,21 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%$container.informationSystemServices.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%$container.informationSystemServices.nSize()%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%$container.informationSystemServices.nSize()%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                    </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;).services%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -9359,7 +9358,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Service consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='InformationSystemServiceToInformationSystemService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Consumes service" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='InformationSystemServiceToInformationSystemService']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -9405,7 +9404,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Logical App Map) Container" titleExpression="Interface Catalog (Logical App Map)" domainClass="TagContainer">
       <ownedLineMappings name="LogicalApplicationComponents" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;LogicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="LogicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
+      <ownedColumnMappings name="LogicalApplicationComponentsColumn" headerLabelExpression="&lt;%name%>" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>"/>
       <intersection name="LogicalApplicationComponent communicates with LogicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Container']/@ownedLineMappings[name='LogicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Logical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -9430,7 +9429,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map) Container" titleExpression="Interface Catalog (Physical App Map)" domainClass="TagContainer">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;PhysicalApplicationComponent&quot;)%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
+      <ownedColumnMappings name="PhysicalApplicationComponentsColumn" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Container']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Container']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -9493,12 +9492,12 @@
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
       </filters>
       <defaultLayer name="Default">
-        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@toolSections.0/@ownedTools[name='Reconnect1']">
+        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@toolSections.0/@ownedTools[name='Reconnect%20target%20communication']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" sizeComputationExpression="2">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.LogicalApplicationComponent" listContainer="true">
+        <containerMappings name="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@toolSections.1/@ownedTools[name='']" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
             <style xsi:type="style:SquareDescription" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9511,7 +9510,7 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(self.communicatesWith + self.~communicatesWith).nMinimize - self%>" domainClass="contentfwk.LogicalApplicationComponent" listContainer="true">
+        <containerMappings name="OtherLogicalApplicationComponent" semanticCandidatesExpression="&lt;%(self.communicatesWith + self.~communicatesWith).nMinimize - self%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@toolSections.1/@ownedTools[name='']" listContainer="true">
           <subNodeMappings name="Services" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.Service">
             <style xsi:type="style:SquareDescription" labelPosition="node">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -9524,15 +9523,17 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="Tools">
+        <toolSections name="Logical Application Component">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" containerMappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="&lt;%$container.labels%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -9548,7 +9549,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect1" forceRefresh="true">
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect target communication" forceRefresh="true">
             <source name="source"/>
             <target name="target"/>
             <sourceView name="sourceView"/>
@@ -9561,6 +9562,18 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" message="Select a Logical Application Component" candidatesExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="InformationSystemServices">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Information System Service" nodeMappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -9568,20 +9581,48 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;InformationSystemService_&quot;+eContainer(&quot;ApplicationArchitecture&quot;).informationSystemServices.nSize()%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" message="Select a Logical Application Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" candidatesExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices + $container.getRootElement().architecture.filter(&quot;BusinessArchitecture&quot;).services%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$element%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" mappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$element%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="implementsServices" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Business Service" nodeMappings="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services'] //@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Element']/@defaultLayer/@containerMappings[name='OtherLogicalApplicationComponent']/@subNodeMappings[name='Services']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;BusinessService_&quot;+eContainer(&quot;BusinessArchitecture&quot;).services.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -9615,7 +9656,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="Interface Catalog (Physical App Map) Element" titleExpression="Interface Catalog (Physical App Map)" domainClass="PhysicalApplicationComponent">
       <ownedLineMappings name="PhysicalApplicationComponents" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%self%>" headerLabelExpression="&lt;%name%>"/>
-      <ownedColumnMappings name="PhysicalApplicationComponents" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
+      <ownedColumnMappings name="PhysicalApplicationComponentsColumn" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="PhysicalApplicationComponent communicates with PhysicalApplicationComponents" lineMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Element']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application-element']/@ownedRepresentations[name='Interface%20Catalog%20(Physical%20App%20Map)%20Element']/@ownedColumnMappings.0" labelExpression="communicates with" columnFinderExpression="&lt;%communicatesWith%>">
         <directEdit>
           <variables name="element" documentation="The currently edited element."/>
@@ -10102,11 +10143,11 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="System/Technology Matrix" titleExpression="System/Technology Matrix" domainClass="TechnologyArchitecture">
-      <ownedLineMappings name="LogicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>">
-        <ownedSubLines name="PhysicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%~extendsLogicalTechnologyComponents%>"/>
+      <ownedLineMappings name="LogicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="LogicalTechnologyComponent" semanticCandidatesExpression="&lt;%logicalComponents%>" headerLabelExpression="&lt;%name%>">
+        <ownedSubLines name="PhysicalTechnologyComponentInSystem/TechnologyMatrix" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%~extendsLogicalTechnologyComponents%>" headerLabelExpression="&lt;%name%>"/>
       </ownedLineMappings>
-      <ownedLineMappings name="PhysicalTechnologyComponentWithoutParent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%physicalComponents[extendsLogicalTechnologyComponents==null]%>"/>
-      <ownedColumnMappings name="PhysicalApplicationComponentInSystemTechnologyMatrix" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer.architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
+      <ownedLineMappings name="PhysicalTechnologyComponentWithoutParent" domainClass="PhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%physicalComponents[extendsLogicalTechnologyComponents==null]%>" headerLabelExpression="&lt;%name%>"/>
+      <ownedColumnMappings name="PhysicalApplicationComponentInSystemTechnologyMatrix" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer.architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="Realizes" lineMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='LogicalTechnologyComponentInSystem%2FTechnologyMatrix']/@ownedSubLines[name='PhysicalTechnologyComponentInSystem%2FTechnologyMatrix'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='PhysicalTechnologyComponentWithoutParent']" columnMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedColumnMappings.0" labelExpression="Realizes" columnFinderExpression="&lt;%realizesApplicationComponents%>"/>
     </ownedRepresentations>
   </ownedViewpoints>
