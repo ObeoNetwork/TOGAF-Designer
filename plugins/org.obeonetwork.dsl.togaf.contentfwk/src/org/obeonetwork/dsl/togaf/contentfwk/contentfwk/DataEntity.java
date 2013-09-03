@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getPrivacyClassification <em>Privacy Classification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRetentionClassification <em>Retention Classification</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getDecomposesDataEntity <em>Decomposes Data Entity</em>}</li>
- *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesTo <em>Relates To</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesToDataEntities <em>Relates To Data Entities</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsDecomposedByDataEntities <em>Is Decomposed By Data Entities</em>}</li>
  * </ul>
  * </p>
@@ -272,20 +272,20 @@ public interface DataEntity extends Element {
 	void setDecomposesDataEntity(DataEntity value);
 
 	/**
-	 * Returns the value of the '<em><b>Relates To</b></em>' reference list.
+	 * Returns the value of the '<em><b>Relates To Data Entities</b></em>' reference list.
 	 * The list contents are of type {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relates To</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Relates To Data Entities</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relates To</em>' reference list.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_RelatesTo()
+	 * @return the value of the '<em>Relates To Data Entities</em>' reference list.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getDataEntity_RelatesToDataEntities()
 	 * @model
 	 * @generated
 	 */
-	EList<DataEntity> getRelatesTo();
+	EList<DataEntity> getRelatesToDataEntities();
 
 	/**
 	 * Returns the value of the '<em><b>Is Decomposed By Data Entities</b></em>' reference list.

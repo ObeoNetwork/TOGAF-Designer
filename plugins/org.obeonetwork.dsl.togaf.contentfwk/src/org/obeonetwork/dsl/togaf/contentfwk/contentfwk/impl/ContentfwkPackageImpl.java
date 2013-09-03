@@ -1301,7 +1301,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataEntity_RelatesTo() {
+	public EReference getDataEntity_RelatesToDataEntities() {
 		return (EReference)dataEntityEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -3665,7 +3665,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		createEAttribute(dataEntityEClass, DATA_ENTITY__PRIVACY_CLASSIFICATION);
 		createEAttribute(dataEntityEClass, DATA_ENTITY__RETENTION_CLASSIFICATION);
 		createEReference(dataEntityEClass, DATA_ENTITY__DECOMPOSES_DATA_ENTITY);
-		createEReference(dataEntityEClass, DATA_ENTITY__RELATES_TO);
+		createEReference(dataEntityEClass, DATA_ENTITY__RELATES_TO_DATA_ENTITIES);
 		createEReference(dataEntityEClass, DATA_ENTITY__IS_DECOMPOSED_BY_DATA_ENTITIES);
 
 		logicalApplicationComponentEClass = createEClass(LOGICAL_APPLICATION_COMPONENT);
@@ -4133,7 +4133,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getDataEntity_PrivacyClassification(), ecorePackage.getEString(), "privacyClassification", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDataEntity_RetentionClassification(), ecorePackage.getEString(), "retentionClassification", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataEntity_DecomposesDataEntity(), this.getDataEntity(), null, "decomposesDataEntity", null, 0, 1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataEntity_RelatesTo(), this.getDataEntity(), null, "relatesTo", null, 0, -1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataEntity_RelatesToDataEntities(), this.getDataEntity(), null, "relatesToDataEntities", null, 0, -1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataEntity_IsDecomposedByDataEntities(), this.getDataEntity(), null, "isDecomposedByDataEntities", null, 0, -1, DataEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(logicalApplicationComponentEClass, LogicalApplicationComponent.class, "LogicalApplicationComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

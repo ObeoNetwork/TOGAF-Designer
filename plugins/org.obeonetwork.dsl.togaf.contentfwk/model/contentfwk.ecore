@@ -204,8 +204,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="retentionClassification"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decomposesDataEntity" eType="#//DataEntity"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="relatesTo" upperBound="-1"
-        eType="#//DataEntity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatesToDataEntities"
+        upperBound="-1" eType="#//DataEntity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isDecomposedByDataEntities"
         upperBound="-1" eType="#//DataEntity"/>
   </eClassifiers>

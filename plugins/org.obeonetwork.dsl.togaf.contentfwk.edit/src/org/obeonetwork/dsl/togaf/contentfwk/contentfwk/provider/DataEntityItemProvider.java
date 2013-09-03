@@ -76,7 +76,7 @@ public class DataEntityItemProvider
 			addPrivacyClassificationPropertyDescriptor(object);
 			addRetentionClassificationPropertyDescriptor(object);
 			addDecomposesDataEntityPropertyDescriptor(object);
-			addRelatesToPropertyDescriptor(object);
+			addRelatesToDataEntitiesPropertyDescriptor(object);
 			addIsDecomposedByDataEntitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -303,19 +303,19 @@ public class DataEntityItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Relates To feature.
+	 * This adds a property descriptor for the Relates To Data Entities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRelatesToPropertyDescriptor(Object object) {
+	protected void addRelatesToDataEntitiesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_DataEntity_relatesTo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_relatesTo_feature", "_UI_DataEntity_type"),
-				 ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO,
+				 getString("_UI_DataEntity_relatesToDataEntities_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_DataEntity_relatesToDataEntities_feature", "_UI_DataEntity_type"),
+				 ContentfwkPackage.Literals.DATA_ENTITY__RELATES_TO_DATA_ENTITIES,
 				 true,
 				 false,
 				 true,

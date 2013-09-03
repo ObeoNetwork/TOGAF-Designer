@@ -1573,13 +1573,13 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ENTITY__DECOMPOSES_DATA_ENTITY = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Relates To</b></em>' reference list.
+	 * The feature id for the '<em><b>Relates To Data Entities</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_ENTITY__RELATES_TO = ELEMENT_FEATURE_COUNT + 10;
+	int DATA_ENTITY__RELATES_TO_DATA_ENTITIES = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Is Decomposed By Data Entities</b></em>' reference list.
@@ -7718,15 +7718,15 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getDataEntity_DecomposesDataEntity();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesTo <em>Relates To</em>}'.
+	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesToDataEntities <em>Relates To Data Entities</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Relates To</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesTo()
+	 * @return the meta object for the reference list '<em>Relates To Data Entities</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getRelatesToDataEntities()
 	 * @see #getDataEntity()
 	 * @generated
 	 */
-	EReference getDataEntity_RelatesTo();
+	EReference getDataEntity_RelatesToDataEntities();
 
 	/**
 	 * Returns the meta object for the reference list '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity#getIsDecomposedByDataEntities <em>Is Decomposed By Data Entities</em>}'.
@@ -11176,12 +11176,12 @@ public interface ContentfwkPackage extends EPackage {
 		EReference DATA_ENTITY__DECOMPOSES_DATA_ENTITY = eINSTANCE.getDataEntity_DecomposesDataEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Relates To</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Relates To Data Entities</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ENTITY__RELATES_TO = eINSTANCE.getDataEntity_RelatesTo();
+		EReference DATA_ENTITY__RELATES_TO_DATA_ENTITIES = eINSTANCE.getDataEntity_RelatesToDataEntities();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Decomposed By Data Entities</b></em>' reference list feature.
