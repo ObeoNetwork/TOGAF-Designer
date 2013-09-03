@@ -21,6 +21,7 @@ package org.obeonetwork.dsl.togaf.contentfwk.contentfwk;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getStatementOfRequirement <em>Statement Of Requirement</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale <em>Rationale</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getAcceptanceCriteria <em>Acceptance Criteria</em>}</li>
  * </ul>
  * </p>
@@ -54,6 +55,31 @@ public interface Requirement extends StrategicElement {
 	 * @generated
 	 */
 	void setStatementOfRequirement(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Rationale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Statement of why the requirement exists. 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Rationale</em>' attribute.
+	 * @see #setRationale(String)
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getRequirement_Rationale()
+	 * @model
+	 * @generated
+	 */
+	String getRationale();
+
+	/**
+	 * Sets the value of the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale <em>Rationale</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Rationale</em>' attribute.
+	 * @see #getRationale()
+	 * @generated
+	 */
+	void setRationale(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Acceptance Criteria</b></em>' attribute.

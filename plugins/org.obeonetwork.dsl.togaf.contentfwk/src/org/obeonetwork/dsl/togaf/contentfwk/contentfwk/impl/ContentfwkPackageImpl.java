@@ -2606,8 +2606,17 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRequirement_AcceptanceCriteria() {
+	public EAttribute getRequirement_Rationale() {
 		return (EAttribute)requirementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirement_AcceptanceCriteria() {
+		return (EAttribute)requirementEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3821,6 +3830,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 
 		requirementEClass = createEClass(REQUIREMENT);
 		createEAttribute(requirementEClass, REQUIREMENT__STATEMENT_OF_REQUIREMENT);
+		createEAttribute(requirementEClass, REQUIREMENT__RATIONALE);
 		createEAttribute(requirementEClass, REQUIREMENT__ACCEPTANCE_CRITERIA);
 
 		gapEClass = createEClass(GAP);
@@ -4288,6 +4298,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 
 		initEClass(requirementEClass, Requirement.class, "Requirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRequirement_StatementOfRequirement(), ecorePackage.getEString(), "statementOfRequirement", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRequirement_Rationale(), ecorePackage.getEString(), "rationale", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirement_AcceptanceCriteria(), ecorePackage.getEString(), "acceptanceCriteria", null, 0, 1, Requirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(gapEClass, Gap.class, "Gap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

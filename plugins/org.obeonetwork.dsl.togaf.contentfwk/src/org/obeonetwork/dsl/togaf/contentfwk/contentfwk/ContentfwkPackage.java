@@ -4688,13 +4688,22 @@ public interface ContentfwkPackage extends EPackage {
 	int REQUIREMENT__STATEMENT_OF_REQUIREMENT = STRATEGIC_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT__RATIONALE = STRATEGIC_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Acceptance Criteria</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT__ACCEPTANCE_CRITERIA = STRATEGIC_ELEMENT_FEATURE_COUNT + 1;
+	int REQUIREMENT__ACCEPTANCE_CRITERIA = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Requirement</em>' class.
@@ -4703,7 +4712,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 2;
+	int REQUIREMENT_FEATURE_COUNT = STRATEGIC_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.GapImpl <em>Gap</em>}' class.
@@ -9284,6 +9293,17 @@ public interface ContentfwkPackage extends EPackage {
 	EAttribute getRequirement_StatementOfRequirement();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale <em>Rationale</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Rationale</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getRationale()
+	 * @see #getRequirement()
+	 * @generated
+	 */
+	EAttribute getRequirement_Rationale();
+
+	/**
 	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Requirement#getAcceptanceCriteria <em>Acceptance Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -12354,6 +12374,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REQUIREMENT__STATEMENT_OF_REQUIREMENT = eINSTANCE.getRequirement_StatementOfRequirement();
+
+		/**
+		 * The meta object literal for the '<em><b>Rationale</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REQUIREMENT__RATIONALE = eINSTANCE.getRequirement_Rationale();
 
 		/**
 		 * The meta object literal for the '<em><b>Acceptance Criteria</b></em>' attribute feature.
