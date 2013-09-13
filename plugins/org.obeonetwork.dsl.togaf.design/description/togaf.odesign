@@ -1061,8 +1061,8 @@
           </style>
         </edgeMappings>
         <edgeMappings name="processPrecedesProcesses" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='source%20PrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='target%20PrecedesProcesses']">
-          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" sizeComputationExpression="1">
-            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <containerMappings name="OrganizationUnit" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%units%>" domainClass="contentfwk.OrganizationUnit" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']">
@@ -1075,12 +1075,12 @@
             </subContainerMappings>
             <subContainerMappings name="FProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%isRealizedByProcesses%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']">
               <subContainerMappings name="SubFProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess']">
-                <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+                <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 </style>
               </subContainerMappings>
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
@@ -1092,12 +1092,12 @@
           </subContainerMappings>
           <subContainerMappings name="OProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%participatesInProcesses%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']">
             <subContainerMappings name="SubOProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
@@ -1423,18 +1423,18 @@
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='EventBorder']" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan"/>
         </edgeMappings>
         <edgeMappings name="ProcessPrecedesProcess" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20ProcessPrecedesProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20ProcessPrecedesProcess']">
-          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" sizeComputationExpression="1">
-            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <containerMappings name="Process" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%processes[decomposesProcess.nSize()==0]%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='']">
           <subContainerMappings name="SubProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='EventDiagram']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
-            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -1947,23 +1947,65 @@
           </style>
         </edgeMappings>
         <edgeMappings name="ProcessPrecedesProcesses" label="Preceeds process" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessPrecedesProcesses']">
-          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" sizeComputationExpression="1">
-            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <edgeMappings name="ProcessDecomposesProcess" label="Decompose process" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%decomposesProcess%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20ProcessDecomposesProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessDecomposesProcess']">
-          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" lineStyle="dot" sizeComputationExpression="1">
-            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="decomposes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" lineStyle="dot" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="decomposes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor interacts with functions" label="Interacts with functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%interactsWithFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20Actor%20interacts%20with%20functions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20Actor%20interacts%20with%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="interacts with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs functions" label="Performs functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%performsFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20Actor%20performs%20functions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20Actor%20performs%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Process orchestrates functions" label="Orchestrates functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%orchestratesFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Process%20orchestrates%20functions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Process%20orchestrates%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="orchestrates" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Process decomposes functions" label="Decomposes functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%decomposesFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Process%20decomposes%20functions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Process%20decomposes%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="decomposes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs task in roles" label="Performs task in roles" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetFinderExpression="&lt;%performsTaskInRoles%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20Actor%20performs%20task%20in%20roles'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20Actor%20performs%20task%20in%20roles']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs task in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Role accesses functions" label="Accesses functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%accessesFunctions%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20Roles%20accesses%20functions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20Roles%20accesses%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="assesses" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']"/>
           </style>
         </edgeMappings>
         <containerMappings name="Process" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%processes%>" domainClass="contentfwk.Process">
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
         <containerMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%actors%>" domainClass="contentfwk.Actor">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Function" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%functions%>" domainClass="contentfwk.Function">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Role" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%roles%>" domainClass="contentfwk.Role">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -2072,16 +2114,98 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Process orchestrates functions" label="Orchestrates functions" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Process%20orchestrates%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Process orchestrates functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="orchestratesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Process orchestrates functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="orchestratesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Process decomposes functions" label="Decomposes functions" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Process%20decomposes%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Process decomposes functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Process decomposes functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
         </toolSections>
         <toolSections name="Actor" label="Actor" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Actor"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Actor_&quot;+eContainer().actors.nSize()%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -2125,6 +2249,200 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%element%>">
                 <subModelOperations xsi:type="tool:Unset" featureName="participatesInProcesses" elementExpression="&lt;%$source%>"/>
                 <subModelOperations xsi:type="tool:SetValue" featureName="participatesInProcesses" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor interacts with functions" label="Interacts with functions" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20interacts%20with%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor interacts with functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor interacts with functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs task in roles" label="Performs task in roles" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20performs%20task%20in%20roles']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs task in roles" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs task in roles">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs functions" label="Performs performs functions" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20performs%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Role" label="Role" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Role" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Role_&quot;+eContainer().roles.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role accesses functions" label="Accesses functions" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@edgeMappings[name='Role%20accesses%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Roles accesses functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Roles accesses functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -4755,10 +5073,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Business Use-Case Diagram Container" titleExpression="&lt;%name%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="2" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif"/>
-        </nodeMappings>
-        <edgeMappings name="Actor participates in Process" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%participatesInProcesses%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20ActorParticipatesInProcesses'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20ActorparticipatesInProcesses']">
+        <edgeMappings name="Actor participates in Process" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%participatesInProcesses%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='source%20ActorParticipatesInProcesses'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='target%20ActorparticipatesInProcesses']">
           <style sizeComputationExpression="1">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="participates in">
@@ -4782,8 +5097,56 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="Actor interacts with functions" label="Interacts with functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%interactsWithFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='source%20Actor%20interacts%20with%20functions'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='target%20Actor%20interacts%20with%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="interacts with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs functions" label="Performs functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%performsFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='source%20Actor%20performs%20functions'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='target%20Actor%20performs%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Process orchestrates functions" label="Orchestrates functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%orchestratesFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='source%20Process%20orchestrates%20functions'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='target%20Process%20orchestrates%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="orchestrates" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Process decomposes functions" label="Decomposes functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%decomposesFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='source%20Process%20decomposes%20functions'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.5/@ownedTools[name='target%20Process%20decomposes%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="decomposes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs task in roles" label="Performs task in roles" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']" targetFinderExpression="&lt;%performsTaskInRoles%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='source%20Actor%20performs%20task%20in%20roles'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.6/@ownedTools[name='target%20Actor%20performs%20task%20in%20roles']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs task in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Role accesses functions" label="Accesses functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%accessesFunctions%>" reconnections="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20Roles%20accesses%20functions'] //@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20Roles%20accesses%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="assesses" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']"/>
+          </style>
+        </edgeMappings>
         <containerMappings name="Process" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Process&quot;)%>" domainClass="contentfwk.Process" listContainer="true">
-          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Function" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Function&quot;)%>" domainClass="contentfwk.Function">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Role" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Role&quot;)%>" domainClass="contentfwk.Role">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -4913,19 +5276,19 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Actor">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Actor"/>
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Actor_&quot;+eContainer().actors.nSize()%>"/>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
-                    <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
-                    </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
@@ -4980,6 +5343,296 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%element%>">
                 <subModelOperations xsi:type="tool:Unset" featureName="participatesInProcesses" elementExpression="&lt;%$source%>"/>
                 <subModelOperations xsi:type="tool:SetValue" featureName="participatesInProcesses" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Role" label="Role" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Role" containerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Role_&quot;+eContainer().roles.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role accesses functions" label="Accesses functions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Role%20accesses%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Roles accesses functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Roles accesses functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Process2" label="Process2">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Process orchestrates functions" label="Orchestrates functions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Process%20orchestrates%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Process orchestrates functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="orchestratesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Process orchestrates functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="orchestratesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="orchestratesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Process decomposes functions" label="Decomposes functions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Process%20decomposes%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Process decomposes functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Process decomposes functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Actor2" label="Actor2">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor interacts with functions" label="Interacts with functions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20interacts%20with%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor interacts with functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor interacts with functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs task in roles" label="Performs task in roles" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20performs%20task%20in%20roles']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs task in roles" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs task in roles">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs functions" label="Performs performs functions" edgeMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='Business%20Use-Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20performs%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -5427,12 +6080,12 @@
         </edgeMappings>
         <containerMappings name="Process" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Process&quot;)[decomposesProcess.nSize()==0]%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']">
           <subContainerMappings name="SubProcess" labelDirectEdit="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@toolSections.2/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business-container']/@ownedRepresentations[name='EventDiagram%20Container']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']">
-            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -6752,17 +7405,17 @@
       <defaultLayer name="Default">
         <edgeMappings name="PreviousProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']" targetFinderExpression="&lt;%followsProcesses%>">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sizeComputationExpression="2">
-            <centerLabelStyleDescription showIcon="false" labelExpression="follow" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="follow" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <edgeMappings name="NextProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='OtherProcess']" targetFinderExpression="&lt;%precedesProcesses%>">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sizeComputationExpression="2">
-            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <edgeMappings name="NextSubProcess" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetFinderExpression="&lt;%precedesProcesses%>">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2">
-            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="preceed" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
         </edgeMappings>
         <edgeMappings name="LinkToProduct" sourceMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process'] //@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProcess']" targetMapping="//@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Product'] //@ownedViewpoints[name='business-element']/@ownedRepresentations[name='Process%20Element']/@defaultLayer/@containerMappings[name='Process']/@subContainerMappings[name='SubProduct']" targetFinderExpression="&lt;%producesProducts%>">
@@ -6772,7 +7425,7 @@
         </edgeMappings>
         <containerMappings name="Process" semanticCandidatesExpression="&lt;%self%>" domainClass="contentfwk.Process">
           <subContainerMappings name="SubProcess" semanticCandidatesExpression="&lt;%~decomposesProcess%>" domainClass="contentfwk.Process">
-            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
@@ -6783,7 +7436,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+          <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -8561,10 +9214,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/icons/actor.jpg"/>
-        </nodeMappings>
-        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20ActorConsumesService']">
+        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20ActorConsumesService']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
@@ -8574,29 +9224,72 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']"/>
           </style>
         </edgeMappings>
+        <edgeMappings name="Actor interacts with functions" label="Interacts with functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%interactsWithFunctions%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20Actor%20interacts%20with%20functions'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20Actor%20interacts%20with%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="interacts with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs functions" label="Performs functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%performsFunctions%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20Actor%20performs%20functions'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20Actor%20performs%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs task in roles" label="Performs task in roles" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetFinderExpression="&lt;%performsTaskInRoles%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20Actor%20performs%20task%20in%20roles'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20Actor%20performs%20task%20in%20roles']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs task in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Role accesses functions" label="Accesses functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%accessesFunctions%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='source%20Roles%20accesses%20functions'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='target%20Roles%20accesses%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="assesses" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="System provides governed interface to access functions" label="Provides governed interface to access functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Service']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%providesGovernedInterfaceToAccessFunctions%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Service%20provides%20governed%20interface%20to%20access%20functions'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Service%20provides%20governed%20interface%20to%20access%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="provides governed interface to access" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']"/>
+          </style>
+        </edgeMappings>
         <containerMappings name="Service" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%informationSystemServices%>" domainClass="contentfwk.InformationSystemService">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" showIcon="false" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <containerMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Function" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).functions%>" domainClass="contentfwk.Function">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Role" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).roles%>" domainClass="contentfwk.Role">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
         <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" label="Actor" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Actor']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
           <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
             <mask mask="{0}"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@nodeMappings[name='Actor']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
-                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -8637,6 +9330,129 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:Unset" featureName="consumesServices" elementExpression="&lt;%$source%>"/>
                 <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor interacts with functions" label="Interacts with functions" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20interacts%20with%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor interacts with functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor interacts with functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs task in roles" label="Performs task in roles" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20performs%20task%20in%20roles']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs task in roles" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs task in roles">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs functions" label="Performs performs functions" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='Actor%20performs%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -8691,6 +9507,118 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:Unset" featureName="consumesServices" elementExpression="&lt;%$source%>"/>
                 <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides governed interface to access functions" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='System%20provides%20governed%20interface%20to%20access%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Service provides governed interface to access functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="providesGovernedInterfaceToAccessFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Service provides governed interface to access functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="providesGovernedInterfaceToAccessFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Role" label="Role" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Role" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='Role']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Role_&quot;+eContainer().roles.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role accesses functions" label="Accesses functions" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='System%20Use%20Case%20Diagram']/@defaultLayer/@edgeMappings[name='Role%20accesses%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Roles accesses functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Roles accesses functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -9227,10 +10155,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram Container" titleExpression="System Use Case Diagram_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="Actor">
-          <style xsi:type="style:WorkspaceImageDescription" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/icons/actor.jpg"/>
-        </nodeMappings>
-        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ActorConsumesService']">
+        <edgeMappings name="ActorToBusinessService" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']" targetFinderExpression="&lt;%consumesServices%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20ActorConsumesService'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ActorConsumesService']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -9240,8 +10165,51 @@
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </edgeMappings>
+        <edgeMappings name="Actor interacts with functions" label="Interacts with functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%interactsWithFunctions%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Actor%20interacts%20with%20functions'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Actor%20interacts%20with%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="interacts with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs functions" label="Performs functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%performsFunctions%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Actor%20performs%20functions'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Actor%20performs%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor performs task in roles" label="Performs task in roles" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']" targetFinderExpression="&lt;%performsTaskInRoles%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20Actor%20performs%20task%20in%20roles'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20Actor%20performs%20task%20in%20roles']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="performs task in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Role accesses functions" label="Accesses functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%accessesFunctions%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20Roles%20accesses%20functions'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20Roles%20accesses%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="assesses" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="System provides governed interface to access functions" label="Provides governed interface to access functions" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']" targetFinderExpression="&lt;%providesGovernedInterfaceToAccessFunctions%>" reconnections="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='source%20Roles%20accesses%20functions'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.4/@ownedTools[name='target%20Roles%20accesses%20functions']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="provides governed interface to access" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']"/>
+          </style>
+        </edgeMappings>
         <containerMappings name="Service" labelDirectEdit="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;InformationSystemService&quot;)%>" domainClass="contentfwk.InformationSystemService">
           <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" showIcon="false" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Actor" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Actor&quot;)%>" domainClass="contentfwk.Actor">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Function" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Function&quot;)%>" domainClass="contentfwk.Function">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Role" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%getTargetElements().filter(&quot;Role&quot;)%>" domainClass="contentfwk.Role">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -9257,13 +10225,13 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Actor">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@nodeMappings[name='Actor']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;BusinessArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="Actor" referenceName="actors">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%$container.getRootElement().filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor_&lt;%eContainer.actors.nSize()%>"/>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
                     <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
@@ -9326,17 +10294,138 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor interacts with functions" label="Interacts with functions" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20interacts%20with%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor interacts with functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor interacts with functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="interactsWithFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="interactsWithFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs task in roles" label="Performs task in roles" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20performs%20task%20in%20roles']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs task in roles" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs task in roles">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsTaskInRoles" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsTaskInRoles" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Actor performs functions" label="Performs performs functions" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Actor%20performs%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Actor performs functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Actor performs functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="performsFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="performsFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
         </toolSections>
         <toolSections name="Service">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Information System Service" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Service']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%$container.informationSystemServices.nSize()%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%$container.informationSystemServices.nSize()%>"/>
-                  </subModelOperations>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.InformationSystemService" referenceName="informationSystemServices">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Information_System_Service_&lt;%eContainer.informationSystemServices.nSize()%>"/>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
                     <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
@@ -9395,6 +10484,128 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:Unset" featureName="consumesServices" elementExpression="&lt;%$source%>"/>
                 <subModelOperations xsi:type="tool:SetValue" featureName="consumesServices" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Provides governed interface to access functions" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='System%20provides%20governed%20interface%20to%20access%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Service provides governed interface to access functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="providesGovernedInterfaceToAccessFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Service provides governed interface to access functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="providesGovernedInterfaceToAccessFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Function']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer.functions.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Role" label="Role" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Role" containerMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Role']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Role_&quot;+eContainer.roles.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$instance%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Role accesses functions" label="Accesses functions" edgeMappings="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='System%20Use%20Case%20Diagram%20Container']/@defaultLayer/@edgeMappings[name='Role%20accesses%20functions']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source Roles accesses functions" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target Roles accesses functions">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="accessesFunctions" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="accessesFunctions" valueExpression="&lt;%$target%>"/>
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
@@ -10572,10 +11783,12 @@
     <entries xsi:type="description:UserFixedColor" red="6" green="130" blue="230" name="FunctionBorder"/>
     <entries xsi:type="description:UserFixedColor" red="236" green="254" blue="194" name="Actor"/>
     <entries xsi:type="description:UserFixedColor" red="153" green="218" blue="3" name="ActorBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="226" green="234" blue="194" name="Role"/>
+    <entries xsi:type="description:UserFixedColor" red="143" green="198" blue="3" name="RoleBorder"/>
     <entries xsi:type="description:UserFixedColor" red="172" green="239" blue="251" name="OrganizationUnit"/>
     <entries xsi:type="description:UserFixedColor" red="11" green="183" blue="213" name="OrganizationUnitBorder"/>
     <entries xsi:type="description:UserFixedColor" red="247" green="251" blue="170" name="Process"/>
-    <entries xsi:type="description:UserFixedColor" red="137" green="143" blue="7" name="ProcessBroder"/>
+    <entries xsi:type="description:UserFixedColor" red="137" green="143" blue="7" name="ProcessBorder"/>
     <entries xsi:type="description:UserFixedColor" red="252" green="225" blue="169" name="Event"/>
     <entries xsi:type="description:UserFixedColor" red="228" green="156" blue="7" name="EventBorder"/>
     <entries xsi:type="description:UserFixedColor" red="202" green="252" blue="171" name="DataEntity"/>
