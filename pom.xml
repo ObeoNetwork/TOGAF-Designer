@@ -75,7 +75,7 @@
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
-     <url>http://update.obeo.fr/release/designer/release-6.0.3/indigo/update/repository/</url>
+     <url>http://update.obeo.fr/maintenance/od/6.1/indigo/update/repository/</url>
     </repository>
      <repository>
       <id>smart-designer</id>
