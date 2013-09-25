@@ -60,7 +60,7 @@
     <repository>
       <id>indigo</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/indigo</url>
+      <url>http://download.eclipse.org/releases/juno</url>
     </repository>
     <repository>
       <id>EEF</id>
@@ -75,7 +75,7 @@
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
-     <url>http://update.obeo.fr/maintenance/od/6.1/indigo/update/repository/</url>
+     <url>http://update.obeo.fr/release/designer/6.1.2rc1/juno3/update/repository/</url>
     </repository>
      <repository>
       <id>smart-designer</id>
