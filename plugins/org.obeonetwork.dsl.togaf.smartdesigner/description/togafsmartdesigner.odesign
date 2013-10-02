@@ -1450,11 +1450,13 @@
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
                       <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
                     </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
                       <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
                     </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
