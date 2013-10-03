@@ -585,6 +585,7 @@
                 <subModelOperations xsi:type="tool:ExternalJavaAction" name="SelectConnectedElements" id="org.obeonetwork.dsl.togaf.smartdesigner.actions.SelectConnectedElements">
                   <parameters name="container" value="&lt;%$container%>"/>
                   <parameters name="existingSemanticElements" value="&lt;%$container.eContainer(&quot;Diagram&quot;).elements.semanticElement%>"/>
+                  <parameters name="ddiagram" value="&lt;%$containerView.eContainer(&quot;DDiagram&quot;)%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -614,6 +615,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ExternalJavaAction" name="ShadeGraphicalElements" id="org.obeonetwork.dsl.togaf.smartdesigner.actions.ShadeGraphicalElement">
                 <parameters name="diagram" value="&lt;%$containerView%>"/>
+                <parameters name="ddiagram" value="&lt;%$containerView.eContainer(&quot;DDiagram&quot;)%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -688,6 +690,12 @@
                     <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$diag%>"/>
                   </subModelOperations>
                 </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -698,6 +706,12 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$element%>"/>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
