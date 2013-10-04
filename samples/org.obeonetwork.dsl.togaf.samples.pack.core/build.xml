@@ -20,7 +20,7 @@
 	<property name="src.base.dir" value=".." />
 
 	<property name="voyagediscount.dir" value="${src.base.dir}/org.obeonetwork.dsl.togaf.samples.src.voyagediscount" />
-	<property name="voyagediscount.fr.dir" value="${src.base.dir}/org.obeonetwork.dsl.togaf.samples.src.voyagediscount.fr" />
+	<!--<property name="voyagediscount.fr.dir" value="${src.base.dir}/org.obeonetwork.dsl.togaf.samples.src.voyagediscount.fr" />-->
 
 	<!-- Clean -->
 	<target name="clean">
@@ -37,10 +37,10 @@
 		destfile="${dest.dir}/voyagediscount.zip"
 		basedir="${voyagediscount.dir}/" 
 		excludes=".svn/**, target/**"/>
-		<zip
+<!--		<zip
 				destfile="${dest.dir}/voyagediscount-fr.zip"
 				basedir="${voyagediscount.fr.dir}/" 
-				excludes=".svn/**, target/**"/>
+				excludes=".svn/**, target/**"/>-->
 	</target>
 
 </project>
