@@ -3488,15 +3488,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTechnologyComponent_StandardClass() {
-		return (EAttribute)technologyComponentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getPrincipleCategory() {
 		return principleCategoryEEnum;
 	}
@@ -3942,7 +3933,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		dataComponentEClass = createEClass(DATA_COMPONENT);
 
 		technologyComponentEClass = createEClass(TECHNOLOGY_COMPONENT);
-		createEAttribute(technologyComponentEClass, TECHNOLOGY_COMPONENT__STANDARD_CLASS);
 
 		// Create enums
 		principleCategoryEEnum = createEEnum(PRINCIPLE_CATEGORY);
@@ -4031,6 +4021,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		informationSystemServiceEClass.getESuperTypes().add(this.getService());
 		informationSystemServiceEClass.getESuperTypes().add(this.getElement());
 		dataComponentEClass.getESuperTypes().add(this.getStandard());
+		technologyComponentEClass.getESuperTypes().add(this.getStandard());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(enterpriseArchitectureEClass, EnterpriseArchitecture.class, "EnterpriseArchitecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4410,7 +4401,6 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEClass(dataComponentEClass, DataComponent.class, "DataComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(technologyComponentEClass, TechnologyComponent.class, "TechnologyComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTechnologyComponent_StandardClass(), this.getStandardsClass(), "standardClass", null, 0, 1, TechnologyComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(principleCategoryEEnum, PrincipleCategory.class, "PrincipleCategory");

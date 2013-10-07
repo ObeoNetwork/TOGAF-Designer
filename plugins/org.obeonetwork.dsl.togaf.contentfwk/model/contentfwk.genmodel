@@ -412,8 +412,6 @@
     <genClasses image="false" ecoreClass="contentfwk.ecore#//ApplicationComponent"/>
     <genClasses ecoreClass="contentfwk.ecore#//InformationSystemService"/>
     <genClasses image="false" ecoreClass="contentfwk.ecore#//DataComponent"/>
-    <genClasses image="false" ecoreClass="contentfwk.ecore#//TechnologyComponent">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//TechnologyComponent/standardClass"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="contentfwk.ecore#//TechnologyComponent"/>
   </genPackages>
 </genmodel:GenModel>

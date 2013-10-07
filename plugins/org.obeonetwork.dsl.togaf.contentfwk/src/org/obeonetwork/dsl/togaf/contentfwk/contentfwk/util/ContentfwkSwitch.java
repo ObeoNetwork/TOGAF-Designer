@@ -246,6 +246,7 @@ public class ContentfwkSwitch<T> extends Switch<T> {
 				T result = casePhysicalTechnologyComponent(physicalTechnologyComponent);
 				if (result == null) result = caseElement(physicalTechnologyComponent);
 				if (result == null) result = caseTechnologyComponent(physicalTechnologyComponent);
+				if (result == null) result = caseStandard(physicalTechnologyComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -405,6 +406,7 @@ public class ContentfwkSwitch<T> extends Switch<T> {
 				T result = caseLogicalTechnologyComponent(logicalTechnologyComponent);
 				if (result == null) result = caseElement(logicalTechnologyComponent);
 				if (result == null) result = caseTechnologyComponent(logicalTechnologyComponent);
+				if (result == null) result = caseStandard(logicalTechnologyComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -454,6 +456,7 @@ public class ContentfwkSwitch<T> extends Switch<T> {
 			case ContentfwkPackage.TECHNOLOGY_COMPONENT: {
 				TechnologyComponent technologyComponent = (TechnologyComponent)theEObject;
 				T result = caseTechnologyComponent(technologyComponent);
+				if (result == null) result = caseStandard(technologyComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

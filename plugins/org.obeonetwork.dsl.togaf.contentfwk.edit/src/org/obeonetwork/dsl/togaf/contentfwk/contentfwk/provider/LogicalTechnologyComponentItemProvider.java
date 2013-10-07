@@ -65,6 +65,10 @@ public class LogicalTechnologyComponentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addStandardClassPropertyDescriptor(object);
+			addStandardCreationDatePropertyDescriptor(object);
+			addLastStandardReviewDatePropertyDescriptor(object);
+			addNextStandardReviewDatePropertyDescriptor(object);
+			addRetireDatePropertyDescriptor(object);
 			addProvidesPlatformForServicesPropertyDescriptor(object);
 			addSuppliesPlatformServicesPropertyDescriptor(object);
 			addIsRealizedByPhysicalTechnologyComponentsPropertyDescriptor(object);
@@ -89,9 +93,97 @@ public class LogicalTechnologyComponentItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_TechnologyComponent_standardClass_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_TechnologyComponent_standardClass_feature", "_UI_TechnologyComponent_type"),
-				 ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS,
+				 getString("_UI_Standard_standardClass_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_standardClass_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Standard Creation Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStandardCreationDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Standard_standardCreationDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_standardCreationDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Last Standard Review Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addLastStandardReviewDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Standard_lastStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_lastStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Next Standard Review Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNextStandardReviewDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Standard_nextStandardReviewDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_nextStandardReviewDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Retire Date feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRetireDatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Standard_retireDate_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Standard_retireDate_feature", "_UI_Standard_type"),
+				 ContentfwkPackage.Literals.STANDARD__RETIRE_DATE,
 				 true,
 				 false,
 				 false,
@@ -336,6 +428,10 @@ public class LogicalTechnologyComponentItemProvider
 
 		switch (notification.getFeatureID(LogicalTechnologyComponent.class)) {
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
 			case ContentfwkPackage.LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
