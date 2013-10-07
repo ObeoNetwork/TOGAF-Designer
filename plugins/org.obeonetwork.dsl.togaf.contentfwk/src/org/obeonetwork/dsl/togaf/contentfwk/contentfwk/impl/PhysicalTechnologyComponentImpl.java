@@ -36,6 +36,10 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getStandardClass <em>Standard Class</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getStandardCreationDate <em>Standard Creation Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getLastStandardReviewDate <em>Last Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getNextStandardReviewDate <em>Next Standard Review Date</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getRetireDate <em>Retire Date</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getRealizesPhysicalApplicationComponents <em>Realizes Physical Application Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getExtendsLogicalTechnologyComponents <em>Extends Logical Technology Components</em>}</li>
  *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.PhysicalTechnologyComponentImpl#getIsHostedInLocation <em>Is Hosted In Location</em>}</li>
@@ -63,6 +67,42 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @ordered
 	 */
 	protected static final StandardsClass STANDARD_CLASS_EDEFAULT = StandardsClass.NON_STANDARD;
+	/**
+	 * The default value of the '{@link #getStandardCreationDate() <em>Standard Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandardCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date STANDARD_CREATION_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getLastStandardReviewDate() <em>Last Standard Review Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastStandardReviewDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date LAST_STANDARD_REVIEW_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getNextStandardReviewDate() <em>Next Standard Review Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNextStandardReviewDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date NEXT_STANDARD_REVIEW_DATE_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getRetireDate() <em>Retire Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRetireDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date RETIRE_DATE_EDEFAULT = null;
 	/**
 	 * The default value of the '{@link #getProductName() <em>Product Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -135,7 +175,7 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	public StandardsClass getStandardClass() {
-		return (StandardsClass)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, true, true);
+		return (StandardsClass)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, true, true);
 	}
 
 	/**
@@ -144,7 +184,79 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 * @generated
 	 */
 	public void setStandardClass(StandardsClass newStandardClass) {
-		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.TECHNOLOGY_COMPONENT__STANDARD_CLASS, newStandardClass);
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS, ContentfwkPackage.Literals.STANDARD__STANDARD_CLASS, newStandardClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getStandardCreationDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStandardCreationDate(Date newStandardCreationDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE, ContentfwkPackage.Literals.STANDARD__STANDARD_CREATION_DATE, newStandardCreationDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getLastStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastStandardReviewDate(Date newLastStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__LAST_STANDARD_REVIEW_DATE, newLastStandardReviewDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getNextStandardReviewDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNextStandardReviewDate(Date newNextStandardReviewDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE, ContentfwkPackage.Literals.STANDARD__NEXT_STANDARD_REVIEW_DATE, newNextStandardReviewDate);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getRetireDate() {
+		return (Date)eDynamicGet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRetireDate(Date newRetireDate) {
+		eDynamicSet(ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE, ContentfwkPackage.Literals.STANDARD__RETIRE_DATE, newRetireDate);
 	}
 
 	/**
@@ -400,6 +512,14 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 		switch (featureID) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
+				return getStandardCreationDate();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return getLastStandardReviewDate();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return getNextStandardReviewDate();
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
+				return getRetireDate();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
 				return getRealizesPhysicalApplicationComponents();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
@@ -440,6 +560,18 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 		switch (featureID) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass((StandardsClass)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate((Date)newValue);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
+				setRetireDate((Date)newValue);
 				return;
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
 				getRealizesPhysicalApplicationComponents().clear();
@@ -498,6 +630,18 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				setStandardClass(STANDARD_CLASS_EDEFAULT);
 				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
+				setStandardCreationDate(STANDARD_CREATION_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				setLastStandardReviewDate(LAST_STANDARD_REVIEW_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				setNextStandardReviewDate(NEXT_STANDARD_REVIEW_DATE_EDEFAULT);
+				return;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
+				setRetireDate(RETIRE_DATE_EDEFAULT);
+				return;
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
 				getRealizesPhysicalApplicationComponents().clear();
 				return;
@@ -548,6 +692,14 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 		switch (featureID) {
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS:
 				return getStandardClass() != STANDARD_CLASS_EDEFAULT;
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE:
+				return STANDARD_CREATION_DATE_EDEFAULT == null ? getStandardCreationDate() != null : !STANDARD_CREATION_DATE_EDEFAULT.equals(getStandardCreationDate());
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE:
+				return LAST_STANDARD_REVIEW_DATE_EDEFAULT == null ? getLastStandardReviewDate() != null : !LAST_STANDARD_REVIEW_DATE_EDEFAULT.equals(getLastStandardReviewDate());
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE:
+				return NEXT_STANDARD_REVIEW_DATE_EDEFAULT == null ? getNextStandardReviewDate() != null : !NEXT_STANDARD_REVIEW_DATE_EDEFAULT.equals(getNextStandardReviewDate());
+			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE:
+				return RETIRE_DATE_EDEFAULT == null ? getRetireDate() != null : !RETIRE_DATE_EDEFAULT.equals(getRetireDate());
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS:
 				return !getRealizesPhysicalApplicationComponents().isEmpty();
 			case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS:
@@ -583,9 +735,18 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Standard.class) {
+			switch (derivedFeatureID) {
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.STANDARD__STANDARD_CLASS;
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE: return ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE;
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE: return ContentfwkPackage.STANDARD__RETIRE_DATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (derivedFeatureID) {
-				case ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}
@@ -599,9 +760,18 @@ public class PhysicalTechnologyComponentImpl extends ElementImpl implements Phys
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Standard.class) {
+			switch (baseFeatureID) {
+				case ContentfwkPackage.STANDARD__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
+				case ContentfwkPackage.STANDARD__STANDARD_CREATION_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE;
+				case ContentfwkPackage.STANDARD__LAST_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__NEXT_STANDARD_REVIEW_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE;
+				case ContentfwkPackage.STANDARD__RETIRE_DATE: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE;
+				default: return -1;
+			}
+		}
 		if (baseClass == TechnologyComponent.class) {
 			switch (baseFeatureID) {
-				case ContentfwkPackage.TECHNOLOGY_COMPONENT__STANDARD_CLASS: return ContentfwkPackage.PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS;
 				default: return -1;
 			}
 		}

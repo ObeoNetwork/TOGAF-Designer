@@ -2803,13 +2803,49 @@ public interface ContentfwkPackage extends EPackage {
 	int PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE = ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Realizes Physical Application Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 1;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__REALIZES_PHYSICAL_APPLICATION_COMPONENTS = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Extends Logical Technology Components</b></em>' reference list.
@@ -2818,7 +2854,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 2;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__EXTENDS_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Is Hosted In Location</b></em>' reference list.
@@ -2827,7 +2863,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION = ELEMENT_FEATURE_COUNT + 3;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_HOSTED_IN_LOCATION = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Product Name</b></em>' attribute.
@@ -2836,7 +2872,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__PRODUCT_NAME = ELEMENT_FEATURE_COUNT + 4;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__PRODUCT_NAME = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Module Name</b></em>' attribute.
@@ -2845,7 +2881,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME = ELEMENT_FEATURE_COUNT + 5;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__MODULE_NAME = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Vendor</b></em>' attribute.
@@ -2854,7 +2890,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR = ELEMENT_FEATURE_COUNT + 6;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__VENDOR = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2863,7 +2899,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__VERSION = ELEMENT_FEATURE_COUNT + 7;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__VERSION = ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Decomposes Physical Technology Component</b></em>' reference.
@@ -2872,7 +2908,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 8;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Is Dependent On Physical Technology Components</b></em>' reference list.
@@ -2881,7 +2917,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
@@ -2890,7 +2926,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 10;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Is Required By Physical Technology Component</b></em>' reference list.
@@ -2899,7 +2935,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 11;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Is Decomposed By Physical Technology Components</b></em>' reference list.
@@ -2908,7 +2944,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 12;
+	int PHYSICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The number of structural features of the '<em>Physical Technology Component</em>' class.
@@ -2917,7 +2953,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 13;
+	int PHYSICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ProductImpl <em>Product</em>}' class.
@@ -5865,13 +5901,49 @@ public interface ContentfwkPackage extends EPackage {
 	int LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CLASS = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE = ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_TECHNOLOGY_COMPONENT__RETIRE_DATE = ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Provides Platform For Services</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES = ELEMENT_FEATURE_COUNT + 1;
+	int LOGICAL_TECHNOLOGY_COMPONENT__PROVIDES_PLATFORM_FOR_SERVICES = ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Supplies Platform Services</b></em>' reference list.
@@ -5880,7 +5952,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES = ELEMENT_FEATURE_COUNT + 2;
+	int LOGICAL_TECHNOLOGY_COMPONENT__SUPPLIES_PLATFORM_SERVICES = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Is Realized By Physical Technology Components</b></em>' reference list.
@@ -5889,7 +5961,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 3;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REALIZED_BY_PHYSICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Decomposes Logical Technology Component</b></em>' reference.
@@ -5898,7 +5970,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 4;
+	int LOGICAL_TECHNOLOGY_COMPONENT__DECOMPOSES_LOGICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Is Dependent On Logical Technology Components</b></em>' reference list.
@@ -5907,7 +5979,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 5;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DEPENDENT_ON_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Category TRM</b></em>' attribute.
@@ -5916,7 +5988,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 6;
+	int LOGICAL_TECHNOLOGY_COMPONENT__CATEGORY_TRM = ELEMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Is Extended By Physical Technology Component</b></em>' reference list.
@@ -5925,7 +5997,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 7;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_EXTENDED_BY_PHYSICAL_TECHNOLOGY_COMPONENT = ELEMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Is Required By Logical Technology Components</b></em>' reference list.
@@ -5934,7 +6006,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 8;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_REQUIRED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Is Decomposed By Logical Technology Components</b></em>' reference list.
@@ -5943,7 +6015,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 9;
+	int LOGICAL_TECHNOLOGY_COMPONENT__IS_DECOMPOSED_BY_LOGICAL_TECHNOLOGY_COMPONENTS = ELEMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>Logical Technology Component</em>' class.
@@ -5952,7 +6024,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
+	int LOGICAL_TECHNOLOGY_COMPONENT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.StrategicArchitectureImpl <em>Strategic Architecture</em>}' class.
@@ -6688,7 +6760,43 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_COMPONENT__STANDARD_CLASS = 0;
+	int TECHNOLOGY_COMPONENT__STANDARD_CLASS = STANDARD__STANDARD_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Standard Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_COMPONENT__STANDARD_CREATION_DATE = STANDARD__STANDARD_CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Last Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_COMPONENT__LAST_STANDARD_REVIEW_DATE = STANDARD__LAST_STANDARD_REVIEW_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Next Standard Review Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_COMPONENT__NEXT_STANDARD_REVIEW_DATE = STANDARD__NEXT_STANDARD_REVIEW_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Retire Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_COMPONENT__RETIRE_DATE = STANDARD__RETIRE_DATE;
 
 	/**
 	 * The number of structural features of the '<em>Technology Component</em>' class.
@@ -6697,7 +6805,7 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TECHNOLOGY_COMPONENT_FEATURE_COUNT = 1;
+	int TECHNOLOGY_COMPONENT_FEATURE_COUNT = STANDARD_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}' enum.
@@ -10357,17 +10465,6 @@ public interface ContentfwkPackage extends EPackage {
 	EClass getTechnologyComponent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent#getStandardClass <em>Standard Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Standard Class</em>'.
-	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.TechnologyComponent#getStandardClass()
-	 * @see #getTechnologyComponent()
-	 * @generated
-	 */
-	EAttribute getTechnologyComponent_StandardClass();
-
-	/**
 	 * Returns the meta object for enum '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13186,14 +13283,6 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TECHNOLOGY_COMPONENT = eINSTANCE.getTechnologyComponent();
-
-		/**
-		 * The meta object literal for the '<em><b>Standard Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TECHNOLOGY_COMPONENT__STANDARD_CLASS = eINSTANCE.getTechnologyComponent_StandardClass();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.PrincipleCategory <em>Principle Category</em>}' enum.

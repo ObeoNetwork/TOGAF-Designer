@@ -750,9 +750,8 @@
     <eLiterals name="InternallyStoredEntity" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataComponent" abstract="true" eSuperTypes="#//Standard"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TechnologyComponent" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="standardClass" eType="#//StandardsClass"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TechnologyComponent" abstract="true"
+      eSuperTypes="#//Standard"/>
   <eClassifiers xsi:type="ecore:EEnum" name="WorkPackageCategory">
     <eLiterals name="WorkPackage"/>
     <eLiterals name="WorkStream" value="1"/>
