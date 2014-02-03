@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton=true
-Bundle-Version: 1.4.1.qualifier
+Bundle-Version: 1.5.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
- org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.4.1",
+ org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.5.0",
  org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport,
  fr.obeo.dsl.common;bundle-version="3.3.0",
  com.google.guava;bundle-version="11.0.1",

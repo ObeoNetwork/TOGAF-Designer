@@ -1,14 +1,14 @@
 Manifest-Version: 1.0
 Bundle-Name: org.obeonetwork.dsl.togaf.smartdesigner.readonly
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.smartdesigner.readonly;singleton:=true
-Bundle-Version: 1.4.1.qualifier
+Bundle-Version: 1.5.0.qualifier
 Bundle-Activator: org.obeonetwork.dsl.togaf.smartdesigner.readonly.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  fr.obeo.dsl.viewpoint,
  fr.obeo.dsl.common.acceleo.mtl,
- org.obeonetwork.dsl.togaf.smartdesigner;bundle-version="1.4.1",
- org.obeonetwork.dsl.smartdesigner.design;bundle-version="1.4.1"
+ org.obeonetwork.dsl.togaf.smartdesigner,
+ org.obeonetwork.dsl.smartdesigner.design
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ManifestVersion: 2
