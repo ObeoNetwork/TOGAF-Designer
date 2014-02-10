@@ -3,8 +3,8 @@
   <ownedViewpoints name="Smart Designer Read Only">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" name="Smart Designer Read Only" domainClass="smartdesigner.Diagram">
       <defaultLayer name="Default" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
-        <nodeMappings name="OtherDiagramDiagramLevel" detailDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='CreateDiagram']" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+        <nodeMappings name="OtherDiagramDiagramLevel" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
@@ -118,15 +118,15 @@
           </conditionnalStyles>
         </edgeMappings>
         <containerMappings name="GraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%elements%>" semanticElements="&lt;%semanticElement+self%>" synchronizationLock="true" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']">
-          <subNodeMappings name="OtherDiagram" detailDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='CreateDiagram']" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+          <subNodeMappings name="OtherDiagram" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </subNodeMappings>
           <subContainerMappings name="SubGraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%child%>" semanticElements="&lt;%semanticElement+self%>" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" reusedContainerMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']">
-            <subNodeMappings name="OtherSubDiagram" detailDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='CreateDiagram']" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
-              <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+            <subNodeMappings name="OtherSubDiagram" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -590,10 +590,11 @@
             <containerVariable name="container"/>
             <representationNameVariable name="diagramName"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:DiagramCreationDescription" name="CreateDiagram" label="Create representation" titleExpression="&lt;%name%>" diagramDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']">
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="CreateDiagram" label="Create representation" titleExpression="&lt;%name%>">
             <initialOperation/>
             <containerViewVariable name="containerView"/>
             <representationNameVariable name="diagramName"/>
+            <diagramDescription href="../../org.obeonetwork.dsl.togaf.smartdesigner/description/togafsmartdesigner.odesign#//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']"/>
           </ownedTools>
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="ShadeGraphicalElements" label="Shade elements" containerMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/hideGraphicalElement.gif">
             <variable name="container"/>
@@ -649,25 +650,6 @@
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.filter(&quot;GraphicalElement&quot;)!=null%>">
                     <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$element%>"/>
                   </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Diagram" label="Create representation" nodeMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@nodeMappings[name='OtherDiagramDiagramLevel']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;)%>">
-                <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.Diagram" referenceName="diagrams" variableName="diag">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$diag%>"/>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)!=null%>">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram']" containerViewExpression="&lt;%$containerView%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)==null%>">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram']" containerViewExpression="&lt;%$containerView%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -826,6 +808,7 @@
       </optionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.ConnectorServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.SmartDesignerDiagramServices"/>
   </ownedViewpoints>
   <userColorsPalettes name="UserColors">
     <entries xsi:type="description:UserFixedColor" red="10" green="100" blue="190" name="Blue-BusinessArchitecture"/>
