@@ -19,7 +19,7 @@
   	<relativePath>../../pom.xml</relativePath>
   </parent>
   <groupId>TOGAF-Designer</groupId>
-  <artifactId>org.obeonetwork.dsl.togaf.smartdesigner</artifactId>
+  <artifactId>org.obeonetwork.dsl.togaf.smartdesigner.readonly</artifactId>
   <version>1.5.0-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 </project>

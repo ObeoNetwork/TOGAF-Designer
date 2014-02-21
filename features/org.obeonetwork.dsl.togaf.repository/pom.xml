@@ -15,12 +15,12 @@
   <parent>
         <artifactId>org.obeonetwork.dsl.togaf</artifactId>
         <groupId>TOGAF-Designer</groupId>
-        <version>1.4.1-SNAPSHOT</version>
+        <version>1.5.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
   </parent>
   <groupId>TOGAF-Designer</groupId>
   <artifactId>org.obeonetwork.dsl.togaf.repository</artifactId>
-  <version>1.4.1-SNAPSHOT</version>
+  <version>1.5.0-SNAPSHOT</version>
   <packaging>eclipse-repository</packaging>
 
   <build>

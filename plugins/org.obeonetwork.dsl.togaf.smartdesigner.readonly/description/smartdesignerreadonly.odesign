@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="togafsmartdesignerreadonly" version="6.7.0.201302071200">
+  <ownedViewpoints name="Smart Designer Read Only">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" name="Smart Designer Read Only" domainClass="smartdesigner.Diagram">
+      <defaultLayer name="Default" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
+        <nodeMappings name="OtherDiagramDiagramLevel" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+          <style sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </endLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isBidirectionalConnector($view.targetNode().target)&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isBidirectionalConnector($view.targetNode().target)%>">
+            <style sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existRelation($view.sourceNode().target.getSemanticElement())&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existRelation($view.sourceNode().target.getSemanticElement())%>">
+            <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden()%>">
+            <style sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="ExtendedConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getExtendedRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+          <style lineStyle="dash" sizeComputationExpression="1" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </endLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isExtendedBidirectionalConnector($view.targetNode().target)&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isExtendedBidirectionalConnector($view.targetNode().target)%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existExtendedRelation($view.sourceNode().target.getSemanticElement())&amp;&amp;($view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode().target.getSemanticElement().existExtendedRelation($view.sourceNode().target.getSemanticElement())%>">
+            <style lineStyle="dash" sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <beginLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.targetNode().target.getExtendedLabel($view.sourceNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              </beginLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.sourceNode().target.isHidden()||$view.targetNode().target.isHidden()%>">
+            <style lineStyle="dash" sizeComputationExpression="1" routingStyle="manhattan">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </endLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="GraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%elements%>" semanticElements="&lt;%semanticElement+self%>" synchronizationLock="true" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']">
+          <subNodeMappings name="OtherDiagram" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="SubGraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%child%>" semanticElements="&lt;%semanticElement+self%>" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" reusedContainerMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']">
+            <subNodeMappings name="OtherSubDiagram" navigationDescriptions="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='DiagramNavigation']" deletionDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete']" semanticCandidatesExpression="&lt;%diagrams%>" domainClass="smartdesigner.Diagram">
+              <style xsi:type="style:WorkspaceImageDescription" labelSize="7" showIcon="false" labelExpression="&lt;%getSmartDesignerDiagramLabel()%>" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" labelSize="7" labelExpression="Graphical Element">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+            <conditionnalStyles predicateExpression="&lt;%hidden%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']" labelSize="7" showIcon="false" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;BusinessService&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalApplicationComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;DataEntity&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Process&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Principle&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PrincipleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Principle']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Constraint&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ConstraintBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Constraint']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Assumption&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='AssumptionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Assumption']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Gap&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GapBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Gap']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;WorkPackage&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackageBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackage']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Capability&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='CapabilityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Capability']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Actor&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Role&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Function&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Objective&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ObjectiveBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Objective']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalDataComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalDataComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Location&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LocationBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Location']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Driver&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DriverBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Driver']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Goal&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GoalBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Goal']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;OrganizationUnit&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Control&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ControlBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Control.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Control']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Event&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='EventBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Event']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Product&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Product.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Contract&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ContractBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Contract.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Contract']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Measure&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='MeasureBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Measure']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;ServiceQuality&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQualityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ServiceQuality.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQuality']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;InformationSystemService&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalApplicationComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalTechnologyComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalTechnologyComponent&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PlatformService&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Tag&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;TagsRoot&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Requirement&quot;)!=null%>">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="7" labelExpression="Graphical Element">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+          <conditionnalStyles predicateExpression="&lt;%hidden%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']" labelSize="7" showIcon="false" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;BusinessService&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalApplicationComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;DataEntity&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Process&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Principle&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PrincipleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Principle']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Constraint&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ConstraintBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Constraint']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Assumption&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='AssumptionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Assumption']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Gap&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GapBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Gap']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;WorkPackage&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackageBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackage']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Capability&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='CapabilityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Capability']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Actor&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Role&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;OrganizationUnit&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Function&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Objective&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ObjectiveBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Objective']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalDataComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalDataComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Location&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LocationBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Location']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Driver&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DriverBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Driver']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Goal&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GoalBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Goal']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;OrganizationUnit&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Control&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ControlBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Control.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Control']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Event&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='EventBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Event']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Product&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Product.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Contract&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ContractBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Contract.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Contract']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Measure&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='MeasureBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Measure']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;ServiceQuality&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQualityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ServiceQuality.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQuality']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;InformationSystemService&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalApplicationComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalTechnologyComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalTechnologyComponent&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PlatformService&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Tag&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;TagsRoot&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Requirement&quot;)!=null%>">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionnalStyles>
+        </containerMappings>
+        <toolSections name="General" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ConnectedObjects" label="Connected objects" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)%>" containerMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/relation.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:ExternalJavaAction" name="SelectConnectedElements" id="org.obeonetwork.dsl.togaf.smartdesigner.actions.SelectConnectedElements">
+                  <parameters name="container" value="&lt;%$container%>"/>
+                  <parameters name="existingSemanticElements" value="&lt;%$container.eContainer(&quot;Diagram&quot;).elements.semanticElement%>"/>
+                  <parameters name="ddiagram" value="&lt;%$containerView.eContainer(&quot;DDiagram&quot;)%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DiagramNavigationDescription" name="DiagramNavigation" label="Representation navigation" diagramDescription="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']">
+            <containerViewVariable name="containerView"/>
+            <containerVariable name="container"/>
+            <representationNameVariable name="diagramName"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DiagramCreationDescription" name="CreateDiagram" label="Create representation" titleExpression="&lt;%name%>">
+            <initialOperation/>
+            <containerViewVariable name="containerView"/>
+            <representationNameVariable name="diagramName"/>
+            <diagramDescription href="../../org.obeonetwork.dsl.togaf.smartdesigner/description/togafsmartdesigner.odesign#//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ShadeGraphicalElements" label="Shade elements" containerMappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/hideGraphicalElement.gif">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ExternalJavaAction" name="ShadeGraphicalElements" id="org.obeonetwork.dsl.togaf.smartdesigner.actions.ShadeGraphicalElement">
+                <parameters name="diagram" value="&lt;%$containerView%>"/>
+                <parameters name="ddiagram" value="&lt;%$containerView.eContainer(&quot;DDiagram&quot;)%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropGraphicalElement" mappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@nodeMappings[name='OtherDiagramDiagramLevel']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="elements" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="child" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="elements" valueExpression="&lt;%$element%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="child" valueExpression="&lt;%$element%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropDiagram" mappings="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram'] //@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@nodeMappings[name='OtherDiagramDiagramLevel']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.filter(&quot;Diagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="diagrams" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.filter(&quot;GraphicalElement&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="diagrams" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$element%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$element%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="SelectRepresentation" label="Select representation" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null||$container.filter(&quot;Diagram&quot;)!=null%>" candidatesExpression="&lt;%$container.eContainer(&quot;DocumentRoot&quot;).accessControls[accessControl.equalsIgnoreCase($container.eContainer(&quot;Diagram&quot;).accessControl)].diagrams%>" message="Select an existing representation to link with the current representation." iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/diagram.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="diagrams" valueExpression="&lt;%$element%>"/>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)!=null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subNodeMappings[name='OtherDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;)==null%>">
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']/@subNodeMappings[name='OtherSubDiagram']" containerViewExpression="&lt;%$containerView%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer()%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%self.filter(&quot;GraphicalElement&quot;)%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="child" elementExpression="&lt;%$element.trace()%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%self.filter(&quot;Diagram&quot;)%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="elements" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <optionalLayers name="Architectures" label="Architectures" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif" activeByDefault="true">
+        <toolSections name="Architectures" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectStrategicElements" label="Select strategic elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select strategic elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;StrategicArchitecture&quot;).eAllContents()%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectBusinessElements" label="Select business elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select business elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).eAllContents()%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectApplicativeElements" label="Select applicative elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select application elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).eAllContents()%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectDataElements" label="Select data elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select data elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).eAllContents()%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectTechnicalElements" label="Select technical elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select technical elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).eAllContents()%>">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="e">
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;Diagram&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="elements" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.filter(&quot;GraphicalElement&quot;)!=null%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="smartdesigner.GraphicalElement" referenceName="child" variableName="graphicalElement">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="semanticElement" valueExpression="&lt;%$e%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='Smart%20Designer%20Read%20Only']/@ownedRepresentations[name='Smart%20Designer%20Read%20Only']/@defaultLayer/@containerMappings[name='GraphicalElement']" containerViewExpression="&lt;%$containerView%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.ConnectorServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.SmartDesignerDiagramServices"/>
+  </ownedViewpoints>
+  <userColorsPalettes name="UserColors">
+    <entries xsi:type="description:UserFixedColor" red="10" green="100" blue="190" name="Blue-BusinessArchitecture"/>
+    <entries xsi:type="description:UserFixedColor" red="20" green="150" blue="250" name="Blue-BusinessArchitecture-SubComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="162" green="244" blue="174" name="Goal"/>
+    <entries xsi:type="description:UserFixedColor" red="26" green="210" blue="53" name="GoalBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="214" green="174" blue="217" name="Measure"/>
+    <entries xsi:type="description:UserFixedColor" red="191" green="129" blue="197" name="MeasureBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="251" green="253" blue="159" name="Driver"/>
+    <entries xsi:type="description:UserFixedColor" red="194" green="200" blue="4" name="DriverBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="253" green="181" blue="191" name="Objective"/>
+    <entries xsi:type="description:UserFixedColor" red="251" green="104" blue="126" name="ObjectiveBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="168" green="174" blue="253" name="BusinessService"/>
+    <entries xsi:type="description:UserFixedColor" red="122" green="132" blue="252" name="BusinessServiceBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="117" green="190" blue="251" name="Function"/>
+    <entries xsi:type="description:UserFixedColor" red="6" green="130" blue="230" name="FunctionBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="236" green="254" blue="194" name="Actor"/>
+    <entries xsi:type="description:UserFixedColor" red="153" green="218" blue="3" name="ActorBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="172" green="239" blue="251" name="OrganizationUnit"/>
+    <entries xsi:type="description:UserFixedColor" red="11" green="183" blue="213" name="OrganizationUnitBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="247" green="251" blue="170" name="Process"/>
+    <entries xsi:type="description:UserFixedColor" red="137" green="143" blue="7" name="ProcessBroder"/>
+    <entries xsi:type="description:UserFixedColor" red="252" green="225" blue="169" name="Event"/>
+    <entries xsi:type="description:UserFixedColor" red="228" green="156" blue="7" name="EventBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="202" green="252" blue="171" name="DataEntity"/>
+    <entries xsi:type="description:UserFixedColor" red="78" green="194" blue="7" name="DataEntityBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="141" green="250" blue="196" name="LogicalApplicationComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="7" green="180" blue="94" name="LogicalApplicationComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="128" blue="128" name="OutsideElementBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="245" green="233" blue="141" name="Location"/>
+    <entries xsi:type="description:UserFixedColor" red="189" green="168" blue="17" name="LocationBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="198" green="228" blue="177" name="PhysicalApplicationComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="84" green="137" blue="48" name="PhysicalApplicationComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="141" green="187" blue="224" name="InformationSystemService"/>
+    <entries xsi:type="description:UserFixedColor" red="107" green="169" blue="214" name="InformationSystemServiceBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="158" green="230" blue="235" name="PlatformService"/>
+    <entries xsi:type="description:UserFixedColor" red="44" green="199" blue="211" name="PlatformServiceBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="244" green="204" blue="66" name="PhysicalTechnologyComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="217" green="171" blue="13" name="PhysicalTechnologyComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="184" green="175" blue="218" name="Product"/>
+    <entries xsi:type="description:UserFixedColor" red="128" green="128" blue="192" name="ProductBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="253" green="242" blue="115" name="Principle"/>
+    <entries xsi:type="description:UserFixedColor" red="251" green="241" blue="64" name="PrincipleBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="250" green="225" blue="126" name="Capability"/>
+    <entries xsi:type="description:UserFixedColor" red="247" green="192" blue="81" name="CapabilityBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="252" green="158" blue="131" name="Constraint"/>
+    <entries xsi:type="description:UserFixedColor" red="244" green="100" blue="74" name="ConstraintBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="242" green="185" blue="151" name="Assumption"/>
+    <entries xsi:type="description:UserFixedColor" red="239" green="119" blue="61" name="AssumptionBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="242" green="220" blue="130" name="Gap"/>
+    <entries xsi:type="description:UserFixedColor" red="233" green="173" blue="63" name="GapBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="245" green="249" blue="113" name="WorkPackage"/>
+    <entries xsi:type="description:UserFixedColor" red="234" green="231" blue="106" name="WorkPackageBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="242" green="242" blue="242" name="Hidden"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="128" blue="0" name="Role"/>
+    <entries xsi:type="description:UserFixedColor" red="255" green="201" blue="147" name="RoleBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="48" green="194" blue="73" name="LogicalDataComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="64" green="172" blue="80" name="LogicalDataComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="137" green="211" blue="69" name="PhysicalDataComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="140" green="198" blue="62" name="PhysicalDataComponentBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="249" green="174" blue="119" name="Control"/>
+    <entries xsi:type="description:UserFixedColor" red="245" green="109" blue="75" name="ControlBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="70" green="148" blue="225" name="Contract"/>
+    <entries xsi:type="description:UserFixedColor" red="83" blue="223" name="ContractBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="185" green="239" blue="255" name="ServiceQuality"/>
+    <entries xsi:type="description:UserFixedColor" red="86" green="210" blue="252" name="ServiceQualityBorder"/>
+    <entries xsi:type="description:UserFixedColor" red="252" green="78" blue="3" name="LogicalTechnologyComponent"/>
+    <entries xsi:type="description:UserFixedColor" red="247" green="131" blue="111" name="LogicalTechnologyComponentBorder"/>
+  </userColorsPalettes>
+</description:Group>

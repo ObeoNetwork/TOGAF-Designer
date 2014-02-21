@@ -2,7 +2,7 @@
 <feature
       id="org.obeonetwork.dsl.togaf.feature"
       label="%featureName"
-      version="1.4.1.qualifier"
+      version="1.5.0.qualifier"
       provider-name="%providerName">
 
    <description url="http://marketplace.obeonetwork.com/module/togaf">
@@ -81,6 +81,13 @@
 
    <plugin
          id="org.obeonetwork.dsl.togaf.smartdesigner"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.obeonetwork.dsl.togaf.smartdesigner.readonly"
          download-size="0"
          install-size="0"
          version="0.0.0"

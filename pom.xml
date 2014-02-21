@@ -18,7 +18,7 @@
 	
   <groupId>TOGAF-Designer</groupId>
   <artifactId>org.obeonetwork.dsl.togaf</artifactId>
-  <version>1.4.1-SNAPSHOT</version>
+  <version>1.5.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <name>TOGAF Designer Parent</name>
@@ -50,6 +50,7 @@
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.editor</module>
     <module>plugins/org.obeonetwork.dsl.togaf.design</module>
     <module>plugins/org.obeonetwork.dsl.togaf.smartdesigner</module>
+    <module>plugins/org.obeonetwork.dsl.togaf.smartdesigner.readonly</module>
 	<module>plugins/org.obeonetwork.dsl.togaf.design.doc</module>
     
     <module>samples/org.obeonetwork.dsl.togaf.samples</module>
@@ -75,7 +76,7 @@
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
-     <url>http://update.obeo.fr/release/designer/6.1.2rc1/juno3/update/repository/</url>
+     <url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>
     </repository>
      <repository>
       <id>smart-designer</id>

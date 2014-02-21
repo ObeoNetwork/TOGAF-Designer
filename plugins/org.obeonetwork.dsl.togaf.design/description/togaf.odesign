@@ -8317,7 +8317,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.nContains($containerView.target)].implementsServices%>" domainClass="contentfwk.BusinessService">
+        <containerMappings name="BusinessService" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[operatesOnDataEntities.nContains($containerView.target)].implementsServices%>" domainClass="contentfwk.BusinessService">
           <style xsi:type="style:FlatContainerStyleDescription">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
