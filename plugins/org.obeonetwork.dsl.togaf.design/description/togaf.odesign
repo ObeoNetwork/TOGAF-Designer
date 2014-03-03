@@ -12424,7 +12424,7 @@
         <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs']/@ownedRepresentations[name='Application%20Portfolio%20Catalog']/@subItemMappings[name='LogicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
-              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalApplicationComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
             </subModelOperations>
           </firstModelOperation>
           <variables name="root" documentation="The semantic element of the tree."/>
@@ -12535,7 +12535,7 @@
         <create name="Logical Application Component" mapping="//@ownedViewpoints[name='application-catalogs-container']/@ownedRepresentations[name='Application%20Portfolio%20Catalog%20Container']/@subItemMappings[name='LogicalApplicationComponents']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
-              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalDataComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
+              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="LogicalApplicationComponent_&lt;%eContainer.logicalApplicationComponents.nSize()%>"/>
             </subModelOperations>
             <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
               <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
