@@ -1950,7 +1950,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="participates in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="ProcessPrecedesProcesses" label="Preceeds process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessPrecedesProcesses']">
+        <edgeMappings name="ProcessPrecedesProcesses" label="Preceeds process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessPrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20ProcessPrecedesProcesses']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
@@ -2065,9 +2065,9 @@
             <element name="element"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
-                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="&lt;%$edgeView.targetNode().target%>"/>
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="&lt;%$edgeView.targetNode().target%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
