@@ -1950,7 +1950,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="participates in" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="ProcessPrecedesProcesses" label="Preceeds process" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessPrecedesProcesses']">
+        <edgeMappings name="ProcessPrecedesProcesses" label="Preceeds process" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='']" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@containerMappings[name='Process']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Use-Case%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20ProcessPrecedesProcesses']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
@@ -2020,6 +2020,16 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
                 <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode().target%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="&lt;%$elementView.targetNode().target%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
