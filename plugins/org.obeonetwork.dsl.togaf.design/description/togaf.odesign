@@ -1057,7 +1057,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="supports" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']"/>
           </style>
         </edgeMappings>
-        <edgeMappings name="processPrecedesProcesses" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='source%20PrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='target%20PrecedesProcesses']">
+        <edgeMappings name="processPrecedesProcesses" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Delete%20ProcessPrecedesProcesses']" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='FProcess']/@subContainerMappings[name='SubFProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" targetFinderExpression="&lt;%precedesProcesses%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='source%20PrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='target%20PrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20PrecedesProcesses'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20PrecedesProcesses']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="preceeds" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']"/>
           </style>
@@ -1088,7 +1088,7 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="OProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%participatesInProcesses%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']">
-            <subContainerMappings name="SubOProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%isDecomposedByProcesses%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']">
+            <subContainerMappings name="SubOProcess" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='change%20name']" semanticCandidatesExpression="&lt;%isDecomposedByProcesses%>" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='drop%20Process'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1295,9 +1295,6 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Process"/>
-                    </subModelOperations>
                     <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;OrganizationUnit&quot;%>">
                       <subModelOperations xsi:type="tool:SetValue" featureName="participatesInProcesses" valueExpression="&lt;%$instance%>"/>
                     </subModelOperations>
@@ -1315,20 +1312,20 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" precondition="[container.oclIsTypeOf(Process)._or(container.oclIsTypeOf(OrganizationUnit))._or(container.oclIsTypeOf(Function))/]" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="New Process"/>
-                </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;OrganizationUnit&quot;%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="participatesInProcesses" valueExpression="&lt;%$element%>"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Function&quot;%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="isRealizedByProcesses" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;Process&quot;%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="isDecomposedByProcesses" valueExpression="&lt;%$element%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -1402,6 +1399,16 @@
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete ProcessPrecedesProcesses">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="[elementView.targetNode.oclAsType(DSemanticDecorator).target/]"/>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -3026,6 +3033,97 @@
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
         </defaultBackground>
       </intersection>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20Process']" name="Process Diagram" domainClass="contentfwk.Process">
+      <defaultLayer name="Default" reusedMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']">
+        <containerMappings xsi:type="description:ContainerMappingImport" name="Process" semanticCandidatesExpression="[self.isDecomposedByProcesses/]" domainClass="contentfwk.Process" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20Process']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess']" importedMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']"/>
+        <toolSections name="Process" label="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Process" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@containerMappings[name='Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[eContainer(BusinessArchitecture)/]">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Process" referenceName="processes">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesProcess" valueExpression="[container/]"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="['Process_'+eContainer(BusinessArchitecture).processes->size()/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" candidatesExpression="[eContainer(BusinessArchitecture).processes/]">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesProcess" valueExpression="[container/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop Process" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='OProcess']/@subContainerMappings[name='SubOProcess'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Process%20Diagram']/@defaultLayer/@containerMappings[name='Process']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesProcess" valueExpression="[newSemanticContainer/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ProcessPrecedesProcesses" label="Preceeds process" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Functional%20Decomposition%20Diagram']/@defaultLayer/@edgeMappings[name='processPrecedesProcesses']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete ProcessPrecedesProcesses">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="[elementView.targetNode.oclAsType(DSemanticDecorator).target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source PrecedesProcesses" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[target/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="[edgeView.targetNode.oclAsType(DSemanticDecorator).target/]"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="[source/]">
+                  <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="[edgeView.targetNode.oclAsType(DSemanticDecorator).target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target PrecedesProcesses">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="[element/]">
+                <subModelOperations xsi:type="tool:SetValue" featureName="precedesProcesses" valueExpression="[target/]"/>
+                <subModelOperations xsi:type="tool:Unset" featureName="precedesProcesses" elementExpression="[source/]"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
     </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business-container" label="TOGAF - Phase B - Business Architecture - Container" modelFileExtension="togaf">
