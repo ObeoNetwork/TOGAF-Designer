@@ -9695,7 +9695,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;BusinessArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
                     <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;Function_&quot;+eContainer().functions.nSize()%>"/>
