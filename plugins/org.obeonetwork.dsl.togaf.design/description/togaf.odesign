@@ -10028,7 +10028,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Logical Application Component &lt;%eContainer().logicalApplicationComponents.nSize()%>"/>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
@@ -11999,7 +11999,7 @@
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;)%>">
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
@@ -12033,7 +12033,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" message="Select a Logical Application Component" candidatesExpression="&lt;%$container.getRootElement().architecture.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" message="Select a Logical Application Component" candidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
