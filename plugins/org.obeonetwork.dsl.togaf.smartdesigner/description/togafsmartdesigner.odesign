@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="togafsmartdesigner" version="6.7.0.201302071200">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.obeo.fr/dsl/viewpoint/description/1.1.0" xmlns:description_1="http://www.obeo.fr/dsl/viewpoint/table/description/1.1.0" xmlns:style="http://www.obeo.fr/dsl/viewpoint/description/style/1.1.0" xmlns:tool="http://www.obeo.fr/dsl/viewpoint/description/tool/1.1.0" name="togafsmartdesigner" version="6.7.0.201302071200">
   <ownedViewpoints name="Smart Designer">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" name="Smart Designer" domainClass="smartdesigner.Diagram">
       <defaultLayer name="Default" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
@@ -2950,6 +2950,17 @@
           </ownedTools>
         </toolSections>
       </optionalLayers>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:EditionTableDescription" name="Smart Designer Admin" domainClass="smartdesigner.Diagram">
+      <ownedLineMappings name="Diagram" domainClass="smartdesigner.Diagram" semanticCandidatesExpression="&lt;%eContainer.eContents%>" headerLabelExpression="&lt;%name%>">
+        <delete name="Delete">
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="root" documentation="The semantic element corresponding to the current table."/>
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer()%>">
+            <subModelOperations xsi:type="tool:Unset" featureName="diagrams" elementExpression="&lt;%$element%>"/>
+          </firstModelOperation>
+        </delete>
+      </ownedLineMappings>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.ConnectorServices"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.smartdesigner.design.services.SmartDesignerDiagramServices"/>
