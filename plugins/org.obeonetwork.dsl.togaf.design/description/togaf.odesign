@@ -10082,7 +10082,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ACCD_Select LogicalApplicationComponent" label="Logical Application Component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ACCD_Select LogicalApplicationComponent" label="Logical Application Component" precondition="&lt;%$container.eClass().name==&quot;TagContainer&quot;%>" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[category==&quot;Application&quot;]%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -10090,14 +10090,6 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
                 <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="decomposesLogicalApplicationComponent" valueExpression="&lt;%$container%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name != &quot;LogicalApplicationComponent&quot;%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="Application"/>
-                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -10296,7 +10288,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ACSCD_Select LogicalApplicationComponent" label="Logical Application Component" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ACSCD_Select LogicalApplicationComponent" label="Logical Application Component" precondition="&lt;%$container.eClass().name==&quot;TagContainer&quot;%>" candidatesExpression="&lt;%$container.getRootElement().architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents[category==&quot;Application&quot;]%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -10304,14 +10296,6 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.eContainer(&quot;DSemanticDiagram&quot;).target%>">
                 <subModelOperations xsi:type="tool:For" expression="&lt;%tags%>">
                   <subModelOperations xsi:type="tool:SetValue" featureName="taggedElements" valueExpression="&lt;%$element%>"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="decomposesLogicalApplicationComponent" valueExpression="&lt;%$container%>"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass().name != &quot;LogicalApplicationComponent&quot;%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="category" valueExpression="Application"/>
-                  </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
