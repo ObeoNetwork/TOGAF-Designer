@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
-Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton=true
-Bundle-Version: 1.5.0.qualifier
+Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton:=true
+Bundle-Version: 1.5.1.qualifier
 Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
@@ -12,8 +12,6 @@ Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
  org.eclipse.core.expressions;bundle-version="3.4.300"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Provide-Package: org.obeonetwork.dsl.togaf.design,
- org.obeonetwork.dsl.togaf.design.services,
- org.obeonetwork.dsl.togaf.design.tags,
- org.obeonetwork.dsl.togaf.design.services.application
+Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.tags,org.obeonetwork.dsl.togaf.design.services.application
 Bundle-Localization: plugin
+Bundle-ManifestVersion: 2
