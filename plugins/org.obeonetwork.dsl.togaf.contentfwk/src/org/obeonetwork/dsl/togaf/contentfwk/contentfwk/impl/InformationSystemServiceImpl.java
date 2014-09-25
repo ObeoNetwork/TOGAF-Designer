@@ -16,7 +16,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
@@ -192,6 +191,16 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	 */
 	public void setCategory(String newCategory) {
 		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__CATEGORY, ContentfwkPackage.Literals.ELEMENT__CATEGORY, newCategory);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element#forceID(String)
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void forceID(String newID) {
+		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
 	}
 
 	/**

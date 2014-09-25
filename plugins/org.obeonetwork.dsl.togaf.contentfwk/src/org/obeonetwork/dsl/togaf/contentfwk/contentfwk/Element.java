@@ -151,6 +151,14 @@ public interface Element extends CDOObject {
 	void setCategory(String value);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model newIDRequired="true"
+	 * @generated
+	 */
+	void forceID(String newID);
+
+	/**
 	 * Returns the value of the '<em><b>Source Descr</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

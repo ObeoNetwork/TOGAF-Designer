@@ -426,6 +426,9 @@
         upperBound="-1" eType="#//Process" eOpposite="#//Process/isGuidedByControls"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eOperations name="forceID">
+      <eParameters name="newID" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="delegates" upperBound="-1"
         eType="#//Element" eOpposite="#//Element/isDelegatedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isDelegatedBy" upperBound="-1"

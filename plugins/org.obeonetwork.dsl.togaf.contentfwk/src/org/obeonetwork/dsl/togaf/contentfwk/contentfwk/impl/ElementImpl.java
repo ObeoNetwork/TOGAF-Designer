@@ -15,12 +15,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.InternalEList;
 import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ContentfwkPreferences;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ContentfwkPreferences.ElementIdInitializationPolicy;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ElementUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,10 +107,13 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ElementImpl() {
 		super();
+		if(ContentfwkPreferences.getElementIdInitializationPolicy() == ElementIdInitializationPolicy.CREATION_TIME) {
+			setID(ElementUtil.generateId());
+		}
 	}
 
 	/**
@@ -205,6 +213,17 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Force the value of the Element's id independently of the current ID initialization policy.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ContentfwkPreferences
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public void forceID(String newID) {
+		eDynamicSet(ContentfwkPackage.ELEMENT__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -251,12 +270,58 @@ public class ElementImpl extends CDOObjectImpl implements Element {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setID(String newID) {
-		eDynamicSet(ContentfwkPackage.ELEMENT__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
-	}
+		
+		switch (ContentfwkPreferences.getElementIdAccessibility()) {
+		case ALWAYS:
+			if(canIdBeUsed(newID)) {
+				forceID(newID);
+			}
+			break;
 
+		case BEFORE_SAVE:
+			if((cdoID() == null || cdoID().isTemporary()) && canIdBeUsed(newID)) {
+				forceID(newID);
+			}
+			break;
+
+		case NEVER:
+			// Do nothing
+			break;
+		}
+		
+	}
+	
+	/**
+	 * Check whether the given ID can be used to identify an Element.
+	 * 
+	 * @param newID
+	 * @return false if the element id uniqueness check is enabled and the id is
+	 *         already in use in one of the elements of this element's resource,
+	 *         true in any other case.
+	 */
+	private boolean canIdBeUsed(String newID) {
+		boolean canIdBeUsed = true;
+		
+		if(eResource() != null && ContentfwkPreferences.isElementIdUnicityCheckEnabled() && newID != null && !newID.isEmpty()) {
+			
+			TreeIterator<EObject> elementIterator = eResource().getContents().get(0).eAllContents();
+			while(elementIterator.hasNext() && canIdBeUsed) {
+				EObject object = elementIterator.next();
+				if(object instanceof Element) {
+					Element element = (Element) object;
+					if(newID.equals(element.getID())) {
+						canIdBeUsed = false;
+					}
+				}
+			}
+		}
+		
+		return canIdBeUsed;
+	}
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
