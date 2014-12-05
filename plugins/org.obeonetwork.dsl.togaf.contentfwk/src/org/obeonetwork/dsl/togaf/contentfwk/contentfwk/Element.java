@@ -218,7 +218,7 @@ public interface Element extends CDOObject {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
 	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage#getElement_ID()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	String getID();
