@@ -64,16 +64,6 @@
       <url>http://download.eclipse.org/releases/juno</url>
     </repository>
     <repository>
-      <id>EEF</id>
-      <layout>p2</layout>
-      <url>http://download.eclipse.org/modeling/emft/eef/updates/releases/1.0</url>
-    </repository>
-    <repository>
-      <id>EEF-ViewpointBridge</id>
-      <layout>p2</layout>
-      <url>http://www.obeo.fr/download/release/designer-extensions/update</url>
-    </repository>
-    <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
       <!--<url>http://update.obeo.fr/maintenance/od/6.2/juno3/update/repository/</url>-->
