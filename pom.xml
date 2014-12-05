@@ -13,7 +13,7 @@
   <modelVersion>4.0.0</modelVersion>
   
   <prerequisites>
-    <maven>3.0</maven>
+    <maven>3.0.0</maven>
   </prerequisites>
 	
   <groupId>TOGAF-Designer</groupId>
@@ -66,9 +66,9 @@
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
-      <url>http://update.obeo.fr/bundles/ObeoSmartEA/integration/tp/1.5.4</url>
+      <!--<url>http://update.obeo.fr/bundles/ObeoSmartEA/integration/tp/1.5.4</url>-->
       <!--<url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>-->
-      <!--<url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>-->
+      <url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>
     </repository>
      <repository>
       <id>smart-designer</id>
