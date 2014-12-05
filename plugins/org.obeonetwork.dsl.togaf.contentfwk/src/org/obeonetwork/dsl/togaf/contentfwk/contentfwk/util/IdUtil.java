@@ -10,8 +10,8 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
 
 /**
- * 
- * @author Stephane Drapeau - Obeo
+ * @author <a href="mailto:vincent.richard@obeo.fr">Vincent Richard</a>
+ * @contributor Stephane Drapeau - Obeo
  * 
  */
 public class IdUtil {
