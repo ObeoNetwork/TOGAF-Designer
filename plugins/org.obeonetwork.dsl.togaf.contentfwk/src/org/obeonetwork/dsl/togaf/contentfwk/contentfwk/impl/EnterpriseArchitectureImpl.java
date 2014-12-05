@@ -32,15 +32,11 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.IdUtil;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>
- * {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getArchitectures
- * <em>Architectures</em>}</li>
- * <li>
- * {@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getID
- * <em>ID</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getArchitectures <em>Architectures</em>}</li>
+ *   <li>{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.EnterpriseArchitectureImpl#getID <em>ID</em>}</li>
  * </ul>
  * </p>
- * 
+ *
  * @generated
  */
 public class EnterpriseArchitectureImpl extends CDOObjectImpl implements
@@ -69,7 +65,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -79,7 +74,6 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -89,27 +83,19 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	public EList<Architecture> getArchitectures() {
-		return (EList<Architecture>) eDynamicGet(
-				ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES,
-				ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES,
-				true, true);
+		return (EList<Architecture>)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ARCHITECTURES, true, true);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String getID() {
-		return (String) eDynamicGet(
-				ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID,
-				ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ID, true,
-				true);
+		return (String)eDynamicGet(ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID, ContentfwkPackage.Literals.ENTERPRISE_ARCHITECTURE__ID, true, true);
 	}
 
 	/**
@@ -135,88 +121,80 @@ public class EnterpriseArchitectureImpl extends CDOObjectImpl implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			return ((InternalEList<?>) getArchitectures()).basicRemove(
-					otherEnd, msgs);
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return ((InternalEList<?>)getArchitectures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			return getArchitectures();
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
-			return getID();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return getArchitectures();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
+				return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			getArchitectures().clear();
-			getArchitectures().addAll(
-					(Collection<? extends Architecture>) newValue);
-			return;
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
-			setID((String) newValue);
-			return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				getArchitectures().clear();
+				getArchitectures().addAll((Collection<? extends Architecture>)newValue);
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
+				setID((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			getArchitectures().clear();
-			return;
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
-			setID(ID_EDEFAULT);
-			return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				getArchitectures().clear();
+				return;
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
+				setID(ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
-			return !getArchitectures().isEmpty();
-		case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
-			return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT
-					.equals(getID());
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ARCHITECTURES:
+				return !getArchitectures().isEmpty();
+			case ContentfwkPackage.ENTERPRISE_ARCHITECTURE__ID:
+				return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
 		}
 		return super.eIsSet(featureID);
 	}
