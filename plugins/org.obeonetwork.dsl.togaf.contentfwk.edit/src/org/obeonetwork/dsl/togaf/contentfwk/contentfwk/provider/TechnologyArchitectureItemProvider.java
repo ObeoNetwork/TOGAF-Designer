@@ -119,7 +119,10 @@ public class TechnologyArchitectureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TechnologyArchitecture_type");
+		String label = ((TechnologyArchitecture)object).getID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_TechnologyArchitecture_type") :
+			getString("_UI_TechnologyArchitecture_type") + " " + label;
 	}
 
 	/**

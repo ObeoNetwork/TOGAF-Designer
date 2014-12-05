@@ -519,8 +519,26 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getEnterpriseArchitecture_ID() {
+		return (EAttribute)enterpriseArchitectureEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArchitecture() {
 		return architectureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArchitecture_ID() {
+		return (EAttribute)architectureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3559,8 +3577,10 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		// Create classes and their features
 		enterpriseArchitectureEClass = createEClass(ENTERPRISE_ARCHITECTURE);
 		createEReference(enterpriseArchitectureEClass, ENTERPRISE_ARCHITECTURE__ARCHITECTURES);
+		createEAttribute(enterpriseArchitectureEClass, ENTERPRISE_ARCHITECTURE__ID);
 
 		architectureEClass = createEClass(ARCHITECTURE);
+		createEAttribute(architectureEClass, ARCHITECTURE__ID);
 
 		businessArchitectureEClass = createEClass(BUSINESS_ARCHITECTURE);
 		createEReference(businessArchitectureEClass, BUSINESS_ARCHITECTURE__DRIVERS);
@@ -4027,8 +4047,16 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		// Initialize classes and features; add operations and parameters
 		initEClass(enterpriseArchitectureEClass, EnterpriseArchitecture.class, "EnterpriseArchitecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnterpriseArchitecture_Architectures(), this.getArchitecture(), null, "architectures", null, 0, -1, EnterpriseArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEnterpriseArchitecture_ID(), ecorePackage.getEString(), "ID", null, 0, 1, EnterpriseArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = addEOperation(enterpriseArchitectureEClass, null, "forceID", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "newID", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(architectureEClass, Architecture.class, "Architecture", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArchitecture_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Architecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = addEOperation(architectureEClass, null, "forceID", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, ecorePackage.getEString(), "newID", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(businessArchitectureEClass, BusinessArchitecture.class, "BusinessArchitecture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusinessArchitecture_Drivers(), this.getDriver(), null, "drivers", null, 0, -1, BusinessArchitecture.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4260,7 +4288,7 @@ public class ContentfwkPackageImpl extends EPackageImpl implements ContentfwkPac
 		initEAttribute(getElement_ID(), ecorePackage.getEString(), "ID", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_Category(), ecorePackage.getEString(), "category", null, 0, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = addEOperation(elementEClass, null, "forceID", 0, 1, IS_UNIQUE, IS_ORDERED);
+		op = addEOperation(elementEClass, null, "forceID", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "newID", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -119,7 +119,10 @@ public class DataArchitectureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DataArchitecture_type");
+		String label = ((DataArchitecture)object).getID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_DataArchitecture_type") :
+			getString("_UI_DataArchitecture_type") + " " + label;
 	}
 
 	/**

@@ -85,13 +85,22 @@ public interface ContentfwkPackage extends EPackage {
 	int ENTERPRISE_ARCHITECTURE__ARCHITECTURES = 0;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTERPRISE_ARCHITECTURE__ID = 1;
+
+	/**
 	 * The number of structural features of the '<em>Enterprise Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTERPRISE_ARCHITECTURE_FEATURE_COUNT = 1;
+	int ENTERPRISE_ARCHITECTURE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ArchitectureImpl <em>Architecture</em>}' class.
@@ -104,13 +113,22 @@ public interface ContentfwkPackage extends EPackage {
 	int ARCHITECTURE = 1;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARCHITECTURE__ID = 0;
+
+	/**
 	 * The number of structural features of the '<em>Architecture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARCHITECTURE_FEATURE_COUNT = 0;
+	int ARCHITECTURE_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessArchitectureImpl <em>Business Architecture</em>}' class.
@@ -121,6 +139,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	int BUSINESS_ARCHITECTURE = 2;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUSINESS_ARCHITECTURE__ID = ARCHITECTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Drivers</b></em>' containment reference list.
@@ -286,6 +313,15 @@ public interface ContentfwkPackage extends EPackage {
 	int DATA_ARCHITECTURE = 3;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_ARCHITECTURE__ID = ARCHITECTURE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Entities</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,6 +366,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	int TECHNOLOGY_ARCHITECTURE = 4;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TECHNOLOGY_ARCHITECTURE__ID = ARCHITECTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Platform Services</b></em>' containment reference list.
@@ -5305,6 +5350,15 @@ public interface ContentfwkPackage extends EPackage {
 	int APPLICATION_ARCHITECTURE = 36;
 
 	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ARCHITECTURE__ID = ARCHITECTURE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Logical Application Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6035,6 +6089,15 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	int STRATEGIC_ARCHITECTURE = 39;
+
+	/**
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRATEGIC_ARCHITECTURE__ID = ARCHITECTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference list.
@@ -6880,6 +6943,17 @@ public interface ContentfwkPackage extends EPackage {
 	EReference getEnterpriseArchitecture_Architectures();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture#getID()
+	 * @see #getEnterpriseArchitecture()
+	 * @generated
+	 */
+	EAttribute getEnterpriseArchitecture_ID();
+
+	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture <em>Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6888,6 +6962,17 @@ public interface ContentfwkPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getArchitecture();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture#getID <em>ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Architecture#getID()
+	 * @see #getArchitecture()
+	 * @generated
+	 */
+	EAttribute getArchitecture_ID();
 
 	/**
 	 * Returns the meta object for class '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture <em>Business Architecture</em>}'.
@@ -10555,6 +10640,14 @@ public interface ContentfwkPackage extends EPackage {
 		EReference ENTERPRISE_ARCHITECTURE__ARCHITECTURES = eINSTANCE.getEnterpriseArchitecture_Architectures();
 
 		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENTERPRISE_ARCHITECTURE__ID = eINSTANCE.getEnterpriseArchitecture_ID();
+
+		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.ArchitectureImpl <em>Architecture</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10563,6 +10656,14 @@ public interface ContentfwkPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ARCHITECTURE = eINSTANCE.getArchitecture();
+
+		/**
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARCHITECTURE__ID = eINSTANCE.getArchitecture_ID();
 
 		/**
 		 * The meta object literal for the '{@link org.obeonetwork.dsl.togaf.contentfwk.contentfwk.impl.BusinessArchitectureImpl <em>Business Architecture</em>}' class.

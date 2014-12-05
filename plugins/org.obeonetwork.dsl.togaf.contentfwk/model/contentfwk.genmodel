@@ -45,8 +45,17 @@
     </genEnums>
     <genClasses ecoreClass="contentfwk.ecore#//EnterpriseArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//EnterpriseArchitecture/architectures"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//EnterpriseArchitecture/ID"/>
+      <genOperations ecoreOperation="contentfwk.ecore#//EnterpriseArchitecture/forceID">
+        <genParameters ecoreParameter="contentfwk.ecore#//EnterpriseArchitecture/forceID/newID"/>
+      </genOperations>
     </genClasses>
-    <genClasses image="false" ecoreClass="contentfwk.ecore#//Architecture"/>
+    <genClasses image="false" ecoreClass="contentfwk.ecore#//Architecture">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute contentfwk.ecore#//Architecture/ID"/>
+      <genOperations ecoreOperation="contentfwk.ecore#//Architecture/forceID">
+        <genParameters ecoreParameter="contentfwk.ecore#//Architecture/forceID/newID"/>
+      </genOperations>
+    </genClasses>
     <genClasses ecoreClass="contentfwk.ecore#//BusinessArchitecture">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//BusinessArchitecture/drivers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference contentfwk.ecore#//BusinessArchitecture/goals"/>

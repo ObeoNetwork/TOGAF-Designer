@@ -132,7 +132,10 @@ public class BusinessArchitectureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BusinessArchitecture_type");
+		String label = ((BusinessArchitecture)object).getID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BusinessArchitecture_type") :
+			getString("_UI_BusinessArchitecture_type") + " " + label;
 	}
 
 	/**

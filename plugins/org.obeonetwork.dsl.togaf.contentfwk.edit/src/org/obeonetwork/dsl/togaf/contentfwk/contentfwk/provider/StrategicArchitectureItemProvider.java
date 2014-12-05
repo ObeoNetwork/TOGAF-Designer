@@ -118,7 +118,10 @@ public class StrategicArchitectureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_StrategicArchitecture_type");
+		String label = ((StrategicArchitecture)object).getID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_StrategicArchitecture_type") :
+			getString("_UI_StrategicArchitecture_type") + " " + label;
 	}
 
 	/**

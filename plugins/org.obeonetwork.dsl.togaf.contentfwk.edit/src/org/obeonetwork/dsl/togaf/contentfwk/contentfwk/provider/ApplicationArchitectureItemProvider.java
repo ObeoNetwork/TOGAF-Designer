@@ -119,7 +119,10 @@ public class ApplicationArchitectureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ApplicationArchitecture_type");
+		String label = ((ApplicationArchitecture)object).getID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ApplicationArchitecture_type") :
+			getString("_UI_ApplicationArchitecture_type") + " " + label;
 	}
 
 	/**
