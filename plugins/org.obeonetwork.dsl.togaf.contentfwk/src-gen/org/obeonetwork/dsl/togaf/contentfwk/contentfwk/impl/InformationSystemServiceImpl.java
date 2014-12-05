@@ -21,6 +21,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ContentfwkPreferences;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.IdUtil;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.ContentfwkPreferences.ElementIdInitializationPolicy;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,10 +105,13 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected InformationSystemServiceImpl() {
 		super();
+		if (ContentfwkPreferences.getElementIdInitializationPolicy() == ElementIdInitializationPolicy.CREATION_TIME) {
+			forceID(IdUtil.generateId());
+		}
 	}
 
 	/**
@@ -251,10 +257,12 @@ public class InformationSystemServiceImpl extends ServiceImpl implements Informa
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setID(String newID) {
-		eDynamicSet(ContentfwkPackage.INFORMATION_SYSTEM_SERVICE__ID, ContentfwkPackage.Literals.ELEMENT__ID, newID);
+		if (IdUtil.canIdBeSet(eResource(), newID, cdoID())) {
+			forceID(newID);
+		}
 	}
 
 	/**
