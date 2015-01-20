@@ -801,7 +801,7 @@
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Organization" semanticCandidatesExpression="&lt;%units%>" domainClass="contentfwk.OrganizationUnit">
+        <containerMappings name="Organization" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditLabel']" semanticCandidatesExpression="&lt;%units%>" domainClass="contentfwk.OrganizationUnit">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -2497,7 +2497,7 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
-    <ownedRepresentations xsi:type="description:DiagramDescription" documentation="A Business Footprint diagram describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability.&#xA;A Business Footprint diagram provides a clear traceability between a technical component and the business goal that it satisfies, whilst also demonstrating ownership of the services identified.&#xA;A Business Footprint diagram demonstrates only the key facts linking organization unit functions to delivery services and is utilized as a communication platform for senior-level (CxO) stakeholders. " endUserDocumentation="Describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability." name="Business Footprint Diagram" titleExpression="&lt;%name%>" domainClass="contentfwk.BusinessArchitecture" enablePopupBars="true">
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Function']" documentation="A Business Footprint diagram describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability.&#xA;A Business Footprint diagram provides a clear traceability between a technical component and the business goal that it satisfies, whilst also demonstrating ownership of the services identified.&#xA;A Business Footprint diagram demonstrates only the key facts linking organization unit functions to delivery services and is utilized as a communication platform for senior-level (CxO) stakeholders. " endUserDocumentation="Describes the links between business goals, organizational units, business functions, and services, and maps these functions to the technical components delivering the required capability." name="Business Footprint Diagram" titleExpression="&lt;%name%>" domainClass="contentfwk.BusinessArchitecture" enablePopupBars="true">
       <filters xsi:type="filter:CompositeFilterDescription" name="IsBoundedBy" label="Function is bounded by service">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@edgeMappings[name='functionIsBoundedByServices']"/>
       </filters>
@@ -2523,7 +2523,7 @@
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="consumes" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']"/>
           </style>
         </edgeMappings>
-        <containerMappings name="OrganizationUnit" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%units%>" domainClass="contentfwk.OrganizationUnit" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20OrganizationUnit%20is%20motivated%20by%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='Drop%20Service']">
+        <containerMappings name="OrganizationUnit" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Organization%20Decomposition%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='EditLabel']" semanticCandidatesExpression="&lt;%units%>" domainClass="contentfwk.OrganizationUnit" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20OrganizationUnit%20is%20motivated%20by%20Driver'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.5/@ownedTools[name='Drop%20Service'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Function']">
           <subContainerMappings name="Driver" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%isMotivatedByDrivers%>" domainClass="contentfwk.Driver" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Drop%20creates%20Goal'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20OrganizationUnit%20is%20motivated%20by%20Driver']">
             <subContainerMappings name="Goal" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%createsGoals%>" domainClass="contentfwk.Goal" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Drop%20creates%20Goal']">
               <subContainerMappings name="SubGoal" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%isDecomposedByGoals%>" domainClass="contentfwk.Goal" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Drop%20creates%20Goal']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Driver']/@subContainerMappings[name='Goal']/@subContainerMappings[name='SubGoal']">
@@ -2579,6 +2579,18 @@
             </style>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Function" preconditionExpression="&lt;%isOwnedByOrganizationUnit.nSize() == 0 &amp;&amp; decomposesFunction.nSize() == 0%>" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%functions%>" domainClass="contentfwk.Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Function']">
+          <subContainerMappings name="SubFunction" preconditionExpression="&lt;%isOwnedByOrganizationUnit.nSize() == 0%>" labelDirectEdit="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit']" semanticCandidatesExpression="&lt;%isDecomposedByFunctions%>" domainClass="contentfwk.Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@toolSections.4/@ownedTools[name='drop%20Function']" reusedContainerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
@@ -2758,7 +2770,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Function" label="Function" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2844,7 +2856,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop Function" forceRefresh="true" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop Function" forceRefresh="true" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='OrganizationUnit']/@subContainerMappings[name='Function']/@subContainerMappings[name='SubFunction'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Function'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Business%20Footprint%20Diagram']/@defaultLayer/@containerMappings[name='Function']/@subContainerMappings[name='SubFunction']">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -2852,7 +2864,7 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;OrganizationUnit&quot;%>">
-                  <subModelOperations xsi:type="tool:Unset" featureName="ownsFunction" elementExpression="&lt;%$element%>"/>
+                  <subModelOperations xsi:type="tool:Unset" featureName="ownsFunctions" elementExpression="&lt;%$element%>"/>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;Function&quot;%>">
                   <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
@@ -3164,6 +3176,100 @@
               </firstModelOperations>
             </initialOperation>
             <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']" name="Function Diagram" domainClass="BusinessArchitecture">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Function Second Level">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Function Third Level and More">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
+      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%secondLevelFunction() + thirdAndOtherLevelFunction()%>" nodeMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="isDecomposedByFunctions" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" createElements="false" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetFinderExpression="&lt;%isDecomposedByFunctions%>">
+          <style sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="FunctionOnly" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%firstLevelfunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="FunctionSndLevel" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%secondLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="AllFunctions" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Function">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionOnly" candidatesExpression="&lt;%firstLevelfunction()%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$containerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i%>" targetExpression="&lt;%$i.isDecomposedByFunctions%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionSecondLevel" candidatesExpression="&lt;%secondLevelFunction%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionThirdAndOtherLevel" candidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="createFunction" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" dragSource="PROJECT_EXPLORER">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$newContainerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i%>" targetExpression="&lt;%$i.isDecomposedByFunctions%>"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$newContainerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$newContainerView%>"/>
+                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DisablingDeleteFromModel" precondition="&lt;%false%>">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
@@ -6629,11 +6735,23 @@
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="BusinessService" domainClass="BusinessService" semanticCandidatesExpression="&lt;%services.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="BusinessService" domainClass="BusinessService" semanticCandidatesExpression="&lt;%firstLevelBusinessService().nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
+          <conditionalStyles predicateExpression="&lt;%haveDescendantServiceWithManyLogicalApplicationComponent()%>">
+            <style labelFormat="bold_italic">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionalStyles>
+          <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+            <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService_red.gif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionalStyles>
           <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
@@ -6642,7 +6760,92 @@
             <element name="element"/>
             <root name="root"/>
           </directEdit>
+          <subItemMappings name="SubServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isDecomposedByServices.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='SubServices'] //@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='LogicalApplicationComponent']">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <conditionalStyles predicateExpression="&lt;%haveDescendantServiceWithManyLogicalApplicationComponent()%>">
+              <style labelFormat="bold_italic">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionalStyles>
+            <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+              <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService_red.gif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionalStyles>
+            <dropTools name="DropServices" forceRefresh="true" dragSource="BOTH">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesServices" elementExpression="&lt;%$element.~target.filter(&quot;DTreeItem&quot;).eContainer().target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$newViewContainer.target%>"/>
+                </subModelOperations>
+              </firstModelOperation>
+              <oldContainer name="oldContainer"/>
+              <newContainer name="newContainer"/>
+              <element name="element"/>
+              <newViewContainer name="newViewContainer"/>
+              <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+            </dropTools>
+            <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer()%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%$element.eContainer().services.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperation>
+              <variables name="root" documentation="The semantic element of the tree."/>
+              <variables name="element" documentation="The semantic currently edited element."/>
+              <variables name="container" documentation="The semantic element corresponding to the view container."/>
+            </create>
+          </subItemMappings>
+          <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%manyLogicalApplicationComponent()%>">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <delete name="DeleteImplementsServices">
+              <firstModelOperation xsi:type="tool:Unset" featureName="implementsServices" elementExpression="&lt;%$element.~target.filter(&quot;DTreeItem&quot;).eContainer().target%>"/>
+              <variables name="element" documentation="The currently edited element."/>
+              <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+            </delete>
+          </subItemMappings>
+          <dropTools name="DropServices" forceRefresh="true" dragSource="BOTH">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:Unset" featureName="decomposesServices" elementExpression="&lt;%$element.~target.filter(&quot;DTreeItem&quot;).eContainer().target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$newViewContainer.target%>"/>
+              </subModelOperations>
+            </firstModelOperation>
+            <oldContainer name="oldContainer"/>
+            <newContainer name="newContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newViewContainer"/>
+            <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+          </dropTools>
+          <create name="Business Service" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+              <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%eContainer.services.nSize()%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesServices" valueExpression="&lt;%$element%>"/>
+              </subModelOperations>
+            </firstModelOperation>
+            <variables name="root" documentation="The semantic element of the tree."/>
+            <variables name="element" documentation="The semantic currently edited element."/>
+            <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          </create>
         </subItemMappings>
+        <dropTools name="DropServices" forceRefresh="true" dragSource="BOTH">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+            <subModelOperations xsi:type="tool:Unset" featureName="decomposesServices" elementExpression="&lt;%$element.~target.filter(&quot;DTreeItem&quot;).eContainer().target%>"/>
+          </firstModelOperation>
+          <oldContainer name="oldContainer"/>
+          <newContainer name="newContainer"/>
+          <element name="element"/>
+          <newViewContainer name="newViewContainer"/>
+          <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+        </dropTools>
         <delete name="DisablingDeletionTool">
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
@@ -6663,11 +6866,23 @@
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
-        <subItemMappings name="Function" domainClass="Function" semanticCandidatesExpression="&lt;%functions.nSort(&quot;name&quot;)%>">
+        <subItemMappings name="Function" domainClass="Function" semanticCandidatesExpression="&lt;%firstLevelfunction().nSort(&quot;name&quot;)%>">
           <defaultStyle>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
+          <conditionalStyles predicateExpression="&lt;%haveDescendantFunctionWithManyLogicalApplicationComponent()%>">
+            <style labelFormat="bold_italic">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionalStyles>
+          <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+            <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function-red.gif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </conditionalStyles>
           <directEdit name="DirectEditName" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']">
             <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
@@ -6676,12 +6891,102 @@
             <element name="element"/>
             <root name="root"/>
           </directEdit>
+          <subItemMappings name="SubFunction" domainClass="Function" semanticCandidatesExpression="&lt;%isDecomposedByFunctions.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']/@subItemMappings[name='Function']/@subItemMappings[name='SubFunction'] //@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']/@subItemMappings[name='Function']/@subItemMappings[name='LogicalApplicationsComponent']">
+            <defaultStyle>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <conditionalStyles predicateExpression="&lt;%haveDescendantFunctionWithManyLogicalApplicationComponent()%>">
+              <style labelFormat="bold_italic">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionalStyles>
+            <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+              <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function-red.gif">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionalStyles>
+            <dropTools name="DropFunction" forceRefresh="true" dragSource="BOTH">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$newViewContainer.target%>"/>
+              </firstModelOperation>
+              <oldContainer name="oldContainer"/>
+              <newContainer name="newContainer"/>
+              <element name="element"/>
+              <newViewContainer name="newViewContainer"/>
+              <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+            </dropTools>
+            <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']/@subItemMappings[name='Function']/@subItemMappings[name='SubFunction']">
+              <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element.eContainer()%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%$element.eContainer().functions.nSize()%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperation>
+              <variables name="root" documentation="The semantic element of the tree."/>
+              <variables name="element" documentation="The semantic currently edited element."/>
+              <variables name="container" documentation="The semantic element corresponding to the view container."/>
+            </create>
+          </subItemMappings>
+          <subItemMappings name="LogicalApplicationsComponent" domainClass="Function" preconditionExpression="&lt;%getLogicalApplicationComponent()>0%>" semanticCandidatesExpression="&lt;%self%>">
+            <defaultStyle labelExpression="Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </defaultStyle>
+            <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%getLogicalApplicationComponent()%>">
+              <defaultStyle>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </defaultStyle>
+              <delete name="DisablingDeletionTool">
+                <variables name="element" documentation="The currently edited element."/>
+                <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+              </delete>
+            </subItemMappings>
+            <delete name="DisablingDeletionTool">
+              <variables name="element" documentation="The currently edited element."/>
+              <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+            </delete>
+          </subItemMappings>
+          <dropTools name="DropFunction" forceRefresh="true" dragSource="BOTH">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+              <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$newViewContainer.target%>"/>
+            </firstModelOperation>
+            <oldContainer name="oldContainer"/>
+            <newContainer name="newContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newViewContainer"/>
+            <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+          </dropTools>
+          <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']/@subItemMappings[name='Function']/@subItemMappings[name='SubFunction']">
+            <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+              <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%$container.functions.nSize()%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$element%>"/>
+              </subModelOperations>
+            </firstModelOperation>
+            <variables name="root" documentation="The semantic element of the tree."/>
+            <variables name="element" documentation="The semantic currently edited element."/>
+            <variables name="container" documentation="The semantic element corresponding to the view container."/>
+          </create>
         </subItemMappings>
+        <dropTools name="DropFunction" forceRefresh="true" dragSource="BOTH">
+          <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+            <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunction"/>
+          </firstModelOperation>
+          <oldContainer name="oldContainer"/>
+          <newContainer name="newContainer"/>
+          <element name="element"/>
+          <newViewContainer name="newViewContainer"/>
+          <precedingSiblings name="precedingSiblings" documentation="The list of all the preceding siblings in a Drag and Drop operation"/>
+        </dropTools>
         <delete name="DisablingDeletionTool">
           <variables name="element" documentation="The currently edited element."/>
           <variables name="root" documentation="The semantic element corresponding to the current tree."/>
         </delete>
-        <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']">
+        <create name="Function" mapping="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='Functions']/@subItemMappings[name='Function']">
           <firstModelOperation xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
             <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
               <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%eContainer.functions.nSize()%>"/>
@@ -6937,6 +7242,7 @@
         </create>
       </subItemMappings>
     </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.BusinessArchitectureServices"/>
   </ownedViewpoints>
   <ownedViewpoints name="business-catalogs-container" label="TOGAF - Phase B - Business Architecture - Catalogs - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog Container" domainClass="TagContainer">
@@ -9067,7 +9373,7 @@
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
       </filters>
       <defaultLayer name="Default">
-        <edgeMappings name="Communication Link" label="Communicates with" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="&lt;%logicalApplicationComponents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20communication']">
+        <edgeMappings name="Communication Link" label="Communicates with" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCominicationLink']" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="&lt;%logicalApplicationComponents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20communication']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']"/>
           </style>
@@ -9162,6 +9468,16 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteCominicationLink">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.getTarget()%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$elementView.targetNode.getTarget()%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="ISService" label="I.S. services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
           <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
@@ -9207,9 +9523,208 @@
         </decorationDescriptionsSet>
       </defaultLayer>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='LogicalApplicationComponent']" name="Application Communication Diagram Component" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Filter Business Services">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']"/>
+      </filters>
+      <defaultLayer name="Default">
+        <edgeMappings name="Communication Link" label="Communicates with" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteCominicationLink']" semanticCandidatesExpression="&lt;%current.eAllContents%>" semanticElements="&lt;%logicalApplicationComponents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='target%20communication']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="LogicalApplicationComponent" preconditionExpression="&lt;%decomposesLogicalApplicationComponent.length == 0%>" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.1/@ownedTools[name='drop%20service'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='LogicalApplicationComponent']">
+          <subNodeMappings name="Services" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%current.implementsServices%>" domainClass="contentfwk.InformationSystemService">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <subContainerMappings name="LogicalApplicationComponentDecomposed" semanticCandidatesExpression="&lt;%isDecomposedByLogicalApplicationComponents%>" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@toolSections.0/@ownedTools[name='LogicalApplicationComponent']" reusedContainerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subContainerMappings[name='LogicalApplicationComponentDecomposed']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="LogicalApplicationComponents" label="Logical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Logical Application Component" label="Logical Application Component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subContainerMappings[name='LogicalApplicationComponentDecomposed']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass.name == &quot;ApplicationArchitecture&quot;%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer()%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="LogicalApplicationComponent" referenceName="logicalApplicationComponents">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;LogicalApplicationComponent_&quot;+eContainer().logicalApplicationComponents.nSize()%>"/>
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposesLogicalApplicationComponent" valueExpression="&lt;%$containerView.getTarget()%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communication Link" label="Communicates with LogicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source communication" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target communication">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="LogicalApplicationComponent" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subContainerMappings[name='LogicalApplicationComponentDecomposed']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;ApplicationArchitecture&quot;%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="isDecomposedByLogicalApplicationComponents" valueExpression="&lt;%$element%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="isDecomposedByLogicalApplicationComponents" elementExpression="&lt;%$element%>"/>
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="isDecomposedByLogicalApplicationComponents" valueExpression="&lt;%$element%>"/>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$newSemanticContainer.eClass().name == &quot;ApplicationArchitecture&quot;%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="logicalApplicationComponents" valueExpression="&lt;%$element%>"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteCominicationLink">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.getTarget()%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$elementView.targetNode.getTarget()%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="ISService" label="I.S. services" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Information System Service" label="I.S. service" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;ApplicationArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="InformationSystemService" referenceName="informationSystemServices">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%&quot;InformationSystemService_&quot;+eContainer(&quot;ApplicationArchitecture&quot;).informationSystemServices.nSize()%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$instance%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Information System Service" label="Select I.S. service" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" multiple="true" childrenExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" message="Select an existing information system service" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$element%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="drop service" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']/@subNodeMappings[name='Services']">
+            <oldContainer name="oldSemanticContainer"/>
+            <newContainer name="newSemanticContainer"/>
+            <element name="element"/>
+            <newViewContainer name="newContainerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$oldSemanticContainer%>">
+                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$oldSemanticContainer.eClass().name == &quot;LogicalApplicationComponent&quot;%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="implementsServices" elementExpression="&lt;%$element%>"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$newSemanticContainer%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="implementsServices" valueExpression="&lt;%$element%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Proposed" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/proposed.png" preconditionExpression="&lt;%standardClass==&quot;Proposed&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Provisional" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/provisional.png" preconditionExpression="&lt;%standardClass==&quot;Provisional&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Standard" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/standard.png" preconditionExpression="&lt;%standardClass==&quot;Standard&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="NonStandard" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/nonstandard.png" preconditionExpression="&lt;%standardClass==&quot;NonStandard&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="PhasingOut" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/phasingout.png" preconditionExpression="&lt;%standardClass==&quot;PhasingOut&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+          <decorationDescriptions xsi:type="description:MappingBasedDecoration" name="Retired" position="NORTH_EAST" decoratorPath="/org.obeonetwork.dsl.togaf.design/description/status/retired.png" preconditionExpression="&lt;%standardClass==&quot;Retired&quot;%>" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram%20Component']/@defaultLayer/@containerMappings[name='LogicalApplicationComponent']"/>
+        </decorationDescriptionsSet>
+      </defaultLayer>
+    </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application &amp; User Location Diagram" titleExpression="Application &amp; User Location Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20communication']">
+        <edgeMappings name="Communication Link" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DeleteCominicationLink']" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20communication']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']"/>
           </style>
@@ -9340,6 +9855,16 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteCominicationLink">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.getTarget()%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$elementView.targetNode.getTarget()%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
         <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='Actor']">
@@ -9384,6 +9909,255 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Application &amp; User Location Map Diagram" titleExpression="Application &amp; User Location Map Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@nodeMappings[name='PhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@nodeMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20communication']">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" sizeComputationExpression="1" routingStyle="tree">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="Actor application usage" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@nodeMappings[name='PhysicalApplicationComponent']" targetFinderExpression="&lt;%consumesServices.isRealizedThroughLogicalApplicationComponent.isExtendedByPhysicalApplicationComponents.nMinimize()%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" targetArrow="NoDecoration" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="application usage" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']"/>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Map_France" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Map']" semanticCandidatesExpression="var:self" createElements="false" domainClass="contentfwk.ApplicationArchitecture">
+          <subNodeMappings name="Location" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location">
+            <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="1" hideLabelByDefault="true" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" workspacePath="/org.obeonetwork.dsl.togaf.design/img/map-france.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Map_Europe" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Delete%20Map']" semanticCandidatesExpression="var:self" createElements="false" domainClass="contentfwk.ApplicationArchitecture">
+          <subNodeMappings name="Location" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" domainClass="contentfwk.Location">
+            <style xsi:type="style:BundledImageDescription" showIcon="false" sizeComputationExpression="1" hideLabelByDefault="true" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:WorkspaceImageDescription" workspacePath="/org.obeonetwork.dsl.togaf.design/img/map-europe.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Location" label="Locations" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Location" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_France']/@subNodeMappings[name='Location']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%eContainer().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Location" referenceName="locations">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Location &lt;%$container.eContainer().architectures.filter(&quot;contentfwk.BusinessArchitecture&quot;).nFirst().locations.nSize %>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="edit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%self%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="&lt;%$0%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Maps">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="France" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_France']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_France']" containerViewExpression="var:containerView"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Europe" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_Europe']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_Europe']" containerViewExpression="var:containerView"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete Map" precondition="&lt;%false%>">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView%>">
+                <subModelOperations xsi:type="tool:DeleteView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <optionalLayers name="Actor" activeByDefault="true">
+        <nodeMappings name="Actor" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors%>" domainClass="contentfwk.Actor">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="8" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/Actor.svg">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Actor operates in location" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@nodeMappings[name='Actor']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_France']/@subNodeMappings[name='Location']" targetFinderExpression="&lt;%operatesInLocation%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@toolSections.0/@ownedTools[name='Reconnect%20Actor%20Source'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@toolSections.0/@ownedTools[name='Reconnect%20Actor%20Target']">
+          <style lineStyle="dash_dot" sizeComputationExpression="2" routingStyle="tree">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Actor">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Actor" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@nodeMappings[name='Actor']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Actor" referenceName="actors">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Actor &lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).actors.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ActorLocation" label="Actor Location" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='Actor']/@edgeMappings[name='Actor%20operates%20in%20location']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect Actor Source" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="operatesInLocation" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="operatesInLocation" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="Reconnect Actor Target">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="containsActors" elementExpression="&lt;%$edgeView.sourceNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="containsActors" valueExpression="&lt;%$edgeView.sourceNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
+      <optionalLayers name="PhysicalApplicationComponent" activeByDefault="true">
+        <nodeMappings name="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" domainClass="contentfwk.PhysicalApplicationComponent">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="8" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.design/img/PhysicalApplicationComponent.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="PhysicalApplicationComponent is hosted in location" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@toolSections.0/@ownedTools[name='DeleteCominicationLink']" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@nodeMappings[name='PhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@defaultLayer/@containerMappings[name='Map_France']/@subNodeMappings[name='Location']" targetFinderExpression="&lt;%isHostedInLocation%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='Blue-BusinessArchitecture']" lineStyle="dash_dot" sizeComputationExpression="2" routingStyle="tree">
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Physical Application Component">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PhysicalApplicationComponent" label="Physical Application Component" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@nodeMappings[name='PhysicalApplicationComponent']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%getRootContainer().eContents().filter(&quot;ApplicationArchitecture&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="PhysicalApplicationComponent" referenceName="physicalApplicationComponents">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="PhysicalApplicationComponents &lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).nFirst().physicalApplicationComponents.nSize()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Physical Application is hosted in Location" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@edgeMappings[name='PhysicalApplicationComponent%20is%20hosted%20in%20location']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="containsPhysicalApplicationComponents" valueExpression="&lt;%$source%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With PhysicalApplicationComponent" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="source communication" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="target communication">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$source%>"/>
+                <subModelOperations xsi:type="tool:SetValue" featureName="communicatesWith" valueExpression="&lt;%$target%>"/>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteCominicationLink">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.getTarget()%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="communicatesWith" elementExpression="&lt;%$elementView.targetNode.getTarget()%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </optionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="System Use Case Diagram" titleExpression="System Use Case Diagram" domainClass="contentfwk.ApplicationArchitecture" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -9879,6 +10653,125 @@
       <ownedColumnMappings name="Functions" headerLabelExpression="&lt;%name%>" domainClass="Function" semanticCandidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>"/>
       <intersection name="PhysicalApplicationComponent has a relationship with Function" lineMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedLineMappings[name='PhysicalApplicationComponents']" columnMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Systems%2FFunction%20Matrix%20(Physical%20App%20Map)']/@ownedColumnMappings.0" labelExpression="X" columnFinderExpression="&lt;%extendsLogicalApplicationComponents.implementsServices.providesGovernedInterfaceToAccessFunctions%>"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Logical Component Functional Scope Diagram" domainClass="contentfwk.ApplicationArchitecture">
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideCommunicatesWithLogicalApplication" label="Hide Communicates With Logical Application">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@edgeMappings[name='LCFCDCommunicatesWith']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideCommunicatesWithFunctions" label="Hide Communicates With Functions">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@edgeMappings[name='LCFCDCommunicatesWithFunction']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideConsumesServices" label="Hide Consumes Services">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@edgeMappings[name='LCFCDConsumesServices']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
+      <defaultLayer name="Default">
+        <edgeMappings name="LCFCDCommunicatesWith" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelExpression="Communicates With">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="LCFCDCommunicatesWithFunction" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" targetFinderExpression="&lt;%communicatesWithFunctions%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" sizeComputationExpression="1">
+            <centerLabelStyleDescription labelExpression="Communicates With Functions">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="LCFCDConsumesServices" label="Consumes Services" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" targetFinderExpression="&lt;%consumesServices%>">
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode.target.eClass.name == &quot;BusinessService&quot;%>">
+            <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1">
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+          <conditionnalStyles predicateExpression="&lt;%$view.targetNode.target.eClass.name == &quot;InformationSystemService&quot;%>">
+            <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" sizeComputationExpression="1">
+              <centerLabelStyleDescription>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <containerMappings name="LCFCDLogicalApplicationComponent" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" createElements="false" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20service']">
+          <borderedNodeMappings name="LCFCDService" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%implementsServices%>" createElements="false" domainClass="contentfwk.Service">
+            <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;InformationSystemService&quot;%>">
+              <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" sizeComputationExpression="1" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;BusinessService&quot;%>">
+              <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </conditionnalStyles>
+          </borderedNodeMappings>
+          <subNodeMappings name="LCFCDFunction" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" createElements="false" domainClass="contentfwk.Function">
+            <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Display elements">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LogicalApplicationComponent" candidatesExpression="&lt;%logicalApplicationComponents%>" multiple="true">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']" containerViewExpression="&lt;%$containerView%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Function" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" multiple="true">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Function With Dependencies Communicates With" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" multiple="true">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>">
+                  <subModelOperations xsi:type="tool:For" expression="&lt;%$i.communicatesWithFunctions%>" iteratorName="j">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$j.isBoundedByServices.isRealizedThroughLogicalApplicationComponent.~target.filter(&quot;DNodeContainer&quot;)%>"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Service" candidatesExpression="&lt;%implementsServices%>" multiple="true">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" containerViewExpression="&lt;%$containerView%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DisablingDeleteFromModel" precondition="&lt;%false%>">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.ApplicationArchitectureServices"/>
   </ownedViewpoints>
   <ownedViewpoints name="application-container" label="TOGAF - Phase C. 2- Information Systems - Application Architecture - Container" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application Communication Diagram Container 2" domainClass="tags.TagContainer">
@@ -11213,7 +12106,7 @@
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" name="Application &amp; User Location Diagram Container" titleExpression="Application &amp; User Location Diagram_&lt;%(self +self.ancestor().filter(&quot;Container&quot;)).name.sep(&quot;_&quot;).toString()%>" domainClass="TagContainer" enablePopupBars="true">
       <defaultLayer name="Default">
-        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@optionalLayers[name='External']/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponentExternal']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@optionalLayers[name='External']/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponentExternal']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='target%20communication']">
+        <edgeMappings name="Communication Link" semanticCandidatesExpression="&lt;%current.eAllContents%>" sourceMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@optionalLayers[name='External']/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponentExternal']" targetMapping="//@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent'] //@ownedViewpoints[name='application-container']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram%20Container']/@optionalLayers[name='External']/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponentExternal']" targetFinderExpression="&lt;%communicatesWith%>" reconnections="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@toolSections.0/@ownedTools[name='source%20communication'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Map%20Diagram']/@optionalLayers[name='PhysicalApplicationComponent']/@toolSections.0/@ownedTools[name='target%20communication']">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription labelSize="7" showIcon="false" labelExpression="com. with" labelColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']"/>
           </style>
@@ -11294,7 +12187,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="PhysicalApplicationComponent" label="Physical application components" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical Application Component" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='PhysicalApplicationComponent']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="PhysicalApplicationComponent" label="Physical Application Component">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -11345,7 +12238,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With PhysicalApplicationComponent" edgeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@edgeMappings[name='Communication%20Link']" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Communicates With PhysicalApplicationComponent" iconPath="/org.obeonetwork.dsl.togaf.design/img/icons/full/obj16/Connection.gif">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -11388,7 +12281,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Actor" label="Actors" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor" containerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20%26%20User%20Location%20Diagram']/@defaultLayer/@containerMappings[name='Location']/@subContainerMappings[name='Actor']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Actor">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
