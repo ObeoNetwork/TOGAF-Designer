@@ -660,6 +660,7 @@
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
+            <hook id="fr.obeo.smartea.dsl.smartdesigner.deleteHook1"/>
           </ownedTools>
           <ownedTools xsi:type="tool:DirectEditLabel" name="DirectEdit">
             <mask mask="{0}"/>

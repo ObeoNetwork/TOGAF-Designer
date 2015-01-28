@@ -18,7 +18,7 @@
         <acceleoCompiler 
             sourceFolder="${target.folder}"
             outputFolder="${target.folder}"
-            dependencies="${target.folder}/../../org.obeonetwork.dsl.togaf.smartdesigner;${target.folder}/../../org.obeonetwork.dsl.smartdesigner.design;${target.folder}/../../org.obeonetwork.dsl.smartdesigner;${target.folder}/../../org.eclipse.emf.cdo;${target.folder}/../../org.eclipse.emf.cdo.common;${target.folder}/../../org.eclipse.net4j.util;${target.folder}/../../org.obeonetwork.dsl.togaf.contentfwk;"
+            dependencies="${target.folder}/../../org.obeonetwork.dsl.togaf.smartdesigner;${target.folder}/../../org.obeonetwork.dsl.smartdesigner.design;${target.folder}/../../org.obeonetwork.dsl.smartdesigner;${target.folder}/../../org.obeonetwork.dsl.togaf.contentfwk;"
             binaryResource="false"
             packagesToRegister="">
         </acceleoCompiler>
