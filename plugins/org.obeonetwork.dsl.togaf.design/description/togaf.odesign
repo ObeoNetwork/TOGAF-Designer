@@ -6746,7 +6746,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </conditionalStyles>
-          <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+          <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().nSize() > numberMaxOfLAC()%>">
             <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService_red.gif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6760,7 +6760,7 @@
             <element name="element"/>
             <root name="root"/>
           </directEdit>
-          <subItemMappings name="SubServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isDecomposedByServices.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='SubServices'] //@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='LogicalApplicationComponent']">
+          <subItemMappings name="SubServices" domainClass="BusinessService" semanticCandidatesExpression="&lt;%isDecomposedByServices.nSort(&quot;name&quot;)%>" reusedTreeItemMappings="//@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='SubServices'] //@ownedViewpoints[name='business-catalogs']/@ownedRepresentations[name='BusinessService-Function%20Catalog']/@subItemMappings[name='BusinessServices']/@subItemMappings[name='BusinessService']/@subItemMappings[name='LogicalApplicationsComponent']">
             <defaultStyle>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6771,7 +6771,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionalStyles>
-            <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+            <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().nSize() > numberMaxOfLAC()%>">
               <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService_red.gif">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6801,13 +6801,22 @@
               <variables name="container" documentation="The semantic element corresponding to the view container."/>
             </create>
           </subItemMappings>
-          <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%manyLogicalApplicationComponent()%>">
-            <defaultStyle>
+          <subItemMappings name="LogicalApplicationsComponent" domainClass="BusinessService" preconditionExpression="&lt;%manyLogicalApplicationComponent().nSize()>0%>" semanticCandidatesExpression="&lt;%self%>">
+            <defaultStyle labelExpression="Is realized through &lt;%manyLogicalApplicationComponent().nSize()%> Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
-            <delete name="DeleteImplementsServices">
-              <firstModelOperation xsi:type="tool:Unset" featureName="implementsServices" elementExpression="&lt;%$element.~target.filter(&quot;DTreeItem&quot;).eContainer().target%>"/>
+            <subItemMappings name="LogicalApplicationComponent" domainClass="LogicalApplicationComponent" semanticCandidatesExpression="&lt;%manyLogicalApplicationComponent()%>">
+              <defaultStyle>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </defaultStyle>
+              <delete name="DisablingDeletionTool">
+                <variables name="element" documentation="The currently edited element."/>
+                <variables name="root" documentation="The semantic element corresponding to the current tree."/>
+              </delete>
+            </subItemMappings>
+            <delete name="DisablingDeletionTool">
               <variables name="element" documentation="The currently edited element."/>
               <variables name="root" documentation="The semantic element corresponding to the current tree."/>
             </delete>
@@ -6877,7 +6886,7 @@
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </conditionalStyles>
-          <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+          <conditionalStyles predicateExpression="&lt;%getLogicalApplicationComponent().nSize() > numberMaxOfLAC()%>">
             <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function-red.gif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6902,7 +6911,7 @@
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionalStyles>
-            <conditionalStyles predicateExpression="&lt;%manyLogicalApplicationComponent().length() > 0%>">
+            <conditionalStyles predicateExpression="&lt;%getLogicalApplicationComponent().nSize() > numberMaxOfLAC()%>">
               <style labelFormat="bold" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function-red.gif">
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -6930,8 +6939,8 @@
               <variables name="container" documentation="The semantic element corresponding to the view container."/>
             </create>
           </subItemMappings>
-          <subItemMappings name="LogicalApplicationsComponent" domainClass="Function" preconditionExpression="&lt;%getLogicalApplicationComponent()>0%>" semanticCandidatesExpression="&lt;%self%>">
-            <defaultStyle labelExpression="Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif">
+          <subItemMappings name="LogicalApplicationsComponent" domainClass="Function" preconditionExpression="&lt;%getLogicalApplicationComponent().nSize()>0%>" semanticCandidatesExpression="&lt;%self%>">
+            <defaultStyle labelExpression="Supported by &lt;%getLogicalApplicationComponent().nSize()%> Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>

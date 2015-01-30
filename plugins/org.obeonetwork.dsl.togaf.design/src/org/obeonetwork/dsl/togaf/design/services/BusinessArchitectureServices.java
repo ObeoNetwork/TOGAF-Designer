@@ -43,41 +43,20 @@ public class BusinessArchitectureServices {
 		return firstLevelfunctions;
 	}
 
-	/**
-	 * If a Function has many LogicalApplicationComponent, return all
-	 * LogicalApplicationComponent contained in the function, otherwise an empty
-	 * list.
-	 * 
-	 * @param context
-	 *            The function
-	 * @return A list of LogicalApplicationComponent
-	 */
-	public List<LogicalApplicationComponent> manyLogicalApplicationComponent(
-			Function context) {
-		List<LogicalApplicationComponent> lacs = new ArrayList<LogicalApplicationComponent>();
-		for (Service service : context.getIsBoundedByServices()) {
-			if (service.getIsRealizedThroughLogicalApplicationComponent()
-					.size() > NUMBER_OF_LAC) {
-				lacs = service
-						.getIsRealizedThroughLogicalApplicationComponent();
-			}
-		}
-		return lacs;
-	}
-	
-	public boolean haveDescendantServiceWithManyLogicalApplicationComponent(Service context){
+	public boolean haveDescendantServiceWithManyLogicalApplicationComponent(
+			Service context) {
 		boolean haveServiceWithManyLogicalApplicationComponent = false;
 		for (Service service : getDescendantServices(context)) {
 			if (service.getIsRealizedThroughLogicalApplicationComponent()
 					.size() > NUMBER_OF_LAC) {
 				haveServiceWithManyLogicalApplicationComponent = true;
 				break;
-			}			
+			}
 		}
 		return haveServiceWithManyLogicalApplicationComponent;
-		
+
 	}
-	
+
 	private Collection<Service> getDescendantServices(Service service) {
 		Set<Service> descendantsServices = new HashSet<Service>(
 				service.getIsDecomposedByServices());
@@ -176,9 +155,7 @@ public class BusinessArchitectureServices {
 	public List<LogicalApplicationComponent> manyLogicalApplicationComponent(
 			BusinessService context) {
 		List<LogicalApplicationComponent> lacs = new ArrayList<LogicalApplicationComponent>();
-		if (context.getIsRealizedThroughLogicalApplicationComponent().size() > 1) {
-			lacs = context.getIsRealizedThroughLogicalApplicationComponent();
-		}
+		lacs = context.getIsRealizedThroughLogicalApplicationComponent();
 		return lacs;
 	}
 
@@ -242,8 +219,12 @@ public class BusinessArchitectureServices {
 		return result;
 	}
 
-	public EObject addDecomposesFunction(Function context, EObject toAdd) {
-		return toAdd;
+	public int numberMaxOfLAC(EObject context) {
+		return NUMBER_OF_LAC;
 	}
-
+	
+	public boolean deleteImplementsService(LogicalApplicationComponent context){
+		//<%$element.~target.filter("DTreeItem").eContainer().target%>
+		return true;
+	}
 }
