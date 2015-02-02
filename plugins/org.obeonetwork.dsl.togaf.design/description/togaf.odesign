@@ -3181,71 +3181,58 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']" name="Function Diagram" domainClass="BusinessArchitecture">
-      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Function Second Level">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide direct Sub Functions">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
       </filters>
-      <filters xsi:type="filter:CompositeFilterDescription" name="Hide Function Third Level and More">
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide all Sub Functions">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
       </filters>
-      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%secondLevelFunction() + thirdAndOtherLevelFunction()%>" nodeMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']"/>
+      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%isDecomposedByFunctions%>" nodeMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']"/>
       <defaultLayer name="Default">
-        <edgeMappings name="isDecomposedByFunctions" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" createElements="false" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetFinderExpression="&lt;%isDecomposedByFunctions%>">
-          <style sizeComputationExpression="2" routingStyle="tree" foldingStyle="SOURCE">
+        <edgeMappings name="isDecomposedByFunctions" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" targetFinderExpression="&lt;%decomposesFunction%>">
+          <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="TARGET">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="FunctionOnly" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%firstLevelfunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+        <containerMappings name="FunctionOnly" semanticCandidatesExpression="&lt;%firstLevelfunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="FunctionSndLevel" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%secondLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+        <containerMappings name="FunctionSndLevel" semanticCandidatesExpression="&lt;%secondLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <containerMappings name="AllFunctions" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+        <containerMappings name="AllFunctions" semanticCandidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
-        <toolSections name="Function">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionOnly" candidatesExpression="&lt;%firstLevelfunction()%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+        <toolSections name="Display Existing Function">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ExistingFunction" label="Existing Function" candidatesExpression="&lt;%chooseFunctionToDisplay() - $containerView.eContainer(&quot;DDiagram&quot;).eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$containerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i%>" targetExpression="&lt;%$i.isDecomposedByFunctions%>"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionSecondLevel" candidatesExpression="&lt;%secondLevelFunction%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionThirdAndOtherLevel" candidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$containerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
+                <subModelOperations xsi:type="tool:Switch">
+                  <cases conditionExpression="&lt;%$container.eClass.name == &quot;BusinessArchitecture&quot;%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$containerView%>"/>
+                  </cases>
+                  <cases conditionExpression="&lt;%$i.isSecondLevel()%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
+                  </cases>
+                  <cases conditionExpression="&lt;%$i.isThirdAndOtherLevelFunction()%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
+                  </cases>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -3257,19 +3244,62 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
                 <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$newContainerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i%>" targetExpression="&lt;%$i.isDecomposedByFunctions%>"/>
                 <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$newContainerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
                 <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$newContainerView%>"/>
-                <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']" containerViewExpression="&lt;%$newContainerView%>" sourceExpression="&lt;%$i.decomposesFunction%>" targetExpression="&lt;%$i%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="DisablingDeleteFromModel" precondition="&lt;%false%>">
+          <ownedTools xsi:type="tool:ToolDescription" name="AllExistingFunction" label="All Existing Functions" precondition="&lt;%self.eClass.name == &quot;BusinessArchitecture&quot;%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <elementView name="elementView"/>
-            <containerView name="containerView"/>
-            <initialOperation/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:For" expression="&lt;%eAllContents(&quot;Function&quot;)%>">
+                <subModelOperations xsi:type="tool:Switch">
+                  <cases conditionExpression="&lt;%$i.decomposesFunction == null%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$elementView%>"/>
+                  </cases>
+                  <cases conditionExpression="&lt;%$i.isSecondLevel()%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$elementView%>"/>
+                  </cases>
+                  <cases conditionExpression="&lt;%$i.isThirdAndOtherLevelFunction()%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$elementView%>"/>
+                  </cases>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Create New Function">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" extraMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Switch">
+                <cases conditionExpression="&lt;%$containerView.filter(&quot;DDiagram&quot;).nSize() > 0%>">
+                  <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                    <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function&lt;%eContainer(&quot;BusinessArchitecture&quot;).functions.nSize()%>"/>
+                  </subModelOperations>
+                </cases>
+                <cases conditionExpression="&lt;%$containerView..filter(&quot;DContainer&quot;).nSize() > 0%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer()%>">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="contentfwk.Function" referenceName="functions">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function&lt;%eContainer(&quot;BusinessArchitecture&quot;).functions.nSize()%>"/>
+                      <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$containerView.target%>"/>
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
+                        <subModelOperations xsi:type="tool:Switch">
+                          <cases conditionExpression="&lt;%isSecondLevel()%>">
+                            <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
+                          </cases>
+                          <cases conditionExpression="&lt;%isThirdAndOtherLevelFunction()%>">
+                            <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
+                          </cases>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </cases>
+              </firstModelOperations>
+            </initialOperation>
           </ownedTools>
         </toolSections>
       </defaultLayer>

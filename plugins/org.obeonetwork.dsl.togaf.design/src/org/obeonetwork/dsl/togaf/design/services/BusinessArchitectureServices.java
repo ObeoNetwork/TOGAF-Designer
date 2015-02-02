@@ -177,6 +177,16 @@ public class BusinessArchitectureServices {
 		return secondLevelfunctions;
 	}
 
+	public boolean isSecondLevel(Function context){
+		return context.getDecomposesFunction() != null
+				&& context.getDecomposesFunction().getDecomposesFunction() == null;
+	}
+	
+	public boolean isThirdAndOtherLevelFunction(Function context){
+		return context.getDecomposesFunction() != null
+				&& context.getDecomposesFunction().getDecomposesFunction() != null;
+	}
+	
 	/**
 	 * Service to display third and other level function.
 	 * 
@@ -196,35 +206,22 @@ public class BusinessArchitectureServices {
 		return thirdLevelfunctions;
 	}
 
-	/**
-	 * Check the type of container.
-	 * 
-	 * @param context
-	 *            the context
-	 * @param param
-	 *            the param
-	 * @return true if conditionis check false otherwise
-	 */
-	public boolean isContainerTypeOf(EObject context, String param) {
-		boolean result = false;
-		if (param.equals("Diagram")) {
-			result = true;
-		} else if (param.equals("FunctionOnly")) {
-			result = true;
-		} else if (param.equals("FunctionSecondeLevel")) {
-			result = true;
-		} else if (param.equals("FunctionThirdLeverAndMore")) {
-			result = true;
-		}
-		return result;
-	}
-
 	public int numberMaxOfLAC(EObject context) {
 		return NUMBER_OF_LAC;
 	}
 	
-	public boolean deleteImplementsService(LogicalApplicationComponent context){
-		//<%$element.~target.filter("DTreeItem").eContainer().target%>
-		return true;
+	/**
+	 * Return function depending on context
+	 * @param context the context
+	 * @return list of functions
+	 */
+	public List<Function> chooseFunctionToDisplay(EObject context){
+		if (context instanceof BusinessArchitecture){
+			return firstLevelfunction((BusinessArchitecture)context);
+		}else if (context instanceof Function){
+			return ((Function)context).getIsDecomposedByFunctions();
+		}
+		return null;
 	}
+		
 }
