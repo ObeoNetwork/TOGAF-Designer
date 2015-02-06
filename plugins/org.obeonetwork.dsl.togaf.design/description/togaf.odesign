@@ -10736,19 +10736,22 @@
         <containerMappings name="LCFCDLogicalApplicationComponent" label="LCFCDLogicalApplicationComponent" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" createElements="false" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20service'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DragFunction']">
           <borderedNodeMappings name="LCFCDService" label="LCFCDService" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" semanticCandidatesExpression="&lt;%implementsServices%>" createElements="false" domainClass="contentfwk.Service">
             <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;InformationSystemService&quot;%>">
-              <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" sizeComputationExpression="1" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;BusinessService&quot;%>">
-              <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
           </borderedNodeMappings>
           <subNodeMappings name="LCFCDFunction" label="LCFCDFunction" deletionDescription="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DisablingDeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" createElements="false" domainClass="contentfwk.Function">
             <borderedNodeMappings name="LCFCDBusinessServiceFunction" semanticCandidatesExpression="&lt;%isBoundedByServices%>" createElements="false" domainClass="BusinessService">
-              <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </borderedNodeMappings>
