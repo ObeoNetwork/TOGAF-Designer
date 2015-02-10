@@ -177,16 +177,16 @@ public class BusinessArchitectureServices {
 		return secondLevelfunctions;
 	}
 
-	public boolean isSecondLevel(Function context){
+	public boolean isSecondLevel(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() == null;
 	}
-	
-	public boolean isThirdAndOtherLevelFunction(Function context){
+
+	public boolean isThirdAndOtherLevelFunction(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() != null;
 	}
-	
+
 	/**
 	 * Service to display third and other level function.
 	 * 
@@ -209,19 +209,38 @@ public class BusinessArchitectureServices {
 	public int numberMaxOfLAC(EObject context) {
 		return NUMBER_OF_LAC;
 	}
-	
+
 	/**
 	 * Return function depending on context
-	 * @param context the context
+	 * 
+	 * @param context
+	 *            the context
 	 * @return list of functions
 	 */
-	public List<Function> chooseFunctionToDisplay(EObject context){
-		if (context instanceof BusinessArchitecture){
-			return firstLevelfunction((BusinessArchitecture)context);
-		}else if (context instanceof Function){
-			return ((Function)context).getIsDecomposedByFunctions();
+	public List<Function> chooseFunctionToDisplay(EObject context) {
+		if (context instanceof BusinessArchitecture) {
+			return firstLevelfunction((BusinessArchitecture) context);
+		} else if (context instanceof Function) {
+			return ((Function) context).getIsDecomposedByFunctions();
 		}
 		return null;
 	}
-		
+
+	/**
+	 * Return all functions (and all descendants) from context.
+	 * 
+	 * @param context
+	 *            context
+	 * @return collection of functions
+	 */
+	public Collection<Function> getAllFunctions(EObject context) {
+		Set<Function> functions = new HashSet<Function>();
+		if (context instanceof BusinessArchitecture) {
+			functions.addAll(((BusinessArchitecture) context).getFunctions());
+		} else if (context instanceof Function) {
+			functions.addAll(getDescendantFunctions((Function) context));
+		}
+		return functions;
+	}
+
 }
