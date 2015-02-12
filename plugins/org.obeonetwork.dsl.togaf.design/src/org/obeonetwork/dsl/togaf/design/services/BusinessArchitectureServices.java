@@ -43,6 +43,15 @@ public class BusinessArchitectureServices {
 		return firstLevelfunctions;
 	}
 
+	/**
+	 * Check if service have many Logical Application Component and if the
+	 * number of Logical Application Component exceed number max of Logical
+	 * Application Component authorized.
+	 * 
+	 * @param context
+	 *            the Service
+	 * @return true if number of LAC exceed max value authorized
+	 */
 	public boolean haveDescendantServiceWithManyLogicalApplicationComponent(
 			Service context) {
 		boolean haveServiceWithManyLogicalApplicationComponent = false;
@@ -177,11 +186,26 @@ public class BusinessArchitectureServices {
 		return secondLevelfunctions;
 	}
 
+	/**
+	 * Check if the function is a direct sub function.
+	 * 
+	 * @param context
+	 *            the Function
+	 * @return true if the function is a direct sub function false otherwise
+	 */
 	public boolean isSecondLevel(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() == null;
 	}
 
+	/**
+	 * Check if the function is a subFunction (third level or other).
+	 * 
+	 * @param context
+	 *            the Function
+	 * @return true if the function is sub function (third level or other),
+	 *         false otherwise
+	 */
 	public boolean isThirdAndOtherLevelFunction(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() != null;
@@ -206,6 +230,13 @@ public class BusinessArchitectureServices {
 		return thirdLevelfunctions;
 	}
 
+	/**
+	 * Number max of Logical Application Component authorized.
+	 * 
+	 * @param context
+	 *            the context
+	 * @return the number max of Logical Application Component authorized
+	 */
 	public int numberMaxOfLAC(EObject context) {
 		return NUMBER_OF_LAC;
 	}
