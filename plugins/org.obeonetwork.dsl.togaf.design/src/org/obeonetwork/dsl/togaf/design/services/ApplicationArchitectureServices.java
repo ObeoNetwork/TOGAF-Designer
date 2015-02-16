@@ -21,6 +21,17 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
  */
 public class ApplicationArchitectureServices {
 
+	/**
+	 * Return the functions linked to a logical Application Component. A
+	 * function linked to a Logical Application Component is a function that was
+	 * linked to the LAC by the service. The LAC implements services, the
+	 * services provides governed interface to access functions. This is theses
+	 * functions that was linked to Logical Application component.
+	 * 
+	 * @param context
+	 *            the Logical Application Component
+	 * @return list of functions linked to Logical Application Component
+	 */
 	public List<Function> getFunctionsLinkedToLogicalApplication(
 			LogicalApplicationComponent context) {
 		Set<Function> functions = new HashSet<Function>();
@@ -36,7 +47,7 @@ public class ApplicationArchitectureServices {
 	}
 
 	/**
-	 * Check is function is bounded by services type of BusinessService.
+	 * Check if function is bounded by services type of BusinessService.
 	 * 
 	 * @param context
 	 *            a function

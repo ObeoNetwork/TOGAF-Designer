@@ -43,6 +43,15 @@ public class BusinessArchitectureServices {
 		return firstLevelfunctions;
 	}
 
+	/**
+	 * Check if service have many Logical Application Component and if the
+	 * number of Logical Application Component exceed number max of Logical
+	 * Application Component authorized.
+	 * 
+	 * @param context
+	 *            the Service
+	 * @return true if number of LAC exceed max value authorized
+	 */
 	public boolean haveDescendantServiceWithManyLogicalApplicationComponent(
 			Service context) {
 		boolean haveServiceWithManyLogicalApplicationComponent = false;
@@ -177,16 +186,31 @@ public class BusinessArchitectureServices {
 		return secondLevelfunctions;
 	}
 
-	public boolean isSecondLevel(Function context){
+	/**
+	 * Check if the function is a direct sub function.
+	 * 
+	 * @param context
+	 *            the Function
+	 * @return true if the function is a direct sub function false otherwise
+	 */
+	public boolean isSecondLevel(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() == null;
 	}
-	
-	public boolean isThirdAndOtherLevelFunction(Function context){
+
+	/**
+	 * Check if the function is a subFunction (third level or other).
+	 * 
+	 * @param context
+	 *            the Function
+	 * @return true if the function is sub function (third level or other),
+	 *         false otherwise
+	 */
+	public boolean isThirdAndOtherLevelFunction(Function context) {
 		return context.getDecomposesFunction() != null
 				&& context.getDecomposesFunction().getDecomposesFunction() != null;
 	}
-	
+
 	/**
 	 * Service to display third and other level function.
 	 * 
@@ -206,22 +230,48 @@ public class BusinessArchitectureServices {
 		return thirdLevelfunctions;
 	}
 
+	/**
+	 * Number max of Logical Application Component authorized.
+	 * 
+	 * @param context
+	 *            the context
+	 * @return the number max of Logical Application Component authorized
+	 */
 	public int numberMaxOfLAC(EObject context) {
 		return NUMBER_OF_LAC;
 	}
-	
+
 	/**
 	 * Return function depending on context
-	 * @param context the context
+	 * 
+	 * @param context
+	 *            the context
 	 * @return list of functions
 	 */
-	public List<Function> chooseFunctionToDisplay(EObject context){
-		if (context instanceof BusinessArchitecture){
-			return firstLevelfunction((BusinessArchitecture)context);
-		}else if (context instanceof Function){
-			return ((Function)context).getIsDecomposedByFunctions();
+	public List<Function> chooseFunctionToDisplay(EObject context) {
+		if (context instanceof BusinessArchitecture) {
+			return firstLevelfunction((BusinessArchitecture) context);
+		} else if (context instanceof Function) {
+			return ((Function) context).getIsDecomposedByFunctions();
 		}
 		return null;
 	}
-		
+
+	/**
+	 * Return all functions (and all descendants) from context.
+	 * 
+	 * @param context
+	 *            context
+	 * @return collection of functions
+	 */
+	public Collection<Function> getAllFunctions(EObject context) {
+		Set<Function> functions = new HashSet<Function>();
+		if (context instanceof BusinessArchitecture) {
+			functions.addAll(((BusinessArchitecture) context).getFunctions());
+		} else if (context instanceof Function) {
+			functions.addAll(getDescendantFunctions((Function) context));
+		}
+		return functions;
+	}
+
 }
