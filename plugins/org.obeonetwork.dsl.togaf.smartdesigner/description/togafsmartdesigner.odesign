@@ -3,7 +3,7 @@
   <ownedViewpoints name="Smart Designer">
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" name="Smart Designer" domainClass="smartdesigner.Diagram">
       <defaultLayer name="Default" icon="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/smartEA.gif">
-        <edgeMappings name="ConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+        <edgeMappings name="ConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" targetFinderExpression="&lt;%self.getRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
           <style sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getLabel($view.targetNode().target)%>">
@@ -57,7 +57,7 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <edgeMappings name="ExtendedConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" targetFinderExpression="&lt;%self.getExtendedRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
+        <edgeMappings name="ExtendedConnectedEdge" semanticCandidatesExpression="&lt;%elements%>" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" targetMapping="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" targetFinderExpression="&lt;%self.getExtendedRelatedElements()%>" sourceFinderExpression="&lt;%self%>" targetExpression="&lt;%self%>" domainClass="smartdesigner.GraphicalElement" useDomainElement="true">
           <style lineStyle="dash" sizeComputationExpression="1" routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <endLabelStyleDescription labelSize="7" showIcon="false" labelExpression="&lt;%$view.sourceNode().target.getExtendedLabel($view.targetNode().target)%>">
@@ -111,225 +111,7 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
-        <containerMappings name="GraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteGraphicalElement']" labelDirectEdit="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdit']" semanticCandidatesExpression="&lt;%elements%>" semanticElements="&lt;%semanticElement+self%>" synchronizationLock="true" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']">
-          <subContainerMappings name="SubGraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteGraphicalElement']" labelDirectEdit="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdit']" semanticCandidatesExpression="&lt;%child%>" semanticElements="&lt;%semanticElement+self%>" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" reusedContainerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']">
-            <style xsi:type="style:FlatContainerStyleDescription" labelSize="7" labelExpression="Graphical Element">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-            </style>
-            <conditionnalStyles predicateExpression="&lt;%hidden%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']" labelSize="7" showIcon="false" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Hidden']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;BusinessService&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalApplicationComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;DataEntity&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='DataEntity']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Process&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProcessBroder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Process']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Principle&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PrincipleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Principle']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Constraint&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ConstraintBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Constraint']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Assumption&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='AssumptionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Assumption']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Gap&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GapBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Gap']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;WorkPackage&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackageBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='WorkPackage']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Capability&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='CapabilityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Capability']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Actor&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ActorBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Actor']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Role&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='RoleBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Role']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Function&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Objective&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ObjectiveBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Objective']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalDataComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalDataComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalDataComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalDataComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalDataComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Location&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LocationBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Location']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Driver&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='DriverBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Driver']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Goal&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='GoalBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Goal']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;OrganizationUnit&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Control&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ControlBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Control.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Control']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Event&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='EventBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Event']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Product&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ProductBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Product.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Product']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Contract&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ContractBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Contract.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Contract']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Measure&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='MeasureBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Measure']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;ServiceQuality&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQualityBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ServiceQuality.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='ServiceQuality']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;InformationSystemService&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalApplicationComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PhysicalTechnologyComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;LogicalTechnologyComponent&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;PlatformService&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Tag&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessService']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;TagsRoot&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponentBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalTechnologyComponent']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%semanticElement.filter(&quot;Requirement&quot;)!=null%>">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformServiceBorder']" labelSize="7" labelExpression="&lt;%semanticElement.name%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PlatformService']">
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-          </subContainerMappings>
+        <containerMappings name="GraphicalElement" deletionDescription="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteGraphicalElement']" labelDirectEdit="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEdit']" semanticCandidatesExpression="&lt;%child%>" semanticElements="&lt;%semanticElement+self%>" synchronizationLock="true" domainClass="smartdesigner.GraphicalElement" dropDescriptions="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropGraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@toolSections.0/@ownedTools[name='DropDiagram']" reusedContainerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']">
           <style xsi:type="style:FlatContainerStyleDescription" labelSize="7" labelExpression="Graphical Element">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -568,7 +350,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ConnectedObjects" label="Connected objects" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)%>" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/relation.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ConnectedObjects" label="Connected objects" precondition="&lt;%$container.filter(&quot;GraphicalElement&quot;)%>" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/relation.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -581,7 +363,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Select viewpoint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Select viewpoint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/viewpoint.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -590,7 +372,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ShadeGraphicalElements" label="Shade elements" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/hideGraphicalElement.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ShadeGraphicalElements" label="Shade elements" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/hideGraphicalElement.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -600,7 +382,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropGraphicalElement" mappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DropGraphicalElement" mappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
@@ -701,7 +483,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." name="Principle" label="Principle" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." name="Principle" label="Principle" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -733,7 +515,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." name="Capability" label="Capability" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." name="Capability" label="Capability" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -765,7 +547,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." name="Constraint" label="Constraint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." name="Constraint" label="Constraint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -797,7 +579,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." name="Assumption" label="Assumption" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." name="Assumption" label="Assumption" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -829,7 +611,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." name="Gap" label="Gap" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." name="Gap" label="Gap" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -861,7 +643,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." name="WorkPackage" label="WorkPackage" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." name="WorkPackage" label="WorkPackage" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -920,7 +702,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -952,7 +734,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A process represents flow of control between or within functions and/or services (depends on the granularity of definition).&#xD;&#xA;&#xD;&#xA;Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes." name="Process" label="Process" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A process represents flow of control between or within functions and/or services (depends on the granularity of definition).&#xD;&#xA;&#xD;&#xA;Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into sub-processes, and can show operation of a function or service (at next level of detail). Processes may also be used to link or compose organizations, functions, services, and processes." name="Process" label="Process" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -984,7 +766,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US." name="Driver" label="Driver" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external or internal condition that motivates the organization to define its goals. An example of an external driver is a change in regulation or compliance rules which, for example, require changes to the way an organization operates; i.e., Sarbanes-Oxley in the US." name="Driver" label="Driver" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1016,7 +798,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." name="Goal" label="Goal" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." name="Goal" label="Goal" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1048,7 +830,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, &quot;Increase capacity utilization by 30% by the end of 2009 to support the planned increase in market share&quot;." name="Objective" label="Objective" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A time-bounded milestone for an organization used to demonstrate progress towards a goal; for example, &quot;Increase capacity utilization by 30% by the end of 2009 to support the planned increase in market share&quot;." name="Objective" label="Objective" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1080,7 +862,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.&#xD;&#xA;" name="OrganizationUnit" label="Organization unit" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.&#xD;&#xA;" name="OrganizationUnit" label="Organization unit" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1112,7 +894,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." name="Actor" label="Actor" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." name="Actor" label="Actor" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1144,7 +926,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." name="Role" label="Role" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." name="Role" label="Role" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1176,7 +958,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as &quot;business function&quot;." name="Function" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as &quot;business function&quot;." name="Function" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1208,7 +990,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria. For example, a sign-off control on the purchase request processing process that checks whether the total value of the request is within the sign-off limits of the requester, or whether it needs escalating to higher authority." name="Control" label="Control" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Control.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria. For example, a sign-off control on the purchase request processing process that checks whether the total value of the request is within the sign-off limits of the requester, or whether it needs escalating to higher authority." name="Control" label="Control" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Control.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1240,7 +1022,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization." name="Event" label="Event" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization." name="Event" label="Event" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Event.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1272,7 +1054,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A place where business activity takes place and can be hierarchically decomposed." name="Location" label="Location" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A place where business activity takes place and can be hierarchically decomposed." name="Location" label="Location" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1304,7 +1086,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Output generated by the business. The business product of the execution of a process." name="Product" label="Product" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Product.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Output generated by the business. The business product of the execution of a process." name="Product" label="Product" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Product.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1336,7 +1118,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction." name="Contract" label="Contract" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Contract.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An agreement between a service consumer and a service provider that establishes functional and non-functional parameters for interaction." name="Contract" label="Contract" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Contract.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1368,7 +1150,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals." name="Measure" label="Measure" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An indicator or factor that can be tracked, usually on an ongoing basis, to determine success or alignment with objectives and goals." name="Measure" label="Measure" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1400,7 +1182,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A preset configuration of non-functional attributes that may be assigned to a service or service contract." name="ServiceQuality" label="Service quality" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ServiceQuality.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A preset configuration of non-functional attributes that may be assigned to a service or service contract." name="ServiceQuality" label="Service quality" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ServiceQuality.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1459,7 +1241,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="The automated elements of a business service. An information system service may deliver or support part or all of one or more business services." name="InformationSystemService" label="Information system service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="The automated elements of a business service. An information system service may deliver or support part or all of one or more business services." name="InformationSystemService" label="Information system service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1491,7 +1273,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1523,7 +1305,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application." name="PhysicalApplicationComponent" label="Physical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An application, application module, application service, or other deployable component of functionality. For example, a configured and deployed instance of a Commercial Off-The-Shelf (COTS) Enterprise Resource Planning (ERP) supply chain management application." name="PhysicalApplicationComponent" label="Physical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1582,7 +1364,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1614,7 +1396,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information." name="LogicalDataComponent" label="Logical data component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalDataComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A boundary zone that encapsulates related data entities to form a logical location to be held; for example, external procurement information." name="LogicalDataComponent" label="Logical data component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalDataComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1646,7 +1428,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes." name="PhysicalDataComponent" label="Physical data component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalDataComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A boundary zone that encapsulates related data entities to form a physical location to be held. For example, a purchase order business object, comprising purchase order header and item business object nodes." name="PhysicalDataComponent" label="Physical data component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalDataComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1705,7 +1487,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1737,7 +1519,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1769,7 +1551,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1828,7 +1610,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponentApplicationsCommunicationDiagram" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponentApplicationsCommunicationDiagram" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1887,7 +1669,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." name="Actor" label="Actor" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A person, organization, or system that has a role that initiates or interacts with activities; for example, a sales representative who travels to visit customers. Actors may be internal or external to an organization. In the automotive industry, an original equipment manufacturer would be considered an actor by an automotive dealership that interacts with its supply chain activities." name="Actor" label="Actor" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1919,7 +1701,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A place where business activity takes place and can be hierarchically decomposed." name="Location" label="Location" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A place where business activity takes place and can be hierarchically decomposed." name="Location" label="Location" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -1951,7 +1733,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2010,7 +1792,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2042,7 +1824,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2101,7 +1883,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." name="Capability" label="Capability" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A business-focused outcome that is delivered by the completion of one or more work packages. Using a capability-based planning approach, change activities can be sequenced and grouped in order to provide continuous and incremental business value." name="Capability" label="Capability" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Capability.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2160,7 +1942,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." name="Principle" label="Principle" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." name="Principle" label="Principle" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2219,7 +2001,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." name="Constraint" label="Constraint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An external factor that prevents an organization from pursuing particular approaches to meet its goals. For example, customer data is not harmonized within the organization, regionally or nationally, constraining the organization's ability to offer effective customer service." name="Constraint" label="Constraint" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Constraint.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2253,7 +2035,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." name="Assumption" label="Assumption" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of probable fact that has not been fully validated at this stage, due to external constraints. For example, it may be assumed that an existing application will support a certain set of functional requirements, although those requirements may not yet have been individually validated." name="Assumption" label="Assumption" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Assumption.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2285,7 +2067,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." name="Gap" label="Gap" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A statement of difference between two states. Used in the context of gap analysis, where the difference between the Baseline and Target Architecture is identified." name="Gap" label="Gap" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Gap.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2317,7 +2099,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." name="WorkPackage" label="WorkPackage" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of a project, a complete project, or a program." name="WorkPackage" label="WorkPackage" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/WorkPackage.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2376,7 +2158,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." name="Goal" label="Goal" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A high-level statement of intent or direction for an organization. Typically used to measure success of an organization." name="Goal" label="Goal" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2408,7 +2190,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.&#xD;&#xA;" name="OrganizationUnit" label="Organization unit" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A self-contained unit of resources with goals, objectives, and measures. Organization units may include external parties and business partner organizations.&#xD;&#xA;" name="OrganizationUnit" label="Organization unit" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/OrganizationUnit.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2440,7 +2222,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as &quot;business function&quot;." name="Function" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Delivers business capabilities closely aligned to an organization, but not necessarily explicitly governed by the organization. Also referred to as &quot;business function&quot;." name="Function" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2472,7 +2254,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2504,7 +2286,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2536,7 +2318,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2568,7 +2350,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2627,7 +2409,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2686,7 +2468,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="Supports business capabilities through an explicitly defined interface and is explicitly governed by an organization." name="BusinessService" label="Business service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2718,7 +2500,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." name="DataEntity" label="Data entity" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2750,7 +2532,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of application functionality that is independent of a particular implementation. For example, the classification of all purchase request processing applications implemented in an enterprise." name="LogicalApplicationComponent" label="Logical application component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2809,7 +2591,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A technical capability required to provide enabling infrastructure that supports the delivery of applications." name="PlatformService" label="Platform service" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PlatformService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2841,7 +2623,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="An encapsulation of technology infrastructure that is independent of a particular product. A class of technology product; for example, supply chain management software as part of an Enterprise Resource Planning (ERP) suite, or a Commercial Off-The-Shelf (COTS) purchase request processing enterprise service." name="LogicalTechnologyComponent" label="Logical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -2873,7 +2655,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement'] //@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']/@subContainerMappings[name='SubGraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" documentation="A specific technology infrastructure product or technology infrastructure product instance. For example, a particular product version of a Commercial Off-The-Shelf (COTS) solution, or a specific brand and version of server." name="PhysicalTechnologyComponent" label="Physical technology component" containerMappings="//@ownedViewpoints[name='Smart%20Designer']/@ownedRepresentations[name='Smart%20Designer']/@defaultLayer/@containerMappings[name='GraphicalElement']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
