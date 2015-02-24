@@ -187,6 +187,17 @@ public class BusinessArchitectureServices {
 	}
 
 	/**
+	 * Check if the function is a function and not a sub function.
+	 * 
+	 * @param context
+	 *            the Function
+	 * @return true if the function is a direct function false otherwise
+	 */
+	public boolean isFirstLevel(Function context) {
+		return context.getDecomposesFunction() == null;
+	}
+	
+	/**
 	 * Check if the function is a direct sub function.
 	 * 
 	 * @param context

@@ -3181,15 +3181,9 @@
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description:DiagramDescription" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']" name="Function Diagram" domainClass="BusinessArchitecture">
-      <filters xsi:type="filter:CompositeFilterDescription" name="Hide direct Sub Functions">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
-      </filters>
-      <filters xsi:type="filter:CompositeFilterDescription" name="Hide all Sub Functions">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
-      </filters>
-      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%isDecomposedByFunctions%>" nodeMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']"/>
+      <layout xsi:type="description:OrderedTreeLayout" childrenExpression="&lt;%isDecomposedByFunctions%>" nodeMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']"/>
       <defaultLayer name="Default">
-        <edgeMappings name="isDecomposedByFunctions" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" targetFinderExpression="&lt;%decomposesFunction%>">
+        <edgeMappings name="isDecomposedByFunctions" deletionDescription="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DeleteDecomposesFunction']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" targetMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" targetFinderExpression="&lt;%decomposesFunction%>" reconnections="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='IsDecomposedByFunction']">
           <style sourceArrow="InputArrow" targetArrow="NoDecoration" sizeComputationExpression="2" routingStyle="tree" foldingStyle="TARGET">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -3197,19 +3191,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <containerMappings name="FunctionOnly" semanticCandidatesExpression="&lt;%firstLevelfunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </style>
-        </containerMappings>
-        <containerMappings name="FunctionSndLevel" semanticCandidatesExpression="&lt;%secondLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
-          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </style>
-        </containerMappings>
-        <containerMappings name="AllFunctions" semanticCandidatesExpression="&lt;%thirdAndOtherLevelFunction()%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
+        <containerMappings name="Functions" semanticCandidatesExpression="&lt;%functions%>" createElements="false" domainClass="Function" dropDescriptions="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='createFunction']">
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -3222,36 +3204,18 @@
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:Switch">
-                  <cases conditionExpression="&lt;%$container.eClass.name == &quot;BusinessArchitecture&quot;%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$containerView%>"/>
-                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$i.isSecondLevel()%>">
-                      <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView%>"/>
-                    </subModelOperations>
-                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;% $i.isThirdAndOtherLevelFunction()%>">
-                      <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView%>"/>
-                    </subModelOperations>
-                  </cases>
-                  <cases conditionExpression="&lt;%$i.isSecondLevel()%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
-                  </cases>
-                  <cases conditionExpression="&lt;%$i.isThirdAndOtherLevelFunction()%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
-                  </cases>
-                </subModelOperations>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$containerView%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="createFunction" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" dragSource="PROJECT_EXPLORER">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="createFunction" mappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" dragSource="PROJECT_EXPLORER">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$newContainerView%>"/>
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$newContainerView%>"/>
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$newContainerView%>"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$newContainerView%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -3260,15 +3224,44 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%eAllContents(&quot;Function&quot;)%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$elementView%>"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ReconnectEdgeDescription" name="IsDecomposedByFunction" label="reconnect Is Decomposed By Function" reconnectionKind="RECONNECT_SOURCE">
+            <source name="source"/>
+            <target name="target"/>
+            <sourceView name="sourceView"/>
+            <targetView name="targetView"/>
+            <element name="element"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$elementView%>"/>
+                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                  <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunction" elementExpression="&lt;%$edgeView.targetNode.getTarget()%>"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$elementView%>"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+            <edgeView name="edgeView"/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteDecomposesFunction">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$elementView.sourceNode.getTarget%>">
+                <subModelOperations xsi:type="tool:Unset" featureName="decomposesFunction"/>
                 <subModelOperations xsi:type="tool:Switch">
-                  <cases conditionExpression="&lt;%$i.decomposesFunction == null%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly']" containerViewExpression="&lt;%$elementView%>"/>
+                  <cases conditionExpression="&lt;%$elementView.sourceNode.getTarget.isFirstLevel().trace()%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$containerView%>"/>
                   </cases>
-                  <cases conditionExpression="&lt;%$i.isSecondLevel()%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$elementView%>"/>
+                  <cases conditionExpression="&lt;%$elementView.sourceNode.getTarget.isSecondLevel()%>">
+                    <subModelOperations xsi:type="tool:CreateView" containerViewExpression="&lt;%$containerView%>"/>
                   </cases>
-                  <cases conditionExpression="&lt;%$i.isThirdAndOtherLevelFunction()%>">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$elementView%>"/>
+                  <cases conditionExpression="&lt;%$elementView.sourceNode.getTarget.isThirdAndOtherLevelFunction()%>">
+                    <subModelOperations xsi:type="tool:CreateView" containerViewExpression="&lt;%$containerView%>"/>
                   </cases>
                 </subModelOperations>
               </firstModelOperations>
@@ -3276,7 +3269,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Create New Function">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New Function" label="Create Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" extraMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionOnly'] //@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="New Function" label="Create Function" containerMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" extraMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -3292,18 +3285,26 @@
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function&lt;%eContainer(&quot;BusinessArchitecture&quot;).functions.nSize()%>"/>
                       <subModelOperations xsi:type="tool:SetValue" featureName="decomposesFunction" valueExpression="&lt;%$containerView.target%>"/>
                       <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                        <subModelOperations xsi:type="tool:Switch">
-                          <cases conditionExpression="&lt;%isSecondLevel()%>">
-                            <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='FunctionSndLevel']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
-                          </cases>
-                          <cases conditionExpression="&lt;%isThirdAndOtherLevelFunction()%>">
-                            <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='AllFunctions']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
-                          </cases>
-                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$containerView.eContainer()%>"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </cases>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Is Decomposed By Function" edgeMappings="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@edgeMappings[name='isDecomposedByFunctions']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$source%>">
+                <subModelOperations xsi:type="tool:SetValue" featureName="isDecomposedByFunctions" valueExpression="&lt;%$target%>">
+                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$target%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='Function%20Diagram']/@defaultLayer/@containerMappings[name='Functions']" containerViewExpression="&lt;%$targetView.eContainer()%>"/>
+                  </subModelOperations>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -10701,6 +10702,9 @@
       <filters xsi:type="filter:CompositeFilterDescription" name="HideConsumesServices" label="Hide Consumes Services">
         <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@edgeMappings[name='LCFCDConsumesServices']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
       </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="HideIsDelegatedBy" label="Hide Is Delegated By">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@edgeMappings[name='LCFCDISDelegatedBy']" semanticConditionExpression="&lt;%false%>" viewConditionExpression="&lt;%false%>"/>
+      </filters>
       <defaultLayer name="Default">
         <edgeMappings name="LCFCDCommunicatesWith" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']" targetFinderExpression="&lt;%communicatesWith%>">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" sizeComputationExpression="1">
@@ -10709,14 +10713,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="LCFCDCommunicatesWithFunction" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" targetFinderExpression="&lt;%communicatesWithFunctions%>">
+        <edgeMappings name="LCFCDCommunicatesWithFunction" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" targetFinderExpression="&lt;%communicatesWithFunctions%>">
           <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" sizeComputationExpression="1">
             <centerLabelStyleDescription>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="LCFCDConsumesServices" label="LCFCDConsumesServices" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" targetFinderExpression="&lt;%consumesServices%>">
+        <edgeMappings name="LCFCDConsumesServices" label="LCFCDConsumesServices" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDInformationSystemService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDInformationSystemService'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" targetFinderExpression="&lt;%consumesServices%>">
           <conditionnalStyles predicateExpression="&lt;%$view.targetNode.target.eClass.name == &quot;BusinessService&quot;%>">
             <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='BusinessServiceBorder']" sizeComputationExpression="1">
               <centerLabelStyleDescription>
@@ -10732,32 +10736,32 @@
             </style>
           </conditionnalStyles>
         </edgeMappings>
+        <edgeMappings name="LCFCDISDelegatedBy" preconditionExpression="&lt;% haveSameContainerParent($sourceView, $targetView)%>" sourceMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDInformationSystemService']" targetMapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" targetFinderExpression="&lt;%isDelegatedBy%>">
+          <style strokeColor="//@userColorsPalettes[name='UserColors']/@entries[name='InformationSystemService']" sizeComputationExpression="1">
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="LCFCDLogicalApplicationComponent" label="LCFCDLogicalApplicationComponent" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%logicalApplicationComponents%>" createElements="false" domainClass="contentfwk.LogicalApplicationComponent" dropDescriptions="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='drop%20service'] //@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DragFunction']">
-          <borderedNodeMappings name="LCFCDService" label="LCFCDService" semanticCandidatesExpression="&lt;%implementsServices%>" createElements="false" domainClass="contentfwk.Service">
-            <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;InformationSystemService&quot;%>">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="&lt;%self.eClass.name==&quot;BusinessService&quot;%>">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              </style>
-            </conditionnalStyles>
+          <borderedNodeMappings name="LCFCDInformationSystemService" label="LCFCDInformationSystemService" semanticCandidatesExpression="&lt;%implementsServices%>" createElements="false" domainClass="contentfwk.InformationSystemService">
+            <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
           </borderedNodeMappings>
-          <subNodeMappings name="LCFCDFunction" label="LCFCDFunction" labelDirectEdit="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Application%20Communication%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='edit']" semanticCandidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" createElements="false" domainClass="contentfwk.Function">
-            <borderedNodeMappings name="LCFCDBusinessServiceFunction" semanticCandidatesExpression="&lt;%isBoundedByServices%>" createElements="false" domainClass="BusinessService">
+          <subContainerMappings name="LCFCDFunction" semanticCandidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication()%>" createElements="false" domainClass="contentfwk.Function" reusedContainerMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']">
+            <borderedNodeMappings name="LCFCDBusinessService" semanticCandidatesExpression="&lt;%isBoundedByServices%>" createElements="false" domainClass="BusinessService">
               <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </borderedNodeMappings>
-            <style xsi:type="style:BundledImageDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" labelPosition="node" resizeKind="NSEW" color="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
+            <style xsi:type="style:FlatContainerStyleDescription" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='FunctionBorder']" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='Function']">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
-          </subNodeMappings>
+          </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderSizeComputationExpression="1" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -10774,17 +10778,17 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Function" label="Select Functions" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNode&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Function" label="Select Functions" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>">
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.ownedBorderedNodes.target.filter(&quot;BusinessService&quot;)>0 || $containerView.ownedDiagramElements.ownedBorderedNodes.target>0%>">
                     <subModelOperations xsi:type="tool:For" expression="&lt;%$containerView.ownedBorderedNodes.target.filter(&quot;BusinessService&quot;)+$containerView..ownedDiagramElements.ownedBorderedNodes.target%>" iteratorName="j">
                       <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$j.providesGovernedInterfaceToAccessFunctions.nContains($i)%>">
-                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessServiceFunction']" containerViewExpression="&lt;%$createdView%>" variableName="createdViewBS"/>
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" containerViewExpression="&lt;%$createdView%>" variableName="createdViewBS"/>
                         <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.ownedBorderedNodes[target==$j]!=null%>">
                           <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.ownedBorderedNodes[target==$j]%>">
                             <subModelOperations xsi:type="tool:DeleteView"/>
@@ -10797,38 +10801,33 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function With Dependencies Communicates With" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNode&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function With Dependencies Communicates With" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>">
+                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>">
                   <subModelOperations xsi:type="tool:For" expression="&lt;%$i.communicatesWithFunctions%>" iteratorName="j">
-                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$j.isBoundedByServices.isRealizedThroughLogicalApplicationComponent.~target.filter(&quot;DNodeContainer&quot;)%>"/>
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$j.isBoundedByServices.isRealizedThroughLogicalApplicationComponent.~target.filter(&quot;DNodeContainer&quot;)%>"/>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Service" label="Select Services" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%implementsServices - $containerView.eContents().filter(&quot;DNode&quot;).target.filter(&quot;Service&quot;)%>" multiple="true">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Service" label="Select Services" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getServicetoSelectionPopup($containerView)%>" multiple="true">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>" iteratorName="service">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" containerViewExpression="&lt;%$containerView%>"/>
-                <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.ownedDiagramElements.target.filter(&quot;Function&quot;)>0%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%$containerView.ownedDiagramElements.target.filter(&quot;Function&quot;)%>" iteratorName="function">
-                    <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$function.isBoundedByServices.nContains($service) &amp;&amp; $service.eClass.name == &quot;BusinessService&quot;%>">
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$service%>">
-                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessServiceFunction']" containerViewExpression="&lt;%$containerView.ownedDiagramElements[target==$function]%>" variableName="createdViewBS"/>
-                      </subModelOperations>
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$createdView%>">
-                        <subModelOperations xsi:type="tool:DeleteView"/>
-                      </subModelOperations>
-                    </subModelOperations>
-                  </subModelOperations>
+                <subModelOperations xsi:type="tool:Switch">
+                  <cases conditionExpression="&lt;%$service.eClass.name==&quot;BusinessService&quot;%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" containerViewExpression="&lt;%$containerView%>" variableName="createdBusinessService"/>
+                  </cases>
+                  <cases conditionExpression="&lt;%$service.eClass.name==&quot;InformationSystemService&quot;%>">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDInformationSystemService']" containerViewExpression="&lt;%$containerView%>" variableName="createdInformationSystemService"/>
+                  </cases>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -10844,14 +10843,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerDropDescription" name="DragFunction" mappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" dragSource="PROJECT_EXPLORER">
+          <ownedTools xsi:type="tool:ContainerDropDescription" name="DragFunction" dragSource="PROJECT_EXPLORER">
             <oldContainer name="oldSemanticContainer"/>
             <newContainer name="newSemanticContainer"/>
             <element name="element"/>
             <newViewContainer name="newContainerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$newContainerView%>"/>
+                <subModelOperations xsi:type="tool:CreateView" containerViewExpression="&lt;%$newContainerView%>"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -10868,7 +10867,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" precondition="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>" candidatesExpression="&lt;%$containerView.target.implementsServices%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" candidatesExpression="&lt;%getBusinessServiceToJoinFunctionToLogicalApplicationComponent($containerView)%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -10877,40 +10876,47 @@
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="Function" referenceName="functions">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="Function_&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).eContents().filter(&quot;BusinessArchitecture&quot;).functions.nSize()%>"/>
                 </subModelOperations>
-                <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
-                  <subModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
-                    <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$instance%>"/>
-                  </subModelOperations>
+                <subModelOperations xsi:type="tool:Switch">
+                  <cases conditionExpression="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                      <subModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$instance%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
+                  <cases conditionExpression="&lt;%$container.eClass.name == &quot;Function&quot;%>">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container%>">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="isDecomposedByFunctions" valueExpression="&lt;%$instance%>"/>
+                      <subModelOperations xsi:type="tool:For" expression="&lt;%$element%>">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$instance%>"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </cases>
                 </subModelOperations>
                 <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$instance%>">
-                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>"/>
+                  <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']" containerViewExpression="&lt;%$containerView%>"/>
                   <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%isBoundedByBusinessServices()%>">
                     <subModelOperations xsi:type="tool:For" expression="&lt;%getBusinessServices()%>" iteratorName="j">
-                      <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subNodeMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessServiceFunction']" containerViewExpression="&lt;%$createdView%>" variableName="createdViewBS"/>
-                      <subModelOperations xsi:type="tool:If" conditionExpression="&lt;%$containerView.ownedBorderedNodes[$instance.isBoundedByServices.nContains(target)]!=null%>">
-                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$containerView.ownedBorderedNodes[$instance.isBoundedByServices.nContains(target)]%>">
-                          <subModelOperations xsi:type="tool:DeleteView"/>
-                        </subModelOperations>
-                      </subModelOperations>
+                      <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" containerViewExpression="&lt;%$createdView%>" variableName="createdViewBS"/>
                     </subModelOperations>
                   </subModelOperations>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createBusinessService" label="Create Business Service" precondition="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createBusinessService" label="Create Business Service" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@subContainerMappings[name='LCFCDFunction']/@borderedNodeMappings[name='LCFCDBusinessService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).eContents().filter(&quot;BusinessArchitecture&quot;)%>">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="BusinessService" referenceName="services">
                   <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="BusinessService_&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).eContents().filter(&quot;BusinessArchitecture&quot;).services.nSize()%>"/>
-                  <subModelOperations xsi:type="tool:SetValue" featureName="isRealizedThroughLogicalApplicationComponent" valueExpression="&lt;%$container%>"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="providesGovernedInterfaceToAccessFunctions" valueExpression="&lt;%$container%>"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createInformationSystemService" label="Create Information System Service" precondition="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createInformationSystemService" label="Create Information System Service" precondition="&lt;%$container.eClass.name == &quot;LogicalApplicationComponent&quot;%>" nodeMappings="//@ownedViewpoints[name='application']/@ownedRepresentations[name='Logical%20Component%20Functional%20Scope%20Diagram']/@defaultLayer/@containerMappings[name='LCFCDLogicalApplicationComponent']/@borderedNodeMappings[name='LCFCDInformationSystemService']" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
