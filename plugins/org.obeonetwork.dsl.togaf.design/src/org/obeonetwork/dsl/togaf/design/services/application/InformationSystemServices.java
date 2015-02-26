@@ -9,7 +9,7 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
-import org.obeonetwork.dsl.togaf.design.services.TagsService;
+import org.obeonetwork.dsl.togaf.design.services.TogafService;
 import org.obeonetwork.dsl.togaf.design.util.SemanticModelUtil;
 
 import com.google.common.base.Predicates;
