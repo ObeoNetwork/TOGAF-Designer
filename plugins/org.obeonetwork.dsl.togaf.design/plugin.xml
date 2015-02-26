@@ -11,12 +11,13 @@
      Obeo - initial API and implementation
 -->
 <plugin>
-	<extension
-			point="fr.obeo.dsl.viewpoint.componentization">
-	<component
-			class="org.obeonetwork.dsl.togaf.design.Activator" id="fr.obeo.dsl.togaf.ea.design" name="ea">
-	</component>
-  </extension>
+   <extension-point id="tags" name="org.obeonetwork.dsl.togaf.design.tags" schema="schema/tags.exsd"/>
+		<extension
+				point="fr.obeo.dsl.viewpoint.componentization">
+		<component
+				class="org.obeonetwork.dsl.togaf.design.Activator" id="fr.obeo.dsl.togaf.ea.design" name="ea">
+		</component>
+		</extension>
   <extension
         id="OpenDataCatalogs"
         name="OpenDataCatalogs"

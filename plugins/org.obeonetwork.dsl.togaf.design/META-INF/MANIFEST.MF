@@ -12,6 +12,6 @@ Require-Bundle: fr.obeo.dsl.viewpoint.diagram;bundle-version="3.1.0",
  org.eclipse.core.expressions;bundle-version="3.4.300"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.services.application
+Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.tags,org.obeonetwork.dsl.togaf.design.services.application
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2

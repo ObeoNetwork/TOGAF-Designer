@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.DataEntity;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
+import org.obeonetwork.dsl.togaf.design.tags.SemanticResourceSelectorHandler;
 
 /**
  * Utility class for the Tags metamodel.
@@ -27,7 +28,84 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationCompone
  * @author SDrapeau
  * 
  */
-public class TogafService {
+public class TagsService {
+
+	/**
+	 * Get the root element of the semantic model.
+	 * 
+	 * @param e
+	 *            not used.
+	 * @return
+	 */
+	public EObject getRootElement(EObject e) {
+		if (SemanticResourceSelectorHandler.getSemanticResourceSelector() != null) {
+			return SemanticResourceSelectorHandler
+					.getSemanticResourceSelector().getRootElement();
+		}
+		return null;
+	}
+
+	/**
+	 * Get the root element of the Tags model.
+	 * 
+	 * @param e
+	 *            not used.
+	 * @return
+	 */
+	public EObject getTagsRoot(EObject e) {
+		if (SemanticResourceSelectorHandler.getSemanticResourceSelector() != null) {
+			return SemanticResourceSelectorHandler
+					.getSemanticResourceSelector().getTagsRoot();
+		}
+		return null;
+	}
+
+	// For testing purpose
+	// /**
+	// * Get the root element of the semantic model.
+	// *
+	// * @param e
+	// * not used.
+	// * @return
+	// */
+	// public EObject getRootElement(EObject e) {
+	// if (SemanticResourceSelectorHandler.getSemanticResourceSelector() !=
+	// null) {
+	// return SemanticResourceSelectorHandler
+	// .getSemanticResourceSelector().getRootElement();
+	// } else {
+	// ResourceSet rs = e.eResource().getResourceSet();
+	// for (Resource resource : rs.getResources()) {
+	// if (resource.getURI().toString().lastIndexOf("data.togaf") != -1) {
+	// return resource.getContents().get(0);
+	// }
+	// }
+	// }
+	// return null;
+	// }
+	//
+	// /**
+	// * Get the root element of the Tags model.
+	// *
+	// * @param e
+	// * not used.
+	// * @return
+	// */
+	// public EObject getTagsRoot(EObject e) {
+	// if (SemanticResourceSelectorHandler.getSemanticResourceSelector() !=
+	// null) {
+	// return SemanticResourceSelectorHandler
+	// .getSemanticResourceSelector().getTagsRoot();
+	// } else {
+	// ResourceSet rs = e.eResource().getResourceSet();
+	// for (Resource resource : rs.getResources()) {
+	// if (resource.getURI().toString().lastIndexOf("data.tags") >= 0) {
+	// return resource.getContents().get(0);
+	// }
+	// }
+	// }
+	// return null;
+	// }
 
 	/**
 	 * Gets {@link LogicalApplicationComponent} from the given {@link List} of

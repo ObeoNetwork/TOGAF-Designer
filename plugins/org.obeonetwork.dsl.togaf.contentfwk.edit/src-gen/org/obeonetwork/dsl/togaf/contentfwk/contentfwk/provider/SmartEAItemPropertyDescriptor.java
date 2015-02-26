@@ -137,11 +137,6 @@ public class SmartEAItemPropertyDescriptor extends ItemPropertyDescriptor {
 						eClass.getEPackage()
 								.getNsURI()
 								.startsWith(
-										"http://www.obeo.fr/smartea/core/smartdesigner")
-						|| //
-						eClass.getEPackage()
-								.getNsURI()
-								.startsWith(
 										"http://www.obeonetwork.org/dsl/requirement/")) {
 
 				} else {

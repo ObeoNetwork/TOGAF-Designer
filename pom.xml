@@ -50,8 +50,9 @@
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.edit</module>
     <module>plugins/org.obeonetwork.dsl.togaf.contentfwk.editor</module>
     <module>plugins/org.obeonetwork.dsl.togaf.design</module>
-
-    <module>plugins/org.obeonetwork.dsl.togaf.design.doc</module>
+    <module>plugins/org.obeonetwork.dsl.togaf.smartdesigner</module>
+    <module>plugins/org.obeonetwork.dsl.togaf.smartdesigner.readonly</module>
+	<module>plugins/org.obeonetwork.dsl.togaf.design.doc</module>
     
     <module>samples/org.obeonetwork.dsl.togaf.samples</module>
     <module>samples/org.obeonetwork.dsl.togaf.samples.pack.core</module>
@@ -69,6 +70,11 @@
       <!--<url>http://update.obeo.fr/bundles/ObeoSmartEA/integration/tp/1.5.4</url>-->
       <!--<url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>-->
       <url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>
+    </repository>
+     <repository>
+      <id>smart-designer</id>
+      <layout>p2</layout>
+     <url>http://update.obeo.fr/integration/smartdesigner/repository/</url>
     </repository>
     <repository>
       <id>Acceleo2</id>
