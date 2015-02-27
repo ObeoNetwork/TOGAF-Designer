@@ -28,7 +28,6 @@
       <import feature="fr.obeo.dsl.viewpoint.runtime.ocl" version="6.4.0" match="greaterOrEqual"/>
       <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui" version="6.4.0" match="greaterOrEqual"/>
       <import feature="fr.obeo.dsl.viewpoint.specifier.ide.ui.acceleo" version="6.4.0" match="greaterOrEqual"/>
-      <import feature="org.obeonetwork.dsl.smartdesigner.feature" version="1.2.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -78,20 +77,6 @@
          download-size="0"
          install-size="0"
          version="0.0.0"/>
-
-   <plugin
-         id="org.obeonetwork.dsl.togaf.smartdesigner"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.obeonetwork.dsl.togaf.smartdesigner.readonly"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
 
    <plugin
          id="org.obeonetwork.dsl.togaf.contentfwk.fragment"

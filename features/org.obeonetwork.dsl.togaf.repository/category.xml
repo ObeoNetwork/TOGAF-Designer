@@ -6,9 +6,6 @@
    <feature url="features/org.obeonetwork.dsl.togaf.feature_0.0.0.qualifier.jar" id="org.obeonetwork.dsl.togaf.feature" version="0.0.0">
       <category name="Togaf Designer"/>
    </feature>
-   <feature url="features/org.obeonetwork.dsl.smartdesigner.feature_0.0.0.qualifier.jar" id="org.obeonetwork.dsl.smartdesigner.feature" version="0.0.0">
-      <category name="Togaf Designer"/>
-   </feature>
    <category-def name="Togaf Designer" label="Togaf Designer">
       <description>
          This module provides a set of viewpoints for TOGAF.
