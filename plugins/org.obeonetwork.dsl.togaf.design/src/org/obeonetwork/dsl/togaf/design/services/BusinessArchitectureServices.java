@@ -12,8 +12,12 @@ import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessArchitecture;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.BusinessService;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Element;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Function;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.OrganizationUnit;
+import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Process;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
 
 /**
@@ -196,7 +200,7 @@ public class BusinessArchitectureServices {
 	public boolean isFirstLevel(Function context) {
 		return context.getDecomposesFunction() == null;
 	}
-	
+
 	/**
 	 * Check if the function is a direct sub function.
 	 * 
@@ -283,6 +287,99 @@ public class BusinessArchitectureServices {
 			functions.addAll(getDescendantFunctions((Function) context));
 		}
 		return functions;
+	}
+
+	/**
+	 * Return the process linked to OrganizationUnit. A process linked to an
+	 * organization unit is a process that have the same businessService that
+	 * the OrganizationUnit.
+	 * 
+	 * @param context
+	 *            the OrganizarionUnit
+	 * @return List of process
+	 */
+	public Collection<Process> getProcessesLinkedToOrganizationUnit(
+			OrganizationUnit context) {
+		List<Service> unitsServices = context.getOwnsAndGovernsServices();
+		List<Process> processes = ((BusinessArchitecture) context.eContainer())
+				.getProcesses();
+		return getProcesses(unitsServices, processes);
+	}
+
+	/**
+	 * Retrieve the name of the logical Application component linked to the
+	 * process and the Organization Unit. Retrieve all intersection informations
+	 * system services linked to OrganizationUnit and process. From these
+	 * Informations system services retrieve the logical application component
+	 * linked to the Information System Services.
+	 * 
+	 * @param context
+	 *            the Organization Unit
+	 * @param process
+	 *            the process
+	 * @return the name of all Logical Application Components linked to the
+	 *         Organizarion Unit and process passed to parameters.
+	 */
+	public String getLabelLogicalApplicationComponent(OrganizationUnit context,
+			Process process) {
+		Set<LogicalApplicationComponent> lacs = new HashSet<LogicalApplicationComponent>();
+		List<Service> unitServices = context.getOwnsAndGovernsServices();
+		List<Service> processServices = process.getOrchestratesServices();
+		Collection<BusinessService> businessServices = intersectionBusinessService(
+				unitServices, processServices);
+		Collection<InformationSystemService> informationSystemServices = getInformationSystemServices(businessServices);
+		for (InformationSystemService service : informationSystemServices) {
+			lacs.addAll(service
+					.getIsRealizedThroughLogicalApplicationComponent());
+		}
+		String lacTodisplay = "";
+		for (LogicalApplicationComponent lac : lacs) {
+			if (lac.equals(new ArrayList<LogicalApplicationComponent>(lacs)
+					.get(lacs.size() - 1))) {
+				lacTodisplay += lac.getName();
+			} else {
+				lacTodisplay += lac.getName() + " - " + "\r" + "\n";
+			}
+		}
+		return lacTodisplay;
+	}
+
+	private Collection<Process> getProcesses(List<Service> unitServices,
+			List<Process> processes) {
+		Set<Process> processesToReturn = new HashSet<Process>();
+		for (Process proc : processes) {
+			for (Service service : unitServices) {
+				if (proc.getOrchestratesServices().contains(service)) {
+					processesToReturn.add(proc);
+				}
+			}
+		}
+		return processesToReturn;
+	}
+
+	private Collection<BusinessService> intersectionBusinessService(
+			List<Service> col1, List<Service> col2) {
+		Set<BusinessService> intersectionList = new HashSet<BusinessService>();
+		for (Service serv : col1) {
+			if (serv instanceof BusinessService && col2.contains(serv)) {
+				intersectionList.add((BusinessService) serv);
+			}
+		}
+		return intersectionList;
+	}
+
+	private Collection<InformationSystemService> getInformationSystemServices(
+			Collection<BusinessService> businessServices) {
+		Set<InformationSystemService> informationSystemServices = new HashSet<InformationSystemService>();
+		for (BusinessService bs : businessServices) {
+			for (Element element : bs.getDelegates()) {
+				if (element instanceof InformationSystemService) {
+					informationSystemServices
+							.add((InformationSystemService) element);
+				}
+			}
+		}
+		return informationSystemServices;
 	}
 
 }

@@ -3329,6 +3329,19 @@
         </toolSections>
       </defaultLayer>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_2:CrossTableDescription" name="BusinessSupportOrganizationUnitMatrix" domainClass="BusinessArchitecture">
+      <ownedLineMappings name="OrganizationUnit" domainClass="OrganizationUnit" semanticCandidatesExpression="&lt;%units%>"/>
+      <ownedColumnMappings name="Process" domainClass="Process" semanticCandidatesExpression="&lt;%processes%>"/>
+      <intersection name="LogicalApplicationComponent" lineMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='BusinessSupportOrganizationUnitMatrix']/@ownedLineMappings[name='OrganizationUnit']" columnMapping="//@ownedViewpoints[name='business']/@ownedRepresentations[name='BusinessSupportOrganizationUnitMatrix']/@ownedColumnMappings.0" labelExpression="&lt;%getLabelLogicalApplicationComponent($columnSemantic)%>" columnFinderExpression="&lt;%getProcessesLinkedToOrganizationUnit()%>">
+        <directEdit>
+          <variables name="element" documentation="The currently edited element."/>
+          <variables name="lineSemantic" documentation="The semantic element corresponding to the line."/>
+          <variables name="columnSemantic" documentation="The semantic element corresponding to the column (only available for Intersection Mapping)."/>
+          <variables name="root" documentation="The semantic element of the table."/>
+          <mask mask="{0}"/>
+        </directEdit>
+      </intersection>
+    </ownedRepresentations>
   </ownedViewpoints>
   <ownedViewpoints name="business-catalogs" label="TOGAF - Phase B - Business Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="A definitive listing of all participants that interact with IT, including users and owners of IT systems." name="Organization-Actors Catalog" label="Organization Actors Catalog" domainClass="BusinessArchitecture">
@@ -7376,6 +7389,95 @@
       <ownedColumnMappings name="PhysicalApplicationComponentInSystemTechnologyMatrix" headerLabelExpression="&lt;%name%>" domainClass="PhysicalApplicationComponent" semanticCandidatesExpression="&lt;%eContainer.architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>"/>
       <intersection name="Realizes" lineMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='LogicalTechnologyComponentInSystem%2FTechnologyMatrix']/@ownedSubLines[name='PhysicalTechnologyComponentInSystem%2FTechnologyMatrix'] //@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedLineMappings[name='PhysicalTechnologyComponentWithoutParent']" columnMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='System%2FTechnology%20Matrix']/@ownedColumnMappings.0" labelExpression="Realizes" columnFinderExpression="&lt;%realizesPhysicalApplicationComponents%>"/>
     </ownedRepresentations>
+    <ownedRepresentations xsi:type="description:DiagramDescription" name="Impacts To Business Diagram" domainClass="PhysicalTechnologyComponent" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <edgeMappings name="ITBDRealizesPhysicalApplicationComponents" sourceMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDTechnology']/@subContainerMappings[name='ITBDPhysicalTechnologyComponent']" targetMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDPhysicalApplicationComponent']" targetFinderExpression="&lt;%realizesPhysicalApplicationComponents%>">
+          <style sourceArrow="InputArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ITBDExtendsLogicalApplicationComponents" sourceMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDPhysicalApplicationComponent']" targetMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDLogicalApplicationComponent']" targetFinderExpression="&lt;%extendsLogicalApplicationComponents%>">
+          <style sourceArrow="InputArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ITBDIsDelegatedBy" sourceMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDLogicalApplicationComponent']/@borderedNodeMappings[name='ITBDInformationSystemService']" targetMapping="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDBusiness']/@subContainerMappings[name='ITBDOrganizationUnit']/@borderedNodeMappings[name='BusinessService']" targetFinderExpression="&lt;%isDelegatedBy%>">
+          <style sourceArrow="InputArrow" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ITBDTechnology" semanticCandidatesExpression="&lt;%eContainer()%>" domainClass="TechnologyArchitecture">
+          <subContainerMappings name="ITBDPhysicalTechnologyComponent" semanticCandidatesExpression="&lt;%$diagram.target%>" domainClass="PhysicalTechnologyComponent">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalTechnologyComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" labelSize="12" labelFormat="bold" labelExpression="Technology" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="ITBDApplication" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;)%>" domainClass="ApplicationArchitecture">
+          <subContainerMappings name="ITBDPhysicalApplicationComponent" semanticCandidatesExpression="&lt;%getPhysicalApplicationComponents($diagram.target)%>" domainClass="PhysicalApplicationComponent" reusedContainerMappings="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDPhysicalApplicationComponent']">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='PhysicalApplicationComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="ITBDLogicalApplicationComponent" semanticCandidatesExpression="&lt;%getLogicalApplicationComponent($diagram.target.getPhysicalApplicationComponents())%>" domainClass="LogicalApplicationComponent" reusedContainerMappings="//@ownedViewpoints[name='technology']/@ownedRepresentations[name='Impacts%20To%20Business%20Diagram']/@defaultLayer/@containerMappings[name='ITBDApplication']/@subContainerMappings[name='ITBDLogicalApplicationComponent']">
+            <borderedNodeMappings name="ITBDInformationSystemService" semanticCandidatesExpression="&lt;%implementsServices%>" domainClass="InformationSystemService">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </borderedNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponentBorder']" roundedCorner="true" foregroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='LogicalApplicationComponent']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" labelFormat="bold" labelExpression="Application">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="ITBDBusiness" semanticCandidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;)%>" domainClass="BusinessArchitecture">
+          <subContainerMappings name="ITBDOrganizationUnit" semanticCandidatesExpression="&lt;%getOrganizationUnits(eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).getInformationSystemServices($diagram.target.getPhysicalApplicationComponents()))%>" domainClass="OrganizationUnit">
+            <borderedNodeMappings name="BusinessService" semanticCandidatesExpression="&lt;%getBusinessSystemService($diagram.target.getPhysicalApplicationComponents())%>" domainClass="BusinessService">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </style>
+            </borderedNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="10" arcHeight="10" borderColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnitBorder']" roundedCorner="true" backgroundColor="//@userColorsPalettes[name='UserColors']/@entries[name='OrganizationUnit']">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" labelFormat="bold" labelExpression="Business">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.togaf.design.services.TechnologyArchitectureServices"/>
   </ownedViewpoints>
   <ownedViewpoints name="technology-catalogs" label="TOGAF - Phase D - Technology Architecture - Catalogs" modelFileExtension="togaf">
     <ownedRepresentations xsi:type="description_1:TreeDescription" endUserDocumentation="The purpose of this catalog is to identify and maintain a list of all the technology in use across the enterprise, including hardware, infrastructure software, and application software. An agreed technology portfolio supports lifecycle management of technology products and versions and also forms the basis for definition of technology standards" name="Technology Portfolio Catalog" domainClass="TechnologyArchitecture">

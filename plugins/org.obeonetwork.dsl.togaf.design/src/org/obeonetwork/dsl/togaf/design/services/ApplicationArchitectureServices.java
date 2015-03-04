@@ -16,11 +16,9 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
 
-import fr.obeo.dsl.viewpoint.DContainer;
 import fr.obeo.dsl.viewpoint.DDiagramElement;
 import fr.obeo.dsl.viewpoint.DNode;
 import fr.obeo.dsl.viewpoint.DNodeContainer;
-import fr.obeo.dsl.viewpoint.diagram.ui.tools.api.figure.DBorderedNodeFigure;
 
 /**
  * VSM services for the ApplicationArchitectures elements.
