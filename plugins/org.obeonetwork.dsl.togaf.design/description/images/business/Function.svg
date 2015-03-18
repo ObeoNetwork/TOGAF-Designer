@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="41.422016"
+   height="42.827766"
+   id="svg12081"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Function.svg">
+  <defs
+     id="defs12083">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6123"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6125"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6123-2"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect6125-0"
+       effect="spiro" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="55.934704"
+     inkscape:cy="-8.4609602"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1137"
+     inkscape:window-height="648"
+     inkscape:window-x="1241"
+     inkscape:window-y="516"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata12086">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-434.60149,-326.14065)">
+    <g
+       id="g3777">
+      <g
+         style="fill:#d2d2d2;fill-opacity:1;stroke:#d2d2d2;stroke-opacity:1"
+         transform="matrix(2.5,0,0,2.5,-578.99226,120.53092)"
+         id="g3773">
+        <path
+           style="fill:#d2d2d2;fill-opacity:1;stroke:#d2d2d2;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 413.4177,94.431867 -7.2247,3.709538 0,-10.739941 7.2247,-3.709533 7.22478,3.709533 0,10.739941 -7.22478,-3.709538"
+           id="path3775"
+           inkscape:path-effect="#path-effect6123-2"
+           inkscape:original-d="m 413.4177,94.431867 -7.2247,3.709538 0,-10.739941 7.2247,-3.709533 7.22478,3.709533 0,10.739941 z"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccc" />
+      </g>
+      <g
+         id="g6197"
+         transform="matrix(2.5,0,0,2.5,-577.49212,119.03128)">
+        <path
+           sodipodi:nodetypes="ccccccc"
+           inkscape:connector-curvature="0"
+           inkscape:original-d="m 413.4177,94.431867 -7.2247,3.709538 0,-10.739941 7.2247,-3.709533 7.22478,3.709533 0,10.739941 z"
+           inkscape:path-effect="#path-effect6123-2"
+           id="path6199"
+           d="m 413.4177,94.431867 -7.2247,3.709538 0,-10.739941 7.2247,-3.709533 7.22478,3.709533 0,10.739941 -7.22478,-3.709538"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffcd44;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      </g>
+      <g
+         transform="matrix(2.5,0,0,2.5,-577.49212,119.03128)"
+         id="g6204">
+        <path
+           style="fill:#f3f7ff;fill-opacity:1;stroke:#ffbc02;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 420.64248,91.348358 0,6.793047 -7.22478,-3.709538 -7.2247,3.709538 0,-6.793047"
+           id="path6206"
+           inkscape:path-effect="#path-effect6125-0"
+           inkscape:original-d="m 420.64248,91.348358 0,6.793047 -7.22478,-3.709538 -7.2247,3.709538 0,-6.793047"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+  </g>
+</svg>
