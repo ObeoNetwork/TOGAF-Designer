@@ -20,6 +20,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -39,15 +40,14 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
 import org.obeonetwork.dsl.togaf.design.Activator;
 import org.obeonetwork.dsl.togaf.ui.SessionCreationOperation;
-
-import fr.obeo.dsl.common.tools.api.util.Option;
-import fr.obeo.dsl.common.tools.api.util.Options;
-import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.business.api.modelingproject.ModelingProject;
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.description.Viewpoint;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import fr.obeo.dsl.viewpoint.ui.tools.api.project.ModelingProjectManager;
+import org.eclipse.sirius.ext.base.Option;
+import org.eclipse.sirius.ext.base.Options;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
+import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
+import org.eclipse.sirius.ui.tools.api.project.ModelingProjectManager;
 
 /**
  * 
@@ -92,7 +92,7 @@ public class TogafProjectWizard extends BasicNewResourceWizard {
 		try {
 			IProject project = ModelingProjectManager.INSTANCE
 					.createNewModelingProject(newProjectPage.getProjectName(),
-							newProjectPage.getLocationPath(), true);
+							newProjectPage.getLocationPath(), true, new NullProgressMonitor());
 			Option<IFile> optionalNewfile = createEcoreResource(project);
 			if (optionalNewfile.some() && optionalNewfile.get().exists()) {
 				selectAndReveal(optionalNewfile.get());
@@ -178,7 +178,7 @@ public class TogafProjectWizard extends BasicNewResourceWizard {
 										.getInstance().getViewpoints()) {
 									if (SessionCreationOperation.TOGAF_VIEWPOINTS
 											.contains(vp.getName())) {
-										callback.selectViewpoint(vp, session);
+										callback.selectViewpoint(vp, session, new NullProgressMonitor());
 									}
 								}
 							}

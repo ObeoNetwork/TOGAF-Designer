@@ -26,7 +26,7 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
-import fr.obeo.dsl.viewpoint.tools.api.ui.IExternalJavaAction;
+import org.eclipse.sirius.tools.api.ui.IExternalJavaAction;
 
 public class OpenTechnologyArchitectureCatalogsAction implements IExternalJavaAction {
 

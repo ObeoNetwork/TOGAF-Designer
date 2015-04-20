@@ -12,7 +12,7 @@
 -->
 <plugin>
 	<extension
-			point="fr.obeo.dsl.viewpoint.componentization">
+			point="org.eclipse.sirius.componentization">
 	<component
 			class="org.obeonetwork.dsl.togaf.design.Activator" id="fr.obeo.dsl.togaf.ea.design" name="ea">
 	</component>
@@ -20,7 +20,7 @@
   <extension
         id="OpenDataCatalogs"
         name="OpenDataCatalogs"
-        point="fr.obeo.dsl.viewpoint.externalJavaAction">
+        point="org.eclipse.sirius.externalJavaAction">
      <javaActions
            actionClass="org.obeonetwork.dsl.togaf.ui.actions.OpenDataArchitectureCatalogsAction"
            id="org.obeonetwork.dsl.togaf.ui.actions.OpenDataCatalogsActionID">

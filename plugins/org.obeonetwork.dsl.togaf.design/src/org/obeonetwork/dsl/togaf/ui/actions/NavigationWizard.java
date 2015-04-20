@@ -23,7 +23,7 @@ import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 
-import fr.obeo.dsl.viewpoint.DRepresentation;
+import org.eclipse.sirius.viewpoint.DRepresentation;
 
 public class NavigationWizard extends TrayDialog {
 

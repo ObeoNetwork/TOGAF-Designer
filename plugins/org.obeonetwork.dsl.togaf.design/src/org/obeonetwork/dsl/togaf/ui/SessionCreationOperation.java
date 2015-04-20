@@ -24,6 +24,7 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
@@ -40,13 +41,13 @@ import org.obeonetwork.dsl.togaf.ui.wizards.newmodel.TogafModelFactory;
 
 import com.google.common.collect.Lists;
 
-import fr.obeo.dsl.common.tools.api.util.Option;
-import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
-import fr.obeo.dsl.viewpoint.business.api.modelingproject.ModelingProject;
-import fr.obeo.dsl.viewpoint.business.api.session.Session;
-import fr.obeo.dsl.viewpoint.description.Viewpoint;
-import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import fr.obeo.dsl.viewpoint.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
+import org.eclipse.sirius.ext.base.Option;
+import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
+import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
+import org.eclipse.sirius.business.api.session.Session;
+import org.eclipse.sirius.viewpoint.description.Viewpoint;
+import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
+import org.eclipse.sirius.ui.tools.internal.actions.nature.ModelingToggleNatureAction;
 
 /**
  * An operation to create and initialize a new session with empty semantic TOGAF
@@ -159,7 +160,7 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 
 		IProject prj = modelFile.getProject();
 		if (prj != null
-				&& !ModelingProject.MODELING_PROJECT_PREDICATE.apply(prj)) {
+				&& !ModelingProject.hasModelingProjectNature(prj)) {
 			ModelingToggleNatureAction toogleProject = new ModelingToggleNatureAction();
 			EvaluationContext evaluationContext = new EvaluationContext(null,
 					Lists.newArrayList(prj));
@@ -197,7 +198,7 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 													.getName())) {
 												selection.selectViewpoint(vp,
 														created.get()
-																.getSession());
+																.getSession(), new NullProgressMonitor());
 											}
 										}
 									}
