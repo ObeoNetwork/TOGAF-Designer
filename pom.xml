@@ -59,16 +59,16 @@
   
   <repositories>
     <repository>
-      <id>indigo</id>
+      <id>luna</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/juno</url>
+      <url>http://download.eclipse.org/releases/luna</url>
     </repository>
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
       <!--<url>http://update.obeo.fr/bundles/ObeoSmartEA/integration/tp/1.5.4</url>-->
       <!--<url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>-->
-      <url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>
+      <url>http://update.obeo.fr/release/designer/7.0/team/7.0.1/luna/repository/</url>
     </repository>
     <repository>
       <id>Acceleo2</id>
