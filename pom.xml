@@ -71,9 +71,9 @@
       <url>http://update.obeo.fr/release/designer/7.0/team/7.0.1/luna/repository/</url>
     </repository>
     <repository>
-      <id>Acceleo2</id>
+      <id>AcceleoLegacy</id>
       <layout>p2</layout>
-      <url>http://update.obeo.fr/stable/acceleo/stable-2.8.0/fr.obeo.acceleo.update/</url>
+      <url>http://download.eclipse.org/sirius/updates/legacy/</url>
     </repository>
   </repositories>
   
