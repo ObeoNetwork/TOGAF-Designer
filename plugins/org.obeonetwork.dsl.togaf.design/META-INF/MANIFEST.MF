@@ -8,10 +8,10 @@ Require-Bundle: org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.5.0",
  org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport,
  com.google.guava;bundle-version="11.0.1",
  org.eclipse.core.expressions;bundle-version="3.4.300",
- org.eclipse.sirius.diagram;bundle-version="2.0.0",
- org.eclipse.sirius.common;bundle-version="2.0.0",
- org.eclipse.sirius.ui;bundle-version="2.0.0",
- org.eclipse.sirius.ext.base;bundle-version="2.0.0"
+ org.eclipse.sirius.diagram,
+ org.eclipse.sirius.common,
+ org.eclipse.sirius.ui,
+ org.eclipse.sirius.ext.base
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.services.application
