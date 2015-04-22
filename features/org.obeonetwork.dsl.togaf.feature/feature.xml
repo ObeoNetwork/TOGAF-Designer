@@ -22,13 +22,13 @@
          version="0.0.0"/>
 
    <requires>   	  
-      <import feature="org.eclipse.sirius.runtime" version="2.0.3" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.runtime.acceleo" version="2.0.3" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.query.legacy.feature" version="1.0.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.runtime.ide.ui" version="2.0.3" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo" version="2.0.3" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.specifier.ide.ui" version="2.0.3" match="greaterOrEqual"/>
-      <import feature="org.eclipse.sirius.specifier.ide.ui.acceleo" version="2.0.3" match="greaterOrEqual"/>
+      <import feature="org.eclipse.sirius.runtime"/>
+      <import feature="org.eclipse.sirius.runtime.acceleo"/>
+      <import feature="org.eclipse.sirius.query.legacy.feature"/>
+      <import feature="org.eclipse.sirius.runtime.ide.ui"/>
+      <import feature="org.eclipse.sirius.runtime.ide.ui.acceleo"/>
+      <import feature="org.eclipse.sirius.specifier.ide.ui"/>
+      <import feature="org.eclipse.sirius.specifier.ide.ui.acceleo"/>
    </requires>
 
    <plugin
