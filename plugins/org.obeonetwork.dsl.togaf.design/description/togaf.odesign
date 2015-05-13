@@ -6640,7 +6640,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function With Dependencies Communicates With" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function with Dependencies Communicates with" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6706,7 +6706,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" candidatesExpression="&lt;%getBusinessServiceToJoinFunctionToLogicalApplicationComponent($containerView)%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" candidatesExpression="&lt;%getBusinessServiceToJoinFunctionToLogicalApplicationComponent($containerView)%>" multiple="true" message="To create a function the LogicalApplication should have an InformationSystemService (relation implementsServices)  and this infomationSystemService should be linked to a BusinessService by relation isDelagatedBy" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
