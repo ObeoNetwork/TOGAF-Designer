@@ -24,7 +24,6 @@ import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
@@ -198,7 +197,7 @@ public class SessionCreationOperation extends WorkspaceModifyOperation {
 													.getName())) {
 												selection.selectViewpoint(vp,
 														created.get()
-																.getSession(), new NullProgressMonitor());
+																.getSession());
 											}
 										}
 									}

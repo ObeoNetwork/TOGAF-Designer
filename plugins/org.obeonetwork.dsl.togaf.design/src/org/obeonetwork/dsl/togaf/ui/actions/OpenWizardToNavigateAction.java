@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
@@ -149,7 +148,7 @@ public class OpenWizardToNavigateAction implements IExternalJavaAction {
 
 	public void openRepresentation(List<DRepresentation> selected,
 			Session session) {
-		openRepresentation(selected, new NullProgressMonitor(), session);
+		openRepresentation(selected, session);
 	}
 
 	public void openRepresentation(List<DRepresentation> selected,
@@ -186,7 +185,7 @@ public class OpenWizardToNavigateAction implements IExternalJavaAction {
 	protected IEditorPart openEditor(Session session,
 			DRepresentation representation) {
 		final IEditorPart openEditorPart = DialectUIManager.INSTANCE
-				.openEditor(session, representation, new NullProgressMonitor());
+				.openEditor(session, representation);
 		return openEditorPart;
 	}
 
