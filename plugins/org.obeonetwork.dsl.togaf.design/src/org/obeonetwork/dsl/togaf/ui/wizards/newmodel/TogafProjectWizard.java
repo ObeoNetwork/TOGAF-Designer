@@ -40,14 +40,14 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.EnterpriseArchitecture;
 import org.obeonetwork.dsl.togaf.design.Activator;
 import org.obeonetwork.dsl.togaf.ui.SessionCreationOperation;
-import org.eclipse.sirius.ext.base.Option;
-import org.eclipse.sirius.ext.base.Options;
-import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
-import org.eclipse.sirius.business.api.modelingproject.ModelingProject;
-import org.eclipse.sirius.business.api.session.Session;
-import org.eclipse.sirius.viewpoint.description.Viewpoint;
-import org.eclipse.sirius.ui.business.api.viewpoint.ViewpointSelectionCallback;
-import org.eclipse.sirius.ui.tools.api.project.ModelingProjectManager;
+import fr.obeo.dsl.common.tools.api.util.Option;
+import fr.obeo.dsl.common.tools.api.util.Options;
+import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
+import fr.obeo.dsl.viewpoint.business.api.modelingproject.ModelingProject;
+import fr.obeo.dsl.viewpoint.business.api.session.Session;
+import fr.obeo.dsl.viewpoint.description.Viewpoint;
+import fr.obeo.dsl.viewpoint.ui.business.api.viewpoint.ViewpointSelectionCallback;
+import fr.obeo.dsl.viewpoint.ui.tools.api.project.ModelingProjectManager;
 
 /**
  * 

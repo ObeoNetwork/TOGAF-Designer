@@ -17,8 +17,8 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
-import org.eclipse.sirius.business.api.componentization.ViewpointRegistry;
-import org.eclipse.sirius.viewpoint.description.Viewpoint;
+import fr.obeo.dsl.viewpoint.business.api.componentization.ViewpointRegistry;
+import fr.obeo.dsl.viewpoint.description.Viewpoint;
 
 /**
  * The activator class controls the plug-in life cycle

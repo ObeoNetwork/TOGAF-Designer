@@ -16,9 +16,9 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.InformationSystemService;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.LogicalApplicationComponent;
 import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.Service;
 
-import org.eclipse.sirius.diagram.DDiagramElement;
-import org.eclipse.sirius.diagram.DNode;
-import org.eclipse.sirius.diagram.DNodeContainer;
+import fr.obeo.dsl.viewpoint.DDiagramElement;
+import fr.obeo.dsl.viewpoint.DNode;
+import fr.obeo.dsl.viewpoint.DNodeContainer;
 
 /**
  * VSM services for the ApplicationArchitectures elements.

@@ -1,17 +1,18 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton:=true
-Bundle-Version: 2.0.0.qualifier
+Bundle-Version: 1.5.4.qualifier
 Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.5.0",
  org.obeonetwork.dsl.togaf.contentfwk.editor;visibility:=reexport,
  com.google.guava;bundle-version="11.0.1",
  org.eclipse.core.expressions;bundle-version="3.4.300",
- org.eclipse.sirius.diagram,
- org.eclipse.sirius.common,
- org.eclipse.sirius.ui,
- org.eclipse.sirius.ext.base
+ fr.obeo.dsl.viewpoint;bundle-version="4.1.0",
+ fr.obeo.dsl.viewpoint.diagram;bundle-version="4.1.0",
+ fr.obeo.dsl.viewpoint.ui;bundle-version="4.1.0",
+ fr.obeo.mda.ecore.extender;bundle-version="1.1.0",
+ fr.obeo.dsl.common;bundle-version="3.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.services.application

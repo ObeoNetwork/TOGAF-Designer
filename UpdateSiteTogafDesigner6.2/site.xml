@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.obeonetwork.dsl.togaf.feature_1.5.4.201506111638.jar" id="org.obeonetwork.dsl.togaf.feature" version="1.5.4.201506111638"/>
+</site>

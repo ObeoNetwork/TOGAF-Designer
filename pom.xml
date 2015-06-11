@@ -18,7 +18,7 @@
 	
   <groupId>TOGAF-Designer</groupId>
   <artifactId>org.obeonetwork.dsl.togaf</artifactId>
-  <version>2.0.0-SNAPSHOT</version>
+  <version>1.5.4-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <name>TOGAF Designer Parent</name>
@@ -59,21 +59,21 @@
   
   <repositories>
     <repository>
-      <id>luna</id>
+      <id>indigo</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/luna</url>
+      <url>http://download.eclipse.org/releases/juno</url>
     </repository>
     <repository>
       <id>viewpoint</id>
       <layout>p2</layout>
       <!--<url>http://update.obeo.fr/bundles/ObeoSmartEA/integration/tp/1.5.4</url>-->
       <!--<url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>-->
-      <url>http://update.obeo.fr/release/designer/7.0/community/7.0.1/luna/repository/</url>
+      <url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>
     </repository>
     <repository>
-      <id>AcceleoLegacy</id>
+      <id>Acceleo2</id>
       <layout>p2</layout>
-      <url>http://download.eclipse.org/sirius/updates/legacy/</url>
+      <url>http://update.obeo.fr/stable/acceleo/stable-2.8.0/fr.obeo.acceleo.update/</url>
     </repository>
   </repositories>
   
