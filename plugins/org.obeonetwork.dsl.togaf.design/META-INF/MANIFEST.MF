@@ -15,6 +15,6 @@ Require-Bundle: org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.5.0",
  fr.obeo.dsl.common;bundle-version="3.3.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.services.application
+Export-Package: org.obeonetwork.dsl.togaf.design,org.obeonetwork.dsl.togaf.design.services,org.obeonetwork.dsl.togaf.design.services.application, org.obeonetwork.dsl.togaf.design.tags
 Bundle-Localization: plugin
 Bundle-ManifestVersion: 2
