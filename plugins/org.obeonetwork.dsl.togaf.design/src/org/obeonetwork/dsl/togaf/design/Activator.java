@@ -48,6 +48,7 @@ public class Activator extends AbstractUIPlugin {
 		plugin = this;
 		viewpoints = new HashSet<Viewpoint>();
 		viewpoints.addAll(ViewpointRegistry.getInstance().registerFromPlugin(PLUGIN_ID + "/description/togaf.odesign"));			
+		viewpoints.addAll(ViewpointRegistry.getInstance().registerFromPlugin(PLUGIN_ID + "/description/togaf1.odesign"));			
 	}
 
 	/*
