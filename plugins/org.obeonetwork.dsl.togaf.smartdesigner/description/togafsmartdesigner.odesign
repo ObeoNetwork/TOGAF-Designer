@@ -458,9 +458,9 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
-      <optionalLayers name="Strategic architecture" label="Strategic architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif" activeByDefault="true">
-        <toolSections name="StrategicArchitecture" label="Strategic architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Principle.gif">
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectStrategicElements" label="Select strategic elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select strategic elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;StrategicArchitecture&quot;).eAllContents()%>">
+      <optionalLayers name="Strategic architecture" label="Strategic architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/StrategicArchitecture.gif" activeByDefault="true">
+        <toolSections name="StrategicArchitecture" label="Strategic architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/StrategicArchitecture.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectStrategicElements" label="Select strategic elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.togaf.smartdesigner/icons/SelectStrategicArchitecture.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select strategic elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;StrategicArchitecture&quot;).eAllContents()%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -677,9 +677,9 @@
           </ownedTools>
         </toolSections>
       </optionalLayers>
-      <optionalLayers name="Business architecture" label="Business architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif" activeByDefault="true">
-        <toolSections name="BusinessArchitecture" label="Business architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectBusinessElements" label="Select business elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select business elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).eAllContents()%>">
+      <optionalLayers name="Business architecture" label="Business architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif" activeByDefault="true">
+        <toolSections name="BusinessArchitecture" label="Business architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessArchitecture.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectBusinessElements" label="Select business elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.togaf.smartdesigner/icons/SelectBusinessArchitecture.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select business elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;BusinessArchitecture&quot;).eAllContents()%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1216,9 +1216,9 @@
           </ownedTools>
         </toolSections>
       </optionalLayers>
-      <optionalLayers name="Application architecture" label="Application architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif" activeByDefault="true">
-        <toolSections name="ApplicationArchitecture" label="Application architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectApplicativeElements" label="Select applicative elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select application elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).eAllContents()%>">
+      <optionalLayers name="Application architecture" label="Application architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ApplicationArchitecture.gif" activeByDefault="true">
+        <toolSections name="ApplicationArchitecture" label="Application architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ApplicationArchitecture.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectApplicativeElements" label="Select applicative elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.togaf.smartdesigner/icons/SelectApplicationArchitecture.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select application elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;ApplicationArchitecture&quot;).eAllContents()%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1339,9 +1339,9 @@
           </ownedTools>
         </toolSections>
       </optionalLayers>
-      <optionalLayers name="Data architecture" label="Data architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif" activeByDefault="true">
-        <toolSections name="DataArchitecture" label="Data architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectDataElements" label="Select data elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select data elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).eAllContents()%>">
+      <optionalLayers name="Data architecture" label="Data architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ApplicationArchitecture.gif" activeByDefault="true">
+        <toolSections name="DataArchitecture" label="Data architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/ApplicationArchitecture.gif">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectDataElements" label="Select data elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.togaf.smartdesigner/icons/SelectApplicationArchitecture.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select data elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;DataArchitecture&quot;).eAllContents()%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1462,9 +1462,9 @@
           </ownedTools>
         </toolSections>
       </optionalLayers>
-      <optionalLayers name="Technology architecture" label="Technology architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif" activeByDefault="true">
+      <optionalLayers name="Technology architecture" label="Technology architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/TechnologyArchitecture.gif" activeByDefault="true">
         <toolSections name="TechnologyArchitecture" label="Technology architecture" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectTechnicalElements" label="Select technical elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select technical elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).eAllContents()%>">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="SelectTechnicalElements" label="Select technical elements" forceRefresh="true" iconPath="/org.obeonetwork.dsl.togaf.smartdesigner/icons/SelectTechnologyArchitecture.gif" windowImagePath="/org.obeonetwork.dsl.smartdesigner.design/icons/full/obj16/import.gif" message="Select technical elements from repository" candidatesExpression="&lt;%eContainer(&quot;DocumentRoot&quot;).semanticModel.architectures.filter(&quot;TechnologyArchitecture&quot;).eAllContents()%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
