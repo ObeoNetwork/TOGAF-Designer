@@ -8,7 +8,8 @@ Require-Bundle: org.eclipse.ui,
  fr.obeo.dsl.viewpoint,
  fr.obeo.dsl.common.acceleo.mtl,
  org.obeonetwork.dsl.smartdesigner.design,
- org.obeonetwork.dsl.togaf.contentfwk
+ org.obeonetwork.dsl.togaf.contentfwk,
+ org.obeonetwork.dsl.smartdesigner
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ManifestVersion: 2
