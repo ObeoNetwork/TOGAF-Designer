@@ -71,6 +71,11 @@
       <!--<url>http://update.obeo.fr/release/designer/6.2.1/juno3/update/repository/</url>-->
       <url>http://update.obeo.fr/release/designer/6.1.2/juno3/update/repository/</url>
     </repository>
+     <repository>
+      <id>smart-designer</id>
+      <layout>p2</layout>
+     <url>http://update.obeo.fr/integration/smartdesigner/repository/</url>
+    </repository>
     <repository>
       <id>Acceleo2</id>
       <layout>p2</layout>
