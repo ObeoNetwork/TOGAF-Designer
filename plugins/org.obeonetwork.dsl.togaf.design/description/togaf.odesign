@@ -416,7 +416,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDriver.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -510,7 +510,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectGoal.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -601,7 +601,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).objectives%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Objective.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Objective" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).objectives%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectObjective.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -692,7 +692,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).measures%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Measure.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Measure" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).measures%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectMeasure.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -783,7 +783,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).services%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessService" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).services%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectBusinessService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1026,7 +1026,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Location" label="Select Location" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Location.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Location" label="Select Location" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).locations%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectLocation.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1066,7 +1066,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Role" label="Select Role" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Role.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Role" label="Select Role" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).roles%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectRole.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1106,7 +1106,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" label="Select Function" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" label="Select Function" precondition="&lt;%$container.filter(&quot;Actor&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1310,7 +1310,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1477,7 +1477,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" precondition="[container.oclIsTypeOf(Process)._or(container.oclIsTypeOf(OrganizationUnit))._or(container.oclIsTypeOf(Function))/]" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" precondition="[container.oclIsTypeOf(Process)._or(container.oclIsTypeOf(OrganizationUnit))._or(container.oclIsTypeOf(Function))/]" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectProcess.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -1927,7 +1927,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" label="Select Business Service" precondition="&lt;%filter(&quot;BusinessService&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" label="Select Business Service" precondition="&lt;%filter(&quot;BusinessService&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectBusinessService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2108,7 +2108,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" precondition="&lt;%filter(&quot;DataEntity&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" precondition="&lt;%filter(&quot;DataEntity&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -2950,7 +2950,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" label="Select Driver" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Driver&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Driver.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Driver" label="Select Driver" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Driver&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).drivers%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDriver.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3023,7 +3023,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" precondition="&lt;%filter(&quot;Driver&quot;).nSize() == 1 || filter(&quot;Goal&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Goal.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Goal" precondition="&lt;%filter(&quot;Driver&quot;).nSize() == 1 || filter(&quot;Goal&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).goals%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectGoal.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3099,7 +3099,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Function" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).functions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3254,7 +3254,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" label="Select Business Service" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Service&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;Service&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Service" label="Select Business Service" precondition="&lt;%filter(&quot;OrganizationUnit&quot;).nSize() == 1 || filter(&quot;Service&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;Service&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectBusinessService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3415,7 +3415,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" candidatesExpression="[eContainer(BusinessArchitecture).processes/]" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Process" candidatesExpression="[eContainer(BusinessArchitecture).processes/]" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectProcess.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -3508,7 +3508,7 @@
           </style>
         </edgeMappings>
         <toolSections name="Display Existing Function">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ExistingFunction" label="Select Function" candidatesExpression="&lt;%getAllFunctions() - $containerView.eContainer(&quot;DDiagram&quot;).eContents().filter(&quot;DNode&quot;).target%>" multiple="true" rootExpression="&lt;%chooseFunctionToDisplay() - $containerView.eContainer(&quot;DDiagram&quot;).eContents().filter(&quot;DNode&quot;).target%>" childrenExpression="&lt;%isDecomposedByFunctions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="ExistingFunction" label="Select Function" candidatesExpression="&lt;%getAllFunctions() - $containerView.eContainer(&quot;DDiagram&quot;).eContents().filter(&quot;DNode&quot;).target%>" multiple="true" rootExpression="&lt;%chooseFunctionToDisplay() - $containerView.eContainer(&quot;DDiagram&quot;).eContents().filter(&quot;DNode&quot;).target%>" childrenExpression="&lt;%isDecomposedByFunctions%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4419,7 +4419,7 @@
           </style>
         </containerMappings>
         <toolSections name="Processes" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select Decompose Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select Decompose Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectProcess.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4431,7 +4431,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Follow" label="Select Follow Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Follow" label="Select Follow Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectProcess.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4443,7 +4443,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Preceed" label="Select Preceed Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Process.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Preceed" label="Select Preceed Process" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;BusinessArchitecture&quot;).processes%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectProcess.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4540,7 +4540,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/fr.obeo.dsl.viewpoint.ui/icons/full/obj16/SelectNodeMapping.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4768,7 +4768,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;DataEntity&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;DataEntity&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4896,7 +4896,7 @@
           </style>
         </containerMappings>
         <toolSections name="Data entities" label="Data Entity" icon="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select Decompose DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Decompose" label="Select Decompose DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4908,7 +4908,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="relatesToDataEntities" label="Select Relates To DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="relatesToDataEntities" label="Select Relates To DataEntity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -4920,7 +4920,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="OtherrelatesToDataEntities" label="Select Related Data Entity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="OtherrelatesToDataEntities" label="Select Related Data Entity" precondition="&lt;%$container==$diagram.target%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5042,7 +5042,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" label="Select Business Service" precondition="&lt;%filter(&quot;BusinessService&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/BusinessService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select BusinessSevice" label="Select Business Service" precondition="&lt;%filter(&quot;BusinessService&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eAllContents(&quot;BusinessService&quot;)%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectBusinessService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5219,7 +5219,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" precondition="&lt;%filter(&quot;DataEntity&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/DataEntity.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select DataEntity" label="Select Data Entity" precondition="&lt;%filter(&quot;DataEntity&quot;).nSize() == 1%>" candidatesExpression="&lt;%getRootContainer().eContents().filter(&quot;DataArchitecture&quot;).entities%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectDataEntity.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5541,7 +5541,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Information System Service" label="Select Information System Service" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" multiple="true" childrenExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" message="Select an existing information system service" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Information System Service" label="Select Information System Service" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" multiple="true" childrenExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" message="Select an existing information system service" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectInformationSystemService.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectInformationSystemService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5724,7 +5724,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Information System Service" label="Select Information System Service" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" multiple="true" childrenExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" message="Select an existing information system service" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/InformationSystemService.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Information System Service" label="Select Information System Service" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" multiple="true" childrenExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).informationSystemServices%>" message="Select an existing information system service" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectInformationSystemService.gif" windowImagePath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectInformationSystemService.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5832,7 +5832,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Existing Physical Application" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).physicalApplicationComponents%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectPhysicalApplicationComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -5925,7 +5925,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Actor" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Actor.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Actor" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).actors%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectActor.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6816,7 +6816,7 @@
           </style>
         </containerMappings>
         <toolSections name="Display elements" label="Display Elements">
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LogicalApplicationComponent" label="Select Logical Application Components" precondition="&lt;%$containerView.eClass.name == &quot;DSemanticDiagram&quot;%>" candidatesExpression="&lt;%logicalApplicationComponents - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="LogicalApplicationComponent" label="Select Logical Application Components" precondition="&lt;%$containerView.eClass.name == &quot;DSemanticDiagram&quot;%>" candidatesExpression="&lt;%logicalApplicationComponents - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectLogicalApplicationComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6826,7 +6826,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Function" label="Select Functions" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Function" label="Select Functions" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6849,7 +6849,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function with Dependencies Communicates with" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="FunctionWithDepedencies" label="Select Function with Dependencies Communicates with" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getFunctionsLinkedToLogicalApplication() - $containerView.eContents().filter(&quot;DNodeContainer&quot;).target%>" multiple="true" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6863,7 +6863,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Service" label="Select Services" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getServicetoSelectionPopup($containerView)%>" multiple="true">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Service" label="Select Services" precondition="&lt;%$containerView.eClass.name == &quot;DNodeContainer&quot;%>" candidatesExpression="&lt;%getServicetoSelectionPopup($containerView)%>" multiple="true" iconPath="/fr.obeo.dsl.viewpoint.ui/icons/full/obj16/SelectNodeMapping.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -6915,7 +6915,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" candidatesExpression="&lt;%getBusinessServiceToJoinFunctionToLogicalApplicationComponent($containerView)%>" multiple="true" message="To create a function the LogicalApplication should have an InformationSystemService (relation implementsServices)  and this infomationSystemService should be linked to a BusinessService by relation isDelagatedBy" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/Function.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="createFunction" label="Create Function" candidatesExpression="&lt;%getBusinessServiceToJoinFunctionToLogicalApplicationComponent($containerView)%>" multiple="true" message="To create a function the LogicalApplication should have an InformationSystemService (relation implementsServices)  and this infomationSystemService should be linked to a BusinessService by relation isDelagatedBy" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectFunction.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7060,7 +7060,7 @@
             </initialOperation>
             <edgeView name="edgeView"/>
           </ownedTools>
-          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" label="Select To Connect With An Other Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalApplicationComponent.gif" message="Select a Logical Application Component" candidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
+          <ownedTools xsi:type="tool:PaneBasedSelectionWizardDescription" name="Connect with an other Logical Application Component" label="Select To Connect With An Other Logical Application Component" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectLogicalApplicationComponent.gif" message="Select a Logical Application Component" candidatesExpression="&lt;%$container.eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;ApplicationArchitecture&quot;).logicalApplicationComponents%>">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7582,7 +7582,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="PhysicalTechnologyComponent" label="Create Technology" precondition="&lt;%current.filter(&quot;TechnologyArchitecture&quot;)%>" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices%>" multiple="true" tree="true" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations%>" childrenExpression="&lt;%filter(&quot;Location&quot;).containsPhysicalTechnologyComponents.extendsLogicalTechnologyComponents.suppliesPlatformServices.nMinimize + filter(&quot;PlatformService&quot;).isSuppliedByLogicalTechnologyComponents%>" message="Select the location (and environment /  logical technology) on which you want to define this physical technology." iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="PhysicalTechnologyComponent" label="Create Technology" precondition="&lt;%current.filter(&quot;TechnologyArchitecture&quot;)%>" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices%>" multiple="true" tree="true" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations%>" childrenExpression="&lt;%filter(&quot;Location&quot;).containsPhysicalTechnologyComponents.extendsLogicalTechnologyComponents.suppliesPlatformServices.nMinimize + filter(&quot;PlatformService&quot;).isSuppliedByLogicalTechnologyComponents%>" message="Select the location (and environment /  logical technology) on which you want to define this physical technology." iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectPhysicalTechnologyComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7599,7 +7599,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="PhysicalApplicationComponent" label="Create Physical Application component" precondition="&lt;%current.filter(&quot;TechnologyArchitecture&quot;)%>" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices%>" multiple="true" tree="true" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations%>" childrenExpression="&lt;%filter(&quot;Location&quot;).containsPhysicalTechnologyComponents.extendsLogicalTechnologyComponents.suppliesPlatformServices.nMinimize + filter(&quot;PlatformService&quot;).isSuppliedByLogicalTechnologyComponents + filter(&quot;LogicalTechnologyComponent&quot;).isRealizedByPhysicalTechnologyComponents%>" message="Select the location (and environment / logical technology / physical technology) on which you want to define this physical application." iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalApplicationComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="PhysicalApplicationComponent" label="Create Physical Application component" precondition="&lt;%current.filter(&quot;TechnologyArchitecture&quot;)%>" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents + eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).platformServices%>" multiple="true" tree="true" rootExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;BusinessArchitecture&quot;).locations%>" childrenExpression="&lt;%filter(&quot;Location&quot;).containsPhysicalTechnologyComponents.extendsLogicalTechnologyComponents.suppliesPlatformServices.nMinimize + filter(&quot;PlatformService&quot;).isSuppliedByLogicalTechnologyComponents + filter(&quot;LogicalTechnologyComponent&quot;).isRealizedByPhysicalTechnologyComponents%>" message="Select the location (and environment / logical technology / physical technology) on which you want to define this physical application." iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectPhysicalApplicationComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7726,7 +7726,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Logical Technology Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/LogicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Logical Technology Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).logicalComponents%>" iconPath="/org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectLogicalTechnologyComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
@@ -7736,7 +7736,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Physical Technology Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents%>" iconPath="org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/PhysicalTechnologyComponent.gif">
+          <ownedTools xsi:type="tool:SelectionWizardDescription" name="Select Physical Technology Component" candidatesExpression="&lt;%eContainer(&quot;EnterpriseArchitecture&quot;).architectures.filter(&quot;TechnologyArchitecture&quot;).physicalComponents%>" iconPath="org.obeonetwork.dsl.togaf.contentfwk.edit/icons/full/obj16/SelectPhysicalTechnologyComponent.gif">
             <element name="element"/>
             <containerView name="containerView"/>
             <container name="container"/>
