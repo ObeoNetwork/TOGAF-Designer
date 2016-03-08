@@ -7,7 +7,7 @@ These plugins are released under the EPL Open-Souce License.
 More details about features, screenshots, release notes, dependencies here:
 
  * http://marketplace.obeonetwork.com/module/togaf
- * http://docs.obeonetwork.com/togaf
+ * http://www.obeosmartea.com
  * http://www.obeodesigner.com
 
 
