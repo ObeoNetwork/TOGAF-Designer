@@ -34,7 +34,7 @@
             id="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditorID"
             name="%_UI_ContentfwkEditor_label"
             icon="icons/full/obj16/ContentfwkModelFile.gif"
-            extensions="contentfwk"
+            extensions="togaf, contentfwk"
             class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkEditor"
             contributorClass="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.presentation.ContentfwkActionBarContributor">
       </editor>
