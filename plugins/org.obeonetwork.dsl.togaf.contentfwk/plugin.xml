@@ -20,5 +20,19 @@
             class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.ContentfwkPackage"
             genModel="model/contentfwk.genmodel"/>
    </extension>
+   
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+         type="togaf"
+         class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.TogafResourceFactory">
+      </parser>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+         type="contentfwk"
+         class="org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.TogafResourceFactory">
+      </parser>
+   </extension>
 
 </plugin>
