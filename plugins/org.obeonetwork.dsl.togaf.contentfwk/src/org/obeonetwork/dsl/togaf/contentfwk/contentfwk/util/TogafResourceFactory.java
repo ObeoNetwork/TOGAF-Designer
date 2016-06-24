@@ -38,7 +38,7 @@ public class TogafResourceFactory extends XMIResourceFactoryImpl {
 			options.put(XMLResource.OPTION_DEFER_IDREF_RESOLUTION, Boolean.TRUE);
 			options.put(XMLResource.OPTION_USE_DEPRECATED_METHODS, Boolean.FALSE);
 			options.put(XMLResource.OPTION_USE_PARSER_POOL, new XMLParserPoolImpl(true));
-			options.put(XMLResource.OPTION_USE_XML_NAME_TO_FEATURE_MAP, new HashMap<>());
+			options.put(XMLResource.OPTION_USE_XML_NAME_TO_FEATURE_MAP, new HashMap());
 		}
 	}
 
