@@ -35,139 +35,137 @@ import org.obeonetwork.dsl.togaf.contentfwk.contentfwk.util.IdUtil;
  * @generated
  */
 public abstract class ArchitectureImpl extends CDOObjectImpl implements Architecture {
-    /**
-     * The default value of the '{@link #getID() <em>ID</em>}' attribute. <!--
-     * begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see #getID()
-     * @generated
-     * @ordered
-     */
-    protected static final String ID_EDEFAULT = null;
+	/**
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute. <!--
+	 * begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @see #getID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
-     */
-    protected ArchitectureImpl() {
-        super();
-        if (ContentfwkPreferences.getElementIdInitializationPolicy() == ElementIdInitializationPolicy.CREATION_TIME) {
-            forceID(IdUtil.generateId());
-        }
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	protected ArchitectureImpl() {
+		super();
+		if (ContentfwkPreferences.getElementIdInitializationPolicy() == ElementIdInitializationPolicy.CREATION_TIME) {
+			forceID(IdUtil.generateId());
+		}
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected EClass eStaticClass() {
-        return ContentfwkPackage.Literals.ARCHITECTURE;
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return ContentfwkPackage.Literals.ARCHITECTURE;
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    protected int eStaticFeatureCount() {
-        return 0;
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public String getID() {
-        return (String) eDynamicGet(ContentfwkPackage.ARCHITECTURE__ID, ContentfwkPackage.Literals.ARCHITECTURE__ID, true, true);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public String getID() {
+		return (String) eDynamicGet(ContentfwkPackage.ARCHITECTURE__ID, ContentfwkPackage.Literals.ARCHITECTURE__ID,
+				true, true);
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
-     */
-    @Override
-    public void setID(String newID) {
-        Resource eResource = eResource();
-        String oldID = getID();
-        if (IdUtil.canIdBeSet(eResource, newID, cdoID())) {
-            forceID(newID);
-            IdUtil.updateResourceIds(eResource, oldID, newID);
-        }
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public void setID(String newID) {
+		Resource eResource = eResource();
+		String oldID = getID();
+		if (IdUtil.canIdBeSet(eResource, newID, cdoID())) {
+			forceID(newID);
+			IdUtil.updateResourceIds(eResource, oldID, newID);
+		}
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated NOT
-     */
-    @Override
-    public void forceID(String newID) {
-        eDynamicSet(ContentfwkPackage.ARCHITECTURE__ID, ContentfwkPackage.Literals.ARCHITECTURE__ID, newID);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public void forceID(String newID) {
+		eDynamicSet(ContentfwkPackage.ARCHITECTURE__ID, ContentfwkPackage.Literals.ARCHITECTURE__ID, newID);
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public Object eGet(int featureID, boolean resolve, boolean coreType) {
-        switch (featureID) {
-        case ContentfwkPackage.ARCHITECTURE__ID:
-            return getID();
-        }
-        return super.eGet(featureID, resolve, coreType);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case ContentfwkPackage.ARCHITECTURE__ID:
+			return getID();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public void eSet(int featureID, Object newValue) {
-        switch (featureID) {
-        case ContentfwkPackage.ARCHITECTURE__ID:
-            setID((String) newValue);
-            return;
-        }
-        super.eSet(featureID, newValue);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case ContentfwkPackage.ARCHITECTURE__ID:
+			setID((String) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public void eUnset(int featureID) {
-        switch (featureID) {
-        case ContentfwkPackage.ARCHITECTURE__ID:
-            setID(ID_EDEFAULT);
-            return;
-        }
-        super.eUnset(featureID);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case ContentfwkPackage.ARCHITECTURE__ID:
+			setID(ID_EDEFAULT);
+			return;
+		}
+		super.eUnset(featureID);
+	}
 
-    /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
-    @Override
-    public boolean eIsSet(int featureID) {
-        switch (featureID) {
-        case ContentfwkPackage.ARCHITECTURE__ID:
-            return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
-        }
-        return super.eIsSet(featureID);
-    }
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case ContentfwkPackage.ARCHITECTURE__ID:
+			return ID_EDEFAULT == null ? getID() != null : !ID_EDEFAULT.equals(getID());
+		}
+		return super.eIsSet(featureID);
+	}
 
 } // ArchitectureImpl
