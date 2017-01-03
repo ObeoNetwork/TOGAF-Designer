@@ -4,11 +4,6 @@ TOGAF (The Open Group Architecture Framework) is an industry standard architectu
 
 These plugins are released under the EPL Open-Souce License.
 
-More details about features, screenshots, release notes, dependencies here:
-
- * http://marketplace.obeonetwork.com/module/togaf
- * http://www.obeosmartea.com
- * http://www.obeodesigner.com
-
+They are distributed a sample integration of TOGAF Architecture Content Framework in Obeo SmartEA (https://www.obeosmartea.com).
 
 To build the module you'll need Maven3 (with Tycho plugin) and run @mvn clean verify@
