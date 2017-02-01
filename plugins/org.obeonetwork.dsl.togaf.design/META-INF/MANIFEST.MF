@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.obeonetwork.dsl.togaf.design;singleton:=true
-Bundle-Version: 2.0.1.qualifier
+Bundle-Version: 3.0.0.qualifier
 Bundle-Vendor: %providerName
 Bundle-Activator: org.obeonetwork.dsl.togaf.design.Activator
 Require-Bundle: org.eclipse.gmf.runtime.diagram.ui;bundle-version="1.5.0",
